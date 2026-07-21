@@ -43,11 +43,10 @@ The goal of EDS 212 (Essential Math in Environmental Data Science) is to prepare
 :::
 
 ```{r}
-#| eval: false 
 #| echo: false
 #| fig-align: "center"
 #| out-width: "45%" 
-knitr::include_graphics("images/ruth.png")
+knitr::include_graphics("images/carmen.png")
 ```
 
 ::: {.center-text}
@@ -65,11 +64,10 @@ knitr::include_graphics("images/ruth.png")
 :::
 
 ```{r}
-#| eval: false 
 #| echo: false
 #| fig-align: "center"
 #| out-width: "45%" 
-knitr::include_graphics("images/alessandra.png")
+knitr::include_graphics("images/cella.png")
 ```
 
 ::: {.center-text}

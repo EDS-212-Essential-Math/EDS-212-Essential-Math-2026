@@ -1,0 +1,15 @@
+{
+  "hash": "e69ed9494e7d5831f04838d10cb26043",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Basic math review\"\nsubtitle: \"Day 1\"\ndescription: \"Monday August 4^th^, 2025\"\n---\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](images/workflows_shred.png){fig-align='center' width=80%}\n:::\n:::\n\n\n:::{.gray-text .center-text}\n*Artwork by [Allison Horst](https://allisonhorst.com/)*\n:::\n\n<!-- ## Pre-class prep -->\n\n<!-- No pre-class prep before our first day of class! -->\n\n## Class materials\n\n| {{< fa calendar-day title=\"A calendar with one day highlighted\" >}} Session  | {{< fa person-chalkboard title=\"A person motioning at a chalkboard\" >}} Lecture slides  |  {{< fa laptop-code title=\"A laptop with on-screen code\" >}} Interactive session |\n|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|\n| day 1 / morning   | [Basic algebra review, units and unit conversions, exponents, logarithms](slides/day1.1-slides.qmd){target=\"_blank\"} | [Meet our R tools, basic operations, our first R function](interactive-sessions/interactive-session-1a.qmd) |\n| day 1 / afternoon | [Functions (interpreting & evaluating), reading graphs, slope](slides/day1.2-slides.qmd){target=\"_blank\"} | [R projects, storing objects, creating vectors and sequences](interactive-sessions/interactive-session-1b.qmd) |\n: {.hover .bordered tbl-colwidths=\"[20,40,40]\"} \n\n## End-of-day practice\n\nComplete the following tasks / activities before heading home for the day!\n\n- [{{< fa pencil title=\"A pencil\" >}} **Day 1 Practice:** Problems, gut checks, R Projects, and a function](eod-practice/eod-day1.qmd)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "hash": "2caf3daada99f1ba0f5b1a09b3f55b4e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Derivatives\"\nsubtitle: \"Day 2\"\ndescription: \"Tuesday August 5^th^, 2025\"\n---\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](images/derivative_9.jpg){fig-align='center' fig-alt='A single green point, looking victorious with arms raised, which is now representing the yellow and blue points have converged (delta x is infinitely small). Text reads \\'The expression for the instantaneous slope at any point on a function, aka the derivative, is found by (1) Finding an expression for the slope between two points on the function separated by delta x, and (2) evaluating that slope as the points get infinitely close together.\\'' width=70%}\n:::\n:::\n\n\n:::{.gray-text .center-text}\n*Artwork by [Allison Horst](https://allisonhorst.com/)*\n:::\n\n<!-- ## Pre-class prep -->\n\n<!-- Install the following packages by running the following in your RStudio *Console*: -->\n\n<!-- ```{r} -->\n<!-- #| eval: false -->\n<!-- #| echo: true -->\n<!-- install.packages(\"ARTofR\") # optional, but an awesome package for creating R script section headers -->\n<!-- ``` -->\n\n## Class materials\n\n| {{< fa calendar-day title=\"A calendar with one day highlighted\" >}} Session  | {{< fa person-chalkboard title=\"A person motioning at a chalkboard\" >}} Lecture slides  |  {{< fa laptop-code title=\"A laptop with on-screen code\" >}} Interactive session |\n|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|\n| day 2 / morning   | [Definition of the derivative](slides/day2.1-slides.qmd){target=\"_blank\"} | [Derivatives by hand and in R](interactive-sessions/interactive-session-2a.qmd) |\n| day 2 / afternoon | [\tHigher order & partial derivatives](slides/day2.2-slides.qmd){target=\"_blank\"} | [Partial & higher order derivatives in R](interactive-sessions/interactive-session-2b.qmd) |\n: {.hover .bordered tbl-colwidths=\"[20,40,40]\"} \n\n## End-of-day practice\n\nComplete the following tasks / activities before heading home for the day!\n\n- [{{< fa pencil title=\"A pencil\" >}} **Day 2 Practice:** Derivatives, plots, git](eod-practice/eod-day2.qmd)\n\n## Additional Resources\n- **[Derivatives... What?](https://www.youtube.com/watch?v=-ktrtzYVk_I), by [NancyPi](https://www.youtube.com/@NancyPi):** YouTube video on the definition of the derivative\n- **[Derivatives... How?](https://www.youtube.com/watch?v=QqF3i1pnyzU&t=0s), by [NancyPi](https://www.youtube.com/@NancyPi):** YouTube video showing how to find derivatives using rules\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
