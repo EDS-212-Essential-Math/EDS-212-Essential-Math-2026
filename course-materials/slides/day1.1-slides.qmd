@@ -17,7 +17,7 @@ format:
 
 <hr class="hr-teal">
 
-[August 4^th^, 2025]{.custom-subtitle3}
+[August 3^th^, 2026]{.custom-subtitle3}
 
 ---
 
@@ -29,15 +29,71 @@ format:
 
 <br>
 
-- **Instructor:** Ruth Oliver (rutholiver@ucsb.edu)
-- **Teaching assistant:** Alessandra Vidal Meza
+- **Instructor:** Carmen Galaz García 
+- **Teaching assistant:** Cella Schnabel
 - **Course hours:** 10am - 4:30pm PST
 - **Location:** NCEAS 1st Floor Classroom
 
-<br>
+---
 
-::: {.center-text .body-text-l}
-Let's take a look at the [course syllabus](https://docs.google.com/document/d/1L3nnsIcDQy_PKegzaaZxzUE7BTKLzO6wx1uRoF22BM4/edit) together. 
+## {#about-me data-menu-title="About me"}
+
+[About your instructor]{.slide-title}
+
+<hr>
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+
+[Carmen Galaz García (she/her)]{.body-text-m .blue-text}
+
+- Assistant Teaching Professor @ Bren
+
+Before:
+
+- Data Scienist @ NCEAS
+- Ph.D. in Mathematics @ UCSB
+
+**Teaching & Research**
+
+- Python courses and Capstone Projects for Masters in Environmental Data Science (MEDS)
+- Supporting math and data science across Bren!
+- NCEAS/TNC collaboration for invasive iceplant mapping analyzing remotely sensed images
+
+:::
+
+::: {.column width="40%"}
+![](/images/carmen.png){fig-align="center" width="70%"}
+
+![](/images/bren-hex.png){fig-align="center"}
+:::
+:::
+
+---
+
+## {#about-me data-menu-title="About me"}
+
+[About your TA]{.slide-title}
+
+<hr>
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+
+[Cella Schnabel]{.body-text-m .blue-text}
+
+
+:::
+
+::: {.column width="40%"}
+![](/images/cella.png){fig-align="center" width="70%"}
+
+![](images/bren-hex.png){fig-align="center"}
+:::
 :::
 
 ---
@@ -51,6 +107,24 @@ Let's take a look at the [course syllabus](https://docs.google.com/document/d/1L
 - **Units:** 2
 - **Grading:** Satisfactory/Unsatisfactory
 - **Description:** Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.
+
+::: {.center-text .body-text-l}
+Let's take a look at the [course syllabus](https://docs.google.com/document/d/1yGzd_H954F_gPufJNAYPIIjEw3vDS4P0E20CRrpSrfs/edit?tab=t.0) together. 
+:::
+
+--- 
+
+## {#survey data-menu-title="Please fill out this survery"}
+
+[Please fill out this survey]{.slide-title}
+
+<hr>
+
+![](/images/eds212-2026-entrance-survey.png){fig-align="center"}
+
+::: {.center-text .body-text-l}
+[Or you can click on this link.](https://forms.gle/Q7QUpnBALn9wPNpr6)
+:::
 
 ---
 

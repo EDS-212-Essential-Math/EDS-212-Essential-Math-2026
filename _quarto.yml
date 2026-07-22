@@ -15,10 +15,10 @@ website:
       - text: syllabus
         href: https://docs.google.com/document/d/1yGzd_H954F_gPufJNAYPIIjEw3vDS4P0E20CRrpSrfs/edit?usp=sharing
         target: _blank
-      # - text: daily materials
-        # menu: 
-          # - text: day 1 (8/4)
-          #   href: course-materials/day1.qmd
+      - text: daily materials
+        menu: 
+          - text: day 1 (8/3)
+            href: course-materials/day1.qmd
           # - text: day 2 (8/5)
           #   href: course-materials/day2.qmd
           # - text: day 3 (8/6)

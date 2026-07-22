@@ -4,7 +4,7 @@
     "href": "course-materials/day1.html#class-materials",
     "title": "Basic math review",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Interactive session\n\n\n\n\nday 1 / morning\nBasic algebra review, units and unit conversions, exponents, logarithms\nMeet our R tools, basic operations, our first R function\n\n\nday 1 / afternoon\nFunctions (interpreting & evaluating), reading graphs, slope\nR projects, storing objects, creating vectors and sequences"
+    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Practice session\n\n\n\n\nday 1 / morning\nBasic algebra review, units and unit conversions, exponents, logarithms\nMeet our R tools, basic operations, our first R function\n\n\nday 1 / afternoon\nFunctions (interpreting & evaluating), reading graphs, slope\nR projects, storing objects, creating vectors and sequences"
   },
   {
     "objectID": "course-materials/day1.html#end-of-day-practice",
@@ -1215,21 +1215,28 @@
     "href": "course-materials/slides/day1.1-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 212: Day 1, Lecture 1\nCourse intro, algebra refresher\n\nAugust 4th, 2025"
+    "text": "EDS 212: Day 1, Lecture 1\nCourse intro, algebra refresher\n\nAugust 3th, 2026"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#welcome",
     "href": "course-materials/slides/day1.1-slides.html#welcome",
     "title": "",
     "section": "",
-    "text": "Welcome to EDS 212 - Essential Math in Environmental Data Science\n\n\n\nInstructor: Ruth Oliver (rutholiver@ucsb.edu)\nTeaching assistant: Alessandra Vidal Meza\nCourse hours: 10am - 4:30pm PST\nLocation: NCEAS 1st Floor Classroom\n\n\n\nLet’s take a look at the course syllabus together."
+    "text": "Welcome to EDS 212 - Essential Math in Environmental Data Science\n\n\n\nInstructor: Carmen Galaz García\nTeaching assistant: Cella Schnabel\nCourse hours: 10am - 4:30pm PST\nLocation: NCEAS 1st Floor Classroom"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#about-me",
+    "href": "course-materials/slides/day1.1-slides.html#about-me",
+    "title": "",
+    "section": "",
+    "text": "About your TA\n\n\n\nCella Schnabel"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#course-description",
     "href": "course-materials/slides/day1.1-slides.html#course-description",
     "title": "",
     "section": "",
-    "text": "Course description\n\n\nUnits: 2\nGrading: Satisfactory/Unsatisfactory\nDescription: Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations."
+    "text": "Course description\n\n\nUnits: 2\nGrading: Satisfactory/Unsatisfactory\nDescription: Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.\n\n\nLet’s take a look at the course syllabus together."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#topics",
@@ -2301,5 +2308,12 @@
     "title": "Differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#survey",
+    "href": "course-materials/slides/day1.1-slides.html#survey",
+    "title": "",
+    "section": "",
+    "text": "Please fill out this survey\n\n\n\nOr you can click on this link."
   }
 ]

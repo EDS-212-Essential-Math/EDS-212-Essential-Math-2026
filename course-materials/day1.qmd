@@ -1,7 +1,6 @@
 ---
 title: "Basic math review"
 subtitle: "Day 1"
-description: "Monday August 4^th^, 2025"
 ---
 
 ```{r}
@@ -9,7 +8,7 @@ description: "Monday August 4^th^, 2025"
 #| echo: false
 #| out-width: "80%"
 #| fig-align: "center"
-knitr::include_graphics("images/workflows_shred.png")
+knitr::include_graphics("images/cetaceans-class.jpg")
 ```
 
 :::{.gray-text .center-text}
@@ -22,7 +21,7 @@ knitr::include_graphics("images/workflows_shred.png")
 
 ## Class materials
 
-| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  {{< fa laptop-code title="A laptop with on-screen code" >}} Interactive session |
+| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  {{< fa file-pen title="A laptop with on-screen code" >}} Practice session |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | day 1 / morning   | [Basic algebra review, units and unit conversions, exponents, logarithms](slides/day1.1-slides.qmd){target="_blank"} | [Meet our R tools, basic operations, our first R function](interactive-sessions/interactive-session-1a.qmd) |
 | day 1 / afternoon | [Functions (interpreting & evaluating), reading graphs, slope](slides/day1.2-slides.qmd){target="_blank"} | [R projects, storing objects, creating vectors and sequences](interactive-sessions/interactive-session-1b.qmd) |
