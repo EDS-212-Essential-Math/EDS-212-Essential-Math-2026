@@ -21,6 +21,15 @@ format:
 
 ---
 
+## {#eds212-basics data-menu-title="EDS 212 basics" background-color="#003660"}
+
+
+<div class="page-center">
+<div class="custom-subtitle">EDS 212 basics</div>
+</div>
+
+---
+
 ## {#welcome data-menu-title="Welcome to EDS 212!"} 
 
 [Welcome to EDS 212 - Essential Math in Environmental Data Science]{.slide-title}
@@ -36,7 +45,7 @@ format:
 
 ---
 
-## {#about-me data-menu-title="About me"}
+## {#about-instructor data-menu-title="About your instructor"}
 
 [About your instructor]{.slide-title}
 
@@ -73,7 +82,7 @@ Before:
 
 ---
 
-## {#about-me data-menu-title="About me"}
+## {#about-TA data-menu-title="About your TA"}
 
 [About your TA]{.slide-title}
 
@@ -92,11 +101,24 @@ Before:
 ::: {.column width="40%"}
 ![](/images/cella.png){fig-align="center" width="70%"}
 
-![](images/bren-hex.png){fig-align="center"}
+![](/images/bren-hex.png){fig-align="center"}
 :::
 :::
 
 ---
+
+## {#about-you data-menu-title="About you"} 
+
+[About you!]{.slide-title}
+
+<hr>
+
+
+![image: Flaticon.com](images/diversity.png)
+
+
+
+--- 
 
 ## {#course-description data-menu-title="Course description"} 
 
@@ -108,11 +130,78 @@ Before:
 - **Grading:** Satisfactory/Unsatisfactory
 - **Description:** Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.
 
+. . .
+
+- This is an **"offline course"**, your only one in MEDS. What it means is we'll be focusing on conceptual understanding and some pen-and-paper practice, instead of coding. Why? We want to make sure you *understand* some fundamental topics before jumping into *implementing*. 
+
+. . .
+
 ::: {.center-text .body-text-l}
 Let's take a look at the [course syllabus](https://docs.google.com/document/d/1yGzd_H954F_gPufJNAYPIIjEw3vDS4P0E20CRrpSrfs/edit?tab=t.0) together. 
 :::
 
---- 
+---
+
+## {#topics data-menu-title="Topics"} 
+
+[Topics overview]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+- **Day 1:** Course introduction & math basics refresher
+- **Day 2:** Exponential functions; Limits & derivatives
+- **Day 3:** Integration & ODEs; Vectors and matrices
+- **Day 4:** Distributions & summary statistics; Basic probability theory,
+- **Day 5:** Basic stats; Boolean algebra
+:::
+
+---
+
+## {#obj data-menu-title="Workshop Objectives"}
+
+[Objectives (in general terms)]{.slide-title}
+
+<hr>
+
+![](images/limits_horst.jpg){fig-align="center"}
+
+1.  Shake off the math dust
+
+2.  Exercise core math skills needed to succeed in your Bren courses
+
+3.  Explore how valuable math is to environmental data science
+
+4.  Build a collaborative environment and get to know your cohort
+
+---
+
+## {#exp data-menu-title="Student Expectations"}
+
+[Student expectations]{.slide-title}
+
+<hr>
+
+We expect all students will:
+
+- Support and encourage all classmates
+
+- Be open to learning from each other
+
+- Bring a collaborative attitude and communicate respectfully
+
+- See opportunities to share kownledge as a chance to deepen understanding
+
+- Complete all in-class exercises
+
+. . .
+
+**Logistics**
+
+- You are required to attend all sessions, unless there's a significant reason not to. Always communicate with your instructors.
+- If you are feeling sick: stay home and take care of yourself! Please mask up if you are not feeling 100%.
+
+---
 
 ## {#survey data-menu-title="Please fill out this survery"}
 
@@ -128,39 +217,12 @@ Let's take a look at the [course syllabus](https://docs.google.com/document/d/1y
 
 ---
 
-## {#topics data-menu-title="Topics"} 
+## {#math-envs data-menu-title="Math in Environmental Data Science" background-color="#003660"}
 
-[Topics overview]{.slide-title}
 
-<hr>
-
-::: {.body-text-m}
-- **Day 1:** Course introduction & math basics refresher
-- **Day 2:** Derivatives
-- **Day 3:** Differential equations, intro to linear algebra
-- **Day 4:** Linear algebra, summary statistics
-- **Day 5:** Basic probability theory, Boolean algebra
-:::
-
----
-
-## {#math-evolution data-menu-title="Math evolution"} 
-
-[Maybe you're thinking...]{.slide-title}
-
-<hr>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/math-evolution.png")
-```
-
-::: {.footer}
-Source: [Michael Sandberg's Data Visualization Blog](https://datavizblog.com/2019/07/05/dataviz-humor-math-skills-vs-stage-of-life/)
-:::
+<div class="page-center">
+<div class="custom-subtitle">Math in Environmental Data Science</div>
+</div>
 
 ---
 
@@ -202,41 +264,115 @@ MEDS students have diverse work & academic histories
 - Are specifically relevant for MEDS projects, coursework
 - Provide an entryway into building computational skills
 - Refresh quantitative thinking skills generally
-- Refresh essentials like units, conversions, notation, language
+- Refresh essentials like units, conversions, notation, **language**
+
+--- 
+
+## {#des data-menu-title="describe"}
+
+[Share with the person next to you:]{.slide-title}
+
+<hr>
+
+[What has been your life or professional experience with math? Best friend ever, mortal enemy, or something in between?]{.slide-title}
+
+
+<br>
+
+[How do you see math being relevant to solving environmental problems?]{.slide-title}
+
+---
+
+## {#math-eds data-menu-title="Math in EDS"}
+
+[Math is an core tool in environmental data science]{.slide-title}
+
+<hr>
+
+<p style="text-align: center">
+**Math helps us investigate the world and communicate our findings**
+</p>
+
+
+- Used by scientists to find evidence
+
+- Can be used to quantify relations, trends, and changes
+
+- Mathematical models can help us understand complex systems
+
+- Must be used responsibly and with awareness of potential biases and limitations
+
+- Helps us support arguments that can transform policy and actions
+
+- At the center of tools like statistics, machine lerning, and image processing
+
+<br>
+
+[We need to understand the math to make decisions and efficient implementations using it!]{.center-text .body-text-m .blue-text}
+
+---
+
+## {#math-bren data-menu-title="Math at Bren"}
+
+[Math at Bren]{.slide-title}
+
+<hr>
+
+::: columns
+::: {.column width="50%"}
+
+:::{.center-text}
+**In your classes:**
+:::
+
+- EDS 222: Statistics for Environmental Data Science
+
+- EDS 230: Modeling Environmental Systems
+
+- EDS 232: Machine Learning in Environmental Science
+:::
+
+::: {.column width="40%"}
+
+:::{.center-text}
+**In Research**
+:::
+
+Ecology, modeling, economics, and more!
+
+- [Modeling the Impact of Decarbonization on Labor in California’s Central Coast](https://bren.ucsb.edu/projects/modeling-impact-decarbonization-labor-californias-central-coast)
+
+- [Quantifying Greenhouse Gas (GHG) Emissions Associated with Global Seafood Production](https://bren.ucsb.edu/projects/quantifying-greenhouse-gas-ghg-emissions-associated-global-seafood-production)
+
+- [Characterizing The Relationship Between Evapotranspiration and Groundwater Decline Across Arid Agricultural Regions](https://bren.ucsb.edu/projects/characterizing-relationship-between-evapotranspiration-and-groundwater-decline-across-arid)
+:::
+:::
 
 ---
 
 ## {#warm-up-overview data-menu-title="Warm-up overview"} 
 
-[Math brain warm up]{.slide-title}
+[Today: Math brain warm up]{.slide-title}
 
 <hr>
 
 ::: {.body-text-m}
-- Algebra blitz
+- Algebra review
 - Exponentials and logarithms
-- Common units and unit conversions
+- Units
 - Functions
 - Understanding graphs
-- Interpreting equations
+- Linear functions
 :::
 
 ---
 
-## {#first-algebra data-menu-title="First, algebra"} 
+## {#algebra-review data-menu-title="Algebra review" background-color="#003660"}
 
-[Math brain warm up]{.slide-title}
 
-<hr>
-
-::: {.body-text-m}
-- [**Algebra blitz**]{.teal-text}
-- Exponentials and logarithms
-- Common units and unit conversions
-- Functions
-- Understanding graphs
-- Interpreting equations
-:::
+<div class="page-center">
+<div class="custom-subtitle">Algebra review</div>
+</div>
 
 ---
 
