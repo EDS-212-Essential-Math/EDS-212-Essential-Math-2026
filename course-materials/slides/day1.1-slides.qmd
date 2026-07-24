@@ -358,7 +358,7 @@ Ecology, modeling, economics, and more!
 
 ::: {.body-text-m}
 - Algebra review
-- Exponentials and logarithms
+- Rules of exponents
 - Units
 - Functions
 - Understanding graphs
@@ -388,7 +388,7 @@ Ecology, modeling, economics, and more!
 1.  Follow order of operations (a.k.a. PEDMAS)
 
 
-2. Never change an equation. Instead, we rewrite them into more useful forms
+2. Never change an equation. Instead, rewrite them into more useful forms
 
 3. Manipulate BOTH sides of an equation with the SAME PROCEDURE.
 
@@ -688,7 +688,7 @@ $$
 
 ## {#practice-alge-1 data-menu-title="Easy to make mistakes"}
 
-[It can be easy to make mistakes while doing algebra. Practice makes perfect!]{.slide-title}
+[It can be easy to make mistakes while doing algebra. Practice makes progress!]{.slide-title}
 
 <hr>
 
@@ -708,7 +708,7 @@ Solve all in terms of $x$
 
 ## {#practice-alge-2 data-menu-title="Easy to make mistakes"}
 
-[It can be easy to make mistakes while doing algebra. Practice makes perfect!]{.slide-title}
+[It can be easy to make mistakes while doing algebra. Practice makes progress!]{.slide-title}
 
 <hr>
 
@@ -733,7 +733,7 @@ Solve all in terms of $x$
 ::::
 ## {#practice-alge-3 data-menu-title="Easy to make mistakes"}
 
-[It can be easy to make mistakes while doing algebra. Practice makes perfect!]{.slide-title}
+[It can be easy to make mistakes while doing algebra. Practice makes progress!]{.slide-title}
 
 <hr>
 
@@ -746,7 +746,7 @@ Solve all in terms of $x$
 
 ## {#practice-alge-4 data-menu-title="Solutions"}
 
-[Practice Solutions]{.slide-title}
+[Practice solutions]{.slide-title}
 
 <hr>
 
@@ -796,127 +796,325 @@ $$
 
 ---
 
-## {#next-exp data-menu-title="Next, exponentials"} 
+## {#rules-of-exponents data-menu-title="Rules of exponents" background-color="#003660"}
 
-[Math brain warm up]{.slide-title}
 
-<hr>
-
-::: {.body-text-m}
-- Algebra blitz
-- [**Exponentials**]{.teal-text} and logarithms (this afternoon)
-- Common units and unit conversions
-- Functions
-- Understanding graphs
-- Interpreting equations
-:::
+<div class="page-center">
+<div class="custom-subtitle">Rules of exponents</div>
+</div>
 
 ---
 
-## {#exponents data-menu-title="Exponents"} 
+## {#exponents data-menu-title="Exponents"}
 
-[Exponents & how to do math with them]{.slide-title}
-
-<hr>
-
-::: {.body-text-l}
-$$x^n=x\times x\times\ x \times x...(n\space times)$$
-
-<br>
-
-<!-- [Exponent warm-ups]{.body-text-m} -->
-
-Evaluate the following to find a value for $y$:
-
-<br>
-
-1. $y = 12-2^4$
-
-2. $2y + 30=y+3^3$
-:::
-
-::: {.notes}
-Sometimes things are related to each other in an exponential way, so we're going to remind ourselves how they work using numbers.
-
-1. $y = 12-2^4$
-- $y = 12 - (2 \times 2 \times 2 \times 2)$
-- $y = 12 - 26$
-- **ANSWER: $y = -4$**
-
-2. $2y + 30=y+3^3$
-- $2y + 30 = y + (3 \times 3 \times 3)$
-- $2y + 30 = y + 27$
-- $y + 30 = 27$
-- **ANSWER: $y = -3$**
-:::
-
----
-
-## {#exponents-rules data-menu-title="Exponent rules"} 
-
-[Exponent rules]{.slide-title}
+[Exponents make algebra more interesting!]{.slide-title}
 
 <hr>
 
-- $x^ax^b=x^{a+b}$ ; **Example:** $x^5x^3=x^{5+3}=x^8$ ; **Example:** $2^2 \times 2^2$ = $(2 \times 2) \times (2 \times 2)$ = $2^4$
+**Example**
+
+The expression $x^3$ means $x$ multiplied by itself 3 times:
+$$x^3=x * x * x$$
 
 . . .
 
-- $\frac{x^a}{x^b}=x^{a-b}$ ; **Example:** $\frac{z^5}{z^3}=z^{5-3}=z^2$ ; **Example:** $\frac{2^3}{2^2}$ = $\frac{2 \times 2 \times 2}{2 \times 2}$ = $2^1$
+More generally, 
+$$x^n = x \text{ to the power of } n.$$
 
 . . .
 
-- $\frac{1}{x^a}=x^{-a}$ ; **Example:** $b^{-4x}=\frac{1}{b^{4x}}$
+Intuitively, the **exponent** $n$ tells us how many times to multiply the **basis** $x$ by itself:
 
-. . .
+$$x^n = \underbrace{x * x * ... * x}_{n \text{ times}}$$
 
-- $(x^a)^b=x^{ab}$ ; **Example:** $(2^3)^2=2^{3*2}=2^6=64$
+But the exponent can be any (real) number, not only integers!
+<!--------------------------------------------------------------------------->
 
-. . .
+## {#exponents-applications-1 data-menu-title="What are exponents good for?"}
 
-- $(\frac{x}{y})^a=\frac{x^a}{y^a}$ ; **Example:** $(\frac{y}{2^2})^2=\frac{y^2}{(2^2)^2}=\frac{y^2}{2^4}=\frac{y^2}{16}$
-
-. . .
-
-- $(xy)^a=x^ay^a$ ; **Example:** $(3x)^2=3^2x^2$
-
----
-
-## {#exponents-practice data-menu-title="Exponent practice"} 
-
-[Exponent practice]{.slide-title}
+[What are exponents good for?]{.slide-title}
 
 <hr>
 
-<br>
+:::: {.columns}
 
-[Simplify the following expressions using the rules of exponents:]{.body-text-l}
+::: {.column width="50%" style="text-align: center;"}
+They can describe really big numbers
 
-<br>
+<!--
+![](images/milky-way.jpg)
+-->
 
-[1. $3x^5x^8x^{-11}$]{.body-text-l}
+<img src="/course-materials/images/milky-way.jpg" width="250"/>
 
-<br>
-
-[2. $\frac{-8x^6}{2x^4}+7x^2$]{.body-text-l}
-
-<br>
-
-[3. $\frac{3x}{x^5}-3.8x^4\frac{x^3}{x^6}+8.1x-11.2$]{.body-text-l}
-
-::: {.notes}
-1. $3x^5x^8x^{-11}$
-- **ANSWER: $3x^2$**
-
-2. $\frac{-8x^6}{2x^4}+7x^2$
-- $-4x^2 + 7x^2$
-- **ANSWER: $3x^2$**
-
-3. $\frac{3x}{x^5}-3.8x^4\frac{x^3}{x^6}+8.1x-11.2$
-- $3x^{-4}-3.8x^4 \times x^{-3} + 8.1x - 11.2$
-- $3x^{-4}-3.8x^1 + 8.1x - 11.2$
-- **ANSWER: $3x^{-4}+4.3x - 11.2$**
+Diameter of the Milky Way = 
+1,000,000,000,000,000,000,000 meters =
+$$10^{21} \text{ m}$$
 :::
+
+::: {.column width="50%" style="text-align: center;"}
+And also really small numbers
+
+![](/course-materials/images/blood-cells-red.jpg)
+
+Diameter of a human red blood cell = 
+0.0000000001 meters = 
+$$10^{-10} \text{ m}$$
+:::
+
+::::
+
+
+This way, we can use exponents to describe exponential growth and decay. Many environmental variables behave in this way. 
+
+<!--------------------------------------------------------------------------->
+## {#exponents-rules-blank-1 data-menu-title="Exponents Rules (1)"}
+[Rules and properties of exponents (1)]{.slide-title}
+
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">                                                                               
+  ✏️                    
+</div>  
+
+
+
+<hr>
+(1) Product rule:
+
+<br>
+
+(2) Quotient rule:
+
+<br>
+
+(3) Any non-negative $x$ to the power of 0 equals 1:
+
+<br>
+
+(4) Negative exponent means divide:
+
+<br>
+
+(5) Fractional exponent means take the $n$-th root:
+
+<!--------------------------------------------------------------------------->
+## {#exponents-rules-blank-2 data-menu-title="Exponents Rules (2)"}
+[Rules and properties of exponents (2)]{.slide-title}
+
+<hr>
+
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">                                                                               
+  ✏️                    
+</div>  
+
+
+(6) Power of a power means multiply the exponents: 
+
+<br>
+
+(7) Exponents get distributed over products:
+
+<br>
+
+(8) And exponents get distributed over divisions: 
+
+<br>
+
+(9) If $a$ is the $n$-th root of $x$, then $a$ to the $n$ equals $x$:
+
+
+
+<!--------------------------------------------------------------------------->
+## {#exponents-rules-1 data-menu-title="Exponents Rules (1)"}
+[Rules and properties of exponents (1)]{.slide-title}
+
+<hr>
+(1) Product rule: $x^a * x^b = x^{a+b}$
+
+<br>
+
+(2) Quotient rule: $\frac{x^a}{x^b} = x^{a-b}, \ \ \text{for } x \neq 0$
+
+<br>
+
+(3) Any non-negative $x$ to the power of 0 equals 1: $x^0 = 1, \ \ \text{for } x \neq 0$
+
+<br>
+
+(4) Negative exponent means divide: $x^{-a} = \frac{1}{x^a}, \ \ \text{for } x \neq 0$
+
+<br>
+
+(5) Fractional exponent means take the $n$-th root: $x^{\frac{1}{n}} = \sqrt[n]{x}$
+
+<!--------------------------------------------------------------------------->
+## {#exponents-rules-2 data-menu-title="Exponents Rules (2)"}
+[Rules and properties of exponents (2)]{.slide-title}
+
+<hr>
+
+(6) Power of a power means multiply the exponents: $(x^a)^b = x^{ab}$
+
+<br>
+
+(7) Exponents get distributed over products: $(xy)^a = x^a y^a$
+
+<br>
+
+(8) And exponents get distributed over divisions: $\left( \frac{x}{y} \right)^a = \frac{x^a}{y^a}$
+
+<br>
+
+(9) If $a$ is the $n$-th root of $x$, then $a$ to the $n$ equals $x$:
+
+$$
+a = \sqrt[n]{x} \Rightarrow a^n = x
+$$
+
+## {#exponents-table data-menu-title="Rules of exponents"}
+
+[Rules and properties of exponents]{.slide-title}
+<hr>
+
+$$
+\begin{array}{|l|l|}
+\hline
+\textbf{Rule} & \textbf{Expression} \\
+\hline
+\text{Product Rule} & x^{a} \cdot x^{b} = x^{a+b} \\
+\hline
+\text{Quotient Rule} & \frac{x^{a}}{x^{b}} = x^{a-b}, \quad x \neq 0 \\
+\hline
+\text{Zero Exponent} & x^{0} = 1, \quad x \neq 0 \\
+\hline
+\text{Negative Exponent} & x^{-a} = \frac{1}{x^{a}}, \quad x \neq 0 \\
+\hline
+\text{Fractional Exponent} & x^{\frac{1}{n}} = \sqrt[n]{x} \\
+\hline
+\text{Power of a Power} & (x^{a})^{b} = x^{ab} \\
+\hline
+\text{Power of a Product} & (xy)^{a} = x^{a}y^{a} \\
+\hline
+\text{Power of a Quotient} & \left(\frac{x}{y}\right)^{a} = \frac{x^{a}}{y^{a}} \\
+\hline
+\text{$n$-th Root Definition} & a = \sqrt[n]{x} \quad \Rightarrow \quad a^{n} = x \\
+\hline
+\end{array}
+$$
+
+
+<!--------------------------------------------------------------------------->
+## {#exponents-practice data-menu-title="Exponents practice"}
+[Exponents practice]{.slide-title}
+
+<hr>
+✏️ [Simplify the following.]{style="color:green;"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+(A) $\frac{6^5}{6^3}$
+
+<br>
+
+(B) $(x^2y)^4$
+
+<br>
+<br>
+
+(C) $\frac{x^5y^6}{xy^2}$
+
+<br>
+<br>
+
+(D) $\frac{24x^6}{12x^{-8}}$
+
+:::
+
+::: {.column width="60%"}
+$$
+\begin{array}{|l|l|}
+\hline
+\textbf{Rule} & \textbf{Expression} \\
+\hline
+\text{Product Rule} & x^{a} \cdot x^{b} = x^{a+b} \\
+\hline
+\text{Quotient Rule} & \frac{x^{a}}{x^{b}} = x^{a-b}, \quad x \neq 0 \\
+\hline
+\text{Zero Exponent} & x^{0} = 1, \quad x \neq 0 \\
+\hline
+\text{Negative Exponent} & x^{-a} = \frac{1}{x^{a}}, \quad x \neq 0 \\
+\hline
+\text{Fractional Exponent} & x^{\frac{1}{n}} = \sqrt[n]{x} \\
+\hline
+\text{Power of a Power} & (x^{a})^{b} = x^{ab} \\
+\hline
+\text{Power of a Product} & (xy)^{a} = x^{a}y^{a} \\
+\hline
+\text{Power of a Quotient} & \left(\frac{x}{y}\right)^{a} = \frac{x^{a}}{y^{a}} \\
+\hline
+\text{$n$-th Root Definition} & a = \sqrt[n]{x} \quad \Rightarrow \quad a^{n} = x \\
+\hline
+\end{array}
+$$
+:::
+
+::::
+
+<!--------------------------------------------------------------------------->
+## {#exponents-practice data-menu-title="Exponents practice"}
+[Exponents practice]{.slide-title}
+
+<hr>
+✏️ [Let's see a solution.]{style="color:green;"}
+
+(A) $\frac{6^5}{6^3} = 6^{5-3} = 6^2$
+
+<br>
+
+(B) $(x^2y)^4 = (x^2)^4*y^2 = x^8y^2$
+
+<br>
+<br>
+
+(C) $\frac{x^5y^6}{xy^2} = \frac{x^5}{x}*\frac{y^6}{y^2} = x^{5-1}*y^{6-2} = x^4y^4 = (xy)^4$
+
+<br>
+<br>
+
+(D) $\frac{24x^6}{12x^{-8}} = 2x^6x^{(-(-8))}=2x^6x^8 = 2x^{6+8} = 2x^{14}$
+
+
+
+<!--------------------------------------------------------------------------->
+## {#polynomials data-menu-title="Polynomials"}
+
+[Polynomials describe more complex relationships through exponents]{.slide-title}
+
+<hr>
+
+A polynomial is a function of the form:
+$$
+\large
+\begin{align}
+a_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0
+\end{align}
+$$
+
+- $x$ is the **variable** 
+- $a_i$ are **constants** (fixed numbers) that are called the **coefficients** of the polynomial
+- each $a_ix^i$ is called a **term** of the polynomial,
+- $n$ is called the **degree** of the polynomial, this is the largest exponent in the polynomial.
+
+. . . 
+
+*Example:*
+
+- $x^5 + x^2 - 1$ is a polynomial of degree five with three terms.
+
+- Linear functions like $mx + c$ where $m$ and $c$ are constants are polynomials of degree 1!
+
+Polynomials often represent real world data better than a linear function.
+
 
 ---
 
