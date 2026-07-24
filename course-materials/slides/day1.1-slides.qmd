@@ -285,7 +285,7 @@ MEDS students have diverse work & academic histories
 
 ## {#math-eds data-menu-title="Math in EDS"}
 
-[Math is an core tool in environmental data science]{.slide-title}
+[Math is a core tool in environmental data science]{.slide-title}
 
 <hr>
 
@@ -376,27 +376,33 @@ Ecology, modeling, economics, and more!
 
 ---
 
-## {#algebra-blitz data-menu-title="Algebra blitz"} 
+## {#rules-of-algebra data-menu-title="Rules of algebra"} 
 
-[Algebra blitz]{.slide-title}
+[Rules of algebra]{.slide-title}
 
 <hr>
-
-<br>
 
 [**You can get far with a few rules:**]{.body-text-l}
 
 ::: {.body-text-m}
-1. Order of operations
-2. Equations are already solved (but sometimes we need them in a different format)
-3. Do whatever you want but do the same thing to both sides
+1.  Follow order of operations (a.k.a. PEDMAS)
+
+
+2. Never change an equation. Instead, we rewrite them into more useful forms
+
+3. Manipulate BOTH sides of an equation with the SAME PROCEDURE.
+
+<span style="color: red;">
+Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation. 
+</span>
+
 :::
 
 ---
 
 ## {#PEMDAS data-menu-title="PEMDAS"} 
 
-[1. Order of operations (P-E-MD-AS)]{.slide-title}
+[1. Order of operations (P-E-DM-AS)]{.slide-title}
 
 <hr>
 
@@ -410,7 +416,7 @@ Ecology, modeling, economics, and more!
 
 <br>
 
-[**M/D** - Multipication / division]{.body-text-l}
+[**D/M** - Division / multiplication]{.body-text-l}
 
 <br>
 
@@ -424,17 +430,28 @@ Ecology, modeling, economics, and more!
 
 <hr>
 
-<br>
 
-[Simplify the following: $(12 - 2)/5 + 5(3+2)/6$]{.body-text-m}
 
-<br>
+[Simplify the following:]{.body-text-m}
 
-[Simplify the following: $\frac{4-6}{2}(3+1)-\frac{1+2*4}{3}$]{.body-text-m}
 
 <br>
 
-[Simplify the following: $3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}$]{.body-text-m}
+* [$\frac{4-6}{2}(3+1)-\frac{1+2*4}{3}$]{.body-text-m}
+
+<br>
+
+* [$3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}$]{.body-text-m}
+
+<br>
+
+* [If we are given the values of $x=-3$ and $y=2$, what would be the value of $z$?
+$$
+z = 4*(y-4)+(x+1)^2
+$$]{.body-text-m}
+
+✏️ [Take a minute to solve these individually.]{style="color:green;"  .body-text-m}
+
 
 ::: {.notes}
 1. $(12 - 2)/5 + 5(3+2)/6$
@@ -455,6 +472,47 @@ Ecology, modeling, economics, and more!
 - **ANSWER: $9x - 2y + 5$**
 
 :::
+
+---
+
+## {#PEMDAS-practice-solution-1 data-menu-title="PEMDAS practice: solution 1"} 
+
+[1. Order of operations practice problems]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;" .body-text-m}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="40%"}
+[$\frac{4-6}{2}(3+1)-\frac{1+2*4}{3}$]{.body-text-m}
+:::
+
+::: {.column width="60%"}
+[$3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}$]{.body-text-m}
+:::
+
+::::
+
+---
+
+## {#PEMDAS-practice-solution-2 data-menu-title="PEMDAS practice: solution 2"} 
+
+[1. Order of operations practice problems]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;" .body-text-m}
+
+[If we are given the values of $x=-3$ and $y=2$, what would be the value of $z$?
+$$
+z = 4*(y-4)+(x+1)^2
+$$]{.body-text-m}
+
+
 
 ---
 
@@ -488,7 +546,7 @@ ANSWER: 12
 A harder to misinterpret way to write this: $(6 \div 3) \times (4+2)$
 :::
 
---
+---
 
 ## {#takeaway data-menu-title="Takeaway"} 
 
@@ -507,11 +565,14 @@ Being readable & hard to incorrectly interpret is often as important as being te
 
 [When designing things, it's important to **consider the different ways that users might misuse or misunderstand it** - then **build in safeguards** to help them use it correctly. **Clear communication** and **user-centered design** is critical in environmental data science.]{.body-text-m} 
 
+
+<!-- 
+
 ---
 
 ## {#equations-solved data-menu-title="Equations solved"} 
 
-[2. Equations are solved]{.slide-title}
+[2. Solving equations]{.slide-title}
 
 <hr>
 
@@ -528,86 +589,210 @@ Being readable & hard to incorrectly interpret is often as important as being te
 ::: {.body-text-m}
 1. "What is the value of $2x-5y+3.9$?" and 
 2. "What is the value of $8x^2-100.7x$?"
-:::
+::: 
 
----
+-->
 
-## {#reorganize data-menu-title="Reorganize"} 
+--- 
 
-[2./3. It is often helpful to reorganize things]{.slide-title}
+## {#equations-solved data-menu-title="Equations solved"} 
 
-<hr>
-
-<br>
-
-::: {.body-text-l}
-In the equation on the previous slide (shown below), we might want to solve for *y*:
-
-$$2x-5y+3.9=8x^2-100.7x$$
-
-<br>
-
-The one rule to rule them all:
-:::
-
-[You can do whatever you want to an equation, as long as you do **the exact same thing to both sides.** That includes ensuring that you are applying something entirely to each side.]{.teal-text .body-text-m} 
-
----
-
-## {#same-both-sides1 data-menu-title="Same thing, both sides 1"} 
-
-[3. We're really just doing the same thing to both sides until we're happy with the format]{.slide-title2}
+[2. Solving equations]{.slide-title}
 
 <hr>
 
-<br>
+Equations help us find unknown values that satisfy certain conditions. 
 
-[**Example:**]{.body-text-l}
+Remember the rules:
 
-<br>
+2. Never change an equation. Instead, we rewrite them into more useful forms
 
-[Apply the same operation to each side of the following equation step-by-step to isolate $x$ on one side. **Write out all steps.**]{.body-text-m}
+3. Manipulate BOTH sides of an equation with the SAME PROCEDURE.
 
-<br>
+<span style="color: red;">
+Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation. 
+</span>
 
-[$$4x+8=5-2x$$]{.body-text-l}
+. . . 
 
-::: {.notes}
-- Start with: $$4x+8=5-2x$$
-- Add $2x$ to each side: $6x + 8 = 5$
-- Subtract $8$ from both sides: $6x = -3$
-- **ANSWER: $x = -\frac{1}{2}$**
+**Example**
+
+Prices are important in economics, but not always available for environmental goods.
+
+
+:::{.center-text}
+**How do we get prices if we know quantity?**
 :::
+
+$$
+\require{cancel}
+\begin{aligned}
+Q&=\frac{(400-P)}{80} &\text{Isolate P in terms of Q} \\
+\end{aligned}
+$$
+
+✏️ [Take a minute to solve this individually.]{style="color:green;"}
+
 
 ---
 
-## {#same-both-sides2 data-menu-title="Same thing, both sides 2"} 
+## {#solving-equations-2 data-menu-title="Solving equations"}
 
-[3. We're really just doing the same thing to both sides until we're happy with the format]{.slide-title2}
+[2. Solving equations]{.slide-title}
 
 <hr>
 
-<br>
+💡 [Let's see a solution!]{style="color:green;"}
 
-[**Example:**]{.body-text-l}
+Prices are important in economics, but not always available for environmental goods. 
 
-<br>
-
-[Apply the same operation to each side of the following equation step-by-step to isolate $a$ on one side. **Write out all steps.**]{.body-text-m}
-
-<br>
-
-[$$\frac{2(a+1)}{3a}+4=6$$]{.body-text-l}
-
-::: {.notes}
-ENDING NOTE: We might encounter complex expressions for how values are related to each other. While the equation is already solved, it can be helpful to use some basic algebra to rearrange things to make our equations easier to understand.
-
-- Start with: $$\frac{2(a+1)}{3a}+4=6$$
-- Subtract 4 from both sides: $$\frac{2a+2}{3a}=2$$
-- Multiply both sides by $3a$: $$2a+2=6a$$
-- Subtract $2a$ from both sides: $$2=4a$$
-- Divide each side by 4; **ANSWER: $a = \frac{1}{2}$**
+:::{.center-text}
+**How do we get prices if we know quantity?**
 :::
+
+$$
+\require{cancel}
+\begin{aligned}
+Q&=\frac{(400-P)}{80} &\text{Isolate P in terms of Q} \\
+\end{aligned}
+$$
+
+---
+
+
+## {#solving-equations-3 data-menu-title="Solving equations"}
+
+[2. Solving equations]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+Prices are important in economics, but not always available for environmental goods. 
+
+
+:::{.center-text}
+**How do we get prices if we know quantity?**
+:::
+
+$$
+\require{cancel}
+\begin{aligned}
+Q&=\frac{(400-P)}{80} &\text{Isolate P in terms of Q} \\
+80Q&=\frac{(400-P)\cancel{80}}{\cancel{80}}  &\text{ Multiply both sides by 80} \\
+80Q-400&=\cancel{400}-\cancel{400} -P &\text{ Subtract both sides by 400} \\
+-1(80Q-400)&=-P(-1) &\text{Multiply both sides by -1} \\
+400-80Q&=P  &\text{Flip terms for simplicity}
+\end{aligned}
+$$
+
+## {#practice-alge-1 data-menu-title="Easy to make mistakes"}
+
+[It can be easy to make mistakes while doing algebra. Practice makes perfect!]{.slide-title}
+
+<hr>
+
+Solve all in terms of $x$
+
+(A)  $3x+2=10x-12$
+
+<br>
+
+(B) $4-3(2x+1)=8-\frac{3x}{2}$
+
+<br>
+
+(C) $3(x+7a)-5=b+2(c-4x)$
+
+✏️ [Take a minute to solve these individually.]{style="color:green;"}
+
+## {#practice-alge-2 data-menu-title="Easy to make mistakes"}
+
+[It can be easy to make mistakes while doing algebra. Practice makes perfect!]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+Solve all in terms of $x$
+
+:::: {.columns}
+
+::: {.column width="50%"}
+:::{.center-text}
+(A)  $3x+2=10x-12$
+:::
+:::
+
+::: {.column width="50%"}
+:::{.center-text}
+(B) $4-3(2x+1)=8-\frac{3x}{2}$
+:::
+:::
+
+::::
+## {#practice-alge-3 data-menu-title="Easy to make mistakes"}
+
+[It can be easy to make mistakes while doing algebra. Practice makes perfect!]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+Solve all in terms of $x$
+
+(C) $3(x+7a)-5=b+2(c-4x)$
+
+
+## {#practice-alge-4 data-menu-title="Solutions"}
+
+[Practice Solutions]{.slide-title}
+
+<hr>
+
+:::columns
+
+:::{.column width=50%}
+$$
+\small
+\begin{aligned}
+3x+2&=10x-12 \\
+3x+2+12&=10x-12(+12) \\
+3x-3x+14&=10x-3x \\
+14&=7x \\
+x&=2
+\end{aligned}
+$$
+<br>
+
+$$
+\small
+\begin{aligned}
+4-3(2x+1)&=8-\frac{3x}{2}\\
+4-3-6x&=8-\frac{3x}{2} \\
+1-6x&=8-\frac{3x}{2} \\
+2-12x&=16-3x \\
+-9x&=14 \\
+x&=\frac{-14}{9}\\
+\end{aligned}
+$$
+
+:::
+
+:::{.column width=50%}
+$$
+\small
+\begin{aligned}
+3(x+7a)-5&=b+2(c-4x)\\
+3x+21a-5&=b+2c-8x \\
+11x+21a-5&=b+2c \\
+11x&=5+b+2c-21a\\
+x&=\frac{5+b+2c-21a}{11}
+\end{aligned}
+$$
+:::
+:::
+
 
 ---
 
