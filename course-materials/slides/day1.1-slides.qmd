@@ -1238,6 +1238,8 @@ That means we need to always **familiarize ourselves with metadata**, carefully 
 
 In dimensional analysis, we multiply initial units by a sequence of **unit conversion factors** to arrive at the final desired units.
 
+. . .
+
 **Example:** How many centimiters are there in 6 inches?
 
 💡 [Let's see a solution!]{style="color:green;"}
@@ -1266,8 +1268,8 @@ Then we multiply by the *appropriate* conversion factor and simplify:
 \require{cancel}
 \begin{align*}
 
-6 \text{ in} &= 6 \text{ in} \frac{2.54 \text{ cm}}{1 \text{ in}}\\
-&= 6 \frac{2.54}{1} \text{ in}\frac{\text{ cm}}{\text{ in}} \\
+6 \text{ in} &= 6 \text{ in} \cdot  \frac{2.54 \text{ cm}}{1 \text{ in}}\\
+&= 6  \frac{2.54}{1} \cdot  \text{ in}\frac{\text{ cm}}{\text{ in}} \\
 &= 15.24 \cancel{\text{ in}}\frac{\text{ cm}}{\cancel{\text{ in}}} \\
 &= 15.24 \text{ cm}
 \end{align*}
@@ -1280,11 +1282,38 @@ Then we multiply by the *appropriate* conversion factor and simplify:
 
 <hr>
 
-For example, to convert $100 \frac{g}{cm^3}$ into units of $\frac{kg}{in^3}$, given that 1 cm^3^ = 0.061 in^3^.
+**Example.** Convert $100 \frac{g}{cm^3}$ into units of $\frac{kg}{in^3}$, given that 1 cm^3^ = 0.061 in^3^.
 
 <br>
 
-$$100\frac{g}{cm^3}*\frac{1kg}{1000g}*\frac{1cm^3}{0.061in^3}=1.639\frac{kg}{in^3}$$
+---
+
+## {#unit-conv-2-solution data-menu-title="Unit conversions"} 
+
+[Dimensional analysis (unit conversions)]{.slide-title}
+
+<hr>
+
+**Example.** Convert $100 \frac{g}{cm^3}$ into units of $\frac{kg}{in^3}$, given that 1 cm^3^ = 0.061 in^3^.
+
+<br>
+
+We need one unit conversion factor for $g$: 
+$\frac{1 \text{ kg}}{1000 \text{ g}}$.
+
+And another one for $\text{cm}^3$:
+$\frac{1 \text{ cm}^3}{0.061 \text{in}^3}$.
+
+Then we multiply by the conversion factors and simplify
+
+\require{cancel}
+\begin{align*}
+
+100 \frac{\text{ g}}{\text{cm}^3} &= 100 \frac{\text{ g}}{\text{cm}^3} \cdot \frac{1 \text{ cm}^3}{0.061 \text{ in}^3} \cdot \frac{1 \text{ kg}}{1000 \text{ g}}\\
+&= 100 \frac{1}{0.061} \frac{1}{1000}\cdot \frac{\text{ g}}{\text{cm}^3} \frac{\text{ cm}^3}{ \text{ in}^3} \frac{ \text{ kg}}{\text{ g}}\\
+&= \frac{1}{0.61} \cdot \frac{\cancel{\text{ g}}}{\cancel{\text{cm}^3}} \frac{\cancel{\text{ cm}^3}}{ \text{ in}^3} \frac{ \text{ kg}}{\cancel{\text{ g}}}\\
+&=1.639\frac{kg}{in^3}
+\end{align*}
 
 ---
 
@@ -1314,7 +1343,7 @@ Practice dimensional analysis to perform the following conversions:
 2. $3.2\frac{g}{min\cdot m^2} \times \frac{1min}{60s} \times \frac{1000 mg}{g} \times \frac{m}{100cm} \times \frac{m}{100cm}$
 :::
 
----
+<!-- ---
 
 ## {#lunch-break data-menu-title="Lunch break"} 
 
@@ -1323,7 +1352,7 @@ Practice dimensional analysis to perform the following conversions:
 <hr>
 
 ![image: Flaticon.com](images/coffee-break.png)
-
+ -->
 
 
 ---
