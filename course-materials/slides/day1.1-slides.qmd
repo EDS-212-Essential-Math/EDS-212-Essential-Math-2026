@@ -17,7 +17,7 @@ format:
 
 <hr class="hr-teal">
 
-[August 3^th^, 2026]{.custom-subtitle3}
+[August 3^rd^, 2026]{.custom-subtitle3}
 
 ---
 

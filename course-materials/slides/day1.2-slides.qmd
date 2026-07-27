@@ -15,28 +15,20 @@ editor_options:
 
 [EDS 212: Day 1, Lecture 2]{.custom-title}
 
-[*Exponential functions, logarithms, graphs, average slope*]{.custom-subtitle}
+[*Functions, graphs, and linear functions*]{.custom-subtitle}
 
 <hr class="hr-teal">
 
-[August 4^th^, 2025]{.custom-subtitle3}
+[August 3^rd^, 2026]{.custom-subtitle3}
 
 ---
 
-## {#next-exps-logs data-menu-title="Next, exponentials & logs"} 
+## {#eds212-basics data-menu-title="EDS 212 basics" background-color="#003660"}
 
-[Math brain warm up]{.slide-title}
 
-<hr>
-
-::: {.body-text-m}
-- Algebra blitz
-- [**Exponentials and logarithms**]{.teal-text}
-- Common units and unit conversions
-- Functions
-- Understanding graphs
-- Interpreting equations
-:::
+<div class="page-center">
+<div class="custom-subtitle">Functions</div>
+</div>
 
 ---
 
@@ -52,9 +44,13 @@ editor_options:
 
 <br>
 
+. . .
+
 For example, $y = 3x-5$ is a function that tells us the **value of y** at **any value of x**. In this scenario, we would probably say **y is a function of x**. 
 
 <br>
+
+. . .
 
 Could you also rewrite it and say **x is a function of y**? Here, with no knowledge of what's an input and what's an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully. What follows is the expression in the format of: "**[output variable(s)] is/are a function of [input variable(s)]**". 
 
@@ -71,6 +67,8 @@ Could you also rewrite it and say **x is a function of y**? Here, with no knowle
 For the following combinations of related variables, which do you expect would be the **input** and the **output** in a function describing how they are related? Say your answer in a sentence, e.g. "Evapotranspiration is a function of air temperature."
 
 <br>
+
+✏️ [Write your answer individually as a sentence.]{style="color:green;"}
 
 ::: {.body-text-m}
 1. fuel (biomass) / slope / wildfire severity / windspeed / air temperature
@@ -116,6 +114,8 @@ $f(x) = [expression\space containing \space x]$
 
 <br>
 
+. . .
+
 [Multivariate function:]{.body-text-l} 
 
 $g(a,T,z)=[expression\space containing \space a, T, \space and \space z]$
@@ -131,7 +131,7 @@ $g(a,T,z)=[expression\space containing \space a, T, \space and \space z]$
 <br>
 
 ::: {.body-text-m}
-For continuous functions, we evaluate them by plugging in variable values. 
+We evaluate functions by plugging in values of the input variables. 
 
 <br>
 
@@ -154,418 +154,319 @@ $g(3, 10) = 2.4(3) + 0.5(10^2)= 57.2$
 
 ---
 
-## {#nat-exponent data-menu-title="Natural exponent"} 
+## {#graphs-title data-menu-title="Graphs title" background-color="#003660"}
 
-[The Natural Exponential]{.slide-title}
 
-<hr>
-
-<br>
-<br>
-
-::: {.body-text-l}
-In previous examples, we evaluated exponentials with different bases that were variables (e.g. $x^5$) and rational numbers (e.g. $2^4$). 
-
-<br>
-
-Here, we'll learn about the *natural exponential*, $e$, which appears frequently in environmental science and modeling.
-:::
-
----
-
-## {#where-e-come-from data-menu-title="Where does e come from?"} 
-
-[Where does $e$ come from?]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-m}
-- The value is from continuous compounding over infinite intervals:
-
-$$\sum^{\infty}_{k=0} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + ...$$
-
-<!-- OLD VERSION FROM ORIGINAL AHORST SLIDES: $e=\lim_{n\to\infty}(1+\frac{1}{n})^n$ -->
-
-- The **e** is from Leonard **Euler**, Swiss mathematician who proved the value was irrational
-:::
-
----
-
-## {#e-number data-menu-title="e is a number"} 
-
-[$e$ is a *number*, not a variable]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-[**$e = 2.71828182845904523536...$**]{.teal-text}
-
-<br>
-
-It is an irrational number, yes - meaning it can't be expressed by a simple ratio of integers - but a number nonetheless. With infinite decimal places.
-
-<br>
-
-[***It is always the same value.***]{.teal-text}
-:::
-
----
-
-## {#e-common data-menu-title="e common"} 
-
-[Why is $e$ so common?]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-- **One reason:** Exponential trends show up a LOT in environmental science (the proportional change is the same over each time span)
-
-- **Math reason:** Turns out it's a very useful value for calculus
-:::
-
----
-
-## {#prop-change data-menu-title="Proportional change"} 
-
-```{r}
-#| eval: true
-#| echo: false
-library(tidyverse)
-
-mydata <- data.frame(x = seq(1:10),
-                     y = exp(seq(1:10))) |> 
-  mutate(previous_y = lag(y, 1),
-         percent_change_y = (y - previous_y)/y*100)
-
-ggplot(mydata, aes(x = x, y = y)) +
-  geom_point(size = 4) +
-  theme(
-    axis.text = element_text(size = 15),
-    axis.title = element_text(size = 17)
-  )
-```
-
-```{r}
-#| eval: true
-#| echo: false
-mydata
-```
-
----
-
-## {#aquaculture data-menu-title="Aquaculture example"} 
-
-[A real-world example:]{.slide-title}
-
-<hr>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/fisheries-aquaculture.png")
-```
-
-::: {.footer}
-Source: [Our World in Data](https://ourworldindata.org/grapher/capture-fisheries-vs-aquaculture)
-:::
-
----
-
-## {#cant-grow-forever data-menu-title="Can't grow forever"} 
-
-[But populations can't grow exponentially forever . . .]{.slide-title2}
-
-<hr>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "90%"
-#| fig-align: "center"
-knitr::include_graphics("images/paramecium.jpg")
-```
-
-::: {.center-text .body-text-s .gray-text}
-Gause, G. F. 1934. The Struggle for Existence. Baltimore: Williams and Wilkins.
-:::
-
----
-
-## {#logistic-growth data-menu-title="Logistic growth"} 
-
-[Logistic growth]{.slide-title}
-
-<hr>
-
-<br>
-
-[$$N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}$$]{.body-text-l}
-
-<br>
-
-[Where $N_t$ is the population size at time $t$, $K$ is the carrying capacity, $N_0$ is the initial population size, and $r$ is a growth rate.]{.body-text-m}
-
-<br>
-
-::: {.center-text .body-text-m .teal-text}
-We should always think about *why an equations has the shape it has* - both conceptually and mathematically. 
-:::
-
----
-
-## {#logistic-growth-Qs data-menu-title="Logistic growth (Qs)"} 
-
-[Logistic growth]{.slide-title}
-
-<hr>
-
-<br>
-
-[$$N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}$$]{.body-text-l}
-
-<br>
-
-::: {.body-text-m}
-1. Why might we expect logistic growth for many populations? 
-
-2. What variables *besides* time would influence the actual population?
-
-<!-- 3. Why, mathematically, does the logistic growth expression take the shape it does? What happens as the population becomes very close to the carrying capacity? -->
-:::
-
-::: {.notes}
-1. Pops grow slowly at the start when there are few individuals. Grow more quickly (exponentially) when enough individuals are in a pop and resources are abundant. Plateau when resources become depleted.
-
-2. The number of individuals and the amount of resources
-:::
-
----
-
-## {#logarithms data-menu-title="Logarithms"} 
-
-[Logarithms]{.slide-title}
-
-<hr>
-
-<br>
-
-[Logarithms ask a question: $\log_a(b)$ asks "to what power do I have to raise $a$ to get a value of $b$?]{.body-text-m}
-
-<br>
-
-[**For example:**]{.body-text-l} 
-
-- $\log_2(8)$ asks "to what power do I have to raise 2, to get a value of 8?"
-
-- $\log_x(x^{5.9})$ asks "to what power do I have to raise $x$ to get a value of $x^{5.9}$?"
-
-- $\log_{banana}(banana^{1382.95})$ asks "to what power do I have to raise $banana$ to get a value of $banana^{1382.95}$?"
-
-::: {.notes}
-1. **Example 1:** $log_2(8*2)$ == $log_2(8) + log_2(2)$
-:::
-
----
-
-## {#nat-log data-menu-title="Natural log"} 
-
-[The *natural log* = "log base $e$" = $\log_e()$ = $ln()$]{.slide-title}
-
-<hr>
-
-<br>
-
-[So based on what we learned in the previous slide, what is:]{.body-text-m}
-
-<br>
-
-- [$\log_e(e^{10.4})$ = ?]{.body-text-m}
-
-- [$\log_e(e^{2x+8.3})$ = ?]{.body-text-m}
-
-- [$\log_e(e^{ax+2b^2-4.095})$ = ?]{.body-text-m}
-
-::: {.notes}
-- $10.4$
-- $2x+8.3$
-- $ax+2b^2-4.095$
-:::
-
----
-
-## {#log-rules data-menu-title="Log rules"} 
-
-[Some log rules]{.slide-title}
-
-<hr>
-
-- [$\log_x(AB)=\log_x(A)+\log_x(B)$]{.body-text-m}
-
-
-- [$\log_x(\frac{A}{B}) = \log_x(A)-\log_x(B)$]{.body-text-m}
-
-
-- [$\log_x(A^B)=B\log_x(A)$]{.body-text-m}
-
-
-- [$x^{\log_x(A)}=A$]{.body-text-m}
-
-
-- [$\log_x(1)=0$]{.body-text-m}
-
-
-- [$\log_x(x)= 1$]{.body-text-m}
-
----
-
-## {#crit-thinking data-menu-title="Critical thinking"} 
-
-[Critical thinking questions]{.slide-title}
-
-<hr>
-
-<br>
-
-[Can the value within a $ln()$ expression ever be 0, or negative? Why?]{.body-text-m}
-  
-<br>  
-  
-[Can the solution to a natural log expression ever be negative? How?]{.body-text-m}
-
-. . .
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "70%"
-#| fig-align: "center"
-library(tidyverse)
-
-mydata <- data.frame(x = seq(from = -10, to = 10),
-                     y = exp(seq(from = -10, to = 10))) |> 
-  mutate(previous_y = lag(y, 1),
-         percent_change_y = (y - previous_y)/y*100)
-
-ggplot(mydata, aes(x = x, y = y)) +
-  geom_point(size = 4) +
-  theme(
-    axis.text = element_text(size = 15),
-    axis.title = element_text(size = 17)
-    )
-```
-
-::: {.notes}
-- No, can't be 0 bc there's nothing you can multiply e by itself to get 0. No, can't be negative bc always e * e * ....
-
-- Yes, the solution to a natural log expression can be negative, e.g. $log_e(?) = <0$ 
-:::
-
----
-
-## {#ln-e-in-equations data-menu-title="$ln()$ and $e$ in equations"} 
-
-[Working with $ln()$ and $e$ in equations]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-m}
-We can think of these as inverses of each other:
-
-- $e^{\ln(x)} = x$
-
-- $\ln(e^x)=x$
-:::
-
-. . . 
-
-<br>
-
-[...and use that as a tool for escaping variables from exponents & logs (remembering we can do whatever we want to an equation, as long as we do **the same exact thing to both sides**)]{.body-text-m}
-
----
-
-## {#ln-e-examples data-menu-title="$ln()$ and $e$ examples"} 
-
-[Examples:]{.slide-title}
-
-<hr>
-
-<br>
-
-- [Find $x$ given $\ln(x) = 5$]{.body-text-m}
-
-  Exponentiate both sides: $e^{\ln(x)} = e^5$ ; simplify left-hand side to get: $x = e^5$
-
-<br>
-
-- [Find $y$ given $e^{3y}=95$]{.body-text-m}
-
-  Take natural log of both sides: $\ln(e^{3y})=ln(95)$ ; simplifies to: $3y = \ln(95)$, so $y = \frac{\ln(95)}{3}$
-
----
-
-## {#next-graphs data-menu-title="Next, understanding graphs"} 
-
-[Math brain warm up]{.slide-title}
-
-<hr>
-
-::: {.body-text-m}
-- Algebra blitz
-- Exponentials and logarithms
-- Common units and unit conversions
-- Functions
-- [**Understanding graphs**]{.teal-text}
-- Interpreting equations
-:::
+<div class="page-center">
+<div class="custom-subtitle">Graphs</div>
+</div>
 
 ---
 
 ## {#graphs data-menu-title="Graphs"} 
 
-[Graphs: visualizing & thinking about data]{.slide-title}
+[Why graphs?]{.slide-title}
 
 <hr>
 
+Graphs are a way for us to more easily process trends or patterns that may be more challenging to understand in a table or list.
+
+:::{.center-text}
+**Which looks better and is easier to understand?**
+:::
+
+:::: {.columns}
+::: {.column width="50%"}
+```{r}
+library(DT)
+library(tidyverse)
+
+car<-mtcars %>% 
+  select(mpg,cyl,disp,hp)
+DT::datatable(car,
+              fillContainer = FALSE, options = list(pageLength = 4))
+```
+
+:::
+
+:::{.column width="50%"}
+```{r,echo=FALSE, fig.width=6, fig.height=6,out.width="90%",fig.align='right'}
+ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) + 
+    geom_boxplot(fill="slateblue", alpha=0.2) + 
+    xlab("Number of Cylinders")+
+  theme_classic()+
+  theme(text = element_text(size = 28)) 
+```
+:::
+::::
+
+---
+
+## {#xy-coordinates data-menu-title="xy coordinates"}
+
+[The $xy$ coordinate system]{.slide-title}
+
+<hr>
+
+::::{.columns}
+:::{.column width="50%"}
+
+Graphs move in a 2-dimensional plane with a coordinate system using two axes:
+
+- $x$-axis (horizontal axis)
+
+- $y$-axis (vertical axis)
+
+
 <br>
 
-[Graphs are a way for us to more easily process trends or patterns that may be more challenging to understand in a table or list.]{.body-text-m} 
+Axes units must be defined depending on the application.
+
+:::{.incremental}
+
+We use pairs of numbers to place data:
+
+- A point on the $xy$ plane with **coordinates** $(a,b)$ means the point is located at $a$ on the $x$-axis and at $b$ on the $y$-axis.
+
+- Where would (2,-1) go on the graph?
+
+:::
+:::
+:::{.column width="50%"}
+
+```{r echo=FALSE}
+knitr::include_graphics("images/cart.png")
+```
+:::
+::::
+
+---
+
+## {#graph-series data-menu-title="Graphs series of points to make lines"}
+
+[We can join series of points to make graphs]{.slide-title}
+
+<hr>
+
+::::{.columns}
+:::{.column width="50%"}
+```{r echo=FALSE}
+set.seed(1)
+x=seq(0,10)
+y=x+1.5*rnorm(10)
+pdf<-data.frame(x=x,y=y)
+
+DT::datatable(round(pdf,2),
+              fillContainer = FALSE, options = list(pageLength = 6))
+```
+
+:::
+:::{.column width="50%"}
+
+```{r, echo=FALSE,fig.height=5.5,fig.width=5,out.width="90%"}
+ggplot(pdf,aes(x=x,y=y))+
+  geom_point(size=4)+
+  geom_path(linewidth=2)+
+  geom_smooth(method="lm",se=FALSE,size=2)+
+  annotate("text",x=2.9,y=8,label="Blue Regression Line\ny=0.856x+0.44",size=6)+
+  theme_classic()+
+  theme(text = element_text(size = 28)) 
+```
+
+:::
+::::
+
+--- 
+
+## {#graph-fcn data-menu-title="Most functions can be shown on graphs"}
+
+[Functions on a single variable and a single output can be graphed]{.slide-title}
+
+<hr>
+
+::::{.columns}
+:::{.column width="50%"}
+
+- $\color{green}{y=sin(3x)+2x}$
 
 <br>
+
+- $\color{red}{y=0.5x^3+x^2-5x}$
+
+<br>
+
+- $\color{blue}{y=0.85x+0.44}$
+
+:::
+:::{.column width="50%"}
+
+```{r echo=FALSE}
+
+x=seq(0,10,by=0.01)
+sn=sin(3*x)+2*x
+pol=-0.2*x^3+2*x^2-2*x
+reg=x*0.85+0.44
+
+p2df=data.frame(sin=sn,polynomial=pol,linear=reg,x=x) %>% 
+  pivot_longer(cols=!x,values_to="values",names_to = "fun")
+```
+
+
+```{r echo=FALSE, fig.align='center',fig.dim=c(6,8),out.width="70%"}
+p1<-ggplot(p2df,aes(x=x,y=values,color=fun))+
+  geom_path(linewidth=3)+
+  theme_classic()+
+  scale_color_manual(values=c("blue","red","darkgreen"),name="Function Type")+
+  labs(y="y")+
+  theme(text = element_text(size = 28)) +
+  geom_hline(yintercept=0,color="black",size=1.5)+
+  scale_x_continuous(expand = c(0, 0),limits = c(0,11)) +
+  scale_y_continuous(expand = c(0, 0),limits=c(-22,22))+
+  theme(legend.position = c(.5,.25))
+  
+p1
+  
+```
+:::
+::::
+
+---
+
+## {#graph-ingredients data-menu-title="Two key ingredients to graphs"}
+
+[Two key ingredients to graphs]{.slide-title}
+
+<hr>
+
+::::{.columns}
+:::{.column width="50%"}
+
+
+Intercepts
+
+- $x$-intercept
+
+  - Where does the graph intersect the $x$-axis? 
+  - In other words, for what values of $x$ do we have $(x,0)$ be part of the graph?
+    
+- $y$-intercept
+
+    - Where does  the graph intersect the $y$-axis? 
+    - In other words, for what value of $y$ do we have $(0,y)$ be part of the graph?
+    
+
+:::
+
+:::{.column width="50%"}
+:::{.center-text}
+What are the intercepts of the polynomial function in red?
+:::
+
+```{r echo=FALSE,fig.align='center',fig.dim=c(6,8),out.width="70%"}
+p1+theme(legend.position = "none")
+  
+```
+:::
+::::
+
+---
+
+## {#understanding-graphs data-menu-title="Graphs explanation"} 
+
+[Understanding graphs]{.slide-title}
+
+<hr>
 
 [When you look at graphs, the first things you should ask:]{.body-text-m}  
 
-- What variables are plotted (e.g. x- & y-axis, including units)?
+- What variables are being plotted (e.g. x- & y-axis, including units)?
 - What values are plotted (e.g. raw values, transformed, means, etc.)?
 - What are the overall takeaways and am I understanding them responsibly?
 
 ---
 
-## {#graphs-explanation data-menu-title="Graphs explanation"} 
+## {#reading-graphs data-menu-title="Graphs explanation"} 
 
-[Practice saying these things OUT LOUD as if presenting the graph to an audience]{.slide-title3}
+[Reading graphs (in general)]{.slide-title}
 
 <hr>
 
-<br>
+>"On the x-axis we have [x-variable] measured in  [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings]."
 
->["This figure shows the [change/pattern/relationship] between [x-variable], shown on the x-axis in units of [units] and [y-variable], shown on the y-axis in units of [units]. Overall [overall statement of pattern / trend / findings]." ]{.body-text-m} 
+. . .
 
-<br>
-
-[Possibly with additional context as useful for the audience to put those findings into perspective (e.g. "this reduction represents an 82% decline in rainbowfish stocks along the Narnia Coast since 1991").]{.body-text-m} 
+![](/course-materials/slides/images/correlation-1-wind-power.png){width="60%" fig-align="center"}
 
 ---
+
+## {#reading-graphs-2 data-menu-title="Graphs explanation"} 
+
+[Reading graphs (in general)]{.slide-title}
+
+<hr>
+
+>"On the x-axis we have [x-variable] measured in  [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings]."
+
+
+![](/course-materials/slides/images/correlation-1-butter-consumption.png){width="85%" fig-align="center"}
+
+---
+
+
+## {#reading-graphs-3 data-menu-title="Graphs explanation"} 
+
+[Reading graphs (in general)]{.slide-title}
+
+<hr>
+
+>"On the x-axis we have [x-variable] measured in  [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings]."
+
+
+![Source: [TylerVigen.com](https://www.tylervigen.com/spurious/correlation/1362_butter-consumption_correlates-with_wind-power-generated-in-lithuania)](/course-materials/slides/images/correlation-1-both.png){width="80%" fig-align="center"}
+
+---
+
+## {#graphs-reading-practice-1 data-menu-title="Graphs explanation"} 
+
+[Reading graphs practice]{.slide-title3}
+
+<hr>
+
+💬 [Partner 1 gets to read the graph for the first variable.]{style="color:green;"}
+
+>"On the x-axis we have [x-variable] measured in  [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings]."
+
+. . .
+
+![](/course-materials/slides/images/correlation-2-thomas.png){width="55%" fig-align="center"}
+
+<!-- 
+[Possibly with additional context as useful for the audience to put those findings into perspective (e.g. "this reduction represents an 82% decline in rainbowfish stocks along the Narnia Coast since 1991").]{.body-text-m}  -->
+
+---
+
+## {#graphs-reading-practice-2 data-menu-title="Graphs explanation"} 
+
+[Reading graphs practice]{.slide-title3}
+
+<hr>
+
+💬 [Partner 2 gets to read the plot for the second variable, provide context for the correlation, and hypothesise an explanation.]{style="color:green;"}
+
+>"On the x-axis we have [x-variable] measured in  [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings]."
+
+. . .
+
+
+![Source: [TylerVigen.com](https://www.tylervigen.com/spurious/correlation/1882_popularity-of-the-first-name-thomas_correlates-with_motor-vehicle-thefts-in-maine)](/course-materials/slides/images/correlation-2-thomas-vehicle-thefts.png){width="55%" fig-align="center"}
+
+---
+
+## {#graphs-reading-practice-mono-lake data-menu-title="Graphs explanation"} 
+
+[Reading graphs practice]{.slide-title3}
+
+<hr>
 
 ```{r}
 #| eval: true
