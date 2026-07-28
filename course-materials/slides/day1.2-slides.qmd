@@ -38,8 +38,6 @@ editor_options:
 
 <hr>
 
-<br>
-
 [Functions are mathematical expressions that tell us how input values are related to output values.]{.body-text-m}
 
 <br>
@@ -52,7 +50,11 @@ For example, $y = 3x-5$ is a function that tells us the **value of y** at **any 
 
 . . .
 
-Could you also rewrite it and say **x is a function of y**? Here, with no knowledge of what's an input and what's an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully. What follows is the expression in the format of: "**[output variable(s)] is/are a function of [input variable(s)]**". 
+Could you also rewrite it and say **x is a function of y**? 
+
+Here, with no knowledge of what's an input and what's an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully. 
+
+What follows is the expression in the format of: "**[output variable(s)] is/are a function of [input variable(s)]**". 
 
 ---
 
@@ -64,11 +66,11 @@ Could you also rewrite it and say **x is a function of y**? Here, with no knowle
 
 <br>
 
-For the following combinations of related variables, which do you expect would be the **input** and the **output** in a function describing how they are related? Say your answer in a sentence, e.g. "Evapotranspiration is a function of air temperature."
+For the following combinations of related variables, which do you expect would be the **input** and the **output** in a function describing how they are related? E.g. "Evapotranspiration is a function of air temperature."
 
 <br>
 
-✏️ [Write your answer individually as a sentence.]{style="color:green;"}
+✏️ [Write your answer individually as **a sentence**.]{style="color:green;"}
 
 ::: {.body-text-m}
 1. fuel (biomass) / slope / wildfire severity / windspeed / air temperature
@@ -100,6 +102,16 @@ For the following combinations of related variables, which do you expect would b
 
 ---
 
+## {#fxn-notation-blank data-menu-title="Function notation"} 
+
+[Function notation]{.slide-title}
+
+<hr>
+
+
+
+---
+
 ## {#fxn-notation data-menu-title="Function notation"} 
 
 [Function notation]{.slide-title}
@@ -114,11 +126,33 @@ $f(x) = [expression\space containing \space x]$
 
 <br>
 
-. . .
 
 [Multivariate function:]{.body-text-l} 
 
 $g(a,T,z)=[expression\space containing \space a, T, \space and \space z]$
+
+---
+
+## {#eval-fxns-blank data-menu-title="Evalutating functions"} 
+
+[Evaluating functions]{.slide-title}
+
+<hr>
+
+<br>
+
+::: {.body-text-m}
+We evaluate functions by plugging in values of the input variables. 
+
+<br>
+
+✏️ [Example:]{style="color:green;"}
+
+<br>
+
+Evaluate $g(x,t)=2.4x+0.5t^2$ at $x = 3$ and $t = 10$
+
+:::
 
 ---
 
@@ -135,7 +169,7 @@ We evaluate functions by plugging in values of the input variables.
 
 <br>
 
-**Example:**
+✏️ [Example:]{style="color:green;"}
 
 <br>
 
@@ -144,11 +178,6 @@ Evaluate $g(x,t)=2.4x+0.5t^2$ at $x = 3$ and $t = 10$
 <br>
 
 $g(3, 10) = 2.4(3) + 0.5(10^2)= 57.2$
-:::
-
-::: {.notes}
-- $g(3,10) = 2.4 \times 3 + 0.5 \times 10^2$
-- **$g(3,10) = 7.2 + 50 = 57.2$**
 :::
 
 
@@ -211,7 +240,7 @@ ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) +
 ::::{.columns}
 :::{.column width="50%"}
 
-Graphs move in a 2-dimensional plane with a coordinate system using two axes:
+Graphs generally move in a 2-dimensional plane with a coordinate system using two axes:
 
 - $x$-axis (horizontal axis)
 
@@ -377,10 +406,20 @@ p1+theme(legend.position = "none")
 
 <hr>
 
+<br>
+
 [When you look at graphs, the first things you should ask:]{.body-text-m}  
 
+<br>
+
 - What variables are being plotted (e.g. x- & y-axis, including units)?
+
+<br>
+
 - What values are plotted (e.g. raw values, transformed, means, etc.)?
+
+<br>
+
 - What are the overall takeaways and am I understanding them responsibly?
 
 ---
@@ -396,19 +435,6 @@ p1+theme(legend.position = "none")
 . . .
 
 ![](/course-materials/slides/images/correlation-1-wind-power.png){width="60%" fig-align="center"}
-
----
-
-## {#reading-graphs-2 data-menu-title="Graphs explanation"} 
-
-[Reading graphs (in general)]{.slide-title}
-
-<hr>
-
->"On the x-axis we have [x-variable] measured in  [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings]."
-
-
-![](/course-materials/slides/images/correlation-1-butter-consumption.png){width="85%" fig-align="center"}
 
 ---
 
@@ -501,6 +527,18 @@ knitr::include_graphics("images/mono_lake_graph.png")
 <div class="page-center">
 <div class="custom-subtitle">Lines</div>
 </div>
+---
+
+## {#slope-int-blank data-menu-title="Slope-Intercept Form"}
+
+[Linear functions: slope-intercept form]{.slide-title}
+
+<hr>
+
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">                                                                               
+  ✏️                    
+</div>  
+
 
 ---
 
@@ -523,31 +561,16 @@ $$
 
 ---
 
-## {#find-line-eq-1 data-menu-title="Finding the equation of a line"}
+## {#find-line-eq-blank data-menu-title="Finding the equation of a line"}
 
 [Finding the equation of a line]{.slide-title}
 
 <hr>
-Given two points $(x_1, y_1)$ and $(x_2, y_2)$ on the line:
 
-::::{.columns}
-:::{.column width="50%"}
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">                                                                               
+  ✏️                    
+</div>  
 
-(1) Find $m$, the **slope**, by using the two points:
-
-$$
-m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
-$$
-:::
-
-:::{.column width="50%"}
-
-```{r echo=FALSE,fig.align='center',out.width="80%"}
-knitr::include_graphics("images/slope.PNG")
-```
-
-:::
-::::
 
 ---
 
@@ -596,13 +619,13 @@ knitr::include_graphics("images/slope.PNG")
 
 <hr>
 
-1. Find the equation of the line that:
+- Find the equation of the line that:
 
-(a) passes through $(3,5)$ and $(2,-1)$.
+  (a) passes through $(3,5)$ and $(2,-1)$.
 
-(b) passes through $(2,-5)$ and has $x$-intercept equal to 4.
+  (b) passes through $(2,-5)$ and has $x$-intercept equal to 4.
 
-(c) has the following graph:
+  (c) has the following graph:
 
 ```{r echo=FALSE,fig.align='center',out.width="80%"}
 # Set up plot area
@@ -636,7 +659,7 @@ axis(1, at = seq(x_min, x_max, by = 1))
 axis(2, at = seq(y_min, y_max, by = 1))
 ```
 
-2. Make a graph showing the line that passes through (3,-1) and has slope equal to 2. 
+- Make a graph showing the line that passes through (3,-1) and has slope equal to 2. 
 
 
 ---
@@ -649,6 +672,8 @@ axis(2, at = seq(y_min, y_max, by = 1))
 
 Find the equation of the line that passes through $(3,5)$ and $(2,-1)$.
 
+✏️ [Let's see a solution.]{style="color:green;"}
+
 ---
 
 ## {#line-equation-practice-sol-2 data-menu-title="Equation of a line: practice"}
@@ -658,6 +683,8 @@ Find the equation of the line that passes through $(3,5)$ and $(2,-1)$.
 <hr>
 
 Find the equation of the line that passes through $(2,-5)$ and has $x$-intercept equal to 4.
+
+✏️ [Let's see a solution.]{style="color:green;"}
 
 ---
 
@@ -711,8 +738,9 @@ axis(2, at = seq(y_min, y_max, by = 1))
 
 :::
 
-
 :::
+
+✏️ [Let's see a solution.]{style="color:green;"}
 
 ---
 
@@ -723,6 +751,8 @@ axis(2, at = seq(y_min, y_max, by = 1))
 <hr>
 
 Make a graph showing the line that passes through (3,-1) and has slope equal to 2. 
+
+✏️ [Let's see a solution.]{style="color:green;"}
 
 ---
 
