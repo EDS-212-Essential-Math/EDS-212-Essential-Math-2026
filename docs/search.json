@@ -2,16 +2,9 @@
   {
     "objectID": "course-materials/day1.html#class-materials",
     "href": "course-materials/day1.html#class-materials",
-    "title": "Basic math review",
+    "title": "Core math review",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Practice session\n\n\n\n\nday 1 / morning\nBasic algebra review, units and unit conversions, exponents, logarithms\nMeet our R tools, basic operations, our first R function\n\n\nday 1 / afternoon\nFunctions (interpreting & evaluating), reading graphs, slope\nR projects, storing objects, creating vectors and sequences"
-  },
-  {
-    "objectID": "course-materials/day1.html#end-of-day-practice",
-    "href": "course-materials/day1.html#end-of-day-practice",
-    "title": "Basic math review",
-    "section": "End-of-day practice",
-    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 1 Practice: Problems, gut checks, R Projects, and a function"
+    "text": "Class materials\n\n\n\n\n\n\n\n Session\n Lecture slides\n\n\n\n\nday 1 / morning\nBasic algebra review, rules of exponents, units and unit conversions\n\n\nday 1 / afternoon\nFunctions (interpreting & evaluating), reading graphs, lines"
   },
   {
     "objectID": "course-materials/interactive-sessions/interactive-session-1b.html",
@@ -966,25 +959,193 @@
     "text": "Communicating data summaries\n\n\n\n\n\nThe “Bar plots” philosophy: show as much as you can for the audience you’re presenting to\nSummary statistics are often useful, but are a small part of the whole data story\nUncertainty is important! How can we responsibly communicate it?\nAll summaries are strongest when accompanied by additional data communication\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtwork by Allison Horst"
   },
   {
-    "objectID": "course-materials/eod-keys/eod-day1-key.html",
-    "href": "course-materials/eod-keys/eod-day1-key.html",
-    "title": "Day 1: Tasks & activities - KEY",
+    "objectID": "course-materials/slides/exponentials-from-day-1.html",
+    "href": "course-materials/slides/exponentials-from-day-1.html",
+    "title": "",
     "section": "",
-    "text": "By hand: Evaluate \\(f(x,y)=x^2-1+3xy\\) at \\(x=1\\) and \\(y = 0\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(f(1,0)=1^2-1+(3)(1)(0) = 1 - 1 + 0 = 0\\)\n\n\n\nIn the R Console: given \\(G(t,z)=3.1(t-4.2)^2 + 0.06z\\), find the value of \\(G(1, 2.5)\\) (you do NOT need to write a function - just do the calculation in R using R as a calculator)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n3.1 * (1 - 4.2)^2 + (0.06 * 2.5)\n\n[1] 31.894\n\n\n\n\n\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\n\n\nSolution\n\n\n\nAccording to Wikipedia, one barrel of oil is equal to 42 gallons and ~159 liters.\n\nCompany A: \\(14.6\\; barrels\\; spilled - 9.3\\; barrels\\; recovered = 5.3\\; barrels\\; unrecovered\\)\nCompany B: \\(692\\; liters \\times \\frac{1\\; barrel}{159\\; liters} = 4.352201\\; barrels\\;spilled\\; \\times 0.06 = 0.2611321\\;barrels\\;unrecovered\\)\nCompnay C: \\(18.1\\;gallons\\; \\times \\frac{1\\;barrel}{42\\;gallons} = 0.4309524\\;barrels\\;spilled\\; \\times 1 = 0.4309524\\;barrels\\;unrecovered\\)\n\nTotal unrecovered barrels = 5.3 + 0.2611321 + 0.4309524 = 5.992084 ~ 6 barrels\n\n\n\n\n\n\nBy hand: If an urchin population in a study plot in 1990 is 432, and in 2004 is 801, what is the average rate of population increase? Find the slope, then write a statement about the average increase (including units).\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[slope\\; (m) = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2-y_1}{x_2-x_1} = \\frac{801-432}{2004-1990} = 26.43\\] Between 1990 and 2004, urchin populations increased by an average of 26.43 urchins per year."
+    "text": "format: revealjs: slide-number: true # code-link: true highlight-style: a11y chalkboard: true theme: - ../../meds-slides-styles.scss editor_options: chunk_output_type: console —"
   },
   {
-    "objectID": "course-materials/eod-keys/eod-day1-key.html#section-1.-practice-problems",
-    "href": "course-materials/eod-keys/eod-day1-key.html#section-1.-practice-problems",
-    "title": "Day 1: Tasks & activities - KEY",
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#nat-exponent",
+    "href": "course-materials/slides/exponentials-from-day-1.html#nat-exponent",
+    "title": "",
     "section": "",
-    "text": "By hand: Evaluate \\(f(x,y)=x^2-1+3xy\\) at \\(x=1\\) and \\(y = 0\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(f(1,0)=1^2-1+(3)(1)(0) = 1 - 1 + 0 = 0\\)\n\n\n\nIn the R Console: given \\(G(t,z)=3.1(t-4.2)^2 + 0.06z\\), find the value of \\(G(1, 2.5)\\) (you do NOT need to write a function - just do the calculation in R using R as a calculator)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n3.1 * (1 - 4.2)^2 + (0.06 * 2.5)\n\n[1] 31.894\n\n\n\n\n\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\n\n\nSolution\n\n\n\nAccording to Wikipedia, one barrel of oil is equal to 42 gallons and ~159 liters.\n\nCompany A: \\(14.6\\; barrels\\; spilled - 9.3\\; barrels\\; recovered = 5.3\\; barrels\\; unrecovered\\)\nCompany B: \\(692\\; liters \\times \\frac{1\\; barrel}{159\\; liters} = 4.352201\\; barrels\\;spilled\\; \\times 0.06 = 0.2611321\\;barrels\\;unrecovered\\)\nCompnay C: \\(18.1\\;gallons\\; \\times \\frac{1\\;barrel}{42\\;gallons} = 0.4309524\\;barrels\\;spilled\\; \\times 1 = 0.4309524\\;barrels\\;unrecovered\\)\n\nTotal unrecovered barrels = 5.3 + 0.2611321 + 0.4309524 = 5.992084 ~ 6 barrels\n\n\n\n\n\n\nBy hand: If an urchin population in a study plot in 1990 is 432, and in 2004 is 801, what is the average rate of population increase? Find the slope, then write a statement about the average increase (including units).\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[slope\\; (m) = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2-y_1}{x_2-x_1} = \\frac{801-432}{2004-1990} = 26.43\\] Between 1990 and 2004, urchin populations increased by an average of 26.43 urchins per year."
+    "text": "The Natural Exponential\n\n \n\nIn previous examples, we evaluated exponentials with different bases that were variables (e.g. \\(x^5\\)) and rational numbers (e.g. \\(2^4\\)).\n\nHere, we’ll learn about the natural exponential, \\(e\\), which appears frequently in environmental science and modeling."
   },
   {
-    "objectID": "course-materials/eod-keys/eod-day1-key.html#section-2-projects-and-functions",
-    "href": "course-materials/eod-keys/eod-day1-key.html#section-2-projects-and-functions",
-    "title": "Day 1: Tasks & activities - KEY",
-    "section": "Section 2: Projects and functions",
-    "text": "Section 2: Projects and functions\n\nCreate a new R project (named eds212-day1-tasks)\nAdd a new Quarto document to the project\nPress Render (save this in your project as fish-length-weight.qmd)\nDelete everything below the first code chunk\nAttach the tidyverse package\n\n\n\n\n\n\n\nSolution\n\n\n\n\nlibrary(tidyverse)\n\n\n\n\nPlay around with markdown in the Quarto doc. Try adding text with at least the following:\n\n\nHeaders of varying size\nItalics\nBold\nSuperscripts / subscripts\nBulletpoints\nAn image (google how!)\n\n\nAdd a new code chunk\nWithin the R code chunk, write a function to estimate fish standard weight, given parameters \\(a\\), \\(b\\), and fish length \\(L\\) as inputs. “Standard weight” is how much we expect a fish to weigh, give the species and fish length, and the nonlinear relationship is given by:\n\n\\[W=aL^b\\]\nwhere L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values.\n\nTest out your function to find the mass (g) for a 60 cm fish of the following species (parameter estimates from Peyton et al. (2016)):\n\n\nMilkfish: a = 0.0905, b = 2.52\nGiant trevally: a = 0.0353, b = 3.05\nGreat barracuda: a = 0.0181, b = 3.27\n\n\n\n\n\n\n\nSolution\n\n\n\n\n# write function ----\nfish_weight_g &lt;- function(length_cm, a, b){\n  weight_g = a * length_cm^b\n}\n\n# test function ----\nmilkfish_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0905, b = 2.52)\nmilkfish_weight\n\n[1] 2738.985\n\ntrevally_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0353, b = 3.05)\ntrevally_weight\n\n[1] 9356.987\n\nbarracuda_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0181, b = 3.27)\nbarracuda_weight\n\n[1] 11809.54\n\n\n\n\n\n\n\n\n\n\nCitation\n\n\n\nPeyton, K. A., T. S. Sakihara, L. K. Nishiura, T. T. Shindo, T. E. Shimoda, S. Hau, A. Akiona, and K. Lorance. 2016. “Length–Weight Relationships for Common Juvenile Fishes and Prey Species in Hawaiian Estuaries.” Journal of Applied Ichthyology 32 (3): 499–502. https://doi.org/10.1111/jai.12957.\n\n\n\nMake and store (as fish_length) a sequence of size ranges from 0 to 200 cm, by increments of 1 cm\n\n\n\n\n\n\n\nSolution\n\n\n\n\nfish_length &lt;- seq(from = 0, to = 200, by = 1)\n\n\n\n\nEstimate the weight for giant barracudas along that entire range (given the parameters above). Store the output as barracuda_weight.\n\n\n\n\n\n\n\nSolution\n\n\n\n\nbarracuda_weight &lt;- fish_weight_g(length_cm = fish_length, a = 0.0181, b = 3.27)\n\n\n\n\nBind the lengths and estimated barracuda weights into a single data frame using data.frame()\n\n\n\n\n\n\n\nSolution\n\n\n\n\nbarracuda_df &lt;- data.frame(fish_length, barracuda_weight)\n# View(barracuda_df)\n\n\n\n\nCreate a ggplot graph of predicted length versus weight for giant barracuda\n\n\n\n\n\n\n\nSolution\n\n\n\n\nggplot(data = barracuda_df, aes(x = fish_length, y = barracuda_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\nUpdate the graph axis labels and title\n\n\n\n\n\n\n\nSolution\n\n\n\n\nggplot(data = barracuda_df, aes(x = fish_length, y = barracuda_weight)) +\n  geom_point() +\n  labs(title = \"Predicted barracuda weights, estimated from fish lengths\",\n       x = \"Length (cm)\",\n       y = \"Standard weight (g)\")\n\n\n\n\n\n\n\n\n\n\n\nRender the .qmd. Make sure everything is saved.\nClose your project. Reopen the project, and ensure that you can re-run the entire Quarto document (reproducibility check).\n\n\n\nEnd Activity Session (Day 1)"
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#where-e-come-from",
+    "href": "course-materials/slides/exponentials-from-day-1.html#where-e-come-from",
+    "title": "",
+    "section": "",
+    "text": "Where does \\(e\\) come from?\n\n\n\n\nThe value is from continuous compounding over infinite intervals:\n\n\\[\\sum^{\\infty}_{k=0} = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\frac{x^4}{4!} + ...\\]\n\n\nThe e is from Leonard Euler, Swiss mathematician who proved the value was irrational"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#e-number",
+    "href": "course-materials/slides/exponentials-from-day-1.html#e-number",
+    "title": "",
+    "section": "",
+    "text": "\\(e\\) is a number, not a variable\n\n\n\n\\(e = 2.71828182845904523536...\\)\n\nIt is an irrational number, yes - meaning it can’t be expressed by a simple ratio of integers - but a number nonetheless. With infinite decimal places.\n\nIt is always the same value."
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#e-common",
+    "href": "course-materials/slides/exponentials-from-day-1.html#e-common",
+    "title": "",
+    "section": "",
+    "text": "Why is \\(e\\) so common?\n\n\n\n\nOne reason: Exponential trends show up a LOT in environmental science (the proportional change is the same over each time span)\nMath reason: Turns out it’s a very useful value for calculus"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#prop-change",
+    "href": "course-materials/slides/exponentials-from-day-1.html#prop-change",
+    "title": "",
+    "section": "",
+    "text": "Warning: package 'ggplot2' was built under R version 4.5.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.3     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n\n\n\n\n\n\n\n\n    x            y  previous_y percent_change_y\n1   1     2.718282          NA               NA\n2   2     7.389056    2.718282         63.21206\n3   3    20.085537    7.389056         63.21206\n4   4    54.598150   20.085537         63.21206\n5   5   148.413159   54.598150         63.21206\n6   6   403.428793  148.413159         63.21206\n7   7  1096.633158  403.428793         63.21206\n8   8  2980.957987 1096.633158         63.21206\n9   9  8103.083928 2980.957987         63.21206\n10 10 22026.465795 8103.083928         63.21206"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#aquaculture",
+    "href": "course-materials/slides/exponentials-from-day-1.html#aquaculture",
+    "title": "",
+    "section": "",
+    "text": "A real-world example:\n\n\n\n\n\n\n\n\n\n\n\nSource: Our World in Data"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#cant-grow-forever",
+    "href": "course-materials/slides/exponentials-from-day-1.html#cant-grow-forever",
+    "title": "",
+    "section": "",
+    "text": "But populations can’t grow exponentially forever . . .\n\n\n\n\n\n\n\n\n\n\n\nGause, G. F. 1934. The Struggle for Existence. Baltimore: Williams and Wilkins."
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#logistic-growth",
+    "href": "course-materials/slides/exponentials-from-day-1.html#logistic-growth",
+    "title": "",
+    "section": "",
+    "text": "Logistic growth\n\n\n\\[N_t=\\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-rt}}\\]\n\nWhere \\(N_t\\) is the population size at time \\(t\\), \\(K\\) is the carrying capacity, \\(N_0\\) is the initial population size, and \\(r\\) is a growth rate.\n\n\nWe should always think about why an equations has the shape it has - both conceptually and mathematically."
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#logistic-growth-Qs",
+    "href": "course-materials/slides/exponentials-from-day-1.html#logistic-growth-Qs",
+    "title": "",
+    "section": "",
+    "text": "Logistic growth\n\n\n\\[N_t=\\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-rt}}\\]\n\n\n\nWhy might we expect logistic growth for many populations?\nWhat variables besides time would influence the actual population?\n\n\n\n\n\nPops grow slowly at the start when there are few individuals. Grow more quickly (exponentially) when enough individuals are in a pop and resources are abundant. Plateau when resources become depleted.\nThe number of individuals and the amount of resources"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#logarithms",
+    "href": "course-materials/slides/exponentials-from-day-1.html#logarithms",
+    "title": "",
+    "section": "",
+    "text": "Logarithms\n\n\nLogarithms ask a question: \\(\\log_a(b)\\) asks “to what power do I have to raise \\(a\\) to get a value of \\(b\\)?\n\nFor example:\n\n\\(\\log_2(8)\\) asks “to what power do I have to raise 2, to get a value of 8?”\n\\(\\log_x(x^{5.9})\\) asks “to what power do I have to raise \\(x\\) to get a value of \\(x^{5.9}\\)?”\n\\(\\log_{banana}(banana^{1382.95})\\) asks “to what power do I have to raise \\(banana\\) to get a value of \\(banana^{1382.95}\\)?”\n\n\n\nExample 1: \\(log_2(8*2)\\) == \\(log_2(8) + log_2(2)\\)"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#nat-log",
+    "href": "course-materials/slides/exponentials-from-day-1.html#nat-log",
+    "title": "",
+    "section": "",
+    "text": "The natural log = “log base \\(e\\)” = \\(\\log_e()\\) = \\(ln()\\)\n\n\nSo based on what we learned in the previous slide, what is:\n\n\n\\(\\log_e(e^{10.4})\\) = ?\n\\(\\log_e(e^{2x+8.3})\\) = ?\n\\(\\log_e(e^{ax+2b^2-4.095})\\) = ?\n\n\n\n\\(10.4\\)\n\\(2x+8.3\\)\n\\(ax+2b^2-4.095\\)"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#log-rules",
+    "href": "course-materials/slides/exponentials-from-day-1.html#log-rules",
+    "title": "",
+    "section": "",
+    "text": "Some log rules\n\n\n\\(\\log_x(AB)=\\log_x(A)+\\log_x(B)\\)\n\\(\\log_x(\\frac{A}{B}) = \\log_x(A)-\\log_x(B)\\)\n\\(\\log_x(A^B)=B\\log_x(A)\\)\n\\(x^{\\log_x(A)}=A\\)\n\\(\\log_x(1)=0\\)\n\\(\\log_x(x)= 1\\)"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#crit-thinking",
+    "href": "course-materials/slides/exponentials-from-day-1.html#crit-thinking",
+    "title": "",
+    "section": "",
+    "text": "Critical thinking questions\n\n\nCan the value within a \\(ln()\\) expression ever be 0, or negative? Why?\n\nCan the solution to a natural log expression ever be negative? How?\n. . .\n\n\n\n\n\n\n\n\n\n\n\nNo, can’t be 0 bc there’s nothing you can multiply e by itself to get 0. No, can’t be negative bc always e * e * ….\nYes, the solution to a natural log expression can be negative, e.g. \\(log_e(?) = &lt;0\\)"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#ln-e-in-equations",
+    "href": "course-materials/slides/exponentials-from-day-1.html#ln-e-in-equations",
+    "title": "",
+    "section": "",
+    "text": "Working with \\(ln()\\) and \\(e\\) in equations\n\n\n\nWe can think of these as inverses of each other:\n\n\\(e^{\\ln(x)} = x\\)\n\\(\\ln(e^x)=x\\)\n\n\n. . .\n\n…and use that as a tool for escaping variables from exponents & logs (remembering we can do whatever we want to an equation, as long as we do the same exact thing to both sides)"
+  },
+  {
+    "objectID": "course-materials/slides/exponentials-from-day-1.html#ln-e-examples",
+    "href": "course-materials/slides/exponentials-from-day-1.html#ln-e-examples",
+    "title": "",
+    "section": "",
+    "text": "Examples:\n\n\n\nFind \\(x\\) given \\(\\ln(x) = 5\\)\nExponentiate both sides: \\(e^{\\ln(x)} = e^5\\) ; simplify left-hand side to get: \\(x = e^5\\)\n\n\n\nFind \\(y\\) given \\(e^{3y}=95\\)\nTake natural log of both sides: \\(\\ln(e^{3y})=ln(95)\\) ; simplifies to: \\(3y = \\ln(95)\\), so \\(y = \\frac{\\ln(95)}{3}\\)"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day3-key.html",
+    "href": "course-materials/eod-keys/eod-day3-key.html",
+    "title": "Day 3: Tasks & activities - KEY",
+    "section": "",
+    "text": "Biomass (grams) in a reactor over time (hours) is described by:\n\n\\[B(t) = 0.4t^2 + 3.6\\]\n\n\nWhat is the biomass in the reactor after 4 hours?\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[B(4) = 0.4(4)^2+3.6 = 106\\;grams\\]\n\n\n\nWhat is the rate at which biomass is changing in the reactor at t = 3.2 hours?\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\frac{dB}{dt} = (2)(0.4)t\\] \\[\\frac{dB}{dt} = (2)(0.4)(3.2)\\]\n\\[\\frac{dB}{dt} = 2.56 \\frac{grams}{hour}\\]\n\n\n\n\n\nFor the vectors \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\nFind and sketch \\(\\vec a + \\vec b\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec a + \\vec b = (1+2, 6+4) = (3,10)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(\\vec b - \\vec a\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec b - \\vec a = (2-1, 4-6) = (-1, -2)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(2 \\vec a\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(2 \\vec a = 2 * (1,6) = (2, 12)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind \\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec a \\cdot \\vec b = (1)(2) + (6)(4) = 26\\)"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-1-by-hand-problems",
+    "href": "course-materials/eod-keys/eod-day3-key.html#part-1-by-hand-problems",
+    "title": "Day 3: Tasks & activities - KEY",
+    "section": "",
+    "text": "Biomass (grams) in a reactor over time (hours) is described by:\n\n\\[B(t) = 0.4t^2 + 3.6\\]\n\n\nWhat is the biomass in the reactor after 4 hours?\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[B(4) = 0.4(4)^2+3.6 = 106\\;grams\\]\n\n\n\nWhat is the rate at which biomass is changing in the reactor at t = 3.2 hours?\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\frac{dB}{dt} = (2)(0.4)t\\] \\[\\frac{dB}{dt} = (2)(0.4)(3.2)\\]\n\\[\\frac{dB}{dt} = 2.56 \\frac{grams}{hour}\\]\n\n\n\n\n\nFor the vectors \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\nFind and sketch \\(\\vec a + \\vec b\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec a + \\vec b = (1+2, 6+4) = (3,10)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(\\vec b - \\vec a\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec b - \\vec a = (2-1, 4-6) = (-1, -2)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(2 \\vec a\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(2 \\vec a = 2 * (1,6) = (2, 12)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind \\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec a \\cdot \\vec b = (1)(2) + (6)(4) = 26\\)"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-2-coding-practice",
+    "href": "course-materials/eod-keys/eod-day3-key.html#part-2-coding-practice",
+    "title": "Day 3: Tasks & activities - KEY",
+    "section": "Part 2: Coding practice",
+    "text": "Part 2: Coding practice\n\nCreate a new project (you may want to name it eds212-day3-tasks or something similar)\nSetup your local and remote repo using usethis::use_git() and usethis::use_github()\nIn a Quarto doc in your project:\n\n\nUsing the c() function, create and store two new vectors, called vec_a and vec_b, where \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\n\n\n\n\n\n\nSolution\n\n\n\n\nvec_a &lt;- c(1, 6)\nvec_b &lt;- c(2, 4)\n\n\n\n\nCheck your by-hand solutions from Part 1 by finding the following in R:\n\n\\(\\vec a + \\vec b\\)\n\\(\\vec b - \\vec a\\)\n\\(2 \\vec a\\)\n\\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\nvec_a + vec_b\n\n[1]  3 10\n\nvec_b - vec_a\n\n[1]  1 -2\n\n2 * vec_a\n\n[1]  2 12\n\nvec_a %*% vec_b\n\n     [,1]\n[1,]   26\n\n\n\n\n\nSave your quarto doc and Render\nOpen the Terminal outside of RStudio\nNavigate to your project directory using cd\nUse git status to check the status\nUse git add . to stage all changes\nUse git commit -m \"your commit message here\" to commit to your local repo\nUse git pull to check for remote changes\nUse git push to push changes to your remote repo\nGo to your remote repo for the project and check to see that the new updates are stored"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-3-fork-clone-a-repo-use-the-code",
+    "href": "course-materials/eod-keys/eod-day3-key.html#part-3-fork-clone-a-repo-use-the-code",
+    "title": "Day 3: Tasks & activities - KEY",
+    "section": "Part 3: Fork & clone a repo, use the code",
+    "text": "Part 3: Fork & clone a repo, use the code\n\nFork and clone this repo (which contains a Quarto document with code to numerically solve the SIR equations) to create a version-controlled project\nOnce you’ve created your project, open the sir.qmd file.\nRun all code in the .qmd (Cmd/Ctrl + Option + R, or go up to the run button and choose the last option “Run All”)\nExplore the code and output graph. What is the code doing? What is the graph telling us?\n\n\n\n\n\n\n\nSolution\n\n\n\nThe code:\n\nUsing the expression for slope (here, sir()) along with an initial condition (values for S, I, R) and parameter estimates (beta = infection parameter, and gamma = recovery parameter), the deSolve::ode() function calculates values of the solution across equal intervals of time (times).\n\nThe graph:\n\nThe number of susceptible individuals (blue) starts at 100% of the population, then decreases as individuals become affected\nThe number of infected individuals (red) initially increases as individuals become infected. This curve peaks when infection rate is the highest, then decreases as infected individuals recover\nThe number of recovered individuals (green) starts at 0 then increases over time as infected individuals recover from the disease\n\n\n\n\nMake small changes to the parameter values to see how the SIR models change. Are the changes expected?\nAfter trying out a few changes, save and knit your new output graph.\nStage, commit, pull, then push to your repo in the command line.\nCheck for your changes on GitHub. Are they there? Cool, done with Part 3.\n\n\n\nEnd Activity Session (Day 3)"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day4-key.html",
+    "href": "course-materials/eod-keys/eod-day4-key.html",
+    "title": "Day 4: Tasks & activities",
+    "section": "",
+    "text": "A population of fish we’re interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are given the following:\n\nEach breeding adult will produce, on average, 600 eggs\n25% of eggs will survive to become fry\n10% of fry will survive to become juveniles\n40% of juveniles will survive to become adults\nAdult survival rate year to year is 80%\n\n\nWith your group, draw the Leslie matrix model for this population structure.\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\begin{bmatrix}\nE_{t+1} \\\\\nF_{t+1} \\\\\nJ_{t+1} \\\\\nA_{t+1}\n\\end{bmatrix} = \\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\nE_t\\\\\nF_t \\\\\nJ_t \\\\\nA_t\n\\end{bmatrix}\\]\n\n\n\nWith your group, given an initial population (Year 0) that has 0 eggs, 40,000 fry, 600 juveniles, and 450 adults, by hand project the population structure (i.e. the count in each life stage) in Year 1.\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\n0\\\\\n40,000 \\\\\n600 \\\\\n450\n\\end{bmatrix} = \\begin{bmatrix}\n(0)(0) + (0)(40,000) + (0)(600) + (600)(450)\\\\\n(0.25)(0) + (0)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0.10)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0)(40,000) + (0.40)(600) + (0.80)(450)\n\\end{bmatrix} = \\begin{bmatrix}\n270,000\\\\\n0 \\\\\n4,000 \\\\\n600\n\\end{bmatrix}\\]"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day4-key.html#a-leslie-matrix-example-small-groups",
+    "href": "course-materials/eod-keys/eod-day4-key.html#a-leslie-matrix-example-small-groups",
+    "title": "Day 4: Tasks & activities",
+    "section": "",
+    "text": "A population of fish we’re interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are given the following:\n\nEach breeding adult will produce, on average, 600 eggs\n25% of eggs will survive to become fry\n10% of fry will survive to become juveniles\n40% of juveniles will survive to become adults\nAdult survival rate year to year is 80%\n\n\nWith your group, draw the Leslie matrix model for this population structure.\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\begin{bmatrix}\nE_{t+1} \\\\\nF_{t+1} \\\\\nJ_{t+1} \\\\\nA_{t+1}\n\\end{bmatrix} = \\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\nE_t\\\\\nF_t \\\\\nJ_t \\\\\nA_t\n\\end{bmatrix}\\]\n\n\n\nWith your group, given an initial population (Year 0) that has 0 eggs, 40,000 fry, 600 juveniles, and 450 adults, by hand project the population structure (i.e. the count in each life stage) in Year 1.\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\n0\\\\\n40,000 \\\\\n600 \\\\\n450\n\\end{bmatrix} = \\begin{bmatrix}\n(0)(0) + (0)(40,000) + (0)(600) + (600)(450)\\\\\n(0.25)(0) + (0)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0.10)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0)(40,000) + (0.40)(600) + (0.80)(450)\n\\end{bmatrix} = \\begin{bmatrix}\n270,000\\\\\n0 \\\\\n4,000 \\\\\n600\n\\end{bmatrix}\\]"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day4-key.html#fork-clone-a-repo-to-check-your-leslie-matrix-and-make-projections",
+    "href": "course-materials/eod-keys/eod-day4-key.html#fork-clone-a-repo-to-check-your-leslie-matrix-and-make-projections",
+    "title": "Day 4: Tasks & activities",
+    "section": "2. Fork & clone a repo to check your Leslie matrix, and make projections",
+    "text": "2. Fork & clone a repo to check your Leslie matrix, and make projections\n\nFork and clone this repo, which contains the Leslie matrix for the example above.\n\n\nGo to the link above. Press Fork in upper right, then Create Fork.\nOnce in your fork, press the green ‘Code’ button\nCopy the URL to your clipboard\nBack in RStudio, create a new project (with version control)\nWhere prompted, paste the URL & choose where you’ll save your directory\nCreate project\nOpen the .qmd to explore & run Leslie Matrix code\n\n\nExplore the code and outputs. Does the Year 1 population projection align with what you calculated?\nAdd code to the .qmd to expand the projections to years 4, 5, and 6 (it current projects through year 3)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n## ADD YOUR CODE TO PROJECT FOR YEARS 4, 5 & 6 HERE ----\n# Population structure in year 4 ----\nfish_year4 &lt;- fish_leslie %*% fish_year3\nfish_year4\n\n# Population structure in year 4 ----\nfish_year5 &lt;- fish_leslie %*% fish_year4\nfish_year5\n\n# Population structure in year 4 ----\nfish_year6 &lt;- fish_leslie %*% fish_year5\nfish_year6\n\n\n\n\nUsing the command line: Save, stage, commit, then push your changes."
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day4-key.html#data-exploration-summarizing-in-r",
+    "href": "course-materials/eod-keys/eod-day4-key.html#data-exploration-summarizing-in-r",
+    "title": "Day 4: Tasks & activities",
+    "section": "3. Data exploration & summarizing in R",
+    "text": "3. Data exploration & summarizing in R\n\nCreate a new Project\nAdd a new Quarto document in your project, save as r-data-exploration.qmd\nSet up your local and remote git repo by running usethis::use_git() and then usethis::use_github()\nAttach the {tidyverse}, {skimr}, and {GGally} packages in the setup code chunk\nRun View(diamonds) in the Console to look at the built-in diamonds data set in R\nExplore the data set using the functions names(), dim(), summary(), head(), tail(), and skimr::skim()\n\n\n\n\n\n\n\nSolution\n\n\n\n\n# load libraries ----\nlibrary(tidyverse)\nlibrary(skimr)\nlibrary(GGally)\n\n# explore data ----\nView(diamonds)\nnames(diamonds)\ndim(diamonds)\nsummary(diamonds)\nhead(diamonds)\ntail(diamonds)\nskim(diamonds)\n\n\n\n\nCreate a pairs plot using ggpairs()\n\n\n\n\n\n\n\nSolution\n\n\n\nNote: only code presented here because this plot takes a little while to render.\n\nGGally::ggpairs(diamonds)\n\n\n\n\nCreate a basic ggplot scatterplot of diamond price (price) as a function of size (carat)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreate a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSave, stage, commit, pull, then push your changes back to your repo in RStudio using the GUI interface (buttons)\nCreate a boxplot (see: geom_boxplot) of diamond clarity (on the x-axis) and price (y-axis).\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the command line, stage, commit, & push changes\n\n\n\nEnd Activity Session (Day 4)"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Essential Math in Environmental Data Science",
+    "section": "Course Description",
+    "text": "Course Description\nQuantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in basic math (algebra, uni- and multivariate functions, units and unit conversions), differential and integral calculus, differential equations, linear algebra, statistics and probability, and reading, writing and evaluating logical operations.\nThe goal of EDS 212 (Essential Math in Environmental Data Science) is to prepare incoming MEDS students with quantitative methods, skills, notation and language commonly used in environmental data science and required for their data science courses and projects in the program. By the end of the course, students should be able to:\n\nPerform the following by hand: convert units, basic algebra and working with logs and exponentials; write, interpret and evaluate univariate and multivariate functions; basic derivatives and integrals with univariate and multivariate functions; solve simple differential equations; basic operations with scalars, vectors and matrices; writing and evaluating logicals\nExplain and share examples for how all topics in EDS 212 are useful and used in applied environmental data science\nInterpret examples of applied math & models from environmental science case studies\nWork with peers to solve group tasks, then communicate the process of problem solving to the rest of the class"
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "Essential Math in Environmental Data Science",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nCarmen Galaz García\nEmail: c_galazgarcia@ucsb.edu\nLearn more: Bren profile\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nCella Schnabel\nEmail: cellaschnabel@bren.ucsb.edu\nLearn more: Bren profile"
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Essential Math in Environmental Data Science",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nEDS 212 was originally developed and taught by Allison Horst and then adapted by Ruth Oliver. This new website houses materials which are heavily reused, adapted and expanded from, and inspired by Ruth and Allison’s work."
   },
   {
     "objectID": "course-materials/eod-keys/eod-day2-key.html",
@@ -1022,81 +1183,25 @@
     "text": "Section 4: Make another penguin plot\n\nIn a new code chunk, create a ggplot graph of penguin bill length versus bill depth (using the penguins dataset in the {palmerpenguins} package), with point color dependent on species. You should attach the {tidyverse} and {palmerpenguins} package in your .qmd setup chunk if you haven’t already. Update labels and add a title.\n\n\n\n\n\n\n\nSolution\n\n\n\n\n# install packages ----\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\n# create ggplot ----\nggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +\n  geom_point() +\n  labs(title = \"Penguin bill sizes by species\", \n       x = \"Bill Length (mm)\",\n       y = \"Bill Depth (mm)\")\n\n\n\n\n\n\n\n\n\n\n\nIn a new code chunk, make a jitter plot of flipper length by species (species on the x-axis, flipper length on the y-axis). Update axis labels and add a title. See ?geom_jitter.\n\n\n\n\n\n\n\nSolution\n\n\n\n\n# create ggplot ----\nggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +\n  geom_jitter() +\n  labs(title = \"Penguin flipper lengths by species\",\n       x = \"Species\",\n       y = \"Flipper Lengths (mm)\")\n\n\n\n\n\n\n\n\n\n\n\nRender your .qmd to check for reproducibility\nStage, commit, and push changes to the remote repo. Once you do, go to GitHub and check to see the changes are safely stored & tracked.\nGo back to your Quarto document in RStudio. Pull to make sure you have the same versions as in the remote repo. Make a change (anything you want - maybe change your graph colors, sizes, etc.), then stage, commit, & push changes to the remote repo to reinforce the steps. Check that changes are stored on GitHub.\nRepeat one more time - make a change to your plot, render, stage, commit & push. Check that your changes appear on GitHub.\n\n\nEnd Activity Session (Day 2)"
   },
   {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Essential Math in Environmental Data Science",
-    "section": "Course Description",
-    "text": "Course Description\nQuantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in basic math (algebra, uni- and multivariate functions, units and unit conversions), differential and integral calculus, differential equations, linear algebra, statistics and probability, and reading, writing and evaluating logical operations.\nThe goal of EDS 212 (Essential Math in Environmental Data Science) is to prepare incoming MEDS students with quantitative methods, skills, notation and language commonly used in environmental data science and required for their data science courses and projects in the program. By the end of the course, students should be able to:\n\nPerform the following by hand: convert units, basic algebra and working with logs and exponentials; write, interpret and evaluate univariate and multivariate functions; basic derivatives and integrals with univariate and multivariate functions; solve simple differential equations; basic operations with scalars, vectors and matrices; writing and evaluating logicals\nExplain and share examples for how all topics in EDS 212 are useful and used in applied environmental data science\nInterpret examples of applied math & models from environmental science case studies\nWork with peers to solve group tasks, then communicate the process of problem solving to the rest of the class"
-  },
-  {
-    "objectID": "index.html#teaching-team",
-    "href": "index.html#teaching-team",
-    "title": "Essential Math in Environmental Data Science",
-    "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nCarmen Galaz García\nEmail: c_galazgarcia@ucsb.edu\nLearn more: Bren profile\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nCella Schnabel\nEmail: cellaschnabel@bren.ucsb.edu\nLearn more: Bren profile"
-  },
-  {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "Essential Math in Environmental Data Science",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nEDS 212 was originally developed and taught by Allison Horst and then adapted by Ruth Oliver. This new website houses materials which are heavily reused, adapted and expanded from, and inspired by Ruth and Allison’s work."
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day4-key.html",
-    "href": "course-materials/eod-keys/eod-day4-key.html",
-    "title": "Day 4: Tasks & activities",
+    "objectID": "course-materials/eod-keys/eod-day1-key.html",
+    "href": "course-materials/eod-keys/eod-day1-key.html",
+    "title": "Day 1: Tasks & activities - KEY",
     "section": "",
-    "text": "A population of fish we’re interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are given the following:\n\nEach breeding adult will produce, on average, 600 eggs\n25% of eggs will survive to become fry\n10% of fry will survive to become juveniles\n40% of juveniles will survive to become adults\nAdult survival rate year to year is 80%\n\n\nWith your group, draw the Leslie matrix model for this population structure.\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\begin{bmatrix}\nE_{t+1} \\\\\nF_{t+1} \\\\\nJ_{t+1} \\\\\nA_{t+1}\n\\end{bmatrix} = \\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\nE_t\\\\\nF_t \\\\\nJ_t \\\\\nA_t\n\\end{bmatrix}\\]\n\n\n\nWith your group, given an initial population (Year 0) that has 0 eggs, 40,000 fry, 600 juveniles, and 450 adults, by hand project the population structure (i.e. the count in each life stage) in Year 1.\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\n0\\\\\n40,000 \\\\\n600 \\\\\n450\n\\end{bmatrix} = \\begin{bmatrix}\n(0)(0) + (0)(40,000) + (0)(600) + (600)(450)\\\\\n(0.25)(0) + (0)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0.10)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0)(40,000) + (0.40)(600) + (0.80)(450)\n\\end{bmatrix} = \\begin{bmatrix}\n270,000\\\\\n0 \\\\\n4,000 \\\\\n600\n\\end{bmatrix}\\]"
+    "text": "By hand: Evaluate \\(f(x,y)=x^2-1+3xy\\) at \\(x=1\\) and \\(y = 0\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(f(1,0)=1^2-1+(3)(1)(0) = 1 - 1 + 0 = 0\\)\n\n\n\nIn the R Console: given \\(G(t,z)=3.1(t-4.2)^2 + 0.06z\\), find the value of \\(G(1, 2.5)\\) (you do NOT need to write a function - just do the calculation in R using R as a calculator)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n3.1 * (1 - 4.2)^2 + (0.06 * 2.5)\n\n[1] 31.894\n\n\n\n\n\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\n\n\nSolution\n\n\n\nAccording to Wikipedia, one barrel of oil is equal to 42 gallons and ~159 liters.\n\nCompany A: \\(14.6\\; barrels\\; spilled - 9.3\\; barrels\\; recovered = 5.3\\; barrels\\; unrecovered\\)\nCompany B: \\(692\\; liters \\times \\frac{1\\; barrel}{159\\; liters} = 4.352201\\; barrels\\;spilled\\; \\times 0.06 = 0.2611321\\;barrels\\;unrecovered\\)\nCompnay C: \\(18.1\\;gallons\\; \\times \\frac{1\\;barrel}{42\\;gallons} = 0.4309524\\;barrels\\;spilled\\; \\times 1 = 0.4309524\\;barrels\\;unrecovered\\)\n\nTotal unrecovered barrels = 5.3 + 0.2611321 + 0.4309524 = 5.992084 ~ 6 barrels\n\n\n\n\n\n\nBy hand: If an urchin population in a study plot in 1990 is 432, and in 2004 is 801, what is the average rate of population increase? Find the slope, then write a statement about the average increase (including units).\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[slope\\; (m) = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2-y_1}{x_2-x_1} = \\frac{801-432}{2004-1990} = 26.43\\] Between 1990 and 2004, urchin populations increased by an average of 26.43 urchins per year."
   },
   {
-    "objectID": "course-materials/eod-keys/eod-day4-key.html#a-leslie-matrix-example-small-groups",
-    "href": "course-materials/eod-keys/eod-day4-key.html#a-leslie-matrix-example-small-groups",
-    "title": "Day 4: Tasks & activities",
+    "objectID": "course-materials/eod-keys/eod-day1-key.html#section-1.-practice-problems",
+    "href": "course-materials/eod-keys/eod-day1-key.html#section-1.-practice-problems",
+    "title": "Day 1: Tasks & activities - KEY",
     "section": "",
-    "text": "A population of fish we’re interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are given the following:\n\nEach breeding adult will produce, on average, 600 eggs\n25% of eggs will survive to become fry\n10% of fry will survive to become juveniles\n40% of juveniles will survive to become adults\nAdult survival rate year to year is 80%\n\n\nWith your group, draw the Leslie matrix model for this population structure.\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\begin{bmatrix}\nE_{t+1} \\\\\nF_{t+1} \\\\\nJ_{t+1} \\\\\nA_{t+1}\n\\end{bmatrix} = \\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\nE_t\\\\\nF_t \\\\\nJ_t \\\\\nA_t\n\\end{bmatrix}\\]\n\n\n\nWith your group, given an initial population (Year 0) that has 0 eggs, 40,000 fry, 600 juveniles, and 450 adults, by hand project the population structure (i.e. the count in each life stage) in Year 1.\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\n0\\\\\n40,000 \\\\\n600 \\\\\n450\n\\end{bmatrix} = \\begin{bmatrix}\n(0)(0) + (0)(40,000) + (0)(600) + (600)(450)\\\\\n(0.25)(0) + (0)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0.10)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0)(40,000) + (0.40)(600) + (0.80)(450)\n\\end{bmatrix} = \\begin{bmatrix}\n270,000\\\\\n0 \\\\\n4,000 \\\\\n600\n\\end{bmatrix}\\]"
+    "text": "By hand: Evaluate \\(f(x,y)=x^2-1+3xy\\) at \\(x=1\\) and \\(y = 0\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(f(1,0)=1^2-1+(3)(1)(0) = 1 - 1 + 0 = 0\\)\n\n\n\nIn the R Console: given \\(G(t,z)=3.1(t-4.2)^2 + 0.06z\\), find the value of \\(G(1, 2.5)\\) (you do NOT need to write a function - just do the calculation in R using R as a calculator)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n3.1 * (1 - 4.2)^2 + (0.06 * 2.5)\n\n[1] 31.894\n\n\n\n\n\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\n\n\nSolution\n\n\n\nAccording to Wikipedia, one barrel of oil is equal to 42 gallons and ~159 liters.\n\nCompany A: \\(14.6\\; barrels\\; spilled - 9.3\\; barrels\\; recovered = 5.3\\; barrels\\; unrecovered\\)\nCompany B: \\(692\\; liters \\times \\frac{1\\; barrel}{159\\; liters} = 4.352201\\; barrels\\;spilled\\; \\times 0.06 = 0.2611321\\;barrels\\;unrecovered\\)\nCompnay C: \\(18.1\\;gallons\\; \\times \\frac{1\\;barrel}{42\\;gallons} = 0.4309524\\;barrels\\;spilled\\; \\times 1 = 0.4309524\\;barrels\\;unrecovered\\)\n\nTotal unrecovered barrels = 5.3 + 0.2611321 + 0.4309524 = 5.992084 ~ 6 barrels\n\n\n\n\n\n\nBy hand: If an urchin population in a study plot in 1990 is 432, and in 2004 is 801, what is the average rate of population increase? Find the slope, then write a statement about the average increase (including units).\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[slope\\; (m) = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2-y_1}{x_2-x_1} = \\frac{801-432}{2004-1990} = 26.43\\] Between 1990 and 2004, urchin populations increased by an average of 26.43 urchins per year."
   },
   {
-    "objectID": "course-materials/eod-keys/eod-day4-key.html#fork-clone-a-repo-to-check-your-leslie-matrix-and-make-projections",
-    "href": "course-materials/eod-keys/eod-day4-key.html#fork-clone-a-repo-to-check-your-leslie-matrix-and-make-projections",
-    "title": "Day 4: Tasks & activities",
-    "section": "2. Fork & clone a repo to check your Leslie matrix, and make projections",
-    "text": "2. Fork & clone a repo to check your Leslie matrix, and make projections\n\nFork and clone this repo, which contains the Leslie matrix for the example above.\n\n\nGo to the link above. Press Fork in upper right, then Create Fork.\nOnce in your fork, press the green ‘Code’ button\nCopy the URL to your clipboard\nBack in RStudio, create a new project (with version control)\nWhere prompted, paste the URL & choose where you’ll save your directory\nCreate project\nOpen the .qmd to explore & run Leslie Matrix code\n\n\nExplore the code and outputs. Does the Year 1 population projection align with what you calculated?\nAdd code to the .qmd to expand the projections to years 4, 5, and 6 (it current projects through year 3)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n## ADD YOUR CODE TO PROJECT FOR YEARS 4, 5 & 6 HERE ----\n# Population structure in year 4 ----\nfish_year4 &lt;- fish_leslie %*% fish_year3\nfish_year4\n\n# Population structure in year 4 ----\nfish_year5 &lt;- fish_leslie %*% fish_year4\nfish_year5\n\n# Population structure in year 4 ----\nfish_year6 &lt;- fish_leslie %*% fish_year5\nfish_year6\n\n\n\n\nUsing the command line: Save, stage, commit, then push your changes."
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day4-key.html#data-exploration-summarizing-in-r",
-    "href": "course-materials/eod-keys/eod-day4-key.html#data-exploration-summarizing-in-r",
-    "title": "Day 4: Tasks & activities",
-    "section": "3. Data exploration & summarizing in R",
-    "text": "3. Data exploration & summarizing in R\n\nCreate a new Project\nAdd a new Quarto document in your project, save as r-data-exploration.qmd\nSet up your local and remote git repo by running usethis::use_git() and then usethis::use_github()\nAttach the {tidyverse}, {skimr}, and {GGally} packages in the setup code chunk\nRun View(diamonds) in the Console to look at the built-in diamonds data set in R\nExplore the data set using the functions names(), dim(), summary(), head(), tail(), and skimr::skim()\n\n\n\n\n\n\n\nSolution\n\n\n\n\n# load libraries ----\nlibrary(tidyverse)\nlibrary(skimr)\nlibrary(GGally)\n\n# explore data ----\nView(diamonds)\nnames(diamonds)\ndim(diamonds)\nsummary(diamonds)\nhead(diamonds)\ntail(diamonds)\nskim(diamonds)\n\n\n\n\nCreate a pairs plot using ggpairs()\n\n\n\n\n\n\n\nSolution\n\n\n\nNote: only code presented here because this plot takes a little while to render.\n\nGGally::ggpairs(diamonds)\n\n\n\n\nCreate a basic ggplot scatterplot of diamond price (price) as a function of size (carat)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreate a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSave, stage, commit, pull, then push your changes back to your repo in RStudio using the GUI interface (buttons)\nCreate a boxplot (see: geom_boxplot) of diamond clarity (on the x-axis) and price (y-axis).\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the command line, stage, commit, & push changes\n\n\n\nEnd Activity Session (Day 4)"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day3-key.html",
-    "href": "course-materials/eod-keys/eod-day3-key.html",
-    "title": "Day 3: Tasks & activities - KEY",
-    "section": "",
-    "text": "Biomass (grams) in a reactor over time (hours) is described by:\n\n\\[B(t) = 0.4t^2 + 3.6\\]\n\n\nWhat is the biomass in the reactor after 4 hours?\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[B(4) = 0.4(4)^2+3.6 = 106\\;grams\\]\n\n\n\nWhat is the rate at which biomass is changing in the reactor at t = 3.2 hours?\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\frac{dB}{dt} = (2)(0.4)t\\] \\[\\frac{dB}{dt} = (2)(0.4)(3.2)\\]\n\\[\\frac{dB}{dt} = 2.56 \\frac{grams}{hour}\\]\n\n\n\n\n\nFor the vectors \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\nFind and sketch \\(\\vec a + \\vec b\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec a + \\vec b = (1+2, 6+4) = (3,10)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(\\vec b - \\vec a\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec b - \\vec a = (2-1, 4-6) = (-1, -2)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(2 \\vec a\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(2 \\vec a = 2 * (1,6) = (2, 12)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind \\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec a \\cdot \\vec b = (1)(2) + (6)(4) = 26\\)"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-1-by-hand-problems",
-    "href": "course-materials/eod-keys/eod-day3-key.html#part-1-by-hand-problems",
-    "title": "Day 3: Tasks & activities - KEY",
-    "section": "",
-    "text": "Biomass (grams) in a reactor over time (hours) is described by:\n\n\\[B(t) = 0.4t^2 + 3.6\\]\n\n\nWhat is the biomass in the reactor after 4 hours?\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[B(4) = 0.4(4)^2+3.6 = 106\\;grams\\]\n\n\n\nWhat is the rate at which biomass is changing in the reactor at t = 3.2 hours?\n\n\n\n\n\n\n\nSolution\n\n\n\n\\[\\frac{dB}{dt} = (2)(0.4)t\\] \\[\\frac{dB}{dt} = (2)(0.4)(3.2)\\]\n\\[\\frac{dB}{dt} = 2.56 \\frac{grams}{hour}\\]\n\n\n\n\n\nFor the vectors \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\nFind and sketch \\(\\vec a + \\vec b\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec a + \\vec b = (1+2, 6+4) = (3,10)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(\\vec b - \\vec a\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec b - \\vec a = (2-1, 4-6) = (-1, -2)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(2 \\vec a\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(2 \\vec a = 2 * (1,6) = (2, 12)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind \\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\\(\\vec a \\cdot \\vec b = (1)(2) + (6)(4) = 26\\)"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-2-coding-practice",
-    "href": "course-materials/eod-keys/eod-day3-key.html#part-2-coding-practice",
-    "title": "Day 3: Tasks & activities - KEY",
-    "section": "Part 2: Coding practice",
-    "text": "Part 2: Coding practice\n\nCreate a new project (you may want to name it eds212-day3-tasks or something similar)\nSetup your local and remote repo using usethis::use_git() and usethis::use_github()\nIn a Quarto doc in your project:\n\n\nUsing the c() function, create and store two new vectors, called vec_a and vec_b, where \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\n\n\n\n\n\n\nSolution\n\n\n\n\nvec_a &lt;- c(1, 6)\nvec_b &lt;- c(2, 4)\n\n\n\n\nCheck your by-hand solutions from Part 1 by finding the following in R:\n\n\\(\\vec a + \\vec b\\)\n\\(\\vec b - \\vec a\\)\n\\(2 \\vec a\\)\n\\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\nvec_a + vec_b\n\n[1]  3 10\n\nvec_b - vec_a\n\n[1]  1 -2\n\n2 * vec_a\n\n[1]  2 12\n\nvec_a %*% vec_b\n\n     [,1]\n[1,]   26\n\n\n\n\n\nSave your quarto doc and Render\nOpen the Terminal outside of RStudio\nNavigate to your project directory using cd\nUse git status to check the status\nUse git add . to stage all changes\nUse git commit -m \"your commit message here\" to commit to your local repo\nUse git pull to check for remote changes\nUse git push to push changes to your remote repo\nGo to your remote repo for the project and check to see that the new updates are stored"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-3-fork-clone-a-repo-use-the-code",
-    "href": "course-materials/eod-keys/eod-day3-key.html#part-3-fork-clone-a-repo-use-the-code",
-    "title": "Day 3: Tasks & activities - KEY",
-    "section": "Part 3: Fork & clone a repo, use the code",
-    "text": "Part 3: Fork & clone a repo, use the code\n\nFork and clone this repo (which contains a Quarto document with code to numerically solve the SIR equations) to create a version-controlled project\nOnce you’ve created your project, open the sir.qmd file.\nRun all code in the .qmd (Cmd/Ctrl + Option + R, or go up to the run button and choose the last option “Run All”)\nExplore the code and output graph. What is the code doing? What is the graph telling us?\n\n\n\n\n\n\n\nSolution\n\n\n\nThe code:\n\nUsing the expression for slope (here, sir()) along with an initial condition (values for S, I, R) and parameter estimates (beta = infection parameter, and gamma = recovery parameter), the deSolve::ode() function calculates values of the solution across equal intervals of time (times).\n\nThe graph:\n\nThe number of susceptible individuals (blue) starts at 100% of the population, then decreases as individuals become affected\nThe number of infected individuals (red) initially increases as individuals become infected. This curve peaks when infection rate is the highest, then decreases as infected individuals recover\nThe number of recovered individuals (green) starts at 0 then increases over time as infected individuals recover from the disease\n\n\n\n\nMake small changes to the parameter values to see how the SIR models change. Are the changes expected?\nAfter trying out a few changes, save and knit your new output graph.\nStage, commit, pull, then push to your repo in the command line.\nCheck for your changes on GitHub. Are they there? Cool, done with Part 3.\n\n\n\nEnd Activity Session (Day 3)"
+    "objectID": "course-materials/eod-keys/eod-day1-key.html#section-2-projects-and-functions",
+    "href": "course-materials/eod-keys/eod-day1-key.html#section-2-projects-and-functions",
+    "title": "Day 1: Tasks & activities - KEY",
+    "section": "Section 2: Projects and functions",
+    "text": "Section 2: Projects and functions\n\nCreate a new R project (named eds212-day1-tasks)\nAdd a new Quarto document to the project\nPress Render (save this in your project as fish-length-weight.qmd)\nDelete everything below the first code chunk\nAttach the tidyverse package\n\n\n\n\n\n\n\nSolution\n\n\n\n\nlibrary(tidyverse)\n\n\n\n\nPlay around with markdown in the Quarto doc. Try adding text with at least the following:\n\n\nHeaders of varying size\nItalics\nBold\nSuperscripts / subscripts\nBulletpoints\nAn image (google how!)\n\n\nAdd a new code chunk\nWithin the R code chunk, write a function to estimate fish standard weight, given parameters \\(a\\), \\(b\\), and fish length \\(L\\) as inputs. “Standard weight” is how much we expect a fish to weigh, give the species and fish length, and the nonlinear relationship is given by:\n\n\\[W=aL^b\\]\nwhere L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values.\n\nTest out your function to find the mass (g) for a 60 cm fish of the following species (parameter estimates from Peyton et al. (2016)):\n\n\nMilkfish: a = 0.0905, b = 2.52\nGiant trevally: a = 0.0353, b = 3.05\nGreat barracuda: a = 0.0181, b = 3.27\n\n\n\n\n\n\n\nSolution\n\n\n\n\n# write function ----\nfish_weight_g &lt;- function(length_cm, a, b){\n  weight_g = a * length_cm^b\n}\n\n# test function ----\nmilkfish_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0905, b = 2.52)\nmilkfish_weight\n\n[1] 2738.985\n\ntrevally_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0353, b = 3.05)\ntrevally_weight\n\n[1] 9356.987\n\nbarracuda_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0181, b = 3.27)\nbarracuda_weight\n\n[1] 11809.54\n\n\n\n\n\n\n\n\n\n\nCitation\n\n\n\nPeyton, K. A., T. S. Sakihara, L. K. Nishiura, T. T. Shindo, T. E. Shimoda, S. Hau, A. Akiona, and K. Lorance. 2016. “Length–Weight Relationships for Common Juvenile Fishes and Prey Species in Hawaiian Estuaries.” Journal of Applied Ichthyology 32 (3): 499–502. https://doi.org/10.1111/jai.12957.\n\n\n\nMake and store (as fish_length) a sequence of size ranges from 0 to 200 cm, by increments of 1 cm\n\n\n\n\n\n\n\nSolution\n\n\n\n\nfish_length &lt;- seq(from = 0, to = 200, by = 1)\n\n\n\n\nEstimate the weight for giant barracudas along that entire range (given the parameters above). Store the output as barracuda_weight.\n\n\n\n\n\n\n\nSolution\n\n\n\n\nbarracuda_weight &lt;- fish_weight_g(length_cm = fish_length, a = 0.0181, b = 3.27)\n\n\n\n\nBind the lengths and estimated barracuda weights into a single data frame using data.frame()\n\n\n\n\n\n\n\nSolution\n\n\n\n\nbarracuda_df &lt;- data.frame(fish_length, barracuda_weight)\n# View(barracuda_df)\n\n\n\n\nCreate a ggplot graph of predicted length versus weight for giant barracuda\n\n\n\n\n\n\n\nSolution\n\n\n\n\nggplot(data = barracuda_df, aes(x = fish_length, y = barracuda_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\nUpdate the graph axis labels and title\n\n\n\n\n\n\n\nSolution\n\n\n\n\nggplot(data = barracuda_df, aes(x = fish_length, y = barracuda_weight)) +\n  geom_point() +\n  labs(title = \"Predicted barracuda weights, estimated from fish lengths\",\n       x = \"Length (cm)\",\n       y = \"Standard weight (g)\")\n\n\n\n\n\n\n\n\n\n\n\nRender the .qmd. Make sure everything is saved.\nClose your project. Reopen the project, and ensure that you can re-run the entire Quarto document (reproducibility check).\n\n\n\nEnd Activity Session (Day 1)"
   },
   {
     "objectID": "course-materials/slides/day3.2-slides.html#title-slide",
@@ -1215,7 +1320,14 @@
     "href": "course-materials/slides/day1.1-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 212: Day 1, Lecture 1\nCourse intro, algebra refresher\n\nAugust 3th, 2026"
+    "text": "EDS 212: Day 1, Lecture 1\nCourse intro, algebra refresher\n\nAugust 3rd, 2026"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#eds212-basics",
+    "href": "course-materials/slides/day1.1-slides.html#eds212-basics",
+    "title": "",
+    "section": "",
+    "text": "EDS 212 basics"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#welcome",
@@ -1225,32 +1337,67 @@
     "text": "Welcome to EDS 212 - Essential Math in Environmental Data Science\n\n\n\nInstructor: Carmen Galaz García\nTeaching assistant: Cella Schnabel\nCourse hours: 10am - 4:30pm PST\nLocation: NCEAS 1st Floor Classroom"
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#about-me",
-    "href": "course-materials/slides/day1.1-slides.html#about-me",
+    "objectID": "course-materials/slides/day1.1-slides.html#about-instructor",
+    "href": "course-materials/slides/day1.1-slides.html#about-instructor",
+    "title": "",
+    "section": "",
+    "text": "About your instructor\n\n\n\nCarmen Galaz García (she/her)\n\nAssistant Teaching Professor @ Bren\n\nBefore:\n\nData Scienist @ NCEAS\nPh.D. in Mathematics @ UCSB\n\nTeaching & Research\n\nPython courses and Capstone Projects for Masters in Environmental Data Science (MEDS)\nSupporting math and data science across Bren!\nNCEAS/TNC collaboration for invasive iceplant mapping analyzing remotely sensed images"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#about-TA",
+    "href": "course-materials/slides/day1.1-slides.html#about-TA",
     "title": "",
     "section": "",
     "text": "About your TA\n\n\n\nCella Schnabel"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#about-you",
+    "href": "course-materials/slides/day1.1-slides.html#about-you",
+    "title": "",
+    "section": "",
+    "text": "About you!\n\n\nimage: Flaticon.com"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#course-description",
     "href": "course-materials/slides/day1.1-slides.html#course-description",
     "title": "",
     "section": "",
-    "text": "Course description\n\n\nUnits: 2\nGrading: Satisfactory/Unsatisfactory\nDescription: Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.\n\n\nLet’s take a look at the course syllabus together."
+    "text": "Course description\n\n\nUnits: 2\nGrading: Satisfactory/Unsatisfactory\nDescription: Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.\n\n\n\nThis is an “offline course”, your only one in MEDS. What it means is we’ll be focusing on conceptual understanding and some pen-and-paper practice, instead of coding. Why? We want to make sure you understand some fundamental topics before jumping into implementing.\n\n\n\n\nLet’s take a look at the course syllabus together."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#topics",
     "href": "course-materials/slides/day1.1-slides.html#topics",
     "title": "",
     "section": "",
-    "text": "Topics overview\n\n\n\nDay 1: Course introduction & math basics refresher\nDay 2: Derivatives\nDay 3: Differential equations, intro to linear algebra\nDay 4: Linear algebra, summary statistics\nDay 5: Basic probability theory, Boolean algebra"
+    "text": "Topics overview\n\n\n\nDay 1: Course introduction & math basics refresher\nDay 2: Exponential functions; Limits & derivatives\nDay 3: Integration & ODEs; Vectors and matrices\nDay 4: Distributions & summary statistics; Basic probability theory,\nDay 5: Basic stats; Boolean algebra"
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#math-evolution",
-    "href": "course-materials/slides/day1.1-slides.html#math-evolution",
+    "objectID": "course-materials/slides/day1.1-slides.html#obj",
+    "href": "course-materials/slides/day1.1-slides.html#obj",
     "title": "",
     "section": "",
-    "text": "Maybe you’re thinking…\n\n\n\nSource: Michael Sandberg’s Data Visualization Blog"
+    "text": "Objectives (in general terms)\n\n\n\nShake off the math dust\nExercise core math skills needed to succeed in your Bren courses\nExplore how valuable math is to environmental data science\nBuild a collaborative environment and get to know your cohort"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#exp",
+    "href": "course-materials/slides/day1.1-slides.html#exp",
+    "title": "",
+    "section": "",
+    "text": "Student expectations\n\nWe expect all students will:\n\nSupport and encourage all classmates\nBe open to learning from each other\nBring a collaborative attitude and communicate respectfully\nSee opportunities to share kownledge as a chance to deepen understanding\nComplete all in-class exercises\n\n\nLogistics\n\nYou are required to attend all sessions, unless there’s a significant reason not to. Always communicate with your instructors.\nIf you are feeling sick: stay home and take care of yourself! Please mask up if you are not feeling 100%."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#survey",
+    "href": "course-materials/slides/day1.1-slides.html#survey",
+    "title": "",
+    "section": "",
+    "text": "Please fill out this survey\n\n\n\nOr you can click on this link."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#math-envs",
+    "href": "course-materials/slides/day1.1-slides.html#math-envs",
+    "title": "",
+    "section": "",
+    "text": "Math in Environmental Data Science"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#why-math",
@@ -1267,46 +1414,81 @@
     "text": "A quantitative brain warm-up\n\n\n\nMEDS students have diverse work & academic histories\n\nThis course (re)introduces math concepts and tools that:\n\nFocus on applications to environmental data science\nAre specifically relevant for MEDS projects, coursework\nProvide an entryway into building computational skills\nRefresh quantitative thinking skills generally\nRefresh essentials like units, conversions, notation, language"
   },
   {
+    "objectID": "course-materials/slides/day1.1-slides.html#des",
+    "href": "course-materials/slides/day1.1-slides.html#des",
+    "title": "",
+    "section": "",
+    "text": "Share with the person next to you:\n\nWhat has been your life or professional experience with math? Best friend ever, mortal enemy, or something in between?\n\nHow do you see math being relevant to solving environmental problems?"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#math-eds",
+    "href": "course-materials/slides/day1.1-slides.html#math-eds",
+    "title": "",
+    "section": "",
+    "text": "Math is a core tool in environmental data science\n\n\nMath helps us investigate the world and communicate our findings\n\n\nUsed by scientists to find evidence\nCan be used to quantify relations, trends, and changes\nMathematical models can help us understand complex systems\nMust be used responsibly and with awareness of potential biases and limitations\nHelps us support arguments that can transform policy and actions\nAt the center of tools like statistics, machine lerning, and image processing\n\n\nWe need to understand the math to make decisions and efficient implementations using it!"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#math-bren",
+    "href": "course-materials/slides/day1.1-slides.html#math-bren",
+    "title": "",
+    "section": "",
+    "text": "Math at Bren\n\n\n\n\nIn your classes:\n\n\nEDS 222: Statistics for Environmental Data Science\nEDS 230: Modeling Environmental Systems\nEDS 232: Machine Learning in Environmental Science\n\n\n\nIn Research\n\nEcology, modeling, economics, and more!\n\nModeling the Impact of Decarbonization on Labor in California’s Central Coast\nQuantifying Greenhouse Gas (GHG) Emissions Associated with Global Seafood Production\nCharacterizing The Relationship Between Evapotranspiration and Groundwater Decline Across Arid Agricultural Regions"
+  },
+  {
     "objectID": "course-materials/slides/day1.1-slides.html#warm-up-overview",
     "href": "course-materials/slides/day1.1-slides.html#warm-up-overview",
     "title": "",
     "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+    "text": "Today: Math brain warm up\n\n\n\nAlgebra review\nRules of exponents\nUnits\nFunctions\nUnderstanding graphs\nLinear functions"
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#first-algebra",
-    "href": "course-materials/slides/day1.1-slides.html#first-algebra",
+    "objectID": "course-materials/slides/day1.1-slides.html#algebra-review",
+    "href": "course-materials/slides/day1.1-slides.html#algebra-review",
     "title": "",
     "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+    "text": "Algebra review"
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#algebra-blitz",
-    "href": "course-materials/slides/day1.1-slides.html#algebra-blitz",
+    "objectID": "course-materials/slides/day1.1-slides.html#rules-of-algebra",
+    "href": "course-materials/slides/day1.1-slides.html#rules-of-algebra",
     "title": "",
     "section": "",
-    "text": "Algebra blitz\n\n\nYou can get far with a few rules:\n\n\nOrder of operations\nEquations are already solved (but sometimes we need them in a different format)\nDo whatever you want but do the same thing to both sides"
+    "text": "Rules of algebra\n\nYou can get far with a few rules:\n\n\nFollow order of operations (a.k.a. PEDMAS)\nNever change an equation. Instead, rewrite them into more useful forms\nManipulate BOTH sides of an equation with the SAME PROCEDURE.\n\n Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS",
     "href": "course-materials/slides/day1.1-slides.html#PEMDAS",
     "title": "",
     "section": "",
-    "text": "1. Order of operations (P-E-MD-AS)\n\n\nP - Parentheses\n\nE - Exponents\n\nM/D - Multipication / division\n\nA/S - Addition / subtraction"
+    "text": "1. Order of operations (P-E-DM-AS)\n\n\nP - Parentheses\n\nE - Exponents\n\nD/M - Division / multiplication\n\nA/S - Addition / subtraction"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice",
     "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice",
     "title": "",
     "section": "",
-    "text": "1. Order of operations practice problems\n\n\nSimplify the following: \\((12 - 2)/5 + 5(3+2)/6\\)\n\nSimplify the following: \\(\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\\)\n\nSimplify the following: \\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\\((12 - 2)/5 + 5(3+2)/6\\)\n\n\n\\((10/5) + 5 \\times 5 / 6\\)\nANSWER: \\(2 + 25/6\\)\n\n\n\\(\\frac{(4-6)}{(2)}(3+1)-\\frac{(1+2*4)}{(3)}\\)\n\n\n\\(\\frac{(-2)}{(2)}(4)-\\frac{(9)}{(3)}\\)\n\\(-1 \\times 4 - 3\\)\n\\(-4-3\\)\nANSWER: \\(-7\\)\n\n\n\\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x-6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x}{2}-\\frac{6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + x - 3x\\)\n\\(11x - 2y + 5 - 2x\\)\nANSWER: \\(9x - 2y + 5\\)"
+    "text": "1. Order of operations practice problems\n\nSimplify the following:\n\n\n\\(\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\\)\n\n\n\n\\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\nIf we are given the values of \\(x=-3\\) and \\(y=2\\), what would be the value of \\(z\\)? \\[\nz = 4*(y-4)+(x+1)^2\n\\]\n\n✏️ Take a minute to solve these individually.\n\n\n\\((12 - 2)/5 + 5(3+2)/6\\)\n\n\n\\((10/5) + 5 \\times 5 / 6\\)\nANSWER: \\(2 + 25/6\\)\n\n\n\\(\\frac{(4-6)}{(2)}(3+1)-\\frac{(1+2*4)}{(3)}\\)\n\n\n\\(\\frac{(-2)}{(2)}(4)-\\frac{(9)}{(3)}\\)\n\\(-1 \\times 4 - 3\\)\n\\(-4-3\\)\nANSWER: \\(-7\\)\n\n\n\\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x-6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x}{2}-\\frac{6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + x - 3x\\)\n\\(11x - 2y + 5 - 2x\\)\nANSWER: \\(9x - 2y + 5\\)"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1",
+    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1",
+    "title": "",
+    "section": "",
+    "text": "1. Order of operations practice problems\n\n💡 Let’s see a solution!\n\n\n\n\\(\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\\)\n\n\\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2",
+    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2",
+    "title": "",
+    "section": "",
+    "text": "1. Order of operations practice problems\n\n💡 Let’s see a solution!\nIf we are given the values of \\(x=-3\\) and \\(y=2\\), what would be the value of \\(z\\)? \\[\nz = 4*(y-4)+(x+1)^2\n\\]"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#notation-matters",
     "href": "course-materials/slides/day1.1-slides.html#notation-matters",
     "title": "",
     "section": "",
-    "text": "1. Notation matters\n\n\n\nSimplify the following: \\(6 \\div 3(4+2)\\)\nWhat would be a harder-to-misinterpret way to write this?\n\n\n\n\nANSWER: 12\nA harder to misinterpret way to write this: \\((6 \\div 3) \\times (4+2)\\)\n\n–"
+    "text": "1. Notation matters\n\n\n\nSimplify the following: \\(6 \\div 3(4+2)\\)\nWhat would be a harder-to-misinterpret way to write this?\n\n\n\n\nANSWER: 12\nA harder to misinterpret way to write this: \\((6 \\div 3) \\times (4+2)\\)"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#takeaway",
@@ -1320,77 +1502,161 @@
     "href": "course-materials/slides/day1.1-slides.html#equations-solved",
     "title": "",
     "section": "",
-    "text": "2. Equations are solved\n\n\n\\[2x-5y+3.9=8x^2-100.7x\\]\n\nProvides solutions for the questions:\n\n\n\n“What is the value of \\(2x-5y+3.9\\)?” and\n“What is the value of \\(8x^2-100.7x\\)?”"
+    "text": "2. Solving equations\n\nEquations help us find unknown values that satisfy certain conditions.\nRemember the rules:\n\nNever change an equation. Instead, we rewrite them into more useful forms\nManipulate BOTH sides of an equation with the SAME PROCEDURE.\n\n Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation. \n\nExample\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\\[\n\\require{cancel}\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n\\end{aligned}\n\\]\n✏️ Take a minute to solve this individually."
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#reorganize",
-    "href": "course-materials/slides/day1.1-slides.html#reorganize",
+    "objectID": "course-materials/slides/day1.1-slides.html#solving-equations-2",
+    "href": "course-materials/slides/day1.1-slides.html#solving-equations-2",
     "title": "",
     "section": "",
-    "text": "2./3. It is often helpful to reorganize things\n\n\n\nIn the equation on the previous slide (shown below), we might want to solve for y:\n\\[2x-5y+3.9=8x^2-100.7x\\]\n\nThe one rule to rule them all:\n\nYou can do whatever you want to an equation, as long as you do the exact same thing to both sides. That includes ensuring that you are applying something entirely to each side."
+    "text": "2. Solving equations\n\n💡 Let’s see a solution!\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\\[\n\\require{cancel}\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n\\end{aligned}\n\\]"
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#same-both-sides1",
-    "href": "course-materials/slides/day1.1-slides.html#same-both-sides1",
+    "objectID": "course-materials/slides/day1.1-slides.html#solving-equations-3",
+    "href": "course-materials/slides/day1.1-slides.html#solving-equations-3",
     "title": "",
     "section": "",
-    "text": "3. We’re really just doing the same thing to both sides until we’re happy with the format\n\n\nExample:\n\nApply the same operation to each side of the following equation step-by-step to isolate \\(x\\) on one side. Write out all steps.\n\n\\[4x+8=5-2x\\]\n\n\nStart with: \\[4x+8=5-2x\\]\nAdd \\(2x\\) to each side: \\(6x + 8 = 5\\)\nSubtract \\(8\\) from both sides: \\(6x = -3\\)\nANSWER: \\(x = -\\frac{1}{2}\\)"
+    "text": "2. Solving equations\n\n💡 Let’s see a solution!\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\\[\n\\require{cancel}\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n80Q&=\\frac{(400-P)\\cancel{80}}{\\cancel{80}}  &\\text{ Multiply both sides by 80} \\\\\n80Q-400&=\\cancel{400}-\\cancel{400} -P &\\text{ Subtract both sides by 400} \\\\\n-1(80Q-400)&=-P(-1) &\\text{Multiply both sides by -1} \\\\\n400-80Q&=P  &\\text{Flip terms for simplicity}\n\\end{aligned}\n\\]"
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#same-both-sides2",
-    "href": "course-materials/slides/day1.1-slides.html#same-both-sides2",
+    "objectID": "course-materials/slides/day1.1-slides.html#practice-alge-1",
+    "href": "course-materials/slides/day1.1-slides.html#practice-alge-1",
     "title": "",
     "section": "",
-    "text": "3. We’re really just doing the same thing to both sides until we’re happy with the format\n\n\nExample:\n\nApply the same operation to each side of the following equation step-by-step to isolate \\(a\\) on one side. Write out all steps.\n\n\\[\\frac{2(a+1)}{3a}+4=6\\]\n\nENDING NOTE: We might encounter complex expressions for how values are related to each other. While the equation is already solved, it can be helpful to use some basic algebra to rearrange things to make our equations easier to understand.\n\nStart with: \\[\\frac{2(a+1)}{3a}+4=6\\]\nSubtract 4 from both sides: \\[\\frac{2a+2}{3a}=2\\]\nMultiply both sides by \\(3a\\): \\[2a+2=6a\\]\nSubtract \\(2a\\) from both sides: \\[2=4a\\]\nDivide each side by 4; ANSWER: \\(a = \\frac{1}{2}\\)"
+    "text": "It can be easy to make mistakes while doing algebra. Practice is key!\n\nSolve all in terms of \\(x\\)\n\n\\(3x+2=10x-12\\)\n\n\n\n\\(4-3(2x+1)=8-\\frac{3x}{2}\\)\n\n\n\n\\(3(x+7a)-5=b+2(c-4x)\\)\n\n✏️ Take a minute to solve these individually."
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#next-exp",
-    "href": "course-materials/slides/day1.1-slides.html#next-exp",
+    "objectID": "course-materials/slides/day1.1-slides.html#practice-alge-2",
+    "href": "course-materials/slides/day1.1-slides.html#practice-alge-2",
     "title": "",
     "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms (this afternoon)\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+    "text": "It can be easy to make mistakes while doing algebra. Practice is key!\n\n💡 Let’s see a solution!\nSolve all in terms of \\(x\\)\n\n\n\n\n\\(3x+2=10x-12\\)\n\n\n\n\n\n\\(4-3(2x+1)=8-\\frac{3x}{2}\\)"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#practice-alge-3",
+    "href": "course-materials/slides/day1.1-slides.html#practice-alge-3",
+    "title": "",
+    "section": "",
+    "text": "It can be easy to make mistakes while doing algebra. Practice is key!\n\n💡 Let’s see a solution!\nSolve all in terms of \\(x\\)\n\n\\(3(x+7a)-5=b+2(c-4x)\\)"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#practice-alge-4",
+    "href": "course-materials/slides/day1.1-slides.html#practice-alge-4",
+    "title": "",
+    "section": "",
+    "text": "Practice solutions\n\n\n\n\\[\n\\small\n\\begin{aligned}\n3x+2&=10x-12 \\\\\n3x+2+12&=10x-12(+12) \\\\\n3x-3x+14&=10x-3x \\\\\n14&=7x \\\\\nx&=2\n\\end{aligned}\n\\] \n\\[\n\\small\n\\begin{aligned}\n4-3(2x+1)&=8-\\frac{3x}{2}\\\\\n4-3-6x&=8-\\frac{3x}{2} \\\\\n1-6x&=8-\\frac{3x}{2} \\\\\n2-12x&=16-3x \\\\\n-9x&=14 \\\\\nx&=\\frac{-14}{9}\\\\\n\\end{aligned}\n\\]\n\n\\[\n\\small\n\\begin{aligned}\n3(x+7a)-5&=b+2(c-4x)\\\\\n3x+21a-5&=b+2c-8x \\\\\n11x+21a-5&=b+2c \\\\\n11x&=5+b+2c-21a\\\\\nx&=\\frac{5+b+2c-21a}{11}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#rules-of-exponents",
+    "href": "course-materials/slides/day1.1-slides.html#rules-of-exponents",
+    "title": "",
+    "section": "",
+    "text": "Rules of exponents"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents",
     "href": "course-materials/slides/day1.1-slides.html#exponents",
     "title": "",
     "section": "",
-    "text": "Exponents & how to do math with them\n\n\n\\[x^n=x\\times x\\times\\ x \\times x...(n\\space times)\\]\n\n\nEvaluate the following to find a value for \\(y\\):\n\n\n\\(y = 12-2^4\\)\n\\(2y + 30=y+3^3\\)\n\n\n\nSometimes things are related to each other in an exponential way, so we’re going to remind ourselves how they work using numbers.\n\n\\(y = 12-2^4\\)\n\n\n\\(y = 12 - (2 \\times 2 \\times 2 \\times 2)\\)\n\\(y = 12 - 26\\)\nANSWER: \\(y = -4\\)\n\n\n\\(2y + 30=y+3^3\\)\n\n\n\\(2y + 30 = y + (3 \\times 3 \\times 3)\\)\n\\(2y + 30 = y + 27\\)\n\\(y + 30 = 27\\)\nANSWER: \\(y = -3\\)"
+    "text": "Exponents make algebra more interesting!\n\nExample\nThe expression \\(x^3\\) means \\(x\\) multiplied by itself 3 times: \\[x^3=x * x * x\\]\n\nMore generally, \\[x^n = x \\text{ to the power of } n.\\]\n\n\nIntuitively, the exponent \\(n\\) tells us how many times to multiply the basis \\(x\\) by itself:\n\\[x^n = \\underbrace{x * x * ... * x}_{n \\text{ times}}\\]\nBut the exponent can be any (real) number, not only integers!"
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#exponents-rules",
-    "href": "course-materials/slides/day1.1-slides.html#exponents-rules",
+    "objectID": "course-materials/slides/day1.1-slides.html#exponents-applications-1",
+    "href": "course-materials/slides/day1.1-slides.html#exponents-applications-1",
     "title": "",
     "section": "",
-    "text": "Exponent rules\n\n\n\\(x^ax^b=x^{a+b}\\) ; Example: \\(x^5x^3=x^{5+3}=x^8\\) ; Example: \\(2^2 \\times 2^2\\) = \\((2 \\times 2) \\times (2 \\times 2)\\) = \\(2^4\\)\n\n\n\n\\(\\frac{x^a}{x^b}=x^{a-b}\\) ; Example: \\(\\frac{z^5}{z^3}=z^{5-3}=z^2\\) ; Example: \\(\\frac{2^3}{2^2}\\) = \\(\\frac{2 \\times 2 \\times 2}{2 \\times 2}\\) = \\(2^1\\)\n\n\n\n\n\\(\\frac{1}{x^a}=x^{-a}\\) ; Example: \\(b^{-4x}=\\frac{1}{b^{4x}}\\)\n\n\n\n\n\\((x^a)^b=x^{ab}\\) ; Example: \\((2^3)^2=2^{3*2}=2^6=64\\)\n\n\n\n\n\\((\\frac{x}{y})^a=\\frac{x^a}{y^a}\\) ; Example: \\((\\frac{y}{2^2})^2=\\frac{y^2}{(2^2)^2}=\\frac{y^2}{2^4}=\\frac{y^2}{16}\\)\n\n\n\n\n\\((xy)^a=x^ay^a\\) ; Example: \\((3x)^2=3^2x^2\\)"
+    "text": "What are exponents good for?\n\n\n\nThey can describe really big numbers\n\n\nDiameter of the Milky Way = 1,000,000,000,000,000,000,000 meters = \\[10^{21} \\text{ m}\\]\n\nAnd also really small numbers\n\nDiameter of a human red blood cell = 0.0000000001 meters = \\[10^{-10} \\text{ m}\\]\n\nThis way, we can use exponents to describe exponential growth and decay. Many environmental variables behave in this way."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#exponents-rules-blank-1",
+    "href": "course-materials/slides/day1.1-slides.html#exponents-rules-blank-1",
+    "title": "",
+    "section": "",
+    "text": "Rules and properties of exponents (1)\n\n✏️\n\n\n\nProduct rule:\n\n\n\nQuotient rule:\n\n\n\nAny non-negative \\(x\\) to the power of 0 equals 1:\n\n\n\nNegative exponent means divide:\n\n\n\nFractional exponent means take the \\(n\\)-th root:"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#exponents-rules-blank-2",
+    "href": "course-materials/slides/day1.1-slides.html#exponents-rules-blank-2",
+    "title": "",
+    "section": "",
+    "text": "Rules and properties of exponents (2)\n\n\n✏️\n\n\nPower of a power means multiply the exponents:\n\n\n\nExponents get distributed over products:\n\n\n\nAnd exponents get distributed over divisions:\n\n\n\nIf \\(a\\) is the \\(n\\)-th root of \\(x\\), then \\(a\\) to the \\(n\\) equals \\(x\\):"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#exponents-rules-1",
+    "href": "course-materials/slides/day1.1-slides.html#exponents-rules-1",
+    "title": "",
+    "section": "",
+    "text": "Rules and properties of exponents (1)\n\n\nProduct rule: \\(x^a * x^b = x^{a+b}\\)\n\n\n\nQuotient rule: \\(\\frac{x^a}{x^b} = x^{a-b}, \\ \\ \\text{for } x \\neq 0\\)\n\n\n\nAny non-negative \\(x\\) to the power of 0 equals 1: \\(x^0 = 1, \\ \\ \\text{for } x \\neq 0\\)\n\n\n\nNegative exponent means divide: \\(x^{-a} = \\frac{1}{x^a}, \\ \\ \\text{for } x \\neq 0\\)\n\n\n\nFractional exponent means take the \\(n\\)-th root: \\(x^{\\frac{1}{n}} = \\sqrt[n]{x}\\)"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#exponents-rules-2",
+    "href": "course-materials/slides/day1.1-slides.html#exponents-rules-2",
+    "title": "",
+    "section": "",
+    "text": "Rules and properties of exponents (2)\n\n\nPower of a power means multiply the exponents: \\((x^a)^b = x^{ab}\\)\n\n\n\nExponents get distributed over products: \\((xy)^a = x^a y^a\\)\n\n\n\nAnd exponents get distributed over divisions: \\(\\left( \\frac{x}{y} \\right)^a = \\frac{x^a}{y^a}\\)\n\n\n\nIf \\(a\\) is the \\(n\\)-th root of \\(x\\), then \\(a\\) to the \\(n\\) equals \\(x\\):\n\n\\[\na = \\sqrt[n]{x} \\Rightarrow a^n = x\n\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#exponents-table",
+    "href": "course-materials/slides/day1.1-slides.html#exponents-table",
+    "title": "",
+    "section": "",
+    "text": "Rules and properties of exponents\n\n\\[\n\\begin{array}{|l|l|}\n\\hline\n\\textbf{Rule} & \\textbf{Expression} \\\\\n\\hline\n\\text{Product Rule} & x^{a} \\cdot x^{b} = x^{a+b} \\\\\n\\hline\n\\text{Quotient Rule} & \\frac{x^{a}}{x^{b}} = x^{a-b}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Zero Exponent} & x^{0} = 1, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Negative Exponent} & x^{-a} = \\frac{1}{x^{a}}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Fractional Exponent} & x^{\\frac{1}{n}} = \\sqrt[n]{x} \\\\\n\\hline\n\\text{Power of a Power} & (x^{a})^{b} = x^{ab} \\\\\n\\hline\n\\text{Power of a Product} & (xy)^{a} = x^{a}y^{a} \\\\\n\\hline\n\\text{Power of a Quotient} & \\left(\\frac{x}{y}\\right)^{a} = \\frac{x^{a}}{y^{a}} \\\\\n\\hline\n\\text{$n$-th Root Definition} & a = \\sqrt[n]{x} \\quad \\Rightarrow \\quad a^{n} = x \\\\\n\\hline\n\\end{array}\n\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#exponents-practice-set-up",
+    "href": "course-materials/slides/day1.1-slides.html#exponents-practice-set-up",
+    "title": "",
+    "section": "",
+    "text": "Exponents practice\n\n✏️ Simplify the following.\n\n\n\n\\(\\frac{6^5}{6^3}\\)\n\n\n\n\\((x^2y)^4\\)\n\n \n\n\\(\\frac{x^5y^6}{xy^2}\\)\n\n \n\n\\(\\frac{24x^6}{12x^{-8}}\\)\n\n\n\\[\n\\begin{array}{|l|l|}\n\\hline\n\\textbf{Rule} & \\textbf{Expression} \\\\\n\\hline\n\\text{Product Rule} & x^{a} \\cdot x^{b} = x^{a+b} \\\\\n\\hline\n\\text{Quotient Rule} & \\frac{x^{a}}{x^{b}} = x^{a-b}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Zero Exponent} & x^{0} = 1, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Negative Exponent} & x^{-a} = \\frac{1}{x^{a}}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Fractional Exponent} & x^{\\frac{1}{n}} = \\sqrt[n]{x} \\\\\n\\hline\n\\text{Power of a Power} & (x^{a})^{b} = x^{ab} \\\\\n\\hline\n\\text{Power of a Product} & (xy)^{a} = x^{a}y^{a} \\\\\n\\hline\n\\text{Power of a Quotient} & \\left(\\frac{x}{y}\\right)^{a} = \\frac{x^{a}}{y^{a}} \\\\\n\\hline\n\\text{$n$-th Root Definition} & a = \\sqrt[n]{x} \\quad \\Rightarrow \\quad a^{n} = x \\\\\n\\hline\n\\end{array}\n\\]"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents-practice",
     "href": "course-materials/slides/day1.1-slides.html#exponents-practice",
     "title": "",
     "section": "",
-    "text": "Exponent practice\n\n\nSimplify the following expressions using the rules of exponents:\n\n1. \\(3x^5x^8x^{-11}\\)\n\n2. \\(\\frac{-8x^6}{2x^4}+7x^2\\)\n\n3. \\(\\frac{3x}{x^5}-3.8x^4\\frac{x^3}{x^6}+8.1x-11.2\\)\n\n\n\\(3x^5x^8x^{-11}\\)\n\n\nANSWER: \\(3x^2\\)\n\n\n\\(\\frac{-8x^6}{2x^4}+7x^2\\)\n\n\n\\(-4x^2 + 7x^2\\)\nANSWER: \\(3x^2\\)\n\n\n\\(\\frac{3x}{x^5}-3.8x^4\\frac{x^3}{x^6}+8.1x-11.2\\)\n\n\n\\(3x^{-4}-3.8x^4 \\times x^{-3} + 8.1x - 11.2\\)\n\\(3x^{-4}-3.8x^1 + 8.1x - 11.2\\)\nANSWER: \\(3x^{-4}+4.3x - 11.2\\)"
+    "text": "Exponents practice\n\n✏️ Let’s see a solution.\n\n\\(\\frac{6^5}{6^3} = 6^{5-3} = 6^2\\)\n\n\n\n\\((x^2y)^4 = (x^2)^4*y^2 = x^8y^2\\)\n\n \n\n\\(\\frac{x^5y^6}{xy^2} = \\frac{x^5}{x}*\\frac{y^6}{y^2} = x^{5-1}*y^{6-2} = x^4y^4 = (xy)^4\\)\n\n \n\n\\(\\frac{24x^6}{12x^{-8}} = 2x^6x^{(-(-8))}=2x^6x^8 = 2x^{6+8} = 2x^{14}\\)"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#FOIL",
     "href": "course-materials/slides/day1.1-slides.html#FOIL",
     "title": "",
     "section": "",
-    "text": "Multiplying expressions (FOIL)\n\n\nFirst, Outside, Inside, Last\n\nExample:\n\\[(2x+5)(x-3)\\]\n\n\n\\[= (2x \\times x) (2x \\times -3) (5 \\times x) (5 \\times -3)\\]\n\\[= 2x^2 - 6x + 5x - 15\\]\n\\[=2x^2-x-15\\]"
+    "text": "Multiplying expressions (FOIL)\n\n\nFirst, Outside, Inside, Last\n\nExample:\n\\[(2x+5)(x-3)\\] ✏️ Expand this expression."
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#next-units",
-    "href": "course-materials/slides/day1.1-slides.html#next-units",
+    "objectID": "course-materials/slides/day1.1-slides.html#FOIL-solution",
+    "href": "course-materials/slides/day1.1-slides.html#FOIL-solution",
     "title": "",
     "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+    "text": "Multiplying expressions (FOIL)\n\n\nFirst, Outside, Inside, Last\n\nExample:\n\\[(2x+5)(x-3)\\] ✏️ Let’s see a solution.\n\\[= (2x \\times x) (2x \\times -3) (5 \\times x) (5 \\times -3)\\]\n\\[= 2x^2 - 6x + 5x - 15\\]\n\\[=2x^2-x-15\\]"
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#units",
-    "href": "course-materials/slides/day1.1-slides.html#units",
+    "objectID": "course-materials/slides/day1.1-slides.html#polynomials",
+    "href": "course-materials/slides/day1.1-slides.html#polynomials",
+    "title": "",
+    "section": "",
+    "text": "Polynomials describe more complex relationships through exponents\n\nA polynomial is a function of the form: \\[\n\\large\n\\begin{align}\na_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0\n\\end{align}\n\\]\n\n\\(x\\) is the variable\n\\(a_i\\) are constants (fixed numbers) that are called the coefficients of the polynomial\neach \\(a_ix^i\\) is called a term of the polynomial,\n\\(n\\) is called the degree of the polynomial, this is the largest exponent in the polynomial.\n\n\nExample:\n\n\\(x^5 + x^2 - 1\\) is a polynomial of degree five with three terms.\nLinear functions like \\(mx + c\\) where \\(m\\) and \\(c\\) are constants are polynomials of degree 1!\n\nPolynomials often represent real world data better than a linear function."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#units-title",
+    "href": "course-materials/slides/day1.1-slides.html#units-title",
+    "title": "",
+    "section": "",
+    "text": "Units"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#units-1",
+    "href": "course-materials/slides/day1.1-slides.html#units-1",
     "title": "",
     "section": "",
     "text": "UNITS. UNITS. UNITS.\n\n\n\nThink about these statements, which all contain the same value of 4:\n\n\nThere are four in the refrigerator.\nThere are four burritos in the refrigerator.\nThere are four roaches in the refrigerator.\nThere are four million dollars in the refrigerator."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#units-2",
+    "href": "course-materials/slides/day1.1-slides.html#units-2",
+    "title": "",
+    "section": "",
+    "text": "UNITS. UNITS. UNITS.\n\n\nThink about this sign at New Cuyama. Anything odd here?"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#units-critical",
@@ -1404,49 +1670,42 @@
     "href": "course-materials/slides/day1.1-slides.html#unit-conv",
     "title": "",
     "section": "",
-    "text": "Dimensional analysis for unit conversions\n\n\nIn dimensional analysis, we multiply initial units by a sequence of conversion factors to arrive at the final desired units.\n\nFor example, to convert \\(100 \\frac{g}{cm^3}\\) into units of \\(\\frac{kg}{in^3}\\), given that 1 cm3 = 0.061 in3.\n\n\\[100\\frac{g}{cm^3}*\\frac{1kg}{1000g}*\\frac{1cm^3}{0.061in^3}=1.639\\frac{kg}{in^3}\\]"
+    "text": "Dimensional analysis (unit conversions)\n\nIn dimensional analysis, we multiply initial units by a sequence of unit conversion factors to arrive at the final desired units.\n\nExample: How many centimiters are there in 6 inches?\n✏️ Let’s solve this together."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-solution-1",
+    "href": "course-materials/slides/day1.1-slides.html#unit-conv-solution-1",
+    "title": "",
+    "section": "",
+    "text": "Dimensional analysis (unit conversions)\n\nIn dimensional analysis, we multiply initial units by a sequence of unit conversion factors to arrive at the final desired units.\nExample: How many centimiters are there in 6 inches?\nWe know: 1 inch = 2.54 cm. This gives us two unit conversion factors:\n\\[ \\frac{2.54 \\text{ cm}}{1 \\text{ in}} \\text{ and } \\frac{1 \\text{ in}}{2.54 \\text{ cm}}.\\] Important: the fraction the numerator and denominator represent the same quantity.\nThen we multiply by the appropriate conversion factor and simplify:\n\\[\\begin{align*}\n\n6 \\text{ in} &= 6 \\text{ in} \\cdot  \\frac{2.54 \\text{ cm}}{1 \\text{ in}}\\\\\n&= 6  \\frac{2.54}{1} \\cdot  \\text{ in}\\frac{\\text{ cm}}{\\text{ in}} \\\\\n&= 15.24 \\cancel{\\text{ in}}\\frac{\\text{ cm}}{\\cancel{\\text{ in}}} \\\\\n&= 15.24 \\text{ cm}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-2",
+    "href": "course-materials/slides/day1.1-slides.html#unit-conv-2",
+    "title": "",
+    "section": "",
+    "text": "Dimensional analysis (unit conversions)\n\nExample. Convert \\(100 \\frac{g}{cm^3}\\) into units of \\(\\frac{kg}{in^3}\\), given that 1 cm3 = 0.061 in3.\n✏️ Let’s solve this together."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-2-solution",
+    "href": "course-materials/slides/day1.1-slides.html#unit-conv-2-solution",
+    "title": "",
+    "section": "",
+    "text": "Dimensional analysis (unit conversions)\n\nExample. Convert \\(100 \\frac{g}{cm^3}\\) into units of \\(\\frac{kg}{in^3}\\), given that 1 cm3 = 0.061 in3.\n\nWe need one unit conversion factor for \\(g\\): \\(\\frac{1 \\text{ kg}}{1000 \\text{ g}}\\).\nAnd another one for \\(\\text{cm}^3\\): \\(\\frac{1 \\text{ cm}^3}{0.061 \\text{in}^3}\\).\nThen we multiply by the conversion factors and simplify\n\\[\\begin{align*}\n\n100 \\frac{\\text{ g}}{\\text{cm}^3} &= 100 \\frac{\\text{ g}}{\\text{cm}^3} \\cdot \\frac{1 \\text{ cm}^3}{0.061 \\text{ in}^3} \\cdot \\frac{1 \\text{ kg}}{1000 \\text{ g}}\\\\\n&= 100 \\frac{1}{0.061} \\frac{1}{1000}\\cdot \\frac{\\text{ g}}{\\text{cm}^3} \\frac{\\text{ cm}^3}{ \\text{ in}^3} \\frac{ \\text{ kg}}{\\text{ g}}\\\\\n&= \\frac{1}{0.61} \\cdot \\frac{\\cancel{\\text{ g}}}{\\cancel{\\text{cm}^3}} \\frac{\\cancel{\\text{ cm}^3}}{ \\text{ in}^3} \\frac{ \\text{ kg}}{\\cancel{\\text{ g}}}\\\\\n&=1.639\\frac{kg}{in^3}\n\\end{align*}\\]"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-practice",
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-practice",
     "title": "",
     "section": "",
-    "text": "Unit conversion practice\n\n\n\nPractice dimensional analysis to perform the following conversions:\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n\n\nConvert a mass flux of \\(3.2\\frac{g}{min\\cdot m^2}\\) to \\(\\frac{mg}{s\\cdot cm^2}\\).\n\n\n\n\n\\(8.1\\frac{km}{s} \\times \\frac{60s}{min} \\times \\frac{60min}{hr} \\times \\frac{0.621 miles}{1km} = 18,108.36 \\frac{miles}{hr}\\)\n\\(3.2\\frac{g}{min\\cdot m^2} \\times \\frac{1min}{60s} \\times \\frac{1000 mg}{g} \\times \\frac{m}{100cm} \\times \\frac{m}{100cm}\\)"
+    "text": "Unit conversion practice\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\\(8.1\\frac{km}{s} \\times \\frac{60s}{min} \\times \\frac{60min}{hr} \\times \\frac{0.621 miles}{1km} = 18,108.36 \\frac{miles}{hr}\\)\n\\(3.2\\frac{g}{min\\cdot m^2} \\times \\frac{1min}{60s} \\times \\frac{1000 mg}{g} \\times \\frac{m}{100cm} \\times \\frac{m}{100cm}\\)"
   },
   {
-    "objectID": "course-materials/slides/day1.1-slides.html#next-fxns",
-    "href": "course-materials/slides/day1.1-slides.html#next-fxns",
+    "objectID": "course-materials/slides/day1.1-slides.html#lunch-break",
+    "href": "course-materials/slides/day1.1-slides.html#lunch-break",
     "title": "",
     "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
-  },
-  {
-    "objectID": "course-materials/slides/day1.1-slides.html#functions",
-    "href": "course-materials/slides/day1.1-slides.html#functions",
-    "title": "",
-    "section": "",
-    "text": "Functions\n\n\nFunctions are mathematical expressions that tell us how input values are related to output values.\n\nFor example, \\(y = 3x-5\\) is a function that tells us the value of y at any value of x. In this scenario, we would probably say y is a function of x.\n\nCould you also rewrite it and say x is a function of y? Here, with no knowledge of what’s an input and what’s an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully. What follows is the expression in the format of: “[output variable(s)] is/are a function of [input variable(s)]”."
-  },
-  {
-    "objectID": "course-materials/slides/day1.1-slides.html#inputs-outputs",
-    "href": "course-materials/slides/day1.1-slides.html#inputs-outputs",
-    "title": "",
-    "section": "",
-    "text": "Thinking about inputs and outputs\n\n\nFor the following combinations of related variables, which do you expect would be the input and the output in a function describing how they are related? Say your answer in a sentence, e.g. “Evapotranspiration is a function of air temperature.”\n\n\n\nfuel (biomass) / slope / wildfire severity / windspeed / air temperature\nwind speed / power generated by wind turbine\nsoil C:N ratio / bacterial biomass / soil water content / leaf litter decomposition rate\n\n\n\n\nwildfire severity is a function of fuel and slope and windspeed and air temperature\npower generated by wind turbine is a function of wind speed\nleaf litter decomposition rate is a function of soil C:N ratio and bacterial biomass and soil water content"
-  },
-  {
-    "objectID": "course-materials/slides/day1.1-slides.html#fxn-notation",
-    "href": "course-materials/slides/day1.1-slides.html#fxn-notation",
-    "title": "",
-    "section": "",
-    "text": "Function notation\n\n\nSingle variable (univariate) function:\n\\(f(x) = [expression\\space containing \\space x]\\)\n\nMultivariate function:\n\\(g(a,T,z)=[expression\\space containing \\space a, T, \\space and \\space z]\\)"
-  },
-  {
-    "objectID": "course-materials/slides/day1.1-slides.html#eval-fxns",
-    "href": "course-materials/slides/day1.1-slides.html#eval-fxns",
-    "title": "",
-    "section": "",
-    "text": "Evaluating functions\n\n\n\nFor continuous functions, we evaluate them by plugging in variable values.\n\nExample:\n\nEvaluate \\(g(x,t)=2.4x+0.5t^2\\) at \\(x = 3\\) and \\(t = 10\\)\n\n\\(g(3, 10) = 2.4(3) + 0.5(10^2)= 57.2\\)\n\n\n\n\\(g(3,10) = 2.4 \\times 3 + 0.5 \\times 10^2\\)\n\\(g(3,10) = 7.2 + 50 = 57.2\\)"
+    "text": "Lunch break!\n\n\n\n\nimage: Flaticon.com"
   },
   {
     "objectID": "course-materials/slides/day2.2-slides.html#title-slide",
@@ -1670,147 +1929,238 @@
     "href": "course-materials/slides/day1.2-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 212: Day 1, Lecture 2\nExponential functions, logarithms, graphs, average slope\n\nAugust 4th, 2025"
+    "text": "EDS 212: Day 1, Lecture 2\nFunctions, graphs, and linear functions\n\nAugust 3rd, 2026"
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#next-exps-logs",
-    "href": "course-materials/slides/day1.2-slides.html#next-exps-logs",
+    "objectID": "course-materials/slides/day1.2-slides.html#eds212-basics",
+    "href": "course-materials/slides/day1.2-slides.html#eds212-basics",
     "title": "",
     "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+    "text": "Functions"
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#nat-exponent",
-    "href": "course-materials/slides/day1.2-slides.html#nat-exponent",
+    "objectID": "course-materials/slides/day1.2-slides.html#functions",
+    "href": "course-materials/slides/day1.2-slides.html#functions",
     "title": "",
     "section": "",
-    "text": "The Natural Exponential\n\n \n\nIn previous examples, we evaluated exponentials with different bases that were variables (e.g. \\(x^5\\)) and rational numbers (e.g. \\(2^4\\)).\n\nHere, we’ll learn about the natural exponential, \\(e\\), which appears frequently in environmental science and modeling."
+    "text": "Functions\n\nFunctions are mathematical expressions that tell us how input values are related to output values.\n\n\nFor example, \\(y = 3x-5\\) is a function that tells us the value of y at any value of x. In this scenario, we would probably say y is a function of x.\n\n\n\nCould you also rewrite it and say x is a function of y?\nHere, with no knowledge of what’s an input and what’s an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully.\nWhat follows is the expression in the format of: “[output variable(s)] is/are a function of [input variable(s)]”."
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#where-e-come-from",
-    "href": "course-materials/slides/day1.2-slides.html#where-e-come-from",
+    "objectID": "course-materials/slides/day1.2-slides.html#inputs-outputs",
+    "href": "course-materials/slides/day1.2-slides.html#inputs-outputs",
     "title": "",
     "section": "",
-    "text": "Where does \\(e\\) come from?\n\n\n\n\nThe value is from continuous compounding over infinite intervals:\n\n\\[\\sum^{\\infty}_{k=0} = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\frac{x^4}{4!} + ...\\]\n\n\nThe e is from Leonard Euler, Swiss mathematician who proved the value was irrational"
+    "text": "Thinking about inputs and outputs\n\n\nFor the following combinations of related variables, which do you expect would be the input and the output in a function describing how they are related? E.g. “Evapotranspiration is a function of air temperature.”\n\n✏️ Write your answer individually as a sentence.\n\n\nfuel (biomass) / slope / wildfire severity / windspeed / air temperature\nwind speed / power generated by wind turbine\nsoil C:N ratio / bacterial biomass / soil water content / leaf litter decomposition rate\n\n\n\n\nwildfire severity is a function of fuel and slope and windspeed and air temperature\npower generated by wind turbine is a function of wind speed\nleaf litter decomposition rate is a function of soil C:N ratio and bacterial biomass and soil water content"
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#e-number",
-    "href": "course-materials/slides/day1.2-slides.html#e-number",
+    "objectID": "course-materials/slides/day1.2-slides.html#fxn-notation-blank",
+    "href": "course-materials/slides/day1.2-slides.html#fxn-notation-blank",
     "title": "",
     "section": "",
-    "text": "\\(e\\) is a number, not a variable\n\n\n\n\\(e = 2.71828182845904523536...\\)\n\nIt is an irrational number, yes - meaning it can’t be expressed by a simple ratio of integers - but a number nonetheless. With infinite decimal places.\n\nIt is always the same value."
+    "text": "Function notation"
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#e-common",
-    "href": "course-materials/slides/day1.2-slides.html#e-common",
+    "objectID": "course-materials/slides/day1.2-slides.html#fxn-notation",
+    "href": "course-materials/slides/day1.2-slides.html#fxn-notation",
     "title": "",
     "section": "",
-    "text": "Why is \\(e\\) so common?\n\n\n\n\nOne reason: Exponential trends show up a LOT in environmental science (the proportional change is the same over each time span)\nMath reason: Turns out it’s a very useful value for calculus"
+    "text": "Function notation\n\n\nSingle variable (univariate) function:\n\\(f(x) = [expression\\space containing \\space x]\\)\n\nMultivariate function:\n\\(g(a,T,z)=[expression\\space containing \\space a, T, \\space and \\space z]\\)"
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#prop-change",
-    "href": "course-materials/slides/day1.2-slides.html#prop-change",
+    "objectID": "course-materials/slides/day1.2-slides.html#eval-fxns-blank",
+    "href": "course-materials/slides/day1.2-slides.html#eval-fxns-blank",
     "title": "",
     "section": "",
-    "text": "x            y  previous_y percent_change_y\n1   1     2.718282          NA               NA\n2   2     7.389056    2.718282         63.21206\n3   3    20.085537    7.389056         63.21206\n4   4    54.598150   20.085537         63.21206\n5   5   148.413159   54.598150         63.21206\n6   6   403.428793  148.413159         63.21206\n7   7  1096.633158  403.428793         63.21206\n8   8  2980.957987 1096.633158         63.21206\n9   9  8103.083928 2980.957987         63.21206\n10 10 22026.465795 8103.083928         63.21206"
+    "text": "Evaluating functions\n\n\n\nWe evaluate functions by plugging in values of the input variables.\n\n✏️ Example:\n\nEvaluate \\(g(x,t)=2.4x+0.5t^2\\) at \\(x = 3\\) and \\(t = 10\\)"
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#aquaculture",
-    "href": "course-materials/slides/day1.2-slides.html#aquaculture",
+    "objectID": "course-materials/slides/day1.2-slides.html#eval-fxns",
+    "href": "course-materials/slides/day1.2-slides.html#eval-fxns",
     "title": "",
     "section": "",
-    "text": "A real-world example:\n\n\n\nSource: Our World in Data"
+    "text": "Evaluating functions\n\n\n\nWe evaluate functions by plugging in values of the input variables.\n\n✏️ Example:\n\nEvaluate \\(g(x,t)=2.4x+0.5t^2\\) at \\(x = 3\\) and \\(t = 10\\)\n\n\\(g(3, 10) = 2.4(3) + 0.5(10^2)= 57.2\\)"
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#cant-grow-forever",
-    "href": "course-materials/slides/day1.2-slides.html#cant-grow-forever",
+    "objectID": "course-materials/slides/day1.2-slides.html#graphs-title",
+    "href": "course-materials/slides/day1.2-slides.html#graphs-title",
     "title": "",
     "section": "",
-    "text": "But populations can’t grow exponentially forever . . .\n\n\n\nGause, G. F. 1934. The Struggle for Existence. Baltimore: Williams and Wilkins."
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth",
-    "href": "course-materials/slides/day1.2-slides.html#logistic-growth",
-    "title": "",
-    "section": "",
-    "text": "Logistic growth\n\n\n\\[N_t=\\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-rt}}\\]\n\nWhere \\(N_t\\) is the population size at time \\(t\\), \\(K\\) is the carrying capacity, \\(N_0\\) is the initial population size, and \\(r\\) is a growth rate.\n\n\nWe should always think about why an equations has the shape it has - both conceptually and mathematically."
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-Qs",
-    "href": "course-materials/slides/day1.2-slides.html#logistic-growth-Qs",
-    "title": "",
-    "section": "",
-    "text": "Logistic growth\n\n\n\\[N_t=\\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-rt}}\\]\n\n\n\nWhy might we expect logistic growth for many populations?\nWhat variables besides time would influence the actual population?\n\n\n\n\n\nPops grow slowly at the start when there are few individuals. Grow more quickly (exponentially) when enough individuals are in a pop and resources are abundant. Plateau when resources become depleted.\nThe number of individuals and the amount of resources"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#logarithms",
-    "href": "course-materials/slides/day1.2-slides.html#logarithms",
-    "title": "",
-    "section": "",
-    "text": "Logarithms\n\n\nLogarithms ask a question: \\(\\log_a(b)\\) asks “to what power do I have to raise \\(a\\) to get a value of \\(b\\)?\n\nFor example:\n\n\\(\\log_2(8)\\) asks “to what power do I have to raise 2, to get a value of 8?”\n\\(\\log_x(x^{5.9})\\) asks “to what power do I have to raise \\(x\\) to get a value of \\(x^{5.9}\\)?”\n\\(\\log_{banana}(banana^{1382.95})\\) asks “to what power do I have to raise \\(banana\\) to get a value of \\(banana^{1382.95}\\)?”\n\n\n\nExample 1: \\(log_2(8*2)\\) == \\(log_2(8) + log_2(2)\\)"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#nat-log",
-    "href": "course-materials/slides/day1.2-slides.html#nat-log",
-    "title": "",
-    "section": "",
-    "text": "The natural log = “log base \\(e\\)” = \\(\\log_e()\\) = \\(ln()\\)\n\n\nSo based on what we learned in the previous slide, what is:\n\n\n\\(\\log_e(e^{10.4})\\) = ?\n\\(\\log_e(e^{2x+8.3})\\) = ?\n\\(\\log_e(e^{ax+2b^2-4.095})\\) = ?\n\n\n\n\\(10.4\\)\n\\(2x+8.3\\)\n\\(ax+2b^2-4.095\\)"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#log-rules",
-    "href": "course-materials/slides/day1.2-slides.html#log-rules",
-    "title": "",
-    "section": "",
-    "text": "Some log rules\n\n\n\\(\\log_x(AB)=\\log_x(A)+\\log_x(B)\\)\n\\(\\log_x(\\frac{A}{B}) = \\log_x(A)-\\log_x(B)\\)\n\\(\\log_x(A^B)=B\\log_x(A)\\)\n\\(x^{\\log_x(A)}=A\\)\n\\(\\log_x(1)=0\\)\n\\(\\log_x(x)= 1\\)"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#crit-thinking",
-    "href": "course-materials/slides/day1.2-slides.html#crit-thinking",
-    "title": "",
-    "section": "",
-    "text": "Critical thinking questions\n\n\nCan the value within a \\(ln()\\) expression ever be 0, or negative? Why?\n\nCan the solution to a natural log expression ever be negative? How?\n\n\n\n\n\n\n\n\n\n\n\n\nNo, can’t be 0 bc there’s nothing you can multiply e by itself to get 0. No, can’t be negative bc always e * e * ….\nYes, the solution to a natural log expression can be negative, e.g. \\(log_e(?) = &lt;0\\)"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#ln-e-in-equations",
-    "href": "course-materials/slides/day1.2-slides.html#ln-e-in-equations",
-    "title": "",
-    "section": "",
-    "text": "Working with \\(ln()\\) and \\(e\\) in equations\n\n\n\nWe can think of these as inverses of each other:\n\n\\(e^{\\ln(x)} = x\\)\n\\(\\ln(e^x)=x\\)\n\n\n\n\n…and use that as a tool for escaping variables from exponents & logs (remembering we can do whatever we want to an equation, as long as we do the same exact thing to both sides)"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#ln-e-examples",
-    "href": "course-materials/slides/day1.2-slides.html#ln-e-examples",
-    "title": "",
-    "section": "",
-    "text": "Examples:\n\n\n\nFind \\(x\\) given \\(\\ln(x) = 5\\)\nExponentiate both sides: \\(e^{\\ln(x)} = e^5\\) ; simplify left-hand side to get: \\(x = e^5\\)\n\n\n\nFind \\(y\\) given \\(e^{3y}=95\\)\nTake natural log of both sides: \\(\\ln(e^{3y})=ln(95)\\) ; simplifies to: \\(3y = \\ln(95)\\), so \\(y = \\frac{\\ln(95)}{3}\\)"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#next-graphs",
-    "href": "course-materials/slides/day1.2-slides.html#next-graphs",
-    "title": "",
-    "section": "",
-    "text": "Math brain warm up\n\n\n\nAlgebra blitz\nExponentials and logarithms\nCommon units and unit conversions\nFunctions\nUnderstanding graphs\nInterpreting equations"
+    "text": "Graphs"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#graphs",
     "href": "course-materials/slides/day1.2-slides.html#graphs",
     "title": "",
     "section": "",
-    "text": "Graphs: visualizing & thinking about data\n\n\nGraphs are a way for us to more easily process trends or patterns that may be more challenging to understand in a table or list.\n\nWhen you look at graphs, the first things you should ask:\n\nWhat variables are plotted (e.g. x- & y-axis, including units)?\nWhat values are plotted (e.g. raw values, transformed, means, etc.)?\nWhat are the overall takeaways and am I understanding them responsibly?"
+    "text": "Why graphs?\n\nGraphs are a way for us to more easily process trends or patterns that may be more challenging to understand in a table or list.\n\nWhich looks better and is easier to understand?"
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#graphs-explanation",
-    "href": "course-materials/slides/day1.2-slides.html#graphs-explanation",
+    "objectID": "course-materials/slides/day1.2-slides.html#xy-coordinates",
+    "href": "course-materials/slides/day1.2-slides.html#xy-coordinates",
     "title": "",
     "section": "",
-    "text": "Practice saying these things OUT LOUD as if presenting the graph to an audience\n\n\n\n“This figure shows the [change/pattern/relationship] between [x-variable], shown on the x-axis in units of [units] and [y-variable], shown on the y-axis in units of [units]. Overall [overall statement of pattern / trend / findings].”\n\n\nPossibly with additional context as useful for the audience to put those findings into perspective (e.g. “this reduction represents an 82% decline in rainbowfish stocks along the Narnia Coast since 1991”)."
+    "text": "The \\(xy\\) coordinate system\n\n\n\nGraphs generally move in a 2-dimensional plane with a coordinate system using two axes:\n\n\\(x\\)-axis (horizontal axis)\n\\(y\\)-axis (vertical axis)\n\n\nAxes units must be defined depending on the application.\nWe use pairs of numbers to place data:\n\nA point on the \\(xy\\) plane with coordinates \\((a,b)\\) means the point is located at \\(a\\) on the \\(x\\)-axis and at \\(b\\) on the \\(y\\)-axis.\nWhere would (2,-1) go on the graph?"
   },
   {
-    "objectID": "course-materials/slides/day1.2-slides.html#slope-avg",
-    "href": "course-materials/slides/day1.2-slides.html#slope-avg",
+    "objectID": "course-materials/slides/day1.2-slides.html#graph-series",
+    "href": "course-materials/slides/day1.2-slides.html#graph-series",
     "title": "",
     "section": "",
-    "text": "Slope (average)\n\n\n\nSometimes, it can be useful to find the average rate of change of a function. Between any two points on a function \\((x_1,y_1)\\) and \\((x_2,y_2)\\) the slope is found by:}\n\n\\[m=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}\\]"
+    "text": "We can join series of points to make graphs"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#graph-fcn",
+    "href": "course-materials/slides/day1.2-slides.html#graph-fcn",
+    "title": "",
+    "section": "",
+    "text": "Functions on a single variable and a single output can be graphed\n\n\n\n\n\\(\\color{green}{y=sin(3x)+2x}\\)\n\n\n\n\\(\\color{red}{y=0.5x^3+x^2-5x}\\)\n\n\n\n\\(\\color{blue}{y=0.85x+0.44}\\)"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#graph-ingredients",
+    "href": "course-materials/slides/day1.2-slides.html#graph-ingredients",
+    "title": "",
+    "section": "",
+    "text": "Two key ingredients to graphs\n\n\n\nIntercepts\n\n\\(x\\)-intercept\n\nWhere does the graph intersect the \\(x\\)-axis?\nIn other words, for what values of \\(x\\) do we have \\((x,0)\\) be part of the graph?\n\n\\(y\\)-intercept\n\nWhere does the graph intersect the \\(y\\)-axis?\nIn other words, for what value of \\(y\\) do we have \\((0,y)\\) be part of the graph?\n\n\n\n\nWhat are the intercepts of the polynomial function in red?"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#understanding-graphs",
+    "href": "course-materials/slides/day1.2-slides.html#understanding-graphs",
+    "title": "",
+    "section": "",
+    "text": "Understanding graphs\n\n\nWhen you look at graphs, the first things you should ask:\n\n\nWhat variables are being plotted (e.g. x- & y-axis, including units)?\n\n\n\nWhat values are plotted (e.g. raw values, transformed, means, etc.)?\n\n\n\nWhat are the overall takeaways and am I understanding them responsibly?"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#reading-graphs",
+    "href": "course-materials/slides/day1.2-slides.html#reading-graphs",
+    "title": "",
+    "section": "",
+    "text": "Reading graphs (in general)\n\n\n“On the x-axis we have [x-variable] measured in [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings].”"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#reading-graphs-3",
+    "href": "course-materials/slides/day1.2-slides.html#reading-graphs-3",
+    "title": "",
+    "section": "",
+    "text": "Reading graphs (in general)\n\n\n“On the x-axis we have [x-variable] measured in [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings].”\n\n\nSource: TylerVigen.com"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#graphs-reading-practice-1",
+    "href": "course-materials/slides/day1.2-slides.html#graphs-reading-practice-1",
+    "title": "",
+    "section": "",
+    "text": "Reading graphs practice\n\n\n💬 Partner 1 gets to read the graph for the first variable.\n\n“On the x-axis we have [x-variable] measured in [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings].”"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#graphs-reading-practice-2",
+    "href": "course-materials/slides/day1.2-slides.html#graphs-reading-practice-2",
+    "title": "",
+    "section": "",
+    "text": "Reading graphs practice\n\n\n💬 Partner 2 gets to read the plot for the second variable, provide context for the data, and hypothesise an explanation.\n\n“On the x-axis we have [x-variable] measured in [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings].”\n\n\n\n\n\n\nSource: TylerVigen.com"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#graphs-reading-practice-mono-lake",
+    "href": "course-materials/slides/day1.2-slides.html#graphs-reading-practice-mono-lake",
+    "title": "",
+    "section": "",
+    "text": "Reading graphs practice"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#break",
+    "href": "course-materials/slides/day1.2-slides.html#break",
+    "title": "",
+    "section": "",
+    "text": "Let’s take a 5 minute break\n\n\nimage: Flaticon.com"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#lines-title",
+    "href": "course-materials/slides/day1.2-slides.html#lines-title",
+    "title": "",
+    "section": "",
+    "text": "Lines"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#slope-int-blank",
+    "href": "course-materials/slides/day1.2-slides.html#slope-int-blank",
+    "title": "",
+    "section": "",
+    "text": "Linear functions: slope-intercept form\n\n\n✏️"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#slope-int",
+    "href": "course-materials/slides/day1.2-slides.html#slope-int",
+    "title": "",
+    "section": "",
+    "text": "Linear functions: slope-intercept form\n\n\nEasiest model to describe linear relationship between two variables!\n\\[\n\\huge\n\\begin{align}\n\\underbrace{y}_{\\text{output}}=\\overbrace{m}^{\\text{Slope}}\\underbrace{x}_{\\text{input}}+\\overbrace{b}^{\\text{$y$ intercept}}\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#find-line-eq-blank",
+    "href": "course-materials/slides/day1.2-slides.html#find-line-eq-blank",
+    "title": "",
+    "section": "",
+    "text": "Finding the equation of a line\n\n\n✏️"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#find-line-eq-2",
+    "href": "course-materials/slides/day1.2-slides.html#find-line-eq-2",
+    "title": "",
+    "section": "",
+    "text": "Finding the equation of a line\n\nGiven two points \\((x_1, y_1)\\) and \\((x_2, y_2)\\) on the line:\n\n\n\nFind \\(m\\), the slope, by using the two points:\n\n\\[\nm=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}.\n\\]\n\nFind \\(c\\), the y-intercept:\n\nSince \\((x_1, y_1)\\) is on the line, it satisfies:\n\\[y_1 = mx_1+ c.\\] We can solve for \\(c\\) to obtain:\n\\[c = y_1 - mx_1.\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-1",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-1",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: practice\n\n\nFind the equation of the line that:\n\npasses through \\((3,5)\\) and \\((2,-1)\\).\npasses through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\nhas the following graph:\n\n\n\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-1",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-1",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: practice\n\nFind the equation of the line that passes through \\((3,5)\\) and \\((2,-1)\\).\n✏️ Let’s see a solution."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: practice\n\nFind the equation of the line that passes through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\n✏️ Let’s see a solution."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: practice\n\nFind the equation of the line that has the following graph:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✏️ Let’s see a solution."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: practice\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2.\n✏️ Let’s see a solution."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#interpreting-slope",
+    "href": "course-materials/slides/day1.2-slides.html#interpreting-slope",
+    "title": "",
+    "section": "",
+    "text": "Interpreting the slope"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#avg-rate-of-change",
+    "href": "course-materials/slides/day1.2-slides.html#avg-rate-of-change",
+    "title": "",
+    "section": "",
+    "text": "Slope (average)\n\n\nSometimes, it can be useful to find the average rate of change of a function.\nBetween any two points \\((x_1,y_1)\\) and \\((x_2,y_2)\\) on the graph of a function, the slope is found by:\n\n\\[m=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}\\]\nSame idea as in a line!"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#slope-roc",
+    "href": "course-materials/slides/day1.2-slides.html#slope-roc",
+    "title": "",
+    "section": "",
+    "text": "Slope represents rate of change\n\nIce-core data before 1958. Mauna Loa data after 1958.\n\nSource:The Keeling Curve"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#practice-out-loud",
@@ -1825,6 +2175,13 @@
     "title": "",
     "section": "",
     "text": "The average slope of a continuous function rarely tells the whole story"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#slope-avg",
+    "href": "course-materials/slides/day1.2-slides.html#slope-avg",
+    "title": "",
+    "section": "",
+    "text": "Slope can be average or instantaneous\n\n\n\n\nRise over run can always be used to find average rate of change between two parts of a graph\n\n\n\nInstantaneous rate of change leads us to ✨calculus✨."
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#title-slide",
@@ -2308,12 +2665,5 @@
     "title": "Differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
-  },
-  {
-    "objectID": "course-materials/slides/day1.1-slides.html#survey",
-    "href": "course-materials/slides/day1.1-slides.html#survey",
-    "title": "",
-    "section": "",
-    "text": "Please fill out this survey\n\n\n\nOr you can click on this link."
   }
 ]

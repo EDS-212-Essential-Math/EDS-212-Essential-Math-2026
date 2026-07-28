@@ -123,6 +123,16 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <link href="../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+  <script src="../../site_libs/datatables-binding-0.34.0/datatables.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+  <script src="../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+  <link href="../../site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+  <script src="../../site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -132,353 +142,523 @@
 <section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#053660">
 <h2></h2>
 <p><span class="custom-title">EDS 212: Day 1, Lecture 2</span></p>
-<p><span class="custom-subtitle"><em>Exponential functions, logarithms, graphs, average slope</em></span></p>
+<p><span class="custom-subtitle"><em>Functions, graphs, and linear functions</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 4<sup>th</sup>, 2025</span></p>
+<p><span class="custom-subtitle3">August 3<sup>rd</sup>, 2026</span></p>
 </section>
-<section id="next-exps-logs" class="slide level2" data-menu-title="Next, exponentials &amp; logs">
+<section id="eds212-basics" class="slide level2" data-menu-title="EDS 212 basics" data-background-color="#003660">
 <h2></h2>
-<p><span class="slide-title">Math brain warm up</span></p>
-<hr>
-<div class="body-text-m">
-<ul>
-<li>Algebra blitz</li>
-<li><span class="teal-text"><strong>Exponentials and logarithms</strong></span></li>
-<li>Common units and unit conversions</li>
-<li>Functions</li>
-<li>Understanding graphs</li>
-<li>Interpreting equations</li>
-</ul>
-</div>
-</section>
-<section id="nat-exponent" class="slide level2" data-menu-title="Natural exponent">
-<h2></h2>
-<p><span class="slide-title">The Natural Exponential</span></p>
-<hr>
-<p><br> <br></p>
-<div class="body-text-l">
-<p>In previous examples, we evaluated exponentials with different bases that were variables (e.g.&nbsp;<span class="math inline">\(x^5\)</span>) and rational numbers (e.g.&nbsp;<span class="math inline">\(2^4\)</span>).</p>
-<p><br></p>
-<p>Here, we’ll learn about the <em>natural exponential</em>, <span class="math inline">\(e\)</span>, which appears frequently in environmental science and modeling.</p>
-</div>
-</section>
-<section id="where-e-come-from" class="slide level2" data-menu-title="Where does e come from?">
-<h2></h2>
-<p><span class="slide-title">Where does <span class="math inline">\(e\)</span> come from?</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<ul>
-<li>The value is from continuous compounding over infinite intervals:</li>
-</ul>
-<p><span class="math display">\[\sum^{\infty}_{k=0} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + ...\]</span></p>
-<!-- OLD VERSION FROM ORIGINAL AHORST SLIDES: $e=\lim_{n\to\infty}(1+\frac{1}{n})^n$ -->
-<ul>
-<li>The <strong>e</strong> is from Leonard <strong>Euler</strong>, Swiss mathematician who proved the value was irrational</li>
-</ul>
-</div>
-</section>
-<section id="e-number" class="slide level2" data-menu-title="e is a number">
-<h2></h2>
-<p><span class="slide-title"><span class="math inline">\(e\)</span> is a <em>number</em>, not a variable</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
-<p><span class="teal-text"><strong><span class="math inline">\(e = 2.71828182845904523536...\)</span></strong></span></p>
-<p><br></p>
-<p>It is an irrational number, yes - meaning it can’t be expressed by a simple ratio of integers - but a number nonetheless. With infinite decimal places.</p>
-<p><br></p>
-<p><span class="teal-text"><strong><em>It is always the same value.</em></strong></span></p>
-</div>
-</section>
-<section id="e-common" class="slide level2" data-menu-title="e common">
-<h2></h2>
-<p><span class="slide-title">Why is <span class="math inline">\(e\)</span> so common?</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
-<ul>
-<li><p><strong>One reason:</strong> Exponential trends show up a LOT in environmental science (the proportional change is the same over each time span)</p></li>
-<li><p><strong>Math reason:</strong> Turns out it’s a very useful value for calculus</p></li>
-</ul>
-</div>
-</section>
-<section id="prop-change" class="slide level2" data-menu-title="Proportional change">
-<h2></h2>
-
-<img data-src="day1.2-slides_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"><div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>    x            y  previous_y percent_change_y
-1   1     2.718282          NA               NA
-2   2     7.389056    2.718282         63.21206
-3   3    20.085537    7.389056         63.21206
-4   4    54.598150   20.085537         63.21206
-5   5   148.413159   54.598150         63.21206
-6   6   403.428793  148.413159         63.21206
-7   7  1096.633158  403.428793         63.21206
-8   8  2980.957987 1096.633158         63.21206
-9   9  8103.083928 2980.957987         63.21206
-10 10 22026.465795 8103.083928         63.21206</code></pre>
+<div class="page-center">
+<div class="custom-subtitle">
+Functions
 </div>
 </div>
 </section>
-<section id="aquaculture" class="slide level2" data-menu-title="Aquaculture example">
+<section id="functions" class="slide level2" data-menu-title="Functions">
 <h2></h2>
-<p><span class="slide-title">A real-world example:</span></p>
+<p><span class="slide-title">Functions</span></p>
 <hr>
-
-<img data-src="images/fisheries-aquaculture.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p>Source: <a href="https://ourworldindata.org/grapher/capture-fisheries-vs-aquaculture">Our World in Data</a></p>
-</div>
-</section>
-<section id="cant-grow-forever" class="slide level2" data-menu-title="Can't grow forever">
-<h2></h2>
-<p><span class="slide-title2">But populations can’t grow exponentially forever . . .</span></p>
-<hr>
-
-<img data-src="images/paramecium.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><div class="center-text body-text-s gray-text">
-<p>Gause, G. F. 1934. The Struggle for Existence. Baltimore: Williams and Wilkins.</p>
-</div>
-</section>
-<section id="logistic-growth" class="slide level2" data-menu-title="Logistic growth">
-<h2></h2>
-<p><span class="slide-title">Logistic growth</span></p>
-<hr>
+<p><span class="body-text-m">Functions are mathematical expressions that tell us how input values are related to output values.</span></p>
 <p><br></p>
-<p><span class="body-text-l"><span class="math display">\[N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}\]</span></span></p>
-<p><br></p>
-<p><span class="body-text-m">Where <span class="math inline">\(N_t\)</span> is the population size at time <span class="math inline">\(t\)</span>, <span class="math inline">\(K\)</span> is the carrying capacity, <span class="math inline">\(N_0\)</span> is the initial population size, and <span class="math inline">\(r\)</span> is a growth rate.</span></p>
-<p><br></p>
-<div class="center-text body-text-m teal-text">
-<p>We should always think about <em>why an equations has the shape it has</em> - both conceptually and mathematically.</p>
-</div>
-</section>
-<section id="logistic-growth-Qs" class="slide level2" data-menu-title="Logistic growth (Qs)">
-<h2></h2>
-<p><span class="slide-title">Logistic growth</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l"><span class="math display">\[N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}\]</span></span></p>
-<p><br></p>
-<div class="body-text-m">
-<ol type="1">
-<li><p>Why might we expect logistic growth for many populations?</p></li>
-<li><p>What variables <em>besides</em> time would influence the actual population?</p></li>
-</ol>
-<!-- 3. Why, mathematically, does the logistic growth expression take the shape it does? What happens as the population becomes very close to the carrying capacity? -->
-</div>
-<aside class="notes">
-<ol type="1">
-<li><p>Pops grow slowly at the start when there are few individuals. Grow more quickly (exponentially) when enough individuals are in a pop and resources are abundant. Plateau when resources become depleted.</p></li>
-<li><p>The number of individuals and the amount of resources</p></li>
-</ol>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="logarithms" class="slide level2" data-menu-title="Logarithms">
-<h2></h2>
-<p><span class="slide-title">Logarithms</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">Logarithms ask a question: <span class="math inline">\(\log_a(b)\)</span> asks “to what power do I have to raise <span class="math inline">\(a\)</span> to get a value of <span class="math inline">\(b\)</span>?</span></p>
-<p><br></p>
-<p><span class="body-text-l"><strong>For example:</strong></span></p>
-<ul>
-<li><p><span class="math inline">\(\log_2(8)\)</span> asks “to what power do I have to raise 2, to get a value of 8?”</p></li>
-<li><p><span class="math inline">\(\log_x(x^{5.9})\)</span> asks “to what power do I have to raise <span class="math inline">\(x\)</span> to get a value of <span class="math inline">\(x^{5.9}\)</span>?”</p></li>
-<li><p><span class="math inline">\(\log_{banana}(banana^{1382.95})\)</span> asks “to what power do I have to raise <span class="math inline">\(banana\)</span> to get a value of <span class="math inline">\(banana^{1382.95}\)</span>?”</p></li>
-</ul>
-<aside class="notes">
-<ol type="1">
-<li><strong>Example 1:</strong> <span class="math inline">\(log_2(8*2)\)</span> == <span class="math inline">\(log_2(8) + log_2(2)\)</span></li>
-</ol>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="nat-log" class="slide level2" data-menu-title="Natural log">
-<h2></h2>
-<p><span class="slide-title">The <em>natural log</em> = “log base <span class="math inline">\(e\)</span>” = <span class="math inline">\(\log_e()\)</span> = <span class="math inline">\(ln()\)</span></span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">So based on what we learned in the previous slide, what is:</span></p>
-<p><br></p>
-<ul>
-<li><p><span class="body-text-m"><span class="math inline">\(\log_e(e^{10.4})\)</span> = ?</span></p></li>
-<li><p><span class="body-text-m"><span class="math inline">\(\log_e(e^{2x+8.3})\)</span> = ?</span></p></li>
-<li><p><span class="body-text-m"><span class="math inline">\(\log_e(e^{ax+2b^2-4.095})\)</span> = ?</span></p></li>
-</ul>
-<aside class="notes">
-<ul>
-<li><span class="math inline">\(10.4\)</span></li>
-<li><span class="math inline">\(2x+8.3\)</span></li>
-<li><span class="math inline">\(ax+2b^2-4.095\)</span></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="log-rules" class="slide level2" data-menu-title="Log rules">
-<h2></h2>
-<p><span class="slide-title">Some log rules</span></p>
-<hr>
-<ul>
-<li><p><span class="body-text-m"><span class="math inline">\(\log_x(AB)=\log_x(A)+\log_x(B)\)</span></span></p></li>
-<li><p><span class="body-text-m"><span class="math inline">\(\log_x(\frac{A}{B}) = \log_x(A)-\log_x(B)\)</span></span></p></li>
-<li><p><span class="body-text-m"><span class="math inline">\(\log_x(A^B)=B\log_x(A)\)</span></span></p></li>
-<li><p><span class="body-text-m"><span class="math inline">\(x^{\log_x(A)}=A\)</span></span></p></li>
-<li><p><span class="body-text-m"><span class="math inline">\(\log_x(1)=0\)</span></span></p></li>
-<li><p><span class="body-text-m"><span class="math inline">\(\log_x(x)= 1\)</span></span></p></li>
-</ul>
-</section>
-<section id="crit-thinking" class="slide level2" data-menu-title="Critical thinking">
-<h2></h2>
-<p><span class="slide-title">Critical thinking questions</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">Can the value within a <span class="math inline">\(ln()\)</span> expression ever be 0, or negative? Why?</span></p>
-<p><br></p>
-<p><span class="body-text-m">Can the solution to a natural log expression ever be negative? How?</span></p>
 <div class="fragment">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="day1.2-slides_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<aside class="notes">
-<ul>
-<li><p>No, can’t be 0 bc there’s nothing you can multiply e by itself to get 0. No, can’t be negative bc always e * e * ….</p></li>
-<li><p>Yes, the solution to a natural log expression can be negative, e.g.&nbsp;<span class="math inline">\(log_e(?) = &lt;0\)</span></p></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="ln-e-in-equations" class="slide level2" data-menu-title="$ln()$ and $e$ in equations">
-<h2></h2>
-<p><span class="slide-title">Working with <span class="math inline">\(ln()\)</span> and <span class="math inline">\(e\)</span> in equations</span></p>
-<hr>
+<p>For example, <span class="math inline">\(y = 3x-5\)</span> is a function that tells us the <strong>value of y</strong> at <strong>any value of x</strong>. In this scenario, we would probably say <strong>y is a function of x</strong>.</p>
 <p><br></p>
-<div class="body-text-m">
-<p>We can think of these as inverses of each other:</p>
-<ul>
-<li><p><span class="math inline">\(e^{\ln(x)} = x\)</span></p></li>
-<li><p><span class="math inline">\(\ln(e^x)=x\)</span></p></li>
-</ul>
 </div>
 <div class="fragment">
-<p><br></p>
-<p><span class="body-text-m">…and use that as a tool for escaping variables from exponents &amp; logs (remembering we can do whatever we want to an equation, as long as we do <strong>the same exact thing to both sides</strong>)</span></p>
+<p>Could you also rewrite it and say <strong>x is a function of y</strong>?</p>
+<p>Here, with no knowledge of what’s an input and what’s an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully.</p>
+<p>What follows is the expression in the format of: “<strong>[output variable(s)] is/are a function of [input variable(s)]</strong>”.</p>
 </div>
 </section>
-<section id="ln-e-examples" class="slide level2" data-menu-title="$ln()$ and $e$ examples">
+<section id="inputs-outputs" class="slide level2" data-menu-title="Inputs &amp; outputs">
 <h2></h2>
-<p><span class="slide-title">Examples:</span></p>
+<p><span class="slide-title">Thinking about inputs and outputs</span></p>
 <hr>
 <p><br></p>
-<ul>
-<li><p><span class="body-text-m">Find <span class="math inline">\(x\)</span> given <span class="math inline">\(\ln(x) = 5\)</span></span></p>
-<p>Exponentiate both sides: <span class="math inline">\(e^{\ln(x)} = e^5\)</span> ; simplify left-hand side to get: <span class="math inline">\(x = e^5\)</span></p></li>
-</ul>
+<p>For the following combinations of related variables, which do you expect would be the <strong>input</strong> and the <strong>output</strong> in a function describing how they are related? E.g. “Evapotranspiration is a function of air temperature.”</p>
 <p><br></p>
-<ul>
-<li><p><span class="body-text-m">Find <span class="math inline">\(y\)</span> given <span class="math inline">\(e^{3y}=95\)</span></span></p>
-<p>Take natural log of both sides: <span class="math inline">\(\ln(e^{3y})=ln(95)\)</span> ; simplifies to: <span class="math inline">\(3y = \ln(95)\)</span>, so <span class="math inline">\(y = \frac{\ln(95)}{3}\)</span></p></li>
-</ul>
-</section>
-<section id="next-graphs" class="slide level2" data-menu-title="Next, understanding graphs">
-<h2></h2>
-<p><span class="slide-title">Math brain warm up</span></p>
-<hr>
+<p>✏️ <span style="color:green;">Write your answer individually as <strong>a sentence</strong>.</span></p>
 <div class="body-text-m">
-<ul>
-<li>Algebra blitz</li>
-<li>Exponentials and logarithms</li>
-<li>Common units and unit conversions</li>
-<li>Functions</li>
-<li><span class="teal-text"><strong>Understanding graphs</strong></span></li>
-<li>Interpreting equations</li>
-</ul>
+<ol type="1">
+<li><p>fuel (biomass) / slope / wildfire severity / windspeed / air temperature</p></li>
+<li><p>wind speed / power generated by wind turbine</p></li>
+<li><p>soil C:N ratio / bacterial biomass / soil water content / leaf litter decomposition rate</p></li>
+</ol>
+</div>
+<aside class="notes">
+<ol type="1">
+<li>wildfire severity is a function of fuel and slope and windspeed and air temperature</li>
+<li>power generated by wind turbine is a function of wind speed</li>
+<li>leaf litter decomposition rate is a function of soil C:N ratio and bacterial biomass and soil water content</li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- --- -->
+<!-- ```{r} -->
+<!-- #| eval: true -->
+<!-- #| echo: false -->
+<!-- #| out-width: "100%" -->
+<!-- #| fig-align: "center" -->
+<!-- knitr::include_graphics("images/betz_limit.png") -->
+<!-- ``` -->
+<!-- ::: {.center-text .body-text-s .gray-text} -->
+<!-- Schaffarczyk A.P. (2020) Types of Wind Turbines. In: Introduction to Wind Turbine Aerodynamics. Green Energy & Technology. Springer, Cham. https://doi-org.proxy.library.ucsb.edu:9443/10.1007/978-3-030-41028-5_2 -->
+<!-- ::: -->
+</section>
+<section id="fxn-notation-blank" class="slide level2" data-menu-title="Function notation">
+<h2></h2>
+<p><span class="slide-title">Function notation</span></p>
+<hr>
+</section>
+<section id="fxn-notation" class="slide level2" data-menu-title="Function notation">
+<h2></h2>
+<p><span class="slide-title">Function notation</span></p>
+<hr>
+<p><br></p>
+<p><span class="body-text-l">Single variable (univariate) function:</span></p>
+<p><span class="math inline">\(f(x) = [expression\space containing \space x]\)</span></p>
+<p><br></p>
+<p><span class="body-text-l">Multivariate function:</span></p>
+<p><span class="math inline">\(g(a,T,z)=[expression\space containing \space a, T, \space and \space z]\)</span></p>
+</section>
+<section id="eval-fxns-blank" class="slide level2" data-menu-title="Evalutating functions">
+<h2></h2>
+<p><span class="slide-title">Evaluating functions</span></p>
+<hr>
+<p><br></p>
+<div class="body-text-m">
+<p>We evaluate functions by plugging in values of the input variables.</p>
+<p><br></p>
+<p>✏️ <span style="color:green;">Example:</span></p>
+<p><br></p>
+<p>Evaluate <span class="math inline">\(g(x,t)=2.4x+0.5t^2\)</span> at <span class="math inline">\(x = 3\)</span> and <span class="math inline">\(t = 10\)</span></p>
+</div>
+</section>
+<section id="eval-fxns" class="slide level2" data-menu-title="Evalutating functions">
+<h2></h2>
+<p><span class="slide-title">Evaluating functions</span></p>
+<hr>
+<p><br></p>
+<div class="body-text-m">
+<p>We evaluate functions by plugging in values of the input variables.</p>
+<p><br></p>
+<p>✏️ <span style="color:green;">Example:</span></p>
+<p><br></p>
+<p>Evaluate <span class="math inline">\(g(x,t)=2.4x+0.5t^2\)</span> at <span class="math inline">\(x = 3\)</span> and <span class="math inline">\(t = 10\)</span></p>
+<p><br></p>
+<p><span class="math inline">\(g(3, 10) = 2.4(3) + 0.5(10^2)= 57.2\)</span></p>
+</div>
+</section>
+<section id="graphs-title" class="slide level2" data-menu-title="Graphs title" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Graphs
+</div>
 </div>
 </section>
 <section id="graphs" class="slide level2" data-menu-title="Graphs">
 <h2></h2>
-<p><span class="slide-title">Graphs: visualizing &amp; thinking about data</span></p>
+<p><span class="slide-title">Why graphs?</span></p>
+<hr>
+<p>Graphs are a way for us to more easily process trends or patterns that may be more challenging to understand in a table or list.</p>
+<div class="center-text">
+<p><strong>Which looks better and is easier to understand?</strong></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-93806f68432de419c8f7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-93806f68432de419c8f7">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],[6,6,4,6,8,6,8,4,4,6,6,8,8,8,8,8,8,4,4,4,4,8,8,8,8,4,4,4,8,6,8,4],[160,160,108,258,360,225,360,146.7,140.8,167.6,167.6,275.8,275.8,275.8,472,460,440,78.7,75.7,71.09999999999999,120.1,318,304,350,400,79,120.3,95.09999999999999,351,145,301,121],[110,110,93,110,175,105,245,62,95,123,123,180,180,180,205,215,230,66,52,65,97,150,150,245,175,66,91,113,264,175,335,109]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="right">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="day1.2-slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-right" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="xy-coordinates" class="slide level2" data-menu-title="xy coordinates">
+<h2></h2>
+<p><span class="slide-title">The <span class="math inline">\(xy\)</span> coordinate system</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Graphs generally move in a 2-dimensional plane with a coordinate system using two axes:</p>
+<ul>
+<li><p><span class="math inline">\(x\)</span>-axis (horizontal axis)</p></li>
+<li><p><span class="math inline">\(y\)</span>-axis (vertical axis)</p></li>
+</ul>
+<p><br></p>
+<p>Axes units must be defined depending on the application.</p>
+<p>We use pairs of numbers to place data:</p>
+<ul>
+<li class="fragment"><p>A point on the <span class="math inline">\(xy\)</span> plane with <strong>coordinates</strong> <span class="math inline">\((a,b)\)</span> means the point is located at <span class="math inline">\(a\)</span> on the <span class="math inline">\(x\)</span>-axis and at <span class="math inline">\(b\)</span> on the <span class="math inline">\(y\)</span>-axis.</p></li>
+<li class="fragment"><p>Where would (2,-1) go on the graph?</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="images/cart.png" width="400"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="graph-series" class="slide level2" data-menu-title="Graphs series of points to make lines">
+<h2></h2>
+<p><span class="slide-title">We can join series of points to make graphs</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-b1dd4902b9e5e0240049" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b1dd4902b9e5e0240049">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11"],[0,1,2,3,4,5,6,7,8,9,10],[-0.9399999999999999,1.28,0.75,5.39,4.49,3.77,6.73,8.109999999999999,8.859999999999999,8.539999999999999,9.06]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>x<\/th>\n      <th>y<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":6,"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"x","targets":1},{"name":"y","targets":2}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[6,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="day1.2-slides_files/figure-revealjs/unnamed-chunk-5-1.png" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="graph-fcn" class="slide level2" data-menu-title="Most functions can be shown on graphs">
+<h2></h2>
+<p><span class="slide-title">Functions on a single variable and a single output can be graphed</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(\color{green}{y=sin(3x)+2x}\)</span></li>
+</ul>
+<p><br></p>
+<ul>
+<li><span class="math inline">\(\color{red}{y=0.5x^3+x^2-5x}\)</span></li>
+</ul>
+<p><br></p>
+<ul>
+<li><span class="math inline">\(\color{blue}{y=0.85x+0.44}\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day1.2-slides_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="graph-ingredients" class="slide level2" data-menu-title="Two key ingredients to graphs">
+<h2></h2>
+<p><span class="slide-title">Two key ingredients to graphs</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Intercepts</p>
+<ul>
+<li><p><span class="math inline">\(x\)</span>-intercept</p>
+<ul>
+<li>Where does the graph intersect the <span class="math inline">\(x\)</span>-axis?</li>
+<li>In other words, for what values of <span class="math inline">\(x\)</span> do we have <span class="math inline">\((x,0)\)</span> be part of the graph?</li>
+</ul></li>
+<li><p><span class="math inline">\(y\)</span>-intercept</p>
+<ul>
+<li>Where does the graph intersect the <span class="math inline">\(y\)</span>-axis?</li>
+<li>In other words, for what value of <span class="math inline">\(y\)</span> do we have <span class="math inline">\((0,y)\)</span> be part of the graph?</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="center-text">
+<p>What are the intercepts of the polynomial function in red?</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day1.2-slides_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="understanding-graphs" class="slide level2" data-menu-title="Graphs explanation">
+<h2></h2>
+<p><span class="slide-title">Understanding graphs</span></p>
 <hr>
 <p><br></p>
-<p><span class="body-text-m">Graphs are a way for us to more easily process trends or patterns that may be more challenging to understand in a table or list.</span></p>
-<p><br></p>
 <p><span class="body-text-m">When you look at graphs, the first things you should ask:</span></p>
+<p><br></p>
 <ul>
-<li>What variables are plotted (e.g.&nbsp;x- &amp; y-axis, including units)?</li>
+<li>What variables are being plotted (e.g.&nbsp;x- &amp; y-axis, including units)?</li>
+</ul>
+<p><br></p>
+<ul>
 <li>What values are plotted (e.g.&nbsp;raw values, transformed, means, etc.)?</li>
+</ul>
+<p><br></p>
+<ul>
 <li>What are the overall takeaways and am I understanding them responsibly?</li>
 </ul>
 </section>
-<section id="graphs-explanation" class="slide level2" data-menu-title="Graphs explanation">
+<section id="reading-graphs" class="slide level2" data-menu-title="Graphs explanation">
 <h2></h2>
-<p><span class="slide-title3">Practice saying these things OUT LOUD as if presenting the graph to an audience</span></p>
+<p><span class="slide-title">Reading graphs (in general)</span></p>
 <hr>
-<p><br></p>
 <blockquote>
-<p><span class="body-text-m">“This figure shows the [change/pattern/relationship] between [x-variable], shown on the x-axis in units of [units] and [y-variable], shown on the y-axis in units of [units]. Overall [overall statement of pattern / trend / findings].”</span></p>
+<p>“On the x-axis we have [x-variable] measured in [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings].”</p>
 </blockquote>
-<p><br></p>
-<p><span class="body-text-m">Possibly with additional context as useful for the audience to put those findings into perspective (e.g.&nbsp;“this reduction represents an 82% decline in rainbowfish stocks along the Narnia Coast since 1991”).</span></p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../course-materials/slides/images/correlation-1-wind-power.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
 </section>
-<section class="slide level2">
+<section id="reading-graphs-3" class="slide level2" data-menu-title="Graphs explanation">
+<h2></h2>
+<p><span class="slide-title">Reading graphs (in general)</span></p>
+<hr>
+<blockquote>
+<p>“On the x-axis we have [x-variable] measured in [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings].”</p>
+</blockquote>
 
+<img data-src="../../course-materials/slides/images/correlation-1-both.png" style="width:80.0%" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://www.tylervigen.com/spurious/correlation/1362_butter-consumption_correlates-with_wind-power-generated-in-lithuania">TylerVigen.com</a></p></section>
+<section id="graphs-reading-practice-1" class="slide level2" data-menu-title="Graphs explanation">
+<h2></h2>
+<p><span class="slide-title3">Reading graphs practice</span></p>
+<hr>
+<div class="body-text-s">
+<p>💬 <span style="color:green;">Partner 1 gets to read the graph for the first variable.</span></p>
+<blockquote>
+<p>“On the x-axis we have [x-variable] measured in [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings].”</p>
+</blockquote>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../course-materials/slides/images/correlation-2-thomas.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
+</figure>
+</div>
+<!-- 
+[Possibly with additional context as useful for the audience to put those findings into perspective (e.g. "this reduction represents an 82% decline in rainbowfish stocks along the Narnia Coast since 1991").]{.body-text-m}  -->
+</div>
+</section>
+<section id="graphs-reading-practice-2" class="slide level2" data-menu-title="Graphs explanation">
+<h2></h2>
+<p><span class="slide-title3">Reading graphs practice</span></p>
+<hr>
+<div class="body-text-s">
+<p>💬 <span style="color:green;">Partner 2 gets to read the plot for the second variable, provide context for the data, and hypothesise an explanation.</span></p>
+<blockquote>
+<p>“On the x-axis we have [x-variable] measured in [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings].”</p>
+</blockquote>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../course-materials/slides/images/correlation-2-thomas-vehicle-thefts.png" style="width:55.0%"></p>
+<figcaption>Source: <a href="https://www.tylervigen.com/spurious/correlation/1882_popularity-of-the-first-name-thomas_correlates-with_motor-vehicle-thefts-in-maine">TylerVigen.com</a></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="graphs-reading-practice-mono-lake" class="slide level2" data-menu-title="Graphs explanation">
+<h2></h2>
+<p><span class="slide-title3">Reading graphs practice</span></p>
+<hr>
 
 <img data-src="images/mono_lake_graph.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="slope-avg" class="slide level2" data-menu-title="Slope (average)">
+<section id="break" class="slide level2" data-menu-title="5 minute break">
+<h2></h2>
+<p><span class="slide-title">Let’s take a 5 minute break</span></p>
+<hr>
+
+<img data-src="images/coffee-break.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
+<section id="lines-title" class="slide level2" data-menu-title="Lines" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Lines
+</div>
+</div>
+</section>
+<section id="slope-int-blank" class="slide level2" data-menu-title="Slope-Intercept Form">
+<h2></h2>
+<p><span class="slide-title">Linear functions: slope-intercept form</span></p>
+<hr>
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">
+<p>✏️</p>
+</div>
+</section>
+<section id="slope-int" class="slide level2" data-menu-title="Slope-Intercept Form">
+<h2></h2>
+<p><span class="slide-title">Linear functions: slope-intercept form</span></p>
+<hr>
+<p><br></p>
+<p>Easiest model to describe linear relationship between two variables!</p>
+<p><span class="math display">\[
+\huge
+\begin{align}
+\underbrace{y}_{\text{output}}=\overbrace{m}^{\text{Slope}}\underbrace{x}_{\text{input}}+\overbrace{b}^{\text{$y$ intercept}}
+\end{align}
+\]</span></p>
+</section>
+<section id="find-line-eq-blank" class="slide level2" data-menu-title="Finding the equation of a line">
+<h2></h2>
+<p><span class="slide-title">Finding the equation of a line</span></p>
+<hr>
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">
+<p>✏️</p>
+</div>
+</section>
+<section id="find-line-eq-2" class="slide level2" data-menu-title="Finding the equation of a line">
+<h2></h2>
+<p><span class="slide-title">Finding the equation of a line</span></p>
+<hr>
+<p>Given two points <span class="math inline">\((x_1, y_1)\)</span> and <span class="math inline">\((x_2, y_2)\)</span> on the line:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ol type="1">
+<li>Find <span class="math inline">\(m\)</span>, the <strong>slope</strong>, by using the two points:</li>
+</ol>
+<p><span class="math display">\[
+m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
+\]</span></p>
+<ol start="2" type="1">
+<li>Find <span class="math inline">\(c\)</span>, the <strong>y-intercept</strong>:</li>
+</ol>
+<p>Since <span class="math inline">\((x_1, y_1)\)</span> is on the line, it satisfies:</p>
+<p><span class="math display">\[y_1 = mx_1+ c.\]</span> We can solve for <span class="math inline">\(c\)</span> to obtain:</p>
+<p><span class="math display">\[c = y_1 - mx_1.\]</span></p>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/slope.PNG" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="line-equation-practice-1" class="slide level2" data-menu-title="Equation of a line: practice">
+<h2></h2>
+<p><span class="slide-title">Equation of a line: practice</span></p>
+<hr>
+<ul>
+<li><p>Find the equation of the line that:</p>
+<ol type="a">
+<li><p>passes through <span class="math inline">\((3,5)\)</span> and <span class="math inline">\((2,-1)\)</span>.</p></li>
+<li><p>passes through <span class="math inline">\((2,-5)\)</span> and has <span class="math inline">\(x\)</span>-intercept equal to 4.</p></li>
+<li><p>has the following graph:</p></li>
+</ol></li>
+</ul>
+
+<img data-src="day1.2-slides_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><ul>
+<li>Make a graph showing the line that passes through (3,-1) and has slope equal to 2.</li>
+</ul>
+</section>
+<section id="line-equation-practice-sol-1" class="slide level2" data-menu-title="Equation of a line: practice">
+<h2></h2>
+<p><span class="slide-title">Equation of a line: practice</span></p>
+<hr>
+<p>Find the equation of the line that passes through <span class="math inline">\((3,5)\)</span> and <span class="math inline">\((2,-1)\)</span>.</p>
+<p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
+</section>
+<section id="line-equation-practice-sol-2" class="slide level2" data-menu-title="Equation of a line: practice">
+<h2></h2>
+<p><span class="slide-title">Equation of a line: practice</span></p>
+<hr>
+<p>Find the equation of the line that passes through <span class="math inline">\((2,-5)\)</span> and has <span class="math inline">\(x\)</span>-intercept equal to 4.</p>
+<p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
+</section>
+<section id="line-equation-practice-3" class="slide level2" data-menu-title="Equation of a line: practice">
+<h2></h2>
+<p><span class="slide-title">Equation of a line: practice</span></p>
+<hr>
+<p>Find the equation of the line that has the following graph:</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day1.2-slides_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+
+</div></div>
+<p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
+</section>
+<section id="line-equation-practice-4" class="slide level2" data-menu-title="Equation of a line: practice">
+<h2></h2>
+<p><span class="slide-title">Equation of a line: practice</span></p>
+<hr>
+<p>Make a graph showing the line that passes through (3,-1) and has slope equal to 2.</p>
+<p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
+</section>
+<section id="interpreting-slope" class="slide level2" data-menu-title="Interpreting the slope title" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Interpreting the slope
+</div>
+</div>
+</section>
+<section id="avg-rate-of-change" class="slide level2" data-menu-title="Slope (average)">
 <h2></h2>
 <p><span class="slide-title">Slope (average)</span></p>
 <hr>
-<p><br></p>
-<div class="body-text-l">
-<p>Sometimes, it can be useful to find the <strong>average rate of change</strong> of a function. Between any two points on a function <span class="math inline">\((x_1,y_1)\)</span> and <span class="math inline">\((x_2,y_2)\)</span> the slope is found by:}</p>
+<div class="body-text-m">
+<p>Sometimes, it can be useful to find the <strong>average rate of change</strong> of a function.</p>
+<p>Between any two points <span class="math inline">\((x_1,y_1)\)</span> and <span class="math inline">\((x_2,y_2)\)</span> on the graph of a function, the slope is found by:</p>
 <p><br></p>
 <p><span class="math display">\[m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}\]</span></p>
+<p>Same idea as in a line!</p>
 </div>
 </section>
+<section id="slope-roc" class="slide level2" data-menu-title="Slope represents rate of change">
+<h2></h2>
+<p><span class="slide-title">Slope represents rate of change</span></p>
+<hr>
+<p>Ice-core data before 1958. Mauna Loa data after 1958.</p>
+
+<img data-src="images/loa.PNG" class="r-stretch quarto-figure-center"><p class="caption">Source:<a href="https://keelingcurve.ucsd.edu">The Keeling Curve</a></p></section>
 <section id="practice-out-loud" class="slide level2" data-menu-title="Practice out loud">
 <h2></h2>
 <p><span class="slide-title3">Get into the practice of saying the meaning out loud</span></p>
@@ -504,9 +684,25 @@
 <p><span class="slide-title3">The <em>average</em> slope of a continuous function rarely tells the whole story</span></p>
 <hr>
 
-
-
 <img data-src="images/cod_graph.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="slope-avg" class="slide level2" data-cdata-menu-title="can be average or instantaneous">
+<h2></h2>
+<p><span class="slide-title">Slope can be <em>average</em> or <em>instantaneous</em></span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Rise over run can always be used to find average rate of change between two parts of a graph</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Instantaneous rate of change leads us to ✨calculus✨.</li>
+</ul>
+</div></div>
+
+
+
+<img data-src="images/trex.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

@@ -1002,7 +1002,7 @@ $$
 
 
 <!--------------------------------------------------------------------------->
-## {#exponents-practice data-menu-title="Exponents practice"}
+## {#exponents-practice-set-up data-menu-title="Exponents practice"}
 [Exponents practice]{.slide-title}
 
 <hr>
@@ -1160,7 +1160,7 @@ Polynomials often represent real world data better than a linear function.
 
 ---
 
-## {#units data-menu-title="Units" background-color="#003660"}
+## {#units-title data-menu-title="Units" background-color="#003660"}
 
 
 <div class="page-center">
@@ -1170,7 +1170,7 @@ Polynomials often represent real world data better than a linear function.
 
 ---
 
-## {#units data-menu-title="Units"} 
+## {#units-1 data-menu-title="Units"} 
 
 [UNITS. UNITS. UNITS.]{.slide-title}
 
@@ -1194,7 +1194,7 @@ Think about these statements, which all contain the same *value* of 4:
 
 ---
 
-## {#units data-menu-title="Units"} 
+## {#units-2 data-menu-title="Units"} 
 
 [UNITS. UNITS. UNITS.]{.slide-title}
 

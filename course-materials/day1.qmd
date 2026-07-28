@@ -1,5 +1,5 @@
 ---
-title: "Basic math review"
+title: "Core math review"
 subtitle: "Day 1"
 ---
 
@@ -21,14 +21,14 @@ knitr::include_graphics("images/cetaceans-class.jpg")
 
 ## Class materials
 
-| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  {{< fa file-pen title="A laptop with on-screen code" >}} Practice session |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| day 1 / morning   | [Basic algebra review, units and unit conversions, exponents, logarithms](slides/day1.1-slides.qmd){target="_blank"} | [Meet our R tools, basic operations, our first R function](interactive-sessions/interactive-session-1a.qmd) |
-| day 1 / afternoon | [Functions (interpreting & evaluating), reading graphs, slope](slides/day1.2-slides.qmd){target="_blank"} | [R projects, storing objects, creating vectors and sequences](interactive-sessions/interactive-session-1b.qmd) |
+| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | 
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| day 1 / morning   | [Basic algebra review, rules of exponents, units and unit conversions](slides/day1.1-slides.qmd){target="_blank"} | 
+| day 1 / afternoon | [Functions (interpreting & evaluating), reading graphs, lines](slides/day1.2-slides.qmd){target="_blank"} |
 : {.hover .bordered tbl-colwidths="[20,40,40]"} 
 
-## End-of-day practice
+<!-- ## End-of-day practice
 
 Complete the following tasks / activities before heading home for the day!
 
-- [{{< fa pencil title="A pencil" >}} **Day 1 Practice:** Problems, gut checks, R Projects, and a function](eod-practice/eod-day1.qmd)
+- [{{< fa pencil title="A pencil" >}} **Day 1 Practice:** Problems, gut checks, R Projects, and a function](eod-practice/eod-day1.qmd) -->
