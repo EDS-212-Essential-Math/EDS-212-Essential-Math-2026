@@ -1347,18 +1347,6 @@ What is the total *unrecovered* amount of oil spilled into the watershed that ye
 2. $3.2\frac{g}{min\cdot m^2} \times \frac{1min}{60s} \times \frac{1000 mg}{g} \times \frac{m}{100cm} \times \frac{m}{100cm}$
 :::
 
-<!-- ---
-
-## {#lunch-break data-menu-title="Lunch break"} 
-
-[Let's take a break!]{.slide-title}
-
-<hr>
-
-![image: Flaticon.com](images/coffee-break.png)
- -->
-
-
 ---
 
 ## {#lunch-break data-menu-title="Lunch break"} 

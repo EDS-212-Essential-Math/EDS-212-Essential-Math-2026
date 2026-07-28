@@ -431,10 +431,13 @@ p1+theme(legend.position = "none")
 [Reading graphs practice]{.slide-title3}
 
 <hr>
+::: {.body-text-s}
 
 💬 [Partner 1 gets to read the graph for the first variable.]{style="color:green;"}
 
 >"On the x-axis we have [x-variable] measured in  [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings]."
+
+:::
 
 . . .
 
@@ -451,9 +454,13 @@ p1+theme(legend.position = "none")
 
 <hr>
 
-💬 [Partner 2 gets to read the plot for the second variable, provide context for the correlation, and hypothesise an explanation.]{style="color:green;"}
+::: {.body-text-s}
+
+💬 [Partner 2 gets to read the plot for the second variable, provide context for the data, and hypothesise an explanation.]{style="color:green;"}
 
 >"On the x-axis we have [x-variable] measured in  [units] and on the y-axis the the [y-variable] measured in [units]. This figure shows the [change/pattern/relationship] between [x-variable] and [y-variable]. Overall [overall statement of pattern / trend / findings]."
+
+:::
 
 . . .
 
@@ -478,21 +485,285 @@ knitr::include_graphics("images/mono_lake_graph.png")
 
 ---
 
-## {#slope-avg data-menu-title="Slope (average)"} 
+## {#break data-menu-title="5 minute break"} 
 
-[Slope (average)]{.slide-title}
+[Let's take a 5 minute break]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/coffee-break.png)
+
+---
+
+## {#lines-title data-menu-title="Lines" background-color="#003660"}
+
+
+<div class="page-center">
+<div class="custom-subtitle">Lines</div>
+</div>
+
+---
+
+## {#slope-int data-menu-title="Slope-Intercept Form"}
+
+[Linear functions: slope-intercept form]{.slide-title}
 
 <hr>
 
 <br>
 
-::: {.body-text-l}
-Sometimes, it can be useful to find the **average rate of change** of a function. Between any two points on a function $(x_1,y_1)$ and $(x_2,y_2)$ the slope is found by:}
+Easiest model to describe linear relationship between two variables!
+
+$$
+\huge
+\begin{align}
+\underbrace{y}_{\text{output}}=\overbrace{m}^{\text{Slope}}\underbrace{x}_{\text{input}}+\overbrace{b}^{\text{$y$ intercept}}
+\end{align}
+$$
+
+---
+
+## {#find-line-eq-1 data-menu-title="Finding the equation of a line"}
+
+[Finding the equation of a line]{.slide-title}
+
+<hr>
+Given two points $(x_1, y_1)$ and $(x_2, y_2)$ on the line:
+
+::::{.columns}
+:::{.column width="50%"}
+
+(1) Find $m$, the **slope**, by using the two points:
+
+$$
+m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
+$$
+:::
+
+:::{.column width="50%"}
+
+```{r echo=FALSE,fig.align='center',out.width="80%"}
+knitr::include_graphics("images/slope.PNG")
+```
+
+:::
+::::
+
+---
+
+## {#find-line-eq-2 data-menu-title="Finding the equation of a line"}
+
+[Finding the equation of a line]{.slide-title}
+
+<hr>
+
+Given two points $(x_1, y_1)$ and $(x_2, y_2)$ on the line:
+
+::::{.columns}
+:::{.column width="50%"}
+
+(1) Find $m$, the **slope**, by using the two points:
+
+$$
+m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
+$$
+
+2. Find $c$, the **y-intercept**:
+
+Since $(x_1, y_1)$ is on the line, it satisfies:
+
+$$y_1 = mx_1+ c.$$
+We can solve for $c$ to obtain:
+
+$$c = y_1 - mx_1.$$
+
+:::
+
+:::{.column width="50%"}
+
+```{r echo=FALSE,fig.align='center',out.width="80%"}
+knitr::include_graphics("images/slope.PNG")
+```
+
+:::
+::::
+
+---
+
+## {#line-equation-practice-1 data-menu-title="Equation of a line: practice"}
+
+[Equation of a line: practice]{.slide-title}
+
+<hr>
+
+1. Find the equation of the line that:
+
+(a) passes through $(3,5)$ and $(2,-1)$.
+
+(b) passes through $(2,-5)$ and has $x$-intercept equal to 4.
+
+(c) has the following graph:
+
+```{r echo=FALSE,fig.align='center',out.width="80%"}
+# Set up plot area
+
+x_min <- -3
+x_max <- 3
+
+y_min <- -4
+y_max <- 4
+
+x <- seq(x_min, x_max, length.out = 100)
+y <- (3/2)*x + 1
+
+plot(x, y, type = "l", lwd = 4, col="green",
+     xlim = c(x_min, x_max), ylim = c(y_min, y_max),
+     xlab = "x", ylab = "y",
+     xaxt = "n", yaxt = "n")
+
+# Add gridlines at integer spacing
+abline(h = seq(x_min, x_max, by = 1), col = "lightgray", lty = "dotted")
+abline(v = seq(y_min, y_max, by = 1), col = "lightgray", lty = "dotted")
+
+# Add axis lines through origin
+abline(h = 0, v = 0, col = "gray50")
+
+# Redraw the line on top of gridlines
+lines(x, y, lwd = 2)
+
+# Add tick marks (integer spacing)
+axis(1, at = seq(x_min, x_max, by = 1))
+axis(2, at = seq(y_min, y_max, by = 1))
+```
+
+2. Make a graph showing the line that passes through (3,-1) and has slope equal to 2. 
+
+
+---
+
+## {#line-equation-practice-sol-1 data-menu-title="Equation of a line: practice"}
+
+[Equation of a line: practice]{.slide-title}
+
+<hr>
+
+Find the equation of the line that passes through $(3,5)$ and $(2,-1)$.
+
+---
+
+## {#line-equation-practice-sol-2 data-menu-title="Equation of a line: practice"}
+
+[Equation of a line: practice]{.slide-title}
+
+<hr>
+
+Find the equation of the line that passes through $(2,-5)$ and has $x$-intercept equal to 4.
+
+---
+
+## {#line-equation-practice-3 data-menu-title="Equation of a line: practice"}
+
+[Equation of a line: practice]{.slide-title}
+
+<hr>
+
+Find the equation of the line that has the following graph:
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{r echo=FALSE,fig.align='center',out.width="100%"}
+# Set up plot area
+
+x_min <- -3
+x_max <- 3
+
+y_min <- -4
+y_max <- 4
+
+x <- seq(x_min, x_max, length.out = 100)
+y <- (3/2)*x + 1
+
+plot(x, y, type = "l", lwd = 4, col="green",
+     xlim = c(x_min, x_max), ylim = c(y_min, y_max),
+     xlab = "x", ylab = "y",
+     xaxt = "n", yaxt = "n")
+
+# Add gridlines at integer spacing
+abline(h = seq(x_min, x_max, by = 1), col = "lightgray", lty = "dotted")
+abline(v = seq(y_min, y_max, by = 1), col = "lightgray", lty = "dotted")
+
+# Add axis lines through origin
+abline(h = 0, v = 0, col = "gray50")
+
+# Redraw the line on top of gridlines
+lines(x, y, lwd = 2)
+
+# Add tick marks (integer spacing)
+axis(1, at = seq(x_min, x_max, by = 1))
+axis(2, at = seq(y_min, y_max, by = 1))
+```
+:::
+
+
+::: {.column width="40%"}
+
+:::
+
+
+:::
+
+---
+
+## {#line-equation-practice-4 data-menu-title="Equation of a line: practice"}
+
+[Equation of a line: practice]{.slide-title}
+
+<hr>
+
+Make a graph showing the line that passes through (3,-1) and has slope equal to 2. 
+
+---
+
+## {#interpreting-slope data-menu-title="Interpreting the slope title" background-color="#003660"}
+
+
+<div class="page-center">
+<div class="custom-subtitle">Interpreting the slope</div>
+</div>
+
+---
+
+## {#avg-rate-of-change data-menu-title="Slope (average)"} 
+
+[Slope (average)]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+Sometimes, it can be useful to find the **average rate of change** of a function. 
+
+Between any two points $(x_1,y_1)$ and $(x_2,y_2)$  on the graph of a function, the slope is found by:
 
 <br>
 
 $$m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}$$
+
+Same idea as in a line!
 :::
+
+---
+
+## {#slope-roc data-menu-title="Slope represents rate of change"}
+
+[Slope represents rate of change]{.slide-title}
+
+<hr>
+
+Ice-core data before 1958. Mauna Loa data after 1958. 
+
+![Source:[The Keeling Curve](https://keelingcurve.ucsd.edu)](images/loa.PNG)
 
 ---
 
@@ -535,3 +806,30 @@ knitr::include_graphics("images/cod_graph.jpg")
 ```
 
 
+---
+
+## {#slope-avg cdata-menu-title="can be average or instantaneous"}
+
+[Slope can be *average* or *instantaneous*]{.slide-title}
+
+<hr>
+
+::::{.columns}
+:::{.column width="50%"}
+
+
+- Rise over run can always be used to find average rate of change between two parts of a graph
+
+
+:::
+
+:::{.column width="50%"}
+
+- Instantaneous rate of change leads us to ✨calculus✨.
+
+:::
+::::
+
+```{r echo=FALSE,fig.align='center',out.width="50%"}
+knitr::include_graphics("images/trex.PNG")
+```
