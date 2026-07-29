@@ -845,6 +845,8 @@ We read $\frac{\partial f}{\partial x}$ as "the partial derivative of $f$ with r
 
 [The slope with respect to one variable if other variables are held constant.]{.body-text-m} 
 
+![](images/partial-derivatives.jpg){fig-align="center"}
+
 ::: {.notes}
 - moving up and down
 - moving acorss a plane
@@ -979,7 +981,7 @@ $$T(W,L)=0.41WL+2.6W^2$$
 
 [$$\frac{\partial C}{\partial t}=D_x \frac{\partial^2C}{\partial x^2} + D_y\frac{\partial^2C}{\partial y^2}+D_z\frac{\partial^2C}{\partial z^2}-v\frac{\partial C}{\partial x}-\lambda RC$$]{.body-text-m}
 
-$D_x, D_y, D_z$ are hydrodynamic diffusion coefficients in the $x$, $y$, and $z$ directions.
+$D_x, D_y, D_z$ are hydrodynamic diffusion coefficients in the $x$, $y$, and $z$ direction.
 
 ---
 

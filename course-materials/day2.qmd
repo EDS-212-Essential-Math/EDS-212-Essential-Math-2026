@@ -31,15 +31,15 @@ knitr::include_graphics("images/derivative_9.jpg")
 
 | {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------| 
-| day 2 / morning   | [The exponential function and logarithms](slides/day2.1-slides.qmd){target="_blank"} | 
-| day 2 / afternoon | [Limits and derivatives](slides/day2.2-slides.qmd){target="_blank"} | 
+| day 2 / morning   | [The exponential function, logarithms, and limits](slides/day2.1-slides.qmd){target="_blank"} | 
+| day 2 / afternoon | [Derivatives](slides/day2.2-slides.qmd){target="_blank"} | 
 : {.hover .bordered tbl-colwidths="[20,40,40]"} 
 
-## End-of-day practice
+<!-- ## End-of-day practice
 
 Complete the following tasks / activities before heading home for the day!
 
-- [{{< fa pencil title="A pencil" >}} **Day 2 Practice:** Derivatives, plots, git](eod-practice/eod-day2.qmd)
+- [{{< fa pencil title="A pencil" >}} **Day 2 Practice:** Derivatives, plots, git](eod-practice/eod-day2.qmd) -->
 
 ## Additional Resources
 - **[Derivatives... What?](https://www.youtube.com/watch?v=-ktrtzYVk_I), by [NancyPi](https://www.youtube.com/@NancyPi):** YouTube video on the definition of the derivative

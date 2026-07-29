@@ -132,9 +132,9 @@
 <section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#053660">
 <h2></h2>
 <p><span class="custom-title">EDS 212: Day 2, Lecture 1</span></p>
-<p><span class="custom-subtitle"><em>Definition of the derivative</em></span></p>
+<p><span class="custom-subtitle"><em>The exponential function, logarithms, and limits</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 5<sup>th</sup>, 2025</span></p>
+<p><span class="custom-subtitle3">August 4<sup>th</sup>, 2025</span></p>
 </section>
 <section id="overview" class="slide level2" data-menu-title="Overview">
 <h2></h2>
@@ -142,128 +142,152 @@
 <hr>
 <p><br></p>
 <ul>
+<li><span class="body-text-m">The exponential function</span></li>
+<li><span class="body-text-m">Logarithms</span></li>
+<li><span class="body-text-m">Limits</span></li>
 <li><span class="body-text-m">Derivatives</span></li>
-<li><span class="body-text-m">Higher order &amp; partial derivatives</span></li>
-<li><span class="body-text-m">Differential equations (reading, understanding, solving, using)</span></li>
 </ul>
 </section>
-<section id="slope-at-any-point" class="slide level2" data-menu-title="Slope at any point?">
+<section id="exponential-function-title" class="slide level2" data-menu-title="The exponential function" data-background-color="#003660">
 <h2></h2>
-<p><br> <br> <br> <br> <br> <br> <br></p>
-<div class="body-text-xl center-text teal-text">
-<p>What if we want to find an expression that describes the rate of change (slope) at <em>any</em> point on a function?</p>
+<div class="page-center">
+<div class="custom-subtitle">
+The exponential function
+</div>
 </div>
 </section>
-<section id="deriv-1" class="slide level2" data-menu-title="Derivative art 1">
+<section id="number-e-1" class="slide level2" data-menu-title="The number $e$">
 <h2></h2>
-
-<img data-src="images/derivative_1.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="deriv-2" class="slide level2" data-menu-title="Derivative art 2">
-<h2></h2>
-
-<img data-src="images/derivative_2.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="deriv-3" class="slide level2" data-menu-title="Derivative art 3">
-<h2></h2>
-
-<img data-src="images/derivative_3.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="deriv-4" class="slide level2" data-menu-title="Derivative art 4">
-<h2></h2>
-
-<img data-src="images/derivative_4.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="deriv-5" class="slide level2" data-menu-title="Derivative art 5">
-<h2></h2>
-
-<img data-src="images/derivative_5.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="deriv-6" class="slide level2" data-menu-title="Derivative art 6">
-<h2></h2>
-
-<img data-src="images/derivative_6.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="deriv-7" class="slide level2" data-menu-title="Derivative art 7">
-<h2></h2>
-
-<img data-src="images/derivative_7.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="deriv-8" class="slide level2" data-menu-title="Derivative art 8">
-<h2></h2>
-
-<img data-src="images/derivative_8.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="deriv-9" class="slide level2" data-menu-title="Derivative art 9">
-<h2></h2>
-
-<img data-src="images/derivative_9.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="thats-how" class="slide level2" data-menu-title="That's how">
-<h2></h2>
-<p><span class="slide-title">And that’s how we find derivatives</span></p>
+<!-- 
+A very nice slide deck Carmen made to explain what e is to my 34A summer 2020 students.
+https://docs.google.com/presentation/d/1uztsfd9fwG49lxsDgxhyQZVsbFQDkmszsSkQdDivz2Q/edit?usp=sharing
+-->
+<p><span class="slide-title">The number <span class="math inline">\(e\)</span></span></p>
 <hr>
-<p><span class="body-text-m">Evaluate the slope between two generic points on any function (separated by <span class="math inline">\(\Delta x\)</span>) as <span class="math inline">\(\Delta x\)</span> becomes infinitely small.</span></p>
-<p><br></p>
-
-<img data-src="images/mispronounced_equations.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p>Image source: <a href="https://xkcd.com/2492/">xkcd</a></p>
+<p>The <strong>number <span class="math inline">\(e\)</span> is a constant</strong> in mathematics, it is approximately <span class="math inline">\(e\approx 2.72\)</span>, but really its decimals continue infinitely without any pattern:</p>
+<div class="center-text teal-text">
+<p><span class="math inline">\(e = 2.71828182845904523536...\)</span></p>
+</div>
+<div class="fragment">
+<p>It’s exact value can be described as <span class="math display">\[
+e = 1 + 1 + \frac{1}{1*2} + \frac{1}{1*2*3} + \frac{1}{1*2*3*4} + \frac{1}{1*2*3*4*5} + ...
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Like any other number, <span class="math inline">\(e\)</span> follows normal power properties:</p>
+<p><span class="math display">\[
+\begin{align}
+e^x\cdot e^y &amp;=&amp; ?\\
+\frac{1}{e^x} &amp;=&amp; ?\\
+\frac{e^x}{e^y} &amp;=&amp; ?\\
+(e^x)^r &amp;=&amp; ?
+\end{align}
+\]</span></p>
+<p>✏️ <span class="body-text-m" style="color:green;">Take a moment to write these with a single exponent.</span></p>
 </div>
 </section>
-<section id="lets-try" class="slide level2" data-menu-title="Let's try one">
+<section id="number-e-2" class="slide level2" data-menu-title="The number $e$">
 <h2></h2>
-<p><span class="slide-title2">Let’s try one (<em>NOTE</em> we’re subbing <span class="math inline">\(h\)</span> for <span class="math inline">\(\Delta x\)</span>)</span></p>
+<!-- 
+A very nice slide deck Carmen made to explain what e is to my 34A summer 2020 students.
+https://docs.google.com/presentation/d/1uztsfd9fwG49lxsDgxhyQZVsbFQDkmszsSkQdDivz2Q/edit?usp=sharing
+-->
+<p><span class="slide-title">The number <span class="math inline">\(e\)</span></span></p>
 <hr>
-<p>Find an expression that tells us the slope of the function <span class="math inline">\(f(x)=x^2-18.2\)</span> at any value of <span class="math inline">\(x\)</span>.</p>
-<p><br></p>
-<p><span class="body-text-m"><span class="math display">\[\frac{df}{dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\]</span></span></p>
-<p><br></p>
-<p><span class="body-text-m"><span class="math display">\[=\lim_{h\to 0}\frac{((x+h)^2-18.2)-(x^2-18.2)}{h}\]</span></span></p>
-<p><br></p>
-<p><span class="body-text-m"><span class="math display">\[=\lim_{h\to 0}\frac{x^2+2xh+h^2-18.2-x^2+18.2}{h}\]</span></span></p>
+<p>The <strong>number <span class="math inline">\(e\)</span> is a constant</strong> in mathematics, it is approximately <span class="math inline">\(e\approx 2.72\)</span>, but really its decimals continue infinitely without any pattern:</p>
+<div class="center-text teal-text">
+<p><span class="math inline">\(e = 2.71828182845904523536...\)</span></p>
+</div>
+<p>It’s exact value can be described as <span class="math display">\[
+e = 1 + 1 + \frac{1}{1*2} + \frac{1}{1*2*3} + \frac{1}{1*2*3*4} + \frac{1}{1*2*3*4*5} + ...
+\]</span></p>
+<p>Like any other number, <span class="math inline">\(e\)</span> follows normal power properties:</p>
+<p><span class="math display">\[
+\begin{align}
+e^{x+y}&amp;=&amp;e^x\cdot e^y \\
+e^{-x}&amp;=&amp;\frac{1}{e^x}\\
+e^{x-y}&amp;=&amp;\frac{e^x}{e^y}\\
+e^{rx}&amp;=&amp;(e^x)^r
+\end{align}
+\]</span></p>
+<!---------------------------------------------------------------------->
 </section>
-<section id="gets-us-to" class="slide level2" data-menu-title="Which gets us to...">
+<section id="exponential-function" class="slide level2" data-menu-title="The exponential function $e^x$">
 <h2></h2>
-<p><span class="slide-title">Which gets us to…</span></p>
+<p><span class="slide-title">The exponential funciton</span></p>
+<hr>
+<p>The <strong>exponential function <span class="math inline">\(e^x\)</span></strong> is the number <span class="math inline">\(e\)</span> raised to the <span class="math inline">\(x\)</span> power.</p>
+<p>In function notation you may sometimes see it as</p>
+<p><span class="math display">\[ f(x) = e^x \ \ \text{ or } \ \ \text{exp}(x).\]</span></p>
+
+<img data-src="day2.1-slides_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
+<section id="e-common" class="slide level2" data-menu-title="e common">
+<h2></h2>
+<p><span class="slide-title">Why is the exponential function so common?</span></p>
 <hr>
 <p><br></p>
-<p><span class="body-text-m"><span class="math display">\[= \lim_{h\to 0} \frac{2xh+h^2}{h} = \lim_{h\to 0} {2x+h} = 2x\]</span></span></p>
-<!-- [$$= \lim_{\Delta x\to 0} \frac{2x\Delta x+(\Delta x)^2}{\Delta x} = \lim_{\Delta x\to 0} {2x+\Delta x} = 2x$$]{.body-text-m} -->
-</section>
-<section id="your-turn" class="slide level2" data-menu-title="Your turn">
-<h2></h2>
-<p><span class="slide-title">Your turn:</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">Find the derivative of the following using the definition of the derivative:</span></p>
-<p><br></p>
-<p><span class="body-text-m"><span class="math display">\[f(x)=4-x+3x^2\]</span></span></p>
-<aside class="notes">
+<div class="body-text-l">
 <ul>
-<li><span class="math inline">\(= \lim_{h \to 0} \frac{df}{dx} = \frac{4 -(x+h) + 3 (x+h)^2 - (4-x+3x^2)}{h}\)</span></li>
-<li><span class="math inline">\(= \lim_{h \to 0} \frac{df}{dx} = \frac{4 -(x+h) + 3 (x^2 + 2xh + h^2) - 4+x-3x^2)}{h}\)</span></li>
-<li><span class="math inline">\(= \lim_{h \to 0} \frac{df}{dx} = \frac{4 -(x+h) + 3x^2 + 6xh + 3h^2 - 4+x-3x^2)}{h}\)</span></li>
-<li><span class="math inline">\(= \lim_{h \to 0} \frac{df}{dx} = \frac{3h^2 + 6xh - h}{h}\)</span></li>
-<li><strong>ANSWER: <span class="math inline">\(= \lim_{h \to 0} \frac{df}{dx} = 6x - 1\)</span></strong></li>
+<li><p><strong>One reason:</strong> Exponential trends show up a LOT in environmental science (the proportional change is the same over each time span)</p></li>
+<li><p><strong>Math reason:</strong> Turns out it’s a very useful value for calculus</p></li>
 </ul>
+</div>
+</section>
+<section id="aquaculture" class="slide level2" data-menu-title="Aquaculture example">
+<h2></h2>
+<p><span class="slide-title">A real-world example:</span></p>
+<hr>
+
+<img data-src="images/fisheries-aquaculture.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p>Source: <a href="https://ourworldindata.org/grapher/capture-fisheries-vs-aquaculture">Our World in Data</a></p>
+</div>
+</section>
+<section id="cant-grow-forever" class="slide level2" data-menu-title="Can't grow forever">
+<h2></h2>
+<p><span class="slide-title2">But populations can’t grow exponentially forever</span></p>
+<hr>
+
+<img data-src="images/paramecium.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><div class="center-text body-text-s gray-text">
+<p>Gause, G. F. 1934. The Struggle for Existence. Baltimore: Williams and Wilkins.</p>
+</div>
+</section>
+<section id="logistic-growth" class="slide level2" data-menu-title="Logistic growth">
+<h2></h2>
+<p><span class="slide-title">Logistic growth</span></p>
+<hr>
+<p><span class="body-text-l"><span class="math display">\[N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}\]</span></span></p>
+<p><br></p>
+<p><span class="body-text-m">Where <span class="math inline">\(N_t\)</span> is the population size at time <span class="math inline">\(t\)</span>, <span class="math inline">\(K\)</span> is the carrying capacity, <span class="math inline">\(N_0\)</span> is the initial population size, and <span class="math inline">\(r\)</span> is a growth rate.</span></p>
+<p><br></p>
+<div class="fragment">
+<p>✏️ <span style="color:green;">What should be the value of the formula when <span class="math inline">\(t=0\)</span>? Confirm your answer by substituting.</span></p>
+</div>
+<div class="fragment">
+<div class="center-text body-text-m teal-text">
+<p>We should always <em>understand the components of formulas and equations</em> - both conceptually and mathematically.</p>
+</div>
+</div>
+</section>
+<section id="logistic-growth-Qs" class="slide level2" data-menu-title="Logistic growth (Qs)">
+<h2></h2>
+<p><span class="slide-title">Logistic growth</span></p>
+<hr>
+<p><br></p>
+<p><span class="body-text-l"><span class="math display">\[N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}\]</span></span></p>
+<p><br></p>
+<div class="body-text-m">
+<ol type="1">
+<li><p>Why might we expect logistic growth for many populations?</p></li>
+<li><p>What variables <em>besides</em> time would influence the actual population?</p></li>
+</ol>
+<!-- 3. Why, mathematically, does the logistic growth expression take the shape it does? What happens as the population becomes very close to the carrying capacity? -->
+</div>
+<!-- [A brief explanation of the math with derivatives.](https://sites.math.duke.edu/education/ccp/materials/diffeq/logistic/logi1.html) -->
+<aside class="notes">
+<ol type="1">
+<li><p>Pops grow slowly at the start when there are few individuals. Grow more quickly (exponentially) when enough individuals are in a pop and resources are abundant. Plateau when resources become depleted.</p></li>
+<li><p>The number of individuals and the amount of resources</p></li>
+</ol>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -276,52 +300,283 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="tedius" class="slide level2" data-menu-title="Tedius">
+<section id="logarithms-title" class="slide level2" data-menu-title="Logarithms" data-background-color="#003660">
 <h2></h2>
-<p><span class="slide-title">It’s cool to do that a few times, <strong>but it gets really tedious really fast.</strong></span></p>
-<hr>
-<p><br></p>
-<p>So we have some basic derivative shortcut rules to speed it up a bit:</p>
-<p><br></p>
-<ul>
-<li><p><strong>Power rule:</strong> <span class="math inline">\(\frac{d}{dx}(x^n)=nx^{n-1}\)</span></p></li>
-<li><p><strong>Constant rule:</strong> if <span class="math inline">\(k\)</span> is a constant, <span class="math inline">\(\frac{d}{dx}(k)=0\)</span></p></li>
-<li><p><strong>Constant multiple rule:</strong> if <span class="math inline">\(k\)</span> is a constant, <span class="math inline">\(\frac{d}{dx}(kx) = k\space\)</span></p></li>
-<li><p><strong>Sum and difference rule:</strong> <span class="math inline">\(\frac{d}{dx}(f(x)\pm g(x))=\frac{d}{dx} f(x)\pm \frac{d}{dx}g(x)\)</span></p></li>
-</ul>
-<p><br></p>
-<p>Yeah there are more - we’re not doing them.</p>
-</section>
-<section id="def-deriv" class="slide level2" data-menu-title="Definition of derivative">
-<h2></h2>
-<p><span class="slide-title"><strong>ALL</strong> of those rules come from the definition of the derivative.</span></p>
-<hr>
-
-<img data-src="images/derivative_9.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="remember" class="slide level2" data-menu-title="Remember">
-<h2></h2>
-<p><span class="slide-title">Reminder of what we’re doing mathematically:</span></p>
-<hr>
-<p><br> <br></p>
-<div class="center-text body-text-xl">
-<p>Finding the slope between two generic points on a function as the distance between them gets infinitely small. That will give us an expression for the <strong>slope at any point on the original function</strong>.</p>
+<div class="page-center">
+<div class="custom-subtitle">
+Logarithms
+</div>
 </div>
 </section>
-<section id="logs-exp" class="slide level2" data-menu-title="Derivative of logs &amp; exp">
+<section id="logarithms" class="slide level2" data-menu-title="Logarithms">
 <h2></h2>
-<p><span class="slide-title">Derivative of logs &amp; exponents</span></p>
+<p><span class="slide-title">Logarithms</span></p>
 <hr>
-<p><br> <br></p>
-<ul>
-<li><span class="body-text-l"><span class="math inline">\(\frac{d}{dx}(e^x) = e^x\)</span></span></li>
-</ul>
 <p><br></p>
+<p><span class="body-text-m"><span class="math inline">\(\log_a(b)\)</span> is the exponent you need to raise <span class="math inline">\(a\)</span> to get a value of <span class="math inline">\(b\)</span></span></p>
+<p><br></p>
+<p><span class="body-text-l"><strong>For example:</strong></span></p>
 <ul>
-<li><span class="body-text-l"><span class="math inline">\(\frac{d}{dx}ln(x)=\frac{1}{x}\)</span></span></li>
+<li><span class="math inline">\(\log_2(8)=x\)</span> asks “to what power do I have to raise 2, to get a value of 8?”</li>
+<li><span class="math inline">\(\log_{105}(1)=x\)</span> asks “to what power do I have to raise 105, to get a value of 1?”</li>
 </ul>
-
-
+<!----------------------------------------------------->
 </section>
+<section id="ln-blank-1" class="slide level2" data-menu-title="Natural Logs">
+<h2></h2>
+<p><span class="slide-title">Natural logarithms</span></p>
+<hr>
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">
+<p>✏️</p>
+</div>
+<!----------------------------------------------------->
+</section>
+<section id="ln-blank-2" class="slide level2" data-menu-title="Natural Logs">
+<h2></h2>
+<p><span class="slide-title">Natural logarithms</span></p>
+<hr>
+<p>If <span class="math inline">\(y&gt;0\)</span>, then <strong><span class="math inline">\(\ln(x)\)</span> is the exponent you need to raise <span class="math inline">\(e\)</span> to in order to get <span class="math inline">\(y\)</span>.</strong></p>
+<p>This means:</p>
+<p><span class="math display">\[
+\begin{align}
+\ln(e^x) &amp;= x \\
+e^{\ln(y)} &amp;= y
+\end{align}
+\]</span></p>
+<p>In other words, <span class="math inline">\(\ln(x)\)</span> is the inverse of the exponential function <span class="math inline">\(e^x\)</span>.</p>
+<p><br></p>
+<p><strong>✏️ Examples</strong></p>
+<ul>
+<li><p><span class="math inline">\(\ln(e^3)\)</span></p></li>
+<li><p><span class="math inline">\(\ln(\frac{1}{e})\)</span></p></li>
+<li><p><span class="math inline">\(\ln(1)\)</span></p></li>
+<li><p><span class="math inline">\(\ln(0)\)</span></p></li>
+<li><p><span class="math inline">\(\ln(-7)\)</span></p></li>
+</ul>
+<!----------------------------------------------------->
+</section>
+<section id="ln" class="slide level2" data-menu-title="Natural Logs">
+<h2></h2>
+<p><span class="slide-title">Natural logarithms</span></p>
+<hr>
+<p>If <span class="math inline">\(y&gt;0\)</span>, then <strong><span class="math inline">\(\ln(x)\)</span> is the exponent you need to raise <span class="math inline">\(e\)</span> to in order to get <span class="math inline">\(y\)</span>.</strong></p>
+<p>This means:</p>
+<p><span class="math display">\[
+\begin{align}
+\ln(e^x) &amp;= x \\
+e^{\ln(y)} &amp;= y
+\end{align}
+\]</span></p>
+<p>In other words, <span class="math inline">\(\ln(x)\)</span> is the inverse of the exponential function <span class="math inline">\(e^x\)</span>.</p>
+<p><br></p>
+<p><strong>Examples</strong></p>
+<ul>
+<li><p><span class="math inline">\(\ln(e^3) = 3\)</span> because 3 is the power of <span class="math inline">\(e\)</span> needed to get <span class="math inline">\(e^3\)</span>.</p></li>
+<li><p><span class="math inline">\(\ln(\frac{1}{e}) = \ln(e^{-1}) = -1\)</span></p></li>
+<li><p><span class="math inline">\(\ln(1) = 0\)</span> because 0 is the exponent we need to raise <span class="math inline">\(e\)</span> to to get 1</p></li>
+<li><p><span class="math inline">\(\ln(0)\)</span> does not exist, because there’s no number we can raise <span class="math inline">\(e\)</span> to to get 0</p></li>
+<li><p><span class="math inline">\(\ln(-7)\)</span> does not exist, because <span class="math inline">\(e\)</span> to any number always be positive</p></li>
+</ul>
+<!----------------------------------------------------->
+</section>
+<section id="ln-blank" class="slide level2" data-menu-title="Properties of natural logarithm">
+<h2></h2>
+<p><span class="slide-title">Natural log properties</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="day2.1-slides_files/figure-revealjs/unnamed-chunk-4-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>✏️</p>
+</div></div>
+<!----------------------------------------------------->
+</section>
+<section id="ln-properties" class="slide level2" data-menu-title="Properties of natural logarithm">
+<h2></h2>
+<p><span class="slide-title">Natural log properties</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="day2.1-slides_files/figure-revealjs/unnamed-chunk-5-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="center-text">
+<p><strong>Properties</strong></p>
+</div>
+<p><span class="math inline">\(\ln (e^x)=x\)</span></p>
+<p><span class="math inline">\(\ln(xy)=\ln x+\ln y\)</span></p>
+<p><span class="math inline">\(\ln(\frac{x}{y})=\ln x-\ln y\)</span></p>
+<p><span class="math inline">\(\ln(x^y)=y \ln x\)</span></p>
+</div></div>
+<!----------------------------------------------------->
+</section>
+<section id="ln-ex-blank" class="slide level2" data-menu-title="Natural Logs">
+<h2></h2>
+<p><span class="slide-title">Using logarithms to solve equations</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Solve for <span class="math inline">\(t\)</span> in the equation <span class="math inline">\(Pe^{rt} = A\)</span>.</span></p>
+<div class="columns">
+<div class="column" style="width:70%;">
+
+</div><div class="column" style="width:30%;">
+<div class="center-text">
+<p><strong>Properties</strong></p>
+</div>
+<p><span class="math inline">\(\ln (e^x)=x\)</span></p>
+<p><span class="math inline">\(\ln(xy)=\ln x+\ln y\)</span></p>
+<p><span class="math inline">\(\ln(\frac{x}{y})=\ln x-\ln y\)</span></p>
+<p><span class="math inline">\(\ln(x^y)=y \ln x\)</span></p>
+</div></div>
+<!----------------------------------------------------->
+</section>
+<section id="ln-ex" class="slide level2" data-menu-title="Natural Logs">
+<h2></h2>
+<p><span class="slide-title">Using logarithms to solve equations</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Solve for <span class="math inline">\(t\)</span> in the equation <span class="math inline">\(Pe^{rt} = A\)</span>.</span></p>
+<p><span class="math display">\[
+\begin{align}
+Pe^{rt} &amp;= A \\
+e^{rt} &amp; = \frac{A}{P} \\
+rt &amp;= \ln\left(\frac{A}{P}\right) \\
+t &amp;= \frac{\ln(A)-\ln(P)}{r}
+\end{align}
+\]</span></p>
+</section>
+<section id="limits-title" class="slide level2" data-menu-title="Logarithms" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Limits
+</div>
+</div>
+</section>
+<section id="limits" class="slide level2" data-menu-title="Limits">
+<h2></h2>
+<p><span class="slide-title">Limits</span></p>
+<hr>
+<p><strong>Definition</strong></p>
+<p>We say a number <span class="math inline">\(L\)</span> is the limit of a function <span class="math inline">\(f(x)\)</span> as its variable <span class="math inline">\(x\)</span> approaches a number <span class="math inline">\(c\)</span>, if the function’s output values <span class="math inline">\(f(x)\)</span> approach <span class="math inline">\(L\)</span> when <span class="math inline">\(x\)</span> get closer to <span class="math inline">\(c\)</span>.</p>
+<p><br></p>
+<p>We write this symbolically as:</p>
+<p><span class="math display">\[
+\large
+\lim_{x\to c} f(x)=L
+\]</span></p>
+<p><br></p>
+<p>We read this as: <span class="teal-text">“The limit of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>.”</span></p>
+</section>
+<section id="lim-ex" class="slide level2" data-menu-title="Limit Example">
+<h2></h2>
+<p><span class="slide-title">Limits example: numerical</span></p>
+<hr>
+<p>What is the limit of <span class="math inline">\(f(x)=2x^2-4\)</span> as <span class="math inline">\(x\)</span> approaches 2?</p>
+<p>We need to examine the values of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> gets closer to 2 from both sides.</p>
+<p><br></p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lim4.PNG" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+<!-- ```{r fig.align='center',out.width="90%"}
+knitr::include_graphics("images/lim4.PNG")
+``` -->
+</div>
+<div class="fragment">
+<p>From both directions it looks like <span class="math inline">\(f(x)\)</span> converges to 4.</p>
+<p>So, we say that <span class="teal-text">“The limit of <span class="math inline">\(2x^2-4\)</span> as <span class="math inline">\(x\)</span> approaches 2 is 4”</span>. We can write it like this:</p>
+<p><span class="math display">\[
+\lim_{x\to 2}(2x^2-4)=4
+\]</span></p>
+</div>
+</section>
+<section id="limit-graph-sol" class="slide level2" data-menu-title="Graphical Solution">
+<h2></h2>
+<p><span class="slide-title">Limits example: graph</span></p>
+<hr>
+<p>What is the limit of <span class="math inline">\(f(x)=2x^2-4\)</span> as <span class="math inline">\(x\)</span> approaches 2?</p>
+
+<img data-src="images/lim_graph_1.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:200.0%"><p>From both directions it looks like <span class="math inline">\(f(x)\)</span> converges to 4.</p>
+<p>So, <span class="math inline">\(\lim_{x\to 2}(2x^2-4)=4\)</span>.</p>
+</section>
+<section id="lim-discon" class="slide level2" data-menu-title="What happens with discontinuous functions">
+<h2></h2>
+<p><span class="slide-title">Do limits always exist?</span></p>
+<hr>
+<p>The function <span class="math inline">\(|x|\)</span> is the <strong>absolute value function</strong>. It is such that</p>
+<p><span class="math display">\[
+|x| =
+\begin{cases}
+x, &amp; \text{ if } x\geq 0 \\
+-x, &amp; \text{ if } x &lt;0
+\end{cases}
+.
+\]</span></p>
+<div class="fragment">
+<p><br></p>
+<p>✏️ <span style="color:green;">What happens to <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=2\)</span>?</span></p>
+<p>✏️ <span style="color:green;">Try calculating:</span> <span style="color:green;"><span class="math display">\[
+\lim_{x\to 2}\frac{|x-2|}{x-2}.
+\]</span></span></p>
+<p><br></p>
+<p>Hint: Try to do numerical approximations or draw the graph of this function.</p>
+</div>
+</section>
+<section id="mean-girls" class="slide level2" data-menu-title="Mean girls">
+<h2></h2>
+<p><span class="slide-title">Do limits always exist?</span></p>
+<hr>
+<p>✏️ <span style="color:green;">What happens to <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=2\)</span>?</span></p>
+<p>This function is not defined at <span class="math inline">\(x=2\)</span> since it would require us to divide by zero, which is undefined.</p>
+<div class="fragment">
+<p><br></p>
+<p><span style="color:green;">Try calculating <span class="math inline">\(\lim_{x\to 2}\frac{|x-2|}{x-2}\)</span>.</span></p>
+<p>Let’s investigate:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/limx2.PNG" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="graph" class="slide level2" data-menu-title="Clearer on the graph">
+<h2></h2>
+<p><span class="slide-title">Do limits always exist?</span></p>
+<hr>
+<p>The function <span class="math inline">\(\frac{|x-2|}{x-2}\)</span> approaches different values from either side at <span class="math inline">\(x=2\)</span>.</p>
+<div style="display:flex; justify-content:center;">
+<p><img src="images/lim_graph_2.PNG" style="width:80%;"></p>
+</div>
+<p>Therefore… <span class="teal-text">the limit does not exist!</span></p>
+</section>
+<section id="lunch-break" class="slide level2" data-menu-title="Lunch break">
+<h2></h2>
+<p><span class="slide-title">Lunch break!</span></p>
+<hr>
+
+
+
+<img data-src="images/lunch-time.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

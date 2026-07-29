@@ -132,9 +132,134 @@
 <section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#053660">
 <h2></h2>
 <p><span class="custom-title">EDS 212: Day 2, Lecture 2</span></p>
-<p><span class="custom-subtitle"><em>Derivatives continued - higher order, partials, computation, &amp; application</em></span></p>
+<p><span class="custom-subtitle"><em>Derivatives</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 5<sup>th</sup>, 2025</span></p>
+<p><span class="custom-subtitle3">August 4<sup>th</sup>, 2025</span></p>
+</section>
+<section id="intro-derv" class="slide level2" data-menu-title="Introduction to Derivates" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Introduction to Derivatives
+</div>
+</div>
+<!---------------------------------------------------------->
+</section>
+<section id="alltogether" class="slide level2" data-menu-title="Putting it all together">
+<h2></h2>
+<p><span class="slide-title">Recall average and instantaneous rate of change</span></p>
+<hr>
+
+<img data-src="images/trex.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"><p><strong>Big idea:</strong> Taking the average rate of change to a set limit will eventually converge to the instantaneous.</p>
+</section>
+<section id="average-slope" class="slide level2" data-menu-title="Average slope">
+<h2></h2>
+<p><span class="slide-title">Average slope</span></p>
+<hr>
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">
+<p>✏️</p>
+</div>
+
+<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Start with:</p>
+<p><br></p>
+<p>Nearby point:</p>
+<p><br></p>
+<p>Average slope:</p>
+</section>
+<section id="average-slope-filled" class="slide level2" data-menu-title="Average slope">
+<h2></h2>
+<p><span class="slide-title">Average slope</span></p>
+<hr>
+
+<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Start with a point <span class="math inline">\((x,f(x))\)</span> on the graph.</p>
+<p>A nearby point can be <span class="math inline">\((x+\Delta x, f(x+\Delta x))\)</span>, where <span class="math inline">\(\Delta x\)</span> is a short distance from <span class="math inline">\(x\)</span>.</p>
+<p><br></p>
+<p>The average slope between <span class="math inline">\((x,f(x))\)</span> and <span class="math inline">\((x+\Delta x, f(x+\Delta x))\)</span> is given by</p>
+<p><span style="color:red"> <span class="math display">\[\text{average slope} = \frac{f(x+\Delta x) - f(x)}{(x+\Delta x)-x} = \frac{f(x+\Delta x) - f(x)}{\Delta x}.\]</span> </span></p>
+<p><strong>What happens when <span class="math inline">\(\Delta x\)</span> becomes smaller and smaller?</strong></p>
+</section>
+<section id="walkthrough-1" class="slide level2" data-menu-title="Walkthrough">
+<h2></h2>
+<p><span class="slide-title">What happens when <span class="math inline">\(\Delta x \to 0\)</span>?</span></p>
+<hr>
+
+<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="walkthrough-2" class="slide level2" data-menu-title="Walkthrough">
+<h2></h2>
+<p><span class="slide-title">What happens when <span class="math inline">\(\Delta x \to 0\)</span>?</span></p>
+<hr>
+
+<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="walkthrough-3" class="slide level2" data-menu-title="Walkthrough">
+<h2></h2>
+<p><span class="slide-title">What happens when <span class="math inline">\(\Delta x \to 0\)</span>?</span></p>
+<hr>
+
+<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="walkthrough-4" class="slide level2" data-menu-title="Walkthrough">
+<h2></h2>
+<p><span class="slide-title">What happens when <span class="math inline">\(\Delta x \to 0\)</span>?</span></p>
+<hr>
+
+<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="tangent" class="slide level2" data-menu-title="Tangent Lines">
+<h2></h2>
+<p><span class="slide-title">Tangent lines</span></p>
+<hr>
+<p><strong>What if we let <span class="math inline">\(\Delta x=0\)</span>?</strong></p>
+<p>Then we would have a slope line that only touches the graph at exactly <span class="math inline">\(x\)</span>. <!--
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](images/tangent_line.png){fig-align='center' width=206}
+:::
+:::
+
+--></p>
+
+<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="center-text teal-text">
+<p>These very special types of lines are called <strong>tangent lines</strong>.</p>
+</div>
+</section>
+<section id="recap" class="slide level2" data-menu-title="Recap in math notation">
+<h2></h2>
+<p><span class="slide-title">Derivative definition</span></p>
+<hr>
+<p>Remember the slope of the line that passes between two points <span class="math inline">\((x_1, y_1)\)</span> and <span class="math inline">\((x_2, y_2)\)</span> is:</p>
+<p><span class="math display">\[\text{slope}=\frac{y_2-y_1}{x_2-x_1}.\]</span></p>
+<div class="fragment">
+<p>If we have a function <span class="math inline">\(f(x)\)</span>, then <span class="math inline">\((x,f(x))\)</span> represents a point on its graph.</p>
+</div>
+<div class="fragment">
+<p>Choose a different point on the graph that is <span class="math inline">\(\Delta x\)</span> away: <span class="math inline">\((x+\Delta x,f(x+\Delta x))\)</span>.</p>
+</div>
+<div class="fragment">
+<p>Plug these pointson the graph of <span class="math inline">\(f(x)\)</span> into the slope equation:</p>
+<p><span class="math display">\[
+\text{slope}=\frac{f(x+\Delta x)-f(x)}{\Delta x}.
+\]</span></p>
+</div>
+<div class="fragment">
+<p>When we let <span class="math inline">\(\Delta x \to 0\)</span> we get <span style="color:red"><strong>the slope of the tangent line at <span class="math inline">\(x\)</span></strong></span></p>
+<p><span style="color:red"> <span class="math display">\[
+\large
+f'(x)=\lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}
+\]</span> </span></p>
+<p><span style="color:red"><strong>This is the derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span>.</strong></span> Also denoted <span class="math inline">\(\frac{df}{dx}\)</span>.</p>
+<!--
+<br>
+
+:::{.center-text}
+*Most common notation*
+:::
+
+$$
+\large
+f'(x)\text{, or }\frac{dy}{dx}
+$$
+
+-->
+</div>
 </section>
 <section id="deriv9" class="slide level2" data-menu-title="Derivative">
 <h2></h2>
@@ -143,126 +268,296 @@
 <p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
 </div>
 </section>
-<section id="deriv" class="slide level2" data-menu-title="Derivative">
+<section id="diff-func" class="slide level2" data-menu-title="Not all functions are differentiable">
 <h2></h2>
-<p><br> <br> <br></p>
-<p><span class="body-text-xl"><span class="math display">\[\frac{df}{dx}=\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\]</span></span></p>
-<p><br></p>
+<p><span class="slide-title">Not all functions are differentiable</span></p>
+<hr>
+<ul>
+<li>All differentiable functions are continuous, but not all continuous functions are differentiable.</li>
+</ul>
 <div class="fragment">
-<div class="center-text">
-<p>(Alternatively, sub <span class="math inline">\(h\)</span> for <span class="math inline">\(\Delta x\)</span>)</p>
+<ul>
+<li>The absolute value function <span class="math inline">\(|x|\)</span> is one example, this is defined by <span class="math display">\[|x| =
+\begin{cases}
+x  &amp;, x \geq 0\\
+-x &amp;, x&lt;0
+\end{cases}.\]</span></li>
+</ul>
+<p>It’s graph is:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
 </div>
-<p><span class="body-text-xl"><span class="math display">\[\frac{df}{dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\]</span></span></p>
-<!-- --- -->
-<!-- ## {#deriv-logs-exp data-menu-title="Derivative of logs & exps"}  -->
-<!-- [Derivative of logs & exponents]{.slide-title} -->
-<!-- <hr> -->
-<!-- TODO: MAYBE REMOVE THIS? -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- - [$\frac{d}{dx}(e^x) = e^x$]{.body-text-xl} -->
-<!-- <br> -->
-<!-- - [$\frac{d}{dx}ln(x)=\frac{1}{x}$]{.body-text-xl} -->
+</div>
+</div>
 </div>
 </section>
+<section id="break" class="slide level2" data-menu-title="5 minute break">
+<h2></h2>
+<p><span class="slide-title">Let’s take a 5 minute break</span></p>
+<hr>
+
+<img data-src="images/coffee-break.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
 <section id="applications" class="slide level2" data-menu-title="Applications">
 <h2></h2>
 <p><span class="slide-title">Why derivatives in an EDS program?</span></p>
 <hr>
-<!-- TODO: UNDERSTAND THIS BETTER -->
-<!-- <br> -->
-<!-- - [Minimum & maximum values (slope = 0)]{.body-text-m} -->
-<!-- - [Increasing & decreasing functions (bounded by critical points)]{.body-text-m} -->
 <p><br> <br> <br> <br> <br></p>
 <div class="center-text body-text-l">
 <p>Describing rates of change is common in environmental science (rate of pollutant concentration change, rate of population growth, rate of energy consumption)</p>
 </div>
 </section>
-<section id="interpretation" class="slide level2" data-menu-title="Interpretation">
+<section id="calc" class="slide level2" data-menu-title="Calculus and Derivatives are the study of change">
 <h2></h2>
-<p><span class="slide-title">Practice interpretation / math think</span></p>
+<p><span class="slide-title">Calculus and derivatives are used to study change</span></p>
+<hr>
+
+<img data-src="images/trex-no-labels.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
+<section id="envs-change" class="slide level2" data-menu-title="Enviromental Science is the Study of Change">
+<h2></h2>
+<p><span class="slide-title">Environmental Science studies change</span></p>
+<hr>
+
+<img data-src="images/bait.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
+<section id="envs-change2" class="slide level2" data-menu-title="Enviromental Science is the Study of Change">
+<h2></h2>
+<p><span class="slide-title">Environmental Science studies change</span></p>
+<hr>
+
+<img data-src="images/energy.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
+<section id="envs-change3" class="slide level2" data-menu-title="Enviromental Science is the Study of Change">
+<h2></h2>
+<p><span class="slide-title">Environmental Science studies change</span></p>
+<hr>
+
+<img data-src="images/glacier.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"><p><br></p>
+<p><span style="color:green;">🤔 Talk with a partner, what are 2 fields of environmental science where studying the rate of change and derivatives would be important?</span></p>
+</section>
+<section id="diff-rules-1-blank" class="slide level2" data-menu-title="Rules for Differentiation (1)">
+<h2></h2>
+<p><span class="slide-title">Rules for differentiation (1)</span></p>
+<hr>
+<p><strong>Constant Rule</strong> ✏️</p>
+<p><br> <br> <br> <br> <br> <br></p>
+<p><strong>Power Rule</strong> ✏️</p>
+</section>
+<section id="diff-rules-1" class="slide level2" data-menu-title="Rules for Differentiation (1)">
+<h2></h2>
+<p><span class="slide-title">Rules for differentiation (1)</span></p>
+<hr>
+<p><strong>Constant Rule</strong></p>
+<p>Let <span class="math inline">\(c\)</span> be a constant (so, a number). If <span class="math inline">\(f(x) = c\)</span>, then <span class="math inline">\(f'(x)=0\)</span>. Equivalently</p>
+<p><span class="math display">\[\frac{d}{dx}c = 0\]</span></p>
+<p><strong>Power Rule</strong></p>
+<p>Let <span class="math inline">\(n\)</span> be a (real) number, if <span class="math inline">\(f(x)= x^n\)</span>, then <span class="math inline">\(f'(x) = nx^{n-1}\)</span>. Equivalently <span class="math display">\[
+\frac{d}{dx}[x^n]
+=nx^{n-1}.
+\]</span></p>
+<div class="fragment">
+<p><strong>Examples</strong> ✏️</p>
+<p><span class="math display">\[
+\begin{align}
+&amp;y=100 &amp; &amp;f(x)=x^5 &amp; &amp;f(x)=\frac{1}{x^2}
+\end{align}
+\]</span></p>
+</div>
+</section>
+<section id="diff-rules-2-blank" class="slide level2" data-menu-title="Rules for Differentiation (2)">
+<h2></h2>
+<p><span class="slide-title">Rules for differentiation (2)</span></p>
+<hr>
+<p><strong>Sum and Difference Rules</strong></p>
+<p>✏️</p>
+</section>
+<section id="diff-rules-2" class="slide level2" data-menu-title="Rules for Differentiation (2)">
+<h2></h2>
+<p><span class="slide-title">Rules for differentiation (2)</span></p>
+<hr>
+<p><strong>Sum and Difference Rules</strong></p>
+<p>Let <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> be differentiable functions. Then <span class="math display">\[
+\begin{align}
+\frac{d}{dx}[f(x)+g(x)]=\frac{d}{dx}f(x)+\frac{d}{dx}g(x) \\
+\frac{d}{dx}[f(x)-g(x)]=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)
+\end{align}
+\]</span></p>
+<p>😵<em>All this says is: if the function has pieces that are added or subtracted you can take the derivative of each individual piece and add those derivatives.</em></p>
+<div class="fragment">
+<p><strong>Example</strong> ✏️</p>
+<p><span class="math display">\[
+f(x)=x^3-x^2-15
+\]</span></p>
+</div>
+</section>
+<section id="diff-rules-3-blank" class="slide level2" data-menu-title="Rules for Differentiation (3)">
+<h2></h2>
+<p><span class="slide-title">Rules for differentiation (3)</span></p>
+<hr>
+<p><strong>Constant Multiplier Rule</strong></p>
+<p>✏️</p>
+</section>
+<section id="diff-rules-3" class="slide level2" data-menu-title="Rules for Differentiation (3)">
+<h2></h2>
+<p><span class="slide-title">Rules for differentiation (3)</span></p>
+<hr>
+<p><strong>Constant Multiplier Rule</strong></p>
+<p>The derivative of a constant <span class="math inline">\(c\)</span> multiplied by a function <span class="math inline">\(f(x)\)</span> is the same as the constant multiplied by the derivative:</p>
+<p><span class="math display">\[\frac{d}{dx}[kf(x)] = k\frac{d}{dx}f(x)\]</span></p>
+<div class="fragment">
+<p><strong>Example</strong> ✏️</p>
+<p><span class="math display">\[
+y=x^2+\sqrt{2}x-\frac{8}{x}+4
+\]</span></p>
+</div>
+</section>
+<section id="logs-exp" class="slide level2" data-menu-title="Derivative of logs &amp; exp">
+<h2></h2>
+<p><span class="slide-title">Derivative of logs &amp; exponents</span></p>
 <hr>
 <p><br></p>
-<p><span class="body-text-m">Imagine you have a bowl of soup and you want to describe how quickly it cools off.</span></p>
+<p><span class="body-text-l">Two special derivatives:</span></p>
 <p><br></p>
 <ul>
-<li><p><span class="body-text-m">What do you think is the <em>main driver</em> of cooling?</span></p></li>
-<li><p><span class="body-text-m">What if you have a hot plate?</span></p></li>
-<li><p><span class="body-text-m">What does this look like in an equation?</span></p></li>
+<li><span class="body-text-l"><span class="math inline">\(\frac{d}{dx}(e^x) = e^x\)</span></span></li>
 </ul>
-<aside class="notes">
-<ol type="1">
-<li>air temperature</li>
-<li>the difference in temperature between the hot plate and the air surrounding the body</li>
-<li>see newton’s law of cooling slide next</li>
-</ol>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="newton-cooling" class="slide level2" data-menu-title="Newtons' law of cooling">
-<h2></h2>
-<p><span class="slide-title">Newton’s Law of Cooling</span></p>
-<hr>
-<p><br> <br> <br></p>
-<p><span class="body-text-xl"><span class="math display">\[\frac{dT}{dt}=-k(T-T_a)+T_{in}\]</span></span></p>
 <p><br></p>
-<div class="center-text body-text-l">
-<p>What do you think is wrapped up in <span class="math inline">\(k\)</span>?</p>
-</div>
-<aside class="notes">
-<p>This is an example of a derivative; the rate of change in temperature is directly proportional to the difference in the temperatures between the body and its environment.</p>
-<p><span class="math inline">\(k\)</span>: positive constant (for material’s heat transfer?)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<ul>
+<li><span class="body-text-l"><span class="math inline">\(\frac{d}{dx}ln(x)=\frac{1}{x}\)</span></span></li>
+</ul>
 </section>
-<section class="slide level2">
-
-<p><br> <br> <br> <br> <br> <br> <br> <br></p>
-<div class="center-text slide-title teal-text">
-<p>Higher order &amp; partial derivatives</p>
+<section id="diff-rules-summary" class="slide level2" data-menu-title="Summary of differentiation rules">
+<h2></h2>
+<p><span class="slide-title">Summary of differentiation rules</span></p>
+<hr>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 27%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Differentiation Rule</th>
+<th><span class="math inline">\(f'(x)\)</span> notation</th>
+<th><span class="math inline">\(\frac{d}{dx}\)</span> notation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Constant Rule</strong></td>
+<td><span class="math inline">\(f(x)=c \Rightarrow f'(x)=0\)</span></td>
+<td><span class="math inline">\(\frac{d}{dx}[c]=0\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Power Rule</strong></td>
+<td><span class="math inline">\(f(x)=x^n \Rightarrow f'(x)=n x^{n-1}\)</span></td>
+<td><span class="math inline">\(\frac{d}{dx}[x^n]=n x^{n-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Sum Rule</strong></td>
+<td><span class="math inline">\((g(x)+h(x))'=g'(x)+h'(x)\)</span></td>
+<td><span class="math inline">\(\frac{d}{dx}[g(x)+h(x)]=\frac{d}{dx}g(x)+\frac{d}{dx}h(x)\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Difference Rule</strong></td>
+<td><span class="math inline">\((g(x)-h(x))' = g'(x)-h'(x)\)</span></td>
+<td><span class="math inline">\(\frac{d}{dx}[g(x)-h(x)]=\frac{d}{dx}g(x)-\frac{d}{dx}h(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Constant Multiplier Rule</strong></td>
+<td><span class="math inline">\((c\cdot g(x))'=c\,g'(x)\)</span></td>
+<td><span class="math inline">\(\frac{d}{dx}[c\,g(x)]=c\,\frac{d}{dx}g(x)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>And two special derivatives: <span class="math inline">\(\frac{d}{dx}(e^x) = e^x\)</span> and <span class="math inline">\(\frac{d}{dx}ln(x)=\frac{1}{x}\)</span>.</p>
+<p><br> <br></p>
+<div class="center-text body-text-s">
+<p>There’s more differentiation rules (product, quotient, chain rule).</p>
+<p>They’re fun, but we won’t be reviewing them.</p>
 </div>
 </section>
-<section id="higher-order" class="slide level2" data-menu-title="Higher order derivatives">
+<section id="higher-order-der" class="slide level2" data-menu-title="Higher Order Derivatives">
 <h2></h2>
 <p><span class="slide-title">Higher order derivatives</span></p>
 <hr>
-<p><br></p>
-<p><span class="body-text-m">Higher order derivatives are derivatives of derivatives.</span></p>
-<p><br></p>
-<p><span class="body-text-l"><strong>Notation:</strong></span></p>
 <ul>
-<li><span class="body-text-m">First derivative: <span class="math inline">\(f'(x)\)</span> or <span class="math inline">\(\frac{df}{dx}\)</span></span></li>
-<li><span class="body-text-m">Second derivative: <span class="math inline">\(f''(x)\)</span> or <span class="math inline">\(\frac{d^2f}{dx^2}\)</span></span></li>
-<li><span class="body-text-m">Third derivative: <span class="math inline">\(f'''(x)\)</span> or <span class="math inline">\(\frac{d^3f}{dx^3}\)</span></span></li>
+<li><p>We can continue to take derivatives of derivatives.</p></li>
+<li><p>The second derivative becomes the rate of change of the rate of change.</p></li>
+<li><p>If we interpret the first derivative as velocity, then the second derivative is acceleration.</p></li>
 </ul>
-<!-- --- -->
-<!-- talk about acceleration example -->
+<div class="fragment">
+<ul>
+<li><p>Notation:</p>
+<ul>
+<li>Function: <span class="math inline">\(f(x) = y\)</span></li>
+<li>1st derivative: <span class="math inline">\(f'(x)\)</span> or <span class="math inline">\(\frac{dy}{dx}\)</span></li>
+<li>2nd derivative: <span class="math inline">\(f''(x)\)</span> or <span class="math inline">\(\frac{d^2y}{dx^2}\)</span></li>
+<li>nth derivative: <span class="math inline">\(f^{(n)}(x)\)</span> or <span class="math inline">\(\frac{d^ny}{dx^n}\)</span></li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="higher-order-example" class="slide level2" data-menu-title="Higher order derivatives Ex">
+<section id="derivatives-practice" class="slide level2" data-menu-title="Derivatives practice">
 <h2></h2>
-<p><span class="slide-title">Higher order derivative example:</span></p>
+<p><span class="slide-title">Derivatives practice</span></p>
 <hr>
-<p><span class="body-text-m">Find the 3rd derivative of:</span></p>
-<p><br></p>
-<p><span class="body-text-m"><span class="math display">\[G(z)=3z^4-8z^3+2z-19\]</span></span> <span class="body-text-m"><span class="math display">\[G'(z)=\frac{dG}{dz}=12z^3-24z^2+2\]</span></span> <span class="body-text-m"><span class="math display">\[G''(z)=\frac{d^2G}{dz^2}=36z^2-48z\]</span></span> <span class="body-text-m"><span class="math display">\[G'''(z)=\frac{d^3G}{dz^3}=72z-48\]</span></span></p>
+<p><span style="color:green;">Solve individually and then check with a partner.</span></p>
+<ol type="1">
+<li>Which rules should you use to take these derivatives?</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+\text{A)  }&amp; f(x)=3x^4 &amp;\text{B) }  y=4x^2+3x-16
+\end{align}
+\]</span></p>
+<ol start="2" type="1">
+<li>Find the derivatives of these functions</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+&amp;\text{A) } y=3x^2 &amp; &amp;\text{B) }h(x)=2x(x^2 + 3x) &amp; &amp;\text{C) }g(y)=2\sqrt{y} - e^y + 20\ln(y)
+\end{align}
+\]</span></p>
+<ol start="3" type="1">
+<li>Find the 3rd derivative of:</li>
+</ol>
+<p><span class="math display">\[G(z)=3z^4-8z^3+2z-19\]</span></p>
+</section>
+<section id="derivatives-practice-solve-1" class="slide level2" data-menu-title="Derivatives practice">
+<h2></h2>
+<p><span class="slide-title">Derivatives practice</span></p>
+<hr>
+<p><span style="color:green;">✏️ Let’s see a solution!</span></p>
+<p>2.B) Find the derivative <span class="math display">\[h(x)=2x(x^2 + 3x)\]</span></p>
+</section>
+<section id="derivatives-practice-solve-2" class="slide level2" data-menu-title="Derivatives practice">
+<h2></h2>
+<p><span class="slide-title">Derivatives practice</span></p>
+<hr>
+<p><span style="color:green;">✏️ Let’s see a solution!</span></p>
+<p>2.C) Find the derivative <span class="math display">\[g(y)=2\sqrt{y} - e^y + 20\ln(y)\]</span></p>
+</section>
+<section id="derivatives-practice-solve-3" class="slide level2" data-menu-title="Derivatives practice">
+<h2></h2>
+<p><span class="slide-title">Derivatives practice</span></p>
+<hr>
+<p><span style="color:green;">✏️ Let’s see a solution!</span></p>
+<ol start="3" type="1">
+<li>Find the 3rd derivative of <span class="math inline">\(G(z)=3z^4-8z^3+2z-19\)</span>.</li>
+</ol>
+</section>
+<section id="partial-derivatives-title" class="slide level2" data-menu-title="Introduction to Derivates" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Partial derivatives
+</div>
+</div>
 </section>
 <section id="partial-derivatives" class="slide level2" data-menu-title="Partial derivatives">
 <h2></h2>
@@ -271,29 +566,40 @@
 <p><br></p>
 <p><span class="body-text-m">When we find a partial derivative, we find an expression for the slope with respect to <em>one variable</em> in a multivariate function.</span></p>
 <p><br></p>
-<p><span class="body-text-m"><strong>Mathematically</strong>: Find the derivative with respect to a single variable, <em>treating all others as constants.</em></span></p>
-<p><br></p>
 <p><span class="body-text-m"><strong>Notation:</strong> the partials of <span class="math inline">\(f(x,y,z)\)</span> are <span class="math inline">\(\frac{\partial f}{\partial x}\)</span>, <span class="math inline">\(\frac{\partial f}{\partial y}\)</span>, and <span class="math inline">\(\frac{\partial f}{\partial z}\)</span></span></p>
-</section>
-<section id="partial-derivatives-example" class="slide level2" data-menu-title="Partial derivatives Ex">
-<h2></h2>
-<p><span class="slide-title">Partial derivatives example:</span></p>
-<hr>
-<p><span class="body-text-l">Find all partials of:</span></p>
+<p>We read <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> as “the partial derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x\)</span>”</p>
 <p><br></p>
-<p><span class="body-text-m"><span class="math display">\[B(x,T,\rho)=0.4x^3T-3.6T^2+4\rho x\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial x}=1.2x^2T+4\rho\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial T}=0.4x^3-7.2T\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial \rho}=4x\]</span></span></p>
+<p><span class="body-text-m"><strong>How to take partial derivatives?</strong> Find the derivative with respect to a single variable, <em>treating all others as constants.</em></span></p>
+</section>
+<section id="partial-derivatives-example-1" class="slide level2" data-menu-title="Partial derivatives Ex">
+<h2></h2>
+<p><span class="slide-title">Partial derivatives example</span></p>
+<hr>
+<p><span class="body-text-l">✏️ Find all partial derivatives of</span></p>
+<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span></p>
+</section>
+<section id="partial-derivatives-example-2" class="slide level2" data-menu-title="Partial derivatives Ex">
+<h2></h2>
+<p><span class="slide-title">Partial derivatives example</span></p>
+<hr>
+<p><span class="body-text-l">Find all partial derivatives of</span></p>
+<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial x}=1.2x^2y+4z\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial y}=0.4x^3-7.2y\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial z}=4x\]</span></span></p>
+</section>
+<section id="partial-derivatives-example-3" class="slide level2" data-menu-title="Partial derivatives Ex">
+<h2></h2>
+<p><span class="slide-title">Partial derivatives example</span></p>
+<hr>
+<p><span class="body-text-l">Find all partial derivatives of</span></p>
+<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial x}=1.2x^2y+4z\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial y}=0.4x^3-7.2y\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial z}=4x\]</span></span></p>
+<p>✏️<span style="color:green;">What is the value of the partial derivative of <span class="math inline">\(B\)</span> with respect to <span class="math inline">\(z\)</span> at the point <span class="math inline">\((1,2,3)\)</span>?</span></p>
 </section>
 <section id="partial-derivatives-meaning" class="slide level2" data-menu-title="Partial derivatives meaning">
 <h2></h2>
-<p><span class="slide-title">OK but what do partials actually mean?</span></p>
+<p><span class="slide-title">OK, but what do partials actually mean?</span></p>
 <hr>
-<p><br></p>
-<p><span class="body-text-m">The slope with respect to one variable if other variables are held constant. Let’s think about a roller coaster.</span></p>
-<p><br></p>
-<p><span class="body-text-m">How can we describe our orientation? Let us count the ways…</span></p>
-<p><br></p>
-<p><span class="body-text-m">[Commence drawing &amp; handwaving extravaganza!]</span></p>
-<aside class="notes">
+<p><span class="body-text-m">The slope with respect to one variable if other variables are held constant.</span></p>
+
+<img data-src="images/partial-derivatives.jpg" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
 <ul>
 <li>moving up and down</li>
 <li>moving acorss a plane</li>
@@ -312,21 +618,66 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="try-one" class="slide level2" data-menu-title="Try one">
+<section id="partial-derivatives-practice" class="slide level2" data-menu-title="Try one">
 <h2></h2>
-<p><span class="slide-title">Let’s try one</span></p>
+<p><span class="slide-title">Partial derivatives practice</span></p>
 <hr>
-<p><br></p>
-<p><span class="body-text-m">The temperature (in Celsius) across a surface (where x and y are in meters) is described by:</span></p>
-<p><br></p>
-<p><span class="body-text-m"><span class="math display">\[T(x,y)=x^2y-2x+y-1\]</span></span></p>
-<p><br></p>
-<p><span class="body-text-m">At what “rate” is temperature changing (with respect to distance):</span></p>
-<p><br></p>
+<ol type="A">
+<li>The temperature (in Celsius) across a surface (where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are in meters) is described by:</li>
+</ol>
+<p><span class="math display">\[T(x,y)=x^2y-2x+y-1\]</span></p>
+<p>At what “rate” is temperature changing (with respect to distance):</p>
 <ul>
-<li><span class="body-text-m">In the <span class="math inline">\(x\)</span> direction, at the point (1,3) on the surface?</span></li>
-<li><span class="body-text-m">In the <span class="math inline">\(y\)</span> direction, at the point (0,2) on the surface?</span></li>
+<li>In the <span class="math inline">\(x\)</span> direction, at the point (1,3) on the surface?</li>
+<li>In the <span class="math inline">\(y\)</span> direction, at the point (0,2) on the surface?</li>
 </ul>
+<div class="fragment">
+<ol start="2" type="A">
+<li>A dragon’s breath temperature (<span class="math inline">\(T\)</span>, in degrees Celsius) is modeled as a function of its wingspan (<span class="math inline">\(W\)</span>, in meters) and length (<span class="math inline">\(L\)</span>, also in meters):</li>
+</ol>
+<p><br></p>
+<p><span class="math display">\[T(W,L)=0.41WL+2.6W^2\]</span></p>
+<ul>
+<li><p>At what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?</p></li>
+<li><p>At what rate is breath temperature changing with respect to wingspan, for the same dragon?</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span class="math inline">\(\frac{\partial T}{\partial L} = 0.41W\)</span> = 0.41(4.5) = <strong>1.845 degrees C per meter (length)</strong></li>
+<li><span class="math inline">\(\frac{\partial T}{\partial W} = 0.41L + 5.2W\)</span> = 0.41(4.1) + 5.2(4.5) = <strong>25.081 degrees C per meter (wingspan)</strong></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="partial-derivatives-solution-1" class="slide level2" data-menu-title="Try one">
+<h2></h2>
+<p><span class="slide-title">Partial derivatives practice</span></p>
+<hr>
+<p><span style="color:green;">✏️ Let’s see a solution.</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ol type="A">
+<li>The temperature (in Celsius) across a surface (where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are in meters) is described by:</li>
+</ol>
+<p><span class="math display">\[T(x,y)=x^2y-2x+y-1\]</span></p>
+<p>At what “rate” is temperature changing (with respect to distance):</p>
+<ul>
+<li>In the <span class="math inline">\(x\)</span> direction, at the point (1,3) on the surface?</li>
+<li>In the <span class="math inline">\(y\)</span> direction, at the point (0,2) on the surface?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+
+</div></div>
 <aside class="notes">
 <ul>
 <li><span class="math inline">\(\frac{\partial T}{\partial x} = 2xy - 2 + 0 + 0\)</span></li>
@@ -348,52 +699,36 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="dragon-example" class="slide level2" data-menu-title="Dragon example">
+<section id="partial-derivatives-solution-2" class="slide level2" data-menu-title="Try one">
 <h2></h2>
-<p><span class="slide-title">Another super real example</span></p>
+<p><span class="slide-title">Partial derivatives practice</span></p>
 <hr>
+<p><span style="color:green;">✏️ Let’s see a solution.</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ol start="2" type="A">
+<li>A dragon’s breath temperature (<span class="math inline">\(T\)</span>, in degrees Celsius) is modeled as a function of its wingspan (<span class="math inline">\(W\)</span>, in meters) and length (<span class="math inline">\(L\)</span>, also in meters):</li>
+</ol>
 <p><br></p>
-<p>A dragon’s breath temperature (<span class="math inline">\(T\)</span>, in degrees Celsius) is modeled as a function of its wingspan (<span class="math inline">\(W\)</span>, in meters) and length (<span class="math inline">\(L\)</span>, also in meters):</p>
-<p><br></p>
-<p><span class="body-text-m"><span class="math display">\[T(W,L)=0.41WL+2.6W^2\]</span></span></p>
-<p><br></p>
+<p><span class="math display">\[T(W,L)=0.41WL+2.6W^2\]</span></p>
 <ul>
-<li>At what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?</li>
+<li><p>At what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?</p></li>
+<li><p>At what rate is breath temperature changing with respect to wingspan, for the same dragon?</p></li>
 </ul>
-<p><br></p>
-<ul>
-<li>At what rate is breath temperature changing with respect to wingspan, for the same dragon?</li>
-</ul>
-<aside class="notes">
-<ul>
-<li><span class="math inline">\(\frac{\partial T}{\partial L} = 0.41W\)</span> = 0.41(4.5) = <strong>1.845 degrees C per meter (length)</strong></li>
-<li><span class="math inline">\(\frac{\partial T}{\partial W} = 0.41L + 5.2W\)</span> = 0.41(4.1) + 5.2(4.5) = <strong>25.081 degrees C per meter (wingspan)</strong></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div><div class="column" style="width:50%;">
+
+</div></div>
 </section>
 <section id="env-data-example" class="slide level2" data-menu-title="Environmental data example">
 <h2></h2>
 <p><span class="slide-title2">Example: higher order &amp; partial derivatives in environmental data science</span></p>
 <hr>
 <p><br></p>
-<p><span class="body-text-m">The <a href="https://www.enviro.wiki/index.php?title=Advection-Dispersion-Reaction_Equation_for_Solute_Transport"><strong>Advection-Dispersion-Reaction Equation</strong></a> for solute transport models the change in a solute concentration <span class="math inline">\(C\)</span> over time <span class="math inline">\(t\)</span>, where groundwater is flowing in direction <span class="math inline">\(x\)</span>:</span></p>
+<p><span class="body-text-m">The <a href="https://www.enviro.wiki/index.php?title=Advection-Dispersion-Reaction_Equation_for_Solute_Transport"><strong>Advection-Dispersion-Reaction Equation</strong></a> for solute transport models the change in a solute concentration <span class="math inline">\(C\)</span> over time <span class="math inline">\(t\)</span> and <span class="math inline">\(x,y,z\)</span> space, where groundwater is flowing in direction <span class="math inline">\(x\)</span>:</span></p>
 <p><br></p>
 <p><span class="body-text-m"><span class="math display">\[\frac{\partial C}{\partial t}=D_x \frac{\partial^2C}{\partial x^2} + D_y\frac{\partial^2C}{\partial y^2}+D_z\frac{\partial^2C}{\partial z^2}-v\frac{\partial C}{\partial x}-\lambda RC\]</span></span></p>
+<p><span class="math inline">\(D_x, D_y, D_z\)</span> are hydrodynamic diffusion coefficients in the <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, and <span class="math inline">\(z\)</span> direction.</p>
 </section>
-<section class="slide level2">
-
-
-<img data-src="images/suspicious-ostrich.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
 <section id="break-it-down" class="slide level2" data-menu-title="Break it down">
 <h2></h2>
 <p><span class="slide-title">Let’s break it down.</span></p>
