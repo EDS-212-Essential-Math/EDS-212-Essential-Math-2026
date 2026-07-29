@@ -699,3 +699,14 @@ The function $\frac{|x-2|}{x-2}$ approaches different values from either side at
 </div>
 
 Therefore... [the limit does not exist!]{.teal-text}
+
+---
+
+## {#lunch-break data-menu-title="Lunch break"} 
+
+[Lunch break!]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/lunch-time.png)
+
