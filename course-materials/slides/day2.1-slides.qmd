@@ -13,11 +13,11 @@ format:
 
 [EDS 212: Day 2, Lecture 1]{.custom-title}
 
-[*Definition of the derivative*]{.custom-subtitle}
+[*The exponential function, logarithms, and limits*]{.custom-subtitle}
 
 <hr class="hr-teal">
 
-[August 5^th^, 2025]{.custom-subtitle3}
+[August 4^th^, 2025]{.custom-subtitle3}
 
 ---
 
@@ -29,325 +29,494 @@ format:
 
 <br>
 
+- [The exponential function]{.body-text-m} 
+- [Logarithms]{.body-text-m} 
+- [Limits]{.body-text-m} 
 - [Derivatives]{.body-text-m} 
-- [Higher order & partial derivatives]{.body-text-m} 
-- [Differential equations (reading, understanding, solving, using)]{.body-text-m} 
 
 ---
 
-## {#slope-at-any-point data-menu-title="Slope at any point?"} 
+## {#exponential-function-title data-menu-title="The exponential function" background-color="#003660"}
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-::: {.body-text-xl .center-text .teal-text} 
-What if we want to find an expression that describes the rate of change (slope) at *any* point on a function?
-:::
+<div class="page-center">
+<div class="custom-subtitle">The exponential function</div>
+</div>
 
----
+--- 
 
-## {#deriv-1 data-menu-title="Derivative art 1"} 
+## {#number-e-1 data-menu-title="The number $e$"}
 
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_1.jpg")
-```
+<!-- 
+A very nice slide deck Carmen made to explain what e is to my 34A summer 2020 students.
+https://docs.google.com/presentation/d/1uztsfd9fwG49lxsDgxhyQZVsbFQDkmszsSkQdDivz2Q/edit?usp=sharing
+-->
 
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
-:::
-
----
-
-## {#deriv-2 data-menu-title="Derivative art 2"}  
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_2.jpg")
-```
-
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
-:::
-
----
-
-## {#deriv-3 data-menu-title="Derivative art 3"} 
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_3.jpg")
-```
-
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
-:::
-
----
-
-## {#deriv-4 data-menu-title="Derivative art 4"} 
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_4.jpg")
-```
-
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
-:::
-
----
-
-## {#deriv-5 data-menu-title="Derivative art 5"} 
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_5.jpg")
-```
-
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
-:::
-
----
-
-## {#deriv-6 data-menu-title="Derivative art 6"}  
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_6.jpg")
-```
-
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
-:::
-
----
-
-## {#deriv-7 data-menu-title="Derivative art 7"} 
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_7.jpg")
-```
-
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
-:::
-
----
-
-## {#deriv-8 data-menu-title="Derivative art 8"} 
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_8.jpg")
-```
-
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
-:::
-
----
-
-## {#deriv-9 data-menu-title="Derivative art 9"} 
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_9.jpg")
-```
-
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
-:::
-
----
-
-## {#thats-how data-menu-title="That's how"} 
-
-[And that's how we find derivatives]{.slide-title}
+[The number $e$]{.slide-title}
 
 <hr>
 
-[Evaluate the slope between two generic points on any function (separated by $\Delta x$) as $\Delta x$ becomes infinitely small.]{.body-text-m}
+The **number $e$ is a constant** in mathematics, it is approximately $e\approx 2.72$, but really its decimals continue infinitely without any pattern:
 
-<br>
+[**$e = 2.71828182845904523536...$**]{.teal-text}
 
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/mispronounced_equations.png")
-```
+. . .
 
-::: {.footer}
-Image source: [xkcd](https://xkcd.com/2492/)
-:::
+It's exact value can be described as 
+$$
+e = 1 + 1 + \frac{1}{1*2} + \frac{1}{1*2*3} + \frac{1}{1*2*3*4} + \frac{1}{1*2*3*4*5} + ... 
+$$
 
----
+. . .
 
-## {#lets-try data-menu-title="Let's try one"} 
+Like any other number, $e$ follows normal power properties:
 
-[Let's try one (*NOTE* we're subbing $h$ for $\Delta x$)]{.slide-title2}
+$$
+\begin{align}
+e^x\cdot e^y &=& ?\\
+\frac{1}{e^x} &=& ?\\
+\frac{e^x}{e^y} &=& ?\\
+(e^x)^r &=& ?
+\end{align}
+$$
+
+✏️ [Take a moment to write these with a single exponent.]{style="color:green;"  .body-text-m}
+
+--- 
+
+## {#number-e-2 data-menu-title="The number $e$"}
+
+<!-- 
+A very nice slide deck Carmen made to explain what e is to my 34A summer 2020 students.
+https://docs.google.com/presentation/d/1uztsfd9fwG49lxsDgxhyQZVsbFQDkmszsSkQdDivz2Q/edit?usp=sharing
+-->
+
+[The number $e$]{.slide-title}
 
 <hr>
 
+The **number $e$ is a constant** in mathematics, it is approximately $e\approx 2.72$, but really its decimals continue infinitely without any pattern:
 
-Find an expression that tells us the slope of the function $f(x)=x^2-18.2$ at any value of $x$.
+[**$e = 2.71828182845904523536...$**]{.teal-text}
 
-<br>
 
-[$$\frac{df}{dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$]{.body-text-m}
+It's exact value can be described as 
+$$
+e = 1 + 1 + \frac{1}{1*2} + \frac{1}{1*2*3} + \frac{1}{1*2*3*4} + \frac{1}{1*2*3*4*5} + ... 
+$$
 
-<br>
 
-[$$=\lim_{h\to 0}\frac{((x+h)^2-18.2)-(x^2-18.2)}{h}$$]{.body-text-m}
+Like any other number, $e$ follows normal power properties:
 
-<br>
+$$
+\begin{align}
+e^{x+y}&=&e^x\cdot e^y \\
+e^{-x}&=&\frac{1}{e^x}\\
+e^{x-y}&=&\frac{e^x}{e^y}\\
+e^{rx}&=&(e^x)^r 
+\end{align}
+$$
 
-[$$=\lim_{h\to 0}\frac{x^2+2xh+h^2-18.2-x^2+18.2}{h}$$]{.body-text-m}
+<!---------------------------------------------------------------------->
 
 ---
 
-## {#gets-us-to data-menu-title="Which gets us to..."} 
+## {#exponential-function data-menu-title="The exponential function $e^x$"}
 
-[Which gets us to...]{.slide-title}
+[The exponential funciton]{.slide-title}
+
+<hr>
+
+The **exponential function $e^x$** is the number $e$ raised to the $x$ power. 
+
+In function notation you may sometimes see it as
+
+$$ f(x) = e^x \ \ \text{ or } \ \ \text{exp}(x).$$
+
+
+```{r,fig.align='center',out.width="75%"}
+library(tidyverse)
+x=seq(-3,3,by=0.01)
+y=exp(x)
+
+ggplot()+
+  geom_line(aes(x=x,y=y),color="black",linewidth=3)+
+  theme_classic()+
+  labs(x="x",y="y",title=bquote(e^x))+
+  theme(text=element_text(size=28))
+```
+
+---
+
+## {#e-common data-menu-title="e common"} 
+
+[Why is the exponential function so common?]{.slide-title}
 
 <hr>
 
 <br>
 
-[$$= \lim_{h\to 0} \frac{2xh+h^2}{h} = \lim_{h\to 0} {2x+h} = 2x$$]{.body-text-m}
+::: {.body-text-l}
+- **One reason:** Exponential trends show up a LOT in environmental science (the proportional change is the same over each time span)
 
-<!-- [$$= \lim_{\Delta x\to 0} \frac{2x\Delta x+(\Delta x)^2}{\Delta x} = \lim_{\Delta x\to 0} {2x+\Delta x} = 2x$$]{.body-text-m} -->
+- **Math reason:** Turns out it's a very useful value for calculus
+:::
 
 ---
 
-## {#your-turn data-menu-title="Your turn"} 
+## {#aquaculture data-menu-title="Aquaculture example"} 
 
-[Your turn:]{.slide-title}
+[A real-world example:]{.slide-title}
+
+<hr>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/fisheries-aquaculture.png")
+```
+
+::: {.footer}
+Source: [Our World in Data](https://ourworldindata.org/grapher/capture-fisheries-vs-aquaculture)
+:::
+
+---
+
+## {#cant-grow-forever data-menu-title="Can't grow forever"} 
+
+[But populations can't grow exponentially forever]{.slide-title2}
+
+<hr>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "90%"
+#| fig-align: "center"
+knitr::include_graphics("images/paramecium.jpg")
+```
+
+::: {.center-text .body-text-s .gray-text}
+Gause, G. F. 1934. The Struggle for Existence. Baltimore: Williams and Wilkins.
+:::
+
+---
+
+## {#logistic-growth data-menu-title="Logistic growth"} 
+
+[Logistic growth]{.slide-title}
 
 <hr>
 
 <br>
 
-[Find the derivative of the following using the definition of the derivative:]{.body-text-m}
+[$$N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}$$]{.body-text-l}
 
 <br>
 
-[$$f(x)=4-x+3x^2$$]{.body-text-m}
+[Where $N_t$ is the population size at time $t$, $K$ is the carrying capacity, $N_0$ is the initial population size, and $r$ is a growth rate.]{.body-text-m}
+
+<br>
+
+::: {.center-text .body-text-m .teal-text}
+We should always think about *why an equations has the shape it has* - both conceptually and mathematically. 
+:::
+
+---
+
+## {#logistic-growth-Qs data-menu-title="Logistic growth (Qs)"} 
+
+[Logistic growth]{.slide-title}
+
+<hr>
+
+<br>
+
+[$$N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}$$]{.body-text-l}
+
+<br>
+
+::: {.body-text-m}
+1. Why might we expect logistic growth for many populations? 
+
+2. What variables *besides* time would influence the actual population?
+
+<!-- 3. Why, mathematically, does the logistic growth expression take the shape it does? What happens as the population becomes very close to the carrying capacity? -->
+:::
 
 ::: {.notes}
-- $= \lim_{h \to 0} \frac{df}{dx} = \frac{4 -(x+h) + 3 (x+h)^2 - (4-x+3x^2)}{h}$
-- $= \lim_{h \to 0} \frac{df}{dx} = \frac{4 -(x+h) + 3 (x^2 + 2xh + h^2) - 4+x-3x^2)}{h}$
-- $= \lim_{h \to 0} \frac{df}{dx} = \frac{4 -(x+h) + 3x^2 + 6xh + 3h^2 - 4+x-3x^2)}{h}$
-- $= \lim_{h \to 0} \frac{df}{dx} = \frac{3h^2 + 6xh - h}{h}$
-- **ANSWER: $= \lim_{h \to 0} \frac{df}{dx} = 6x - 1$**
+1. Pops grow slowly at the start when there are few individuals. Grow more quickly (exponentially) when enough individuals are in a pop and resources are abundant. Plateau when resources become depleted.
+
+2. The number of individuals and the amount of resources
 :::
 
 ---
 
-## {#tedius data-menu-title="Tedius"} 
+## {#logarithms data-menu-title="Logarithms"} 
 
-[It's cool to do that a few times, **but it gets really tedious really fast.**]{.slide-title}
-
-<hr>
-
-<br>
-
-So we have some basic derivative shortcut rules to speed it up a bit:
-
-<br>
-
-- **Power rule:** $\frac{d}{dx}(x^n)=nx^{n-1}$
-
-- **Constant rule:**  if $k$ is a constant, $\frac{d}{dx}(k)=0$
-
-- **Constant multiple rule:** if $k$ is a constant, $\frac{d}{dx}(kx) = k\space$
-
-- **Sum and difference rule:** $\frac{d}{dx}(f(x)\pm g(x))=\frac{d}{dx} f(x)\pm \frac{d}{dx}g(x)$
-
-<br>
-
-Yeah there are more - we're not doing them.
-
----
-
-## {#def-deriv data-menu-title="Definition of derivative"} 
-
-[**ALL** of those rules come from the definition of the derivative.]{.slide-title}
+[Logarithms]{.slide-title}
 
 <hr>
 
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_9.jpg")
+<br>
+
+[$\log_a(b) = ?$ asks the question:]{.body-text-m} 
+
+<br>
+
+:::{.center-text .body-text-m }
+"to what power do I have to raise $a$ to get a value of $b$?"
+:::
+
+<br>
+
+[**For example:**]{.body-text-l} 
+
+- $\log_2(8)=?$ asks "to what power do I have to raise 2, to get a value of 8?"
+
+
+<!----------------------------------------------------->
+## {#ln-blank-1 data-menu-title="Natural Logs"}
+
+[Natural logarithms]{.slide-title}
+
+<hr>
+
+
+<!----------------------------------------------------->
+## {#ln-blank-2 data-menu-title="Natural Logs"}
+
+[Natural logarithms]{.slide-title}
+
+<hr>
+
+If $y>0$, then **$\ln(x)$ is the exponent you need to raise $e$ to in order to get $y$.**
+
+This means:
+
+$$
+\begin{align}
+\ln(e^x) &= x \\
+e^{\ln(y)} &= y
+\end{align}
+$$
+
+In other words, $\ln(x)$ is the inverse of the exponential function $e^x$. 
+
+<br>
+
+**Examples**
+
+- $\ln(e^3)$
+
+- $\ln(\frac{1}{e})$
+
+- $\ln(1)$
+
+- $\ln(0)$ 
+
+- $\ln(-7)$ 
+
+
+<!----------------------------------------------------->
+## {#ln data-menu-title="Natural Logs"}
+
+[Natural logarithms]{.slide-title}
+
+<hr>
+
+If $y>0$, then **$\ln(x)$ is the exponent you need to raise $e$ to in order to get $y$.**
+
+This means:
+
+$$
+\begin{align}
+\ln(e^x) &= x \\
+e^{\ln(y)} &= y
+\end{align}
+$$
+
+In other words, $\ln(x)$ is the inverse of the exponential function $e^x$. 
+
+<br>
+
+**Examples**
+
+- $\ln(e^3) = 3$ because 3 is the power of $e$ needed to get $e^3$.
+
+- $\ln(\frac{1}{e}) = \ln(e^{-1}) = -1$
+
+- $\ln(1) = 0$ because 0 is the exponent we need to raise $e$ to to get 1
+
+- $\ln(0)$ does not exist, because there's no number we can raise $e$ to to get 0
+
+- $\ln(-7)$ does not exist, because $e$ to any number always be positive
+
+<!----------------------------------------------------->
+## {#ln-blank data-menu-title="Properties of natural logarithm"}
+
+[Natural log properties]{.slide-title}
+
+<hr>
+
+::::{.columns}
+:::{.column width="50%"}
+
+```{r,fig.dim=c(5,5.5), out.width="100%"}
+
+# Define x values
+x_exp <- seq(-2, 4, length.out = 500)          # for e^x
+x_log <- seq(0.001, 4, length.out = 500)       # for ln(x) (x>0 only)
+
+# Compute y values
+y_exp <- exp(x_exp)
+y_log <- log(x_log)
+
+# Base plot: no axes, no box, no margin labels
+plot(x_exp, y_exp, type = "l", col = "blue", lwd = 2,
+     xlab = "", ylab = "",
+     xlim = c(-2, 4), ylim = c(-2, 6),         
+     main = "",
+     axes = FALSE, frame.plot = FALSE)
+
+# Draw custom axes at x=0 and y=0
+axis(1, pos = 0)  # x-axis at y=0
+axis(2, pos = 0)  # y-axis at x=0
+
+# Add ln(x)
+lines(x_log, y_log, col = "red", lwd = 2)
+
+# Add the line y = x (dotted)
+abline(0, 1, lty = 2, col = "darkgreen")
+
+# Add legend (no box)
+legend("topleft", legend = c("e^x", "ln(x)", "y=x"),
+       col = c("blue", "red", "darkgreen"), lwd = c(2,2,1),
+       lty = c(1,1,2), bty = "n")
+
+# Add manual axis labels at the ends
+text(x = 4, y = -0.2, labels = "x", cex = 1.2)
+text(x = 0.2, y = 6, labels = "y", cex = 1.2) 
 ```
 
----
-
-## {#remember data-menu-title="Remember"} 
-
-[Reminder of what we're doing mathematically:]{.slide-title}
-
-<hr>
-
-<br>
-<br>
-
-::: {.center-text .body-text-xl}
-Finding the slope between two generic points on a function as the distance between them gets infinitely small. That will give us an expression for the **slope at any point on the original function**.
 :::
 
----
+:::{.column width="50%"}
 
-## {#logs-exp data-menu-title="Derivative of logs & exp"} 
+:::
 
-[Derivative of logs & exponents]{.slide-title}
+::::
+
+<!----------------------------------------------------->
+## {#ln-properties data-menu-title="Properties of natural logarithm"}
+
+[Natural log properties]{.slide-title}
 
 <hr>
 
-<br>
-<br>
+::::{.columns}
+:::{.column width="50%"}
 
-- [$\frac{d}{dx}(e^x) = e^x$]{.body-text-l}
+```{r,fig.dim=c(5,5.5), out.width="100%"}
 
-<br>
+# Define x values
+x_exp <- seq(-2, 4, length.out = 500)          # for e^x
+x_log <- seq(0.001, 4, length.out = 500)       # for ln(x) (x>0 only)
 
-- [$\frac{d}{dx}ln(x)=\frac{1}{x}$]{.body-text-l}
+# Compute y values
+y_exp <- exp(x_exp)
+y_log <- log(x_log)
+
+# Base plot: no axes, no box, no margin labels
+plot(x_exp, y_exp, type = "l", col = "blue", lwd = 2,
+     xlab = "", ylab = "",
+     xlim = c(-2, 4), ylim = c(-2, 6),         
+     main = "",
+     axes = FALSE, frame.plot = FALSE)
+
+# Draw custom axes at x=0 and y=0
+axis(1, pos = 0)  # x-axis at y=0
+axis(2, pos = 0)  # y-axis at x=0
+
+# Add ln(x)
+lines(x_log, y_log, col = "red", lwd = 2)
+
+# Add the line y = x (dotted)
+abline(0, 1, lty = 2, col = "darkgreen")
+
+# Add legend (no box)
+legend("topleft", legend = c("e^x", "ln(x)", "y=x"),
+       col = c("blue", "red", "darkgreen"), lwd = c(2,2,1),
+       lty = c(1,1,2), bty = "n")
+
+# Add manual axis labels at the ends
+text(x = 4, y = -0.2, labels = "x", cex = 1.2)
+text(x = 0.2, y = 6, labels = "y", cex = 1.2) 
+```
+
+:::
+
+:::{.column width="50%"}
+
+:::{.center-text}
+**Properties**
+:::
+
+
+$\ln (e^x)=x$
+
+$\ln(xy)=\ln x+\ln y$
+
+$\ln(\frac{x}{y})=\ln x-\ln y$
+
+$\ln(x^y)=y \ln x$
+:::
+
+::::
+
+<!----------------------------------------------------->
+## {#ln-ex-blank data-menu-title="Natural Logs"}
+
+[Using logarithms to solve equations]{.slide-title}
+
+<hr>
+✏️ [Solve for $t$ in the equation $Pe^{rt} = A$. ]{style="color:green;"}
+
+::::{.columns}
+:::{.column width="70%"}
+:::
+
+:::{.column width="30%"}
+:::{.center-text}
+**Properties**
+:::
+
+$\ln (e^x)=x$
+
+$\ln(xy)=\ln x+\ln y$
+
+$\ln(\frac{x}{y})=\ln x-\ln y$
+
+$\ln(x^y)=y \ln x$
+:::
+
+::::
+
+<!----------------------------------------------------->
+## {#ln-ex data-menu-title="Natural Logs"}
+
+[Using logarithms to solve equations]{.slide-title}
+
+<hr>
+✏️ [Solve for $t$ in the equation $Pe^{rt} = A$. ]{style="color:green;"}
+
+$$
+\begin{align}
+Pe^{rt} &= A \\
+e^{rt} & = \frac{A}{P} \\
+rt &= \ln\left(\frac{A}{P}\right) \\
+t &= \frac{\ln(A)-\ln(P)}{r}
+\end{align}
+$$
