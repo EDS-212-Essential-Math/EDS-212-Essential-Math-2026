@@ -210,8 +210,6 @@ Gause, G. F. 1934. The Struggle for Existence. Baltimore: Williams and Wilkins.
 
 <hr>
 
-<br>
-
 [$$N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}$$]{.body-text-l}
 
 <br>
@@ -220,8 +218,14 @@ Gause, G. F. 1934. The Struggle for Existence. Baltimore: Williams and Wilkins.
 
 <br>
 
+. . .
+
+✏️ [What should be the value of the formula when $t=0$? Confirm your answer by substituting.]{style="color:green;" }
+
+. . .
+
 ::: {.center-text .body-text-m .teal-text}
-We should always think about *why an equations has the shape it has* - both conceptually and mathematically. 
+We should always *understand the components of formulas and equations* - both conceptually and mathematically. 
 :::
 
 ---
@@ -246,6 +250,8 @@ We should always think about *why an equations has the shape it has* - both conc
 <!-- 3. Why, mathematically, does the logistic growth expression take the shape it does? What happens as the population becomes very close to the carrying capacity? -->
 :::
 
+<!-- [A brief explanation of the math with derivatives.](https://sites.math.duke.edu/education/ccp/materials/diffeq/logistic/logi1.html) -->
+
 ::: {.notes}
 1. Pops grow slowly at the start when there are few individuals. Grow more quickly (exponentially) when enough individuals are in a pop and resources are abundant. Plateau when resources become depleted.
 
@@ -262,19 +268,15 @@ We should always think about *why an equations has the shape it has* - both conc
 
 <br>
 
-[$\log_a(b) = ?$ asks the question:]{.body-text-m} 
+[$\log_a(b)$ is the exponent you need to raise $a$ to get a value of $b$]{.body-text-m} 
 
-<br>
-
-:::{.center-text .body-text-m }
-"to what power do I have to raise $a$ to get a value of $b$?"
-:::
 
 <br>
 
 [**For example:**]{.body-text-l} 
 
-- $\log_2(8)=?$ asks "to what power do I have to raise 2, to get a value of 8?"
+- $\log_2(8)=x$ asks "to what power do I have to raise 2, to get a value of 8?"
+- $\log_{105}(1)=x$ asks "to what power do I have to raise 105, to get a value of 1?"
 
 
 <!----------------------------------------------------->
@@ -284,6 +286,9 @@ We should always think about *why an equations has the shape it has* - both conc
 
 <hr>
 
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">                                                                               
+  ✏️                    
+</div>  
 
 <!----------------------------------------------------->
 ## {#ln-blank-2 data-menu-title="Natural Logs"}
@@ -307,7 +312,7 @@ In other words, $\ln(x)$ is the inverse of the exponential function $e^x$.
 
 <br>
 
-**Examples**
+**✏️ Examples**
 
 - $\ln(e^3)$
 
@@ -404,7 +409,7 @@ text(x = 0.2, y = 6, labels = "y", cex = 1.2)
 :::
 
 :::{.column width="50%"}
-
+✏️ 
 :::
 
 ::::
