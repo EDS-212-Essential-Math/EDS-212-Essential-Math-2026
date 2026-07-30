@@ -1391,3 +1391,13 @@ It's OK, follow along by hopping over the [Interactive Session 3A](../interactiv
 <!-- A great resource: [Solving Lokta-Volterra equations in R](https://rstudio-pubs-static.s3.amazonaws.com/32888_197d1a1896534397b67fb04e0d4899ae.html) -->
 <!-- ::: -->
 
+---
+
+## {#lunch-break data-menu-title="Lunch break"} 
+
+[Lunch break!]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/lunch-time.png)
+
