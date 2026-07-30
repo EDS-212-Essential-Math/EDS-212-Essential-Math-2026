@@ -1,7 +1,7 @@
 ---
 title: "Differential equations, intro to linear algebra"
 subtitle: "Day 3"
-description: "Wednesday August 6^th^, 2025"
+description: "Wednesday August 5^th^, 2025"
 ---
 
 ```{r}
@@ -9,8 +9,8 @@ description: "Wednesday August 6^th^, 2025"
 #| echo: false
 #| fig-align: "center"
 #| out-width: "60%" 
-#| fig-alt: "A basic git workflow represented as two islands, one with 'local repo' and 'working directory', and another with 'remote repo.' Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled 'PUSH') and from the remote repo to the working directory (labeled 'PULL')."
-knitr::include_graphics("images/horst-repos.png")
+#| fig-alt: "AIllustration of a whale shark, with the face directly facing the viewer. There are subtle x and y axes overlaid onto the illustration. The whale shark’s oblong mouth is oriented horizontally along the x-axis. The whale shark looks friendly and has a slight smile on its face."
+knitr::include_graphics("images/whale-shark.png")
 ```
 
 :::{.gray-text .center-text}
@@ -19,17 +19,19 @@ knitr::include_graphics("images/horst-repos.png")
 
 ## Class materials
 
-| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  {{< fa laptop-code title="A laptop with on-screen code" >}} Interactive session |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| day 3 / morning   | [Differential equations, and solving them numerically](slides/day3.1-slides.qmd){target="_blank"} | [Interpreting differential equations, solving numerically](interactive-sessions/interactive-session-3a.qmd) |
-| day 3 / afternoon | [Introduction to linear algebra basics](slides/day3.2-slides.qmd){target="_blank"} | [Making & basic algebra with vectors and matrices](interactive-sessions/interactive-session-3b.qmd) |
+| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | 
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| day 3 / morning   | [Integrals and differential equations](slides/day3.1-slides.qmd){target="_blank"} |
+| day 3 / afternoon | [Introduction to linear algebra basics](slides/day3.2-slides.qmd){target="_blank"} | 
 : {.hover .bordered tbl-colwidths="[20,40,40]"} 
 
-## End-of-day practice
+
+<!-- ## End-of-day practice
 
 Complete the following tasks / activities before heading home for the day!
 
-- [{{< fa pencil title="A pencil" >}} **Day 3 Practice:** Vectors by hand and in R, git practice](eod-practice/eod-day3.qmd)
+- [{{< fa pencil title="A pencil" >}} **Day 3 Practice:** Vectors by hand and in R, git practice](eod-practice/eod-day3.qmd) 
+-->
 
 ## Additional Resources
 
