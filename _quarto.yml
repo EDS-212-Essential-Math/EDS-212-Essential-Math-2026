@@ -21,8 +21,8 @@ website:
             href: course-materials/day1.qmd
           - text: day 2 (8/4)
             href: course-materials/day2.qmd
-          # - text: day 3 (8/6)
-          #   href: course-materials/day3.qmd
+          - text: day 3 (8/5)
+            href: course-materials/day3.qmd
           # - text: day 4 (8/7)
           #   href: course-materials/day4.qmd
           # - text: day 5 (8/8)

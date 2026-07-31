@@ -913,13 +913,11 @@ knitr::include_graphics("images/diagonal_matrix_scaling.png")
 
 :::
 
+
+<!-- 
 ---
 
 ## {#systems-of-equations-title data-menu-title="Systems of equations" background-color="#003660"}
-
-<div class="page-center">
-<div class="custom-subtitle">Systems of equations</div>
-</div>
 
 
 ---
@@ -941,7 +939,7 @@ $$3x-8y=5$$
 $$x + 2y = 10$$
 :::
 
-<br>
+So we want to find $x$ and $y$ that satisfy both equations simultaneously.
 
 ::: {.center-text .body-text-m}
 How can we write this using matrices? 
@@ -1208,4 +1206,4 @@ knitr::include_graphics("images/leslie_matrix_values.png")
 
 ::: {.footer}
 See [A Primer of Ecology](https://global.oup.com/academic/product/a-primer-of-ecology-9780878933181?cc=ca&lang=en&), by Nicholas J. Gotelli
-:::
+::: -->
