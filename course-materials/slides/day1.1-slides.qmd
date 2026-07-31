@@ -40,7 +40,7 @@ format:
 
 - **Instructor:** Carmen Galaz García 
 - **Teaching assistant:** Cella Schnabel
-- **Course hours:** 10am - 4:30pm PST
+- **Course hours:** 10am - 3:30pm PST
 - **Location:** NCEAS 1st Floor Classroom
 
 ---
@@ -143,11 +143,11 @@ Before:
 - **Grading:** Satisfactory/Unsatisfactory
 - **Description:** Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.
 
-. . .
+
 
 - This is an **"offline course"**, your only one in MEDS. What it means is we'll be focusing on conceptual understanding and some pen-and-paper practice, instead of coding. Why? We want to make sure you *understand* some fundamental topics before jumping into *implementing*. 
 
-. . .
+
 
 ::: {.center-text .body-text-l}
 Let's take a look at the [course syllabus](https://docs.google.com/document/d/1yGzd_H954F_gPufJNAYPIIjEw3vDS4P0E20CRrpSrfs/edit?tab=t.0) together. 
@@ -190,6 +190,27 @@ Let's take a look at the [course syllabus](https://docs.google.com/document/d/1y
 ---
 
 ## {#exp data-menu-title="Student Expectations"}
+
+[Student expectations]{.slide-title}
+
+<hr>
+
+We expect all students will:
+
+- Support and encourage all classmates
+
+- Be open to learning from each other
+
+- Bring a collaborative attitude and communicate respectfully
+
+- See opportunities to share kownledge as a chance to deepen understanding
+
+- Complete all in-class exercises
+
+
+---
+
+## {#exp-2 data-menu-title="Student Expectations"}
 
 [Student expectations]{.slide-title}
 
@@ -608,7 +629,7 @@ Being readable & hard to incorrectly interpret is often as important as being te
 
 --- 
 
-## {#equations-solved data-menu-title="Equations solved"} 
+## {#equations-solved-1 data-menu-title="Equations solved"} 
 
 [2. Solving equations]{.slide-title}
 
@@ -626,7 +647,26 @@ Remember the rules:
 Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation. 
 </span>
 
-. . . 
+
+--- 
+
+## {#equations-solved-2 data-menu-title="Equations solved"} 
+
+[2. Solving equations]{.slide-title}
+
+<hr>
+
+Equations help us find unknown values that satisfy certain conditions. 
+
+Remember the rules:
+
+2. Never change an equation. Instead, we rewrite them into more useful forms
+
+3. Manipulate BOTH sides of an equation with the SAME PROCEDURE.
+
+<span style="color: red;">
+Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation. 
+</span>
 
 **Example**
 
@@ -805,6 +845,17 @@ x&=\frac{5+b+2c-21a}{11}
 $$
 :::
 :::
+
+---
+
+## {#break data-menu-title="5 minute break"} 
+
+[Let's take a 5 minute break]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/coffee-break.png)
+
 
 ---
 
@@ -1142,7 +1193,7 @@ $$
 
 ---
 
-## {#polynomials data-menu-title="Polynomials"}
+## {#polynomials-1 data-menu-title="Polynomials"}
 
 [Polynomials describe more complex relationships through exponents]{.slide-title}
 
@@ -1161,7 +1212,27 @@ $$
 - each $a_ix^i$ is called a **term** of the polynomial,
 - $n$ is called the **degree** of the polynomial, this is the largest exponent in the polynomial.
 
-. . . 
+
+---
+
+## {#polynomials-2 data-menu-title="Polynomials"}
+
+[Polynomials describe more complex relationships through exponents]{.slide-title}
+
+<hr>
+
+A polynomial is a function of the form:
+$$
+\large
+\begin{align}
+a_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0
+\end{align}
+$$
+
+- $x$ is the **variable** 
+- $a_i$ are **constants** (fixed numbers) that are called the **coefficients** of the polynomial
+- each $a_ix^i$ is called a **term** of the polynomial,
+- $n$ is called the **degree** of the polynomial, this is the largest exponent in the polynomial.
 
 *Example:*
 
@@ -1250,8 +1321,6 @@ That means we need to always **familiarize ourselves with metadata**, carefully 
 <hr>
 
 In dimensional analysis, we multiply initial units by a sequence of **unit conversion factors** to arrive at the final desired units.
-
-. . .
 
 **Example:** How many centimiters are there in 6 inches?
 

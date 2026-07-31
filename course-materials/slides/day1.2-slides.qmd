@@ -32,7 +32,17 @@ editor_options:
 
 ---
 
-## {#functions data-menu-title="Functions"} 
+## {#functions-1 data-menu-title="Functions"} 
+
+[Functions]{.slide-title}
+
+<hr>
+
+[Functions are mathematical expressions that tell us how input values are related to output values.]{.body-text-m}
+
+---
+
+## {#functions-2 data-menu-title="Functions"} 
 
 [Functions]{.slide-title}
 
@@ -42,19 +52,36 @@ editor_options:
 
 <br>
 
-. . .
-
 For example, $y = 3x-5$ is a function that tells us the **value of y** at **any value of x**. In this scenario, we would probably say **y is a function of x**. 
+
+---
+
+## {#functions-3 data-menu-title="Functions"} 
+
+[Functions]{.slide-title}
+
+<hr>
+
+[Functions are mathematical expressions that tell us how input values are related to output values.]{.body-text-m}
+
 
 <br>
 
-. . .
+For example, $y = 3x-5$ is a function that tells us the **value of y** at **any value of x**. In this scenario, we would probably say **y is a function of x**. 
 
 Could you also rewrite it and say **x is a function of y**? 
 
 Here, with no knowledge of what's an input and what's an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully. 
 
-What follows is the expression in the format of: "**[output variable(s)] is/are a function of [input variable(s)]**". 
+What follows is the expression in the format of: 
+
+:::{.center-text}
+"**[output variable(s)] is/are a function of [input variable(s)]**".
+:::
+
+<br>
+
+Also: output variable = **dependent variable** and input variable = **independent variable**.
 
 ---
 
@@ -361,7 +388,42 @@ p1
 
 ---
 
-## {#graph-ingredients data-menu-title="Two key ingredients to graphs"}
+## {#graph-ingredients-1 data-menu-title="Two key ingredients to graphs"}
+
+[Two key ingredients to graphs]{.slide-title}
+
+<hr>
+
+::::{.columns}
+:::{.column width="50%"}
+
+
+Intercepts
+
+- $x$-intercept
+
+  - Where does the graph intersect the $x$-axis? 
+  - In other words, for what values of $x$ do we have $(x,0)$ be part of the graph?
+    
+    
+
+:::
+
+:::{.column width="50%"}
+:::{.center-text}
+What are the intercepts of the polynomial function in red?
+:::
+
+```{r echo=FALSE,fig.align='center',fig.dim=c(6,8),out.width="70%"}
+p1+theme(legend.position = "none")
+  
+```
+:::
+::::
+
+---
+
+## {#graph-ingredients-2 data-menu-title="Two key ingredients to graphs"}
 
 [Two key ingredients to graphs]{.slide-title}
 
@@ -525,8 +587,9 @@ knitr::include_graphics("images/mono_lake_graph.png")
 
 
 <div class="page-center">
-<div class="custom-subtitle">Lines</div>
+<div class="custom-subtitle">Linear functions</div>
 </div>
+
 ---
 
 ## {#slope-int-blank data-menu-title="Slope-Intercept Form"}
@@ -619,6 +682,7 @@ knitr::include_graphics("images/slope.PNG")
 
 <hr>
 
+:::{style="color:green;"}
 - Find the equation of the line that:
 
   (a) passes through $(3,5)$ and $(2,-1)$.
@@ -626,6 +690,7 @@ knitr::include_graphics("images/slope.PNG")
   (b) passes through $(2,-5)$ and has $x$-intercept equal to 4.
 
   (c) has the following graph:
+:::
 
 ```{r echo=FALSE,fig.align='center',out.width="80%"}
 # Set up plot area
@@ -659,14 +724,14 @@ axis(1, at = seq(x_min, x_max, by = 1))
 axis(2, at = seq(y_min, y_max, by = 1))
 ```
 
-- Make a graph showing the line that passes through (3,-1) and has slope equal to 2. 
-
+[- Make a graph showing the line that passes through (3,-1) and has slope equal to 2. 
+]{style="color:green;"}
 
 ---
 
 ## {#line-equation-practice-sol-1 data-menu-title="Equation of a line: practice"}
 
-[Equation of a line: practice]{.slide-title}
+[Equation of a line: solutions]{.slide-title}
 
 <hr>
 
@@ -678,7 +743,7 @@ Find the equation of the line that passes through $(3,5)$ and $(2,-1)$.
 
 ## {#line-equation-practice-sol-2 data-menu-title="Equation of a line: practice"}
 
-[Equation of a line: practice]{.slide-title}
+[Equation of a line: solutions]{.slide-title}
 
 <hr>
 
@@ -690,7 +755,7 @@ Find the equation of the line that passes through $(2,-5)$ and has $x$-intercept
 
 ## {#line-equation-practice-3 data-menu-title="Equation of a line: practice"}
 
-[Equation of a line: practice]{.slide-title}
+[Equation of a line: solutions]{.slide-title}
 
 <hr>
 
@@ -746,7 +811,7 @@ axis(2, at = seq(y_min, y_max, by = 1))
 
 ## {#line-equation-practice-4 data-menu-title="Equation of a line: practice"}
 
-[Equation of a line: practice]{.slide-title}
+[Equation of a line: solutions]{.slide-title}
 
 <hr>
 
@@ -863,3 +928,31 @@ knitr::include_graphics("images/cod_graph.jpg")
 ```{r echo=FALSE,fig.align='center',out.width="50%"}
 knitr::include_graphics("images/trex.PNG")
 ```
+
+---
+
+## {#end-of-day data-menu-title="Lines" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">End of day 1!</div>
+</div>
+
+---
+
+## {#what-we-covered data-menu-title="What we covered today" }
+
+
+[What we covered today]{.slide-title}
+
+<hr>
+
+- <span style="color:#D6001C"><b>🔢 Algebra review</b></span>  
+- <span style="color:#003366"><b>🗺️ Solving equations</b></span>
+- <span style="color:#FF6600"><b>✖️ Exponents</b></span>  
+- <span style="color:#CC9900"><b>📐 Polynomials</b></span>  
+- <span style="color:#006699"><b>🌡  Units</b></span>  
+- <span style="color:#CC3366"><b>🧩 Definition of functions </b></span>  
+- <span style="color:#006699"><b>📊 Graphing</b></span>  
+- <span style="color:#006633"><b>💬 Reading graphs</b></span>  
+- <span style="color:#003366"><b>📈 Linear functions</b></span>  
+- <span style="color:#660099"><b>↗️ Slope as a rate of change</b></span>  
