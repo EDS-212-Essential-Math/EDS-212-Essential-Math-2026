@@ -11,37 +11,102 @@ format:
 
 ## {#title-slide data-menu-title="Title Slide" background="#053660"} 
 
-[EDS 212: Day 4, Lecture 2]{.custom-title}
+[EDS 212: Day 4, Lecture 1]{.custom-title}
 
 [*Essential summary statistics and exploration*]{.custom-subtitle}
 
 <hr class="hr-teal">
 
-[August 7^th^, 2025]{.custom-subtitle3}
+[August 6^th^, 2025]{.custom-subtitle3}
 
 ---
 
-## {#data-types data-menu-title="Data types"} 
+## {#data-types-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Data types</div>
+</div>
+
+---
+
+## {#data-types-1 data-menu-title="Data types"} 
 
 [Data types]{.slide-title}
 
 <hr>
 
-<br>
 
-::: {.body-text-m}
-- **Quantitative:** numeric information 
-- **Qualitative:** descriptions (usually words)
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::{.center-text}
+[**Quantitative** ]{.body-text-l}
+
+[Numeric information]{.body-text-l}
 :::
 
-. . .
+:::
 
-[A bit deeper:]{.body-text-l} 
 
-::: {.body-text-m}
-- **Continuous:** measured values, can take an infinite possible values for a variable
-- **Discrete:** can only have certain values (e.g. counts)
+::: {.column width="50%"}
+
+:::{.center-text}
+[**Qualitative** ]{.body-text-l}
+
+[Descriptions (usually words)]{.body-text-l}
+:::
+
+:::
+
+:::
+
+
+---
+
+## {#data-types-2 data-menu-title="Data types"} 
+
+[Data types]{.slide-title}
+
+<hr>
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::{.center-text}
+[**Quantitative** ]{.body-text-l}
+
+[Numeric information]{.body-text-l}
+:::
+
+<br>
+
+- **Continuous:** measured values, variable can take *any value* within a range
+- **Discrete:** variable only takes *limted values* (e.g. counts)
+:::
+
+
+::: {.column width="50%"}
+
+:::{.center-text}
+[**Qualitative** ]{.body-text-l}
+
+[Descriptions (usually words)]{.body-text-l}
+:::
+
+<br>
+
+- **Nominal:** order does not matter (classes or categories)
 - **Ordinal:** order matters, but the difference between values isn't known or equal (e.g. [Likert Scale](https://en.wikipedia.org/wiki/likert_scale))
+:::
+
+:::
+
+<br>
+
+:::{.center-text}
 - **Binary:** only two possible outcomes (yes/no, true/false, 1/0)
 :::
 
@@ -87,6 +152,93 @@ Art by [Allison Horst](https://allisonhorst.com/)
 
 ---
 
+## {#exercise-describe-data data-menu-title="Exercise: describe data"} 
+
+[Exercise]{.slide-title}
+
+<hr>
+
+✏️ [For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous), and identify the size of the observed dataset.]{style="color:green;"}
+
+<br>
+
+(A) A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.
+
+(B) We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.
+
+---
+
+## {#exercise-describe-data-sol-A-blank data-menu-title="Exercise: describe data"} 
+
+[Exercise A: Solution]{.slide-title}
+
+<hr>
+
+[A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.]{style="color:green;"}
+
+✏️   
+
+---
+
+## {#exercise-describe-data-sol-A data-menu-title="Exercise: describe data"} 
+
+[Exercise A: Solution]{.slide-title}
+
+<hr>
+
+[A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.]{style="color:green;"}
+
+- Dependent variable: nitrogen threshold exceeded — qualitative, binary
+- Independent variables:
+  - Fertilizer application rate — quantitative, continuous
+  - % agricultural land cover — quantitative, continuous
+  - Monthly rainfall — quantitative, continuous
+
+Sample size: n = 45 watersheds
+
+---
+
+## {#exercise-describe-data-sol-B-blank data-menu-title="Exercise: describe data"} 
+
+[Exercise B: Solution]{.slide-title}
+
+<hr>
+
+[We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.]{style="color:green;"}
+
+✏️   
+
+---
+
+## {#exercise-describe-data-sol-B data-menu-title="Exercise: describe data"} 
+
+[Exercise B: Solution]{.slide-title}
+
+<hr>
+
+[We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.]{style="color:green;"}
+
+- Dependent variable: number of complaints filed — quantitative, discrete
+- Independent variables:
+  - Median household income — quantitative, continuous
+  - Distance to nearest industrial facility — quantitative, continuous
+  - Type of nearest industrial facility — qualitative, nominal
+  - % residents who are renters — quantitative, continuous
+  - PM2.5 concentration — quantitative, continuous
+
+Sample size: n = 60 neighborhoods
+
+---
+
+## {#data-dsitributions-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Describing data distributions</div>
+<div class="custom-subtitle">Visualizations</div>
+</div>
+
+<!-- ---
+
 ## {#data-dist data-menu-title="Data distributions"} 
 
 [Data distributions]{.slide-title}
@@ -108,6 +260,7 @@ Art by [Allison Horst](https://allisonhorst.com/)
 ::: {.notes}
 Data distribution: it's shape, central tendencies, it's spread; we can use graphical representations of data that was collected from a sample or population
 :::
+ -->
 
 ---
 
