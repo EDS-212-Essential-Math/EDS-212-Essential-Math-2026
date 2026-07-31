@@ -52,9 +52,10 @@ The idea is that, instead of writing long sums like
 $$ x_1 + x_2 + \cdots + x_n$$ 
 we can write the same in a more compact form:
 
-$$\large\sum_{i=1}^{n} x_i$$
+$$\large\sum_{i=1}^{n} x_i.$$
 
-Read as *the sum of $x_i$ from i equals one to $n$*. 
+
+This is read as [*the sum of $x_i$ from i equals one to $n$*]{.teal-text}. 
 
 There's a few components to this notation:
 
@@ -122,7 +123,7 @@ $$\sum_{n=1}^{3} (2n+1) = \bigl(2(1)+1\bigr)+\bigl(2(2)+1\bigr)+\bigl(2(3)+1\big
 
 <hr>
 
-✏️ [Let's try these out!]{style="color:green;"}
+✏️ [Try these out individually first.]{style="color:green;"}
 
 **1)** Expand and evaluate: $\displaystyle\sum_{i=3}^{6} 3i$
 
@@ -272,22 +273,22 @@ It is a fundamental part of data science (and how computers understand & process
 
 - **scalar:** a value without direction, representing magnitude. For our purposes, a number:
 
-$$8 \text{ or } \lambda$$
+$$8 \text{ or } \lambda.$$
+
+. . .
 
 - **vector:** an ordered list of values, representing magnitude *and* direction (physics) or values for an observation or variable (data science). For example,
 
-$$(1,3,5) \text{ or } (x_1, x_2, x_3)$$
+$$(1,3,5) \text{ or } (x_1, x_2, x_3).$$
+
+. . .
 
 - **matrix:** am array of values made up rows and columns. For example, 
-
-\text{e.g. } 
 
 \begin{pmatrix}
 1 & 2 & 3\\
 10 & 20 & 30
 \end{pmatrix}
-
-\text{ or }
 
 \begin{pmatrix}
 a_{11} & a_{12} & a_{13}\\
@@ -354,6 +355,19 @@ $$x = (x_1, x_2, \ldots, x_n).$$
 
 ---
 
+## {#add-sub-blank data-menu-title="Addition & subtraction"} 
+
+[Vector addition & subtraction]{.slide-title}
+
+<hr>
+
+[Just add or subtract the corresponding coordinates.]{.body-text-m}
+
+✏️
+
+
+---
+
 ## {#add-sub data-menu-title="Addition & subtraction"} 
 
 [Vector addition & subtraction]{.slide-title}
@@ -374,6 +388,16 @@ $$u + v = (1+3, 2-1) = (4, 1)$$
 
 What does this look like graphically? **Let's draw it!**
 :::
+
+---
+
+## {#scalar-multipliers-blank data-menu-title="Scalar multipliers"} 
+
+[Scalar multipliers]{.slide-title}
+
+<hr>
+
+[You can multiply any vector by a scalar (constant). This will not change the *direction* of the vector - it will only change the *magnitude* of the vector.]{.body-text-m}
 
 ✏️
 
@@ -399,26 +423,44 @@ $$w = 3u = (3*1, 3*2) = (3, 6)$$
 What does this look like graphically? **Let's draw it!**
 :::
 
-✏️
-
 
 ---
 
 ## {#vector-3 data-menu-title="Vectors > 3 entries"} 
 
-[Vectors of > 3 coordinates]{.slide-title}
+[Vectors with > 3 coordinates]{.slide-title}
 
 <hr>
 
-<br>
 
-::: {.body-text-l}
+::: {.body-text-m}
 What about a vector with more than two coordinates? More than three?
+:::
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+. . .
+
+::: {.body-text-m}
 Is as valid as describing a "point" in multivariate space as a vector with two "coordinates" -- it's just difficult for us to visualize and conceptualize since our brain only happily deals with 3 dimensions. 
 :::
+
+---
+
+## {#dot-product-blank data-menu-title="Dot product"}
+
+[Dot product]{.slide-title}
+
+<hr>
+
+✏️
 
 ---
 
@@ -427,7 +469,6 @@ Is as valid as describing a "point" in multivariate space as a vector with two "
 [Dot product]{.slide-title}
 
 <hr>
-
 
 ::: {.body-text-l}
 For vectors 
@@ -450,15 +491,11 @@ $$x \cdot y = \sum_{i=1}^n x_i y_i$$
 
 <hr>
 
-✏️
-<br>
-<br>
-
 ::: {.body-text-m}
 For $a=(2,-1,0)$ and $b= (9,3,-4)$:
-
-
 :::
+
+✏️
 
 ---
 
@@ -467,9 +504,6 @@ For $a=(2,-1,0)$ and $b= (9,3,-4)$:
 [Dot product example]{.slide-title}
 
 <hr>
-
-<br>
-<br>
 
 ::: {.body-text-m}
 For $a=(2,-1,0)$ and $b= (9,3,-4)$:
@@ -580,7 +614,7 @@ $$
 
 ---
 
-## {#matrix-algebra data-menu-title="Matrix algebra"} 
+## {#matrix-algebra-blank data-menu-title="Matrix algebra"} 
 
 [Matrix algebra (add / subtract)]{.slide-title}
 
@@ -588,7 +622,19 @@ $$
 
 <br>
 
-<!-- [Addition & subtraction]{.body-text-l} -->
+[Add or subtract the corresponding elements (by matrix position) to create a new matrix of the same dimensions.]{.body-text-l}
+
+✏️
+
+---
+
+## {#matrix-algebra data-menu-title="Matrix algebra"} 
+
+[Matrix algebra (add / subtract)]{.slide-title}
+
+<hr>
+
+<br>
 
 [Add or subtract the corresponding elements (by matrix position) to create a new matrix of the same dimensions.]{.body-text-l}
 
@@ -601,6 +647,26 @@ $$
 #| fig-align: "center"
 knitr::include_graphics("images/matrix_addition.png")
 ```
+
+---
+
+## {#scalar-mult-blank data-menu-title="Scalar multiplication"} 
+
+[Scalar multiplication]{.slide-title}
+
+<hr>
+
+<br>
+
+::: {.body-text-m}
+To multiply a matrix by a *scalar*, multiply each element in the matrix by the scalar to get a scaled matrix of the same dimensions.
+
+<br>
+
+For example: 
+:::
+
+✏️
 
 ---
 
@@ -643,12 +709,27 @@ The dot product of two vectors is the sum of their elements multiplied:
 
 <br>
 
-For $\vec a =[1,5]$ and $\vec b = [2,-3]$:
+For $u =(1,5)$ and $v = (2,-3)$:
 
 <br>
 
-$$\vec a \cdot \vec b=(1)(2)+(5)(-3)=-13$$
+$$u  \cdot v=(1)(2)+(5)(-3)=-13$$
 :::
+
+---
+
+## {#matrix-mult-blank data-menu-title="Matrix multiplication"} 
+
+[Matrix multiplication]{.slide-title}
+
+<hr>
+
+<br>
+
+[We find the *dot product* of row $\cdot$ column vectors:]{.body-text-l}
+
+✏️
+
 
 ---
 
@@ -662,7 +743,6 @@ $$\vec a \cdot \vec b=(1)(2)+(5)(-3)=-13$$
 
 [We find the *dot product* of row $\cdot$ column vectors:]{.body-text-l}
 
-<br>
 
 ```{r}
 #| eval: true
@@ -680,39 +760,24 @@ knitr::include_graphics("images/matrix_multiplication.png")
 
 <hr>
 
+✏️ [Find the product of these two matrices](style="color:green;")
+
 <br>
 
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/matrix_multiplication_problem_1.png")
-```
+![](images/matrix_multiplication_problem_1.png){width=20%}
 
-::: {.notes}
-(2)(1)+(-1)(6)...(2)(5)+(-1)(-3)
-
-(0)(1)+(4)(6)...(0)(5)+(4)(-3)
-
-$solution = \begin{bmatrix}
-  -4 & 13 \\
-  24 & -12
-\end{bmatrix}$
-
-:::
 
 ---
 
 ## {#crit-thinking data-menu-title="Critical thinking"} 
 
-[Critical thinking: Matrices with unequal dimensions]{.slide-title}
+[Matrices with unequal dimensions]{.slide-title}
 
 <hr>
 
 <br>
 
-[What do you think the output matrix would contain if you were multiplying the following?]{.body-text-m} 
+[What would be the dimensions of the product if you were multiplying the following?]{.body-text-m} 
 
 <br>
 
@@ -784,6 +849,21 @@ $solution = \begin{bmatrix}
 knitr::include_graphics("images/diagonal_matrix.png")
 ```
 
+
+---
+
+## {#mult-diag-matrix-blank data-menu-title="Multiply by diagonal matrix"} 
+
+[What happens when we multiply a matrix by a diagonal matrix? ]{.slide-title}
+
+<hr>
+
+<br>
+
+[A diagonal matrix is also called a *scaling matrix* because it scales rows proportionally, but not by the same value:]{.body-text-m}
+
+✏️
+
 ---
 
 ## {#mult-diag-matrix data-menu-title="Multiply by diagonal matrix"} 
@@ -805,6 +885,42 @@ knitr::include_graphics("images/diagonal_matrix.png")
 #| fig-align: "center"
 knitr::include_graphics("images/diagonal_matrix_scaling.png")
 ```
+
+---
+
+## {#where-in-EDS data-menu-title="Multiply by diagonal matrix"} 
+
+[Where do matrices come up in EDS? ]{.slide-title}
+
+<hr>
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+[Rasters (matrix like)]{.center-text}
+
+![Source: [Neon](https://www.neonscience.org)](images/neon-raster.png)
+:::
+
+::: {.column width="60%"}
+
+[Machine learning (EDS 232)]{.center-text}
+
+![Adapted from [What is the Convolutional Neural Network Architecture?](https://www.analyticsvidhya.com/blog/2020/10/what-is-the-convolutional-neural-network-architecture/)](images/CNN-edited.jpeg)
+
+:::
+
+:::
+
+---
+
+## {#systems-of-equations-title data-menu-title="Systems of equations" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Systems of equations</div>
+</div>
+
 
 ---
 
