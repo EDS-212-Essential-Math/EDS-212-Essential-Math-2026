@@ -240,7 +240,7 @@ $$MSE = \frac{4+4+1}{3} = 3 \text{ °C}$$
 ## {#linear-algebra-section-title data-menu-title="Summation Notation" background-color="#003660"}
 
 <div class="page-center">
-<div class="custom-subtitle">Summation Notation</div>
+<div class="custom-subtitle">Vectors and matrices</div>
 </div>
 
 ---
@@ -260,9 +260,6 @@ Linear algebra "branch of mathematics concerning linear equations" (Wikipedia), 
 
 It is a fundamental part of data science (and how computers understand & process data), and useful for describing environmental processes.
 
-<br>
-
-As [Dr. Jason Brownlee](https://machinelearningmastery.com/gentle-introduction-linear-algebra/) writes, "Linear algebra is the mathematics of data."
 :::
 
 ---
@@ -273,15 +270,30 @@ As [Dr. Jason Brownlee](https://machinelearningmastery.com/gentle-introduction-l
 
 <hr>
 
-<br>
+- **scalar:** a value without direction, representing magnitude. For our purposes, a number:
 
-::: {.body-text-l}
-- **scalar:** a value without direction, representing magnitude
+$$8 \text{ or } \lambda$$
 
-- **vector:** an ordered list of values, representing magnitude *and* direction (physics) or values for an observation or variable (data science)
+- **vector:** an ordered list of values, representing magnitude *and* direction (physics) or values for an observation or variable (data science). For example,
 
-- **matrix:** a table of values
-:::
+$$(1,3,5) \text{ or } (x_1, x_2, x_3)$$
+
+- **matrix:** a 2-dimensional array of values (has rows and columns). For example, 
+
+\text{e.g. } 
+
+\begin{pmatrix}
+1 & 2 & 3\\
+10 & 20 & 30
+\end{pmatrix}
+
+\text{ or }
+
+\begin{pmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}
+\end{pmatrix}
+
 
 ---
 
@@ -304,7 +316,6 @@ As [Dr. Jason Brownlee](https://machinelearningmastery.com/gentle-introduction-l
 
 - Array programming / vectorized code
 - Machine learning
-- For loops
 :::
 
 ::: {.notes}
@@ -319,49 +330,27 @@ We can use linear algebra to help us solve system of equations
 
 <hr>
 
-<br>
-
-[**Where are vectors in EDS?**]{.body-text-l}
+[**Where are vectors in EDS?**]{.body-text-m}
 
 . . . 
 
-<br>
+[***Everywhere.*** ]{.body-text-m}
 
-[***Everywhere.*** ]{.body-text-l}
+. . .
 
-<br>
-
-::: {.body-text-m}
 Vectors are lists of values used to describe different features or variables of interest. For example, if you are trying to model *fish size* based on length (cm) and mass (g), then for a fish with length 32 cm weighing 281 g, you might describe that by: 
 
-$$\vec{F} = [32, 281]$$
-:::
+$$(32, 281)$$
 
-::: {.notes}
-we've borrowed the concept of vectors from math but changed it for data science 
-:::
+Sometimes vectors are represented with an arrow over the vector name:
 
----
+$$ \vec{x} = (32, 281)$$
 
-## {#notation data-menu-title="Notation"} 
+. . .
 
-[Notation]{.slide-title}
+Often, we will think of an "abstract vector" $x$ with $n$ **coordinates**:
 
-<hr>
-
-<br>
-
-::: {.body-text-l}
-Vectors are indicated with an arrow over the vector name:
-
-<br>
-
-$\vec{A} = [1,5]$
-
-<br>
-
-$\vec{AB} = [10.2, 3.1]$
-:::
+$$x = (x_1, x_2, \ldots, x_n).$$
 
 ---
 
@@ -371,21 +360,22 @@ $\vec{AB} = [10.2, 3.1]$
 
 <hr>
 
-::: {.body-text-l}
-Just add or subtract the corresponding pieces.
+::: {.body-text-m}
+Just add or subtract the corresponding coordinates.
 
 <br>
 
-If: $\vec{A} = [1, 2]$ and $\vec{B} = [3, 1]$, then: 
+If: $u = (1, 2)$ and $v = (3, -1)$, then: 
 
-<br>
 
-$$\vec{A} + \vec{B} = [1+3, 2+1] = [4, 3]$$
+$$u + v = (1+3, 2-1) = (4, 1)$$
 
 <br>
 
 What does this look like graphically? **Let's draw it!**
 :::
+
+✏️
 
 ---
 
@@ -395,112 +385,35 @@ What does this look like graphically? **Let's draw it!**
 
 <hr>
 
-<br>
-
 ::: {.body-text-m}
 You can multiply any vector by a scalar (constant). This will not change the *direction* of the vector - it will only change the *magnitude* of the vector. 
 
 <br>
 
-**Example:** $\vec{A} = [1,2]$
+**Example:** $u = (1,2)$
 
-<br>
-
-$$\vec{B} = 3\vec{A} = [3*1, 3*2] = [3, 6]$$
+$$w = 3u = (3*1, 3*2) = (3, 6)$$
 
 <br>
 
 What does this look like graphically? **Let's draw it!**
 :::
 
----
+✏️
 
-## {#draw-in-r data-menu-title="Draw in R"} 
-
-[In R:]{.slide-title}
-
-<hr>
-
-<br>
-
-[We create vectors in R using the `c()` function (for combine or concatenate), and can perform operations on numeric vectors using basic operators.]{.body-text-l}
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: true
-# Create vectors A and B ----
-A <- c(1,2)
-B <- c(5,9)
-```
 
 ---
 
-## {#draw-in-r-2 data-menu-title="Add"} 
+## {#vector-3 data-menu-title="Vectors > 3 entries"} 
 
-[Vector addition and subtraction in R]{.slide-title}
+[Vectors of > 3 coordinates]{.slide-title}
 
 <hr>
 
 <br>
 
 ::: {.body-text-l}
-Just do it! 
-
-<br>
-
-For $\vec{A}=[1,2]$ and $\vec{B}=[5,9]$:
-:::
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: true
-# Addition ----
-A + B
-
-# Subtraction ----
-A - B
-```
-
----
-
-## {#scalar-multiplication data-menu-title="Scalar multiplication"} 
-
-[Scalar multiplication in R]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-Just do it!
-
-<br>
-
-For $\vec{A}=[1,2]$, calculate $4\vec{A}$:
-:::
-
-```{r}
-#| eval: true
-#| echo: true
-4 * A
-```
-
----
-
-## {#vector-3 data-menu-title="Vectors > 3 elements"} 
-
-[Vectors of > 3 elements]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-$\vec{M}=c(2,4,1,8,6)$
+What about a vector with more than two coordinates? More than three?
 
 <br>
 
@@ -515,19 +428,37 @@ Is as valid as describing a "point" in multivariate space as a vector with two "
 
 <hr>
 
-<br>
 
 ::: {.body-text-l}
-For vectors $\vec a$ and $\vec b$, their dot product is:
+For vectors 
 
-<br>
+$$x = (x_1, \ldots, x_n) \text{ and } y = (y_1, \ldots, y_n)$$ 
 
-$$\vec a \cdot \vec b = \sum a_i b_i$$
+their **dot product** is:
+
+$$x \cdot y = \sum_{i=1}^n x_i y_i$$
 :::
 
+
+[[**In words:**]{.body-text-m} The dot product is the sum of coordinates of each vector multiplied together. It is a measure of how close the vectors "point" in the same direction]{.body-text}
+
+---
+
+## {#dot-product-example-blank data-menu-title="Dot product example"} 
+
+[Dot product example]{.slide-title}
+
+<hr>
+
+✏️
+<br>
 <br>
 
-[[**In words:**]{.body-text-m} The dot product is the sum of elements of each vector multiplied together, and is a measure of how close the vectors "point" in the same direction]{.body-text-m}
+::: {.body-text-m}
+For $a=(2,-1,0)$ and $b= (9,3,-4)$:
+
+
+:::
 
 ---
 
@@ -538,17 +469,17 @@ $$\vec a \cdot \vec b = \sum a_i b_i$$
 <hr>
 
 <br>
+<br>
 
 ::: {.body-text-m}
-For $\vec a=[2,-1,0]$ and $\vec b=[9,3,-4]$:
+For $a=(2,-1,0)$ and $b= (9,3,-4)$:
 
 <br>
 
-$$\vec a \cdot \vec b = (2)(9)+(-1)(3)+(0)(-4) =15$$
+$$ a \cdot  b = (2)(9)+(-1)(3)+(0)(-4) =15$$
 
 <br>
 
-This becomes very useful when describing systems of equations (tomorrow).
 :::
 
 ---
@@ -562,19 +493,19 @@ This becomes very useful when describing systems of equations (tomorrow).
 <br>
 
 ::: {.body-text-m}
-Sketch a quick graph, then find the dot product, of the following vector combinations: 
+[✏️ Sketch a quick graph, then find the dot product, of the following vector combinations:]{style="color:green;"} 
 
 <br>
 
-1. $\vec a=[0,4]$ and $\vec b =[6,0]$
+[1. $a=(0,4)$ and $b =(6,0)$]{style="color:green;"}
 
 <br>
 
-2. $\vec c=[-3,1]$ and $\vec d=[2,6]$
+[2. $x=(-3,1)$ and $d=(2,6)$]{style="color:green;"}
 
 <br>
 
-What is the value of the dot product for orthogonal vectors? 
+[What is the value of the dot product for orthogonal vectors? ]{style="color:green;"}
 :::
 
 ::: {.notes}
@@ -606,26 +537,10 @@ Vector addition & scalar multiplication are the basis of most linear algebra!
 
 ---
 
-## {#df data-menu-title="data frames"} 
+## {#break data-menu-title="5 minute break"} 
 
-[From Wickham's *Advanced R* chapter on [Data Structures](http://adv-r.had.co.nz/Data-structures.html):]{.slide-title2}
+[Let's take a 5 minute break]{.slide-title}
 
 <hr>
 
-<br>
-
-::: {.body-text-l}
->"Under the hood, a data frame is a list of equal-length vectors."
-:::
-
-```{r}
-#| eval: true
-#| echo: true
-food <- c("banana", "apple", "carrot")
-meal <- c("breakfast", "snack", "lunch")
-food_mass_g <- c(14.8, 19.2, 11.5)
-
-squirrel_meals <- data.frame(food, meal, food_mass_g) 
-squirrel_meals # Returns the data frame
-```
-
+![image: Flaticon.com](images/coffee-break.png)
