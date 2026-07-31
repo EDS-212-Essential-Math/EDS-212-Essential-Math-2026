@@ -93,8 +93,21 @@ Before:
 ::: {.column width="60%"}
 
 
-[Cella Schnabel]{.body-text-m .blue-text}
+[Cella Schnabel (she/her)]{.body-text-m .blue-text}
 
+- 2nd year PhD @ Bren advised by Ashley Larsen, Kelly Caylor, and Kathy Baylis
+
+Before:
+
+- B.S. in Environmental Engineering @ Cornell 
+- Farmer in upstate NY
+
+
+**Teaching & Research**
+
+- Broadly interested in food + water security planning under climate change.
+- Mostly use methods from econometrics, remote sensing, and uncertainty analysis.
+- Also TAing EDS 217 at the end of the MEDS summer sessions!
 
 :::
 
