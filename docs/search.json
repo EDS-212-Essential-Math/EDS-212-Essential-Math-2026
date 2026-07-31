@@ -1733,7 +1733,7 @@
     "href": "course-materials/slides/day1.1-slides.html#welcome",
     "title": "",
     "section": "",
-    "text": "Welcome to EDS 212 - Essential Math in Environmental Data Science\n\n\n\nInstructor: Carmen Galaz García\nTeaching assistant: Cella Schnabel\nCourse hours: 10am - 4:30pm PST\nLocation: NCEAS 1st Floor Classroom"
+    "text": "Welcome to EDS 212 - Essential Math in Environmental Data Science\n\n\n\nInstructor: Carmen Galaz García\nTeaching assistant: Cella Schnabel\nCourse hours: 10am - 3:30pm PST\nLocation: NCEAS 1st Floor Classroom"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#about-instructor",
@@ -1747,7 +1747,7 @@
     "href": "course-materials/slides/day1.1-slides.html#about-TA",
     "title": "",
     "section": "",
-    "text": "About your TA\n\n\n\nCella Schnabel"
+    "text": "About your TA\n\n\n\nCella Schnabel (she/her)\n\n2nd year PhD @ Bren advised by Ashley Larsen, Kelly Caylor, and Kathy Baylis\n\nBefore:\n\nB.S. in Environmental Engineering @ Cornell\nFarmer in upstate NY\n\nTeaching & Research\n\nBroadly interested in food + water security planning under climate change.\nMostly use methods from econometrics, remote sensing, and uncertainty analysis.\nAlso TAing EDS 217 at the end of the MEDS summer sessions!"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#about-you",
@@ -1761,7 +1761,7 @@
     "href": "course-materials/slides/day1.1-slides.html#course-description",
     "title": "",
     "section": "",
-    "text": "Course description\n\n\nUnits: 2\nGrading: Satisfactory/Unsatisfactory\nDescription: Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.\n\n\n\nThis is an “offline course”, your only one in MEDS. What it means is we’ll be focusing on conceptual understanding and some pen-and-paper practice, instead of coding. Why? We want to make sure you understand some fundamental topics before jumping into implementing.\n\n\n\n\nLet’s take a look at the course syllabus together."
+    "text": "Course description\n\n\nUnits: 2\nGrading: Satisfactory/Unsatisfactory\nDescription: Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.\nThis is an “offline course”, your only one in MEDS. What it means is we’ll be focusing on conceptual understanding and some pen-and-paper practice, instead of coding. Why? We want to make sure you understand some fundamental topics before jumping into implementing.\n\n\nLet’s take a look at the course syllabus together."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#topics",
@@ -1782,7 +1782,7 @@
     "href": "course-materials/slides/day1.1-slides.html#exp",
     "title": "",
     "section": "",
-    "text": "Student expectations\n\nWe expect all students will:\n\nSupport and encourage all classmates\nBe open to learning from each other\nBring a collaborative attitude and communicate respectfully\nSee opportunities to share kownledge as a chance to deepen understanding\nComplete all in-class exercises\n\n\nLogistics\n\nYou are required to attend all sessions, unless there’s a significant reason not to. Always communicate with your instructors.\nIf you are feeling sick: stay home and take care of yourself! Please mask up if you are not feeling 100%."
+    "text": "Student expectations\n\nWe expect all students will:\n\nSupport and encourage all classmates\nBe open to learning from each other\nBring a collaborative attitude and communicate respectfully\nSee opportunities to share kownledge as a chance to deepen understanding\nComplete all in-class exercises"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#survey",
@@ -2069,7 +2069,7 @@
     "href": "course-materials/slides/day1.1-slides.html#unit-conv",
     "title": "",
     "section": "",
-    "text": "Dimensional analysis (unit conversions)\n\nIn dimensional analysis, we multiply initial units by a sequence of unit conversion factors to arrive at the final desired units.\n\nExample: How many centimiters are there in 6 inches?\n✏️ Let’s solve this together."
+    "text": "Dimensional analysis (unit conversions)\n\nIn dimensional analysis, we multiply initial units by a sequence of unit conversion factors to arrive at the final desired units.\nExample: How many centimiters are there in 6 inches?\n✏️ Let’s solve this together."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-solution-1",
@@ -2671,7 +2671,7 @@
     "href": "course-materials/slides/day1.2-slides.html#lines-title",
     "title": "",
     "section": "",
-    "text": "Lines"
+    "text": "Linear functions"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#slope-int-blank",
@@ -2706,35 +2706,35 @@
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-1",
     "title": "",
     "section": "",
-    "text": "Equation of a line: practice\n\n\nFind the equation of the line that:\n\npasses through \\((3,5)\\) and \\((2,-1)\\).\npasses through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\nhas the following graph:\n\n\n\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2."
+    "text": "Equation of a line: practice\n\n\n\nFind the equation of the line that:\n\npasses through \\((3,5)\\) and \\((2,-1)\\).\npasses through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\nhas the following graph:\n\n\n\n\n- Make a graph showing the line that passes through (3,-1) and has slope equal to 2."
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-1",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-1",
     "title": "",
     "section": "",
-    "text": "Equation of a line: practice\n\nFind the equation of the line that passes through \\((3,5)\\) and \\((2,-1)\\).\n✏️ Let’s see a solution."
+    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((3,5)\\) and \\((2,-1)\\).\n✏️ Let’s see a solution."
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
     "title": "",
     "section": "",
-    "text": "Equation of a line: practice\n\nFind the equation of the line that passes through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\n✏️ Let’s see a solution."
+    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\n✏️ Let’s see a solution."
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
     "title": "",
     "section": "",
-    "text": "Equation of a line: practice\n\nFind the equation of the line that has the following graph:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✏️ Let’s see a solution."
+    "text": "Equation of a line: solutions\n\nFind the equation of the line that has the following graph:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✏️ Let’s see a solution."
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
     "title": "",
     "section": "",
-    "text": "Equation of a line: practice\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2.\n✏️ Let’s see a solution."
+    "text": "Equation of a line: solutions\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2.\n✏️ Let’s see a solution."
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#interpreting-slope",
@@ -3253,5 +3253,362 @@
     "title": "Differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#data-types",
+    "href": "course-materials/slides/day4.1-slides.html#data-types",
+    "title": "",
+    "section": "",
+    "text": "Data types\n\n\n\n\nQuantitative: numeric information\nQualitative: descriptions (usually words)\n\n\n\nA bit deeper:\n\n\nContinuous: measured values, can take an infinite possible values for a variable\nDiscrete: can only have certain values (e.g. counts)\nOrdinal: order matters, but the difference between values isn’t known or equal (e.g. Likert Scale)\nBinary: only two possible outcomes (yes/no, true/false, 1/0)"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#quantitative",
+    "href": "course-materials/slides/day4.1-slides.html#quantitative",
+    "title": "",
+    "section": "",
+    "text": "Quantitative data: continuous & discrete\n\n\n\nArt by Allison Horst"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#nom-ord-bin",
+    "href": "course-materials/slides/day4.1-slides.html#nom-ord-bin",
+    "title": "",
+    "section": "",
+    "text": "Nominal, ordinal, binary data:\n\n\n\nArt by Allison Horst"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#data-dist",
+    "href": "course-materials/slides/day4.1-slides.html#data-dist",
+    "title": "",
+    "section": "",
+    "text": "Data distributions\n\n\n\nArt by Allison Horst\n\n\nData distribution: it’s shape, central tendencies, it’s spread; we can use graphical representations of data that was collected from a sample or population"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#describe-dist",
+    "href": "course-materials/slides/day4.1-slides.html#describe-dist",
+    "title": "",
+    "section": "",
+    "text": "How can we describe how data are distributed?\n\n\nOur starting points:\n\n\n\nShape / patterns / clusters (data vizualization)\nCentral tendency (mean / median)\nSpread & uncertainty (standard deviation / standard error / confidence interval)"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#data-viz",
+    "href": "course-materials/slides/day4.1-slides.html#data-viz",
+    "title": "",
+    "section": "",
+    "text": "Useful data visualizations\n\n\n\n\nHistograms\nBoxplots\nScatterplots\n\n\n\n\n…then get even more involved:\n\nBeeswarm\nMarginal plots\nRaincloud plots\nPairs plots"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#histogram",
+    "href": "course-materials/slides/day4.1-slides.html#histogram",
+    "title": "",
+    "section": "",
+    "text": "Histogram\n\n\n\nA histogram is a graph of the frequency of observations within a series of bins (usually of equal size) for a variable.\n\nExample: distribution of penguin flipper lengths for chinstrap penguins"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot1",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot1",
+    "title": "",
+    "section": "",
+    "text": "Boxplot\n\n\nMost often:\n\n\n\nBox extends to 1st and 3rd quartile observation values\nLine at the median value\nWhiskers extend to last observation within 1 step (1 step = 1.5*interquartile range)\nAnything beyond whiskers indicated with a dot at the observation value"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot2",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot2",
+    "title": "",
+    "section": "",
+    "text": "Boxplot"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot-ex",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot-ex",
+    "title": "",
+    "section": "",
+    "text": "Boxplot example:\n\n\n\n# create vectors of Tallie & Molly miles logged ----\ntallie &lt;- c(1.0, 1.2, 1.8, 2.1, 2.4, 2.9, 3.4, 4.7, 5.1, 5.6, 7.8, 10.4, 15.4)\nmolly &lt;- c(0.5, 0.4, 1.1, 1.2, 3.2, 2.1, 3.3, 2.3, 0.7, 0.9, 1.9, 3.5, 1.9)\n\n# turn vectors into a data frame that can be plotted ----\ndog_miles &lt;- data.frame(tallie, molly) |&gt; \n  pivot_longer(cols = c(tallie, molly), names_to = \"name\", values_to = \"miles\")\n\n# make boxplot of Tallie vs. Molly miles ----\nggplot(data = dog_miles, aes(x = miles, y = name)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#scatterplots",
+    "href": "course-materials/slides/day4.1-slides.html#scatterplots",
+    "title": "",
+    "section": "",
+    "text": "Scatterplots\n\nAlways, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.\n\n\nggplot(data = palmerpenguins::penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species))"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#summarizing-numerically",
+    "href": "course-materials/slides/day4.1-slides.html#summarizing-numerically",
+    "title": "",
+    "section": "",
+    "text": "Summarizing data numerically\n\n\n\n\nCentral tendency\nVariance and standard deviation\nStandard error\nConfidence interval"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#mean",
+    "href": "course-materials/slides/day4.1-slides.html#mean",
+    "title": "",
+    "section": "",
+    "text": "Mean\n\nAverage value of sample observations, calculated by summing all observation values and dividing by the number of observations. E.g. \\(mean\\;of\\;3, 7, 17 = \\frac{3+7+17}{3} = 9\\)\n\nPros:\n\n\nAverage value is often useful metric\nCommonly reported\n\n\nCons:\n\n\nSusceptible to outliers and skew\nSubject to misinterpretation as “most likely value”\n\n\n\nSB housing market typically reports median cost rather than mean cost? Why do you think that is?"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#median",
+    "href": "course-materials/slides/day4.1-slides.html#median",
+    "title": "",
+    "section": "",
+    "text": "Median\n\nMiddle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. \\(median\\;of\\;3, 7, 17 = 7\\)\n\nPros:\n\n\nLess susceptible to skew and outliers\nBetter as sample size increases\n\n\n\nCons:\n\n\nDoesn’t take into account the magnitude of all values"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#central-tendency",
+    "href": "course-materials/slides/day4.1-slides.html#central-tendency",
+    "title": "",
+    "section": "",
+    "text": "Image: Sirkin, R. M. (2006). Measuring central tendency. In Statistics for the social sciences (pp. 83-126). SAGE Publications, Inc., https://www.doi.org/10.4135/9781412985987"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#best-way",
+    "href": "course-materials/slides/day4.1-slides.html#best-way",
+    "title": "",
+    "section": "",
+    "text": "The best way to describe the distribution of the data is to present the data itself."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#var-stdev",
+    "href": "course-materials/slides/day4.1-slides.html#var-stdev",
+    "title": "",
+    "section": "",
+    "text": "Variance and standard deviation\n\n\nBoth are measures of data spread.\n\n\n\n\nVariance\nReported in units of measurement squared\n\n\n\n\n\n\n\n\n\n\n\n\nStandard deviation\nReported in units of measurement\n\n\n\n\n\n\n\n\n\n\n\n\nStandard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches.\nVariances add (standard deviation doesn’t). For example, if we say that sex explains four square inches of variance, you know that 5 square inches are due to other factors.\nSee this discussion and this discussion\nThe variance measures the mathematical dispersion of data relative to the mean, and while theoretically correct, can be difficult to interpret in a real-world sense. Standard deviation is expressed in the same unit of measurement as the data (e.g. inches, rather than square inches), and therefore can be a more intuitive value to report."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#variance",
+    "href": "course-materials/slides/day4.1-slides.html#variance",
+    "title": "",
+    "section": "",
+    "text": "Variance\n\nVariance: Mean squared distance of observations from the mean\n\n\n\nWhere \\(s^2\\) is the sample variance, \\(x_i\\) is a sample observation value, \\(\\bar x\\) is the sample mean, and \\(n\\) is the number of observations."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#calc-variance1",
+    "href": "course-materials/slides/day4.1-slides.html#calc-variance1",
+    "title": "",
+    "section": "",
+    "text": "Calculate variance by hand (1/2)\n\nGiven these data: \\(2, 4, 4, 6, 9\\)\n\nCalculate the mean:\n\n\\[ mean = \\frac{2+4+4+6+9}{5}=\\frac{25}{5}=5\\] 2. Subtract the mean from each data point and square the result:\n\\[(2-5)^2 = (-3)^2 = 9\\] \\[(4-5)^2 = (-1)^2 = 1\\] \\[(4-5)^2 = (-1)^2 = 1\\]\n\\[(6-5)^2 = (1)^2 = 1\\] \\[(9-5)^2 = (4)^2 = 16\\] —"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#calc-variance2",
+    "href": "course-materials/slides/day4.1-slides.html#calc-variance2",
+    "title": "",
+    "section": "",
+    "text": "Calculate variance by hand (2/2)\n\nGiven these data: \\(2, 4, 4, 6, 9\\)\n\nSum the squared differences:\n\n\\[9+1+1+1+16 = 28\\]\n\nDivide by the number of data points minus 1 (\\(n\\) - 1)\n\n\\[Variance = \\frac{28}{5-1} = 7\\]\n\nAlternatively, in R:\n\nvar(c(2, 4, 4, 6, 9))\n\n[1] 7"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#stdev",
+    "href": "course-materials/slides/day4.1-slides.html#stdev",
+    "title": "",
+    "section": "",
+    "text": "Standard deviation\n\nAlso a measure of data spread, calculated by taking the square root of the variance.\n\n\nIn R:\n\nsqrt(var(c(2, 4, 4, 6, 9)))\n\n[1] 2.645751\n\n# or alternatively, just use sd()\nsd(c(2, 4, 4, 6, 9))\n\n[1] 2.645751"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#datasaurus-dozen1",
+    "href": "course-materials/slides/day4.1-slides.html#datasaurus-dozen1",
+    "title": "",
+    "section": "",
+    "text": "Beware summary statistics alone . . .\n\nMeet the Datasaurus Dozen"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#datasaurus-dozen2",
+    "href": "course-materials/slides/day4.1-slides.html#datasaurus-dozen2",
+    "title": "",
+    "section": "",
+    "text": "Same summary statistics, different distributions\n\n\n\nSource: Autodesk"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#gorilla",
+    "href": "course-materials/slides/day4.1-slides.html#gorilla",
+    "title": "",
+    "section": "",
+    "text": "From: Yanai, I., Lercher, M. A hypothesis is a liability. Genome Biol 21, 231 (2020). https://doi.org/10.1186/s13059-020-02133-w\n\n\nGave students a made-up dataset containing the BMI of 1786 people and the number of steps each took on a particular day.\nStudents in Group 1 were asked to consider three specific hypotheses + also if there was anything else they could conclude from the dataset.\nGroup 2 was simply asked, “What do you conclude from the dataset?”\nIf you plotted the number of steps vs. BMI, you’d find the gorilla. Students driven by hypotheses skipped this step more often than those that were not hypothesis-driven."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#conf-int",
+    "href": "course-materials/slides/day4.1-slides.html#conf-int",
+    "title": "",
+    "section": "",
+    "text": "Confidence interval\n\n\nConfidence interval: a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.\n\n\n\nWhat it’s NOT:\n“There is a 95% chance that the true population parameter is between values X and Y.”"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#conf-int-ex",
+    "href": "course-materials/slides/day4.1-slides.html#conf-int-ex",
+    "title": "",
+    "section": "",
+    "text": "Confidence interval example\n\n\nMean shark length is 8.42 \\(\\pm\\) 3.55 ft (mean \\(\\pm\\) standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).\n\n\n\n\nWhat this DOES NOT mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet.\n\nThe true population mean is a fixed value and does not change – the CI either contains this true mean or it does not. There is no probability involved.\n\n\n\n\nWhat this DOES mean: If we took a bunch of sets of samples from the population (all n = 15), then 95% of the time, the calculated mean would fall within this range. \n\nThis statement correctly describes the frequency with which we would expect CIs to capture the mean over many samples."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#comm",
+    "href": "course-materials/slides/day4.1-slides.html#comm",
+    "title": "",
+    "section": "",
+    "text": "Communicating data summaries\n\n\n\n\n\nThe “Bar plots” philosophy: show as much as you can for the audience you’re presenting to\nSummary statistics are often useful, but are a small part of the whole data story\nUncertainty is important! How can we responsibly communicate it?\nAll summaries are strongest when accompanied by additional data communication\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtwork by Allison Horst"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#data-types-1",
+    "href": "course-materials/slides/day4.1-slides.html#data-types-1",
+    "title": "",
+    "section": "",
+    "text": "Data types\n\n\n\n\nQuantitative\nNumeric information\n\n\n\nQualitative\nDescriptions (usually words)"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#data-types-2",
+    "href": "course-materials/slides/day4.1-slides.html#data-types-2",
+    "title": "",
+    "section": "",
+    "text": "Data types\n\n\n\n\nQuantitative\nNumeric information\n\n\n\nContinuous: measured values, variable can take any value within a range\nDiscrete: variable only takes limted values (e.g. counts)\n\n\n\nQualitative\nDescriptions (usually words)\n\n\n\nNominal: order does not matter (classes or categories)\nOrdinal: order matters, but the difference between values isn’t known or equal (e.g. Likert Scale)\n\n\n\n\n\nBinary: only two possible outcomes (yes/no, true/false, 1/0)"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data",
+    "title": "",
+    "section": "",
+    "text": "Exercise\n\n✏️ For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous), and identify the size of the observed dataset.\n\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-1",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-1",
+    "title": "",
+    "section": "",
+    "text": "Exercise A: Solution\n\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\n\n\nDependent variable: nitrogen threshold exceeded — qualitative, binary\nIndependent variables:\n\nFertilizer application rate — quantitative, continuous\n% agricultural land cover — quantitative, continuous\nMonthly rainfall — quantitative, continuous\n\n\nSample size: n = 45 watersheds"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-2",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-2",
+    "title": "",
+    "section": "",
+    "text": "Exercise\n\n\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A",
+    "title": "",
+    "section": "",
+    "text": "Exercise A: Solution\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\n\nDependent variable: nitrogen threshold exceeded — qualitative, binary\nIndependent variables:\n\nFertilizer application rate — quantitative, continuous\n% agricultural land cover — quantitative, continuous\nMonthly rainfall — quantitative, continuous\n\n\nSample size: n = 45 watersheds"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B",
+    "title": "",
+    "section": "",
+    "text": "Exercise B: Solution\n\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.\n\nDependent variable: number of complaints filed — quantitative, discrete\nIndependent variables:\n\nMedian household income — quantitative, continuous\nDistance to nearest industrial facility — quantitative, continuous\nType of nearest industrial facility — qualitative, nominal\n% residents who are renters — quantitative, continuous\nPM2.5 concentration — quantitative, continuous\n\n\nSample size: n = 60 neighborhoods"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A-blank",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A-blank",
+    "title": "",
+    "section": "",
+    "text": "Exercise A: Solution\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\n✏️"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B-blank",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B-blank",
+    "title": "",
+    "section": "",
+    "text": "Exercise B: Solution\n\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.\n✏️"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#data-types-title",
+    "href": "course-materials/slides/day4.1-slides.html#data-types-title",
+    "title": "",
+    "section": "",
+    "text": "Data types"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#data-dsitributions-title",
+    "href": "course-materials/slides/day4.1-slides.html#data-dsitributions-title",
+    "title": "",
+    "section": "",
+    "text": "Describing data distributions\n\n\nVisualizations"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#exp-2",
+    "href": "course-materials/slides/day1.1-slides.html#exp-2",
+    "title": "",
+    "section": "",
+    "text": "Student expectations\n\nWe expect all students will:\n\nSupport and encourage all classmates\nBe open to learning from each other\nBring a collaborative attitude and communicate respectfully\nSee opportunities to share kownledge as a chance to deepen understanding\nComplete all in-class exercises\n\n\nLogistics\n\nYou are required to attend all sessions, unless there’s a significant reason not to. Always communicate with your instructors.\nIf you are feeling sick: stay home and take care of yourself! Please mask up if you are not feeling 100%."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#equations-solved-1",
+    "href": "course-materials/slides/day1.1-slides.html#equations-solved-1",
+    "title": "",
+    "section": "",
+    "text": "2. Solving equations\n\nEquations help us find unknown values that satisfy certain conditions.\nRemember the rules:\n\nNever change an equation. Instead, we rewrite them into more useful forms\nManipulate BOTH sides of an equation with the SAME PROCEDURE.\n\n Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#equations-solved-2",
+    "href": "course-materials/slides/day1.1-slides.html#equations-solved-2",
+    "title": "",
+    "section": "",
+    "text": "2. Solving equations\n\nEquations help us find unknown values that satisfy certain conditions.\nRemember the rules:\n\nNever change an equation. Instead, we rewrite them into more useful forms\nManipulate BOTH sides of an equation with the SAME PROCEDURE.\n\n Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation. \nExample\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\\[\n\\require{cancel}\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n\\end{aligned}\n\\]\n✏️ Take a minute to solve this individually."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#polynomials-1",
+    "href": "course-materials/slides/day1.1-slides.html#polynomials-1",
+    "title": "",
+    "section": "",
+    "text": "Polynomials describe more complex relationships through exponents\n\nA polynomial is a function of the form: \\[\n\\large\n\\begin{align}\na_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0\n\\end{align}\n\\]\n\n\\(x\\) is the variable\n\\(a_i\\) are constants (fixed numbers) that are called the coefficients of the polynomial\neach \\(a_ix^i\\) is called a term of the polynomial,\n\\(n\\) is called the degree of the polynomial, this is the largest exponent in the polynomial."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#polynomials-2",
+    "href": "course-materials/slides/day1.1-slides.html#polynomials-2",
+    "title": "",
+    "section": "",
+    "text": "Polynomials describe more complex relationships through exponents\n\nA polynomial is a function of the form: \\[\n\\large\n\\begin{align}\na_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0\n\\end{align}\n\\]\n\n\\(x\\) is the variable\n\\(a_i\\) are constants (fixed numbers) that are called the coefficients of the polynomial\neach \\(a_ix^i\\) is called a term of the polynomial,\n\\(n\\) is called the degree of the polynomial, this is the largest exponent in the polynomial.\n\nExample:\n\n\\(x^5 + x^2 - 1\\) is a polynomial of degree five with three terms.\nLinear functions like \\(mx + c\\) where \\(m\\) and \\(c\\) are constants are polynomials of degree 1!\n\nPolynomials often represent real world data better than a linear function."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#break",
+    "href": "course-materials/slides/day1.1-slides.html#break",
+    "title": "",
+    "section": "",
+    "text": "Let’s take a 5 minute break\n\n\nimage: Flaticon.com"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#functions-1",
+    "href": "course-materials/slides/day1.2-slides.html#functions-1",
+    "title": "",
+    "section": "",
+    "text": "Functions\n\nFunctions are mathematical expressions that tell us how input values are related to output values."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#functions-2",
+    "href": "course-materials/slides/day1.2-slides.html#functions-2",
+    "title": "",
+    "section": "",
+    "text": "Functions\n\nFunctions are mathematical expressions that tell us how input values are related to output values.\n\nFor example, \\(y = 3x-5\\) is a function that tells us the value of y at any value of x. In this scenario, we would probably say y is a function of x."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#functions-3",
+    "href": "course-materials/slides/day1.2-slides.html#functions-3",
+    "title": "",
+    "section": "",
+    "text": "Functions\n\nFunctions are mathematical expressions that tell us how input values are related to output values.\n\nFor example, \\(y = 3x-5\\) is a function that tells us the value of y at any value of x. In this scenario, we would probably say y is a function of x.\nCould you also rewrite it and say x is a function of y?\nHere, with no knowledge of what’s an input and what’s an output, sure - but usually in environmental data science we specify the input variable(s), and the output variable(s) carefully.\nWhat follows is the expression in the format of:\n\n“[output variable(s)] is/are a function of [input variable(s)]”.\n\n\nAlso: output variable = dependent variable and input variable = independent variable."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#graph-ingredients-1",
+    "href": "course-materials/slides/day1.2-slides.html#graph-ingredients-1",
+    "title": "",
+    "section": "",
+    "text": "Two key ingredients to graphs\n\n\n\nIntercepts\n\n\\(x\\)-intercept\n\nWhere does the graph intersect the \\(x\\)-axis?\nIn other words, for what values of \\(x\\) do we have \\((x,0)\\) be part of the graph?\n\n\n\n\nWhat are the intercepts of the polynomial function in red?"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#graph-ingredients-2",
+    "href": "course-materials/slides/day1.2-slides.html#graph-ingredients-2",
+    "title": "",
+    "section": "",
+    "text": "Two key ingredients to graphs\n\n\n\nIntercepts\n\n\\(x\\)-intercept\n\nWhere does the graph intersect the \\(x\\)-axis?\nIn other words, for what values of \\(x\\) do we have \\((x,0)\\) be part of the graph?\n\n\\(y\\)-intercept\n\nWhere does the graph intersect the \\(y\\)-axis?\nIn other words, for what value of \\(y\\) do we have \\((0,y)\\) be part of the graph?\n\n\n\n\nWhat are the intercepts of the polynomial function in red?"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#end-of-day",
+    "href": "course-materials/slides/day1.2-slides.html#end-of-day",
+    "title": "",
+    "section": "",
+    "text": "End of day 1!"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#what-we-covered",
+    "href": "course-materials/slides/day1.2-slides.html#what-we-covered",
+    "title": "",
+    "section": "",
+    "text": "What we covered today\n\n\n🔢 Algebra review\n\n🗺️ Solving equations\n✖️ Exponents\n\n📐 Polynomials\n\n🌡 Units\n\n🧩 Definition of functions \n\n📊 Graphing\n\n💬 Reading graphs\n\n📈 Linear functions\n\n↗️ Slope as a rate of change"
   }
 ]
