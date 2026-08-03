@@ -92,7 +92,6 @@ Before:
 
 ::: {.column width="60%"}
 
-
 [Cella Schnabel (she/her)]{.body-text-m .blue-text}
 
 - 2nd year PhD @ Bren advised by Ashley Larsen, Kelly Caylor, and Kathy Baylis

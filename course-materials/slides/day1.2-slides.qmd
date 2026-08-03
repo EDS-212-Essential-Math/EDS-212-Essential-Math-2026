@@ -135,7 +135,7 @@ For the following combinations of related variables, which do you expect would b
 
 <hr>
 
-
+✏️ 
 
 ---
 
@@ -233,7 +233,7 @@ Graphs are a way for us to more easily process trends or patterns that may be mo
 
 :::: {.columns}
 ::: {.column width="50%"}
-```{r}
+```{r,out.width="70%"}
 library(DT)
 library(tidyverse)
 
@@ -246,7 +246,7 @@ DT::datatable(car,
 :::
 
 :::{.column width="50%"}
-```{r,echo=FALSE, fig.width=6, fig.height=6,out.width="90%",fig.align='right'}
+```{r,echo=FALSE, fig.width=6, fig.height=6,out.width="70%",fig.align='right'}
 ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) + 
     geom_boxplot(fill="slateblue", alpha=0.2) + 
     xlab("Number of Cylinders")+
@@ -354,36 +354,11 @@ ggplot(pdf,aes(x=x,y=y))+
 - $\color{blue}{y=0.85x+0.44}$
 
 :::
+
 :::{.column width="50%"}
-
-```{r echo=FALSE}
-
-x=seq(0,10,by=0.01)
-sn=sin(3*x)+2*x
-pol=-0.2*x^3+2*x^2-2*x
-reg=x*0.85+0.44
-
-p2df=data.frame(sin=sn,polynomial=pol,linear=reg,x=x) %>% 
-  pivot_longer(cols=!x,values_to="values",names_to = "fun")
-```
-
-
-```{r echo=FALSE, fig.align='center',fig.dim=c(6,8),out.width="70%"}
-p1<-ggplot(p2df,aes(x=x,y=values,color=fun))+
-  geom_path(linewidth=3)+
-  theme_classic()+
-  scale_color_manual(values=c("blue","red","darkgreen"),name="Function Type")+
-  labs(y="y")+
-  theme(text = element_text(size = 28)) +
-  geom_hline(yintercept=0,color="black",size=1.5)+
-  scale_x_continuous(expand = c(0, 0),limits = c(0,11)) +
-  scale_y_continuous(expand = c(0, 0),limits=c(-22,22))+
-  theme(legend.position = c(.5,.25))
-  
-p1
-  
-```
+![](images/graphs-examples.png)
 :::
+
 ::::
 
 ---
@@ -413,11 +388,7 @@ Intercepts
 :::{.center-text}
 What are the intercepts of the polynomial function in red?
 :::
-
-```{r echo=FALSE,fig.align='center',fig.dim=c(6,8),out.width="70%"}
-p1+theme(legend.position = "none")
-  
-```
+![](images/graphs-examples.png){width=60%}
 :::
 ::::
 
@@ -453,10 +424,8 @@ Intercepts
 What are the intercepts of the polynomial function in red?
 :::
 
-```{r echo=FALSE,fig.align='center',fig.dim=c(6,8),out.width="70%"}
-p1+theme(legend.position = "none")
-  
-```
+![](images/graphs-examples.png){width=60%}
+
 :::
 ::::
 
@@ -496,7 +465,7 @@ p1+theme(legend.position = "none")
 
 . . .
 
-![](/course-materials/slides/images/correlation-1-wind-power.png){width="60%" fig-align="center"}
+![](/course-materials/slides/images/correlation-1-wind-power.png){width="50%" fig-align="center"}
 
 ---
 
