@@ -2328,7 +2328,7 @@
     "href": "course-materials/slides/day2.2-slides.html#diff-rules-summary",
     "title": "",
     "section": "",
-    "text": "Summary of differentiation rules\n\n\n\n\n\n\n\n\n\n\nDifferentiation Rule\n\\(f'(x)\\) notation\n\\(\\frac{d}{dx}\\) notation\n\n\n\n\nConstant Rule\n\\(f(x)=c \\Rightarrow f'(x)=0\\)\n\\(\\frac{d}{dx}[c]=0\\)\n\n\nPower Rule\n\\(f(x)=x^n \\Rightarrow f'(x)=n x^{n-1}\\)\n\\(\\frac{d}{dx}[x^n]=n x^{n-1}\\)\n\n\nSum Rule\n\\((g(x)+h(x))'=g'(x)+h'(x)\\)\n\\(\\frac{d}{dx}[g(x)+h(x)]=\\frac{d}{dx}g(x)+\\frac{d}{dx}h(x)\\)\n\n\nDifference Rule\n\\((g(x)-h(x))' = g'(x)-h'(x)\\)\n\\(\\frac{d}{dx}[g(x)-h(x)]=\\frac{d}{dx}g(x)-\\frac{d}{dx}h(x)\\)\n\n\nConstant Multiplier Rule\n\\((c\\cdot g(x))'=c\\,g'(x)\\)\n\\(\\frac{d}{dx}[c\\,g(x)]=c\\,\\frac{d}{dx}g(x)\\)\n\n\n\n\nAnd two special derivatives: \\(\\frac{d}{dx}(e^x) = e^x\\) and \\(\\frac{d}{dx}ln(x)=\\frac{1}{x}\\).\n \n\nThere’s more differentiation rules (product, quotient, chain rule).\nThey’re fun, but we won’t be reviewing them."
+    "text": "Summary of differentiation rules\n\n\n\n\n\n\n\n\n\n\nDifferentiation Rule\n\\(f'(x)\\) notation\n\\(\\frac{d}{dx}\\) notation\n\n\n\n\nConstant Rule\n\\(f(x)=c \\Rightarrow f'(x)=0\\)\n\\(\\frac{d}{dx}[c]=0\\)\n\n\nPower Rule\n\\(f(x)=x^n \\Rightarrow f'(x)=n x^{n-1}\\)\n\\(\\frac{d}{dx}[x^n]=n x^{n-1}\\)\n\n\nSum Rule\n\\((g(x)+h(x))'=g'(x)+h'(x)\\)\n\\(\\frac{d}{dx}[g(x)+h(x)]=\\frac{d}{dx}g(x)+\\frac{d}{dx}h(x)\\)\n\n\nDifference Rule\n\\((g(x)-h(x))' = g'(x)-h'(x)\\)\n\\(\\frac{d}{dx}[g(x)-h(x)]=\\frac{d}{dx}g(x)-\\frac{d}{dx}h(x)\\)\n\n\nConstant Multiplier Rule\n\\((c\\cdot g(x))'=c\\,g'(x)\\)\n\\(\\frac{d}{dx}[c\\,g(x)]=c\\,\\frac{d}{dx}g(x)\\)\n\n\n\n\nAnd two special derivatives: \\(\\frac{d}{dx}(e^x) = e^x\\) and \\(\\frac{d}{dx}ln(x)=\\frac{1}{x}\\).\n\nThere’s more differentiation rules (product, quotient, chain rule).\nThey’re fun, but we won’t be reviewing them."
   },
   {
     "objectID": "course-materials/slides/day2.2-slides.html#higher-order-der",
@@ -2441,6 +2441,13 @@
     "title": "",
     "section": "",
     "text": "Let’s break it down.\n\n\n\\[\\frac{\\partial C}{\\partial t}=D_x \\frac{\\partial^2C}{\\partial x^2} + D_y\\frac{\\partial^2C}{\\partial y^2}+D_z\\frac{\\partial^2C}{\\partial z^2}-v\\frac{\\partial C}{\\partial x}-\\lambda RC\\]\n\n\nLeft-hand-side: Rate of concentration change (over time)\nRight-hand-side first 3 terms: Concentration change due to dispersion in \\(x\\), \\(y\\), and \\(z\\) directions\nRight-hand-side fourth term: Concentration change due to groundwater transport (in groundwater flow direction, x)\nRight-hand-side final term: Reaction term (e.g. biodegradation / abiotic degradation)\n\n\nThis example is here (probably) to show that partial derivatives are useful in solving real-world environmental problems."
+  },
+  {
+    "objectID": "course-materials/slides/day2.2-slides.html#what-we-covered",
+    "href": "course-materials/slides/day2.2-slides.html#what-we-covered",
+    "title": "",
+    "section": "",
+    "text": "What we covered today\n\n\n🌱 The number e and exp()\n\n🐰 Logistic growth\n\n🔢 Natural logarithms\n\n🔎 Limits\n\n🖊️ Derivatives and rate of change\n\n🛤️ Tangent lines\n\n📝 Rules for differentiation\n\n🔹 Constant rule\n\n💪 Power rule\n\n➕ Sum and difference rule\n\n✖️ Product rule\n\n📈 Higher order derivatives\n\n🌓 Partial derivatives"
   },
   {
     "objectID": "course-materials/slides/day5.1-slides.html#title-slide",

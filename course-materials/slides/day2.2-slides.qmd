@@ -661,9 +661,6 @@ $$
 
 And two special derivatives: $\frac{d}{dx}(e^x) = e^x$ and $\frac{d}{dx}ln(x)=\frac{1}{x}$.
 
-<br>
-<br>
-
 :::{.center-text .body-text-s}
 There's more differentiation rules (product, quotient, chain rule). 
 
@@ -1005,3 +1002,28 @@ $D_x, D_y, D_z$ are hydrodynamic diffusion coefficients in the $x$, $y$, and $z$
 ::: {.notes}
 This example is here (probably) to show that partial derivatives are useful in solving real-world environmental problems.
 :::
+
+---
+
+## {#what-we-covered data-menu-title="What we covered today" }
+
+
+[What we covered today]{.slide-title}
+
+<hr>
+- <span style="color:#336666"><b>🌱 The number e and exp()</b></span>  
+- <span style="color:#003399"><b>🐰 Logistic growth</b></span>    
+- <span style="color:#990099"><b>🔢 Natural logarithms</b></span>  
+- <span style="color:#660033"><b>🔎 Limits</b></span>  
+- <span style="color:#993300"><b>🖊️ Derivatives and rate of change</b></span>  
+- <span style="color:#330000"><b>🛤️ Tangent lines</b></span>  
+- <span style="color:#333300"><b>📝 Rules for differentiation</b></span>  
+- <span style="color:#996600"><b>🔹 Constant rule</b></span>  
+- <span style="color:#660000"><b>💪 Power rule</b></span>  
+- <span style="color:#003300"><b>➕ Sum and difference rule</b></span>  
+- <span style="color:#990000"><b>✖️ Product rule</b></span>  
+- <span style="color:#003399"><b>📈 Higher order derivatives</b></span>    
+- <span style="color:#333300"><b>🌓 Partial derivatives</b></span>  
+
+
+

@@ -82,7 +82,7 @@ e^x\cdot e^y &=& ?\\
 \end{align}
 $$
 
-✏️ [Take a moment to write these with a single exponent.]{style="color:green;"  .body-text-m}
+✏️ [Take a moment to write these with a single exponent.]{style="color:green;"}
 
 --- 
 
