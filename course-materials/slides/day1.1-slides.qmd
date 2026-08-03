@@ -47,7 +47,7 @@ format:
 
 ## {#about-instructor data-menu-title="About your instructor"}
 
-[About your instructor]{.slide-title}
+[About your instructor]{.slide-title .smaller}
 
 <hr>
 
@@ -74,9 +74,9 @@ Before:
 :::
 
 ::: {.column width="40%"}
-![](/images/carmen.png){fig-align="center" width="70%"}
+![](/images/carmen.png){fig-align="center" width="60%"}
 
-![](/images/bren-hex.png){fig-align="center"}
+![](/images/bren-hex.png){fig-align="center" width="40%"}
 :::
 :::
 
@@ -84,7 +84,7 @@ Before:
 
 ## {#about-TA data-menu-title="About your TA"}
 
-[About your TA]{.slide-title}
+[About your TA]{.slide-title .smaller}
 
 <hr>
 
@@ -112,9 +112,9 @@ Before:
 :::
 
 ::: {.column width="40%"}
-![](/images/cella.png){fig-align="center" width="70%"}
+![](/images/cella.png){fig-align="center" width="60%"}
 
-![](/images/bren-hex.png){fig-align="center"}
+![](/images/bren-hex.png){fig-align="center" width="40%"}
 :::
 :::
 
@@ -176,8 +176,6 @@ Let's take a look at the [course syllabus](https://docs.google.com/document/d/1y
 [Objectives (in general terms)]{.slide-title}
 
 <hr>
-
-![](images/limits_horst.jpg){fig-align="center"}
 
 1.  Shake off the math dust
 
@@ -464,27 +462,24 @@ Always add/substract/multiply/divide by the same number on both sides. More gene
 
 <hr>
 
-
-
-[Simplify the following:]{.body-text-m}
-
+✏️ [Take a minute to solve these individually.]{style="color:green;"  .body-text-m}
 
 <br>
 
-* [$\frac{4-6}{2}(3+1)-\frac{1+2*4}{3}$]{.body-text-m}
+* Simplify $\frac{4-6}{2}(3+1)-\frac{1+2*4}{3}$
 
 <br>
 
-* [$3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}$]{.body-text-m}
+* Simplify $3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}$
 
 <br>
 
-* [If we are given the values of $x=-3$ and $y=2$, what would be the value of $z$?
+* If we are given the values of $x=-3$ and $y=2$, what would be the value of $z$?
 $$
 z = 4*(y-4)+(x+1)^2
-$$]{.body-text-m}
+$$
 
-✏️ [Take a minute to solve these individually.]{style="color:green;"  .body-text-m}
+
 
 
 ::: {.notes}
@@ -803,9 +798,10 @@ Solve all in terms of $x$
 
 <hr>
 
-:::columns
+:::: {.columns}
 
 :::{.column width=50%}
+
 $$
 \small
 \begin{aligned}
@@ -816,7 +812,10 @@ $$
 x&=2
 \end{aligned}
 $$
-<br>
+
+:::
+
+:::{.column width=50%}
 
 $$
 \small
@@ -831,8 +830,16 @@ x&=\frac{-14}{9}\\
 $$
 
 :::
+:::
 
-:::{.column width=50%}
+---
+
+## {#practice-alge-5 data-menu-title="Solutions"}
+
+[Practice solutions]{.slide-title}
+
+<hr>
+
 $$
 \small
 \begin{aligned}
@@ -843,8 +850,6 @@ $$
 x&=\frac{5+b+2c-21a}{11}
 \end{aligned}
 $$
-:::
-:::
 
 ---
 
@@ -1070,11 +1075,12 @@ $$
 [Exponents practice]{.slide-title}
 
 <hr>
-✏️ [Simplify the following.]{style="color:green;"}
 
 :::: {.columns}
 
 ::: {.column width="40%"}
+✏️ [Simplify the following.]{style="color:green;"}
+
 (A) $\frac{6^5}{6^3}$
 
 <br>
@@ -1082,12 +1088,9 @@ $$
 (B) $(x^2y)^4$
 
 <br>
-<br>
 
 (C) $\frac{x^5y^6}{xy^2}$
 
-<br>
-<br>
 
 (D) $\frac{24x^6}{12x^{-8}}$
 
@@ -1289,7 +1292,7 @@ Think about this sign at New Cuyama. Anything odd here?
 :::
 
 :::{.center-text}
-![](/course-materials/slides/images/cuyama.jpeg){width="50%"}
+![](/course-materials/slides/images/cuyama.jpeg){width="40%"}
 :::
 
 ---
@@ -1377,8 +1380,6 @@ Then we multiply by the *appropriate* conversion factor and simplify:
 <hr>
 
 **Example.** Convert $100 \frac{g}{cm^3}$ into units of $\frac{kg}{in^3}$, given that 1 cm^3^ = 0.061 in^3^.
-
-<br>
 
 We need one unit conversion factor for $g$: 
 $\frac{1 \text{ kg}}{1000 \text{ g}}$.
