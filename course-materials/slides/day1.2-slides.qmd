@@ -858,7 +858,7 @@ Ice-core data before 1958. Mauna Loa data after 1958.
 ## {#whole-story data-menu-title="Whole story"} 
 
 [The *average* slope of a continuous function rarely tells the whole story]{.slide-title3}
-
+  
 <hr>
 
 ```{r}

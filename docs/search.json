@@ -2041,7 +2041,7 @@
     "href": "course-materials/slides/day1.1-slides.html#exponents-practice",
     "title": "",
     "section": "",
-    "text": "Exponents practice\n\n✏️ Let’s see a solution.\n\n\\(\\frac{6^5}{6^3} = 6^{5-3} = 6^2\\)\n\n\n\n\\((x^2y)^4 = (x^2)^4*y^2 = x^8y^2\\)\n\n \n\n\\(\\frac{x^5y^6}{xy^2} = \\frac{x^5}{x}*\\frac{y^6}{y^2} = x^{5-1}*y^{6-2} = x^4y^4 = (xy)^4\\)\n\n \n\n\\(\\frac{24x^6}{12x^{-8}} = 2x^6x^{(-(-8))}=2x^6x^8 = 2x^{6+8} = 2x^{14}\\)"
+    "text": "Exponents practice\n\n✏️ Let’s see a solution.\n\n\\(\\frac{6^5}{6^3} = 6^{5-3} = 6^2\\)\n\n\n\n\\((x^2y)^4 = (x^2)^4*y^4 = x^8y^4\\)\n\n \n\n\\(\\frac{x^5y^6}{xy^2} = \\frac{x^5}{x}*\\frac{y^6}{y^2} = x^{5-1}*y^{6-2} = x^4y^4 = (xy)^4\\)\n\n \n\n\\(\\frac{24x^6}{12x^{-8}} = 2x^6x^{(-(-8))}=2x^6x^8 = 2x^{6+8} = 2x^{14}\\)"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#FOIL",
@@ -2132,7 +2132,21 @@
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-practice",
     "title": "",
     "section": "",
-    "text": "Unit conversion practice\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\\(8.1\\frac{km}{s} \\times \\frac{60s}{min} \\times \\frac{60min}{hr} \\times \\frac{0.621 miles}{1km} = 18,108.36 \\frac{miles}{hr}\\)\n\\(3.2\\frac{g}{min\\cdot m^2} \\times \\frac{1min}{60s} \\times \\frac{1000 mg}{g} \\times \\frac{m}{100cm} \\times \\frac{m}{100cm}\\)"
+    "text": "Unit conversion practice\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed."
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-1",
+    "href": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-1",
+    "title": "",
+    "section": "",
+    "text": "Unit conversion practice: solutions\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n✏️ Let’s see a solution!"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-2",
+    "href": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-2",
+    "title": "",
+    "section": "",
+    "text": "Unit conversion practice: solutions\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.\n✏️ Let’s see a solution!"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#lunch-break",
