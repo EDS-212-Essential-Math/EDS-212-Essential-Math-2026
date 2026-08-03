@@ -2139,14 +2139,14 @@
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-1",
     "title": "",
     "section": "",
-    "text": "Unit conversion practice: solutions\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n✏️ Let’s see a solution!"
+    "text": "Unit conversion practice: solutions\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n✏️ Let’s see a solution!\n\\(8.1\\frac{km}{s} \\times 60\\frac{s}{min} \\times 60\\frac{min}{hr} \\times 0.621\\frac{mi}{km} = 18108.36 \\frac{mi}{hr}\\)"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-2",
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-2",
     "title": "",
     "section": "",
-    "text": "Unit conversion practice: solutions\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.\n✏️ Let’s see a solution!"
+    "text": "Unit conversion practice: solutions\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.\n✏️ Let’s see a solution!\nCompany A: \\(14.6\\text{ barrels} - 9.3\\text{ barrels} = 5.3\\text{ barrels unrecovered}\\)\nCompany B: \\(692\\text{ liters} \\times (1-0.94) = 41.52\\text{ liters unrecovered} \\rightarrow 41.52\\text{ L} \\times \\frac{1\\text{ barrel}}{159\\text{ L}} = 0.26\\text{ barrels}\\)\nCompany C: \\(18.1\\text{ gallons} \\times \\frac{1\\text{ barrel}}{42\\text{ gal}} = 0.43\\text{ barrels unrecovered}\\)\nTotal: \\(5.3\\text{ barrels} + 0.26\\text{ barrels} + 0.43\\text{ barrels} = 5.99\\text{ barrels unrecovered}\\)"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#lunch-break",
@@ -2790,28 +2790,28 @@
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-1",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((3,5)\\) and \\((2,-1)\\).\n✏️ Let’s see a solution."
+    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((3,5)\\) and \\((2,-1)\\).\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\nm &= \\frac{5-(-1)}{3-2} = 6 &\\text{Compute the slope} \\\\\ny - 5 &= 6(x-3) &\\text{Point-slope form using (3,5)} \\\\\ny &= 6x - 13 &\\text{Simplify}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\n✏️ Let’s see a solution."
+    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\nm &= \\frac{0-(-5)}{4-2} = \\frac{5}{2} &\\text{Compute the slope using the } x\\text{-intercept } (4,0) \\\\\ny - 0 &= \\frac{5}{2}(x-4) &\\text{Point-slope form} \\\\\ny &= \\frac{5}{2}x - 10 &\\text{Simplify}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nFind the equation of the line that has the following graph:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✏️ Let’s see a solution."
+    "text": "Equation of a line: solutions\n\nFind the equation of the line that has the following graph:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\n\\text{slope} &= \\frac{\\text{rise}}{\\text{run}} = \\frac{3}{2} &\\text{Read from the graph} \\\\\ny\\text{-intercept} &= 1 &\\text{Read from the graph} \\\\\ny &= \\frac{3}{2}x + 1 &\\text{Equation of the line}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2.\n✏️ Let’s see a solution."
+    "text": "Equation of a line: solutions\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2.\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\ny - (-1) &= 2(x-3) &\\text{Point-slope form} \\\\\ny &= 2x - 7 &\\text{Simplify}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#interpreting-slope",

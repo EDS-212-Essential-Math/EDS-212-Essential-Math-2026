@@ -1430,6 +1430,8 @@ What is the total *unrecovered* amount of oil spilled into the watershed that ye
 
 ✏️  [Let's see a solution!]{style="color:green;" .body-text-m}
 
+[$8.1\frac{km}{s} \times 60\frac{s}{min} \times 60\frac{min}{hr} \times 0.621\frac{mi}{km} = 18108.36 \frac{mi}{hr}$]{.body-text-m}
+
 ---
 
 ## {#unit-conv-solutions-2 data-menu-title="Unit conversions practice" .smaller} 
@@ -1448,10 +1450,17 @@ What is the total *unrecovered* amount of oil spilled into the watershed that ye
 
 ✏️  [Let's see a solution!]{style="color:green;" .body-text-m}
 
+[**Company A:** $14.6\text{ barrels} - 9.3\text{ barrels} = 5.3\text{ barrels unrecovered}$]{.body-text-m}
+
+[**Company B:** $692\text{ liters} \times (1-0.94) = 41.52\text{ liters unrecovered} \rightarrow 41.52\text{ L} \times \frac{1\text{ barrel}}{159\text{ L}} = 0.26\text{ barrels}$]{.body-text-m}
+
+[**Company C:** $18.1\text{ gallons} \times \frac{1\text{ barrel}}{42\text{ gal}} = 0.43\text{ barrels unrecovered}$]{.body-text-m}
+
+[**Total:** $5.3\text{ barrels} + 0.26\text{ barrels} + 0.43\text{ barrels} = 5.99\text{ barrels unrecovered}$]{.body-text-m}
 
 ---
 
-## {#lunch-break data-menu-title="Lunch break"} 
+## {#lunch-break data-menu-title="Lunch break"}
 
 [Lunch break!]{.slide-title}
 

@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>day1.1-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -1193,6 +1196,7 @@ Units
 <li>Convert <span class="math inline">\(8.1\frac{km}{s}\)</span> to miles per hour, given that 1 km = 0.621 miles.</li>
 </ol>
 <p>✏️ <span class="body-text-m" style="color:green;">Let’s see a solution!</span></p>
+<p><span class="body-text-m"><span class="math inline">\(8.1\frac{km}{s} \times 60\frac{s}{min} \times 60\frac{min}{hr} \times 0.621\frac{mi}{km} = 18108.36 \frac{mi}{hr}\)</span></span></p>
 </section>
 <section id="unit-conv-solutions-2" class="slide level2 smaller" data-menu-title="Unit conversions practice">
 <h2></h2>
@@ -1208,6 +1212,10 @@ Units
 </ul>
 <p>What is the total <em>unrecovered</em> amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.</p>
 <p>✏️ <span class="body-text-m" style="color:green;">Let’s see a solution!</span></p>
+<p><span class="body-text-m"><strong>Company A:</strong> <span class="math inline">\(14.6\text{ barrels} - 9.3\text{ barrels} = 5.3\text{ barrels unrecovered}\)</span></span></p>
+<p><span class="body-text-m"><strong>Company B:</strong> <span class="math inline">\(692\text{ liters} \times (1-0.94) = 41.52\text{ liters unrecovered} \rightarrow 41.52\text{ L} \times \frac{1\text{ barrel}}{159\text{ L}} = 0.26\text{ barrels}\)</span></span></p>
+<p><span class="body-text-m"><strong>Company C:</strong> <span class="math inline">\(18.1\text{ gallons} \times \frac{1\text{ barrel}}{42\text{ gal}} = 0.43\text{ barrels unrecovered}\)</span></span></p>
+<p><span class="body-text-m"><strong>Total:</strong> <span class="math inline">\(5.3\text{ barrels} + 0.26\text{ barrels} + 0.43\text{ barrels} = 5.99\text{ barrels unrecovered}\)</span></span></p>
 </section>
 <section id="lunch-break" class="slide level2" data-menu-title="Lunch break">
 <h2></h2>
