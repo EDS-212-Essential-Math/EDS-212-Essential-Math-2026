@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>day1.2-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -296,8 +299,8 @@ Graphs
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-e62a480d467996370e2b" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-e62a480d467996370e2b">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],[6,6,4,6,8,6,8,4,4,6,6,8,8,8,8,8,8,4,4,4,4,8,8,8,8,4,4,4,8,6,8,4],[160,160,108,258,360,225,360,146.7,140.8,167.6,167.6,275.8,275.8,275.8,472,460,440,78.7,75.7,71.09999999999999,120.1,318,304,350,400,79,120.3,95.09999999999999,351,145,301,121],[110,110,93,110,175,105,245,62,95,123,123,180,180,180,205,215,230,66,52,65,97,150,150,245,175,66,91,113,264,175,335,109]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-2d31c7db617ca3acd3c7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-2d31c7db617ca3acd3c7">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],[6,6,4,6,8,6,8,4,4,6,6,8,8,8,8,8,8,4,4,4,4,8,8,8,8,4,4,4,8,6,8,4],[160,160,108,258,360,225,360,146.7,140.8,167.6,167.6,275.8,275.8,275.8,472,460,440,78.7,75.7,71.09999999999999,120.1,318,304,350,400,79,120.3,95.09999999999999,351,145,301,121],[110,110,93,110,175,105,245,62,95,123,123,180,180,180,205,215,230,66,52,65,97,150,150,245,175,66,91,113,264,175,335,109]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -335,7 +338,7 @@ Graphs
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="images/cart.png" width="400"></p>
+<p><img data-src="images/cart.png"></p>
 </figure>
 </div>
 </div>
@@ -350,8 +353,8 @@ Graphs
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-01aa470eeef4b2c32e45" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-01aa470eeef4b2c32e45">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11"],[0,1,2,3,4,5,6,7,8,9,10],[-0.9399999999999999,1.28,0.75,5.39,4.49,3.77,6.73,8.109999999999999,8.859999999999999,8.539999999999999,9.06]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>x<\/th>\n      <th>y<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":6,"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"x","targets":1},{"name":"y","targets":2}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[6,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-3ed98748a088c4dc6a79" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-3ed98748a088c4dc6a79">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11"],[0,1,2,3,4,5,6,7,8,9,10],[-0.9399999999999999,1.28,0.75,5.39,4.49,3.77,6.73,8.109999999999999,8.859999999999999,8.539999999999999,9.06]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>x<\/th>\n      <th>y<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":6,"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"x","targets":1},{"name":"y","targets":2}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[6,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -579,11 +582,11 @@ Linear functions
 m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
 \]</span></p>
 <ol start="2" type="1">
-<li>Find <span class="math inline">\(c\)</span>, the <strong>y-intercept</strong>:</li>
+<li>Find <span class="math inline">\(b\)</span>, the <strong>y-intercept</strong>:</li>
 </ol>
 <p>Since <span class="math inline">\((x_1, y_1)\)</span> is on the line, it satisfies:</p>
-<p><span class="math display">\[y_1 = mx_1+ c.\]</span> We can solve for <span class="math inline">\(c\)</span> to obtain:</p>
-<p><span class="math display">\[c = y_1 - mx_1.\]</span></p>
+<p><span class="math display">\[y_1 = mx_1+ b.\]</span> We can solve for <span class="math inline">\(b\)</span> to obtain:</p>
+<p><span class="math display">\[b = y_1 - mx_1.\]</span></p>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -617,35 +620,19 @@ m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
 <h2></h2>
 <p><span class="slide-title">Equation of a line: solutions</span></p>
 <hr>
-<p>Find the equation of the line that passes through <span class="math inline">\((3,5)\)</span> and <span class="math inline">\((2,-1)\)</span>.</p>
-<p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-m &amp;= \frac{5-(-1)}{3-2} = 6 &amp;\text{Compute the slope} \\
-y - 5 &amp;= 6(x-3) &amp;\text{Point-slope form using (3,5)} \\
-y &amp;= 6x - 13 &amp;\text{Simplify}
-\end{aligned}
-\]</span></p>
+<p>A. Find the equation of the line that passes through <span class="math inline">\((3,5)\)</span> and <span class="math inline">\((2,-1)\)</span>.</p>
 </section>
 <section id="line-equation-practice-sol-2" class="slide level2" data-menu-title="Equation of a line: practice">
 <h2></h2>
 <p><span class="slide-title">Equation of a line: solutions</span></p>
 <hr>
-<p>Find the equation of the line that passes through <span class="math inline">\((2,-5)\)</span> and has <span class="math inline">\(x\)</span>-intercept equal to 4.</p>
-<p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-m &amp;= \frac{0-(-5)}{4-2} = \frac{5}{2} &amp;\text{Compute the slope using the } x\text{-intercept } (4,0) \\
-y - 0 &amp;= \frac{5}{2}(x-4) &amp;\text{Point-slope form} \\
-y &amp;= \frac{5}{2}x - 10 &amp;\text{Simplify}
-\end{aligned}
-\]</span></p>
+<p>B. Find the equation of the line that passes through <span class="math inline">\((2,-5)\)</span> and has <span class="math inline">\(x\)</span>-intercept equal to 4.</p>
 </section>
 <section id="line-equation-practice-3" class="slide level2 smaller" data-menu-title="Equation of a line: practice">
 <h2></h2>
 <p><span class="slide-title">Equation of a line: solutions</span></p>
 <hr>
-<p>Find the equation of the line that has the following graph:</p>
+<p>C. Find the equation of the line that has the following graph:</p>
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell" data-layout-align="center">
@@ -660,7 +647,34 @@ y &amp;= \frac{5}{2}x - 10 &amp;\text{Simplify}
 </div><div class="column" style="width:40%;">
 
 </div></div>
-<p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
+</section>
+<section id="line-equation-practice-solutions-summary" class="slide level2 smaller" data-menu-title="Equation of a line: solutions">
+<h2></h2>
+<p><span class="slide-title">Equation of a line: solutions</span></p>
+<hr>
+<ol type="a">
+<li>Passes through <span class="math inline">\((3,5)\)</span> and <span class="math inline">\((2,-1)\)</span>:</li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}
+m &amp;= \frac{5-(-1)}{3-2} = 6 &amp;\text{Compute the slope} \\
+y - 5 &amp;= 6(x-3) &amp;\text{Point-slope form using (3,5)} \\
+y &amp;= 6x - 13 &amp;\text{Simplify}
+\end{aligned}
+\]</span></p>
+<ol start="2" type="a">
+<li>Passes through <span class="math inline">\((2,-5)\)</span> and has <span class="math inline">\(x\)</span>-intercept equal to 4:</li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}
+m &amp;= \frac{0-(-5)}{4-2} = \frac{5}{2} &amp;\text{Compute the slope using the } x\text{-intercept } (4,0) \\
+y - 0 &amp;= \frac{5}{2}(x-4) &amp;\text{Point-slope form} \\
+y &amp;= \frac{5}{2}x - 10 &amp;\text{Simplify}
+\end{aligned}
+\]</span></p>
+<ol start="3" type="a">
+<li>Has the given graph: <span class="math inline">\(y = \frac{3}{2}x+1\)</span></li>
+</ol>
 <p><span class="math display">\[
 \begin{aligned}
 \text{slope} &amp;= \frac{\text{rise}}{\text{run}} = \frac{3}{2} &amp;\text{Read from the graph} \\
@@ -668,6 +682,12 @@ y\text{-intercept} &amp;= 1 &amp;\text{Read from the graph} \\
 y &amp;= \frac{3}{2}x + 1 &amp;\text{Equation of the line}
 \end{aligned}
 \]</span></p>
+</section>
+<section id="line-equation-practice-4-blank" class="slide level2" data-menu-title="Equation of a line: practice">
+<h2></h2>
+<p><span class="slide-title">Equation of a line: solutions</span></p>
+<hr>
+<p>Make a graph showing the line that passes through (3,-1) and has slope equal to 2.</p>
 </section>
 <section id="line-equation-practice-4" class="slide level2" data-menu-title="Equation of a line: practice">
 <h2></h2>
@@ -871,6 +891,26 @@ e^{rx}&amp;=&amp;(e^x)^r
 <p>We should always <em>understand the components of formulas and equations</em> - both conceptually and mathematically.</p>
 </div>
 </div>
+</section>
+<section id="logistic-growth-example" class="slide level2" data-menu-title="Logistic growth: Example">
+<h2></h2>
+<p><span class="slide-title">Logistic growth: Example</span></p>
+<hr>
+<p>What is <span class="body-text-m"><span class="math display">\[N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}\]</span></span> when t = 0</p>
+</section>
+<section id="logistic-growth-solution" class="slide level2" data-menu-title="Logistic growth: Solution">
+<h2></h2>
+<p><span class="slide-title">Logistic growth: Solution</span></p>
+<hr>
+<p><span class="math display">\[
+\begin{aligned}
+N_0 &amp;= \frac{K}{1+[\frac{K-N_0}{N_0}]e^{-r(0)}} &amp;\text{Substitute } t=0 \\
+&amp;= \frac{K}{1+[\frac{K-N_0}{N_0}](1)} &amp;e^{0}=1 \\
+&amp;= \frac{K}{\frac{N_0 + (K-N_0)}{N_0}} &amp;\text{Combine terms in the denominator} \\
+&amp;= \frac{K}{\frac{K}{N_0}} &amp;N_0 + (K-N_0) = K \\
+&amp;= N_0
+\end{aligned}
+\]</span></p>
 </section>
 <section id="logistic-growth-Qs" class="slide level2" data-menu-title="Logistic growth (Qs)">
 <h2></h2>

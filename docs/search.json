@@ -3098,7 +3098,7 @@
     "href": "course-materials/slides/day1.2-slides.html#find-line-eq-2",
     "title": "",
     "section": "",
-    "text": "Finding the equation of a line\n\nGiven two points \\((x_1, y_1)\\) and \\((x_2, y_2)\\) on the line:\n\n\n\nFind \\(m\\), the slope, by using the two points:\n\n\\[\nm=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}.\n\\]\n\nFind \\(c\\), the y-intercept:\n\nSince \\((x_1, y_1)\\) is on the line, it satisfies:\n\\[y_1 = mx_1+ c.\\] We can solve for \\(c\\) to obtain:\n\\[c = y_1 - mx_1.\\]"
+    "text": "Finding the equation of a line\n\nGiven two points \\((x_1, y_1)\\) and \\((x_2, y_2)\\) on the line:\n\n\n\nFind \\(m\\), the slope, by using the two points:\n\n\\[\nm=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}.\n\\]\n\nFind \\(b\\), the y-intercept:\n\nSince \\((x_1, y_1)\\) is on the line, it satisfies:\n\\[y_1 = mx_1+ b.\\] We can solve for \\(b\\) to obtain:\n\\[b = y_1 - mx_1.\\]"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-1",
@@ -3112,21 +3112,21 @@
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-1",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((3,5)\\) and \\((2,-1)\\).\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\nm &= \\frac{5-(-1)}{3-2} = 6 &\\text{Compute the slope} \\\\\ny - 5 &= 6(x-3) &\\text{Point-slope form using (3,5)} \\\\\ny &= 6x - 13 &\\text{Simplify}\n\\end{aligned}\n\\]"
+    "text": "Equation of a line: solutions\n\nA. Find the equation of the line that passes through \\((3,5)\\) and \\((2,-1)\\)."
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\nm &= \\frac{0-(-5)}{4-2} = \\frac{5}{2} &\\text{Compute the slope using the } x\\text{-intercept } (4,0) \\\\\ny - 0 &= \\frac{5}{2}(x-4) &\\text{Point-slope form} \\\\\ny &= \\frac{5}{2}x - 10 &\\text{Simplify}\n\\end{aligned}\n\\]"
+    "text": "Equation of a line: solutions\n\nB. Find the equation of the line that passes through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4."
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nFind the equation of the line that has the following graph:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\n\\text{slope} &= \\frac{\\text{rise}}{\\text{run}} = \\frac{3}{2} &\\text{Read from the graph} \\\\\ny\\text{-intercept} &= 1 &\\text{Read from the graph} \\\\\ny &= \\frac{3}{2}x + 1 &\\text{Equation of the line}\n\\end{aligned}\n\\]"
+    "text": "Equation of a line: solutions\n\nC. Find the equation of the line that has the following graph:"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
@@ -3813,5 +3813,33 @@
     "title": "",
     "section": "",
     "text": "1. Practice solutions\n\n\n\\small\n\\begin{aligned}\nz = 4(y-4)+(x+1)^2 &= 4(2-4)+(-3+1)^2 \\\\\n&= 4(-2)+(-2)^2 \\\\\n&= -8+4 \\\\\nz&=-4\n\\end{aligned}"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-solutions-summary",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-solutions-summary",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: solutions\n\n\nPasses through \\((3,5)\\) and \\((2,-1)\\):\n\n\\[\n\\begin{aligned}\nm &= \\frac{5-(-1)}{3-2} = 6 &\\text{Compute the slope} \\\\\ny - 5 &= 6(x-3) &\\text{Point-slope form using (3,5)} \\\\\ny &= 6x - 13 &\\text{Simplify}\n\\end{aligned}\n\\]\n\nPasses through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4:\n\n\\[\n\\begin{aligned}\nm &= \\frac{0-(-5)}{4-2} = \\frac{5}{2} &\\text{Compute the slope using the } x\\text{-intercept } (4,0) \\\\\ny - 0 &= \\frac{5}{2}(x-4) &\\text{Point-slope form} \\\\\ny &= \\frac{5}{2}x - 10 &\\text{Simplify}\n\\end{aligned}\n\\]\n\nHas the given graph: \\(y = \\frac{3}{2}x+1\\)\n\n\\[\n\\begin{aligned}\n\\text{slope} &= \\frac{\\text{rise}}{\\text{run}} = \\frac{3}{2} &\\text{Read from the graph} \\\\\ny\\text{-intercept} &= 1 &\\text{Read from the graph} \\\\\ny &= \\frac{3}{2}x + 1 &\\text{Equation of the line}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4-blank",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-4-blank",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: solutions\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-example",
+    "href": "course-materials/slides/day1.2-slides.html#logistic-growth-example",
+    "title": "",
+    "section": "",
+    "text": "Logistic growth: Example\n\nWhat is \\[N_t=\\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-rt}}\\] when t = 0"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-solution",
+    "href": "course-materials/slides/day1.2-slides.html#logistic-growth-solution",
+    "title": "",
+    "section": "",
+    "text": "Logistic growth: Solution\n\n\\[\n\\begin{aligned}\nN_0 &= \\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-r(0)}} &\\text{Substitute } t=0 \\\\\n&= \\frac{K}{1+[\\frac{K-N_0}{N_0}](1)} &e^{0}=1 \\\\\n&= \\frac{K}{\\frac{N_0 + (K-N_0)}{N_0}} &\\text{Combine terms in the denominator} \\\\\n&= \\frac{K}{\\frac{K}{N_0}} &N_0 + (K-N_0) = K \\\\\n&= N_0\n\\end{aligned}\n\\]"
   }
 ]
