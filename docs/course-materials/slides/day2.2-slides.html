@@ -135,168 +135,725 @@
 <section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#053660">
 <h2></h2>
 <p><span class="custom-title">EDS 212: Day 2, Lecture 2</span></p>
-<p><span class="custom-subtitle"><em>Derivatives</em></span></p>
+<p><span class="custom-subtitle"><em>Integration and differential equations</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 4<sup>th</sup>, 2025</span></p>
+<p><span class="custom-subtitle3">August 5<sup>th</sup>, 2025</span></p>
 </section>
-<section id="intro-derv" class="slide level2" data-menu-title="Introduction to Derivates" data-background-color="#003660">
+<section id="integrate-concept" class="slide level2" data-menu-title="Integration" data-background-color="#003660">
 <h2></h2>
 <div class="page-center">
 <div class="custom-subtitle">
-Introduction to Derivatives
+Integration Conceputally
 </div>
-</div>
-<!---------------------------------------------------------->
-</section>
-<section id="alltogether" class="slide level2" data-menu-title="Putting it all together">
-<h2></h2>
-<p><span class="slide-title">Recall average and instantaneous rate of change</span></p>
-<hr>
-
-<img data-src="images/trex.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"><p><strong>Big idea:</strong> Taking the average rate of change to a set limit will eventually converge to the instantaneous.</p>
-</section>
-<section id="average-slope" class="slide level2" data-menu-title="Average slope">
-<h2></h2>
-<p><span class="slide-title">Average slope</span></p>
-<hr>
-<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">
-<p>✏️</p>
-</div>
-
-<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Start with:</p>
-<p><br></p>
-<p>Nearby point:</p>
-<p><br></p>
-<p>Average slope:</p>
-</section>
-<section id="average-slope-filled" class="slide level2" data-menu-title="Average slope">
-<h2></h2>
-<p><span class="slide-title">Average slope</span></p>
-<hr>
-
-<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Start with a point <span class="math inline">\((x,f(x))\)</span> on the graph.</p>
-<p>A nearby point can be <span class="math inline">\((x+\Delta x, f(x+\Delta x))\)</span>, where <span class="math inline">\(\Delta x\)</span> is a short distance from <span class="math inline">\(x\)</span>.</p>
-<p><br></p>
-<p>The average slope between <span class="math inline">\((x,f(x))\)</span> and <span class="math inline">\((x+\Delta x, f(x+\Delta x))\)</span> is given by</p>
-<p><span style="color:red"> <span class="math display">\[\text{average slope} = \frac{f(x+\Delta x) - f(x)}{(x+\Delta x)-x} = \frac{f(x+\Delta x) - f(x)}{\Delta x}.\]</span> </span></p>
-<p><strong>What happens when <span class="math inline">\(\Delta x\)</span> becomes smaller and smaller?</strong></p>
-</section>
-<section id="walkthrough-1" class="slide level2" data-menu-title="Walkthrough">
-<h2></h2>
-<p><span class="slide-title">What happens when <span class="math inline">\(\Delta x \to 0\)</span>?</span></p>
-<hr>
-
-<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="walkthrough-2" class="slide level2" data-menu-title="Walkthrough">
-<h2></h2>
-<p><span class="slide-title">What happens when <span class="math inline">\(\Delta x \to 0\)</span>?</span></p>
-<hr>
-
-<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="walkthrough-3" class="slide level2" data-menu-title="Walkthrough">
-<h2></h2>
-<p><span class="slide-title">What happens when <span class="math inline">\(\Delta x \to 0\)</span>?</span></p>
-<hr>
-
-<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="walkthrough-4" class="slide level2" data-menu-title="Walkthrough">
-<h2></h2>
-<p><span class="slide-title">What happens when <span class="math inline">\(\Delta x \to 0\)</span>?</span></p>
-<hr>
-
-<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="tangent" class="slide level2" data-menu-title="Tangent Lines">
-<h2></h2>
-<p><span class="slide-title">Tangent lines</span></p>
-<hr>
-<p><strong>What if we let <span class="math inline">\(\Delta x=0\)</span>?</strong></p>
-<p>Then we would have a slope line that only touches the graph at exactly <span class="math inline">\(x\)</span>. <!--
-
-::: {.cell layout-align="center"}
-::: {.cell-output-display}
-![](images/tangent_line.png){fig-align='center' width=206}
-:::
-:::
-
---></p>
-
-<img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="center-text teal-text">
-<p>These very special types of lines are called <strong>tangent lines</strong>.</p>
 </div>
 </section>
-<section id="recap" class="slide level2" data-menu-title="Recap in math notation">
+<section id="auc" class="slide level2" data-menu-title="Area under the curve">
 <h2></h2>
-<p><span class="slide-title">Derivative definition</span></p>
+<p><span class="slide-title">How do we find the area under this curve?</span></p>
 <hr>
-<p>Remember the slope of the line that passes between two points <span class="math inline">\((x_1, y_1)\)</span> and <span class="math inline">\((x_2, y_2)\)</span> is:</p>
-<p><span class="math display">\[\text{slope}=\frac{y_2-y_1}{x_2-x_1}.\]</span></p>
-<div class="fragment">
-<p>If we have a function <span class="math inline">\(f(x)\)</span>, then <span class="math inline">\((x,f(x))\)</span> represents a point on its graph.</p>
-</div>
-<div class="fragment">
-<p>Choose a different point on the graph that is <span class="math inline">\(\Delta x\)</span> away: <span class="math inline">\((x+\Delta x,f(x+\Delta x))\)</span>.</p>
-</div>
-<div class="fragment">
-<p>Plug these pointson the graph of <span class="math inline">\(f(x)\)</span> into the slope equation:</p>
-<p><span class="math display">\[
-\text{slope}=\frac{f(x+\Delta x)-f(x)}{\Delta x}.
-\]</span></p>
-</div>
-<div class="fragment">
-<p>When we let <span class="math inline">\(\Delta x \to 0\)</span> we get <span style="color:red"><strong>the slope of the tangent line at <span class="math inline">\(x\)</span></strong></span></p>
-<p><span style="color:red"> <span class="math display">\[
-\large
-f'(x)=\lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}
-\]</span> </span></p>
-<p><span style="color:red"><strong>This is the derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span>.</strong></span> Also denoted <span class="math inline">\(\frac{df}{dx}\)</span>.</p>
-<!--
-<br>
 
-:::{.center-text}
-*Most common notation*
-:::
-
-$$
-\large
-f'(x)\text{, or }\frac{dy}{dx}
-$$
-
--->
-</div>
-</section>
-<section id="deriv9" class="slide level2" data-menu-title="Derivative">
+<img data-src="images/area.png" width="298" class="r-stretch"></section>
+<section id="rect-approx" class="slide level2" data-menu-title="Area under the curve">
 <h2></h2>
-
-<img data-src="images/derivative_9.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
-</div>
-</section>
-<section id="diff-func" class="slide level2" data-menu-title="Not all functions are differentiable">
-<h2></h2>
-<p><span class="slide-title">Not all functions are differentiable</span></p>
+<p><span class="slide-title">How do we find the area under this curve?</span></p>
 <hr>
-<ul>
-<li>All differentiable functions are continuous, but not all continuous functions are differentiable.</li>
-</ul>
-<div class="fragment">
-<ul>
-<li>The absolute value function <span class="math inline">\(|x|\)</span> is one example, this is defined by <span class="math display">\[|x| =
-\begin{cases}
-x  &amp;, x \geq 0\\
--x &amp;, x&lt;0
-\end{cases}.\]</span></li>
-</ul>
-<p>It’s graph is:</p>
-<div class="cell" data-layout-align="center">
+<p>Areas of rectangles are easy to find (base times height!). We can approximate the area by adding the area of rectangles under the curve.</p>
+
+<img data-src="images/reimann.png" width="300" class="r-stretch"></section>
+<section id="riemann-sum" class="slide level2" data-menu-title="Riemann Sum">
+<h2></h2>
+<p><span class="slide-title">Example</span></p>
+<hr>
+<p>Approximate the area under the curve from <span class="math inline">\([-3,3]\)</span> with <span class="math inline">\(\Delta x=1\)</span> and <span class="math inline">\(k=6\)</span></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">x</th>
+<th style="text-align: right;">y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">71</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">78</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">73</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">62</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">51</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">46</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">53</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
 <figure>
-<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-4-1.png" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
 </div>
+</div></div>
+</section>
+<section id="rect" class="slide level2" data-menu-title="Riemann Sum">
+<h2></h2>
+<p><span class="slide-title">Riemann sums</span></p>
+<hr>
+<ol type="1">
+<li><p>Start at one end of the interval <span class="math inline">\([a,b]\)</span></p></li>
+<li><p>Evaluate the function at <span class="math inline">\(f(a)\)</span>.</p></li>
+<li><p>Step away from <span class="math inline">\(a\)</span> by some small amount called <span class="math inline">\(\Delta x\)</span>.</p></li>
+<li><p>Multiply <span class="math inline">\(f(a)\Delta x\)</span> to get the the area of the first rectangle.</p></li>
+<li><p>Repeat the same steps above, now starting with <span class="math inline">\(\Delta x\)</span> as the bottom left corner of the next rectangle. Repeat until you cover the area with rectangles of width <span class="math inline">\(\Delta x\)</span>.</p></li>
+<li><p>Sum up the area of all <span class="math inline">\(k\)</span> rectangles.</p></li>
+</ol>
+<p><span style="color:red"> <span class="math display">\[
+R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_{\text{Sum of area of rectangles with width $\Delta(x)$} }
+\]</span> </span></p>
+<p>This is called a <strong>Riemann Sum</strong>.</p>
+</section>
+<section id="exp-reimman" class="slide level2" data-menu-title="Riemann Sum">
+<h2></h2>
+<p><span class="slide-title">Finer and finer Riemann sums</span></p>
+<hr>
+<ul>
+<li><p>What if we try to make <span class="math inline">\(\Delta x\)</span> (the width of the rectangles) really small? So we let <span class="math inline">\(\Delta x \to 0\)</span>. This will make the number of rectangles under the curve go to infinity.</p></li>
+<li><p>Our estimation of the area will get better and better with more rectangles.</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/riemann.gif" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+</figure>
 </div>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<div class="fragment fade-in">
+<p>Take the area calculation we did before, but let <span class="math inline">\(\Delta x \to 0\)</span> <span style="color:red"> <span class="math display">\[
+\large
+\begin{align}
+\text{True Area} &amp;= \lim_{\Delta x \to 0}R(f(x),\Delta x) \\
+                  &amp;= \int^b_af(x)dx
+\end{align}
+\]</span> </span></p>
+<p>We formally call this <span style="color:red"><strong>the integral of <span class="math inline">\(f(x)\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> with respect to <span class="math inline">\(x\)</span></strong></span>.</p>
+</div>
+</div></div>
+</section>
+<section id="integral-calc" class="slide level2" data-menu-title="Integrals">
+<h2></h2>
+<p><span class="slide-title">How do we calculate integrals?</span></p>
+<hr>
+<ul>
+<li><p>Taking infinite sums is impossible by hand</p></li>
+<li><p>Luckily, integrals and derivatives are related in a very useful way:</p></li>
+</ul>
+<p><br></p>
+<div class="fragment">
+<p>If we integrate a derivative, we should get the same function back as the original vice-versa:</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{d}{dx}\left[\int f(x)dx\right]&amp;=f(x) &amp;\text{Differentiation is the inverse of integration}
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+\int f'(x)&amp;=f(x)+C &amp;\text{Integration is the inverse of differentiation}
+\end{align}
+\]</span></p>
+<p><br></p>
+</div>
+<div class="fragment">
+<div class="page-center">
+<p><span style="color:red"> <em>To find the integral of <span class="math inline">\(\int f(t) dt\)</span> we need to find a function <span class="math inline">\(F(x)\)</span> whose derivative is <span class="math inline">\(f(x)\)</span>.</em> </span></p>
+</div>
+</div>
+</section>
+<section id="c" class="slide level2" data-menu-title="Constants of Integration">
+<h2></h2>
+<p><span class="slide-title">Where did that <span class="math inline">\(C\)</span> come from?</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Example</strong></p>
+<div class="fragment fade-in">
+<p>Find <span class="math inline">\(\int 2x-4\)</span>.</p>
+</div>
+<div class="fragment fade-in">
+<p>To find <span class="math inline">\(\int 2x-4\)</span> we need to find a function whose derivative is <span class="math inline">\(2x-4\)</span>. What could it be?</p>
+</div>
+<div class="fragment fade-in">
+<ul>
+<li><p>If we integrate, we’ll have <span class="math inline">\(\int 2x-4 = x^2-4x+C\)</span>.</p></li>
+<li><p>There is no way of knowing what the <span class="math inline">\(C\)</span> should be without additional information</p></li>
+<li><p><span class="math inline">\(C\)</span> is the <span class="math inline">\(x\)</span>-intercept and we would have we have to solve for it with an initial value problem.</p></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="images/c.png" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="integratal-use" class="slide level2" data-menu-title="Why is Integration useful">
+<h2></h2>
+<p><span class="slide-title">What is integration useful for?</span></p>
+<hr>
+<ul>
+<li>Convert from rate of change to total values!</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p>Solving differential equations</p>
+<ul>
+<li>i.e <span class="math inline">\(\frac{dy}{dx}=2x-4\)</span></li>
+</ul>
+<p><!-- - Logistic Growth is one example --></p></li>
+</ul>
+<p><br></p>
+<ul>
+<li><p>Calculating the area under a curve</p>
+<ul>
+<li>Useful in policy evaluations</li>
+</ul></li>
+</ul>
+</section>
+<section id="tough" class="slide level2" data-menu-title="Integration is tough">
+<h2></h2>
+<p><span class="slide-title">But also… integration can be tough</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Before integrating ask yourself:</strong></p>
+<ol type="1">
+<li>What am I trying to solve?</li>
+</ol>
+<p><br></p>
+<ol start="2" type="1">
+<li>Does it make sense to take an integral?</li>
+</ol>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/xkcd.png" style="width:80.0%"></p>
+<figcaption>Source <a href="https://xkcd.com/2117/">xkcd comics</a></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="rules-cover" class="slide level2" data-menu-title="Rules of Integration" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Rules of Integration
+</div>
+</div>
+</section>
+<section id="notation" class="slide level2" data-menu-title="Notation">
+<h2></h2>
+<p><span class="slide-title">Notation</span></p>
+<hr>
+<p>When you take an integral, the function in it can be in terms of any variable. This is just notation and it does not affect the result of the integration:</p>
+<p><span class="math display">\[\int f(x) dx = \int f(t) dt = \int f(u) du.\]</span></p>
+</section>
+<section id="sum-diff-blank" class="slide level2" data-menu-title="Rules of Integration">
+<h2></h2>
+<p><span class="slide-title">Integration rules (1)</span></p>
+<hr>
+<div class="center-text body-text-l">
+<p><strong>Sum and Difference Rules</strong></p>
+</div>
+<p>✏️</p>
+</section>
+<section id="sum-diff" class="slide level2" data-menu-title="Rules of Integration">
+<h2></h2>
+<p><span class="slide-title">Integration rules (1)</span></p>
+<hr>
+<div class="center-text body-text-l">
+<p><strong>Sum and Difference Rules</strong></p>
+</div>
+<p>The integral of a sum is equal to the sum of the integrals:</p>
+<p><span class="math display">\[
+\int[f(x)+g(x)]dx=\int f(x)dx+\int g(x)dx
+\]</span></p>
+<p>The integral of the difference is equal to the difference of the integrals:</p>
+<p><span class="math display">\[\int[f(x)-g(x)]dx=\int f(x)dx-\int g(x)dx \]</span></p>
+</section>
+<section id="constant-blank" class="slide level2" data-menu-title="Rules of Integration">
+<h2></h2>
+<p><span class="slide-title">Integration rules (2)</span></p>
+<hr>
+<div class="center-text body-text-l">
+<p><strong>Constant Rule</strong></p>
+</div>
+<p>✏️</p>
+</section>
+<section id="constant" class="slide level2" data-menu-title="Rules of Integration">
+<h2></h2>
+<p><span class="slide-title">Integration rules (2)</span></p>
+<hr>
+<div class="center-text body-text-l">
+<p><strong>Constant Rule</strong></p>
+</div>
+<p>When a function is mulitplied by a constant, the constant can be taken out to multiply the integral:</p>
+<p><span class="math display">\[
+\int cf(x)dx=c\int f(x)dx
+\]</span></p>
+</section>
+<section id="power-blank" class="slide level2" data-menu-title="Rules of Integration">
+<h2></h2>
+<p><span class="slide-title">Integration rules (3)</span></p>
+<hr>
+<div class="center-text body-text-l">
+<p><strong>Power Rule</strong></p>
+</div>
+<p>✏️</p>
+</section>
+<section id="power" class="slide level2" data-menu-title="Rules of Integration">
+<h2></h2>
+<p><span class="slide-title">Integration rules (3)</span></p>
+<hr>
+<div class="center-text body-text-l">
+<p><strong>Power Rule</strong></p>
+</div>
+<p><span class="math display">\[
+\int x^ndx=\frac{x^{n+1}}{n+1}+C \text{, n}\ne -1
+\]</span></p>
+</section>
+<section id="examples" class="slide level2" data-menu-title="Examples of Integration">
+<h2></h2>
+<p><span class="slide-title">Examples</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Evaluate the following integrals.</span></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<ol type="A">
+<li><span class="math inline">\(\int 4 dx\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="2" type="A">
+<li><span class="math inline">\(\int 2x^2 dx\)</span></li>
+</ol>
+</div><div class="column" style="width:33%;">
+<ol start="3" type="A">
+<li><span class="math inline">\(\int x^3-4x dx\)</span></li>
+</ol>
+</div></div>
+</section>
+<section id="initial-value-title" class="slide level2" data-menu-title="Initial value problems" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Initial value problems
+</div>
+</div>
+</section>
+<section id="ivp" class="slide level2" data-menu-title="Initial Value Problems">
+<h2></h2>
+<p><span class="slide-title">Initial value problems</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>To find the <span class="math inline">\(C\)</span> term in the integral, we need extra information</p></li>
+<li><p>Often times that comes from being given an <em>initial value</em></p></li>
+<li><p>This means being given some value of the function, e.g.&nbsp;<span class="math inline">\(y(0)=a\)</span> or <span class="math inline">\(y(12)=b\)</span></p></li>
+<li><p>We use this information to solve for what <span class="math inline">\(C\)</span> should be</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="images/c.png" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<!----------------------------------------------------->
+</section>
+<section id="ivp-ex-blank" class="slide level2" data-menu-title="Initial Value Problem">
+<h2></h2>
+<p><span class="slide-title">Example</span></p>
+<hr>
+<p>✏️ <span style="color:green;">The marginal cost of producing <span class="math inline">\(x\)</span> units of a product is:</span></p>
+<p><span style="color:green;"><span class="math display">\[
+\frac{dC}{dx}=25-0.02x
+\]</span></span></p>
+<p><span style="color:green;">Where <span class="math inline">\(C\)</span> is the cost (in dollars), and <span class="math inline">\(x\)</span> is the number of units produced. Given that producing 2 units of product costs $10, what is the complete cost equation?</span></p>
+<!----------------------------------------------------->
+</section>
+<section id="ivp-ex" class="slide level2 smaller" data-menu-title="Initial Value Problem">
+<h2></h2>
+<p><span class="slide-title">Example</span></p>
+<hr>
+<p>✏️ <span style="color:green;">The marginal cost of producing <span class="math inline">\(x\)</span> units of a product is:</span></p>
+<p><span style="color:green;"><span class="math display">\[
+\frac{dC}{dx}=25-0.02x
+\]</span></span></p>
+<p><span style="color:green;">Where <span class="math inline">\(C\)</span> is the cost (in dollars), and <span class="math inline">\(x\)</span> is the number of units produced. Given that producing 2 units of product costs $10, what is the complete cost equation?</span></p>
+<p>We can integrate to find the original cost function <span class="math inline">\(C\)</span>:</p>
+<p><span class="math display">\[C(x) = \int \frac{dC}{dx} dx = \int 25-0.02x.\]</span></p>
+<p>Then: <span class="math display">\[
+\begin{align}
+\int 25-0.02x =&amp;25x-\frac{.02x^2}{2}+D &amp; \text{Solve with Power Rule}\\
+10&amp;=25(2)-\frac{0.02(2)^2}{2}+D  &amp;\text{ Sub in $x=2$}\\
+-39.96&amp;=D\\
+C(x)&amp;=25x-\frac{0.2x^2}{2}-39.96
+\end{align}
+\]</span></p>
+</section>
+<section id="definite-integrals" class="slide level2" data-menu-title="Definite integrals" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Definite integrals
+</div>
+</div>
+</section>
+<section id="definte-1-blank" class="slide level2" data-menu-title="Definite vs Indefinite">
+<h2></h2>
+<p><span class="slide-title">Indefinite vs.&nbsp;dfinite integrals</span></p>
+<hr>
+<ul>
+<li>We have been working with <strong>indefinite integrals</strong> of the form</li>
+</ul>
+<p><span class="math display">\[
+\int f(x)dx
+\]</span></p>
+<p>This means there are no integration bounds and we need initial values to find integration constants.</p>
+<div class="fragment">
+<ul>
+<li><strong>Definite integrals</strong> have start and end values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</li>
+</ul>
+<p><span class="math display">\[\int_a^b f(x) dx.\]</span></p>
+<!-- - If $F(x) = \int f(x)dx$ then 
+
+$$\int_a^b f(x) dx = F(b) - F(a).$$ -->
+<p>To find the area under the curve along an interval <span class="math inline">\([a,b]\)</span>, evaluate the antiderivative at the endpoints and subtract them.</p>
+<p>✏️ <span style="color:green;"><strong>Example</strong></span></p>
+<!----------------------------------------------------->
+</div>
+</section>
+<section id="definte-1" class="slide level2 smaller" data-menu-title="Definite vs Indefinite">
+<h2></h2>
+<p><span class="slide-title">Indefinite vs.&nbsp;dfinite integrals</span></p>
+<hr>
+<ul>
+<li>We have been working with <strong>indefinite integrals</strong>.</li>
+</ul>
+<p><span class="math display">\[
+\int f(x)dx
+\]</span></p>
+<p>This means there are no integration bounds and we need initial values to find integration constants.</p>
+<div class="fragment">
+<ul>
+<li><strong>Definite integrals</strong> have start and end values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</li>
+</ul>
+<p><span class="math display">\[\int_a^b f(x) dx.\]</span></p>
+<!-- - If $F(x) = \int f(x)dx$ then 
+
+$$\int_a^b f(x) dx = F(b) - F(a).$$ -->
+<p>To find the area under the curve along an interval <span class="math inline">\([a,b]\)</span>, evaluate the antiderivative at the endpoints and subtract them.</p>
+<p><strong>Example</strong></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{align}
+\int^b_axdx &amp;= \frac{1}{2}x^2\Big|^b_a\\
+            &amp;= \frac{1}{2}(b)^2-\frac{1}{2}(a)^2
+\end{align}
+\]</span></p>
+<!----------------------------------------------------->
+</div>
+</section>
+<section id="def-solve-blank" class="slide level2" data-menu-title="Definite Integral">
+<h2></h2>
+<p><span class="slide-title">Example</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Evaluate the following integral.</span></p>
+<p><span style="color:green"> <span class="math display">\[\int^2_{-1}3x^2dx\]</span> </span></p>
+<!----------------------------------------------------->
+</section>
+<section id="def-solve" class="slide level2" data-menu-title="Definite Integral">
+<h2></h2>
+<p><span class="slide-title">Example</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Evaluate the following integral.</span></p>
+<p><span style="color:green"> <span class="math display">\[\int^2_{-1}3x^2dx\]</span> </span></p>
+<p>We have that: <span class="math display">\[
+\begin{align}
+\int^2_{-1}3x^2dx &amp;= x^3\Big|^2_{-1}\\
+&amp;=(2)^3-(-1)^3 \\
+&amp;=9
+\end{align}
+\]</span></p>
+<!----------------------------------------------------->
+</section>
+<section id="area" class="slide level2" data-menu-title="Area between Curves">
+<h2></h2>
+<p><span class="slide-title">Area between two curves</span></p>
+<hr>
+
+<!----------------------------------------------------->
+<img data-src="images/twocurve.png" style="width:80.0%" class="r-stretch"></section>
+<section id="area-ex1" class="slide level2" data-menu-title="Area between curves">
+<h2></h2>
+<p><span class="slide-title">Example</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Find the area of the shaded region in the graph below.</span></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/diffxtwo.gif" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/twocurve.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+
+</div></div>
+</section>
+<section id="area-ex2" class="slide level2" data-menu-title="Area between curves">
+<h2></h2>
+<p><span class="slide-title">Example</span></p>
+<hr>
+<p>We need to compute</p>
+<p><span class="math display">\[\int^1_0 \sqrt{x} - \int^1_0 x^2.\]</span></p>
+<p>Compute each piece carfully:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span class="math display">\[
+\small
+\begin{align}
+\int^1_0 \sqrt{x} &amp;=\frac{2}{3}x^\frac{3}{2} \Big|_0^1\\
+                  &amp;= \frac{2}{3}(1)^{\frac{3}{2}}-\frac{2}{3}(0)^{\frac{3}{2}} \\
+                  &amp;= \frac{2}{3}.
+\end{align}
+\]</span></p>
+</div><div class="column" style="width:60%;">
+<p><span class="math display">\[
+\small
+\begin{align}
+\int^1_0 x^2 &amp;=\frac{1}{3}x^3\Big|_0^1 \\
+            &amp;= \frac{1}{3}(1)^3-\frac{1}{3}(0)^3 \\
+            &amp;= \frac{1}{3}.
+\end{align}
+\]</span></p>
+</div></div>
+<p>Then subtract the upper from the lower:</p>
+<p><span class="math display">\[
+\small
+\frac{2}{3}-\frac{1}{3}=\frac{1}{3}
+\]</span></p>
+</section>
+<section id="exercises-title" class="slide level2" data-menu-title="Exercises" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Exercises
+</div>
+</div>
+</section>
+<section id="exercises" class="slide level2" data-menu-title="Exercises">
+<h2></h2>
+<p><span class="slide-title">Exercises 1</span></p>
+<hr>
+<ol type="1">
+<li>Find the integrals of <span class="math inline">\(y\)</span> and <span class="math inline">\(g\)</span> and solve the integral in C.</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+\text{A) }y=\frac{3}{x^2}, y(3)=2&amp;  &amp;\text{B)  }g(t)=3t^5-2t^3+16t-7  &amp;  &amp;\text{C) } \int^4_2\frac{1}{2}x
+\end{align}
+\]</span></p>
+</section>
+<section id="ta2-A-solution" class="slide level2" data-menu-title="Team Assessment 2 Questions">
+<h2></h2>
+<p><span class="slide-title">Solution (A)</span></p>
+<hr>
+<p>We have that</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int \frac{3}{x^2}\,dx
+&amp;= 3 \int x^{-2}\,dx \\[6pt]
+&amp;= 3 \left( \frac{x^{-1}}{-1} \right) + C \\[6pt]
+&amp;= -\frac{3}{x} + C
+\end{aligned}
+\]</span></p>
+<p>With the initial value <span class="math inline">\(y(3)=2\)</span> we obtain</p>
+<p><span class="math display">\[
+\begin{align}
+2 &amp;= y(3) \\
+  &amp;= -\frac{3}{3} + C \\
+  &amp;= -1 + C \\
+3 &amp;= C.
+\end{align}
+\]</span></p>
+<p>Therefore the solution is <span class="math inline">\(-\frac{3}{x} +3\)</span>.</p>
+</section>
+<section id="ta2-B-solution" class="slide level2" data-menu-title="Team Assessment 2 Questions">
+<h2></h2>
+<p><span class="slide-title">Solution (B)</span></p>
+<hr>
+<p>We have that</p>
+<p><span class="math display">\[\begin{aligned}
+\int \bigl(3t^{5}-2t^{3}+16t-7\bigr)\,dt
+&amp;= \int 3t^{5}\,dt - \int 2t^{3}\,dt + \int 16t\,dt - \int 7\,dt \\[6pt]
+&amp;= 3\frac{t^{6}}{6} - 2\frac{t^{4}}{4} + 16\frac{t^{2}}{2} - 7t + C \\[6pt]
+&amp;= \frac{t^{6}}{2} - \frac{t^{4}}{2} + 8t^{2} - 7t + C
+\end{aligned}\]</span></p>
+</section>
+<section id="ta2-C-solution" class="slide level2" data-menu-title="Team Assessment 2 Questions">
+<h2></h2>
+<p><span class="slide-title">Solution (C)</span></p>
+<hr>
+<p>We get that</p>
+<p><span class="math display">\[\begin{aligned}
+\int_{2}^{4} \frac{1}{2}x\,dx
+&amp;= \frac{1}{2}\int_{2}^{4} x\,dx \\[6pt]
+&amp;= \frac{1}{2}\left[\frac{x^{2}}{2}\right]_{2}^{4} \\[6pt]
+&amp;= \frac{1}{4}\bigl(4^{2}-2^{2}\bigr) \\[6pt]
+&amp;= \frac{1}{4}(16-4) \\[6pt]
+&amp;= 3
+\end{aligned}\]</span></p>
+</section>
+<section id="exercises-2" class="slide level2" data-menu-title="Exercises">
+<h2></h2>
+<p><span class="slide-title">Exercises 2</span></p>
+<hr>
+<ol start="2" type="1">
+<li>A model for the rate of change in ozone concentrations over time between 1962-1984 is given by <span class="math inline">\(\frac{dC}{dt}=2t+20\)</span>, where <span class="math inline">\(C\)</span> is the ozone concentration (ppm) and <span class="math inline">\(t\)</span> is the elapsed time in years since 1962. Given that in 1964 the ozone concentration was 30 ppm, what was the ozone concentration in 1982?</li>
+</ol>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ol start="3" type="1">
+<li>A coastal wetland restoration project is being evaluated against a “do-nothing” baseline where the wetland is left degraded. Ecologists model the carbon sequestration rate (tons CO₂ / year) as a function of years since the project began, <span class="math inline">\(t\)</span>:</li>
+</ol>
+<ul>
+<li>Restored wetland: <span class="math inline">\(R(t) = 8t - t^2\)</span></li>
+<li>Degraded baseline: <span class="math inline">\(B(t) = 2t\)</span></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<p>Both models are valid for <span class="math inline">\(0 \le t \le 6\)</span>. What is the <strong>total additional carbon sequestered</strong> by the restored wetland over the 6-year period?</p>
+<div class="center-text teal-text">
+<p><em>Write your answers as full sentences with units!</em></p>
+</div>
+</section>
+<section id="exercises-solution-2-blank" class="slide level2 smaller" data-menu-title="Exercise 2 solution">
+<h2></h2>
+<p><span class="slide-title">Solution (2)</span></p>
+<hr>
+<ol start="2" type="1">
+<li>A model for the rate of change in ozone concentrations over time between 1962-1984 is given by <span class="math inline">\(\frac{dC}{dt}=2t+20\)</span>, where <span class="math inline">\(C\)</span> is the ozone concentration (ppm) and <span class="math inline">\(t\)</span> is the elapsed time in years since 1962. Given that in 1964 the ozone concentration was 30 ppm, what was the ozone concentration in 1982?</li>
+</ol>
+<p>✏️</p>
+</section>
+<section id="exercises-solution-2" class="slide level2 smaller" data-menu-title="Exercise 2 solution">
+<h2></h2>
+<p><span class="slide-title">Solution (2)</span></p>
+<hr>
+<p>Given:<br>
+<span class="math display">\[\frac{dC}{dt} = 2t + 20\]</span></p>
+<p>Integrate:<br>
+<span class="math display">\[\int dC = \int (2t + 20)\,dt\]</span></p>
+<p><span class="math display">\[C(t) = t^{2} + 20t + D\]</span></p>
+<p>Initial condition:<br>
+<span class="math display">\[C(2)=30 \ \  \text{(since 1964 is 2 years after 1962)}\]</span></p>
+<p><span class="math display">\[30 = 2^{2} + 20\cdot 2 + D\]</span></p>
+<p><span class="math display">\[D = 30 - 44 = -14\]</span></p>
+<p>Thus:<br>
+<span class="math display">\[C(t) = t^{2} + 20t - 14\]</span></p>
+<p>Evaluate at <span class="math inline">\(t=20\)</span> (1982):</p>
+<p><span class="math display">\[C(20) = 20^{2} + 20\cdot 20 - 14\]</span></p>
+<p><span class="math display">\[= 400 + 400 - 14\]</span></p>
+<p><span class="math display">\[= 786 \text{ ppm}\]</span></p>
+</section>
+<section id="exercises-solution-3-blank" class="slide level2" data-menu-title="Exercise 2 solution">
+<h2></h2>
+<p><span class="slide-title">Solution (3)</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ol start="3" type="1">
+<li>A coastal wetland restoration project is being evaluated against a “do-nothing” baseline where the wetland is left degraded. Ecologists model the carbon sequestration rate (tons CO₂ / year) as a function of years since the project began, <span class="math inline">\(t\)</span>:</li>
+</ol>
+<ul>
+<li>Restored wetland: <span class="math inline">\(R(t) = 8t - t^2\)</span></li>
+<li>Degraded baseline: <span class="math inline">\(B(t) = 2t\)</span></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<p>Both models are valid for <span class="math inline">\(0 \le t \le 6\)</span>. What is the <strong>total additional carbon sequestered</strong> by the restored wetland over the 6-year period?</p>
+<p>✏️</p>
+</section>
+<section id="exercises-solution-3" class="slide level2" data-menu-title="Exercise 2 solution">
+<h2></h2>
+<p><span class="slide-title">Solution (3)</span></p>
+<hr>
+<p>The toal carbon sequestered in each scenario is given by the area under the curve of the corresponding sequestration rate.</p>
+<p>So the total <em>additional</em> carbon sequesterd is represented by the area between the two sequestration rate curves.</p>
+<p>Integrate:</p>
+<p><span class="math display">\[\int_0^6 \big[R(t) - B(t)\big]\, dt = \int_0^6 (6t - t^2)\, dt\]</span></p>
+<p><span class="math display">\[= \left[3t^2 - \frac{t^3}{3}\right]_0^6 = (3(36) - \tfrac{216}{3}) - 0 = 108 - 72 = 36\]</span></p>
+<p>Over the 6-year period, restoring the wetland sequesters an additional <strong>36 tons of CO₂</strong> compared to leaving it degraded.</p>
 </section>
 <section id="break" class="slide level2" data-menu-title="5 minute break">
 <h2></h2>
@@ -304,391 +861,130 @@ x  &amp;, x \geq 0\\
 <hr>
 
 <img data-src="images/coffee-break.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
-<section id="applications" class="slide level2" data-menu-title="Applications">
-<h2></h2>
-<p><span class="slide-title">Why derivatives in an EDS program?</span></p>
-<hr>
-<p><br> <br> <br> <br> <br></p>
-<div class="center-text body-text-l">
-<p>Describing rates of change is common in environmental science (rate of pollutant concentration change, rate of population growth, rate of energy consumption)</p>
-</div>
-</section>
-<section id="calc" class="slide level2" data-menu-title="Calculus and Derivatives are the study of change">
-<h2></h2>
-<p><span class="slide-title">Calculus and derivatives are used to study change</span></p>
-<hr>
-
-<img data-src="images/trex-no-labels.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
-<section id="envs-change" class="slide level2" data-menu-title="Enviromental Science is the Study of Change">
-<h2></h2>
-<p><span class="slide-title">Environmental Science studies change</span></p>
-<hr>
-
-<img data-src="images/bait.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
-<section id="envs-change2" class="slide level2" data-menu-title="Enviromental Science is the Study of Change">
-<h2></h2>
-<p><span class="slide-title">Environmental Science studies change</span></p>
-<hr>
-
-<img data-src="images/energy.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
-<section id="envs-change3" class="slide level2" data-menu-title="Enviromental Science is the Study of Change">
-<h2></h2>
-<p><span class="slide-title">Environmental Science studies change</span></p>
-<hr>
-
-<img data-src="images/glacier.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"><p><br></p>
-<p><span style="color:green;">🤔 Talk with a partner, what are 2 fields of environmental science where studying the rate of change and derivatives would be important?</span></p>
-</section>
-<section id="diff-rules-1-blank" class="slide level2" data-menu-title="Rules for Differentiation (1)">
-<h2></h2>
-<p><span class="slide-title">Rules for differentiation (1)</span></p>
-<hr>
-<p><strong>Constant Rule</strong> ✏️</p>
-<p><br> <br> <br> <br> <br> <br></p>
-<p><strong>Power Rule</strong> ✏️</p>
-</section>
-<section id="diff-rules-1" class="slide level2" data-menu-title="Rules for Differentiation (1)">
-<h2></h2>
-<p><span class="slide-title">Rules for differentiation (1)</span></p>
-<hr>
-<p><strong>Constant Rule</strong></p>
-<p>Let <span class="math inline">\(c\)</span> be a constant (so, a number). If <span class="math inline">\(f(x) = c\)</span>, then <span class="math inline">\(f'(x)=0\)</span>. Equivalently</p>
-<p><span class="math display">\[\frac{d}{dx}c = 0\]</span></p>
-<p><strong>Power Rule</strong></p>
-<p>Let <span class="math inline">\(n\)</span> be a (real) number, if <span class="math inline">\(f(x)= x^n\)</span>, then <span class="math inline">\(f'(x) = nx^{n-1}\)</span>. Equivalently <span class="math display">\[
-\frac{d}{dx}[x^n]
-=nx^{n-1}.
-\]</span></p>
-<div class="fragment">
-<p><strong>Examples</strong> ✏️</p>
-<p><span class="math display">\[
-\begin{align}
-&amp;y=100 &amp; &amp;f(x)=x^5 &amp; &amp;f(x)=\frac{1}{x^2}
-\end{align}
-\]</span></p>
-</div>
-</section>
-<section id="diff-rules-2-blank" class="slide level2" data-menu-title="Rules for Differentiation (2)">
-<h2></h2>
-<p><span class="slide-title">Rules for differentiation (2)</span></p>
-<hr>
-<p><strong>Sum and Difference Rules</strong></p>
-<p>✏️</p>
-</section>
-<section id="diff-rules-2" class="slide level2" data-menu-title="Rules for Differentiation (2)">
-<h2></h2>
-<p><span class="slide-title">Rules for differentiation (2)</span></p>
-<hr>
-<p><strong>Sum and Difference Rules</strong></p>
-<p>Let <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> be differentiable functions. Then <span class="math display">\[
-\begin{align}
-\frac{d}{dx}[f(x)+g(x)]=\frac{d}{dx}f(x)+\frac{d}{dx}g(x) \\
-\frac{d}{dx}[f(x)-g(x)]=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)
-\end{align}
-\]</span></p>
-<p>😵<em>All this says is: if the function has pieces that are added or subtracted you can take the derivative of each individual piece and add those derivatives.</em></p>
-<div class="fragment">
-<p><strong>Example</strong> ✏️</p>
-<p><span class="math display">\[
-f(x)=x^3-x^2-15
-\]</span></p>
-</div>
-</section>
-<section id="diff-rules-3-blank" class="slide level2" data-menu-title="Rules for Differentiation (3)">
-<h2></h2>
-<p><span class="slide-title">Rules for differentiation (3)</span></p>
-<hr>
-<p><strong>Constant Multiplier Rule</strong></p>
-<p>✏️</p>
-</section>
-<section id="diff-rules-3" class="slide level2" data-menu-title="Rules for Differentiation (3)">
-<h2></h2>
-<p><span class="slide-title">Rules for differentiation (3)</span></p>
-<hr>
-<p><strong>Constant Multiplier Rule</strong></p>
-<p>The derivative of a constant <span class="math inline">\(c\)</span> multiplied by a function <span class="math inline">\(f(x)\)</span> is the same as the constant multiplied by the derivative:</p>
-<p><span class="math display">\[\frac{d}{dx}[kf(x)] = k\frac{d}{dx}f(x)\]</span></p>
-<div class="fragment">
-<p><strong>Example</strong> ✏️</p>
-<p><span class="math display">\[
-y=x^2+\sqrt{2}x-\frac{8}{x}+4
-\]</span></p>
-</div>
-</section>
-<section id="logs-exp" class="slide level2" data-menu-title="Derivative of logs &amp; exp">
-<h2></h2>
-<p><span class="slide-title">Derivative of logs &amp; exponents</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l">Two special derivatives:</span></p>
-<p><br></p>
-<ul>
-<li><span class="body-text-l"><span class="math inline">\(\frac{d}{dx}(e^x) = e^x\)</span></span></li>
-</ul>
-<p><br></p>
-<ul>
-<li><span class="body-text-l"><span class="math inline">\(\frac{d}{dx}ln(x)=\frac{1}{x}\)</span></span></li>
-</ul>
-</section>
-<section id="diff-rules-summary" class="slide level2" data-menu-title="Summary of differentiation rules">
-<h2></h2>
-<p><span class="slide-title">Summary of differentiation rules</span></p>
-<hr>
-<p><br></p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 27%">
-<col style="width: 38%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Differentiation Rule</th>
-<th><span class="math inline">\(f'(x)\)</span> notation</th>
-<th><span class="math inline">\(\frac{d}{dx}\)</span> notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Constant Rule</strong></td>
-<td><span class="math inline">\(f(x)=c \Rightarrow f'(x)=0\)</span></td>
-<td><span class="math inline">\(\frac{d}{dx}[c]=0\)</span></td>
-</tr>
-<tr class="even">
-<td><strong>Power Rule</strong></td>
-<td><span class="math inline">\(f(x)=x^n \Rightarrow f'(x)=n x^{n-1}\)</span></td>
-<td><span class="math inline">\(\frac{d}{dx}[x^n]=n x^{n-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td><strong>Sum Rule</strong></td>
-<td><span class="math inline">\((g(x)+h(x))'=g'(x)+h'(x)\)</span></td>
-<td><span class="math inline">\(\frac{d}{dx}[g(x)+h(x)]=\frac{d}{dx}g(x)+\frac{d}{dx}h(x)\)</span></td>
-</tr>
-<tr class="even">
-<td><strong>Difference Rule</strong></td>
-<td><span class="math inline">\((g(x)-h(x))' = g'(x)-h'(x)\)</span></td>
-<td><span class="math inline">\(\frac{d}{dx}[g(x)-h(x)]=\frac{d}{dx}g(x)-\frac{d}{dx}h(x)\)</span></td>
-</tr>
-<tr class="odd">
-<td><strong>Constant Multiplier Rule</strong></td>
-<td><span class="math inline">\((c\cdot g(x))'=c\,g'(x)\)</span></td>
-<td><span class="math inline">\(\frac{d}{dx}[c\,g(x)]=c\,\frac{d}{dx}g(x)\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p>And two special derivatives: <span class="math inline">\(\frac{d}{dx}(e^x) = e^x\)</span> and <span class="math inline">\(\frac{d}{dx}ln(x)=\frac{1}{x}\)</span>.</p>
-<div class="center-text body-text-s">
-<p>There’s more differentiation rules (product, quotient, chain rule).</p>
-<p>They’re fun, but we won’t be reviewing them.</p>
-</div>
-</section>
-<section id="higher-order-der" class="slide level2" data-menu-title="Higher Order Derivatives">
-<h2></h2>
-<p><span class="slide-title">Higher order derivatives</span></p>
-<hr>
-<ul>
-<li><p>We can continue to take derivatives of derivatives.</p></li>
-<li><p>The second derivative becomes the rate of change of the rate of change.</p></li>
-<li><p>If we interpret the first derivative as velocity, then the second derivative is acceleration.</p></li>
-</ul>
-<div class="fragment">
-<ul>
-<li><p>Notation:</p>
-<ul>
-<li>Function: <span class="math inline">\(f(x) = y\)</span></li>
-<li>1st derivative: <span class="math inline">\(f'(x)\)</span> or <span class="math inline">\(\frac{dy}{dx}\)</span></li>
-<li>2nd derivative: <span class="math inline">\(f''(x)\)</span> or <span class="math inline">\(\frac{d^2y}{dx^2}\)</span></li>
-<li>nth derivative: <span class="math inline">\(f^{(n)}(x)\)</span> or <span class="math inline">\(\frac{d^ny}{dx^n}\)</span></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="derivatives-practice" class="slide level2" data-menu-title="Derivatives practice">
-<h2></h2>
-<p><span class="slide-title">Derivatives practice</span></p>
-<hr>
-<p><span style="color:green;">Solve individually and then check with a partner.</span></p>
-<ol type="1">
-<li>Which rules should you use to take these derivatives?</li>
-</ol>
-<p><span class="math display">\[
-\begin{align}
-\text{A)  }&amp; f(x)=3x^4 &amp;\text{B) }  y=4x^2+3x-16
-\end{align}
-\]</span></p>
-<ol start="2" type="1">
-<li>Find the derivatives of these functions</li>
-</ol>
-<p><span class="math display">\[
-\begin{align}
-&amp;\text{A) } y=3x^2 &amp; &amp;\text{B) }h(x)=2x(x^2 + 3x) &amp; &amp;\text{C) }g(y)=2\sqrt{y} - e^y + 20\ln(y)
-\end{align}
-\]</span></p>
-<ol start="3" type="1">
-<li>Find the 3rd derivative of:</li>
-</ol>
-<p><span class="math display">\[G(z)=3z^4-8z^3+2z-19\]</span></p>
-</section>
-<section id="derivatives-practice-solve-1" class="slide level2" data-menu-title="Derivatives practice">
-<h2></h2>
-<p><span class="slide-title">Derivatives practice</span></p>
-<hr>
-<p><span style="color:green;">✏️ Let’s see a solution!</span></p>
-<p>2.B) Find the derivative <span class="math display">\[h(x)=2x(x^2 + 3x)\]</span></p>
-</section>
-<section id="derivatives-practice-solve-2" class="slide level2" data-menu-title="Derivatives practice">
-<h2></h2>
-<p><span class="slide-title">Derivatives practice</span></p>
-<hr>
-<p><span style="color:green;">✏️ Let’s see a solution!</span></p>
-<p>2.C) Find the derivative <span class="math display">\[g(y)=2\sqrt{y} - e^y + 20\ln(y)\]</span></p>
-</section>
-<section id="derivatives-practice-solve-3" class="slide level2" data-menu-title="Derivatives practice">
-<h2></h2>
-<p><span class="slide-title">Derivatives practice</span></p>
-<hr>
-<p><span style="color:green;">✏️ Let’s see a solution!</span></p>
-<ol start="3" type="1">
-<li>Find the 3rd derivative of <span class="math inline">\(G(z)=3z^4-8z^3+2z-19\)</span>.</li>
-</ol>
-</section>
-<section id="partial-derivatives-title" class="slide level2" data-menu-title="Introduction to Derivates" data-background-color="#003660">
+<section id="differential-equations-title" class="slide level2" data-menu-title="Differential equations" data-background-color="#003660">
 <h2></h2>
 <div class="page-center">
 <div class="custom-subtitle">
-Partial derivatives
+Differential equations
 </div>
 </div>
 </section>
-<section id="partial-derivatives" class="slide level2" data-menu-title="Partial derivatives">
+<section id="diffeq" class="slide level2" data-menu-title="Diff Eq">
 <h2></h2>
-<p><span class="slide-title">Partial derivatives</span></p>
+<p><span class="slide-title">What is a differential equation?</span></p>
 <hr>
+<p>A <strong>differential equation</strong> is any equation which contains derivatives.</p>
+<p>The goal of the differential equation is to find a function that satisfies the equation.</p>
 <p><br></p>
-<p><span class="body-text-m">When we find a partial derivative, we find an expression for the slope with respect to <em>one variable</em> in a multivariate function.</span></p>
-<p><br></p>
-<p><span class="body-text-m"><strong>Notation:</strong> the partials of <span class="math inline">\(f(x,y,z)\)</span> are <span class="math inline">\(\frac{\partial f}{\partial x}\)</span>, <span class="math inline">\(\frac{\partial f}{\partial y}\)</span>, and <span class="math inline">\(\frac{\partial f}{\partial z}\)</span></span></p>
-<p>We read <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> as “the partial derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x\)</span>”</p>
-<p><br></p>
-<p><span class="body-text-m"><strong>How to take partial derivatives?</strong> Find the derivative with respect to a single variable, <em>treating all others as constants.</em></span></p>
+<p><strong>Example</strong></p>
+<p>The equation</p>
+<p><span class="math display">\[
+y' = y + x
+\]</span></p>
+<p>is a differential equation in which we want to find a function <span class="math inline">\(y(x)\)</span> such that its derivative equals the function plus <span class="math inline">\(x\)</span>.</p>
+<p>✏️ <span style="color:green;">1. How would you heck that <span class="math inline">\(y(x) = -x -1\)</span> is a solution for this differential equation?</span></p>
 </section>
-<section id="partial-derivatives-example-1" class="slide level2" data-menu-title="Partial derivatives Ex">
+<section id="terms" class="slide level2" data-menu-title="Terms">
 <h2></h2>
-<p><span class="slide-title">Partial derivatives example</span></p>
+<p><span class="slide-title">Differential equations: terms</span></p>
 <hr>
-<p><span class="body-text-l">✏️ Find all partial derivatives of</span></p>
-<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span></p>
-</section>
-<section id="partial-derivatives-example-2" class="slide level2" data-menu-title="Partial derivatives Ex">
-<h2></h2>
-<p><span class="slide-title">Partial derivatives example</span></p>
-<hr>
-<p><span class="body-text-l">Find all partial derivatives of</span></p>
-<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial x}=1.2x^2y+4z\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial y}=0.4x^3-7.2y\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial z}=4x\]</span></span></p>
-</section>
-<section id="partial-derivatives-example-3" class="slide level2" data-menu-title="Partial derivatives Ex">
-<h2></h2>
-<p><span class="slide-title">Partial derivatives example</span></p>
-<hr>
-<p><span class="body-text-l">Find all partial derivatives of</span></p>
-<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial x}=1.2x^2y+4z\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial y}=0.4x^3-7.2y\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial z}=4x\]</span></span></p>
-<p>✏️<span style="color:green;">What is the value of the partial derivative of <span class="math inline">\(B\)</span> with respect to <span class="math inline">\(z\)</span> at the point <span class="math inline">\((1,2,3)\)</span>?</span></p>
-</section>
-<section id="partial-derivatives-meaning" class="slide level2" data-menu-title="Partial derivatives meaning">
-<h2></h2>
-<p><span class="slide-title">OK, but what do partials actually mean?</span></p>
-<hr>
-<p><span class="body-text-m">The slope with respect to one variable if other variables are held constant.</span></p>
-
-<img data-src="images/partial-derivatives.jpg" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<div class="body-text-m">
 <ul>
-<li>moving up and down</li>
-<li>moving acorss a plane</li>
-<li>twisting / sprialing</li>
+<li><strong>Ordinary differential equation (ODE):</strong> Does not contain partial derivatives</li>
 </ul>
-<p>consider the above when calcualting speed in each / any direction</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="partial-derivatives-practice" class="slide level2" data-menu-title="Try one">
-<h2></h2>
-<p><span class="slide-title">Partial derivatives practice</span></p>
-<hr>
-<ol type="A">
-<li>The temperature (in Celsius) across a surface (where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are in meters) is described by:</li>
-</ol>
-<p><span class="math display">\[T(x,y)=x^2y-2x+y-1\]</span></p>
-<p>At what “rate” is temperature changing (with respect to distance):</p>
+<p><span class="math display">\[\frac{df}{dt}=3.2-f(t)\]</span></p>
+<p><span style="font-size: 0.8em;"> <em>Sometimes functions have more than one variable and we can take <strong>partial derivatives</strong> with respect to each variable.</em> </span></p>
 <ul>
-<li>In the <span class="math inline">\(x\)</span> direction, at the point (1,3) on the surface?</li>
-<li>In the <span class="math inline">\(y\)</span> direction, at the point (0,2) on the surface?</li>
+<li><strong>Partial differential equations (PDE):</strong> Differential equations with partial derivatives</li>
 </ul>
-<div class="fragment">
-<ol start="2" type="A">
-<li>A dragon’s breath temperature (<span class="math inline">\(T\)</span>, in degrees Celsius) is modeled as a function of its wingspan (<span class="math inline">\(W\)</span>, in meters) and length (<span class="math inline">\(L\)</span>, also in meters):</li>
-</ol>
-<p><br></p>
-<p><span class="math display">\[T(W,L)=0.41WL+2.6W^2\]</span></p>
-<ul>
-<li><p>At what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?</p></li>
-<li><p>At what rate is breath temperature changing with respect to wingspan, for the same dragon?</p></li>
-</ul>
-<aside class="notes">
-<ul>
-<li><span class="math inline">\(\frac{\partial T}{\partial L} = 0.41W\)</span> = 0.41(4.5) = <strong>1.845 degrees C per meter (length)</strong></li>
-<li><span class="math inline">\(\frac{\partial T}{\partial W} = 0.41L + 5.2W\)</span> = 0.41(4.1) + 5.2(4.5) = <strong>25.081 degrees C per meter (wingspan)</strong></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><span class="math display">\[\frac{\partial B}{\partial t}= \alpha B+0.31x-21.6\]</span></p>
 </div>
 </section>
-<section id="partial-derivatives-solution-1" class="slide level2" data-menu-title="Try one">
+<section id="order-ODE" class="slide level2" data-menu-title="Order of ODE">
 <h2></h2>
-<p><span class="slide-title">Partial derivatives practice</span></p>
+<p><span class="slide-title">Order of an ODE</span></p>
 <hr>
-<p><span style="color:green;">✏️ Let’s see a solution.</span></p>
+<p><span class="body-text-m"><strong>Order:</strong> The order of a differential equation is the highest order for any differential expression in the equation</span></p>
+<p><br></p>
+<p><span class="body-text-l teal-text"><strong>Example:</strong></span></p>
+<p><span class="body-text-m"><span class="math inline">\(\frac{df}{dt}=3.2-f(t)\)</span> is a <strong>first order ordinary differential equation</strong></span></p>
+<p><br></p>
+<p><span class="body-text-l teal-text"><strong>Example:</strong></span></p>
+<p><span class="body-text-m"><span class="math inline">\(\frac{\partial^3x}{\partial t^3}=2x-4.5\frac{\partial x}{\partial t}\)</span> is a <strong>third order partial differential equation</strong></span></p>
+</section>
+<section id="practice" class="slide level2" data-menu-title="Practice">
+<h2></h2>
+<p><span class="slide-title">Practice:</span></p>
+<hr>
+<p><span class="body-text-m" style="color:green;">Use the terms from the previous slide to describe the following different equations:</span></p>
+<div class="body-text-m">
+<p><span class="math display">\[2.9t^2 - \alpha B=\frac{dB}{dt}\]</span></p>
+<p><br></p>
+<p><span class="math display">\[\frac{\partial^2f }{\partial x^2}=1.4\times10^{-3}f(x)+5.2\]</span></p>
+<p><br></p>
+<p><span class="math display">\[\frac{dC}{dt}=4.1C-8.0\]</span></p>
+</div>
+</section>
+<section id="why-diff-equations" class="slide level2" data-menu-title="Why differential equations">
+<h2></h2>
+<p><span class="slide-title">Differential equations help us understand changing environments</span></p>
+<hr>
+<p><br></p>
+<ul>
+<li><p>For some natural phenomena it can be easier to describe them in terms of derivatives than give an explicit function.</p></li>
+<li><p>By specifying how something changes, we are describing a process or behavior over time.</p></li>
+<li><p>Examples:</p></li>
+</ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<ol type="A">
-<li>The temperature (in Celsius) across a surface (where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are in meters) is described by:</li>
-</ol>
-<p><span class="math display">\[T(x,y)=x^2y-2x+y-1\]</span></p>
-<p>At what “rate” is temperature changing (with respect to distance):</p>
-<ul>
-<li>In the <span class="math inline">\(x\)</span> direction, at the point (1,3) on the surface?</li>
-<li>In the <span class="math inline">\(y\)</span> direction, at the point (0,2) on the surface?</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lynx-hare-300.jpg" style="width:70.0%"></p>
+<figcaption>Describing population dynamics</figcaption>
+</figure>
+</div>
 </div><div class="column" style="width:50%;">
-
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pollution.jpg" style="width:65.0%"></p>
+<figcaption>Groundwater transport of absorbed contaminants</figcaption>
+</figure>
+</div>
 </div></div>
+</section>
+<section id="lotka-volterra" class="slide level2" data-menu-title="tbd">
+<h2></h2>
+<p><span class="slide-title2">Example: Lotka-Volterra (predator-prey) equations</span></p>
+<hr>
+<div class="body-text-m">
+<!-- $$\frac{dx}{dt}=\alpha x-\beta xy$$ -->
+<p>Prey: <span class="math inline">\(\frac{dV}{dt}=r V-\alpha VP\)</span></p>
+<p><br></p>
+<!-- $$\frac{dy}{dt}=\delta xy - \gamma y$$ -->
+<p>Predator: <span class="math inline">\(\frac{dP}{dt}=\beta VP - qP\)</span></p>
+<p><strong>Where:</strong></p>
+<ul>
+<li><span class="math inline">\(V\)</span> is number of prey (e.g.&nbsp;rabbits)</li>
+<li><span class="math inline">\(P\)</span> is number of predators (e.g.&nbsp;wolves)</li>
+<li><span class="math inline">\(r, \alpha, \beta, q\)</span> are positive parameters</li>
+</ul>
+</div>
+<div class="center-text">
+<p><strong>What do the different pieces of the equation <em>mean</em>?</strong></p>
+</div>
 <aside class="notes">
 <ul>
-<li><span class="math inline">\(\frac{\partial T}{\partial x} = 2xy - 2 + 0 + 0\)</span></li>
-</ul>
-<p>@(1,3): <span class="math inline">\(2(1)(3) - 2 = 6 -2 = 4\)</span></p>
+<li><span class="math inline">\(r\)</span>: intrinsic rate of increase</li>
+<li><span class="math inline">\(\alpha\)</span>: capture efficiency of predators (i.e.&nbsp;effect of a predator on per capita growth rate of prey population)
 <ul>
-<li><span class="math inline">\(\frac{\partial T}{\partial x} = x^2 + 1\)</span></li>
+<li>the larger <span class="math inline">\(\alpha\)</span> is, the more the per capita growht rate of a prey population is depressed by the addition of a single predator (e.g.&nbsp;baleen whales feeding on plankton vs.&nbsp;web-building spider capturing a mosquito)</li>
+</ul></li>
+<li><span class="math inline">\(\beta\)</span>: a measure of conversion efficiency (i.e.&nbsp;the ability of predators to convert each new prey ite m into additional per capita growth rate for the predator population)
+<ul>
+<li><span class="math inline">\(\beta\)</span> is high when a single prey item is high value (e.g.&nbsp;a moose prey to wolf predator vs.&nbsp;a seed to a bird)</li>
+</ul></li>
+<li><span class="math inline">\(q\)</span>: per capita death rate (these predators are extreme specialists with no alternative prey sources; so if prey are absent, the predator population declines exponentially)</li>
 </ul>
-<p>@(0,2): <span class="math inline">\(0^2+1 = 1\)</span></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -701,51 +997,55 @@ Partial derivatives
           display:block!important;
       }</style></aside>
 </section>
-<section id="partial-derivatives-solution-2" class="slide level2" data-menu-title="Try one">
+<section id="interpretation-prey" class="slide level2" data-menu-title="Interpretation (prey)">
 <h2></h2>
-<p><span class="slide-title">Partial derivatives practice</span></p>
+<p><span class="slide-title">Interpretation of prey equation:</span></p>
 <hr>
-<p><span style="color:green;">✏️ Let’s see a solution.</span></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ol start="2" type="A">
-<li>A dragon’s breath temperature (<span class="math inline">\(T\)</span>, in degrees Celsius) is modeled as a function of its wingspan (<span class="math inline">\(W\)</span>, in meters) and length (<span class="math inline">\(L\)</span>, also in meters):</li>
-</ol>
 <p><br></p>
-<p><span class="math display">\[T(W,L)=0.41WL+2.6W^2\]</span></p>
+<div class="body-text-l">
+<p><span class="math display">\[\frac{dV}{dt}=r V-\alpha VP\]</span></p>
+</div>
+<!-- $$\frac{dx}{dt}=\alpha x-\beta xy$$ -->
+<p><br></p>
+<div class="body-text-m">
+<p><strong>The pieces:</strong></p>
 <ul>
-<li><p>At what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?</p></li>
-<li><p>At what rate is breath temperature changing with respect to wingspan, for the same dragon?</p></li>
+<li><span class="math inline">\(\frac{dV}{dt}\)</span>: Rate of growth / decline in prey abundance</li>
+<li><span class="math inline">\(r V\)</span>: Population growth (without loss due to predation (assumes predators are the only force limited the growth of the prey population), where <span class="math inline">\(r\)</span> is the intrinsic rate of increase)</li>
+<li><span class="math inline">\(-\alpha VP\)</span>: Population loss due to predation (where <span class="math inline">\(\alpha\)</span> is the capture efficiency of the predator)</li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div>
+</section>
+<section id="interpretation-pred" class="slide level2" data-menu-title="Interpretation (predator)">
+<h2></h2>
+<p><span class="slide-title">Interpretation of predator equation:</span></p>
+<hr>
+<p><br></p>
+<div class="body-text-l">
+<p><span class="math display">\[\frac{dP}{dt}=\beta VP - q P\]</span></p>
+</div>
+<p><br></p>
+<div class="body-text-m">
+<p><strong>The pieces:</strong></p>
+<ul>
+<li><span class="math inline">\(\frac{dP}{dt}\)</span>: Rate of growth / decline in predator population</li>
+<li><span class="math inline">\(\beta VP\)</span>: Predator population growth (where <span class="math inline">\(\beta\)</span> is a measure of conversion efficiency, i.e.&nbsp;the ability of predators to convert each new prey into additional per capita growth rate for the predator population)</li>
+<li><span class="math inline">\(-q P\)</span>: Predator population loss (where <span class="math inline">\(q\)</span> is the per capita death rate; positive population growth only happens when prey are present)</li>
+</ul>
+</div>
+</section>
+<section id="pred-prey-image" class="slide level2" data-menu-title="Pred/prey image">
+<h2></h2>
+<p><span class="slide-title">Or, in pictures:</span></p>
+<hr>
+<p><br></p>
 
-</div></div>
-</section>
-<section id="env-data-example" class="slide level2" data-menu-title="Environmental data example">
-<h2></h2>
-<p><span class="slide-title2">Example: higher order &amp; partial derivatives in environmental data science</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">The <a href="https://www.enviro.wiki/index.php?title=Advection-Dispersion-Reaction_Equation_for_Solute_Transport"><strong>Advection-Dispersion-Reaction Equation</strong></a> for solute transport models the change in a solute concentration <span class="math inline">\(C\)</span> over time <span class="math inline">\(t\)</span> and <span class="math inline">\(x,y,z\)</span> space, where groundwater is flowing in direction <span class="math inline">\(x\)</span>:</span></p>
-<p><br></p>
-<p><span class="body-text-m"><span class="math display">\[\frac{\partial C}{\partial t}=D_x \frac{\partial^2C}{\partial x^2} + D_y\frac{\partial^2C}{\partial y^2}+D_z\frac{\partial^2C}{\partial z^2}-v\frac{\partial C}{\partial x}-\lambda RC\]</span></span></p>
-<p><span class="math inline">\(D_x, D_y, D_z\)</span> are hydrodynamic diffusion coefficients in the <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, and <span class="math inline">\(z\)</span> direction.</p>
-</section>
-<section id="break-it-down" class="slide level2" data-menu-title="Break it down">
-<h2></h2>
-<p><span class="slide-title">Let’s break it down.</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m"><span class="math display">\[\frac{\partial C}{\partial t}=D_x \frac{\partial^2C}{\partial x^2} + D_y\frac{\partial^2C}{\partial y^2}+D_z\frac{\partial^2C}{\partial z^2}-v\frac{\partial C}{\partial x}-\lambda RC\]</span></span></p>
-<p><br></p>
-<ul>
-<li><strong>Left-hand-side:</strong> Rate of concentration change (over time)</li>
-<li><strong>Right-hand-side first 3 terms:</strong> Concentration change due to dispersion in <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, and <span class="math inline">\(z\)</span> directions</li>
-<li><strong>Right-hand-side fourth term:</strong> Concentration change due to groundwater transport (in groundwater flow direction, x)</li>
-<li><strong>Right-hand-side final term:</strong> Reaction term (e.g.&nbsp;biodegradation / abiotic degradation)</li>
-</ul>
+<img data-src="images/predator-prey-image.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p><br></p>
+<div class="footer">
+<p>Adapted frrom Christopher Rackauckas, <a href="https://www.stochasticlifestyle.com/how-to-train-interpretable-neural-networks-that-accurately-extrapolate-from-small-data/"><em>Scientific machine learning: interpretable neural networks that accurately extrapolate from small data.</em></a> from the Stochastic Lifestyle blog.</p>
+</div>
 <aside class="notes">
-<p>This example is here (probably) to show that partial derivatives are useful in solving real-world environmental problems.</p>
+<p>Now we know the rates of change for both populations, but what we still want to know is the actual numbers through time.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -758,6 +1058,58 @@ Partial derivatives
           display:block!important;
       }</style></aside>
 </section>
+<section id="approx-sols" class="slide level2" data-menu-title="Find approximate solutions">
+<h2></h2>
+<p><span class="slide-title">Finding <span class="math inline">\(V(t)\)</span> and <span class="math inline">\(P(t)\)</span>?</span> <!-- [Finding $x(t)$ and $y(t)$?]{.slide-title} --></p>
+<hr>
+
+<img data-src="images/lotka-volterra.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p>Integration to find approximate solutions. <em>Image: <a href="https://mbe.modelica.university/behavior/equations/population/">Modelica by Example</a></em></p>
+</div>
+</section>
+<section id="solve-analytically-blank" class="slide level2" data-menu-title="Solve analytically">
+<h2></h2>
+<p><span class="slide-title3">Some differential equations can be solved analytically:</span></p>
+<hr>
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">
+<p>✏️</p>
+</div>
+</section>
+<section id="solve-analytically" class="slide level2" data-menu-title="Solve analytically">
+<h2></h2>
+<p><span class="slide-title3">Some differential equations can be solved analytically:</span></p>
+<hr>
+<div class="body-text-m">
+<p><span class="math display">\[\frac{dy}{dx}=y\]</span></p>
+<p><br></p>
+<p><strong>Separate variables and integrate both sides:</strong></p>
+<p><span class="math display">\[\int\frac{1}{y}dy=\int1dx\]</span></p>
+<p><br></p>
+<p><strong>Yielding:</strong></p>
+<div class="center-text">
+<p><span class="math inline">\(ln(y)=x\)</span> or <span class="math inline">\(y=e^x\)</span></p>
+</div>
+</div>
+</section>
+<section id="solve-numerically" class="slide level2" data-menu-title="Solve numerically">
+<h2></h2>
+<p><span class="slide-title">Solving differential equations numerically</span></p>
+<hr>
+<p><br></p>
+<div class="body-text-m">
+<p>Find <em>approximate</em> solutions to differential equations when finding an analytical solution would be really challenging (…which is pretty often).</p>
+<p><br></p>
+<p>Instead, computers can numerically approximate solutions by predicting nearby values based on the <em>slope</em>.</p>
+<p><br></p>
+<p><strong>There are many methods for solving differential equations numerically. You’ll do it programatically later on.</strong></p>
+</div>
+</section>
+<section id="lunch-break" class="slide level2" data-menu-title="Lunch break">
+<h2></h2>
+<p><span class="slide-title">Lunch break!</span></p>
+<hr>
+
+<img data-src="images/lunch-time.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
 <section id="what-we-covered" class="slide level2" data-menu-title="What we covered today">
 <h2></h2>
 <p><span class="slide-title">What we covered today</span></p>

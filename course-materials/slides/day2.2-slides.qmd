@@ -13,399 +13,1013 @@ format:
 
 [EDS 212: Day 2, Lecture 2]{.custom-title}
 
-[*Derivatives*]{.custom-subtitle}
+[*Integration and differential equations*]{.custom-subtitle}
 
 <hr class="hr-teal">
 
-[August 4^th^, 2025]{.custom-subtitle3}
+[August 5^th^, 2025]{.custom-subtitle3}
 
 ---
 
-## {#intro-derv data-menu-title="Introduction to Derivates" background-color="#003660"}
+## {#integrate-concept data-menu-title="Integration" background-color="#003660"}
 
 <div class="page-center">
-<div class="custom-subtitle">Introduction to Derivatives</div>
+<div class="custom-subtitle">Integration Conceputally</div>
 </div>
 
-<!---------------------------------------------------------->
-
-## {#alltogether data-menu-title="Putting it all together"}
-
-[Recall average and instantaneous rate of change]{.slide-title}
-
-<hr>
-
-
-```{r echo=FALSE,fig.align='center',out.width="50%"}
-knitr::include_graphics("images/trex.PNG")
-```
-
-**Big idea:** Taking the average rate of change to a set limit will eventually converge to the instantaneous. 
-
-## {#average-slope data-menu-title="Average slope"}
-
-[Average slope]{.slide-title}
-
-<hr>
-
-<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">                                                                               
-  ✏️                    
-</div>  
-
-```{r, fig.align='center'}
-
-library(tidyverse)
-
-x=seq(-1,3,by=0.01)
-y=x^2
-
-lim_df<-data.frame(x=x,y=y)
-
-dx=2
-y2=y[which(lim_df$x==dx)]
-
-slope=y2/dx
-line=x*slope
-
-
-ggplot(data=lim_df,aes(x=x,y=y))+
-  geom_line(color="black", linewidth=3)+
-  theme_classic()+
-  annotate("point",x=0,y=0,size=6,color="blue")+
-  theme(text = element_text(size = 28),
-        axis.title.x = element_blank(),
-        axis.title.y = element_blank()) + 
-  coord_fixed(ratio = 1) +
-  coord_cartesian(xlim=c(-1,3), ylim=c(0,8))
-```
-
-Start with:
-
-
-<br>
-
-Nearby point:
-
-<br>
-
-Average slope:
-
 ---
 
-## {#average-slope-filled data-menu-title="Average slope"}
+## {#auc data-menu-title="Area under the curve"}
 
-[Average slope]{.slide-title}
-
-<hr>
-
-```{r, fig.align='center'}
-x=seq(-1,3,by=0.01)
-y=x^2
-
-lim_df<-data.frame(x=x,y=y)
-
-dx=2
-y2=y[which(lim_df$x==dx)]
-
-slope=y2/dx
-line=x*slope
-
-
-p0<-ggplot(data=lim_df,aes(x=x,y=y))+
-  geom_line(color="black",linewidth=3)+
-  theme_classic()+
-  geom_line( data = data.frame(x = seq(-1, 3, by = 0.01),  
-                               y = 1.5 * seq(-1, 3, by = 0.01)),
-            aes(x = x, y = y),
-            color="red",
-            linewidth=2)+
-  annotate("point",x=0,y=0,size=8,color="blue")+
-  annotate("text", 
-            x=0, y=1, 
-            label="(x, f(x))",
-            size=10,
-            color="blue")+
-  annotate("point",x=1.5, y=2.25, size=8, color="blue")+
-  annotate("text", 
-            x=2.25, y=2.25, 
-            label="(x+Δx, f(x+Δx))",
-            size=10,
-            color="blue") +
-  theme(text = element_text(size = 28),
-        axis.title.x = element_blank(),
-        axis.title.y = element_blank()) + 
-  coord_fixed(ratio = 1) +
-  coord_cartesian(xlim=c(-1,3), ylim=c(0,8))
-
-p0
-```
-
-Start with a point $(x,f(x))$ on the graph. 
-
-A nearby point can be $(x+\Delta x, f(x+\Delta x))$, where $\Delta x$ is a short distance from $x$. 
-
-
-<br>
-
-The average slope between $(x,f(x))$ and $(x+\Delta x, f(x+\Delta x))$ is given by
-
-<span style="color:red">
-$$\text{average slope} = \frac{f(x+\Delta x) - f(x)}{(x+\Delta x)-x} = \frac{f(x+\Delta x) - f(x)}{\Delta x}.$$
-</span>
-
-**What happens when $\Delta x$ becomes smaller and smaller?**
-
----
-
-## {#walkthrough-1 data-menu-title="Walkthrough"}
-
-[What happens when $\Delta x \to 0$?]{.slide-title}
+[How do we find the area under this curve?]{.slide-title}
 
 <hr>
-
-```{r, fig.align='center'}
-
-library(tidyverse)
-
-x=seq(-1,3,by=0.01)
-y=x^2
-
-lim_df<-data.frame(x=x,y=y)
-
-dx=2
-y2=y[which(lim_df$x==dx)]
-
-slope=y2/dx
-line=x*slope
-
-
-p0<- ggplot(data=lim_df,aes(x=x,y=y))+
-  geom_line(color="black", linewidth=3)+
-  theme_classic()+
-  annotate("point",x=0,y=0,size=6,color="blue")+
-  theme(text = element_text(size = 28),
-        axis.title.x = element_blank(),
-        axis.title.y = element_blank()) + 
-  coord_fixed(ratio = 1) +
-  coord_cartesian(xlim=c(-1,3), ylim=c(0,8))
-
-p1<-p0+
-  geom_point(aes(x=dx,y=y2),color="blue",size=6)+
-  geom_line(aes(x=x,y=line),color="red",linewidth=2)+
-  annotate("text",x=1,y=7,label="Delta~x==2",parse=TRUE,size=14)+
-  annotate("text",x=1,y=4.5,label="Slope=2",size=14)
-p1
-
-```
-
----
-
-## {#walkthrough-2 data-menu-title="Walkthrough"}
-
-[What happens when $\Delta x \to 0$?]{.slide-title}
-
-<hr>
-
-```{r, fig.align='center'}
-dx=1
-y2=y[which(lim_df$x==dx)]
-
-slope=y2/dx
-line=x*slope
-p2<-p0+
-  geom_line(aes(x=x,y=line),color="red",linewidth=2)+
-  geom_point(aes(x=dx,y=y2),color="blue",size=6)+
-  annotate("text",x=1,y=7,label="Delta~x==1",parse=TRUE,size=14)+
-  annotate("text",x=1,y=4.5,label="Slope=1",size=14)
-
-p2
-```
-
----
-
-## {#walkthrough-3 data-menu-title="Walkthrough"}
-
-[What happens when $\Delta x \to 0$?]{.slide-title}
-
-<hr>
-
-```{r, fig.align='center'}
-dx=0.5
-y2=y[which(lim_df$x==dx)]
-
-slope=y2/dx
-line=x*slope
-p3<-p0+
-  geom_line(aes(x=x,y=line),color="red",linewidth=2)+
-  geom_point(aes(x=dx,y=y2),color="blue",size=6)+
-  annotate("text",x=1,y=7,label="Delta~x==0.5",parse=TRUE,size=14)+
-  annotate("text",x=1,y=4.5,label="Slope=0.5",size=14)
-p3
-```
-
----
-
-## {#walkthrough-4 data-menu-title="Walkthrough"}
-
-[What happens when $\Delta x \to 0$?]{.slide-title}
-
-<hr>
-
-```{r, fig.align='center'}
-dx=0.25
-y2=y[which(lim_df$x==dx)]
-
-slope=y2/dx
-line=x*slope
-p4<-p0+
-  geom_line(aes(x=x,y=line),color="red",linewidth=2)+
-  geom_point(aes(x=dx,y=y2),color="blue",size=6)+
-  annotate("text",x=1,y=7,label="Delta~x==0.25",parse=TRUE,size=14)+
-  annotate("text",x=1,y=4.5,label="Slope=0.25",size=14)
-p4
-```
-
----
-
-## {#tangent data-menu-title="Tangent Lines"}
-
-[Tangent lines]{.slide-title}
-
-<hr>
-
-**What if we let $\Delta x=0$?**
-
-Then we would have a slope line that only touches the graph at exactly $x$.
-<!--
-```{r,fig.align='center'}
-knitr::include_graphics("images/tangent_line.png")
-```
--->
-
-```{r, fig.align='center'}
-
-slope=0
-line=x*slope
-p5<-p0+
-  geom_line(aes(x=x,y=line),color="red",linewidth=2)+
-  annotate("text",x=1,y=7,label="Delta~x==0",parse=TRUE,size=14)+
-  annotate("text",x=1,y=4.5,label="Slope=?",size=14)
-p5
-```
-
-:::{.center-text .teal-text}
-These very special types of lines are called **tangent lines**.
-:::
-
----
-
-## {#recap data-menu-title="Recap in math notation"}
-
-[Derivative definition]{.slide-title}
-
-<hr>
-
-Remember the slope of the line that passes between two points $(x_1, y_1)$ and $(x_2, y_2)$ is:
-
-$$\text{slope}=\frac{y_2-y_1}{x_2-x_1}.$$
-
-. . .
-
-If we have a function $f(x)$, then $(x,f(x))$ represents a point on its graph.
-
-. . .
-
-Choose a different point on the graph that is $\Delta x$ away: $(x+\Delta x,f(x+\Delta x))$.
-
-. . .
-
-Plug these pointson the graph of $f(x)$ into the slope equation:
-
-$$
-\text{slope}=\frac{f(x+\Delta x)-f(x)}{\Delta x}.
-$$
-
-. . .
-
-When we let $\Delta x \to 0$ we get <span style="color:red">**the slope of the tangent line at $x$**</span>
-
-<span style="color:red">
-$$
-\large
-f'(x)=\lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}
-$$
-</span>
-
-<span style="color:red">**This is the derivative of $f$ at $x$.**</span>
-Also denoted $\frac{df}{dx}$. 
-
-<!--
-<br>
-
-:::{.center-text}
-*Most common notation*
-:::
-
-$$
-\large
-f'(x)\text{, or }\frac{dy}{dx}
-$$
-
--->
-
----
-
-## {#deriv9 data-menu-title="Derivative"} 
 
 ```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/derivative_9.jpg")
+knitr::include_graphics("images/area.png")
 ```
 
-::: {.footer}
-*Artwork by [Allison Horst](https://allisonhorst.com/)*
+---
+
+## {#rect-approx data-menu-title="Area under the curve"}
+
+[How do we find the area under this curve?]{.slide-title}
+
+<hr>
+
+Areas of rectangles are easy to find (base times height!). We can approximate the area by adding the area of rectangles under the curve.
+
+```{r}
+knitr::include_graphics("images/reimann.png")
+```
+
+---
+
+## {#riemann-sum data-menu-title="Riemann Sum"}
+
+[Example]{.slide-title}
+
+<hr>
+
+Approximate the area under the curve from $[-3,3]$ with $\Delta x=1$ and $k=6$
+
+:::{.columns}
+
+:::{.column width="30%"}
+```{r}
+library(tidyverse)
+
+x=seq(-5,5,by=.1)
+y=x^3-12*x+62
+
+x_tab=seq(-3,3,by=1)
+y_tab=x_tab^3-12*x_tab+62
+
+data.frame(x=x_tab,y=y_tab) %>% 
+  knitr::kable()
+```
+:::
+
+:::{.column width="70%"}
+
+```{r,out.width="90%"}
+
+ggplot()+
+  geom_line(aes(x=x,y=y),size=2.5,color="#003660")+
+  geom_hline(yintercept = 0, color = "black") +
+  geom_vline(xintercept = 0, color = "black") +
+  theme_classic()+
+  annotate("segment",x=-3,xend=-3,y=71,yend=0,linetype=1,color="#FEBC11",size=2)+
+  annotate("segment",x=3,xend=3,y=53,yend=0,color="#FEBC11",size=2)+
+  theme(text = element_text(size = 28),
+                axis.line = element_blank()) +   # remove default axis box
+  scale_y_continuous(expand=c(0,0))+
+  scale_x_continuous(breaks=seq(-5,5))
+```
+:::
+
+::::
+
+---
+
+## {#rect data-menu-title="Riemann Sum"}
+
+[Riemann sums]{.slide-title}
+
+<hr>
+1. Start at one end of the interval $[a,b]$
+
+2. Evaluate the function at $f(a)$.
+
+3. Step away from $a$ by some small amount called $\Delta x$.
+
+4. Multiply $f(a)\Delta x$ to get the the area of the first rectangle.
+
+5. Repeat the same steps above, now starting with $\Delta x$ as the bottom left corner of the next rectangle. Repeat until you cover the area with rectangles of width $\Delta x$. 
+
+6. Sum up the area of all $k$ rectangles.
+
+<span style="color:red">
+$$
+R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_{\text{Sum of area of rectangles with width $\Delta(x)$} }
+$$
+</span>
+
+This is called a **Riemann Sum**.
+
+---
+
+## {#exp-reimman data-menu-title="Riemann Sum"}
+
+[Finer and finer Riemann sums]{.slide-title}
+
+<hr>
+
+- What if we try to make $\Delta x$ (the width of the rectangles) really small? So we let $\Delta x \to 0$. This will make the number of rectangles under the curve go to infinity.
+
+- Our estimation of the area will get better and better with more rectangles.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/riemann.gif){fig-align="center" width="90%"}
+:::
+
+::: {.column width="50%"}
+<br>
+
+:::{.fragment .fade-in}
+Take the area calculation we did before, but let $\Delta x \to 0$
+<span style="color:red">
+$$
+\large
+\begin{align}
+\text{True Area} &= \lim_{\Delta x \to 0}R(f(x),\Delta x) \\
+                  &= \int^b_af(x)dx
+\end{align}
+$$
+</span>
+
+We formally call this <span style="color:red">**the integral of $f(x)$ from $a$ to $b$ with respect to $x$**</span>.
+:::
+:::
+
+::::
+
+---
+
+## {#integral-calc data-menu-title="Integrals"}
+
+[How do we calculate integrals?]{.slide-title}
+
+<hr>
+
+- Taking infinite sums is impossible by hand
+
+- Luckily, integrals and derivatives are related in a very useful way:
+
+<br>
+
+. . . 
+
+If we integrate a derivative, we should get the same function back as the original vice-versa:
+
+$$
+\begin{align}
+\frac{d}{dx}\left[\int f(x)dx\right]&=f(x) &\text{Differentiation is the inverse of integration}
+\end{align}
+$$
+
+$$
+\begin{align}
+\int f'(x)&=f(x)+C &\text{Integration is the inverse of differentiation}
+\end{align}
+$$
+
+
+<br>
+
+. . . 
+
+<div class="page-center">
+<span style="color:red">
+*To find the integral of $\int f(t) dt$ we need to find a function $F(x)$ whose derivative is $f(x)$.*
+</span>
+</div>
+
+
+---
+
+## {#c data-menu-title="Constants of Integration"}
+
+[Where did that $C$ come from?]{.slide-title}
+
+<hr>
+
+::::{.columns}
+:::{.column width="50%"}
+
+**Example** 
+
+:::{.fragment .fade-in}
+Find $\int 2x-4$.
+:::
+
+:::{.fragment .fade-in}
+To find $\int 2x-4$ we need to find a function whose derivative is $2x-4$. What could it be?
+:::
+
+:::{.fragment .fade-in}
+- If we integrate, we'll have $\int 2x-4 = x^2-4x+C$. 
+
+- There is no way of knowing what the $C$ should be without additional information
+
+- $C$ is the $x$-intercept and we would have we have to solve for it with an initial value problem.
+:::
+
+:::
+:::{.column width="50%"}
+```{r,out.width="75%"}
+knitr::include_graphics("images/c.png")
+```
+:::
+::::
+
+---
+
+## {#integratal-use data-menu-title="Why is Integration useful"}
+
+[What is integration useful for?]{.slide-title}
+
+<hr>
+- Convert from rate of change to total values!
+
+<br>
+
+- Solving differential equations
+
+    - i.e $\frac{dy}{dx}=2x-4$
+    
+    <!-- - Logistic Growth is one example -->
+    
+<br>    
+
+- Calculating the area under a curve
+
+    - Useful in policy evaluations
+
+---
+
+## {#tough data-menu-title="Integration is tough"}
+
+[But also... integration can be tough]{.slide-title}
+
+<hr>
+
+:::: {.columns}
+
+::: {.column width="40%"}
+**Before integrating ask yourself:**
+
+1. What am I trying to solve?
+
+<br>
+
+2. Does it make sense to take an integral?
+
+:::
+
+::: {.column width="60%"}
+![Source [xkcd comics](https://xkcd.com/2117/)](images/xkcd.png){width="80%"}
+:::
+
+::::
+
+---
+
+## {#rules-cover data-menu-title="Rules of Integration" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Rules of Integration</div>
+</div>
+
+
+---
+
+## {#notation data-menu-title="Notation"}
+
+[Notation]{.slide-title}
+
+<hr>
+
+When you take an integral, the function in it can be in terms of any variable. This is just notation and it does not affect the result of the integration:
+
+$$\int f(x) dx = \int f(t) dt = \int f(u) du.$$
+
+---
+
+## {#sum-diff-blank data-menu-title="Rules of Integration"}
+
+[Integration rules (1)]{.slide-title}
+
+<hr>
+
+:::{.center-text .body-text-l}
+**Sum and Difference Rules**
+:::
+
+✏️ 
+
+---
+
+## {#sum-diff data-menu-title="Rules of Integration"}
+
+[Integration rules (1)]{.slide-title}
+
+<hr>
+
+:::{.center-text .body-text-l}
+**Sum and Difference Rules**
+:::
+
+The integral of a sum is equal to the sum of the integrals:
+
+$$
+\int[f(x)+g(x)]dx=\int f(x)dx+\int g(x)dx
+$$
+
+The integral of the difference is equal to the difference of the integrals: 
+
+$$\int[f(x)-g(x)]dx=\int f(x)dx-\int g(x)dx $$
+
+---
+
+## {#constant-blank data-menu-title="Rules of Integration"}
+
+[Integration rules (2)]{.slide-title}
+
+<hr>
+
+:::{.center-text .body-text-l}
+**Constant Rule**
+:::
+
+✏️ 
+
+---
+
+## {#constant data-menu-title="Rules of Integration"}
+
+[Integration rules (2)]{.slide-title}
+
+<hr>
+
+:::{.center-text .body-text-l}
+**Constant Rule**
+:::
+
+When a function is mulitplied by a constant, the constant can be taken out to multiply the integral:
+
+$$
+\int cf(x)dx=c\int f(x)dx
+$$
+
+---
+
+## {#power-blank data-menu-title="Rules of Integration"}
+
+[Integration rules (3)]{.slide-title}
+
+<hr>
+
+:::{.center-text .body-text-l}
+**Power Rule**
+:::
+
+✏️ 
+
+---
+
+## {#power data-menu-title="Rules of Integration"}
+
+[Integration rules (3)]{.slide-title}
+
+<hr>
+
+:::{.center-text .body-text-l}
+**Power Rule**
+:::
+
+$$
+\int x^ndx=\frac{x^{n+1}}{n+1}+C \text{, n}\ne -1
+$$
+
+
+---
+
+## {#examples data-menu-title="Examples of Integration"}
+
+[Examples]{.slide-title}
+
+<hr>
+
+✏️ [Evaluate the following integrals.]{style="color:green;"}
+
+
+:::: {.columns}
+
+::: {.column width="33%"}
+A) $\int 4 dx$
+:::
+
+::: {.column width="33%"}
+B) $\int 2x^2 dx$
+:::
+
+::: {.column width="33%"}
+C) $\int x^3-4x dx$
+:::
+
+::::
+
+---
+
+## {#initial-value-title data-menu-title="Initial value problems" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Initial value problems</div>
+</div>
+
+---
+
+## {#ivp data-menu-title="Initial Value Problems"}
+
+[Initial value problems]{.slide-title}
+
+<hr>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- To find the $C$ term in the integral, we need extra information
+
+- Often times that comes from being given an *initial value*
+
+- This means being given some value of the function, e.g. $y(0)=a$ or $y(12)=b$
+
+- We use this information to solve for what $C$ should be
+:::
+
+::: {.column width="50%"}
+```{r,out.width="75%"}
+knitr::include_graphics("images/c.png")
+```
+:::
+
+::::
+
+<!----------------------------------------------------->
+
+## {#ivp-ex-blank  data-menu-title="Initial Value Problem"}
+
+[Example]{.slide-title}
+
+<hr>
+
+✏️ [The marginal cost of producing $x$ units of a product is:]{style="color:green;"}
+
+[
+$$
+\frac{dC}{dx}=25-0.02x
+$$
+]{style="color:green;"}
+
+[Where $C$ is the cost (in dollars), and $x$ is the number of units produced. Given that producing 2 units of product costs \$10, what is the complete cost equation?]{style="color:green;"}
+
+<!----------------------------------------------------->
+
+## {#ivp-ex  data-menu-title="Initial Value Problem" .smaller}
+
+[Example]{.slide-title}
+
+<hr>
+
+✏️ [The marginal cost of producing $x$ units of a product is:]{style="color:green;"}
+
+[
+$$
+\frac{dC}{dx}=25-0.02x
+$$
+]{style="color:green;"}
+
+[Where $C$ is the cost (in dollars), and $x$ is the number of units produced. Given that producing 2 units of product costs \$10, what is the complete cost equation?]{style="color:green;"}
+
+We can integrate to find the original cost function $C$:
+
+$$C(x) = \int \frac{dC}{dx} dx = \int 25-0.02x.$$
+
+Then: 
+$$
+\begin{align}
+\int 25-0.02x =&25x-\frac{.02x^2}{2}+D & \text{Solve with Power Rule}\\
+10&=25(2)-\frac{0.02(2)^2}{2}+D  &\text{ Sub in $x=2$}\\
+-39.96&=D\\
+C(x)&=25x-\frac{0.2x^2}{2}-39.96
+\end{align}
+$$
+
+---
+
+## {#definite-integrals data-menu-title="Definite integrals" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Definite integrals</div>
+</div>
+
+---
+
+## {#definte-1-blank data-menu-title="Definite vs Indefinite"}
+
+[Indefinite vs. dfinite integrals]{.slide-title}
+
+<hr>
+- We have been working with **indefinite integrals** of the form
+
+$$
+\int f(x)dx
+$$
+
+This means there are no integration bounds and we need initial values to find integration constants.
+
+. . .
+
+- **Definite integrals** have start and end values $a$ and $b$:
+
+$$\int_a^b f(x) dx.$$
+
+<!-- - If $F(x) = \int f(x)dx$ then 
+
+$$\int_a^b f(x) dx = F(b) - F(a).$$ -->
+
+To find the area under the curve along an interval $[a,b]$, evaluate the antiderivative at the endpoints and subtract them.
+
+✏️ [**Example**]{style="color:green;"}
+
+
+
+<!----------------------------------------------------->
+
+## {#definte-1 data-menu-title="Definite vs Indefinite" .smaller}
+
+[Indefinite vs. dfinite integrals]{.slide-title}
+
+<hr>
+- We have been working with **indefinite integrals**. 
+
+$$
+\int f(x)dx
+$$
+
+This means there are no integration bounds and we need initial values to find integration constants.
+
+. . .
+
+- **Definite integrals** have start and end values $a$ and $b$:
+
+$$\int_a^b f(x) dx.$$
+
+<!-- - If $F(x) = \int f(x)dx$ then 
+
+$$\int_a^b f(x) dx = F(b) - F(a).$$ -->
+
+To find the area under the curve along an interval $[a,b]$, evaluate the antiderivative at the endpoints and subtract them.
+
+**Example**
+
+. . . 
+
+$$
+\begin{align}
+\int^b_axdx &= \frac{1}{2}x^2\Big|^b_a\\
+            &= \frac{1}{2}(b)^2-\frac{1}{2}(a)^2
+\end{align}
+$$
+
+<!----------------------------------------------------->
+
+## {#def-solve-blank data-menu-title="Definite Integral"}
+
+[Example]{.slide-title}
+
+<hr>
+
+✏️ [Evaluate the following integral.]{style="color:green;"}
+
+<span style="color:green">
+$$\int^2_{-1}3x^2dx$$
+</span>
+
+<!----------------------------------------------------->
+
+## {#def-solve data-menu-title="Definite Integral"}
+
+[Example]{.slide-title}
+
+<hr>
+
+✏️ [Evaluate the following integral.]{style="color:green;"}
+
+<span style="color:green">
+$$\int^2_{-1}3x^2dx$$
+</span>
+
+We have that:
+$$
+\begin{align}
+\int^2_{-1}3x^2dx &= x^3\Big|^2_{-1}\\
+&=(2)^3-(-1)^3 \\ 
+&=9
+\end{align}
+$$
+
+<!----------------------------------------------------->
+
+## {#area data-menu-title="Area between Curves"}
+
+[Area between two curves]{.slide-title}
+
+<hr>
+
+```{r,out.width="80%"}
+knitr::include_graphics("images/twocurve.png")
+```
+
+<!----------------------------------------------------->
+
+## {#area-ex1 data-menu-title="Area between curves"}
+
+[Example]{.slide-title}
+
+<hr>
+
+✏️ [Find the area of the shaded region in the graph below.]{style="color:green;"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](images/diffxtwo.gif){fig-align="center"}
+
+![](images/twocurve.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+
+:::
+
+::::
+
+----
+
+## {#area-ex2 data-menu-title="Area between curves"}
+
+[Example]{.slide-title}
+
+<hr>
+
+We need to compute
+
+$$\int^1_0 \sqrt{x} - \int^1_0 x^2.$$
+
+Compute each piece carfully:
+
+:::: {.columns}
+
+::: {.column width="40%"}
+$$
+\small
+\begin{align}
+\int^1_0 \sqrt{x} &=\frac{2}{3}x^\frac{3}{2} \Big|_0^1\\
+                  &= \frac{2}{3}(1)^{\frac{3}{2}}-\frac{2}{3}(0)^{\frac{3}{2}} \\
+                  &= \frac{2}{3}.
+\end{align}
+$$
+:::
+
+::: {.column width="60%"}
+$$
+\small
+\begin{align}
+\int^1_0 x^2 &=\frac{1}{3}x^3\Big|_0^1 \\
+            &= \frac{1}{3}(1)^3-\frac{1}{3}(0)^3 \\
+            &= \frac{1}{3}.
+\end{align}
+$$
+:::
+
+::::
+
+Then subtract the upper from the lower:
+
+$$
+\small
+\frac{2}{3}-\frac{1}{3}=\frac{1}{3}
+$$
+
+---
+
+## {#exercises-title data-menu-title="Exercises" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Exercises</div>
+</div>
+
+---
+
+## {#exercises data-menu-title="Exercises"}
+
+
+[Exercises 1]{.slide-title}
+
+<hr>
+
+1) Find the integrals of $y$ and $g$ and solve the integral in C. 
+
+$$
+\begin{align}
+\text{A) }y=\frac{3}{x^2}, y(3)=2&  &\text{B)  }g(t)=3t^5-2t^3+16t-7  &  &\text{C) } \int^4_2\frac{1}{2}x
+\end{align}
+$$
+
+---
+
+## {#ta2-A-solution data-menu-title="Team Assessment 2 Questions"}
+
+[Solution (A)]{.slide-title}
+
+<hr>
+
+We have that
+
+$$
+\begin{aligned}
+\int \frac{3}{x^2}\,dx 
+&= 3 \int x^{-2}\,dx \\[6pt]
+&= 3 \left( \frac{x^{-1}}{-1} \right) + C \\[6pt]
+&= -\frac{3}{x} + C
+\end{aligned}
+$$
+
+With the initial value $y(3)=2$ we obtain
+
+$$
+\begin{align}
+2 &= y(3) \\
+  &= -\frac{3}{3} + C \\
+  &= -1 + C \\
+3 &= C.
+\end{align}
+$$
+
+Therefore the solution is
+$-\frac{3}{x} +3$. 
+
+## {#ta2-B-solution data-menu-title="Team Assessment 2 Questions"}
+
+[Solution (B)]{.slide-title}
+
+<hr>
+
+We have that
+
+$$\begin{aligned}
+\int \bigl(3t^{5}-2t^{3}+16t-7\bigr)\,dt
+&= \int 3t^{5}\,dt - \int 2t^{3}\,dt + \int 16t\,dt - \int 7\,dt \\[6pt]
+&= 3\frac{t^{6}}{6} - 2\frac{t^{4}}{4} + 16\frac{t^{2}}{2} - 7t + C \\[6pt]
+&= \frac{t^{6}}{2} - \frac{t^{4}}{2} + 8t^{2} - 7t + C
+\end{aligned}$$
+
+## {#ta2-C-solution data-menu-title="Team Assessment 2 Questions"}
+
+[Solution (C)]{.slide-title}
+
+<hr>
+
+We get that
+
+$$\begin{aligned}
+\int_{2}^{4} \frac{1}{2}x\,dx 
+&= \frac{1}{2}\int_{2}^{4} x\,dx \\[6pt]
+&= \frac{1}{2}\left[\frac{x^{2}}{2}\right]_{2}^{4} \\[6pt]
+&= \frac{1}{4}\bigl(4^{2}-2^{2}\bigr) \\[6pt]
+&= \frac{1}{4}(16-4) \\[6pt]
+&= 3
+\end{aligned}$$
+
+---
+
+## {#exercises-2 data-menu-title="Exercises"}
+
+
+[Exercises 2]{.slide-title}
+
+<hr>
+
+2) A model for the rate of change in ozone concentrations over time between 1962-1984 is given by $\frac{dC}{dt}=2t+20$, where $C$ is the ozone concentration (ppm) and $t$ is the elapsed time in years since 1962. Given that in 1964 the ozone concentration was 30 ppm, what was the ozone concentration in 1982? 
+
+
+:::: {.columns}
+
+::: {.column width="40%"}
+3)  A coastal wetland restoration project is being evaluated against a "do-nothing" baseline where the wetland is left degraded. Ecologists model the carbon sequestration rate (tons CO₂ / year) as a function of years since the project began, $t$:
+
+- Restored wetland: $R(t) = 8t - t^2$
+- Degraded baseline: $B(t) = 2t$
+:::
+
+::: {.column width="60%"}
+
+```{r}
+library(ggplot2)
+
+t <- seq(0, 6, length.out = 200)
+df <- data.frame(
+  t = t,
+  R = 8*t - t^2,
+  B = 2*t
+)
+
+ggplot(df, aes(x = t)) +
+  geom_line(aes(y = R, color = "Restored wetland  R(t) = 8t - t²"), linewidth = 1.2) +
+  geom_line(aes(y = B, color = "Degraded baseline  B(t) = 2t"), linewidth = 1.2) +
+  scale_color_manual(values = c(
+    "Restored wetland  R(t) = 8t - t²" = "#2e7d32",
+    "Degraded baseline  B(t) = 2t" = "#8d6e63"
+  )) +
+  labs(
+    x = "Years since project began (t)",
+    y = "Sequestration rate (tons CO2 / yr)",
+    title = "Carbon Sequestration Rate: Restored vs. Degraded Wetland",
+    color = NULL
+  ) +
+  xlim(0, 6) + ylim(0, 18) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.02, 0.95),
+    legend.justification = c(0, 1),
+    legend.text = element_text(size = 18),
+    axis.title = element_text(size = 18),
+    axis.text = element_text(size = 18),
+    plot.title = element_text(size = 20, face = "bold")
+  )
+```
+:::
+
+:::
+
+Both models are valid for $0 \le t \le 6$.
+What is the **total additional carbon sequestered** by the restored wetland over the 6-year period?
+
+
+:::{.center-text .teal-text}
+*Write your answers as full sentences with units!*
 :::
 
 ---
 
-## {#diff-func data-menu-title="Not all functions are differentiable"}
+## {#exercises-solution-2-blank data-menu-title="Exercise 2 solution" .smaller}
 
-[Not all functions are differentiable]{.slide-title}
+[Solution (2)]{.slide-title}
 
 <hr>
 
-- All differentiable functions are continuous, but not all continuous functions are differentiable.
+2) A model for the rate of change in ozone concentrations over time between 1962-1984 is given by $\frac{dC}{dt}=2t+20$, where $C$ is the ozone concentration (ppm) and $t$ is the elapsed time in years since 1962. Given that in 1964 the ozone concentration was 30 ppm, what was the ozone concentration in 1982? 
 
-. . .
+✏️ 
 
-- The absolute value function $|x|$ is one example, this is defined by 
-$$|x| = 
-\begin{cases}
-  x  &, x \geq 0\\
-  -x &, x<0
-\end{cases}.$$
 
-It's graph is:
+---
 
-```{r, fig.align='center',out.width="40%"}
-x=seq(-5,5)
-y=abs(x)
+## {#exercises-solution-2 data-menu-title="Exercise 2 solution" .smaller}
 
-df<-data.frame(x=x,y=y)
+[Solution (2)]{.slide-title}
 
-df %>% 
-  ggplot(aes(x=x,y=y))+
-  geom_vline(xintercept = 0)+
-  geom_line(linewidth=3,color="red")+
-  theme_classic()+
-  theme(panel.border = element_blank(), axis.line.y = element_blank())+  
-  scale_x_continuous(expand = c(0, 0))+
-  scale_y_continuous(expand = c(0, 0))+
-  theme(text = element_text(size = 28)) 
+<hr>
+
+Given:  
+$$\frac{dC}{dt} = 2t + 20$$
+
+Integrate:  
+$$\int dC = \int (2t + 20)\,dt$$  
+
+$$C(t) = t^{2} + 20t + D$$  
+
+Initial condition:  
+$$C(2)=30 \ \  \text{(since 1964 is 2 years after 1962)}$$  
+
+$$30 = 2^{2} + 20\cdot 2 + D$$  
+
+$$D = 30 - 44 = -14$$  
+
+Thus:  
+$$C(t) = t^{2} + 20t - 14$$  
+
+Evaluate at $t=20$ (1982):  
+
+$$C(20) = 20^{2} + 20\cdot 20 - 14$$  
+
+$$= 400 + 400 - 14$$  
+
+$$= 786 \text{ ppm}$$
+
+----
+
+## {#exercises-solution-3-blank data-menu-title="Exercise 2 solution"}
+
+[Solution (3)]{.slide-title}
+
+<hr>
+
+:::: {.columns}
+
+::: {.column width="40%"}
+3)  A coastal wetland restoration project is being evaluated against a "do-nothing" baseline where the wetland is left degraded. Ecologists model the carbon sequestration rate (tons CO₂ / year) as a function of years since the project began, $t$:
+
+- Restored wetland: $R(t) = 8t - t^2$
+- Degraded baseline: $B(t) = 2t$
+:::
+
+::: {.column width="60%"}
+
+```{r}
+library(ggplot2)
+
+t <- seq(0, 6, length.out = 200)
+df <- data.frame(
+  t = t,
+  R = 8*t - t^2,
+  B = 2*t
+)
+
+ggplot(df, aes(x = t)) +
+  geom_line(aes(y = R, color = "Restored wetland  R(t) = 8t - t²"), linewidth = 1.2) +
+  geom_line(aes(y = B, color = "Degraded baseline  B(t) = 2t"), linewidth = 1.2) +
+  scale_color_manual(values = c(
+    "Restored wetland  R(t) = 8t - t²" = "#2e7d32",
+    "Degraded baseline  B(t) = 2t" = "#8d6e63"
+  )) +
+  labs(
+    x = "Years since project began (t)",
+    y = "Sequestration rate (tons CO2 / yr)",
+    title = "Carbon Sequestration Rate: Restored vs. Degraded Wetland",
+    color = NULL
+  ) +
+  xlim(0, 6) + ylim(0, 18) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.02, 0.95),
+    legend.justification = c(0, 1),
+    legend.text = element_text(size = 18),
+    axis.title = element_text(size = 18),
+    axis.text = element_text(size = 18),
+    plot.title = element_text(size = 20, face = "bold")
+  )
 ```
+:::
+
+:::
+
+Both models are valid for $0 \le t \le 6$.
+What is the **total additional carbon sequestered** by the restored wetland over the 6-year period?
+
+
+✏️ 
+
+----
+
+## {#exercises-solution-3 data-menu-title="Exercise 2 solution"}
+
+[Solution (3)]{.slide-title}
+
+<hr>
+
+The toal carbon sequestered in each scenario is given by the area under the curve of the corresponding sequestration rate. 
+
+So the total *additional* carbon sequesterd is represented by the area between the two sequestration rate curves. 
+
+Integrate:
+
+$$\int_0^6 \big[R(t) - B(t)\big]\, dt = \int_0^6 (6t - t^2)\, dt$$
+
+$$= \left[3t^2 - \frac{t^3}{3}\right]_0^6 = (3(36) - \tfrac{216}{3}) - 0 = 108 - 72 = 36$$
+
+
+Over the 6-year period, restoring the wetland sequesters an
+additional **36 tons of CO₂** compared to leaving it
+degraded.
+
+
+
 
 ---
 
@@ -417,593 +1031,343 @@ df %>%
 
 ![image: Flaticon.com](images/coffee-break.png)
 
-
 ---
 
-## {#applications data-menu-title="Applications"} 
-
-[Why derivatives in an EDS program?]{.slide-title}
-
-<hr>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-::: {.center-text .body-text-l}
-Describing rates of change is common in environmental science (rate of pollutant concentration change, rate of population growth, rate of energy consumption)
-:::
-
----
-
-## {#calc data-menu-title="Calculus and Derivatives are the study of change"}
-
-[Calculus and derivatives are used to study change]{.slide-title}
-
-<hr>
-
-```{r, fig.align='center',out.width="75%"}
-knitr::include_graphics("images/trex-no-labels.PNG")
-```
-
----
-
-## {#envs-change data-menu-title="Enviromental Science is the Study of Change"}
-
-[Environmental Science studies change]{.slide-title}
-
-<hr>
-
-```{r, fig.align='center',out.width="75%"}
-knitr::include_graphics("images/bait.jpeg")
-```
-
----
-
-## {#envs-change2 data-menu-title="Enviromental Science is the Study of Change"}
-
-[Environmental Science studies change]{.slide-title}
-
-<hr>
-
-```{r, fig.align='center',out.width="75%"}
-knitr::include_graphics("images/energy.png")
-```
-
----
-
-## {#envs-change3 data-menu-title="Enviromental Science is the Study of Change"}
-
-[Environmental Science studies change]{.slide-title}
-
-<hr>
-
-```{r, fig.align='center',out.width="75%"}
-knitr::include_graphics("images/glacier.jpg")
-```
-
-<br>
-
-[🤔 Talk with a partner, what are 2 fields of environmental science where studying the rate of change and derivatives would be important?]{style="color:green;"}
-
----
-
-## {#diff-rules-1-blank data-menu-title="Rules for Differentiation (1)"}
-
-[Rules for differentiation (1)]{.slide-title}
-
-<hr>
-
-**Constant Rule** ✏️
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-**Power Rule** ✏️
-
----
-
-## {#diff-rules-1 data-menu-title="Rules for Differentiation (1)"}
-
-[Rules for differentiation (1)]{.slide-title}
-
-<hr>
-
-**Constant Rule**
-
-Let $c$ be a constant (so, a number). If $f(x) = c$, then $f'(x)=0$. Equivalently
-
-$$\frac{d}{dx}c = 0$$
-
-
-
-**Power Rule**
-
-Let $n$ be a (real) number, if $f(x)= x^n$, then $f'(x) = nx^{n-1}$. Equivalently
-$$
-\frac{d}{dx}[x^n]
-=nx^{n-1}.
-$$
-
-. . .
-
-**Examples**   ✏️
-
-$$
-\begin{align}
-&y=100 & &f(x)=x^5 & &f(x)=\frac{1}{x^2}
-\end{align}
-$$
-
----
-
-## {#diff-rules-2-blank data-menu-title="Rules for Differentiation (2)"}
-
-[Rules for differentiation (2)]{.slide-title}
-
-<hr>
-
-**Sum and Difference Rules**
-
-✏️
-
----
-
-## {#diff-rules-2 data-menu-title="Rules for Differentiation (2)"}
-
-[Rules for differentiation (2)]{.slide-title}
-
-<hr>
-
-**Sum and Difference Rules**
-
-Let $f(x)$ and $g(x)$ be differentiable functions. Then 
-$$
-\begin{align}
-\frac{d}{dx}[f(x)+g(x)]=\frac{d}{dx}f(x)+\frac{d}{dx}g(x) \\
-\frac{d}{dx}[f(x)-g(x)]=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)
-\end{align}
-$$
-
-😵*All this says is: if the function has pieces that are added or subtracted you can take the derivative of each individual piece and add those derivatives.*
-
-. . . 
-
-**Example** ✏️
-
-$$
-f(x)=x^3-x^2-15
-$$
-
----
-
-## {#diff-rules-3-blank data-menu-title="Rules for Differentiation (3)"}
-
-[Rules for differentiation (3)]{.slide-title}
-
-<hr>
-
-**Constant Multiplier Rule**
-
-✏️
-
----
-
-## {#diff-rules-3 data-menu-title="Rules for Differentiation (3)"}
-
-[Rules for differentiation (3)]{.slide-title}
-
-<hr>
-
-**Constant Multiplier Rule**
-
-The derivative of a constant $c$ multiplied by a function $f(x)$ is the same as the constant multiplied by the derivative:
-
-$$\frac{d}{dx}[kf(x)] = k\frac{d}{dx}f(x)$$
-
-. . . 
-
-**Example** ✏️
-
-$$
-y=x^2+\sqrt{2}x-\frac{8}{x}+4
-$$
-
----
-
-## {#logs-exp data-menu-title="Derivative of logs & exp"} 
-
-[Derivative of logs & exponents]{.slide-title}
-
-<hr>
-
-<br>
-
-[Two special derivatives:]{.body-text-l}
-
-<br>
-
-- [$\frac{d}{dx}(e^x) = e^x$]{.body-text-l}
-
-<br>
-
-- [$\frac{d}{dx}ln(x)=\frac{1}{x}$]{.body-text-l}
-
----
-
-## {#diff-rules-summary data-menu-title="Summary of differentiation rules"}
-
-[Summary of differentiation rules]{.slide-title}
-
-<hr>
-
-<br>
-
-| Differentiation Rule | $f'(x)$ notation | $\frac{d}{dx}$ notation |
-|----------------------|------------------|-------------------------|
-| **Constant Rule** | $f(x)=c \Rightarrow f'(x)=0$ | $\frac{d}{dx}[c]=0$ |
-| **Power Rule** | $f(x)=x^n \Rightarrow f'(x)=n x^{n-1}$ | $\frac{d}{dx}[x^n]=n x^{n-1}$ |
-| **Sum Rule** | $(g(x)+h(x))'=g'(x)+h'(x)$ | $\frac{d}{dx}[g(x)+h(x)]=\frac{d}{dx}g(x)+\frac{d}{dx}h(x)$ |
-| **Difference Rule** | $(g(x)-h(x))' = g'(x)-h'(x)$ | $\frac{d}{dx}[g(x)-h(x)]=\frac{d}{dx}g(x)-\frac{d}{dx}h(x)$ |
-| **Constant Multiplier Rule**  | $(c\cdot g(x))'=c\,g'(x)$ | $\frac{d}{dx}[c\,g(x)]=c\,\frac{d}{dx}g(x)$ |
-
-<br>
-
-And two special derivatives: $\frac{d}{dx}(e^x) = e^x$ and $\frac{d}{dx}ln(x)=\frac{1}{x}$.
-
-:::{.center-text .body-text-s}
-There's more differentiation rules (product, quotient, chain rule). 
-
-They're fun, but we won't be reviewing them.
-:::
-
----
-
-## {#higher-order-der data-menu-title="Higher Order Derivatives"}
-
-[Higher order derivatives]{.slide-title}
-
-<hr>
-
-- We can continue to take derivatives of derivatives.
-
-- The second derivative becomes the rate of change of the rate of change. 
-
-- If we interpret the first derivative as velocity, then the second derivative is acceleration. 
-
-. . .
-
-- Notation: 
-
-    - Function: $f(x) = y$
-    - 1st derivative: $f'(x)$ or $\frac{dy}{dx}$
-    - 2nd derivative: $f''(x)$ or $\frac{d^2y}{dx^2}$
-    - nth derivative: $f^{(n)}(x)$ or $\frac{d^ny}{dx^n}$
-
----
-
-## {#derivatives-practice data-menu-title="Derivatives practice"}
-
-[Derivatives practice]{.slide-title}
-
-<hr>
-
-[Solve individually and then check with a partner.]{style="color:green;"}
-
-1) Which rules should you use to take these derivatives?
-
-$$
-\begin{align}
-\text{A)  }& f(x)=3x^4 &\text{B) }  y=4x^2+3x-16
-\end{align}
-$$
-
-2) Find the derivatives of these functions
-
-$$
-\begin{align}
-&\text{A) } y=3x^2 & &\text{B) }h(x)=2x(x^2 + 3x) & &\text{C) }g(y)=2\sqrt{y} - e^y + 20\ln(y)
-\end{align}
-$$
-
-3) Find the 3rd derivative of:
-
-$$G(z)=3z^4-8z^3+2z-19$$
-
----
-
-## {#derivatives-practice-solve-1 data-menu-title="Derivatives practice"}
-
-[Derivatives practice]{.slide-title}
-
-<hr>
-
-[ ✏️  Let's see a solution!]{style="color:green;"} 
-
-2.B) Find the derivative $$h(x)=2x(x^2 + 3x)$$
-
----
-
-## {#derivatives-practice-solve-2 data-menu-title="Derivatives practice"}
-
-[Derivatives practice]{.slide-title}
-
-<hr>
-
-[ ✏️  Let's see a solution!]{style="color:green;"} 
-
-2.C) Find the derivative $$g(y)=2\sqrt{y} - e^y + 20\ln(y)$$
-
----
-
-## {#derivatives-practice-solve-3 data-menu-title="Derivatives practice"}
-
-[Derivatives practice]{.slide-title}
-
-<hr>
-
-[ ✏️  Let's see a solution!]{style="color:green;"}
-
-3) Find the 3rd derivative of $G(z)=3z^4-8z^3+2z-19$.
-
----
-
-## {#partial-derivatives-title data-menu-title="Introduction to Derivates" background-color="#003660"}
+## {#differential-equations-title data-menu-title="Differential equations" background-color="#003660"}
 
 <div class="page-center">
-<div class="custom-subtitle">Partial derivatives</div>
+<div class="custom-subtitle">Differential equations</div>
 </div>
 
 ---
 
-## {#partial-derivatives data-menu-title="Partial derivatives"} 
+## {#diffeq data-menu-title="Diff Eq"}
 
-[Partial derivatives]{.slide-title}
+[What is a differential equation?]{.slide-title}
 
 <hr>
+
+A **differential equation** is any equation which contains derivatives. 
+
+The goal of the differential equation is to find a function that satisfies the equation. 
 
 <br>
 
-[When we find a partial derivative, we find an expression for the slope with respect to *one variable* in a multivariate function.]{.body-text-m}
+**Example**
 
-<br>
+The equation
 
-[**Notation:** the partials of $f(x,y,z)$ are $\frac{\partial f}{\partial x}$, $\frac{\partial f}{\partial y}$, and $\frac{\partial f}{\partial z}$]{.body-text-m} 
+$$
+y' = y + x
+$$
 
-We read $\frac{\partial f}{\partial x}$ as "the partial derivative of $f$ with respect to $x$"
+is a differential equation in which we want to find a function $y(x)$ such that its derivative equals the function plus $x$.
 
-<br>
-
-[**How to take partial derivatives?** Find the derivative with respect to a single variable, *treating all others as constants.*]{.body-text-m} 
-
----
-
-## {#partial-derivatives-example-1 data-menu-title="Partial derivatives Ex"} 
-
-[Partial derivatives example]{.slide-title}
-
-<hr>
-
-[ ✏️ Find all partial derivatives of]{.body-text-l}
-
-
-[$$B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8$$]{.body-text-m}
+✏️ [1. How would you heck that $y(x) = -x -1$ is a solution for this differential equation?]{style="color:green;"}
 
 ---
 
-## {#partial-derivatives-example-2 data-menu-title="Partial derivatives Ex"} 
+## {#terms data-menu-title="Terms"} 
 
-[Partial derivatives example]{.slide-title}
-
-<hr>
-
-[Find all partial derivatives of]{.body-text-l}
-
-[$$B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8$$]{.body-text-m}
-[$$\frac{\partial B}{\partial x}=1.2x^2y+4z$$]{.body-text-m}
-[$$\frac{\partial B}{\partial y}=0.4x^3-7.2y$$]{.body-text-m}
-[$$\frac{\partial B}{\partial z}=4x$$]{.body-text-m}
-
----
-
-## {#partial-derivatives-example-3 data-menu-title="Partial derivatives Ex"} 
-
-[Partial derivatives example]{.slide-title}
+[Differential equations: terms]{.slide-title}
 
 <hr>
 
-[Find all partial derivatives of]{.body-text-l}
+::: {.body-text-m}
+- **Ordinary differential equation (ODE):** Does not contain partial derivatives
 
-[$$B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8$$]{.body-text-m}
-[$$\frac{\partial B}{\partial x}=1.2x^2y+4z$$]{.body-text-m}
-[$$\frac{\partial B}{\partial y}=0.4x^3-7.2y$$]{.body-text-m}
-[$$\frac{\partial B}{\partial z}=4x$$]{.body-text-m}
+$$\frac{df}{dt}=3.2-f(t)$$
 
+<span style="font-size: 0.8em;">
+*Sometimes functions have more than one variable and we can take **partial derivatives** with respect to each variable.*
+</span>
 
-✏️[ What is the value of the partial derivative of $B$ with respect to $z$ at the point $(1,2,3)$?]{style="color:green;"}
+- **Partial differential equations (PDE):** Differential equations with partial derivatives
 
----
-
-## {#partial-derivatives-meaning data-menu-title="Partial derivatives meaning"} 
-
-[OK, but what do partials actually mean?]{.slide-title}
-
-<hr>
-
-[The slope with respect to one variable if other variables are held constant.]{.body-text-m} 
-
-![](images/partial-derivatives.jpg){fig-align="center"}
-
-::: {.notes}
-- moving up and down
-- moving acorss a plane
-- twisting / sprialing
-
-consider the above when calcualting speed in each / any direction
+$$\frac{\partial B}{\partial t}= \alpha B+0.31x-21.6$$
 :::
 
 ---
 
-## {#partial-derivatives-practice data-menu-title="Try one"} 
+## {#order-ODE data-menu-title="Order of ODE"} 
 
-[Partial derivatives practice]{.slide-title}
+[Order of an ODE]{.slide-title}
 
 <hr>
 
-(A) The temperature (in Celsius) across a surface (where $x$ and $y$ are in meters) is described by:
-
-$$T(x,y)=x^2y-2x+y-1$$
-
-At what "rate" is temperature changing (with respect to distance):
-
-
-- In the $x$ direction, at the point (1,3) on the surface?
-- In the $y$ direction, at the point (0,2) on the surface?
-
-. . .
-
-(B) A dragon's breath temperature ($T$, in degrees Celsius) is modeled as a function of its wingspan ($W$, in meters) and length ($L$, also in meters): 
+[**Order:** The order of a differential equation is the highest order for any differential expression in the equation ]{.body-text-m}
 
 <br>
 
-$$T(W,L)=0.41WL+2.6W^2$$
+[**Example:**]{.body-text-l .teal-text}
 
-- At what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?
+[$\frac{df}{dt}=3.2-f(t)$ is a **first order ordinary differential equation**]{.body-text-m}
 
-- At what rate is breath temperature changing with respect to wingspan, for the same dragon?
+<br>
 
-::: {.notes}
--  $\frac{\partial T}{\partial L} = 0.41W$ = 0.41(4.5) = **1.845 degrees C per meter (length)**
-- $\frac{\partial T}{\partial W} = 0.41L + 5.2W$ = 0.41(4.1) + 5.2(4.5) = **25.081 degrees C per meter (wingspan)**
+[**Example:**]{.body-text-l .teal-text} 
+
+[$\frac{\partial^3x}{\partial t^3}=2x-4.5\frac{\partial x}{\partial t}$ is a **third order partial differential equation**]{.body-text-m}
+
+---
+
+## {#practice data-menu-title="Practice"} 
+
+[Practice:]{.slide-title}
+
+<hr>
+
+[Use the terms from the previous slide to describe the following different equations:]{.body-text-m style="color:green;"}
+
+::: {.body-text-m}
+$$2.9t^2 - \alpha B=\frac{dB}{dt}$$
+
+<br>
+
+$$\frac{\partial^2f }{\partial x^2}=1.4\times10^{-3}f(x)+5.2$$
+
+<br>
+
+$$\frac{dC}{dt}=4.1C-8.0$$
 :::
 
 ---
 
-## {#partial-derivatives-solution-1 data-menu-title="Try one"} 
+## {#why-diff-equations data-menu-title="Why differential equations"} 
 
-[Partial derivatives practice]{.slide-title}
+[Differential equations help us understand changing environments]{.slide-title}
 
 <hr>
 
-[✏️ Let's see a solution.]{style="color:green;"}
+<br>
 
+- For some natural phenomena it can be easier to describe them in terms of derivatives than give an explicit function.
+
+- By specifying how something changes, we are describing a process or behavior over time. 
+
+- Examples:
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-(A) The temperature (in Celsius) across a surface (where $x$ and $y$ are in meters) is described by:
-
-$$T(x,y)=x^2y-2x+y-1$$
-
-At what "rate" is temperature changing (with respect to distance):
-
-
-- In the $x$ direction, at the point (1,3) on the surface?
-- In the $y$ direction, at the point (0,2) on the surface?
-
+![Describing population dynamics](images/lynx-hare-300.jpg){fig-align="center" width="70%"}
 :::
-
 
 ::: {.column width="50%"}
+![Groundwater transport of absorbed contaminants](images/pollution.jpg){fig-align="center" width="65%"}
+:::
 
 :::
 
+---
+
+## {#lotka-volterra data-menu-title="tbd"} 
+
+[Example: Lotka-Volterra (predator-prey) equations]{.slide-title2}
+
+<hr>
+
+::: {.body-text-m}
+<!-- $$\frac{dx}{dt}=\alpha x-\beta xy$$ -->
+Prey: $\frac{dV}{dt}=r V-\alpha VP$
+
+<br>
+
+<!-- $$\frac{dy}{dt}=\delta xy - \gamma y$$ -->
+Predator: $\frac{dP}{dt}=\beta VP - qP$
+
+
+**Where:** 
+
+- $V$ is number of prey (e.g. rabbits)
+- $P$ is number of predators (e.g. wolves)
+- $r, \alpha, \beta, q$ are positive parameters
+:::
+
+::: {.center-text}
+**What do the different pieces of the equation *mean*?**
 :::
 
 ::: {.notes}
-- $\frac{\partial T}{\partial x} = 2xy - 2 + 0 + 0$
-
-@(1,3): $2(1)(3) - 2 = 6 -2 = 4$
-
-- $\frac{\partial T}{\partial x} = x^2 + 1$
-
-@(0,2): $0^2+1 = 1$
+- $r$: intrinsic rate of increase
+- $\alpha$: capture efficiency of predators (i.e. effect of a predator on per capita growth rate of prey population)
+  - the larger $\alpha$ is, the more the per capita growht rate of a prey population is depressed by the addition of a single predator (e.g. baleen whales feeding on plankton vs. web-building spider capturing a mosquito)
+- $\beta$: a measure of conversion efficiency (i.e. the ability of predators to convert each new prey ite m into additional per capita growth rate for the predator population) 
+  - $\beta$ is high when a single prey item is high value (e.g. a moose prey to wolf predator vs. a seed to a bird)
+- $q$: per capita death rate (these predators are extreme specialists with no alternative prey sources; so if prey are absent, the predator population declines exponentially)
 :::
 
 ---
 
-## {#partial-derivatives-solution-2 data-menu-title="Try one"} 
+## {#interpretation-prey data-menu-title="Interpretation (prey)"} 
 
-[Partial derivatives practice]{.slide-title}
-
-<hr>
-
-[✏️ Let's see a solution.]{style="color:green;"}
-
-:::: {.columns}
-
-::: {.column width="50%"}
-(B) A dragon's breath temperature ($T$, in degrees Celsius) is modeled as a function of its wingspan ($W$, in meters) and length ($L$, also in meters): 
-
-<br>
-
-$$T(W,L)=0.41WL+2.6W^2$$
-
-- At what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?
-
-- At what rate is breath temperature changing with respect to wingspan, for the same dragon?
-:::
-
-
-::: {.column width="50%"}
-
-:::
-
-
-:::
-
----
-
-## {#env-data-example data-menu-title="Environmental data example"} 
-
-[Example: higher order & partial derivatives in environmental data science]{.slide-title2}
+[Interpretation of prey equation:]{.slide-title}
 
 <hr>
 
 <br>
 
-[The [**Advection-Dispersion-Reaction Equation**](https://www.enviro.wiki/index.php?title=Advection-Dispersion-Reaction_Equation_for_Solute_Transport) for solute transport models the change in a solute concentration $C$ over time $t$ and $x,y,z$ space, where groundwater is flowing in direction $x$:]{.body-text-m}
+::: {.body-text-l}
+$$\frac{dV}{dt}=r V-\alpha VP$$
+:::
+<!-- $$\frac{dx}{dt}=\alpha x-\beta xy$$ -->
 
 <br>
 
-[$$\frac{\partial C}{\partial t}=D_x \frac{\partial^2C}{\partial x^2} + D_y\frac{\partial^2C}{\partial y^2}+D_z\frac{\partial^2C}{\partial z^2}-v\frac{\partial C}{\partial x}-\lambda RC$$]{.body-text-m}
+::: {.body-text-m}
+**The pieces:** 
 
-$D_x, D_y, D_z$ are hydrodynamic diffusion coefficients in the $x$, $y$, and $z$ direction.
+- $\frac{dV}{dt}$: Rate of growth / decline in prey abundance 
+- $r V$: Population growth (without loss due to predation (assumes predators are the only force limited the growth of the prey population), where $r$ is the intrinsic rate of increase)
+- $-\alpha VP$: Population loss due to predation (where $\alpha$ is the capture efficiency of the predator)
+:::
 
 ---
 
-## {#break-it-down data-menu-title="Break it down"} 
+## {#interpretation-pred data-menu-title="Interpretation (predator)"} 
 
-[Let's break it down.]{.slide-title}
+[Interpretation of predator equation:]{.slide-title}
 
 <hr>
 
 <br>
 
-[$$\frac{\partial C}{\partial t}=D_x \frac{\partial^2C}{\partial x^2} + D_y\frac{\partial^2C}{\partial y^2}+D_z\frac{\partial^2C}{\partial z^2}-v\frac{\partial C}{\partial x}-\lambda RC$$]{.body-text-m}
+::: {.body-text-l}
+$$\frac{dP}{dt}=\beta VP - q P$$
+:::
 
 <br>
 
-- **Left-hand-side:** Rate of concentration change (over time)
-- **Right-hand-side first 3 terms:** Concentration change due to dispersion in $x$, $y$, and $z$ directions
-- **Right-hand-side fourth term:** Concentration change due to groundwater transport (in groundwater flow direction, x)
-- **Right-hand-side final term:** Reaction term (e.g. biodegradation / abiotic degradation)
+::: {.body-text-m}
+**The pieces:** 
+
+- $\frac{dP}{dt}$: Rate of growth / decline in predator population
+- $\beta VP$: Predator population growth (where $\beta$ is a measure of conversion efficiency, i.e. the ability of predators to convert each new prey into additional per capita growth rate for the predator population)
+- $-q P$: Predator population loss (where $q$ is the per capita death rate;  positive population growth only happens when prey are present)
+:::
+
+---
+
+## {#pred-prey-image data-menu-title="Pred/prey image"} 
+
+[Or, in pictures:]{.slide-title}
+
+<hr>
+
+<br>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/predator-prey-image.png")
+```
+
+<br>
+
+::: {.footer}
+Adapted frrom Christopher Rackauckas, [*Scientific machine learning: interpretable neural networks that accurately extrapolate from small data.*](https://www.stochasticlifestyle.com/how-to-train-interpretable-neural-networks-that-accurately-extrapolate-from-small-data/) from the Stochastic Lifestyle blog. 
+:::
 
 ::: {.notes}
-This example is here (probably) to show that partial derivatives are useful in solving real-world environmental problems.
+Now we know the rates of change for both populations, but what we still want to know is the actual numbers through time.
 :::
 
 ---
+
+## {#approx-sols data-menu-title="Find approximate solutions"} 
+
+[Finding $V(t)$ and $P(t)$?]{.slide-title}
+<!-- [Finding $x(t)$ and $y(t)$?]{.slide-title} -->
+
+<hr>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/lotka-volterra.svg")
+```
+
+::: {.footer}
+Integration to find approximate solutions. *Image: [Modelica by Example](https://mbe.modelica.university/behavior/equations/population/)*
+:::
+
+---
+
+## {#solve-analytically-blank data-menu-title="Solve analytically"} 
+
+[Some differential equations can be solved analytically:]{.slide-title3}
+
+<hr>
+
+<div style="position: absolute; bottom: 550px; right: 1000px; font-size: 1em;">                                                                               
+✏️                    
+</div>  
+
+
+---
+
+## {#solve-analytically data-menu-title="Solve analytically"} 
+
+[Some differential equations can be solved analytically:]{.slide-title3}
+
+<hr>
+
+::: {.body-text-m}
+$$\frac{dy}{dx}=y$$
+
+<br>
+
+**Separate variables and integrate both sides:** 
+
+$$\int\frac{1}{y}dy=\int1dx$$
+
+<br>
+
+**Yielding:** 
+
+::: {.center-text}
+$ln(y)=x$ or $y=e^x$
+:::
+
+:::
+
+---
+
+## {#solve-numerically data-menu-title="Solve numerically"} 
+
+[Solving differential equations numerically]{.slide-title}
+
+<hr>
+
+<br>
+
+::: {.body-text-m}
+Find *approximate* solutions to differential equations when finding an analytical solution would be really challenging (...which is pretty often).
+
+<br>
+
+Instead, computers can numerically approximate solutions by predicting nearby values based on the *slope*. 
+
+<br>
+
+**There are many methods for solving differential equations numerically. You'll do it programatically later on.** 
+:::
+
+---
+
+## {#lunch-break data-menu-title="Lunch break"} 
+
+[Lunch break!]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/lunch-time.png)
+
+
 
 ## {#what-we-covered data-menu-title="What we covered today" }
 

@@ -31,8 +31,8 @@ knitr::include_graphics("images/derivative_9.jpg")
 
 | {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------| 
-| day 2 / morning   | [The exponential function, logarithms, and limits](slides/day2.1-slides.qmd){target="_blank"} | 
-| day 2 / afternoon | [Derivatives](slides/day2.2-slides.qmd){target="_blank"} | 
+| day 2 / morning   | [Limits and derivatives](slides/day2.1-slides.qmd){target="_blank"} | 
+| day 2 / afternoon | [Integrals](slides/day2.2-slides.qmd){target="_blank"} | 
 : {.hover .bordered tbl-colwidths="[20,40,40]"} 
 
 <!-- ## End-of-day practice
