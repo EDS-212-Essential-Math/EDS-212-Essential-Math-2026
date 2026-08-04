@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>day1.2-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -296,8 +299,8 @@ Graphs
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-b3640c191431b28ec8ff" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-b3640c191431b28ec8ff">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],[6,6,4,6,8,6,8,4,4,6,6,8,8,8,8,8,8,4,4,4,4,8,8,8,8,4,4,4,8,6,8,4],[160,160,108,258,360,225,360,146.7,140.8,167.6,167.6,275.8,275.8,275.8,472,460,440,78.7,75.7,71.09999999999999,120.1,318,304,350,400,79,120.3,95.09999999999999,351,145,301,121],[110,110,93,110,175,105,245,62,95,123,123,180,180,180,205,215,230,66,52,65,97,150,150,245,175,66,91,113,264,175,335,109]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-d7469496c5dc22cc2fd2" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d7469496c5dc22cc2fd2">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],[6,6,4,6,8,6,8,4,4,6,6,8,8,8,8,8,8,4,4,4,4,8,8,8,8,4,4,4,8,6,8,4],[160,160,108,258,360,225,360,146.7,140.8,167.6,167.6,275.8,275.8,275.8,472,460,440,78.7,75.7,71.09999999999999,120.1,318,304,350,400,79,120.3,95.09999999999999,351,145,301,121],[110,110,93,110,175,105,245,62,95,123,123,180,180,180,205,215,230,66,52,65,97,150,150,245,175,66,91,113,264,175,335,109]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -335,7 +338,7 @@ Graphs
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="images/cart.png" width="400"></p>
+<p><img data-src="images/cart.png"></p>
 </figure>
 </div>
 </div>
@@ -350,8 +353,8 @@ Graphs
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-127ac9b04b1daff99b80" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-127ac9b04b1daff99b80">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11"],[0,1,2,3,4,5,6,7,8,9,10],[-0.9399999999999999,1.28,0.75,5.39,4.49,3.77,6.73,8.109999999999999,8.859999999999999,8.539999999999999,9.06]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>x<\/th>\n      <th>y<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":6,"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"x","targets":1},{"name":"y","targets":2}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[6,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-8c2b74f8cc786cef04dc" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8c2b74f8cc786cef04dc">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11"],[0,1,2,3,4,5,6,7,8,9,10],[-0.9399999999999999,1.28,0.75,5.39,4.49,3.77,6.73,8.109999999999999,8.859999999999999,8.539999999999999,9.06]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>x<\/th>\n      <th>y<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":6,"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"x","targets":1},{"name":"y","targets":2}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[6,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -619,6 +622,13 @@ m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
 <hr>
 <p>Find the equation of the line that passes through <span class="math inline">\((3,5)\)</span> and <span class="math inline">\((2,-1)\)</span>.</p>
 <p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+m &amp;= \frac{5-(-1)}{3-2} = 6 &amp;\text{Compute the slope} \\
+y - 5 &amp;= 6(x-3) &amp;\text{Point-slope form using (3,5)} \\
+y &amp;= 6x - 13 &amp;\text{Simplify}
+\end{aligned}
+\]</span></p>
 </section>
 <section id="line-equation-practice-sol-2" class="slide level2" data-menu-title="Equation of a line: practice">
 <h2></h2>
@@ -626,8 +636,15 @@ m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
 <hr>
 <p>Find the equation of the line that passes through <span class="math inline">\((2,-5)\)</span> and has <span class="math inline">\(x\)</span>-intercept equal to 4.</p>
 <p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+m &amp;= \frac{0-(-5)}{4-2} = \frac{5}{2} &amp;\text{Compute the slope using the } x\text{-intercept } (4,0) \\
+y - 0 &amp;= \frac{5}{2}(x-4) &amp;\text{Point-slope form} \\
+y &amp;= \frac{5}{2}x - 10 &amp;\text{Simplify}
+\end{aligned}
+\]</span></p>
 </section>
-<section id="line-equation-practice-3" class="slide level2" data-menu-title="Equation of a line: practice">
+<section id="line-equation-practice-3" class="slide level2 smaller" data-menu-title="Equation of a line: practice">
 <h2></h2>
 <p><span class="slide-title">Equation of a line: solutions</span></p>
 <hr>
@@ -647,6 +664,13 @@ m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
 
 </div></div>
 <p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{slope} &amp;= \frac{\text{rise}}{\text{run}} = \frac{3}{2} &amp;\text{Read from the graph} \\
+y\text{-intercept} &amp;= 1 &amp;\text{Read from the graph} \\
+y &amp;= \frac{3}{2}x + 1 &amp;\text{Equation of the line}
+\end{aligned}
+\]</span></p>
 </section>
 <section id="line-equation-practice-4" class="slide level2" data-menu-title="Equation of a line: practice">
 <h2></h2>
@@ -654,7 +678,14 @@ m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
 <hr>
 <p>Make a graph showing the line that passes through (3,-1) and has slope equal to 2.</p>
 <p>✏️ <span style="color:green;">Let’s see a solution.</span></p>
-</section>
+<p><span class="math display">\[
+\begin{aligned}
+y - (-1) &amp;= 2(x-3) &amp;\text{Point-slope form} \\
+y &amp;= 2x - 7 &amp;\text{Simplify}
+\end{aligned}
+\]</span></p>
+
+<img data-src="day1.2-slides_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
 <section id="interpreting-slope" class="slide level2" data-menu-title="Interpreting the slope title" data-background-color="#003660">
 <h2></h2>
 <div class="page-center">
