@@ -137,7 +137,7 @@
 <p><span class="custom-title">EDS 212: Day 2, Lecture 2</span></p>
 <p><span class="custom-subtitle"><em>Integration and differential equations</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 5<sup>th</sup>, 2025</span></p>
+<p><span class="custom-subtitle3">August 4<sup>th</sup>, 2025</span></p>
 </section>
 <section id="integrate-concept" class="slide level2" data-menu-title="Integration" data-background-color="#003660">
 <h2></h2>
@@ -164,7 +164,8 @@ Integration Conceputally
 <h2></h2>
 <p><span class="slide-title">Example</span></p>
 <hr>
-<p>Approximate the area under the curve from <span class="math inline">\([-3,3]\)</span> with <span class="math inline">\(\Delta x=1\)</span> and <span class="math inline">\(k=6\)</span></p>
+<p>Approximate the area under the curve from <span class="math inline">\([-3,3]\)</span> with <span class="math inline">\(\Delta x=2\)</span> and <span class="math inline">\(k=3\)</span>.</p>
+<p>✏️</p>
 <div class="columns">
 <div class="column" style="width:30%;">
 <div class="cell">
@@ -182,26 +183,14 @@ Integration Conceputally
 <td style="text-align: right;">71</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">-2</td>
-<td style="text-align: right;">78</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">-1</td>
 <td style="text-align: right;">73</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">62</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">51</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">46</td>
-</tr>
-<tr class="odd">
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">53</td>
 </tr>
@@ -226,11 +215,10 @@ Integration Conceputally
 <p><span class="slide-title">Riemann sums</span></p>
 <hr>
 <ol type="1">
-<li><p>Start at one end of the interval <span class="math inline">\([a,b]\)</span></p></li>
-<li><p>Evaluate the function at <span class="math inline">\(f(a)\)</span>.</p></li>
-<li><p>Step away from <span class="math inline">\(a\)</span> by some small amount called <span class="math inline">\(\Delta x\)</span>.</p></li>
-<li><p>Multiply <span class="math inline">\(f(a)\Delta x\)</span> to get the the area of the first rectangle.</p></li>
-<li><p>Repeat the same steps above, now starting with <span class="math inline">\(\Delta x\)</span> as the bottom left corner of the next rectangle. Repeat until you cover the area with rectangles of width <span class="math inline">\(\Delta x\)</span>.</p></li>
+<li><p>Divide the interval <span class="math inline">\([a,b]\)</span> into <span class="math inline">\(k\)</span> subintervals of width <span class="math inline">\(\Delta x\)</span>.</p></li>
+<li><p>The endpoints of those intervals will give you a series of <span class="math inline">\(x\)</span> values: <span class="math inline">\(x_0, x_1, \ldots, x_k\)</span>.</p></li>
+<li><p>Multiply <span class="math inline">\(f(x_1)\Delta x\)</span> to get the the area of the first rectangle.</p></li>
+<li><p>Repeat the same steps above, now starting with <span class="math inline">\(x_2\)</span> as the bottom right corner of the next rectangle. Repeat until you cover the area with rectangles of width <span class="math inline">\(\Delta x\)</span>.</p></li>
 <li><p>Sum up the area of all <span class="math inline">\(k\)</span> rectangles.</p></li>
 </ol>
 <p><span style="color:red"> <span class="math display">\[
@@ -238,7 +226,7 @@ R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_
 \]</span> </span></p>
 <p>This is called a <strong>Riemann Sum</strong>.</p>
 </section>
-<section id="exp-reimman" class="slide level2" data-menu-title="Riemann Sum">
+<section id="exp-reimman-1" class="slide level2" data-menu-title="Riemann Sum">
 <h2></h2>
 <p><span class="slide-title">Finer and finer Riemann sums</span></p>
 <hr>
@@ -250,12 +238,30 @@ R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/riemann.gif" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+<p><img data-src="images/riemann.gif" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</section>
+<section id="exp-reimman-2" class="slide level2" data-menu-title="Riemann Sum">
+<h2></h2>
+<p><span class="slide-title">Finer and finer Riemann sums</span></p>
+<hr>
+<ul>
+<li><p>What if we try to make <span class="math inline">\(\Delta x\)</span> (the width of the rectangles) really small? So we let <span class="math inline">\(\Delta x \to 0\)</span>. This will make the number of rectangles under the curve go to infinity.</p></li>
+<li><p>Our estimation of the area will get better and better with more rectangles.</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/riemann.gif" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
-<div class="fragment fade-in">
 <p>Take the area calculation we did before, but let <span class="math inline">\(\Delta x \to 0\)</span> <span style="color:red"> <span class="math display">\[
 \large
 \begin{align}
@@ -264,10 +270,18 @@ R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_
 \end{align}
 \]</span> </span></p>
 <p>We formally call this <span style="color:red"><strong>the integral of <span class="math inline">\(f(x)\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> with respect to <span class="math inline">\(x\)</span></strong></span>.</p>
-</div>
 </div></div>
 </section>
-<section id="integral-calc" class="slide level2" data-menu-title="Integrals">
+<section id="integral-calc-1" class="slide level2" data-menu-title="Integrals">
+<h2></h2>
+<p><span class="slide-title">How do we calculate integrals?</span></p>
+<hr>
+<ul>
+<li><p>Taking infinite sums is impossible by hand</p></li>
+<li><p>Luckily, integrals and derivatives are related in a very useful way:</p></li>
+</ul>
+</section>
+<section id="integral-calc-2" class="slide level2" data-menu-title="Integrals">
 <h2></h2>
 <p><span class="slide-title">How do we calculate integrals?</span></p>
 <hr>
@@ -276,7 +290,6 @@ R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_
 <li><p>Luckily, integrals and derivatives are related in a very useful way:</p></li>
 </ul>
 <p><br></p>
-<div class="fragment">
 <p>If we integrate a derivative, we should get the same function back as the original vice-versa:</p>
 <p><span class="math display">\[
 \begin{align}
@@ -289,12 +302,51 @@ R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_
 \end{align}
 \]</span></p>
 <p><br></p>
-</div>
-<div class="fragment">
+</section>
+<section id="integral-calc-3" class="slide level2" data-menu-title="Integrals">
+<h2></h2>
+<p><span class="slide-title">How do we calculate integrals?</span></p>
+<hr>
+<ul>
+<li><p>Taking infinite sums is impossible by hand</p></li>
+<li><p>Luckily, integrals and derivatives are related in a very useful way:</p></li>
+</ul>
+<p><br></p>
+<p>If we integrate a derivative, we should get the same function back as the original vice-versa:</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{d}{dx}\left[\int f(x)dx\right]&amp;=f(x) &amp;\text{Differentiation is the inverse of integration}
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+\int f'(x)&amp;=f(x)+C &amp;\text{Integration is the inverse of differentiation}
+\end{align}
+\]</span></p>
+<p><br></p>
 <div class="page-center">
 <p><span style="color:red"> <em>To find the integral of <span class="math inline">\(\int f(t) dt\)</span> we need to find a function <span class="math inline">\(F(x)\)</span> whose derivative is <span class="math inline">\(f(x)\)</span>.</em> </span></p>
 </div>
+</section>
+<section id="c-blank" class="slide level2" data-menu-title="Constants of Integration">
+<h2></h2>
+<p><span class="slide-title">Where did that <span class="math inline">\(C\)</span> come from?</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Example</strong></p>
+<p>✏️</p>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="images/c.png" style="width:75.0%"></p>
+</figure>
 </div>
+</div>
+</div>
+</div></div>
 </section>
 <section id="c" class="slide level2" data-menu-title="Constants of Integration">
 <h2></h2>
@@ -303,19 +355,13 @@ R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Example</strong></p>
-<div class="fragment fade-in">
 <p>Find <span class="math inline">\(\int 2x-4\)</span>.</p>
-</div>
-<div class="fragment fade-in">
 <p>To find <span class="math inline">\(\int 2x-4\)</span> we need to find a function whose derivative is <span class="math inline">\(2x-4\)</span>. What could it be?</p>
-</div>
-<div class="fragment fade-in">
 <ul>
 <li><p>If we integrate, we’ll have <span class="math inline">\(\int 2x-4 = x^2-4x+C\)</span>.</p></li>
 <li><p>There is no way of knowing what the <span class="math inline">\(C\)</span> should be without additional information</p></li>
 <li><p><span class="math inline">\(C\)</span> is the <span class="math inline">\(x\)</span>-intercept and we would have we have to solve for it with an initial value problem.</p></li>
 </ul>
-</div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
@@ -345,10 +391,11 @@ R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_
 </ul>
 <p><br></p>
 <ul>
-<li><p>Calculating the area under a curve</p>
+<li>Calculating the area under a curve</li>
+</ul>
+<p><br></p>
 <ul>
-<li>Useful in policy evaluations</li>
-</ul></li>
+<li>We’ll see some applied exercises too</li>
 </ul>
 </section>
 <section id="tough" class="slide level2" data-menu-title="Integration is tough">
@@ -473,6 +520,12 @@ Rules of Integration
 </ol>
 </div></div>
 </section>
+<section id="break" class="slide level2" data-menu-title="5 minute break">
+<h2></h2>
+<p><span class="slide-title">Let’s take a 5 minute break</span></p>
+<hr>
+
+<img data-src="images/coffee-break.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
 <section id="initial-value-title" class="slide level2" data-menu-title="Initial value problems" data-background-color="#003660">
 <h2></h2>
 <div class="page-center">
@@ -545,9 +598,15 @@ Definite integrals
 </div>
 </div>
 </section>
-<section id="definte-1-blank" class="slide level2" data-menu-title="Definite vs Indefinite">
+<section id="definite-blank" class="slide level2" data-menu-title="Definite vs Indefinite">
 <h2></h2>
-<p><span class="slide-title">Indefinite vs.&nbsp;dfinite integrals</span></p>
+<p><span class="slide-title">Indefinite vs.&nbsp;definite integrals</span></p>
+<hr>
+<p>✏️</p>
+</section>
+<section id="definite-1" class="slide level2" data-menu-title="Definite vs Indefinite">
+<h2></h2>
+<p><span class="slide-title">Indefinite vs.&nbsp;definite integrals</span></p>
 <hr>
 <ul>
 <li>We have been working with <strong>indefinite integrals</strong> of the form</li>
@@ -556,7 +615,18 @@ Definite integrals
 \int f(x)dx
 \]</span></p>
 <p>This means there are no integration bounds and we need initial values to find integration constants.</p>
-<div class="fragment">
+</section>
+<section id="definite-2" class="slide level2" data-menu-title="Definite vs Indefinite">
+<h2></h2>
+<p><span class="slide-title">Indefinite vs.&nbsp;definite integrals</span></p>
+<hr>
+<ul>
+<li>We have been working with <strong>indefinite integrals</strong> of the form</li>
+</ul>
+<p><span class="math display">\[
+\int f(x)dx
+\]</span></p>
+<p>This means there are no integration bounds and we need initial values to find integration constants.</p>
 <ul>
 <li><strong>Definite integrals</strong> have start and end values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</li>
 </ul>
@@ -567,7 +637,6 @@ $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
 <p>To find the area under the curve along an interval <span class="math inline">\([a,b]\)</span>, evaluate the antiderivative at the endpoints and subtract them.</p>
 <p>✏️ <span style="color:green;"><strong>Example</strong></span></p>
 <!----------------------------------------------------->
-</div>
 </section>
 <section id="definte-1" class="slide level2 smaller" data-menu-title="Definite vs Indefinite">
 <h2></h2>
@@ -580,7 +649,6 @@ $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
 \int f(x)dx
 \]</span></p>
 <p>This means there are no integration bounds and we need initial values to find integration constants.</p>
-<div class="fragment">
 <ul>
 <li><strong>Definite integrals</strong> have start and end values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</li>
 </ul>
@@ -589,9 +657,7 @@ $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
 
 $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
 <p>To find the area under the curve along an interval <span class="math inline">\([a,b]\)</span>, evaluate the antiderivative at the endpoints and subtract them.</p>
-<p><strong>Example</strong></p>
-</div>
-<div class="fragment">
+<p>✏️ <span style="color:green;"><strong>Example</strong></span></p>
 <p><span class="math display">\[
 \begin{align}
 \int^b_axdx &amp;= \frac{1}{2}x^2\Big|^b_a\\
@@ -599,7 +665,6 @@ $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
 \end{align}
 \]</span></p>
 <!----------------------------------------------------->
-</div>
 </section>
 <section id="def-solve-blank" class="slide level2" data-menu-title="Definite Integral">
 <h2></h2>
@@ -645,7 +710,7 @@ $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/twocurve.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/twocurve.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
 </figure>
 </div>
 </div><div class="column" style="width:60%;">
@@ -706,7 +771,7 @@ Exercises
 \end{align}
 \]</span></p>
 </section>
-<section id="ta2-A-solution" class="slide level2" data-menu-title="Team Assessment 2 Questions">
+<section id="ta2-A-solution" class="slide level2 smaller" data-menu-title="Team Assessment 2 Questions">
 <h2></h2>
 <p><span class="slide-title">Solution (A)</span></p>
 <hr>
@@ -777,7 +842,7 @@ Exercises
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -835,7 +900,7 @@ Exercises
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -855,12 +920,6 @@ Exercises
 <p><span class="math display">\[= \left[3t^2 - \frac{t^3}{3}\right]_0^6 = (3(36) - \tfrac{216}{3}) - 0 = 108 - 72 = 36\]</span></p>
 <p>Over the 6-year period, restoring the wetland sequesters an additional <strong>36 tons of CO₂</strong> compared to leaving it degraded.</p>
 </section>
-<section id="break" class="slide level2" data-menu-title="5 minute break">
-<h2></h2>
-<p><span class="slide-title">Let’s take a 5 minute break</span></p>
-<hr>
-
-<img data-src="images/coffee-break.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
 <section id="differential-equations-title" class="slide level2" data-menu-title="Differential equations" data-background-color="#003660">
 <h2></h2>
 <div class="page-center">
@@ -882,7 +941,7 @@ Differential equations
 y' = y + x
 \]</span></p>
 <p>is a differential equation in which we want to find a function <span class="math inline">\(y(x)\)</span> such that its derivative equals the function plus <span class="math inline">\(x\)</span>.</p>
-<p>✏️ <span style="color:green;">1. How would you heck that <span class="math inline">\(y(x) = -x -1\)</span> is a solution for this differential equation?</span></p>
+<p>✏️ <span style="color:green;">1. How would you check that <span class="math inline">\(y(x) = -x -1\)</span> is a solution for this differential equation?</span></p>
 </section>
 <section id="terms" class="slide level2" data-menu-title="Terms">
 <h2></h2>
@@ -929,7 +988,6 @@ y' = y + x
 <h2></h2>
 <p><span class="slide-title">Differential equations help us understand changing environments</span></p>
 <hr>
-<p><br></p>
 <ul>
 <li><p>For some natural phenomena it can be easier to describe them in terms of derivatives than give an explicit function.</p></li>
 <li><p>By specifying how something changes, we are describing a process or behavior over time.</p></li>
@@ -1001,12 +1059,10 @@ y' = y + x
 <h2></h2>
 <p><span class="slide-title">Interpretation of prey equation:</span></p>
 <hr>
-<p><br></p>
 <div class="body-text-l">
 <p><span class="math display">\[\frac{dV}{dt}=r V-\alpha VP\]</span></p>
 </div>
 <!-- $$\frac{dx}{dt}=\alpha x-\beta xy$$ -->
-<p><br></p>
 <div class="body-text-m">
 <p><strong>The pieces:</strong></p>
 <ul>
@@ -1020,11 +1076,9 @@ y' = y + x
 <h2></h2>
 <p><span class="slide-title">Interpretation of predator equation:</span></p>
 <hr>
-<p><br></p>
 <div class="body-text-l">
 <p><span class="math display">\[\frac{dP}{dt}=\beta VP - q P\]</span></p>
 </div>
-<p><br></p>
 <div class="body-text-m">
 <p><strong>The pieces:</strong></p>
 <ul>
@@ -1104,16 +1158,20 @@ y' = y + x
 <p><strong>There are many methods for solving differential equations numerically. You’ll do it programatically later on.</strong></p>
 </div>
 </section>
-<section id="lunch-break" class="slide level2" data-menu-title="Lunch break">
+<section id="integrate-concept" class="slide level2" data-menu-title="Integration" data-background-color="#003660">
 <h2></h2>
-<p><span class="slide-title">Lunch break!</span></p>
-<hr>
-
-<img data-src="images/lunch-time.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
+<div class="page-center">
+<div class="custom-subtitle">
+Wrapping up…
+</div>
+</div>
+</section>
 <section id="what-we-covered" class="slide level2" data-menu-title="What we covered today">
 <h2></h2>
 <p><span class="slide-title">What we covered today</span></p>
 <hr>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><span style="color:#660033"><b>🔎 Limits</b></span><br>
 </li>
@@ -1135,6 +1193,23 @@ y' = y + x
 </li>
 <li><span style="color:#333300"><b>🌓 Partial derivatives</b></span></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span style="color:#993366"><b>∫ Integrals</b></span><br>
+</li>
+<li><span style="color:#660066"><b>🧮 Riemann sums</b></span><br>
+</li>
+<li><span style="color:#003366"><b>📐 Rules of integration</b></span><br>
+</li>
+<li><span style="color:#660000"><b>✏️ Initial value problems</b></span><br>
+</li>
+<li><span style="color:#333300"><b>🧾 Definite and indefinite integrals</b></span><br>
+</li>
+<li><span style="color:#996600"><b>📏 Area between two curves</b></span><br>
+</li>
+<li><span style="color:#330033"><b>🌊 A bit of ODEs</b></span></li>
+</ul>
+</div></div>
 
 
 </section>

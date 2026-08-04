@@ -145,7 +145,7 @@ This is called a **Riemann Sum**.
 :::: {.columns}
 
 ::: {.column width="50%"}
-![](images/riemann.gif){fig-align="center" width="90%"}
+![](images/riemann.gif){fig-align="center" width="70%"}
 :::
 
 ::: {.column width="50%"}
@@ -169,7 +169,7 @@ This is called a **Riemann Sum**.
 :::: {.columns}
 
 ::: {.column width="50%"}
-![](images/riemann.gif){fig-align="center" width="90%"}
+![](images/riemann.gif){fig-align="center" width="70%"}
 :::
 
 ::: {.column width="50%"}
@@ -347,7 +347,10 @@ knitr::include_graphics("images/c.png")
 
 - Calculating the area under a curve
 
-- We'll see some applied exercises at the end.
+<br>    
+
+- We'll see some applied exercises too
+
 ---
 
 ## {#tough data-menu-title="Integration is tough"}
@@ -521,6 +524,16 @@ C) $\int x^3-4x dx$
 :::
 
 ::::
+
+---
+
+## {#break data-menu-title="5 minute break"} 
+
+[Let's take a 5 minute break]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/coffee-break.png)
 
 ---
 
@@ -771,7 +784,7 @@ knitr::include_graphics("images/twocurve.png")
 ::: {.column width="40%"}
 ![](images/diffxtwo.gif){fig-align="center"}
 
-![](images/twocurve.png){fig-align="center"}
+![](images/twocurve.png){fig-align="center" width=90%}
 :::
 
 ::: {.column width="60%"}
@@ -854,7 +867,7 @@ $$
 
 ---
 
-## {#ta2-A-solution data-menu-title="Team Assessment 2 Questions"}
+## {#ta2-A-solution data-menu-title="Team Assessment 2 Questions" .smaller}
 
 [Solution (A)]{.slide-title}
 
@@ -1120,18 +1133,6 @@ additional **36 tons of CO₂** compared to leaving it
 degraded.
 
 
-
-
----
-
-## {#break data-menu-title="5 minute break"} 
-
-[Let's take a 5 minute break]{.slide-title}
-
-<hr>
-
-![image: Flaticon.com](images/coffee-break.png)
-
 ---
 
 ## {#differential-equations-title data-menu-title="Differential equations" background-color="#003660"}
@@ -1240,8 +1241,6 @@ $$\frac{dC}{dt}=4.1C-8.0$$
 
 <hr>
 
-<br>
-
 - For some natural phenomena it can be easier to describe them in terms of derivatives than give an explicit function.
 
 - By specifying how something changes, we are describing a process or behavior over time. 
@@ -1306,14 +1305,11 @@ Predator: $\frac{dP}{dt}=\beta VP - qP$
 
 <hr>
 
-<br>
 
 ::: {.body-text-l}
 $$\frac{dV}{dt}=r V-\alpha VP$$
 :::
 <!-- $$\frac{dx}{dt}=\alpha x-\beta xy$$ -->
-
-<br>
 
 ::: {.body-text-m}
 **The pieces:** 
@@ -1331,13 +1327,9 @@ $$\frac{dV}{dt}=r V-\alpha VP$$
 
 <hr>
 
-<br>
-
 ::: {.body-text-l}
 $$\frac{dP}{dt}=\beta VP - q P$$
 :::
-
-<br>
 
 ::: {.body-text-m}
 **The pieces:** 
@@ -1474,6 +1466,10 @@ Instead, computers can numerically approximate solutions by predicting nearby va
 [What we covered today]{.slide-title}
 
 <hr> 
+
+:::: {.columns}
+
+::: {.column width="50%"}
 - <span style="color:#660033"><b>🔎 Limits</b></span>  
 - <span style="color:#993300"><b>🖊️ Derivatives and rate of change</b></span>  
 - <span style="color:#330000"><b>🛤️ Tangent lines</b></span>  
@@ -1483,7 +1479,11 @@ Instead, computers can numerically approximate solutions by predicting nearby va
 - <span style="color:#003300"><b>➕ Sum and difference rule</b></span>  
 - <span style="color:#990000"><b>✖️ Product rule</b></span>  
 - <span style="color:#003399"><b>📈 Higher order derivatives</b></span>    
-- <span style="color:#333300"><b>🌓 Partial derivatives</b></span>  
+- <span style="color:#333300"><b>🌓 Partial derivatives</b></span> 
+:::
+
+
+::: {.column width="50%"}
 - <span style="color:#993366"><b>∫ Integrals</b></span>  
 - <span style="color:#660066"><b>🧮 Riemann sums</b></span>  
 - <span style="color:#003366"><b>📐 Rules of integration</b></span>    
@@ -1491,6 +1491,12 @@ Instead, computers can numerically approximate solutions by predicting nearby va
 - <span style="color:#333300"><b>🧾 Definite and indefinite integrals</b></span>  
 - <span style="color:#996600"><b>📏 Area between two curves</b></span>  
 - <span style="color:#330033"><b>🌊 A bit of ODEs</b></span>
+:::
 
+:::
+
+
+
+ 
 
 
