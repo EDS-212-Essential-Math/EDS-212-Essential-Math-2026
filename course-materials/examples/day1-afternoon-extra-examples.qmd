@@ -1,0 +1,134 @@
+---
+title: "Day 1 / Afternoon: Extra examples"
+---
+
+## Evaluating functions
+
+1. Evaluate $f(x)=2x^2-5x+1$ at $x=-3$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+f(-3) = 2(-3)^2-5(-3)+1 = 18+15+1 = 34
+$$
+:::
+
+2. Evaluate $g(a,b)=\frac{a^2+b}{2a}$ at $a=4$ and $b=10$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+g(4,10) = \frac{4^2+10}{2(4)} = \frac{26}{8} = 3.25
+$$
+:::
+
+## Graphs
+
+3. In which quadrant of the $xy$-plane does the point $(-3, 5)$ lie?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$x=-3$ is negative and $y=5$ is positive, so the point lies in **Quadrant II** (upper left).
+:::
+
+4. What are the $x$-intercept and $y$-intercept of the line $y=4x-8$?
+
+::: {.callout-tip collapse="true"}
+## Solution
+**$x$-intercept:** set $y=0$: $0=4x-8 \Rightarrow x=2$, so $(2,0)$.
+
+**$y$-intercept:** set $x=0$: $y=-8$, so $(0,-8)$.
+:::
+
+## Lines & slope
+
+5. Find the equation of the line that passes through $(1,4)$ and $(5,-8)$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+m=\frac{-8-4}{5-1}=\frac{-12}{4}=-3
+$$
+$$
+y-4=-3(x-1) \Rightarrow y=-3x+7
+$$
+:::
+
+6. Find the equation of the line that passes through $(-2,3)$ and has slope $\frac{1}{2}$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+y-3=\frac{1}{2}(x+2) \Rightarrow y=0.5x+4
+$$
+:::
+
+7. Between 2005 and 2015, a glacier's area shrank from 120 km² to 80 km². Find the average rate of change and write a sentence interpreting it.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+m=\frac{80-120}{2015-2005}=\frac{-40}{10}=-4\ \frac{\text{km}^2}{\text{year}}
+$$
+Between 2005 and 2015, glacier area decreased by an average of 4 km² per year.
+:::
+
+## The exponential function
+
+8. Simplify: $e^{2x}\cdot e^{-5x}$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+e^{2x}\cdot e^{-5x} = e^{2x-5x}=e^{-3x}
+$$
+:::
+
+9. A population grows according to $N(t)=50e^{0.08t}$. What is the population after 10 years?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+N(10)=50e^{0.08(10)}=50e^{0.8}\approx 50(2.2255)\approx 111
+$$
+:::
+
+10. The logistic growth model is $$N_t=\frac{K}{1+\left[\frac{K-N_0}{N_0}\right]e^{-rt}}$$ What does $N_t$ approach as $t \to \infty$ (assuming $r>0$)?
+
+::: {.callout-tip collapse="true"}
+## Solution
+As $t \to \infty$, $e^{-rt} \to 0$ (since $r>0$), so the bracketed term disappears:
+$$
+N_t \to \frac{K}{1+0} = K
+$$
+The population approaches the carrying capacity $K$.
+:::
+
+## Logarithms
+
+11. Solve for $x$: $\ln(x)=4$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+x=e^4\approx 54.6
+$$
+:::
+
+12. Solve for $t$: $200e^{0.05t}=500$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+e^{0.05t}=2.5 \Rightarrow 0.05t=\ln(2.5)\approx 0.9163 \Rightarrow t\approx 18.33
+$$
+:::
+
+13. Given $\ln(2)\approx 0.693$ and $\ln(3)\approx 1.099$, use log properties to find $\ln(6)$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\ln(6) = \ln(2\cdot 3) = \ln(2)+\ln(3) \approx 0.693+1.099 = 1.792
+$$
+:::
