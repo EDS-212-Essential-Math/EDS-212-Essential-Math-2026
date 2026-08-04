@@ -7,6 +7,7 @@ format:
     chalkboard: true
     theme: 
       - ../../meds-slides-styles.scss
+
 ---
 
 ## {#title-slide data-menu-title="Title Slide" background="#053660"} 
@@ -17,7 +18,7 @@ format:
 
 <hr class="hr-teal">
 
-[August 5^th^, 2025]{.custom-subtitle3}
+[August 4^th^, 2025]{.custom-subtitle3}
 
 ---
 
@@ -61,7 +62,9 @@ knitr::include_graphics("images/reimann.png")
 
 <hr>
 
-Approximate the area under the curve from $[-3,3]$ with $\Delta x=1$ and $k=6$
+Approximate the area under the curve from $[-3,3]$ with $\Delta x=2$ and $k=3$.
+
+✏️
 
 :::{.columns}
 
@@ -72,7 +75,7 @@ library(tidyverse)
 x=seq(-5,5,by=.1)
 y=x^3-12*x+62
 
-x_tab=seq(-3,3,by=1)
+x_tab=seq(-3,3,by=2)
 y_tab=x_tab^3-12*x_tab+62
 
 data.frame(x=x_tab,y=y_tab) %>% 
@@ -107,15 +110,15 @@ ggplot()+
 [Riemann sums]{.slide-title}
 
 <hr>
-1. Start at one end of the interval $[a,b]$
 
-2. Evaluate the function at $f(a)$.
+1. Divide the interval $[a,b]$ into $k$ subintervals of width $\Delta x$. 
 
-3. Step away from $a$ by some small amount called $\Delta x$.
+2. The endpoints of those intervals will give you a series of $x$ values: $x_0, x_1, \ldots, x_k$. 
 
-4. Multiply $f(a)\Delta x$ to get the the area of the first rectangle.
 
-5. Repeat the same steps above, now starting with $\Delta x$ as the bottom left corner of the next rectangle. Repeat until you cover the area with rectangles of width $\Delta x$. 
+3. Multiply $f(x_1)\Delta x$ to get the the area of the first rectangle.
+
+5. Repeat the same steps above, now starting with $x_2$ as the bottom right corner of the next rectangle. Repeat until you cover the area with rectangles of width $\Delta x$. 
 
 6. Sum up the area of all $k$ rectangles.
 
@@ -129,7 +132,31 @@ This is called a **Riemann Sum**.
 
 ---
 
-## {#exp-reimman data-menu-title="Riemann Sum"}
+## {#exp-reimman-1 data-menu-title="Riemann Sum"}
+
+[Finer and finer Riemann sums]{.slide-title}
+
+<hr>
+
+- What if we try to make $\Delta x$ (the width of the rectangles) really small? So we let $\Delta x \to 0$. This will make the number of rectangles under the curve go to infinity.
+
+- Our estimation of the area will get better and better with more rectangles.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/riemann.gif){fig-align="center" width="90%"}
+:::
+
+::: {.column width="50%"}
+
+:::
+
+::::
+
+---
+
+## {#exp-reimman-2 data-menu-title="Riemann Sum"}
 
 [Finer and finer Riemann sums]{.slide-title}
 
@@ -148,7 +175,6 @@ This is called a **Riemann Sum**.
 ::: {.column width="50%"}
 <br>
 
-:::{.fragment .fade-in}
 Take the area calculation we did before, but let $\Delta x \to 0$
 <span style="color:red">
 $$
@@ -162,13 +188,24 @@ $$
 
 We formally call this <span style="color:red">**the integral of $f(x)$ from $a$ to $b$ with respect to $x$**</span>.
 :::
-:::
 
 ::::
 
 ---
 
-## {#integral-calc data-menu-title="Integrals"}
+## {#integral-calc-1 data-menu-title="Integrals"}
+
+[How do we calculate integrals?]{.slide-title}
+
+<hr>
+
+- Taking infinite sums is impossible by hand
+
+- Luckily, integrals and derivatives are related in a very useful way:
+
+---
+
+## {#integral-calc-2 data-menu-title="Integrals"}
 
 [How do we calculate integrals?]{.slide-title}
 
@@ -179,8 +216,6 @@ We formally call this <span style="color:red">**the integral of $f(x)$ from $a$ 
 - Luckily, integrals and derivatives are related in a very useful way:
 
 <br>
-
-. . . 
 
 If we integrate a derivative, we should get the same function back as the original vice-versa:
 
@@ -199,7 +234,36 @@ $$
 
 <br>
 
-. . . 
+---
+
+## {#integral-calc-3 data-menu-title="Integrals"}
+
+[How do we calculate integrals?]{.slide-title}
+
+<hr>
+
+- Taking infinite sums is impossible by hand
+
+- Luckily, integrals and derivatives are related in a very useful way:
+
+<br>
+
+If we integrate a derivative, we should get the same function back as the original vice-versa:
+
+$$
+\begin{align}
+\frac{d}{dx}\left[\int f(x)dx\right]&=f(x) &\text{Differentiation is the inverse of integration}
+\end{align}
+$$
+
+$$
+\begin{align}
+\int f'(x)&=f(x)+C &\text{Integration is the inverse of differentiation}
+\end{align}
+$$
+
+
+<br>
 
 <div class="page-center">
 <span style="color:red">
@@ -207,6 +271,28 @@ $$
 </span>
 </div>
 
+---
+
+## {#c-blank data-menu-title="Constants of Integration"}
+
+[Where did that $C$ come from?]{.slide-title}
+
+<hr>
+
+::::{.columns}
+:::{.column width="50%"}
+
+**Example** 
+
+✏️
+
+:::
+:::{.column width="50%"}
+```{r,out.width="75%"}
+knitr::include_graphics("images/c.png")
+```
+:::
+::::
 
 ---
 
@@ -221,21 +307,16 @@ $$
 
 **Example** 
 
-:::{.fragment .fade-in}
 Find $\int 2x-4$.
-:::
 
-:::{.fragment .fade-in}
 To find $\int 2x-4$ we need to find a function whose derivative is $2x-4$. What could it be?
-:::
 
-:::{.fragment .fade-in}
 - If we integrate, we'll have $\int 2x-4 = x^2-4x+C$. 
 
 - There is no way of knowing what the $C$ should be without additional information
 
 - $C$ is the $x$-intercept and we would have we have to solve for it with an initial value problem.
-:::
+
 
 :::
 :::{.column width="50%"}
@@ -266,8 +347,7 @@ knitr::include_graphics("images/c.png")
 
 - Calculating the area under a curve
 
-    - Useful in policy evaluations
-
+- We'll see some applied exercises at the end.
 ---
 
 ## {#tough data-menu-title="Integration is tough"}
@@ -539,9 +619,35 @@ $$
 
 ---
 
-## {#definte-1-blank data-menu-title="Definite vs Indefinite"}
+## {#definite-blank data-menu-title="Definite vs Indefinite"}
 
-[Indefinite vs. dfinite integrals]{.slide-title}
+[Indefinite vs. definite integrals]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
+## {#definite-1 data-menu-title="Definite vs Indefinite"}
+
+[Indefinite vs. definite integrals]{.slide-title}
+
+<hr>
+
+- We have been working with **indefinite integrals** of the form
+
+$$
+\int f(x)dx
+$$
+
+This means there are no integration bounds and we need initial values to find integration constants.
+
+---
+
+## {#definite-2 data-menu-title="Definite vs Indefinite"}
+
+[Indefinite vs. definite integrals]{.slide-title}
 
 <hr>
 - We have been working with **indefinite integrals** of the form
@@ -552,7 +658,6 @@ $$
 
 This means there are no integration bounds and we need initial values to find integration constants.
 
-. . .
 
 - **Definite integrals** have start and end values $a$ and $b$:
 
@@ -583,8 +688,6 @@ $$
 
 This means there are no integration bounds and we need initial values to find integration constants.
 
-. . .
-
 - **Definite integrals** have start and end values $a$ and $b$:
 
 $$\int_a^b f(x) dx.$$
@@ -595,9 +698,7 @@ $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
 
 To find the area under the curve along an interval $[a,b]$, evaluate the antiderivative at the endpoints and subtract them.
 
-**Example**
-
-. . . 
+✏️ [**Example**]{style="color:green;"}
 
 $$
 \begin{align}
@@ -1063,7 +1164,7 @@ $$
 
 is a differential equation in which we want to find a function $y(x)$ such that its derivative equals the function plus $x$.
 
-✏️ [1. How would you heck that $y(x) = -x -1$ is a solution for this differential equation?]{style="color:green;"}
+✏️ [1. How would you check that $y(x) = -x -1$ is a solution for this differential equation?]{style="color:green;"}
 
 ---
 
@@ -1359,15 +1460,13 @@ Instead, computers can numerically approximate solutions by predicting nearby va
 
 ---
 
-## {#lunch-break data-menu-title="Lunch break"} 
+## {#integrate-concept data-menu-title="Integration" background-color="#003660"}
 
-[Lunch break!]{.slide-title}
+<div class="page-center">
+<div class="custom-subtitle">Wrapping up...</div>
+</div>
 
-<hr>
-
-![image: Flaticon.com](images/lunch-time.png)
-
-
+---
 
 ## {#what-we-covered data-menu-title="What we covered today" }
 
@@ -1385,6 +1484,13 @@ Instead, computers can numerically approximate solutions by predicting nearby va
 - <span style="color:#990000"><b>✖️ Product rule</b></span>  
 - <span style="color:#003399"><b>📈 Higher order derivatives</b></span>    
 - <span style="color:#333300"><b>🌓 Partial derivatives</b></span>  
+- <span style="color:#993366"><b>∫ Integrals</b></span>  
+- <span style="color:#660066"><b>🧮 Riemann sums</b></span>  
+- <span style="color:#003366"><b>📐 Rules of integration</b></span>    
+- <span style="color:#660000"><b>✏️ Initial value problems</b></span>  
+- <span style="color:#333300"><b>🧾 Definite and indefinite integrals</b></span>  
+- <span style="color:#996600"><b>📏 Area between two curves</b></span>  
+- <span style="color:#330033"><b>🌊 A bit of ODEs</b></span>
 
 
 
