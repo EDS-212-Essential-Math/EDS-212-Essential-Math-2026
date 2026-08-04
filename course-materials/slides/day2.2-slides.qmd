@@ -1010,10 +1010,7 @@ This example is here (probably) to show that partial derivatives are useful in s
 
 [What we covered today]{.slide-title}
 
-<hr>
-- <span style="color:#336666"><b>🌱 The number e and exp()</b></span>  
-- <span style="color:#003399"><b>🐰 Logistic growth</b></span>    
-- <span style="color:#990099"><b>🔢 Natural logarithms</b></span>  
+<hr> 
 - <span style="color:#660033"><b>🔎 Limits</b></span>  
 - <span style="color:#993300"><b>🖊️ Derivatives and rate of change</b></span>  
 - <span style="color:#330000"><b>🛤️ Tangent lines</b></span>  

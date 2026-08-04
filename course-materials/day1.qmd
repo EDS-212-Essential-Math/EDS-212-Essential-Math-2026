@@ -21,10 +21,10 @@ knitr::include_graphics("images/cetaceans-class.jpg")
 
 ## Class materials
 
-| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | 
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| day 1 / morning   | [Basic algebra review, rules of exponents, units and unit conversions](slides/day1.1-slides.qmd){target="_blank"} | 
-| day 1 / afternoon | [Functions (interpreting & evaluating), reading graphs, lines](slides/day1.2-slides.qmd){target="_blank"} |
+| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides (blank) | {{< fa pen-to-square title="A pencil over a blank piece of paper" >}}  After class slides|
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----|
+| day 1 / morning   | [Basic algebra review, rules of exponents, units, and unit conversions](slides/day1.1-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day1.1-slides-class-2026.pdf){target="_blank"}  |
+| day 1 / afternoon | [Functions (interpreting & evaluating), reading graphs, lines, exponential function, logarithms](slides/day1.2-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day1.2-slides-class-2026.pdf) |
 : {.hover .bordered tbl-colwidths="[20,40,40]"} 
 
 <!-- ## End-of-day practice
