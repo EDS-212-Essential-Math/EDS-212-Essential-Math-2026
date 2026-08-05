@@ -238,6 +238,41 @@
     "text": "Additional Resources\n\nIntro to matrix multiplication, by Khan Academy – a video on what it means to multiply two matrices, and an example\nLeslie Matrix Models – more examples; in particular, check out the American Bison Model section"
   },
   {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "",
+    "text": "Evaluate \\(f(x)=2x^2-5x+1\\) at \\(x=-3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf(-3) = 2(-3)^2-5(-3)+1 = 18+15+1 = 34\n\\]\n\n\n\n\nEvaluate \\(g(a,b)=\\frac{a^2+b}{2a}\\) at \\(a=4\\) and \\(b=10\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ng(4,10) = \\frac{4^2+10}{2(4)} = \\frac{26}{8} = 3.25\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#evaluating-functions",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#evaluating-functions",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "",
+    "text": "Evaluate \\(f(x)=2x^2-5x+1\\) at \\(x=-3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf(-3) = 2(-3)^2-5(-3)+1 = 18+15+1 = 34\n\\]\n\n\n\n\nEvaluate \\(g(a,b)=\\frac{a^2+b}{2a}\\) at \\(a=4\\) and \\(b=10\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ng(4,10) = \\frac{4^2+10}{2(4)} = \\frac{26}{8} = 3.25\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#lines-slope",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#lines-slope",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "Lines & slope",
+    "text": "Lines & slope\n\nWhat are the \\(x\\)-intercept and \\(y\\)-intercept of the line \\(y=4x-8\\)?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(x\\)-intercept: set \\(y=0\\): \\(0=4x-8 \\Rightarrow x=2\\), so \\((2,0)\\).\n\\(y\\)-intercept: set \\(x=0\\): \\(y=-8\\), so \\((0,-8)\\).\n\n\n\n\nFind the equation of the line that passes through \\((1,4)\\) and \\((5,-8)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nm=\\frac{-8-4}{5-1}=\\frac{-12}{4}=-3\n\\] \\[\ny-4=-3(x-1) \\Rightarrow y=-3x+7\n\\]\n\n\n\n\nFind the equation of the line that passes through \\((-2,3)\\) and has slope \\(\\frac{1}{2}\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ny-3=\\frac{1}{2}(x+2) \\Rightarrow y=0.5x+4\n\\]\n\n\n\n\nBetween 2005 and 2015, a glacier’s area shrank from 120 km² to 80 km². Find the average rate of change and write a sentence interpreting it.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nm=\\frac{80-120}{2015-2005}=\\frac{-40}{10}=-4\\ \\frac{\\text{km}^2}{\\text{year}}\n\\] Between 2005 and 2015, glacier area decreased by an average of 4 km² per year."
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#the-exponential-function",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#the-exponential-function",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "The exponential function",
+    "text": "The exponential function\n\nSimplify: \\(e^{2x}\\cdot e^{-5x}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ne^{2x}\\cdot e^{-5x} = e^{2x-5x}=e^{-3x}\n\\]\n\n\n\n\nA population grows according to \\(N(t)=50e^{0.08t}\\). What is the population after 10 years?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nN(10)=50e^{0.08(10)}=50e^{0.8}\\approx 50(2.2255)\\approx 111\n\\]\n\n\n\n\nThe logistic growth model is \\[N_t=\\frac{K}{1+\\left[\\frac{K-N_0}{N_0}\\right]e^{-rt}}\\] What does \\(N_t\\) approach as \\(t \\to \\infty\\) (assuming \\(r&gt;0\\))?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nAs \\(t \\to \\infty\\), \\(e^{-rt} \\to 0\\) (since \\(r&gt;0\\)), so the bracketed term disappears: \\[\nN_t \\to \\frac{K}{1+0} = K\n\\] The population approaches the carrying capacity \\(K\\)."
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#logarithms",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#logarithms",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "Logarithms",
+    "text": "Logarithms\n\nSolve for \\(x\\): \\(\\ln(x)=4\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nx=e^4\\approx 54.6\n\\]\n\n\n\n\nSolve for \\(t\\): \\(200e^{0.05t}=500\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ne^{0.05t}=2.5 \\Rightarrow 0.05t=\\ln(2.5)\\approx 0.9163 \\Rightarrow t\\approx 18.33\n\\]\n\n\n\n\nGiven \\(\\ln(2)\\approx 0.693\\) and \\(\\ln(3)\\approx 1.099\\), use log properties to find \\(\\ln(6)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\ln(6) = \\ln(2\\cdot 3) = \\ln(2)+\\ln(3) \\approx 0.693+1.099 = 1.792\n\\]"
+  },
+  {
     "objectID": "course-materials/eod-practice/eod-day2.html",
     "href": "course-materials/eod-practice/eod-day2.html",
     "title": "Day 2: Tasks & activities",
@@ -2065,11 +2100,25 @@
     "text": "1. Order of operations practice problems\n\n💡 Let’s see a solution!\n\n\n\n\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\n\n3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}"
   },
   {
+    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1-answer",
+    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1-answer",
+    "title": "",
+    "section": "",
+    "text": "1. Practice solutions\n\n\n\\small\n\\begin{aligned}\n\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3} &= \\frac{-2}{2}(4)-\\frac{9}{3} \\\\\n&= -1(4)-3 \\\\\n&= -4-3 \\\\\n&= -7\n\\end{aligned}\n\n\n\\small\n\\begin{aligned}\n3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2} &= 3x+4(2x)-2y+5+\\frac{2x-6x}{2} \\\\\n&= 3x+8x-2y+5+\\frac{-4x}{2} \\\\\n&= 3x+8x-2y+5-2x \\\\\n&= 9x-2y+5\n\\end{aligned}"
+  },
+  {
     "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2",
     "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2",
     "title": "",
     "section": "",
     "text": "1. Order of operations practice problems\n\n💡 Let’s see a solution!\nIf we are given the values of x=-3 and y=2, what would be the value of z? \nz = 4*(y-4)+(x+1)^2"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2-answer",
+    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2-answer",
+    "title": "",
+    "section": "",
+    "text": "1. Practice solutions\n\n\n\\small\n\\begin{aligned}\nz = 4(y-4)+(x+1)^2 &= 4(2-4)+(-3+1)^2 \\\\\n&= 4(-2)+(-2)^2 \\\\\n&= -8+4 \\\\\nz&=-4\n\\end{aligned}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#notation-matters",
@@ -2349,7 +2398,7 @@
     "href": "course-materials/slides/day2.2-slides.html#integrate-concept",
     "title": "",
     "section": "",
-    "text": "Wrapping up…"
+    "text": "Integration Conceputally"
   },
   {
     "objectID": "course-materials/slides/day2.2-slides.html#auc",
@@ -2779,11 +2828,18 @@
     "text": "Solving differential equations numerically\n\n\n\nFind approximate solutions to differential equations when finding an analytical solution would be really challenging (…which is pretty often).\n\nInstead, computers can numerically approximate solutions by predicting nearby values based on the slope.\n\nThere are many methods for solving differential equations numerically. You’ll do it programatically later on."
   },
   {
+    "objectID": "course-materials/slides/day2.2-slides.html#wrapping-up",
+    "href": "course-materials/slides/day2.2-slides.html#wrapping-up",
+    "title": "",
+    "section": "",
+    "text": "Wrapping up…"
+  },
+  {
     "objectID": "course-materials/slides/day2.2-slides.html#what-we-covered",
     "href": "course-materials/slides/day2.2-slides.html#what-we-covered",
     "title": "",
     "section": "",
-    "text": "What we covered today\n\n\n\n\n🔎 Limits\n\n🖊️ Derivatives and rate of change\n\n🛤️ Tangent lines\n\n📝 Rules for differentiation\n\n🔹 Constant rule\n\n💪 Power rule\n\n➕ Sum and difference rule\n\n✖️ Product rule\n\n📈 Higher order derivatives\n\n🌓 Partial derivatives\n\n\n\n∫ Integrals\n\n🧮 Riemann sums\n\n📐 Rules of integration\n\n✏️ Initial value problems\n\n🧾 Definite and indefinite integrals\n\n📏 Area between two curves\n\n🌊 A bit of ODEs"
+    "text": "What we covered today\n\n\n\n\n🔎 Limits\n\n🖊️ Derivatives and rate of change\n\n🛤️ Tangent lines\n\n📝 Rules for differentiation\n\n🔹 Constant rule\n\n💪 Power rule\n\n➕ Sum and difference rule\n\n📈 Higher order derivatives\n\n🌓 Partial derivatives\n\n\n\n∫ Integrals\n\n🧮 Riemann sums\n\n📐 Rules of integration\n\n✏️ Initial value problems\n\n🧾 Definite and indefinite integrals\n\n📏 Area between two curves\n\n🌊 A bit of ODEs"
   },
   {
     "objectID": "course-materials/slides/day5.1-slides.html#title-slide",
@@ -3129,6 +3185,20 @@
     "text": "Equation of a line: solutions\n\nC. Find the equation of the line that has the following graph:"
   },
   {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-solutions-summary",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-solutions-summary",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: solutions\n\n\nPasses through \\((3,5)\\) and \\((2,-1)\\):\n\n\\[\n\\begin{aligned}\nm &= \\frac{5-(-1)}{3-2} = 6 &\\text{Compute the slope} \\\\\ny - 5 &= 6(x-3) &\\text{Point-slope form using (3,5)} \\\\\ny &= 6x - 13 &\\text{Simplify}\n\\end{aligned}\n\\]\n\nPasses through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4:\n\n\\[\n\\begin{aligned}\nm &= \\frac{0-(-5)}{4-2} = \\frac{5}{2} &\\text{Compute the slope using the } x\\text{-intercept } (4,0) \\\\\ny - 0 &= \\frac{5}{2}(x-4) &\\text{Point-slope form} \\\\\ny &= \\frac{5}{2}x - 10 &\\text{Simplify}\n\\end{aligned}\n\\]\n\nHas the given graph: \\(y = \\frac{3}{2}x+1\\)\n\n\\[\n\\begin{aligned}\n\\text{slope} &= \\frac{\\text{rise}}{\\text{run}} = \\frac{3}{2} &\\text{Read from the graph} \\\\\ny\\text{-intercept} &= 1 &\\text{Read from the graph} \\\\\ny &= \\frac{3}{2}x + 1 &\\text{Equation of the line}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4-blank",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-4-blank",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: solutions\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2."
+  },
+  {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
     "title": "",
@@ -3232,6 +3302,20 @@
     "title": "",
     "section": "",
     "text": "Logistic growth\n\n\\[N_t=\\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-rt}}\\]\n\nWhere \\(N_t\\) is the population size at time \\(t\\), \\(K\\) is the carrying capacity, \\(N_0\\) is the initial population size, and \\(r\\) is a growth rate.\n\n\n✏️ What should be the value of the formula when \\(t=0\\)? Confirm your answer by substituting.\n\n\n\nWe should always understand the components of formulas and equations - both conceptually and mathematically."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-example",
+    "href": "course-materials/slides/day1.2-slides.html#logistic-growth-example",
+    "title": "",
+    "section": "",
+    "text": "Logistic growth: Example\n\nWhat is \\[N_t=\\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-rt}}\\] when t = 0"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-solution",
+    "href": "course-materials/slides/day1.2-slides.html#logistic-growth-solution",
+    "title": "",
+    "section": "",
+    "text": "Logistic growth: Solution\n\n\\[\n\\begin{aligned}\nN_0 &= \\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-r(0)}} &\\text{Substitute } t=0 \\\\\n&= \\frac{K}{1+[\\frac{K-N_0}{N_0}](1)} &e^{0}=1 \\\\\n&= \\frac{K}{\\frac{N_0 + (K-N_0)}{N_0}} &\\text{Combine terms in the denominator} \\\\\n&= \\frac{K}{\\frac{K}{N_0}} &N_0 + (K-N_0) = K \\\\\n&= N_0\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-Qs",
@@ -3535,6 +3619,48 @@
     "text": "3. Data exploration & summarizing in R\n\nCreate a new Project\nAdd a new Quarto document in your project, save as r-data-exploration.qmd\nSet up your local and remote git repo by running usethis::use_git() and then usethis::use_github()\nAttach the {tidyverse}, {skimr}, and {GGally} packages in the setup code chunk\nRun View(diamonds) in the Console to look at the built-in diamonds data set in R\nExplore the data set using the functions names(), dim(), summary(), head(), tail(), and skimr::skim()\nCreate a pairs plot using ggpairs()\nCreate a basic ggplot scatterplot of diamond price (price) as a function of size (carat)\nCreate a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))\nSave, stage, commit, pull, then push your changes back to your repo in RStudio using the GUI interface (buttons)\nCreate a boxplot (see: geom_boxplot) of diamond clarity (on the x-axis) and price (y-axis).\nIn the command line, stage, commit, & push changes\n\n\n\nEnd Activity Session (Day 4)"
   },
   {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html",
+    "href": "course-materials/examples/day1-morning-extra-examples.html",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "",
+    "text": "Simplify: \\(\\frac{18-4}{2}+3(5-2)^2\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{18-4}{2}+3(5-2)^2 = \\frac{14}{2}+3(3)^2 = 7+3(9) = 7+27 = 34\n\\]\n\n\n\n\nSimplify: \\(2x+5(3x-4)-\\frac{6x}{2}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n2x+5(3x-4)-\\frac{6x}{2} = 2x+15x-20-3x = 14x-20\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#order-of-operations",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#order-of-operations",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "",
+    "text": "Simplify: \\(\\frac{18-4}{2}+3(5-2)^2\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{18-4}{2}+3(5-2)^2 = \\frac{14}{2}+3(3)^2 = 7+3(9) = 7+27 = 34\n\\]\n\n\n\n\nSimplify: \\(2x+5(3x-4)-\\frac{6x}{2}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n2x+5(3x-4)-\\frac{6x}{2} = 2x+15x-20-3x = 14x-20\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#solving-equations",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#solving-equations",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "Solving equations",
+    "text": "Solving equations\n\nSolve for \\(x\\): \\(5x-7=3x+9\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n5x-7=3x+9 \\Rightarrow 2x=16 \\Rightarrow x=8\n\\]\n\n\n\n\nSolve for \\(x\\): \\(3(2x-1)=5-(x+4)\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n3(2x-1)=5-(x+4) \\Rightarrow 6x-3=1-x \\Rightarrow 7x=4 \\Rightarrow x=\\frac{4}{7}\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#rules-of-exponents",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#rules-of-exponents",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "Rules of exponents",
+    "text": "Rules of exponents\n\nSimplify: \\(\\frac{5^7}{5^4}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{5^7}{5^4} = 5^{7-4} = 5^3 = 125\n\\]\n\n\n\n\nSimplify: \\((2x^3y^{-2})^3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n(2x^3y^{-2})^3 = 2^3x^{9}y^{-6} = \\frac{8x^9}{y^6}\n\\]\n\n\n\n\nSimplify: \\(\\frac{x^4\\cdot x^2}{x^6}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{x^4\\cdot x^2}{x^6} = \\frac{x^{4+2}}{x^6} = \\frac{x^6}{x^6} = x^0 = 1\n\\]\n\n\n\n\nSimplify: \\(\\left(\\frac{2x}{y}\\right)^3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\left(\\frac{2x}{y}\\right)^3 = \\frac{2^3x^3}{y^3} = \\frac{8x^3}{y^3}\n\\]\n\n\n\n\nEvaluate: \\(27^{2/3}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n27^{2/3} = \\left(27^{1/3}\\right)^2 = 3^2 = 9\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#foil-polynomials",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#foil-polynomials",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "FOIL & polynomials",
+    "text": "FOIL & polynomials\n\nExpand: \\((3x-2)(x+4)\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n(3x-2)(x+4) = 3x^2+12x-2x-8 = 3x^2+10x-8\n\\]\n\n\n\n\nWhat is the degree of the polynomial \\(4x^5-3x^2+7x-1\\), and how many terms does it have?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe degree is 5 (the largest exponent), and the polynomial has 4 terms."
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#unit-conversions",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#unit-conversions",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "Unit conversions",
+    "text": "Unit conversions\n\nConvert 15 miles to kilometers, given 1 mile = 1.609 km.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n15\\text{ mi} \\times \\frac{1.609\\text{ km}}{1\\text{ mi}} = 24.135\\text{ km}\n\\]\n\n\n\n\nConvert \\(250\\ \\frac{mg}{L}\\) to \\(\\frac{g}{m^3}\\), given 1000 mg = 1 g and 1 L = 0.001 m3.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n250\\frac{\\text{mg}}{\\text{L}} \\times \\frac{1\\text{ g}}{1000\\text{ mg}} \\times \\frac{1\\text{ L}}{0.001\\text{ m}^3} = 250\\frac{\\text{g}}{\\text{m}^3}\n\\]"
+  },
+  {
     "objectID": "course-materials/day5.html#class-materials",
     "href": "course-materials/day5.html#class-materials",
     "title": "Basic probability theory and Boolean algebra",
@@ -3792,145 +3918,5 @@
     "title": "Differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
-  },
-  {
-    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solutions",
-    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solutions",
-    "title": "",
-    "section": "",
-    "text": "1. Solutions to exercises\n\n\n1. \\(\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3} = \\frac{-2}{2}(4)-\\frac{9}{3} = -4-3 = -7\\)\n2. \\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2} = 3x+8x-2y+5+x-3x = 9x-2y+5\\)\n3. \\(z = 4(y-4)+(x+1)^2 = 4(-2)+(-2)^2 = -8+4 = -4\\)"
-  },
-  {
-    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1-answer",
-    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1-answer",
-    "title": "",
-    "section": "",
-    "text": "1. Practice solutions\n\n\n\\small\n\\begin{aligned}\n\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3} &= \\frac{-2}{2}(4)-\\frac{9}{3} \\\\\n&= -1(4)-3 \\\\\n&= -4-3 \\\\\n&= -7\n\\end{aligned}\n\n\n\\small\n\\begin{aligned}\n3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2} &= 3x+4(2x)-2y+5+\\frac{2x-6x}{2} \\\\\n&= 3x+8x-2y+5+\\frac{-4x}{2} \\\\\n&= 3x+8x-2y+5-2x \\\\\n&= 9x-2y+5\n\\end{aligned}"
-  },
-  {
-    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2-answer",
-    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2-answer",
-    "title": "",
-    "section": "",
-    "text": "1. Practice solutions\n\n\n\\small\n\\begin{aligned}\nz = 4(y-4)+(x+1)^2 &= 4(2-4)+(-3+1)^2 \\\\\n&= 4(-2)+(-2)^2 \\\\\n&= -8+4 \\\\\nz&=-4\n\\end{aligned}"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-solutions-summary",
-    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-solutions-summary",
-    "title": "",
-    "section": "",
-    "text": "Equation of a line: solutions\n\n\nPasses through \\((3,5)\\) and \\((2,-1)\\):\n\n\\[\n\\begin{aligned}\nm &= \\frac{5-(-1)}{3-2} = 6 &\\text{Compute the slope} \\\\\ny - 5 &= 6(x-3) &\\text{Point-slope form using (3,5)} \\\\\ny &= 6x - 13 &\\text{Simplify}\n\\end{aligned}\n\\]\n\nPasses through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4:\n\n\\[\n\\begin{aligned}\nm &= \\frac{0-(-5)}{4-2} = \\frac{5}{2} &\\text{Compute the slope using the } x\\text{-intercept } (4,0) \\\\\ny - 0 &= \\frac{5}{2}(x-4) &\\text{Point-slope form} \\\\\ny &= \\frac{5}{2}x - 10 &\\text{Simplify}\n\\end{aligned}\n\\]\n\nHas the given graph: \\(y = \\frac{3}{2}x+1\\)\n\n\\[\n\\begin{aligned}\n\\text{slope} &= \\frac{\\text{rise}}{\\text{run}} = \\frac{3}{2} &\\text{Read from the graph} \\\\\ny\\text{-intercept} &= 1 &\\text{Read from the graph} \\\\\ny &= \\frac{3}{2}x + 1 &\\text{Equation of the line}\n\\end{aligned}\n\\]"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4-blank",
-    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-4-blank",
-    "title": "",
-    "section": "",
-    "text": "Equation of a line: solutions\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2."
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-example",
-    "href": "course-materials/slides/day1.2-slides.html#logistic-growth-example",
-    "title": "",
-    "section": "",
-    "text": "Logistic growth: Example\n\nWhat is \\[N_t=\\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-rt}}\\] when t = 0"
-  },
-  {
-    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-solution",
-    "href": "course-materials/slides/day1.2-slides.html#logistic-growth-solution",
-    "title": "",
-    "section": "",
-    "text": "Logistic growth: Solution\n\n\\[\n\\begin{aligned}\nN_0 &= \\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-r(0)}} &\\text{Substitute } t=0 \\\\\n&= \\frac{K}{1+[\\frac{K-N_0}{N_0}](1)} &e^{0}=1 \\\\\n&= \\frac{K}{\\frac{N_0 + (K-N_0)}{N_0}} &\\text{Combine terms in the denominator} \\\\\n&= \\frac{K}{\\frac{K}{N_0}} &N_0 + (K-N_0) = K \\\\\n&= N_0\n\\end{aligned}\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day1-morning-extra-examples.html",
-    "href": "course-materials/examples/day1-morning-extra-examples.html",
-    "title": "Day 1 / Morning: Extra examples",
-    "section": "",
-    "text": "Simplify: \\(\\frac{18-4}{2}+3(5-2)^2\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{18-4}{2}+3(5-2)^2 = \\frac{14}{2}+3(3)^2 = 7+3(9) = 7+27 = 34\n\\]\n\n\n\n\nSimplify: \\(2x+5(3x-4)-\\frac{6x}{2}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n2x+5(3x-4)-\\frac{6x}{2} = 2x+15x-20-3x = 14x-20\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day1-morning-extra-examples.html#order-of-operations",
-    "href": "course-materials/examples/day1-morning-extra-examples.html#order-of-operations",
-    "title": "Day 1 / Morning: Extra examples",
-    "section": "",
-    "text": "Simplify: \\(\\frac{18-4}{2}+3(5-2)^2\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{18-4}{2}+3(5-2)^2 = \\frac{14}{2}+3(3)^2 = 7+3(9) = 7+27 = 34\n\\]\n\n\n\n\nSimplify: \\(2x+5(3x-4)-\\frac{6x}{2}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n2x+5(3x-4)-\\frac{6x}{2} = 2x+15x-20-3x = 14x-20\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day1-morning-extra-examples.html#solving-equations",
-    "href": "course-materials/examples/day1-morning-extra-examples.html#solving-equations",
-    "title": "Day 1 / Morning: Extra examples",
-    "section": "Solving equations",
-    "text": "Solving equations\n\nSolve for \\(x\\): \\(5x-7=3x+9\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n5x-7=3x+9 \\Rightarrow 2x=16 \\Rightarrow x=8\n\\]\n\n\n\n\nSolve for \\(x\\): \\(3(2x-1)=5-(x+4)\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n3(2x-1)=5-(x+4) \\Rightarrow 6x-3=1-x \\Rightarrow 7x=4 \\Rightarrow x=\\frac{4}{7}\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day1-morning-extra-examples.html#rules-of-exponents",
-    "href": "course-materials/examples/day1-morning-extra-examples.html#rules-of-exponents",
-    "title": "Day 1 / Morning: Extra examples",
-    "section": "Rules of exponents",
-    "text": "Rules of exponents\n\nSimplify: \\(\\frac{5^7}{5^4}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{5^7}{5^4} = 5^{7-4} = 5^3 = 125\n\\]\n\n\n\n\nSimplify: \\((2x^3y^{-2})^3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n(2x^3y^{-2})^3 = 2^3x^{9}y^{-6} = \\frac{8x^9}{y^6}\n\\]\n\n\n\n\nSimplify: \\(\\frac{x^4\\cdot x^2}{x^6}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{x^4\\cdot x^2}{x^6} = \\frac{x^{4+2}}{x^6} = \\frac{x^6}{x^6} = x^0 = 1\n\\]\n\n\n\n\nSimplify: \\(\\left(\\frac{2x}{y}\\right)^3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\left(\\frac{2x}{y}\\right)^3 = \\frac{2^3x^3}{y^3} = \\frac{8x^3}{y^3}\n\\]\n\n\n\n\nEvaluate: \\(27^{2/3}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n27^{2/3} = \\left(27^{1/3}\\right)^2 = 3^2 = 9\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day1-morning-extra-examples.html#foil-polynomials",
-    "href": "course-materials/examples/day1-morning-extra-examples.html#foil-polynomials",
-    "title": "Day 1 / Morning: Extra examples",
-    "section": "FOIL & polynomials",
-    "text": "FOIL & polynomials\n\nExpand: \\((3x-2)(x+4)\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n(3x-2)(x+4) = 3x^2+12x-2x-8 = 3x^2+10x-8\n\\]\n\n\n\n\nWhat is the degree of the polynomial \\(4x^5-3x^2+7x-1\\), and how many terms does it have?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe degree is 5 (the largest exponent), and the polynomial has 4 terms."
-  },
-  {
-    "objectID": "course-materials/examples/day1-morning-extra-examples.html#unit-conversions",
-    "href": "course-materials/examples/day1-morning-extra-examples.html#unit-conversions",
-    "title": "Day 1 / Morning: Extra examples",
-    "section": "Unit conversions",
-    "text": "Unit conversions\n\nConvert 15 miles to kilometers, given 1 mile = 1.609 km.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n15\\text{ mi} \\times \\frac{1.609\\text{ km}}{1\\text{ mi}} = 24.135\\text{ km}\n\\]\n\n\n\n\nConvert \\(250\\ \\frac{mg}{L}\\) to \\(\\frac{g}{m^3}\\), given 1000 mg = 1 g and 1 L = 0.001 m3.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n250\\frac{\\text{mg}}{\\text{L}} \\times \\frac{1\\text{ g}}{1000\\text{ mg}} \\times \\frac{1\\text{ L}}{0.001\\text{ m}^3} = 250\\frac{\\text{g}}{\\text{m}^3}\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html",
-    "href": "course-materials/examples/day1-afternoon-extra-examples.html",
-    "title": "Day 1 / Afternoon: Extra examples",
-    "section": "",
-    "text": "Evaluate \\(f(x)=2x^2-5x+1\\) at \\(x=-3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf(-3) = 2(-3)^2-5(-3)+1 = 18+15+1 = 34\n\\]\n\n\n\n\nEvaluate \\(g(a,b)=\\frac{a^2+b}{2a}\\) at \\(a=4\\) and \\(b=10\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ng(4,10) = \\frac{4^2+10}{2(4)} = \\frac{26}{8} = 3.25\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#evaluating-functions",
-    "href": "course-materials/examples/day1-afternoon-extra-examples.html#evaluating-functions",
-    "title": "Day 1 / Afternoon: Extra examples",
-    "section": "",
-    "text": "Evaluate \\(f(x)=2x^2-5x+1\\) at \\(x=-3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf(-3) = 2(-3)^2-5(-3)+1 = 18+15+1 = 34\n\\]\n\n\n\n\nEvaluate \\(g(a,b)=\\frac{a^2+b}{2a}\\) at \\(a=4\\) and \\(b=10\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ng(4,10) = \\frac{4^2+10}{2(4)} = \\frac{26}{8} = 3.25\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#lines-slope",
-    "href": "course-materials/examples/day1-afternoon-extra-examples.html#lines-slope",
-    "title": "Day 1 / Afternoon: Extra examples",
-    "section": "Lines & slope",
-    "text": "Lines & slope\n\nFind the equation of the line that passes through \\((1,4)\\) and \\((5,-8)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nm=\\frac{-8-4}{5-1}=\\frac{-12}{4}=-3\n\\] \\[\ny-4=-3(x-1) \\Rightarrow y=-3x+7\n\\]\n\n\n\n\nFind the equation of the line that passes through \\((-2,3)\\) and has slope \\(\\frac{1}{2}\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ny-3=\\frac{1}{2}(x+2) \\Rightarrow y=0.5x+4\n\\]\n\n\n\n\nBetween 2005 and 2015, a glacier’s area shrank from 120 km² to 80 km². Find the average rate of change and write a sentence interpreting it.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nm=\\frac{80-120}{2015-2005}=\\frac{-40}{10}=-4\\ \\frac{\\text{km}^2}{\\text{year}}\n\\] Between 2005 and 2015, glacier area decreased by an average of 4 km² per year."
-  },
-  {
-    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#reading-graphs",
-    "href": "course-materials/examples/day1-afternoon-extra-examples.html#reading-graphs",
-    "title": "Day 1 / Afternoon: Extra examples",
-    "section": "Reading graphs",
-    "text": "Reading graphs\n\nWhat are the \\(x\\)-intercept and \\(y\\)-intercept of the line \\(y=4x-8\\)?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(x\\)-intercept: set \\(y=0\\): \\(0=4x-8 \\Rightarrow x=2\\), so \\((2,0)\\).\n\\(y\\)-intercept: set \\(x=0\\): \\(y=-8\\), so \\((0,-8)\\)."
-  },
-  {
-    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#the-exponential-function",
-    "href": "course-materials/examples/day1-afternoon-extra-examples.html#the-exponential-function",
-    "title": "Day 1 / Afternoon: Extra examples",
-    "section": "The exponential function",
-    "text": "The exponential function\n\nSimplify: \\(e^{2x}\\cdot e^{-5x}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ne^{2x}\\cdot e^{-5x} = e^{2x-5x}=e^{-3x}\n\\]\n\n\n\n\nA population grows according to \\(N(t)=50e^{0.08t}\\). What is the population after 10 years?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nN(10)=50e^{0.08(10)}=50e^{0.8}\\approx 50(2.2255)\\approx 111\n\\]\n\n\n\n\nThe logistic growth model is \\[N_t=\\frac{K}{1+\\left[\\frac{K-N_0}{N_0}\\right]e^{-rt}}\\] What does \\(N_t\\) approach as \\(t \\to \\infty\\) (assuming \\(r&gt;0\\))?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nAs \\(t \\to \\infty\\), \\(e^{-rt} \\to 0\\) (since \\(r&gt;0\\)), so the bracketed term disappears: \\[\nN_t \\to \\frac{K}{1+0} = K\n\\] The population approaches the carrying capacity \\(K\\)."
-  },
-  {
-    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#logarithms",
-    "href": "course-materials/examples/day1-afternoon-extra-examples.html#logarithms",
-    "title": "Day 1 / Afternoon: Extra examples",
-    "section": "Logarithms",
-    "text": "Logarithms\n\nSolve for \\(x\\): \\(\\ln(x)=4\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nx=e^4\\approx 54.6\n\\]\n\n\n\n\nSolve for \\(t\\): \\(200e^{0.05t}=500\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ne^{0.05t}=2.5 \\Rightarrow 0.05t=\\ln(2.5)\\approx 0.9163 \\Rightarrow t\\approx 18.33\n\\]\n\n\n\n\nGiven \\(\\ln(2)\\approx 0.693\\) and \\(\\ln(3)\\approx 1.099\\), use log properties to find \\(\\ln(6)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\ln(6) = \\ln(2\\cdot 3) = \\ln(2)+\\ln(3) \\approx 0.693+1.099 = 1.792\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#graphs",
-    "href": "course-materials/examples/day1-afternoon-extra-examples.html#graphs",
-    "title": "Day 1 / Afternoon: Extra examples",
-    "section": "Graphs",
-    "text": "Graphs\n\nIn which quadrant of the \\(xy\\)-plane does the point \\((-3, 5)\\) lie?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(x=-3\\) is negative and \\(y=5\\) is positive, so the point lies in Quadrant II (upper left).\n\n\n\n\nWhat are the \\(x\\)-intercept and \\(y\\)-intercept of the line \\(y=4x-8\\)?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(x\\)-intercept: set \\(y=0\\): \\(0=4x-8 \\Rightarrow x=2\\), so \\((2,0)\\).\n\\(y\\)-intercept: set \\(x=0\\): \\(y=-8\\), so \\((0,-8)\\)."
   }
 ]

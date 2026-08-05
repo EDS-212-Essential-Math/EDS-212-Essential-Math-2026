@@ -1452,7 +1452,7 @@ Instead, computers can numerically approximate solutions by predicting nearby va
 
 ---
 
-## {#integrate-concept data-menu-title="Integration" background-color="#003660"}
+## {#wrapping-up data-menu-title="Integration" background-color="#003660"}
 
 <div class="page-center">
 <div class="custom-subtitle">Wrapping up...</div>
@@ -1477,7 +1477,6 @@ Instead, computers can numerically approximate solutions by predicting nearby va
 - <span style="color:#996600"><b>🔹 Constant rule</b></span>  
 - <span style="color:#660000"><b>💪 Power rule</b></span>  
 - <span style="color:#003300"><b>➕ Sum and difference rule</b></span>  
-- <span style="color:#990000"><b>✖️ Product rule</b></span>  
 - <span style="color:#003399"><b>📈 Higher order derivatives</b></span>    
 - <span style="color:#333300"><b>🌓 Partial derivatives</b></span> 
 :::
