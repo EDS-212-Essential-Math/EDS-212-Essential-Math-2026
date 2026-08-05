@@ -4,7 +4,7 @@
     "href": "course-materials/day1.html#class-materials",
     "title": "Core math review",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides (blank)\n After class slides\n\n\n\n\nday 1 / morning\nBasic algebra review, rules of exponents, units, and unit conversions\nSlides\n\n\nday 1 / afternoon\nFunctions (interpreting & evaluating), reading graphs, lines, exponential function, logarithms\nSlides"
+    "text": "Class materials\n\n\n\n\n\n\n\n\n\n Session\n Lecture slides (blank)\n After class slides\n Extra Examples\n\n\n\n\nday 1 / morning\nBasic algebra review, rules of exponents, units, and unit conversions\nSlides\nExamples\n\n\nday 1 / afternoon\nFunctions (interpreting & evaluating), reading graphs, lines, exponential function, logarithms\nSlides\nExamples"
   },
   {
     "objectID": "course-materials/interactive-sessions/interactive-session-1b.html",
@@ -1915,7 +1915,7 @@
     "href": "course-materials/slides/day1.1-slides.html#welcome",
     "title": "",
     "section": "",
-    "text": "Welcome to EDS 212 - Essential Math in Environmental Data Science\n\n\n\nInstructor: Carmen Galaz García\nTeaching assistant: Cella Schnabel\nCourse hours: 10am - 3:30pm PST\nLocation: NCEAS 1st Floor Classroom"
+    "text": "Welcome to EDS 212 - Essential Math in Environmental Data Science\n\n\n\nInstructor: Carmen Galaz García\nTeaching assistant: Cella Schnabel\nCourse hours: 10am - 3:30pm PST\nLocation: NCEAS 1st Floor Classroom\nWebsite: https://eds-212-essential-math.github.io/EDS-212-Essential-Math-2026/\n\nFind the slides: top right under daily materials\nFind the syllabus: top right under syllabus"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#about-instructor",
@@ -2027,7 +2027,7 @@
     "href": "course-materials/slides/day1.1-slides.html#warm-up-overview",
     "title": "",
     "section": "",
-    "text": "Today: Math brain warm up\n\n\n\nAlgebra review\nRules of exponents\nUnits\nFunctions\nUnderstanding graphs\nLinear functions"
+    "text": "Today: Math brain warm up\n\n\n\nAlgebra review\nRules of exponents\nUnits\nFunctions\nUnderstanding graphs\nLinear functions\nExponential function\nNatural logarithm"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#algebra-review",
@@ -2055,28 +2055,28 @@
     "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice",
     "title": "",
     "section": "",
-    "text": "1. Order of operations practice problems\n\n✏️ Take a minute to solve these individually.\n\n\nSimplify \\(\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\\)\n\n\n\nSimplify \\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\nIf we are given the values of \\(x=-3\\) and \\(y=2\\), what would be the value of \\(z\\)? \\[\nz = 4*(y-4)+(x+1)^2\n\\]\n\n\n\n\\((12 - 2)/5 + 5(3+2)/6\\)\n\n\n\\((10/5) + 5 \\times 5 / 6\\)\nANSWER: \\(2 + 25/6\\)\n\n\n\\(\\frac{(4-6)}{(2)}(3+1)-\\frac{(1+2*4)}{(3)}\\)\n\n\n\\(\\frac{(-2)}{(2)}(4)-\\frac{(9)}{(3)}\\)\n\\(-1 \\times 4 - 3\\)\n\\(-4-3\\)\nANSWER: \\(-7\\)\n\n\n\\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)\n\n\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x-6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + \\frac{2x}{2}-\\frac{6x}{2}\\)\n\\(3x+4 \\times 2x - 2y + 5 + x - 3x\\)\n\\(11x - 2y + 5 - 2x\\)\nANSWER: \\(9x - 2y + 5\\)"
+    "text": "1. Order of operations practice problems\n\n✏️ Take a minute to solve these individually.\n\n\nSimplify \\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\n\n\n\nSimplify 3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\n\n\n\nIf we are given the values of x=-3 and y=2, what would be the value of z? \nz = 4*(y-4)+(x+1)^2\n\n\n\n\n(12 - 2)/5 + 5(3+2)/6\n\n\n(10/5) + 5 \\times 5 / 6\nANSWER: 2 + 25/6\n\n\n\\frac{(4-6)}{(2)}(3+1)-\\frac{(1+2*4)}{(3)}\n\n\n\\frac{(-2)}{(2)}(4)-\\frac{(9)}{(3)}\n-1 \\times 4 - 3\n-4-3\nANSWER: -7\n\n\n3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\n\n\n3x+4 \\times 2x - 2y + 5 + \\frac{2x-6x}{2}\n3x+4 \\times 2x - 2y + 5 + \\frac{2x}{2}-\\frac{6x}{2}\n3x+4 \\times 2x - 2y + 5 + x - 3x\n11x - 2y + 5 - 2x\nANSWER: 9x - 2y + 5"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1",
     "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1",
     "title": "",
     "section": "",
-    "text": "1. Order of operations practice problems\n\n💡 Let’s see a solution!\n\n\n\n\\(\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\\)\n\n\\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}\\)"
+    "text": "1. Order of operations practice problems\n\n💡 Let’s see a solution!\n\n\n\n\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3}\n\n3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2",
     "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2",
     "title": "",
     "section": "",
-    "text": "1. Order of operations practice problems\n\n💡 Let’s see a solution!\nIf we are given the values of \\(x=-3\\) and \\(y=2\\), what would be the value of \\(z\\)? \\[\nz = 4*(y-4)+(x+1)^2\n\\]"
+    "text": "1. Order of operations practice problems\n\n💡 Let’s see a solution!\nIf we are given the values of x=-3 and y=2, what would be the value of z? \nz = 4*(y-4)+(x+1)^2"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#notation-matters",
     "href": "course-materials/slides/day1.1-slides.html#notation-matters",
     "title": "",
     "section": "",
-    "text": "1. Notation matters\n\n\n\nSimplify the following: \\(6 \\div 3(4+2)\\)\nWhat would be a harder-to-misinterpret way to write this?\n\n\n\n\nANSWER: 12\nA harder to misinterpret way to write this: \\((6 \\div 3) \\times (4+2)\\)"
+    "text": "1. Notation matters\n\n\n\nSimplify the following: 6 \\div 3(4+2)\nWhat would be a harder-to-misinterpret way to write this?\n\n\n\n\nANSWER: 12\nA harder to misinterpret way to write this: (6 \\div 3) \\times (4+2)"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#takeaway",
@@ -2097,56 +2097,56 @@
     "href": "course-materials/slides/day1.1-slides.html#equations-solved-2",
     "title": "",
     "section": "",
-    "text": "2. Solving equations\n\nEquations help us find unknown values that satisfy certain conditions.\nRemember the rules:\n\nNever change an equation. Instead, we rewrite them into more useful forms\nManipulate BOTH sides of an equation with the SAME PROCEDURE.\n\n Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation. \nExample\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\\[\n\\require{cancel}\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n\\end{aligned}\n\\]\n✏️ Take a minute to solve this individually."
+    "text": "2. Solving equations\n\nEquations help us find unknown values that satisfy certain conditions.\nRemember the rules:\n\nNever change an equation. Instead, we rewrite them into more useful forms\nManipulate BOTH sides of an equation with the SAME PROCEDURE.\n\n Always add/substract/multiply/divide by the same number on both sides. More generally, always apply the same function to both sides of the equation. \nExample\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n\\end{aligned}\n\n✏️ Take a minute to solve this individually."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#solving-equations-2",
     "href": "course-materials/slides/day1.1-slides.html#solving-equations-2",
     "title": "",
     "section": "",
-    "text": "2. Solving equations\n\n💡 Let’s see a solution!\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\\[\n\\require{cancel}\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n\\end{aligned}\n\\]"
+    "text": "2. Solving equations\n\n💡 Let’s see a solution!\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n\\end{aligned}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#solving-equations-3",
     "href": "course-materials/slides/day1.1-slides.html#solving-equations-3",
     "title": "",
     "section": "",
-    "text": "2. Solving equations\n\n💡 Let’s see a solution!\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\\[\n\\require{cancel}\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n80Q&=\\frac{(400-P)\\cancel{80}}{\\cancel{80}}  &\\text{ Multiply both sides by 80} \\\\\n80Q-400&=\\cancel{400}-\\cancel{400} -P &\\text{ Subtract both sides by 400} \\\\\n-1(80Q-400)&=-P(-1) &\\text{Multiply both sides by -1} \\\\\n400-80Q&=P  &\\text{Flip terms for simplicity}\n\\end{aligned}\n\\]"
+    "text": "2. Solving equations\n\n💡 Let’s see a solution!\nPrices are important in economics, but not always available for environmental goods.\n\nHow do we get prices if we know quantity?\n\n\n\\begin{aligned}\nQ&=\\frac{(400-P)}{80} &\\text{Isolate P in terms of Q} \\\\\n80Q&=\\frac{(400-P)\\cancel{80}}{\\cancel{80}}  &\\text{ Multiply both sides by 80} \\\\\n80Q-400&=\\cancel{400}-\\cancel{400} -P &\\text{ Subtract both sides by 400} \\\\\n-1(80Q-400)&=-P(-1) &\\text{Multiply both sides by -1} \\\\\n400-80Q&=P  &\\text{Flip terms for simplicity}\n\\end{aligned}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#practice-alge-1",
     "href": "course-materials/slides/day1.1-slides.html#practice-alge-1",
     "title": "",
     "section": "",
-    "text": "It can be easy to make mistakes while doing algebra. Practice is key!\n\nSolve all in terms of \\(x\\)\n\n\\(3x+2=10x-12\\)\n\n\n\n\\(4-3(2x+1)=8-\\frac{3x}{2}\\)\n\n\n\n\\(3(x+7a)-5=b+2(c-4x)\\)\n\n✏️ Take a minute to solve these individually."
+    "text": "It can be easy to make mistakes while doing algebra. Practice is key!\n\nSolve all in terms of x\n\n3x+2=10x-12\n\n\n\n4-3(2x+1)=8-\\frac{3x}{2}\n\n\n\n3(x+7a)-5=b+2(c-4x)\n\n✏️ Take a minute to solve these individually."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#practice-alge-2",
     "href": "course-materials/slides/day1.1-slides.html#practice-alge-2",
     "title": "",
     "section": "",
-    "text": "It can be easy to make mistakes while doing algebra. Practice is key!\n\n💡 Let’s see a solution!\nSolve all in terms of \\(x\\)\n\n\n\n\n\\(3x+2=10x-12\\)\n\n\n\n\n\n\\(4-3(2x+1)=8-\\frac{3x}{2}\\)"
+    "text": "It can be easy to make mistakes while doing algebra. Practice is key!\n\n💡 Let’s see a solution!\nSolve all in terms of x\n\n\n\n\n3x+2=10x-12\n\n\n\n\n\n4-3(2x+1)=8-\\frac{3x}{2}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#practice-alge-3",
     "href": "course-materials/slides/day1.1-slides.html#practice-alge-3",
     "title": "",
     "section": "",
-    "text": "It can be easy to make mistakes while doing algebra. Practice is key!\n\n💡 Let’s see a solution!\nSolve all in terms of \\(x\\)\n\n\\(3(x+7a)-5=b+2(c-4x)\\)"
+    "text": "It can be easy to make mistakes while doing algebra. Practice is key!\n\n💡 Let’s see a solution!\nSolve all in terms of x\n\n3(x+7a)-5=b+2(c-4x)"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#practice-alge-4",
     "href": "course-materials/slides/day1.1-slides.html#practice-alge-4",
     "title": "",
     "section": "",
-    "text": "Practice solutions\n\n\n\n\\[\n\\small\n\\begin{aligned}\n3x+2&=10x-12 \\\\\n3x+2+12&=10x-12(+12) \\\\\n3x-3x+14&=10x-3x \\\\\n14&=7x \\\\\nx&=2\n\\end{aligned}\n\\]\n\n\\[\n\\small\n\\begin{aligned}\n4-3(2x+1)&=8-\\frac{3x}{2}\\\\\n4-3-6x&=8-\\frac{3x}{2} \\\\\n1-6x&=8-\\frac{3x}{2} \\\\\n2-12x&=16-3x \\\\\n-9x&=14 \\\\\nx&=\\frac{-14}{9}\\\\\n\\end{aligned}\n\\]"
+    "text": "Practice solutions\n\n\n\n\n\\small\n\\begin{aligned}\n3x+2&=10x-12 \\\\\n3x+2+12&=10x-12(+12) \\\\\n3x-3x+14&=10x-3x \\\\\n14&=7x \\\\\nx&=2\n\\end{aligned}\n\n\n\n\\small\n\\begin{aligned}\n4-3(2x+1)&=8-\\frac{3x}{2}\\\\\n4-3-6x&=8-\\frac{3x}{2} \\\\\n1-6x&=8-\\frac{3x}{2} \\\\\n2-12x&=16-3x \\\\\n-9x&=14 \\\\\nx&=\\frac{-14}{9}\\\\\n\\end{aligned}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#practice-alge-5",
     "href": "course-materials/slides/day1.1-slides.html#practice-alge-5",
     "title": "",
     "section": "",
-    "text": "Practice solutions\n\n\\[\n\\small\n\\begin{aligned}\n3(x+7a)-5&=b+2(c-4x)\\\\\n3x+21a-5&=b+2c-8x \\\\\n11x+21a-5&=b+2c \\\\\n11x&=5+b+2c-21a\\\\\nx&=\\frac{5+b+2c-21a}{11}\n\\end{aligned}\n\\]"
+    "text": "Practice solutions\n\n\n\\small\n\\begin{aligned}\n3(x+7a)-5&=b+2(c-4x)\\\\\n3x+21a-5&=b+2c-8x \\\\\n11x+21a-5&=b+2c \\\\\n11x&=5+b+2c-21a\\\\\nx&=\\frac{5+b+2c-21a}{11}\n\\end{aligned}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#break",
@@ -2167,91 +2167,91 @@
     "href": "course-materials/slides/day1.1-slides.html#exponents",
     "title": "",
     "section": "",
-    "text": "Exponents make algebra more interesting!\n\nExample\nThe expression \\(x^3\\) means \\(x\\) multiplied by itself 3 times: \\[x^3=x * x * x\\]\n\nMore generally, \\[x^n = x \\text{ to the power of } n.\\]\n\n\nIntuitively, the exponent \\(n\\) tells us how many times to multiply the basis \\(x\\) by itself:\n\\[x^n = \\underbrace{x * x * ... * x}_{n \\text{ times}}\\]\nBut the exponent can be any (real) number, not only integers!"
+    "text": "Exponents make algebra more interesting!\n\nExample\nThe expression x^3 means x multiplied by itself 3 times: x^3=x * x * x\n\nMore generally, x^n = x \\text{ to the power of } n.\n\n\nIntuitively, the exponent n tells us how many times to multiply the basis x by itself:\nx^n = \\underbrace{x \\times x \\times \\ldots \\times x}_{n \\text{ times}}\nBut the exponent can be any (real) number, not only integers!"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents-applications-1",
     "href": "course-materials/slides/day1.1-slides.html#exponents-applications-1",
     "title": "",
     "section": "",
-    "text": "What are exponents good for?\n\n\n\nThey can describe really big numbers\n\n\nDiameter of the Milky Way = 1,000,000,000,000,000,000,000 meters = \\[10^{21} \\text{ m}\\]\n\nAnd also really small numbers\n\nDiameter of a human red blood cell = 0.0000000001 meters = \\[10^{-10} \\text{ m}\\]\n\nThis way, we can use exponents to describe exponential growth and decay. Many environmental variables behave in this way."
+    "text": "What are exponents good for?\n\n\n\nThey can describe really big numbers\n\n\nDiameter of the Milky Way = 1,000,000,000,000,000,000,000 meters = 10^{21} \\text{ m}\n\nAnd also really small numbers\n\nDiameter of a human red blood cell = 0.0000000001 meters = 10^{-10} \\text{ m}\n\nThis way, we can use exponents to describe exponential growth and decay. Many environmental variables behave in this way."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents-rules-blank-1",
     "href": "course-materials/slides/day1.1-slides.html#exponents-rules-blank-1",
     "title": "",
     "section": "",
-    "text": "Rules and properties of exponents (1)\n\n✏️\n\n\n\nProduct rule:\n\n\n\nQuotient rule:\n\n\n\nAny non-negative \\(x\\) to the power of 0 equals 1:\n\n\n\nNegative exponent means divide:\n\n\n\nFractional exponent means take the \\(n\\)-th root:"
+    "text": "Rules and properties of exponents (1)\n\n✏️\n\n\n\nProduct rule:\n\n\n\nQuotient rule:\n\n\n\nAny non-negative x to the power of 0 equals 1:\n\n\n\nNegative exponent means divide:\n\n\n\nFractional exponent means take the n-th root:"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents-rules-blank-2",
     "href": "course-materials/slides/day1.1-slides.html#exponents-rules-blank-2",
     "title": "",
     "section": "",
-    "text": "Rules and properties of exponents (2)\n\n\n✏️\n\n\nPower of a power means multiply the exponents:\n\n\n\nExponents get distributed over products:\n\n\n\nAnd exponents get distributed over divisions:\n\n\n\nIf \\(a\\) is the \\(n\\)-th root of \\(x\\), then \\(a\\) to the \\(n\\) equals \\(x\\):"
+    "text": "Rules and properties of exponents (2)\n\n\n✏️\n\n\nPower of a power means multiply the exponents:\n\n\n\nExponents get distributed over products:\n\n\n\nAnd exponents get distributed over divisions:\n\n\n\nIf a is the n-th root of x, then a to the n equals x:"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents-rules-1",
     "href": "course-materials/slides/day1.1-slides.html#exponents-rules-1",
     "title": "",
     "section": "",
-    "text": "Rules and properties of exponents (1)\n\n\nProduct rule: \\(x^a * x^b = x^{a+b}\\)\n\n\n\nQuotient rule: \\(\\frac{x^a}{x^b} = x^{a-b}, \\ \\ \\text{for } x \\neq 0\\)\n\n\n\nAny non-negative \\(x\\) to the power of 0 equals 1: \\(x^0 = 1, \\ \\ \\text{for } x \\neq 0\\)\n\n\n\nNegative exponent means divide: \\(x^{-a} = \\frac{1}{x^a}, \\ \\ \\text{for } x \\neq 0\\)\n\n\n\nFractional exponent means take the \\(n\\)-th root: \\(x^{\\frac{1}{n}} = \\sqrt[n]{x}\\)"
+    "text": "Rules and properties of exponents (1)\n\n\nProduct rule: x^a * x^b = x^{a+b}\n\n\n\nQuotient rule: \\frac{x^a}{x^b} = x^{a-b}, \\ \\ \\text{for } x \\neq 0\n\n\n\nAny non-negative x to the power of 0 equals 1: x^0 = 1, \\ \\ \\text{for } x \\neq 0\n\n\n\nNegative exponent means divide: x^{-a} = \\frac{1}{x^a}, \\ \\ \\text{for } x \\neq 0\n\n\n\nFractional exponent means take the n-th root: x^{\\frac{1}{n}} = \\sqrt[n]{x}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents-rules-2",
     "href": "course-materials/slides/day1.1-slides.html#exponents-rules-2",
     "title": "",
     "section": "",
-    "text": "Rules and properties of exponents (2)\n\n\nPower of a power means multiply the exponents: \\((x^a)^b = x^{ab}\\)\n\n\n\nExponents get distributed over products: \\((xy)^a = x^a y^a\\)\n\n\n\nAnd exponents get distributed over divisions: \\(\\left( \\frac{x}{y} \\right)^a = \\frac{x^a}{y^a}\\)\n\n\n\nIf \\(a\\) is the \\(n\\)-th root of \\(x\\), then \\(a\\) to the \\(n\\) equals \\(x\\):\n\n\\[\na = \\sqrt[n]{x} \\Rightarrow a^n = x\n\\]"
+    "text": "Rules and properties of exponents (2)\n\n\nPower of a power means multiply the exponents: (x^a)^b = x^{ab}\n\n\n\nExponents get distributed over products: (xy)^a = x^a y^a\n\n\n\nAnd exponents get distributed over divisions: \\left( \\frac{x}{y} \\right)^a = \\frac{x^a}{y^a}\n\n\n\nIf a is the n-th root of x, then a to the n equals x:\n\n\na = \\sqrt[n]{x} \\Rightarrow a^n = x"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents-table",
     "href": "course-materials/slides/day1.1-slides.html#exponents-table",
     "title": "",
     "section": "",
-    "text": "Rules and properties of exponents\n\n\\[\n\\begin{array}{|l|l|}\n\\hline\n\\textbf{Rule} & \\textbf{Expression} \\\\\n\\hline\n\\text{Product Rule} & x^{a} \\cdot x^{b} = x^{a+b} \\\\\n\\hline\n\\text{Quotient Rule} & \\frac{x^{a}}{x^{b}} = x^{a-b}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Zero Exponent} & x^{0} = 1, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Negative Exponent} & x^{-a} = \\frac{1}{x^{a}}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Fractional Exponent} & x^{\\frac{1}{n}} = \\sqrt[n]{x} \\\\\n\\hline\n\\text{Power of a Power} & (x^{a})^{b} = x^{ab} \\\\\n\\hline\n\\text{Power of a Product} & (xy)^{a} = x^{a}y^{a} \\\\\n\\hline\n\\text{Power of a Quotient} & \\left(\\frac{x}{y}\\right)^{a} = \\frac{x^{a}}{y^{a}} \\\\\n\\hline\n\\text{$n$-th Root Definition} & a = \\sqrt[n]{x} \\quad \\Rightarrow \\quad a^{n} = x \\\\\n\\hline\n\\end{array}\n\\]"
+    "text": "Rules and properties of exponents\n\n\n\\begin{array}{|l|l|}\n\\hline\n\\textbf{Rule} & \\textbf{Expression} \\\\\n\\hline\n\\text{Product Rule} & x^{a} \\cdot x^{b} = x^{a+b} \\\\\n\\hline\n\\text{Quotient Rule} & \\frac{x^{a}}{x^{b}} = x^{a-b}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Zero Exponent} & x^{0} = 1, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Negative Exponent} & x^{-a} = \\frac{1}{x^{a}}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Fractional Exponent} & x^{\\frac{1}{n}} = \\sqrt[n]{x} \\\\\n\\hline\n\\text{Power of a Power} & (x^{a})^{b} = x^{ab} \\\\\n\\hline\n\\text{Power of a Product} & (xy)^{a} = x^{a}y^{a} \\\\\n\\hline\n\\text{Power of a Quotient} & \\left(\\frac{x}{y}\\right)^{a} = \\frac{x^{a}}{y^{a}} \\\\\n\\hline\n\\text{$n$-th Root Definition} & a = \\sqrt[n]{x} \\quad \\Rightarrow \\quad a^{n} = x \\\\\n\\hline\n\\end{array}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents-practice-set-up",
     "href": "course-materials/slides/day1.1-slides.html#exponents-practice-set-up",
     "title": "",
     "section": "",
-    "text": "Exponents practice\n\n\n\n✏️ Simplify the following.\n\n\\(\\frac{6^5}{6^3}\\)\n\n\n\n\\((x^2y)^4\\)\n\n\n\n\\(\\frac{x^5y^6}{xy^2}\\)\n\\(\\frac{24x^6}{12x^{-8}}\\)\n\n\n\\[\n\\begin{array}{|l|l|}\n\\hline\n\\textbf{Rule} & \\textbf{Expression} \\\\\n\\hline\n\\text{Product Rule} & x^{a} \\cdot x^{b} = x^{a+b} \\\\\n\\hline\n\\text{Quotient Rule} & \\frac{x^{a}}{x^{b}} = x^{a-b}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Zero Exponent} & x^{0} = 1, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Negative Exponent} & x^{-a} = \\frac{1}{x^{a}}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Fractional Exponent} & x^{\\frac{1}{n}} = \\sqrt[n]{x} \\\\\n\\hline\n\\text{Power of a Power} & (x^{a})^{b} = x^{ab} \\\\\n\\hline\n\\text{Power of a Product} & (xy)^{a} = x^{a}y^{a} \\\\\n\\hline\n\\text{Power of a Quotient} & \\left(\\frac{x}{y}\\right)^{a} = \\frac{x^{a}}{y^{a}} \\\\\n\\hline\n\\text{$n$-th Root Definition} & a = \\sqrt[n]{x} \\quad \\Rightarrow \\quad a^{n} = x \\\\\n\\hline\n\\end{array}\n\\]"
+    "text": "Exponents practice\n\n\n\n✏️ Simplify the following.\n\n\\frac{6^5}{6^3}\n\n\n\n(x^2y)^4\n\n\n\n\\frac{x^5y^6}{xy^2}\n\\frac{24x^6}{12x^{-8}}\n\n\n\n\\begin{array}{|l|l|}\n\\hline\n\\textbf{Rule} & \\textbf{Expression} \\\\\n\\hline\n\\text{Product Rule} & x^{a} \\cdot x^{b} = x^{a+b} \\\\\n\\hline\n\\text{Quotient Rule} & \\frac{x^{a}}{x^{b}} = x^{a-b}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Zero Exponent} & x^{0} = 1, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Negative Exponent} & x^{-a} = \\frac{1}{x^{a}}, \\quad x \\neq 0 \\\\\n\\hline\n\\text{Fractional Exponent} & x^{\\frac{1}{n}} = \\sqrt[n]{x} \\\\\n\\hline\n\\text{Power of a Power} & (x^{a})^{b} = x^{ab} \\\\\n\\hline\n\\text{Power of a Product} & (xy)^{a} = x^{a}y^{a} \\\\\n\\hline\n\\text{Power of a Quotient} & \\left(\\frac{x}{y}\\right)^{a} = \\frac{x^{a}}{y^{a}} \\\\\n\\hline\n\\text{$n$-th Root Definition} & a = \\sqrt[n]{x} \\quad \\Rightarrow \\quad a^{n} = x \\\\\n\\hline\n\\end{array}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#exponents-practice",
     "href": "course-materials/slides/day1.1-slides.html#exponents-practice",
     "title": "",
     "section": "",
-    "text": "Exponents practice\n\n✏️ Let’s see a solution.\n\n\\(\\frac{6^5}{6^3} = 6^{5-3} = 6^2\\)\n\n\n\n\\((x^2y)^4 = (x^2)^4*y^4 = x^8y^4\\)\n\n \n\n\\(\\frac{x^5y^6}{xy^2} = \\frac{x^5}{x}*\\frac{y^6}{y^2} = x^{5-1}*y^{6-2} = x^4y^4 = (xy)^4\\)\n\n \n\n\\(\\frac{24x^6}{12x^{-8}} = 2x^6x^{(-(-8))}=2x^6x^8 = 2x^{6+8} = 2x^{14}\\)"
+    "text": "Exponents practice\n\n✏️ Let’s see a solution.\n\n\\frac{6^5}{6^3} = 6^{5-3} = 6^2\n\n\n\n(x^2y)^4 = (x^2)^4*y^4 = x^8y^4\n\n \n\n\\frac{x^5y^6}{xy^2} = \\frac{x^5}{x}*\\frac{y^6}{y^2} = x^{5-1}*y^{6-2} = x^4y^4 = (xy)^4\n\n \n\n\\frac{24x^6}{12x^{-8}} = 2x^6x^{(-(-8))}=2x^6x^8 = 2x^{6+8} = 2x^{14}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#FOIL",
     "href": "course-materials/slides/day1.1-slides.html#FOIL",
     "title": "",
     "section": "",
-    "text": "Multiplying expressions (FOIL)\n\n\nFirst, Outside, Inside, Last\n\nExample:\n\\[(2x+5)(x-3)\\] ✏️ Expand this expression."
+    "text": "Multiplying expressions (FOIL)\n\n\nFirst, Outside, Inside, Last\n\nExample:\n(2x+5)(x-3) ✏️ Expand this expression."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#FOIL-solution",
     "href": "course-materials/slides/day1.1-slides.html#FOIL-solution",
     "title": "",
     "section": "",
-    "text": "Multiplying expressions (FOIL)\n\n\nFirst, Outside, Inside, Last\n\nExample:\n\\[(2x+5)(x-3)\\] ✏️ Let’s see a solution.\n\\[= (2x \\times x) (2x \\times -3) (5 \\times x) (5 \\times -3)\\]\n\\[= 2x^2 - 6x + 5x - 15\\]\n\\[=2x^2-x-15\\]"
+    "text": "Multiplying expressions (FOIL)\n\n\nFirst, Outside, Inside, Last\n\nExample:\n(2x+5)(x-3) ✏️ Let’s see a solution.\n= (2x \\times x) (2x \\times -3) (5 \\times x) (5 \\times -3)\n= 2x^2 - 6x + 5x - 15\n=2x^2-x-15"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#polynomials-1",
     "href": "course-materials/slides/day1.1-slides.html#polynomials-1",
     "title": "",
     "section": "",
-    "text": "Polynomials describe more complex relationships through exponents\n\nA polynomial is a function of the form: \\[\n\\large\n\\begin{align}\na_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0\n\\end{align}\n\\]\n\n\\(x\\) is the variable\n\\(a_i\\) are constants (fixed numbers) that are called the coefficients of the polynomial\neach \\(a_ix^i\\) is called a term of the polynomial,\n\\(n\\) is called the degree of the polynomial, this is the largest exponent in the polynomial."
+    "text": "Polynomials describe more complex relationships through exponents\n\nA polynomial is a function of the form: \n\\large\n\\begin{align}\na_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0\n\\end{align}\n\n\nx is the variable\na_i are constants (fixed numbers) that are called the coefficients of the polynomial\neach a_ix^i is called a term of the polynomial,\nn is called the degree of the polynomial, this is the largest exponent in the polynomial."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#polynomials-2",
     "href": "course-materials/slides/day1.1-slides.html#polynomials-2",
     "title": "",
     "section": "",
-    "text": "Polynomials describe more complex relationships through exponents\n\nA polynomial is a function of the form: \\[\n\\large\n\\begin{align}\na_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0\n\\end{align}\n\\]\n\n\\(x\\) is the variable\n\\(a_i\\) are constants (fixed numbers) that are called the coefficients of the polynomial\neach \\(a_ix^i\\) is called a term of the polynomial,\n\\(n\\) is called the degree of the polynomial, this is the largest exponent in the polynomial.\n\nExample:\n\n\\(x^5 + x^2 - 1\\) is a polynomial of degree five with three terms.\nLinear functions like \\(mx + c\\) where \\(m\\) and \\(c\\) are constants are polynomials of degree 1!\n\nPolynomials often represent real world data better than a linear function."
+    "text": "Polynomials describe more complex relationships through exponents\n\nA polynomial is a function of the form: \n\\large\n\\begin{align}\na_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0\n\\end{align}\n\n\nx is the variable\na_i are constants (fixed numbers) that are called the coefficients of the polynomial\neach a_ix^i is called a term of the polynomial,\nn is called the degree of the polynomial, this is the largest exponent in the polynomial.\n\nExample:\n\nx^5 + x^2 - 1 is a polynomial of degree five with three terms.\nLinear functions like mx + c where m and c are constants are polynomials of degree 1!\n\nPolynomials often represent real world data better than a linear function."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#units-title",
@@ -2293,42 +2293,42 @@
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-solution-1",
     "title": "",
     "section": "",
-    "text": "Dimensional analysis (unit conversions)\n\nIn dimensional analysis, we multiply initial units by a sequence of unit conversion factors to arrive at the final desired units.\nExample: How many centimiters are there in 6 inches?\nWe know: 1 inch = 2.54 cm. This gives us two unit conversion factors:\n\\[ \\frac{2.54 \\text{ cm}}{1 \\text{ in}} \\text{ and } \\frac{1 \\text{ in}}{2.54 \\text{ cm}}.\\] Important: the fraction the numerator and denominator represent the same quantity.\nThen we multiply by the appropriate conversion factor and simplify:\n\\[\\begin{align*}\n\n6 \\text{ in} &= 6 \\text{ in} \\cdot  \\frac{2.54 \\text{ cm}}{1 \\text{ in}}\\\\\n&= 6  \\frac{2.54}{1} \\cdot  \\text{ in}\\frac{\\text{ cm}}{\\text{ in}} \\\\\n&= 15.24 \\cancel{\\text{ in}}\\frac{\\text{ cm}}{\\cancel{\\text{ in}}} \\\\\n&= 15.24 \\text{ cm}\n\\end{align*}\\]"
+    "text": "Dimensional analysis (unit conversions)\n\nIn dimensional analysis, we multiply initial units by a sequence of unit conversion factors to arrive at the final desired units.\nExample: How many centimiters are there in 6 inches?\nWe know: 1 inch = 2.54 cm. This gives us two unit conversion factors:\n \\frac{2.54 \\text{ cm}}{1 \\text{ in}} \\text{ and } \\frac{1 \\text{ in}}{2.54 \\text{ cm}}. Important: the fraction the numerator and denominator represent the same quantity.\nThen we multiply by the appropriate conversion factor and simplify:\n\\begin{align*}\n\n6 \\text{ in} &= 6 \\text{ in} \\cdot  \\frac{2.54 \\text{ cm}}{1 \\text{ in}}\\\\\n&= 6  \\frac{2.54}{1} \\cdot  \\text{ in}\\frac{\\text{ cm}}{\\text{ in}} \\\\\n&= 15.24 \\cancel{\\text{ in}}\\frac{\\text{ cm}}{\\cancel{\\text{ in}}} \\\\\n&= 15.24 \\text{ cm}\n\\end{align*}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-2",
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-2",
     "title": "",
     "section": "",
-    "text": "Dimensional analysis (unit conversions)\n\nExample. Convert \\(100 \\frac{g}{cm^3}\\) into units of \\(\\frac{kg}{in^3}\\), given that 1 cm3 = 0.061 in3.\n✏️ Let’s solve this together."
+    "text": "Dimensional analysis (unit conversions)\n\nExample. Convert 100 \\frac{g}{cm^3} into units of \\frac{kg}{in^3}, given that 1 cm3 = 0.061 in3.\n✏️ Let’s solve this together."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-2-solution",
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-2-solution",
     "title": "",
     "section": "",
-    "text": "Dimensional analysis (unit conversions)\n\nExample. Convert \\(100 \\frac{g}{cm^3}\\) into units of \\(\\frac{kg}{in^3}\\), given that 1 cm3 = 0.061 in3.\nWe need one unit conversion factor for \\(g\\): \\(\\frac{1 \\text{ kg}}{1000 \\text{ g}}\\).\nAnd another one for \\(\\text{cm}^3\\): \\(\\frac{1 \\text{ cm}^3}{0.061 \\text{in}^3}\\).\nThen we multiply by the conversion factors and simplify\n\\[\\begin{align*}\n\n100 \\frac{\\text{ g}}{\\text{cm}^3} &= 100 \\frac{\\text{ g}}{\\text{cm}^3} \\cdot \\frac{1 \\text{ cm}^3}{0.061 \\text{ in}^3} \\cdot \\frac{1 \\text{ kg}}{1000 \\text{ g}}\\\\\n&= 100 \\frac{1}{0.061} \\frac{1}{1000}\\cdot \\frac{\\text{ g}}{\\text{cm}^3} \\frac{\\text{ cm}^3}{ \\text{ in}^3} \\frac{ \\text{ kg}}{\\text{ g}}\\\\\n&= \\frac{1}{0.61} \\cdot \\frac{\\cancel{\\text{ g}}}{\\cancel{\\text{cm}^3}} \\frac{\\cancel{\\text{ cm}^3}}{ \\text{ in}^3} \\frac{ \\text{ kg}}{\\cancel{\\text{ g}}}\\\\\n&=1.639\\frac{kg}{in^3}\n\\end{align*}\\]"
+    "text": "Dimensional analysis (unit conversions)\n\nExample. Convert 100 \\frac{g}{cm^3} into units of \\frac{kg}{in^3}, given that 1 cm3 = 0.061 in3.\nWe need one unit conversion factor for g: \\frac{1 \\text{ kg}}{1000 \\text{ g}}.\nAnd another one for \\text{cm}^3: \\frac{1 \\text{ cm}^3}{0.061 \\text{in}^3}.\nThen we multiply by the conversion factors and simplify\n\\begin{align*}\n\n100 \\frac{\\text{ g}}{\\text{cm}^3} &= 100 \\frac{\\text{ g}}{\\text{cm}^3} \\cdot \\frac{1 \\text{ cm}^3}{0.061 \\text{ in}^3} \\cdot \\frac{1 \\text{ kg}}{1000 \\text{ g}}\\\\\n&= 100 \\frac{1}{0.061} \\frac{1}{1000}\\cdot \\frac{\\text{ g}}{\\text{cm}^3} \\frac{\\text{ cm}^3}{ \\text{ in}^3} \\frac{ \\text{ kg}}{\\text{ g}}\\\\\n&= \\frac{1}{0.61} \\cdot \\frac{\\cancel{\\text{ g}}}{\\cancel{\\text{cm}^3}} \\frac{\\cancel{\\text{ cm}^3}}{ \\text{ in}^3} \\frac{ \\text{ kg}}{\\cancel{\\text{ g}}}\\\\\n&=1.639\\frac{kg}{in^3}\n\\end{align*}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-practice",
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-practice",
     "title": "",
     "section": "",
-    "text": "Unit conversion practice\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed."
+    "text": "Unit conversion practice\n\n\nConvert 8.1\\frac{km}{s} to miles per hour, given that 1 km = 0.621 miles.\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed."
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-1",
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-1",
     "title": "",
     "section": "",
-    "text": "Unit conversion practice: solutions\n\n\nConvert \\(8.1\\frac{km}{s}\\) to miles per hour, given that 1 km = 0.621 miles.\n\n✏️ Let’s see a solution!\n\\(8.1\\frac{km}{s} \\times 60\\frac{s}{min} \\times 60\\frac{min}{hr} \\times 0.621\\frac{mi}{km} = 18108.36 \\frac{mi}{hr}\\)"
+    "text": "Unit conversion practice: solutions\n\n\nConvert 8.1\\frac{km}{s} to miles per hour, given that 1 km = 0.621 miles.\n\n✏️ Let’s see a solution!\n8.1\\frac{km}{s} \\times 60\\frac{s}{min} \\times 60\\frac{min}{hr} \\times 0.621\\frac{mi}{km} = 18108.36 \\frac{mi}{hr}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-2",
     "href": "course-materials/slides/day1.1-slides.html#unit-conv-solutions-2",
     "title": "",
     "section": "",
-    "text": "Unit conversion practice: solutions\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.\n✏️ Let’s see a solution!\nCompany A: \\(14.6\\text{ barrels} - 9.3\\text{ barrels} = 5.3\\text{ barrels unrecovered}\\)\nCompany B: \\(692\\text{ liters} \\times (1-0.94) = 41.52\\text{ liters unrecovered} \\rightarrow 41.52\\text{ L} \\times \\frac{1\\text{ barrel}}{159\\text{ L}} = 0.26\\text{ barrels}\\)\nCompany C: \\(18.1\\text{ gallons} \\times \\frac{1\\text{ barrel}}{42\\text{ gal}} = 0.43\\text{ barrels unrecovered}\\)\nTotal: \\(5.3\\text{ barrels} + 0.26\\text{ barrels} + 0.43\\text{ barrels} = 5.99\\text{ barrels unrecovered}\\)"
+    "text": "Unit conversion practice: solutions\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.\n✏️ Let’s see a solution!\nCompany A: 14.6\\text{ barrels} - 9.3\\text{ barrels} = 5.3\\text{ barrels unrecovered}\nCompany B: 692\\text{ liters} \\times (1-0.94) = 41.52\\text{ liters unrecovered} \\rightarrow 41.52\\text{ L} \\times \\frac{1\\text{ barrel}}{159\\text{ L}} = 0.26\\text{ barrels}\nCompany C: 18.1\\text{ gallons} \\times \\frac{1\\text{ barrel}}{42\\text{ gal}} = 0.43\\text{ barrels unrecovered}\nTotal: 5.3\\text{ barrels} + 0.26\\text{ barrels} + 0.43\\text{ barrels} = 5.99\\text{ barrels unrecovered}"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#lunch-break",
@@ -3098,7 +3098,7 @@
     "href": "course-materials/slides/day1.2-slides.html#find-line-eq-2",
     "title": "",
     "section": "",
-    "text": "Finding the equation of a line\n\nGiven two points \\((x_1, y_1)\\) and \\((x_2, y_2)\\) on the line:\n\n\n\nFind \\(m\\), the slope, by using the two points:\n\n\\[\nm=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}.\n\\]\n\nFind \\(c\\), the y-intercept:\n\nSince \\((x_1, y_1)\\) is on the line, it satisfies:\n\\[y_1 = mx_1+ c.\\] We can solve for \\(c\\) to obtain:\n\\[c = y_1 - mx_1.\\]"
+    "text": "Finding the equation of a line\n\nGiven two points \\((x_1, y_1)\\) and \\((x_2, y_2)\\) on the line:\n\n\n\nFind \\(m\\), the slope, by using the two points:\n\n\\[\nm=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}.\n\\]\n\nFind \\(b\\), the y-intercept:\n\nSince \\((x_1, y_1)\\) is on the line, it satisfies:\n\\[y_1 = mx_1+ b.\\] We can solve for \\(b\\) to obtain:\n\\[b = y_1 - mx_1.\\]"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-1",
@@ -3112,21 +3112,21 @@
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-1",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((3,5)\\) and \\((2,-1)\\).\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\nm &= \\frac{5-(-1)}{3-2} = 6 &\\text{Compute the slope} \\\\\ny - 5 &= 6(x-3) &\\text{Point-slope form using (3,5)} \\\\\ny &= 6x - 13 &\\text{Simplify}\n\\end{aligned}\n\\]"
+    "text": "Equation of a line: solutions\n\nA. Find the equation of the line that passes through \\((3,5)\\) and \\((2,-1)\\)."
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-sol-2",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nFind the equation of the line that passes through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4.\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\nm &= \\frac{0-(-5)}{4-2} = \\frac{5}{2} &\\text{Compute the slope using the } x\\text{-intercept } (4,0) \\\\\ny - 0 &= \\frac{5}{2}(x-4) &\\text{Point-slope form} \\\\\ny &= \\frac{5}{2}x - 10 &\\text{Simplify}\n\\end{aligned}\n\\]"
+    "text": "Equation of a line: solutions\n\nB. Find the equation of the line that passes through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4."
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
     "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-3",
     "title": "",
     "section": "",
-    "text": "Equation of a line: solutions\n\nFind the equation of the line that has the following graph:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✏️ Let’s see a solution.\n\\[\n\\begin{aligned}\n\\text{slope} &= \\frac{\\text{rise}}{\\text{run}} = \\frac{3}{2} &\\text{Read from the graph} \\\\\ny\\text{-intercept} &= 1 &\\text{Read from the graph} \\\\\ny &= \\frac{3}{2}x + 1 &\\text{Equation of the line}\n\\end{aligned}\n\\]"
+    "text": "Equation of a line: solutions\n\nC. Find the equation of the line that has the following graph:"
   },
   {
     "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4",
@@ -3792,5 +3792,145 @@
     "title": "Differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solutions",
+    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solutions",
+    "title": "",
+    "section": "",
+    "text": "1. Solutions to exercises\n\n\n1. \\(\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3} = \\frac{-2}{2}(4)-\\frac{9}{3} = -4-3 = -7\\)\n2. \\(3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2} = 3x+8x-2y+5+x-3x = 9x-2y+5\\)\n3. \\(z = 4(y-4)+(x+1)^2 = 4(-2)+(-2)^2 = -8+4 = -4\\)"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1-answer",
+    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-1-answer",
+    "title": "",
+    "section": "",
+    "text": "1. Practice solutions\n\n\n\\small\n\\begin{aligned}\n\\frac{4-6}{2}(3+1)-\\frac{1+2*4}{3} &= \\frac{-2}{2}(4)-\\frac{9}{3} \\\\\n&= -1(4)-3 \\\\\n&= -4-3 \\\\\n&= -7\n\\end{aligned}\n\n\n\\small\n\\begin{aligned}\n3x+4(8x-6x) -(2y-5)+\\frac{2x(1-3)}{2} &= 3x+4(2x)-2y+5+\\frac{2x-6x}{2} \\\\\n&= 3x+8x-2y+5+\\frac{-4x}{2} \\\\\n&= 3x+8x-2y+5-2x \\\\\n&= 9x-2y+5\n\\end{aligned}"
+  },
+  {
+    "objectID": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2-answer",
+    "href": "course-materials/slides/day1.1-slides.html#PEMDAS-practice-solution-2-answer",
+    "title": "",
+    "section": "",
+    "text": "1. Practice solutions\n\n\n\\small\n\\begin{aligned}\nz = 4(y-4)+(x+1)^2 &= 4(2-4)+(-3+1)^2 \\\\\n&= 4(-2)+(-2)^2 \\\\\n&= -8+4 \\\\\nz&=-4\n\\end{aligned}"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-solutions-summary",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-solutions-summary",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: solutions\n\n\nPasses through \\((3,5)\\) and \\((2,-1)\\):\n\n\\[\n\\begin{aligned}\nm &= \\frac{5-(-1)}{3-2} = 6 &\\text{Compute the slope} \\\\\ny - 5 &= 6(x-3) &\\text{Point-slope form using (3,5)} \\\\\ny &= 6x - 13 &\\text{Simplify}\n\\end{aligned}\n\\]\n\nPasses through \\((2,-5)\\) and has \\(x\\)-intercept equal to 4:\n\n\\[\n\\begin{aligned}\nm &= \\frac{0-(-5)}{4-2} = \\frac{5}{2} &\\text{Compute the slope using the } x\\text{-intercept } (4,0) \\\\\ny - 0 &= \\frac{5}{2}(x-4) &\\text{Point-slope form} \\\\\ny &= \\frac{5}{2}x - 10 &\\text{Simplify}\n\\end{aligned}\n\\]\n\nHas the given graph: \\(y = \\frac{3}{2}x+1\\)\n\n\\[\n\\begin{aligned}\n\\text{slope} &= \\frac{\\text{rise}}{\\text{run}} = \\frac{3}{2} &\\text{Read from the graph} \\\\\ny\\text{-intercept} &= 1 &\\text{Read from the graph} \\\\\ny &= \\frac{3}{2}x + 1 &\\text{Equation of the line}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#line-equation-practice-4-blank",
+    "href": "course-materials/slides/day1.2-slides.html#line-equation-practice-4-blank",
+    "title": "",
+    "section": "",
+    "text": "Equation of a line: solutions\n\nMake a graph showing the line that passes through (3,-1) and has slope equal to 2."
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-example",
+    "href": "course-materials/slides/day1.2-slides.html#logistic-growth-example",
+    "title": "",
+    "section": "",
+    "text": "Logistic growth: Example\n\nWhat is \\[N_t=\\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-rt}}\\] when t = 0"
+  },
+  {
+    "objectID": "course-materials/slides/day1.2-slides.html#logistic-growth-solution",
+    "href": "course-materials/slides/day1.2-slides.html#logistic-growth-solution",
+    "title": "",
+    "section": "",
+    "text": "Logistic growth: Solution\n\n\\[\n\\begin{aligned}\nN_0 &= \\frac{K}{1+[\\frac{K-N_0}{N_0}]e^{-r(0)}} &\\text{Substitute } t=0 \\\\\n&= \\frac{K}{1+[\\frac{K-N_0}{N_0}](1)} &e^{0}=1 \\\\\n&= \\frac{K}{\\frac{N_0 + (K-N_0)}{N_0}} &\\text{Combine terms in the denominator} \\\\\n&= \\frac{K}{\\frac{K}{N_0}} &N_0 + (K-N_0) = K \\\\\n&= N_0\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html",
+    "href": "course-materials/examples/day1-morning-extra-examples.html",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "",
+    "text": "Simplify: \\(\\frac{18-4}{2}+3(5-2)^2\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{18-4}{2}+3(5-2)^2 = \\frac{14}{2}+3(3)^2 = 7+3(9) = 7+27 = 34\n\\]\n\n\n\n\nSimplify: \\(2x+5(3x-4)-\\frac{6x}{2}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n2x+5(3x-4)-\\frac{6x}{2} = 2x+15x-20-3x = 14x-20\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#order-of-operations",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#order-of-operations",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "",
+    "text": "Simplify: \\(\\frac{18-4}{2}+3(5-2)^2\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{18-4}{2}+3(5-2)^2 = \\frac{14}{2}+3(3)^2 = 7+3(9) = 7+27 = 34\n\\]\n\n\n\n\nSimplify: \\(2x+5(3x-4)-\\frac{6x}{2}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n2x+5(3x-4)-\\frac{6x}{2} = 2x+15x-20-3x = 14x-20\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#solving-equations",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#solving-equations",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "Solving equations",
+    "text": "Solving equations\n\nSolve for \\(x\\): \\(5x-7=3x+9\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n5x-7=3x+9 \\Rightarrow 2x=16 \\Rightarrow x=8\n\\]\n\n\n\n\nSolve for \\(x\\): \\(3(2x-1)=5-(x+4)\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n3(2x-1)=5-(x+4) \\Rightarrow 6x-3=1-x \\Rightarrow 7x=4 \\Rightarrow x=\\frac{4}{7}\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#rules-of-exponents",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#rules-of-exponents",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "Rules of exponents",
+    "text": "Rules of exponents\n\nSimplify: \\(\\frac{5^7}{5^4}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{5^7}{5^4} = 5^{7-4} = 5^3 = 125\n\\]\n\n\n\n\nSimplify: \\((2x^3y^{-2})^3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n(2x^3y^{-2})^3 = 2^3x^{9}y^{-6} = \\frac{8x^9}{y^6}\n\\]\n\n\n\n\nSimplify: \\(\\frac{x^4\\cdot x^2}{x^6}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{x^4\\cdot x^2}{x^6} = \\frac{x^{4+2}}{x^6} = \\frac{x^6}{x^6} = x^0 = 1\n\\]\n\n\n\n\nSimplify: \\(\\left(\\frac{2x}{y}\\right)^3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\left(\\frac{2x}{y}\\right)^3 = \\frac{2^3x^3}{y^3} = \\frac{8x^3}{y^3}\n\\]\n\n\n\n\nEvaluate: \\(27^{2/3}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n27^{2/3} = \\left(27^{1/3}\\right)^2 = 3^2 = 9\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#foil-polynomials",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#foil-polynomials",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "FOIL & polynomials",
+    "text": "FOIL & polynomials\n\nExpand: \\((3x-2)(x+4)\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n(3x-2)(x+4) = 3x^2+12x-2x-8 = 3x^2+10x-8\n\\]\n\n\n\n\nWhat is the degree of the polynomial \\(4x^5-3x^2+7x-1\\), and how many terms does it have?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe degree is 5 (the largest exponent), and the polynomial has 4 terms."
+  },
+  {
+    "objectID": "course-materials/examples/day1-morning-extra-examples.html#unit-conversions",
+    "href": "course-materials/examples/day1-morning-extra-examples.html#unit-conversions",
+    "title": "Day 1 / Morning: Extra examples",
+    "section": "Unit conversions",
+    "text": "Unit conversions\n\nConvert 15 miles to kilometers, given 1 mile = 1.609 km.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n15\\text{ mi} \\times \\frac{1.609\\text{ km}}{1\\text{ mi}} = 24.135\\text{ km}\n\\]\n\n\n\n\nConvert \\(250\\ \\frac{mg}{L}\\) to \\(\\frac{g}{m^3}\\), given 1000 mg = 1 g and 1 L = 0.001 m3.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n250\\frac{\\text{mg}}{\\text{L}} \\times \\frac{1\\text{ g}}{1000\\text{ mg}} \\times \\frac{1\\text{ L}}{0.001\\text{ m}^3} = 250\\frac{\\text{g}}{\\text{m}^3}\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "",
+    "text": "Evaluate \\(f(x)=2x^2-5x+1\\) at \\(x=-3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf(-3) = 2(-3)^2-5(-3)+1 = 18+15+1 = 34\n\\]\n\n\n\n\nEvaluate \\(g(a,b)=\\frac{a^2+b}{2a}\\) at \\(a=4\\) and \\(b=10\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ng(4,10) = \\frac{4^2+10}{2(4)} = \\frac{26}{8} = 3.25\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#evaluating-functions",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#evaluating-functions",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "",
+    "text": "Evaluate \\(f(x)=2x^2-5x+1\\) at \\(x=-3\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf(-3) = 2(-3)^2-5(-3)+1 = 18+15+1 = 34\n\\]\n\n\n\n\nEvaluate \\(g(a,b)=\\frac{a^2+b}{2a}\\) at \\(a=4\\) and \\(b=10\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ng(4,10) = \\frac{4^2+10}{2(4)} = \\frac{26}{8} = 3.25\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#lines-slope",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#lines-slope",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "Lines & slope",
+    "text": "Lines & slope\n\nFind the equation of the line that passes through \\((1,4)\\) and \\((5,-8)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nm=\\frac{-8-4}{5-1}=\\frac{-12}{4}=-3\n\\] \\[\ny-4=-3(x-1) \\Rightarrow y=-3x+7\n\\]\n\n\n\n\nFind the equation of the line that passes through \\((-2,3)\\) and has slope \\(\\frac{1}{2}\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ny-3=\\frac{1}{2}(x+2) \\Rightarrow y=0.5x+4\n\\]\n\n\n\n\nBetween 2005 and 2015, a glacier’s area shrank from 120 km² to 80 km². Find the average rate of change and write a sentence interpreting it.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nm=\\frac{80-120}{2015-2005}=\\frac{-40}{10}=-4\\ \\frac{\\text{km}^2}{\\text{year}}\n\\] Between 2005 and 2015, glacier area decreased by an average of 4 km² per year."
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#reading-graphs",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#reading-graphs",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "Reading graphs",
+    "text": "Reading graphs\n\nWhat are the \\(x\\)-intercept and \\(y\\)-intercept of the line \\(y=4x-8\\)?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(x\\)-intercept: set \\(y=0\\): \\(0=4x-8 \\Rightarrow x=2\\), so \\((2,0)\\).\n\\(y\\)-intercept: set \\(x=0\\): \\(y=-8\\), so \\((0,-8)\\)."
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#the-exponential-function",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#the-exponential-function",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "The exponential function",
+    "text": "The exponential function\n\nSimplify: \\(e^{2x}\\cdot e^{-5x}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ne^{2x}\\cdot e^{-5x} = e^{2x-5x}=e^{-3x}\n\\]\n\n\n\n\nA population grows according to \\(N(t)=50e^{0.08t}\\). What is the population after 10 years?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nN(10)=50e^{0.08(10)}=50e^{0.8}\\approx 50(2.2255)\\approx 111\n\\]\n\n\n\n\nThe logistic growth model is \\[N_t=\\frac{K}{1+\\left[\\frac{K-N_0}{N_0}\\right]e^{-rt}}\\] What does \\(N_t\\) approach as \\(t \\to \\infty\\) (assuming \\(r&gt;0\\))?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nAs \\(t \\to \\infty\\), \\(e^{-rt} \\to 0\\) (since \\(r&gt;0\\)), so the bracketed term disappears: \\[\nN_t \\to \\frac{K}{1+0} = K\n\\] The population approaches the carrying capacity \\(K\\)."
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#logarithms",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#logarithms",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "Logarithms",
+    "text": "Logarithms\n\nSolve for \\(x\\): \\(\\ln(x)=4\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nx=e^4\\approx 54.6\n\\]\n\n\n\n\nSolve for \\(t\\): \\(200e^{0.05t}=500\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ne^{0.05t}=2.5 \\Rightarrow 0.05t=\\ln(2.5)\\approx 0.9163 \\Rightarrow t\\approx 18.33\n\\]\n\n\n\n\nGiven \\(\\ln(2)\\approx 0.693\\) and \\(\\ln(3)\\approx 1.099\\), use log properties to find \\(\\ln(6)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\ln(6) = \\ln(2\\cdot 3) = \\ln(2)+\\ln(3) \\approx 0.693+1.099 = 1.792\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day1-afternoon-extra-examples.html#graphs",
+    "href": "course-materials/examples/day1-afternoon-extra-examples.html#graphs",
+    "title": "Day 1 / Afternoon: Extra examples",
+    "section": "Graphs",
+    "text": "Graphs\n\nIn which quadrant of the \\(xy\\)-plane does the point \\((-3, 5)\\) lie?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(x=-3\\) is negative and \\(y=5\\) is positive, so the point lies in Quadrant II (upper left).\n\n\n\n\nWhat are the \\(x\\)-intercept and \\(y\\)-intercept of the line \\(y=4x-8\\)?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(x\\)-intercept: set \\(y=0\\): \\(0=4x-8 \\Rightarrow x=2\\), so \\((2,0)\\).\n\\(y\\)-intercept: set \\(x=0\\): \\(y=-8\\), so \\((0,-8)\\)."
   }
 ]

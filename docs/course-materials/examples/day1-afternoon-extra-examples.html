@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Core math review</title>
+<title>Day 1 / Afternoon: Extra examples</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,26 +29,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17e5a23d094ee4d3ea1f9bf67e0e3d54.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5cef1391e92990c1d02e0f0e735fafd2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-17e5a23d094ee4d3ea1f9bf67e0e3d54.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5cef1391e92990c1d02e0f0e735fafd2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -87,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EDS 212</span>
     </a>
   </div>
@@ -98,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
@@ -111,15 +140,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
         <li>
-    <a class="dropdown-item" href="../course-materials/day1.html">
+    <a class="dropdown-item" href="../../course-materials/day1.html">
  <span class="dropdown-text">day 1 (8/3)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day2.html">
+    <a class="dropdown-item" href="../../course-materials/day2.html">
  <span class="dropdown-text">day 2 (8/4)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day3.html">
+    <a class="dropdown-item" href="../../course-materials/day3.html">
  <span class="dropdown-text">day 3 (8/5)</span></a>
   </li>  
     </ul>
@@ -140,8 +169,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Core math review</h1>
-            <p class="subtitle lead">Day 1</p>
+      <h1 class="title">Day 1 / Afternoon: Extra examples</h1>
                       </div>
   </div>
     
@@ -162,7 +190,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#class-materials" id="toc-class-materials" class="nav-link active" data-scroll-target="#class-materials">Class materials</a></li>
+  <li><a href="#evaluating-functions" id="toc-evaluating-functions" class="nav-link active" data-scroll-target="#evaluating-functions">Evaluating functions</a></li>
+  <li><a href="#graphs" id="toc-graphs" class="nav-link" data-scroll-target="#graphs">Graphs</a></li>
+  <li><a href="#lines-slope" id="toc-lines-slope" class="nav-link" data-scroll-target="#lines-slope">Lines &amp; slope</a></li>
+  <li><a href="#the-exponential-function" id="toc-the-exponential-function" class="nav-link" data-scroll-target="#the-exponential-function">The exponential function</a></li>
+  <li><a href="#logarithms" id="toc-logarithms" class="nav-link" data-scroll-target="#logarithms">Logarithms</a></li>
   </ul>
 </nav>
     </div>
@@ -173,57 +205,292 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/cetaceans-class.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
+<section id="evaluating-functions" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-functions">Evaluating functions</h2>
+<ol type="1">
+<li>Evaluate <span class="math inline">\(f(x)=2x^2-5x+1\)</span> at <span class="math inline">\(x=-3\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+f(-3) = 2(-3)^2-5(-3)+1 = 18+15+1 = 34
+\]</span></p>
 </div>
 </div>
 </div>
-<div class="gray-text center-text">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
+<ol start="2" type="1">
+<li>Evaluate <span class="math inline">\(g(a,b)=\frac{a^2+b}{2a}\)</span> at <span class="math inline">\(a=4\)</span> and <span class="math inline">\(b=10\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<!-- ## Pre-class prep -->
-<!-- No pre-class prep before our first day of class! -->
-<section id="class-materials" class="level2">
-<h2 class="anchored" data-anchor-id="class-materials">Class materials</h2>
-<table class="table-hover table-bordered caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 35%">
-<col style="width: 30%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><i class="fa-solid fa-calendar-day" title="A calendar with one day highlighted" aria-label="calendar-day"></i> Session</th>
-<th><i class="fa-solid fa-person-chalkboard" title="A person motioning at a chalkboard" aria-label="person-chalkboard"></i> Lecture slides (blank)</th>
-<th><i class="fa-solid fa-pen-to-square" title="A pencil over a blank piece of paper" aria-label="pen-to-square"></i> After class slides</th>
-<th><i class="fa-solid fa-pencil" title="A pencil" aria-label="pencil"></i> Extra Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>day 1 / morning</td>
-<td><a href="../course-materials/slides/day1.1-slides.html" target="_blank">Basic algebra review, rules of exponents, units, and unit conversions</a></td>
-<td><a href="slides/after-class-slides/day1.1-slides-class-2026.pdf" target="_blank">Slides</a></td>
-<td><a href="../course-materials/examples/day1-morning-extra-examples.html" target="_blank">Examples</a></td>
-</tr>
-<tr class="even">
-<td>day 1 / afternoon</td>
-<td><a href="../course-materials/slides/day1.2-slides.html" target="_blank">Functions (interpreting &amp; evaluating), reading graphs, lines, exponential function, logarithms</a></td>
-<td><a href="slides/after-class-slides/day1.2-slides-class-2026.pdf">Slides</a></td>
-<td><a href="../course-materials/examples/day1-afternoon-extra-examples.html" target="_blank">Examples</a></td>
-</tr>
-</tbody>
-</table>
-<!-- ## End-of-day practice
-
-Complete the following tasks / activities before heading home for the day!
-
-- [ **Day 1 Practice:** Problems, gut checks, R Projects, and a function](eod-practice/eod-day1.qmd) -->
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+g(4,10) = \frac{4^2+10}{2(4)} = \frac{26}{8} = 3.25
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="graphs" class="level2">
+<h2 class="anchored" data-anchor-id="graphs">Graphs</h2>
+<ol start="3" type="1">
+<li>In which quadrant of the <span class="math inline">\(xy\)</span>-plane does the point <span class="math inline">\((-3, 5)\)</span> lie?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(x=-3\)</span> is negative and <span class="math inline">\(y=5\)</span> is positive, so the point lies in <strong>Quadrant II</strong> (upper left).</p>
+</div>
+</div>
+</div>
+<ol start="4" type="1">
+<li>What are the <span class="math inline">\(x\)</span>-intercept and <span class="math inline">\(y\)</span>-intercept of the line <span class="math inline">\(y=4x-8\)</span>?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong><span class="math inline">\(x\)</span>-intercept:</strong> set <span class="math inline">\(y=0\)</span>: <span class="math inline">\(0=4x-8 \Rightarrow x=2\)</span>, so <span class="math inline">\((2,0)\)</span>.</p>
+<p><strong><span class="math inline">\(y\)</span>-intercept:</strong> set <span class="math inline">\(x=0\)</span>: <span class="math inline">\(y=-8\)</span>, so <span class="math inline">\((0,-8)\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="lines-slope" class="level2">
+<h2 class="anchored" data-anchor-id="lines-slope">Lines &amp; slope</h2>
+<ol start="5" type="1">
+<li>Find the equation of the line that passes through <span class="math inline">\((1,4)\)</span> and <span class="math inline">\((5,-8)\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+m=\frac{-8-4}{5-1}=\frac{-12}{4}=-3
+\]</span> <span class="math display">\[
+y-4=-3(x-1) \Rightarrow y=-3x+7
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="6" type="1">
+<li>Find the equation of the line that passes through <span class="math inline">\((-2,3)\)</span> and has slope <span class="math inline">\(\frac{1}{2}\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+y-3=\frac{1}{2}(x+2) \Rightarrow y=0.5x+4
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="7" type="1">
+<li>Between 2005 and 2015, a glacier’s area shrank from 120 km² to 80 km². Find the average rate of change and write a sentence interpreting it.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+m=\frac{80-120}{2015-2005}=\frac{-40}{10}=-4\ \frac{\text{km}^2}{\text{year}}
+\]</span> Between 2005 and 2015, glacier area decreased by an average of 4 km² per year.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-exponential-function" class="level2">
+<h2 class="anchored" data-anchor-id="the-exponential-function">The exponential function</h2>
+<ol start="8" type="1">
+<li>Simplify: <span class="math inline">\(e^{2x}\cdot e^{-5x}\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+e^{2x}\cdot e^{-5x} = e^{2x-5x}=e^{-3x}
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="9" type="1">
+<li>A population grows according to <span class="math inline">\(N(t)=50e^{0.08t}\)</span>. What is the population after 10 years?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+N(10)=50e^{0.08(10)}=50e^{0.8}\approx 50(2.2255)\approx 111
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="10" type="1">
+<li>The logistic growth model is <span class="math display">\[N_t=\frac{K}{1+\left[\frac{K-N_0}{N_0}\right]e^{-rt}}\]</span> What does <span class="math inline">\(N_t\)</span> approach as <span class="math inline">\(t \to \infty\)</span> (assuming <span class="math inline">\(r&gt;0\)</span>)?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>As <span class="math inline">\(t \to \infty\)</span>, <span class="math inline">\(e^{-rt} \to 0\)</span> (since <span class="math inline">\(r&gt;0\)</span>), so the bracketed term disappears: <span class="math display">\[
+N_t \to \frac{K}{1+0} = K
+\]</span> The population approaches the carrying capacity <span class="math inline">\(K\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="logarithms" class="level2">
+<h2 class="anchored" data-anchor-id="logarithms">Logarithms</h2>
+<ol start="11" type="1">
+<li>Solve for <span class="math inline">\(x\)</span>: <span class="math inline">\(\ln(x)=4\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+x=e^4\approx 54.6
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="12" type="1">
+<li>Solve for <span class="math inline">\(t\)</span>: <span class="math inline">\(200e^{0.05t}=500\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+e^{0.05t}=2.5 \Rightarrow 0.05t=\ln(2.5)\approx 0.9163 \Rightarrow t\approx 18.33
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="13" type="1">
+<li>Given <span class="math inline">\(\ln(2)\approx 0.693\)</span> and <span class="math inline">\(\ln(3)\approx 1.099\)</span>, use log properties to find <span class="math inline">\(\ln(6)\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\ln(6) = \ln(2\cdot 3) = \ln(2)+\ln(3) \approx 0.693+1.099 = 1.792
+\]</span></p>
+</div>
+</div>
+</div>
 
 
 </section>

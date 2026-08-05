@@ -623,14 +623,14 @@ $$
 m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}.
 $$
 
-2. Find $c$, the **y-intercept**:
+2. Find $b$, the **y-intercept**:
 
 Since $(x_1, y_1)$ is on the line, it satisfies:
 
-$$y_1 = mx_1+ c.$$
-We can solve for $c$ to obtain:
+$$y_1 = mx_1+ b.$$
+We can solve for $b$ to obtain:
 
-$$c = y_1 - mx_1.$$
+$$b = y_1 - mx_1.$$
 
 :::
 
@@ -689,8 +689,8 @@ abline(h = 0, v = 0, col = "gray50")
 lines(x, y, lwd = 2)
 
 # Add tick marks (integer spacing)
-axis(1, at = seq(x_min, x_max, by = 1))
-axis(2, at = seq(y_min, y_max, by = 1))
+axis(1, at = seq(x_min, x_max, by = 1), cex.axis = 1.5)
+axis(2, at = seq(y_min, y_max, by = 1), cex.axis = 1.5)
 ```
 
 [- Make a graph showing the line that passes through (3,-1) and has slope equal to 2. 
@@ -704,17 +704,7 @@ axis(2, at = seq(y_min, y_max, by = 1))
 
 <hr>
 
-Find the equation of the line that passes through $(3,5)$ and $(2,-1)$.
-
-✏️ [Let's see a solution.]{style="color:green;"}
-
-$$
-\begin{aligned}
-m &= \frac{5-(-1)}{3-2} = 6 &\text{Compute the slope} \\
-y - 5 &= 6(x-3) &\text{Point-slope form using (3,5)} \\
-y &= 6x - 13 &\text{Simplify}
-\end{aligned}
-$$
+A. Find the equation of the line that passes through $(3,5)$ and $(2,-1)$.
 
 ---
 
@@ -724,17 +714,7 @@ $$
 
 <hr>
 
-Find the equation of the line that passes through $(2,-5)$ and has $x$-intercept equal to 4.
-
-✏️ [Let's see a solution.]{style="color:green;"}
-
-$$
-\begin{aligned}
-m &= \frac{0-(-5)}{4-2} = \frac{5}{2} &\text{Compute the slope using the } x\text{-intercept } (4,0) \\
-y - 0 &= \frac{5}{2}(x-4) &\text{Point-slope form} \\
-y &= \frac{5}{2}x - 10 &\text{Simplify}
-\end{aligned}
-$$
+B. Find the equation of the line that passes through $(2,-5)$ and has $x$-intercept equal to 4.
 
 ---
 
@@ -744,7 +724,7 @@ $$
 
 <hr>
 
-Find the equation of the line that has the following graph:
+C. Find the equation of the line that has the following graph:
 
 :::: {.columns}
 
@@ -790,7 +770,35 @@ axis(2, at = seq(y_min, y_max, by = 1))
 
 :::
 
-✏️ [Let's see a solution.]{style="color:green;"}
+---
+
+## {#line-equation-practice-solutions-summary data-menu-title="Equation of a line: solutions" .smaller}
+
+[Equation of a line: solutions]{.slide-title}
+
+<hr>
+
+(a) Passes through $(3,5)$ and $(2,-1)$:
+
+$$
+\begin{aligned}
+m &= \frac{5-(-1)}{3-2} = 6 &\text{Compute the slope} \\
+y - 5 &= 6(x-3) &\text{Point-slope form using (3,5)} \\
+y &= 6x - 13 &\text{Simplify}
+\end{aligned}
+$$
+
+(b) Passes through $(2,-5)$ and has $x$-intercept equal to 4:
+
+$$
+\begin{aligned}
+m &= \frac{0-(-5)}{4-2} = \frac{5}{2} &\text{Compute the slope using the } x\text{-intercept } (4,0) \\
+y - 0 &= \frac{5}{2}(x-4) &\text{Point-slope form} \\
+y &= \frac{5}{2}x - 10 &\text{Simplify}
+\end{aligned}
+$$
+
+(c) Has the given graph: $y = \frac{3}{2}x+1$
 
 $$
 \begin{aligned}
@@ -799,6 +807,16 @@ y\text{-intercept} &= 1 &\text{Read from the graph} \\
 y &= \frac{3}{2}x + 1 &\text{Equation of the line}
 \end{aligned}
 $$
+
+---
+
+## {#line-equation-practice-4-blank data-menu-title="Equation of a line: practice"}
+
+[Equation of a line: solutions]{.slide-title}
+
+<hr>
+
+Make a graph showing the line that passes through (3,-1) and has slope equal to 2.
 
 ---
 
@@ -1158,12 +1176,41 @@ Gause, G. F. 1934. The Struggle for Existence. Baltimore: Williams and Wilkins.
 . . .
 
 ::: {.center-text .body-text-m .teal-text}
-We should always *understand the components of formulas and equations* - both conceptually and mathematically. 
+We should always *understand the components of formulas and equations* - both conceptually and mathematically.
 :::
 
 ---
 
-## {#logistic-growth-Qs data-menu-title="Logistic growth (Qs)"} 
+## {#logistic-growth-example data-menu-title="Logistic growth: Example"}
+
+[Logistic growth: Example]{.slide-title}
+
+<hr>
+
+What is [$$N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}$$]{.body-text-m} when t = 0
+
+
+---
+
+## {#logistic-growth-solution data-menu-title="Logistic growth: Solution"}
+
+[Logistic growth: Solution]{.slide-title}
+
+<hr>
+
+$$
+\begin{aligned}
+N_0 &= \frac{K}{1+[\frac{K-N_0}{N_0}]e^{-r(0)}} &\text{Substitute } t=0 \\
+&= \frac{K}{1+[\frac{K-N_0}{N_0}](1)} &e^{0}=1 \\
+&= \frac{K}{\frac{N_0 + (K-N_0)}{N_0}} &\text{Combine terms in the denominator} \\
+&= \frac{K}{\frac{K}{N_0}} &N_0 + (K-N_0) = K \\
+&= N_0
+\end{aligned}
+$$
+
+---
+
+## {#logistic-growth-Qs data-menu-title="Logistic growth (Qs)"}
 
 [Logistic growth]{.slide-title}
 
