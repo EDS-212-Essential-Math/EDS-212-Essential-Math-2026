@@ -283,6 +283,12 @@ Vectors and matrices
 <p>It is a fundamental part of data science (and how computers understand &amp; process data), and useful for describing environmental processes.</p>
 </div>
 </section>
+<section id="building-blocks-blank" class="slide level2" data-menu-title="Building blocks">
+<h2></h2>
+<p><span class="slide-title">The building blocks of linear algebra</span></p>
+<hr>
+<p>✏️</p>
+</section>
 <section id="building-blocks" class="slide level2" data-menu-title="Building blocks">
 <h2></h2>
 <p><span class="slide-title">The building blocks of linear algebra</span></p>
@@ -291,13 +297,10 @@ Vectors and matrices
 <li><strong>scalar:</strong> a value without direction, representing magnitude. For our purposes, a number:</li>
 </ul>
 <p><span class="math display">\[8 \text{ or } \lambda.\]</span></p>
-<div class="fragment">
 <ul>
 <li><strong>vector:</strong> an ordered list of values, representing magnitude <em>and</em> direction (physics) or values for an observation or variable (data science). For example,</li>
 </ul>
 <p><span class="math display">\[(1,3,5) \text{ or } (x_1, x_2, x_3).\]</span></p>
-</div>
-<div class="fragment">
 <ul>
 <li><strong>matrix:</strong> am array of values made up rows and columns. For example,</li>
 </ul>
@@ -309,7 +312,6 @@ Vectors and matrices
 a_{11} &amp; a_{12} &amp; a_{13}\\
 a_{21} &amp; a_{22} &amp; a_{23}
 \end{pmatrix}\]</span>
-</div>
 </section>
 <section id="applications" class="slide level2" data-menu-title="Applications">
 <h2></h2>
@@ -321,10 +323,6 @@ a_{21} &amp; a_{22} &amp; a_{23}
 <li>Dimensional reduction</li>
 <li>Population matrix models</li>
 <li>Optimization</li>
-</ul>
-<p><br></p>
-<p><strong>Applications of linear algebra in data science:</strong></p>
-<ul>
 <li>Array programming / vectorized code</li>
 <li>Machine learning</li>
 </ul>
@@ -343,24 +341,36 @@ a_{21} &amp; a_{22} &amp; a_{23}
           display:block!important;
       }</style></aside>
 </section>
-<section id="vectors" class="slide level2" data-menu-title="Vectors">
+<section id="vectors-1" class="slide level2" data-menu-title="Vectors">
 <h2></h2>
 <p><span class="slide-title">Let’s start with vectors</span></p>
 <hr>
 <p><span class="body-text-m"><strong>Where are vectors in EDS?</strong></span></p>
-<div class="fragment">
+</section>
+<section id="vectors-2" class="slide level2" data-menu-title="Vectors">
+<h2></h2>
+<p><span class="slide-title">Let’s start with vectors</span></p>
+<hr>
+<p><span class="body-text-m"><strong>Where are vectors in EDS?</strong></span></p>
 <p><span class="body-text-m"><strong><em>Everywhere.</em></strong></span></p>
-</div>
-<div class="fragment">
 <p>Vectors are lists of values used to describe different features or variables of interest. For example, if you are trying to model <em>fish size</em> based on length (cm) and mass (g), then for a fish with length 32 cm weighing 281 g, you might describe that by:</p>
 <p><span class="math display">\[(32, 281)\]</span></p>
 <p>Sometimes vectors are represented with an arrow over the vector name:</p>
 <p><span class="math display">\[ \vec{x} = (32, 281)\]</span></p>
-</div>
-<div class="fragment">
+<p>✏️</p>
+</section>
+<section id="vectors-3" class="slide level2" data-menu-title="Vectors">
+<h2></h2>
+<p><span class="slide-title">Let’s start with vectors</span></p>
+<hr>
+<p><span class="body-text-m"><strong>Where are vectors in EDS?</strong></span></p>
+<p><span class="body-text-m"><strong><em>Everywhere.</em></strong></span></p>
+<p>Vectors are lists of values used to describe different features or variables of interest. For example, if you are trying to model <em>fish size</em> based on length (cm) and mass (g), then for a fish with length 32 cm weighing 281 g, you might describe that by:</p>
+<p><span class="math display">\[(32, 281)\]</span></p>
+<p>Sometimes vectors are represented with an arrow over the vector name:</p>
+<p><span class="math display">\[ \vec{x} = (32, 281)\]</span></p>
 <p>Often, we will think of an “abstract vector” <span class="math inline">\(x\)</span> with <span class="math inline">\(n\)</span> <strong>coordinates</strong>:</p>
 <p><span class="math display">\[x = (x_1, x_2, \ldots, x_n).\]</span></p>
-</div>
 </section>
 <section id="add-sub-blank" class="slide level2" data-menu-title="Addition &amp; subtraction">
 <h2></h2>
@@ -409,11 +419,8 @@ a_{21} &amp; a_{22} &amp; a_{23}
 <div class="body-text-m">
 <p>What about a vector with more than two coordinates? More than three?</p>
 </div>
-<p><br> <br> <br> <br> <br> <br> <br> <br></p>
-<div class="fragment">
 <div class="body-text-m">
 <p>Is as valid as describing a “point” in multivariate space as a vector with two “coordinates” – it’s just difficult for us to visualize and conceptualize since our brain only happily deals with 3 dimensions.</p>
-</div>
 </div>
 </section>
 <section id="dot-product-blank" class="slide level2" data-menu-title="Dot product">
@@ -432,20 +439,22 @@ a_{21} &amp; a_{22} &amp; a_{23}
 <p>their <strong>dot product</strong> is:</p>
 <p><span class="math display">\[x \cdot y = \sum_{i=1}^n x_i y_i\]</span></p>
 </div>
-<p><span class="body-text"><span class="body-text-m"><strong>In words:</strong></span> The dot product is the sum of coordinates of each vector multiplied together. It is a measure of how close the vectors “point” in the same direction</span></p>
+<p><span class="body-text"><span class="body-text-m"><strong>In words:</strong></span> The <a href="https://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/">dot product</a> is the sum of coordinates of each vector multiplied together. It is a measure of how close the vectors “point” in the same direction</span></p>
 </section>
 <section id="dot-product-example-blank" class="slide level2" data-menu-title="Dot product example">
 <h2></h2>
-<p><span class="slide-title">Dot product example</span></p>
+<p><span class="slide-title">Exercise</span></p>
 <hr>
-<div class="body-text-m">
-<p>For <span class="math inline">\(a=(2,-1,0)\)</span> and <span class="math inline">\(b= (9,3,-4)\)</span>:</p>
+<p>For vectors <span class="math inline">\(x = (x_1, \ldots, x_n)\)</span> <span class="math inline">\(y = (y_1, \ldots, y_n)\)</span> their <strong>dot product</strong> is:</p>
+<p><span class="math display">\[x \cdot y = \sum_{i=1}^n x_i y_i\]</span></p>
+<div class="body-text-m" style="color:green;">
+<p>Find the dot product of <span class="math inline">\(a=(2,-1,0)\)</span> and <span class="math inline">\(b= (9,3,-4)\)</span>:</p>
 </div>
 <p>✏️</p>
 </section>
 <section id="dot-product-example" class="slide level2" data-menu-title="Dot product example">
 <h2></h2>
-<p><span class="slide-title">Dot product example</span></p>
+<p><span class="slide-title">Exercise</span></p>
 <hr>
 <div class="body-text-m">
 <p>For <span class="math inline">\(a=(2,-1,0)\)</span> and <span class="math inline">\(b= (9,3,-4)\)</span>:</p>
@@ -681,28 +690,82 @@ a_{21} &amp; a_{22} &amp; a_{23}
 <p><br></p>
 
 <img data-src="images/diagonal_matrix_scaling.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="where-in-EDS" class="slide level2" data-menu-title="Multiply by diagonal matrix">
+<section id="where-in-EDS-1" class="slide level2" data-menu-title="Multiply by diagonal matrix">
 <h2></h2>
 <p><span class="slide-title">Where do matrices come up in EDS?</span></p>
 <hr>
-<div class="columns">
-<div class="column" style="width:40%;">
 <p><span class="center-text">Rasters (matrix like)</span></p>
+
+<img data-src="images/neon-raster.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://www.neonscience.org">Neon</a></p></section>
+<section id="raster-index-blank" class="slide level2" data-menu-title="Exercise: raster math">
+<h2></h2>
+<p><span class="slide-title">Exercise: combining rasters</span></p>
+<hr>
+<div class="body-text-m">
+<p>A raster is just a matrix where each cell holds a value for a location on a grid. Land managers often combine several raster layers into a single index by <strong>scaling</strong> each layer (multiplying by a weight) and <strong>summing</strong> the results.</p>
+</div>
+<p>✏️ <span style="color:green;">Calculate the fire risk index for each cell:</span></p>
+<p><span style="color:green;"><span class="math display">\[\text{Fire risk} = 0.6 \times \text{Temperature stress} + 0.4 \times \text{Fuel dryness}\]</span></span></p>
+
+<img data-src="day3.2-slides_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section>
+<section id="raster-index" class="slide level2" data-menu-title="Exercise: raster math">
+<h2></h2>
+<p><span class="slide-title">Exercise: solution</span></p>
+<hr>
+<p>💡 <span style="color:green;">Let’s see a solution!</span></p>
+<p><span style="color:green;"><span class="math display">\[\text{Fire risk} = 0.6 \times \text{Temperature stress} + 0.4 \times \text{Fuel dryness}\]</span></span></p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="body-text-m">
+<ul>
+<li>Top-left: <span class="math inline">\(0.6(10)+0.4(20) = 6+8 = 14\)</span></li>
+<li>Top-right: <span class="math inline">\(0.6(20)+0.4(10) = 12+4 = 16\)</span></li>
+<li>Bottom-left: <span class="math inline">\(0.6(15)+0.4(25) = 9+10 = 19\)</span></li>
+<li>Bottom-right: <span class="math inline">\(0.6(25)+0.4(15) = 15+6 = 21\)</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/neon-raster.png"></p>
-<figcaption>Source: <a href="https://www.neonscience.org">Neon</a></figcaption>
+<p><img data-src="day3.2-slides_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
-</div><div class="column" style="width:60%;">
-<p><span class="center-text">Machine learning (EDS 232)</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/CNN-edited.jpeg"></p>
-<figcaption>Adapted from <a href="https://www.analyticsvidhya.com/blog/2020/10/what-is-the-convolutional-neural-network-architecture/">What is the Convolutional Neural Network Architecture?</a></figcaption>
-</figure>
+</div>
 </div>
 </div></div>
+</section>
+<section id="where-in-EDS-2" class="slide level2" data-menu-title="Multiply by diagonal matrix">
+<h2></h2>
+<p><span class="slide-title">Where do matrices come up in EDS?</span></p>
+<hr>
+<p><span class="center-text">Machine learning (EDS 232)</span></p>
+
+<img data-src="images/CNN-edited.jpeg" class="r-stretch quarto-figure-center"><p class="caption">Adapted from <a href="https://www.analyticsvidhya.com/blog/2020/10/what-is-the-convolutional-neural-network-architecture/">What is the Convolutional Neural Network Architecture?</a></p></section>
+<section id="wrapping-up" class="slide level2" data-menu-title="Integration" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Wrapping up…
+</div>
+</div>
+</section>
+<section id="what-we-covered" class="slide level2" data-menu-title="What we covered today">
+<h2></h2>
+<p><span class="slide-title">What we covered today</span></p>
+<hr>
+<ul>
+<li><span style="color:#333300"><b>📝 Practice all day 1 and 2 topics</b></span><br>
+</li>
+<li><span style="color:#330033"><b>🌊 A bit of ODEs</b></span></li>
+<li><span style="color:#003300"><b>➕ Summation notation</b></span><br>
+</li>
+<li><span style="color:#996600"><b>🔹 Vector sum and product </b></span><br>
+</li>
+<li><span style="color:#333300"><b>🌓 Dot product</b></span></li>
+<li><span style="color:#660066"><b>🧮 Matrix algebra</b></span></li>
+</ul>
 <!-- 
 ---
 

@@ -912,30 +912,17 @@ knitr::include_graphics("images/diagonal_matrix_scaling.png")
 
 ---
 
-## {#where-in-EDS data-menu-title="Multiply by diagonal matrix"} 
+## {#where-in-EDS-1 data-menu-title="Multiply by diagonal matrix"} 
 
 [Where do matrices come up in EDS? ]{.slide-title}
 
 <hr>
 
-:::: {.columns}
-
-::: {.column width="40%"}
 
 [Rasters (matrix like)]{.center-text}
 
 ![Source: [Neon](https://www.neonscience.org)](images/neon-raster.png)
-:::
 
-::: {.column width="60%"}
-
-[Machine learning (EDS 232)]{.center-text}
-
-![Adapted from [What is the Convolutional Neural Network Architecture?](https://www.analyticsvidhya.com/blog/2020/10/what-is-the-convolutional-neural-network-architecture/)](images/CNN-edited.jpeg)
-
-:::
-
-:::
 
 ---
 
@@ -1029,6 +1016,20 @@ ggplot(Rdf, aes(x = col, y = -row, fill = value)) +
 ```
 :::
 ::::
+
+---
+
+## {#where-in-EDS-2 data-menu-title="Multiply by diagonal matrix"} 
+
+[Where do matrices come up in EDS? ]{.slide-title}
+
+<hr>
+
+
+[Machine learning (EDS 232)]{.center-text}
+
+![Adapted from [What is the Convolutional Neural Network Architecture?](https://www.analyticsvidhya.com/blog/2020/10/what-is-the-convolutional-neural-network-architecture/)](images/CNN-edited.jpeg)
+
 
 ---
 
