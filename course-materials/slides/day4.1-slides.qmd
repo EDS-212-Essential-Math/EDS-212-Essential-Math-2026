@@ -293,25 +293,17 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <br>
 
 ::: {.body-text-m}
+
+Basic ones:
+
 - Histograms
 - Boxplots
 - Scatterplots 
 :::
 
-. . . 
-
-::: {.body-text-m} 
-...then get even more involved: 
-
-- Beeswarm
-- Marginal plots
-- Raincloud plots
-- Pairs plots
-:::
-
 ---
 
-## {#histogram data-menu-title="Histogram"} 
+## {#histogram data-menu-title="Histogram"}
 
 [Histogram]{.slide-title}
 
@@ -319,31 +311,169 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 
 <br>
 
-::: {.body-text-m}
-A histogram is a graph of the frequency of observations within a series of bins (usually of equal size) for a variable.
+[A histogram shows the **distribution** of a single numeric variable, by grouping values into bins and counting observations.]{.body-text-m}
 
 <br>
 
-**Example:** distribution of penguin flipper lengths for chinstrap penguins
+::: {.body-text-m}
+**To construct one:**
+
+1. Divide the range of the data into equal-width **bins**
+2. Count how many observations fall into each bin
+3. Draw a bar over each bin, with height equal to that count
 :::
 
-<br>
+---
 
+## {#histogram-example-blank data-menu-title="Histogram example"}
+
+[Histogram example]{.slide-title}
+
+<hr>
+
+[Twelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:]{.body-text-m}
+
+[8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27]{.body-text-m}
+
+✏️ 
+
+---
+
+## {#histogram-example data-menu-title="Histogram example"}
+
+[Histogram example]{.slide-title}
+
+<hr>
+
+[Twelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:]{.body-text-m}
+
+[8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27]{.body-text-m}
+
+:::: {.columns}
+::: {.column width="40%"}
+Using bins of width 5 cm:
+
+| Bin (cm) | Count |
+|:---:|:---:|
+| [5, 10)  | 2 |
+| [10, 15) | 4 |
+| [15, 20) | 4 |
+| [20, 25) | 1 |
+| [25, 30) | 1 |
+:::
+
+::: {.column width="60%"}
 ```{r}
-#| echo: false 
+#| echo: false
 #| out-width: "100%"
 #| fig-align: "center"
 library(tidyverse)
-library(palmerpenguins)
-penguins %>% 
-  filter(species == "Chinstrap") |> 
-  ggplot(aes(x = flipper_length_mm)) +
-  geom_histogram(bins = 18) +
+dbh <- c(8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27)
+ggplot(data.frame(dbh), aes(x = dbh)) +
+  geom_histogram(breaks = seq(5, 30, by = 5), color = "white") +
+  labs(x = "DBH (cm)", y = "Count") +
   theme(
     axis.text = element_text(size = 18),
     axis.title = element_text(size = 20)
   )
 ```
+:::
+::::
+
+---
+
+## {#histogram-exercise data-menu-title="Exercise: histogram"}
+
+[Exercise]{.slide-title}
+
+<hr>
+
+✏️ [Ten storm events produced these wave heights, in meters. Using bins of width 1 m (starting at 0), tally the counts and sketch the resulting histogram.]{style="color:green;"}
+
+<br>
+
+[0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6]{style="color:green;"}
+
+---
+
+## {#histogram-exercise-solution data-menu-title="Exercise: histogram"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+✏️ [Ten storm events produced these wave heights, in meters. Using bins of width 1 m (starting at 0), tally the counts and sketch the resulting histogram.]{style="color:green;"}
+
+<br>
+
+[0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6]{style="color:green;"}
+
+
+:::: {.columns}
+::: {.column width="40%"}
+| Bin (m) | Count |
+|:---:|:---:|
+| [0, 1) | 1 |
+| [1, 2) | 4 |
+| [2, 3) | 3 |
+| [3, 4) | 2 |
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+waves <- c(0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6)
+ggplot(data.frame(waves), aes(x = waves)) +
+  geom_histogram(breaks = seq(0, 4, by = 1), color = "white") +
+  labs(x = "Wave height (m)", y = "Count") +
+  theme(
+    axis.text = element_text(size = 18),
+    axis.title = element_text(size = 20)
+  )
+```
+:::
+::::
+
+---
+
+## {#quartiles data-menu-title="Quartiles"}
+
+[Quartiles]{.slide-title}
+
+<hr>
+
+**Quartiles** divide an ordered dataset into four equal parts.
+
+::: {.body-text-m}
+- $Q_1$ (1st quartile): 25% of values fall below this point
+- $Q_2$ (2nd quartile): the **median**: 50% of values fall below this point
+- $Q_3$ (3rd quartile): 75% of values fall below this point
+:::
+
+
+**One simple way to find them:**
+
+1. Order the data and find the median ($Q_2$): this splits the data into a lower half and an upper half
+2. $Q_1$ = median of the lower half
+3. $Q_3$ = median of the upper half
+
+---
+
+## {#quartiles-example-blank data-menu-title="Quartiles"}
+
+[Quartiles]{.slide-title}
+
+<hr>
+
+✏️ [Find $Q_1, Q_2,$ and $Q_3$ for the values 6, 2, 12, 8, 14, 10, 16]{style="color:green;"}
+
+::: {.notes}
+Lower half: 2, 4, 6, 8 → Q1 = 5
+Upper half: 10, 12, 14, 16 → Q3 = 13
+Median (Q2) = (8+10)/2 = 9
+:::
 
 ---
 
@@ -384,48 +514,72 @@ knitr::include_graphics("images/boxplot.png")
 
 ---
 
-## {#boxplot-ex data-menu-title="tbd"} 
+## {#boxplot-interpret data-menu-title="Exercise: interpret boxplots"}
 
-[Boxplot example:]{.slide-title}
+[Exercise: interpreting boxplots]{.slide-title}
 
 <hr>
 
-<br>
+✏️ [Two farms are monitored for nitrate concentration (mg/L) in their downstream runoff. Compare the two distributions below.]{style="color:green;"}
 
 ```{r}
-#| echo: true
+#| echo: false
 #| warning: false
-#| message: false
-#| out-width: "100%"
+#| out-width: "80%"
 #| fig-align: "center"
-# create vectors of Tallie & Molly miles logged ----
-tallie <- c(1.0, 1.2, 1.8, 2.1, 2.4, 2.9, 3.4, 4.7, 5.1, 5.6, 7.8, 10.4, 15.4)
-molly <- c(0.5, 0.4, 1.1, 1.2, 3.2, 2.1, 3.3, 2.3, 0.7, 0.9, 1.9, 3.5, 1.9)
+farmA <- c(1.2, 1.5, 1.6, 1.8, 2.0, 2.1, 2.3, 2.5, 2.6, 2.8)
+farmB <- c(1.8, 2.2, 2.6, 3.0, 3.4, 3.8, 4.2, 4.6, 5.0, 9.5)
 
-# turn vectors into a data frame that can be plotted ----
-dog_miles <- data.frame(tallie, molly) |> 
-  pivot_longer(cols = c(tallie, molly), names_to = "name", values_to = "miles")
+nitrate <- data.frame(farm = rep(c("Farm A", "Farm B"), each = 10),
+                       nitrate_mgL = c(farmA, farmB))
 
-# make boxplot of Tallie vs. Molly miles ----
-ggplot(data = dog_miles, aes(x = miles, y = name)) +
-  geom_boxplot()
+ggplot(nitrate, aes(x = nitrate_mgL, y = farm)) +
+  geom_boxplot() +
+  labs(x = "Nitrate concentration (mg/L)", y = NULL) +
+  theme(
+    axis.text = element_text(size = 18),
+    axis.title = element_text(size = 20)
+  )
 ```
+
+:::{style="color:green;"}
+- Which farm's runoff has the higher median nitrate concentration?
+- Which farm's readings are more spread out?
+- Is there anything unusual in either distribution?
+:::
 
 ---
 
-## {#scatterplots data-menu-title="Scatterplots"} 
+## {#boxplot-interpret-solution data-menu-title="Exercise: interpret boxplots"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's discuss!]{style="color:green;"}
+
+::: {.body-text-m}
+- **Median:** Farm B's median (~3.6 mg/L) is noticeably higher than Farm A's (~2.05 mg/L)
+- **Spread:** Farm B's box and whiskers cover a much wider range, so its runoff is more variable
+- **Outlier:** Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating as a possible one-time event.
+:::
+
+---
+
+## {#scatterplots data-menu-title="Scatterplots"}
 
 [Scatterplots]{.slide-title}
 
 <hr>
 
-[Always, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.]{.body-text-m}
+A scatterplot shows the relationship between **two numeric variables**: each observation becomes a point, positioned using its value on the $x$-axis and its value on the $y$-axis. A third (categorical) variable can be mapped to color or shape.
 
 <br>
 
+
 ```{r}
 #| eval: true
-#| echo: true
+#| echo: false
 #| out-width: "100%"
 #| fig-align: "center"
 
@@ -433,6 +587,9 @@ ggplot(data = palmerpenguins::penguins, aes(x = bill_depth_mm, y = bill_length_m
   geom_point(aes(color = species))
 ```
 
+:::{.center-text .teal-text}
+Always, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.
+:::
 ---
 
 ## {#summarizing-numerically data-menu-title="Summarizing numberically"} 
