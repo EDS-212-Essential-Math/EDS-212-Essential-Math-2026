@@ -1,7 +1,7 @@
 ---
-title: "Linear algebra and summary statistics"
+title: "Distributions and summary statistics"
 subtitle: "Day 4"
-description: "Thursday August 7^th^, 2025"
+description: "Thursday August 6^th^, 2025"
 ---
 
 ```{r}
@@ -19,11 +19,10 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 
 ## Class materials
 
-| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  {{< fa laptop-code title="A laptop with on-screen code" >}} Interactive session |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| day 4 / morning   | [Linear algebra continued](slides/day4.1-slides.qmd){target="_blank"} | [Linear algebra continued - vectors, matrices, a Leslie matrix example](interactive-sessions/interactive-session-4a.qmd) |
-| day 4 / afternoon | [Essential summary statistics and describing data](slides/day4.2-slides.qmd){target="_blank"} | [Data exploration and summary statistics - getting started](interactive-sessions/interactive-session-4b.qmd) |
-: {.hover .bordered tbl-colwidths="[20,40,40]"} 
+| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | 
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| day 4 / morning   | [Essential summary statistics and describing data](slides/day4.1-slides.qmd){target="_blank"} | 
+| day 4 / afternoon |  | 
 
 ## End-of-day practice
 

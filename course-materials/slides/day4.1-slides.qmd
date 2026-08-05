@@ -13,527 +13,108 @@ format:
 
 [EDS 212: Day 4, Lecture 1]{.custom-title}
 
-[*Linear algebra continued*]{.custom-subtitle}
+[*Essential summary statistics and exploration*]{.custom-subtitle}
 
 <hr class="hr-teal">
 
-[August 7^th^, 2025]{.custom-subtitle3}
+[August 6^th^, 2025]{.custom-subtitle3}
 
 ---
 
-## {#part1 data-menu-title="Part 1"} 
+## {#data-types-title data-menu-title="Summation Notation" background-color="#003660"}
 
-[Part 1: Linear algebra continued]{.slide-title}
+<div class="page-center">
+<div class="custom-subtitle">Data types</div>
+</div>
+
+---
+
+## {#data-types-1 data-menu-title="Data types"} 
+
+[Data types]{.slide-title}
 
 <hr>
 
-<br>
 
-::: {.body-text-m}
-- Refresher: vectors and working with them
-- Matrices: notation, language, basic algebra
-- Representing systems of equations with matrices
-- Linear algebra in environmental science
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::{.center-text}
+[**Quantitative** ]{.body-text-l}
+
+[Numeric information]{.body-text-l}
 :::
-
----
-
-## {#matrices data-menu-title="matrices"} 
-
-[Matrices]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-m}
-A matrix is a table of values (multiple vectors in combination). A vector, therefore, can be thought of as a matrix with a single column. 
-
-<br>
-
-- **Dimensions:** the size of the matrix, in rows x columns (*m* x *n*)
-- **Elements:** values in a matrix, often denoted symbolically with a subscript where the first number is the *row* and the second number is the *column* (e.g. $a_{34}$ indicates the element in row 3, column 4)
-:::
-
----
-
-## {#matrix-algebra data-menu-title="Matrix algebra"} 
-
-[Matrix algebra (add / subtract)]{.slide-title}
-
-<hr>
-
-<br>
-
-<!-- [Addition & subtraction]{.body-text-l} -->
-
-[Add or subtract the corresponding elements (by matrix position) to create a new matrix of the same dimensions.]{.body-text-l}
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/matrix_addition.png")
-```
-
----
-
-## {#scalar-mult data-menu-title="Scalar multiplication"} 
-
-[Scalar multiplication]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-m}
-To multiply a matrix by a *scalar*, multiply each element in the matrix by the scalar to get a scaled matrix of the same dimensions.
-
-<br>
-
-For example: 
-:::
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/scalar_multiplier.png")
-```
-
----
-
-## {#dot-product data-menu-title="Dot product"} 
-
-[Recall: dot product]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-The dot product of two vectors is the sum of their elements multiplied:
-
-<br>
-
-For $\vec a =[1,5]$ and $\vec b = [2,-3]$:
-
-<br>
-
-$$\vec a \cdot \vec b=(1)(2)+(5)(-3)=-13$$
-:::
-
----
-
-## {#matrix-mult data-menu-title="Matrix multiplication"} 
-
-[Matrix multiplication]{.slide-title}
-
-<hr>
-
-<br>
-
-[We find the *dot product* of row $\cdot$ column vectors:]{.body-text-l}
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/matrix_multiplication.png")
-```
-
----
-
-## {#practice data-menu-title="Pratice"} 
-
-[Practice problems]{.slide-title}
-
-<hr>
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/matrix_multiplication_problem_1.png")
-```
-
-::: {.notes}
-(2)(1)+(-1)(6)...(2)(5)+(-1)(-3)
-
-(0)(1)+(4)(6)...(0)(5)+(4)(-3)
-
-$solution = \begin{bmatrix}
-  -4 & 13 \\
-  24 & -12
-\end{bmatrix}$
 
 :::
 
----
 
-## {#crit-thinking data-menu-title="Critical thinking"} 
+::: {.column width="50%"}
 
-[Critical thinking: Matrices with unequal dimensions]{.slide-title}
+:::{.center-text}
+[**Qualitative** ]{.body-text-l}
 
-<hr>
-
-<br>
-
-[What do you think the output matrix would contain if you were multiplying the following?]{.body-text-m} 
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/matrix_multiplication_unequal.png")
-```
-
-::: {.notes}
-The resulting matrix has dimensions which are equal to the number of the rows of the first matrix and the number of columns of the second matrix.
-
-AG+BI+CK...AH+BJ+CL
-
-DG+EI+FK...DH+EJ+FL
+[Descriptions (usually words)]{.body-text-l}
 :::
-
----
-
-## {#try-one data-menu-title="Try one"} 
-
-[Let's try one!]{.slide-title}
-
-<hr>
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/matrix_multiplication_practice_2.png")
-```
-
-::: {.notes}
-(0)(-1)+(2)(5)+(-1)(-3)...(0)(0)+(2)(1)+(-1)(6)
-
-(3)(-1)+(4)(5)+(-2)(-3)...(3)(0)+(4)(1)+(-2)(6)
-
-$solution = \begin{bmatrix}
-  13 & -4 \\
-  23 & -8
-\end{bmatrix}$
 
 :::
 
----
+:::
 
-## {#diagonal-matrix data-menu-title="Diagonal matrix"} 
-
-[Diagonal matrix]{.slide-title}
-
-<hr>
-
-<br>
-
-[A **diagonal matrix** is (almost always) a square matrix ($m$ = $n$) where only elements on the diagonal are non-zero values.]{.body-text-m}
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/diagonal_matrix.png")
-```
 
 ---
 
-## {#mult-diag-matrix data-menu-title="Multiply by diagonal matrix"} 
+## {#data-types-2 data-menu-title="Data types"} 
 
-[What happens when we multiply a matrix by a diagonal matrix? ]{.slide-title}
-
-<hr>
-
-<br>
-
-[A diagonal matrix is also called a *scaling matrix* because it scales rows proportionally, but not by the same value:]{.body-text-m}
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/diagonal_matrix_scaling.png")
-```
-
----
-
-## {#sys-eq data-menu-title="Systems of equations"} 
-
-[Matrices as systems of equations]{.slide-title}
+[Data types]{.slide-title}
 
 <hr>
 
-[Often in environmental data science, we have multiple equations representing processes. Matrices give us a way to express these *systems of equations* in data structures that are easy to store and work with in data science. For example, let's say we have a system: 
-]{.body-text-m}
 
-<br>
+:::: {.columns}
 
-::: {.body-text-l}
-$$3x-8y=5$$
+::: {.column width="50%"}
 
-$$x + 2y = 10$$
+:::{.center-text}
+[**Quantitative** ]{.body-text-l}
+
+[Numeric information]{.body-text-l}
 :::
 
 <br>
 
-::: {.center-text .body-text-m}
-How can we write this using matrices? 
+- **Continuous:** measured values, variable can take *any value* within a range
+- **Discrete:** variable only takes *limted values* (e.g. counts)
+:::
+
+
+::: {.column width="50%"}
+
+:::{.center-text}
+[**Qualitative** ]{.body-text-l}
+
+[Descriptions (usually words)]{.body-text-l}
+:::
+
+<br>
+
+- **Nominal:** order does not matter (classes or categories)
+- **Ordinal:** order matters, but the difference between values isn't known or equal (e.g. [Likert Scale](https://en.wikipedia.org/wiki/likert_scale))
+:::
+
+:::
+
+<br>
+
+:::{.center-text}
+- **Binary:** only two possible outcomes (yes/no, true/false, 1/0)
 :::
 
 ---
 
-## {#rewrite data-menu-title="Rewrite"} 
+## {#quantitative data-menu-title="Quantitative data"} 
 
-[Rewriting in matrix form:]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-$$3x-8y=5$$
-
-$$x + 2y = 10$$
-:::
-
-<br>
-
-[The matrix form of this system of equations looks as follows: ]{.body-text-m}
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/system_equations.png")
-```
-
-::: {.notes}
-We can write systems of equations in matrix form as $Ax=b$, where:
-
-- $A$ is the coefficient matrix
-- $x$ is the vector of variables
-- $b$ is the constant vector
-
-1. Identify coefficients to form matrix $A$, where each row corresponds to the coefficients of one equation:
-
-$$A = \begin{bmatrix}
-  3 & -8 \\
-  1 & 2
-\end{bmatrix}$$
-
-2. Form the variable vector $x$ which contains the variables of the system:
-
-$$x = \begin{bmatrix}
- x \\
-  y
-\end{bmatrix}$$
-
-3. Form the constant vector $b$
-$$b = \begin{bmatrix}
- 5 \\
- 10
-\end{bmatrix}$$
-
-:::
-
----
-
-## {#env-sci-examples data-menu-title="Environmental science examples"} 
-
-[Example: matrices and linear algebra in environmental science]{.slide-title}
-
-<hr>
-
-<br>
-<br>
-
-[Leslie Matrix: Population ecology]{.body-text-xl}
-
-<br>
-
-[A matrix model that accounts for survival / fecundity rates at different life stages for a species.]{.body-text-l} 
-
-::: {.notes}
-The Leslie matrix is one of the most well-known ways to describe the growth of populations (and their projected age distribution), in which a population is:
-
-- closed to migration, 
-- growing in an unlimited environment, 
-- and where only one sex, usually the female, is considered.
-:::
-
---- 
-
-## {#overview data-menu-title="overview"} 
-
-[Overview:]{.slide-title}
-
-<hr>
-
-::: {.body-text-m}
-- Define life stages
-
-- Estimate probability of survival / reproduction at different life stages to create a matrix over time
-
-- Combine into a matrix that allows calculation at the next time step
-:::
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/leslie_matrix.jpg")
-```
-
----
-
-## {#est-as-eq1 data-menu-title="Estimates as equations 1"} 
-
-[Writing estimates as equations:]{.slide-title}
-
-<hr>
-
-<br>
-
-[For our species, each adult female will lay ~600 eggs during each cycle (let's say that's a year). Which means that the eggs at time $t+1$ can be estimated by the number of adult females * 600:]{.body-text-m}
-
-<br>
-
-[$$E_{t+1}=600 * F_t$$]{.body-text-l}
-
----
-
-## {#est-as-eq2 data-menu-title="Estimates as equations 2"} 
-
-[Writing estimates as equations:]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-$$E_{t+1}=600 * F_t$$
-
-<br>
-
-We also estimate that 20% of eggs survive to reach larval stage:
-
-<br>
-
-$$L_{t+1} = 0.2*E_t$$
-:::
-
----
-
-## {#est-as-eq3 data-menu-title="Estimates as equations 3"} 
-
-[Writing estimates as equations:]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-$$E_{t+1}=600 * F_t$$
-$$L_{t+1} = 0.2*E_t$$
-
-<br>
-
-We also estimate that 8% of those that reach larval stage will survive to become reproducing female adults:
-
-<br>
-
-$$F_{t+1}=0.08*L_t$$
-:::
-
----
-
-## {#in-matrix-form1 data-menu-title="Write in matrix form 1"} 
-
-[How can we write this in matrix form?]{.slide-title}
-
-<hr>
-
-::: {.body-text-l}
-$$E_{t+1}=600 * F_t$$
-
-$$L_{t+1} = 0.2*E_t$$
-
-$$F_{t+1}=0.08*L_t$$
-:::
-
-::: {.notes}
-The Leslie matrix (L) will be a 3x3 matrix since we have three stages (Eggs, Larvae, Adults).
-
-Each column represents an age class at time $t$
-
-1. **Fecundity (Top Row):** The third element of the top row is 600 because adult females contribute to the number of eggs in the next generation.
-
-2. **Survival Rates (Sub-diagonal):**
-- The first element in the second row (0.2) represents the probability of an egg surviving to become a larva.
-- The second element in the third row (0.08) represents the probability of a larva surviving to become an adult female.
-:::
-
----
-
-## {#in-matrix-form2 data-menu-title="Write in matrix form 2"} 
-
-[How can we write this in matrix form?]{.slide-title}
-
-<hr>
-
-::: {.body-text-l}
-$$E_{t+1}=600 * F_t$$
-
-$$L_{t+1} = 0.2*E_t$$
-
-$$F_{t+1}=0.08*L_t$$
-:::
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/leslie_matrix_blank.png")
-```
-
----
-
-## {#leslie-matrix data-menu-title="Leslie matrix"} 
-
-[Leslie matrix]{.slide-title}
+[Quantitative data: continuous & discrete]{.slide-title}
 
 <hr>
 
@@ -542,31 +123,1052 @@ knitr::include_graphics("images/leslie_matrix_blank.png")
 #| echo: false
 #| out-width: "100%"
 #| fig-align: "center"
-knitr::include_graphics("images/leslie_matrix_values.png")
+knitr::include_graphics("images/quantitative_data.jpeg")
 ```
-
----
-
-## {#leslie-matrix-notes data-menu-title="Leslie matrix (notes)"} 
-
-[Leslie matrix]{.slide-title}
-
-<hr>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/leslie_matrix_values.png")
-```
-
-- Each column is the age class at time $t$ and each row is the age class at time $t+1$
-- Each entry represents a transition, or change in the # of individuals, from one age class to the next
-- Fertilities are always in the first row, and represent the contributions to newborns from reproduction 
-- Survival probabilities are always in the subdiagonal and represent transitions from one age class to the next
-- All other entries are 0 because no other transitions are possible -- individuals cannot remain in the same age class from one year to the next, nor can they skip or repeat age classes
 
 ::: {.footer}
-See [A Primer of Ecology](https://global.oup.com/academic/product/a-primer-of-ecology-9780878933181?cc=ca&lang=en&), by Nicholas J. Gotelli
+Art by [Allison Horst](https://allisonhorst.com/)
 :::
+
+---
+
+## {#nom-ord-bin data-menu-title="Nominal, ordinal, binary data"} 
+
+[Nominal, ordinal, binary data:]{.slide-title}
+
+<hr>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/data_types.jpeg")
+```
+
+::: {.footer}
+Art by [Allison Horst](https://allisonhorst.com/)
+:::
+
+---
+
+## {#exercise-describe-data data-menu-title="Exercise: describe data"} 
+
+[Exercise]{.slide-title}
+
+<hr>
+
+✏️ [For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous), and identify the size of the observed dataset.]{style="color:green;"}
+
+<br>
+
+(A) A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.
+
+(B) We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.
+
+---
+
+## {#exercise-describe-data-sol-A-blank data-menu-title="Exercise: describe data"} 
+
+[Exercise A: Solution]{.slide-title}
+
+<hr>
+
+[A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.]{style="color:green;"}
+
+✏️   
+
+---
+
+## {#exercise-describe-data-sol-A data-menu-title="Exercise: describe data"} 
+
+[Exercise A: Solution]{.slide-title}
+
+<hr>
+
+[A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.]{style="color:green;"}
+
+- Dependent variable: nitrogen threshold exceeded — qualitative, binary
+- Independent variables:
+  - Fertilizer application rate — quantitative, continuous
+  - % agricultural land cover — quantitative, continuous
+  - Monthly rainfall — quantitative, continuous
+
+Sample size: n = 45 watersheds
+
+---
+
+## {#exercise-describe-data-sol-B-blank data-menu-title="Exercise: describe data"} 
+
+[Exercise B: Solution]{.slide-title}
+
+<hr>
+
+[We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.]{style="color:green;"}
+
+✏️   
+
+---
+
+## {#exercise-describe-data-sol-B data-menu-title="Exercise: describe data"} 
+
+[Exercise B: Solution]{.slide-title}
+
+<hr>
+
+[We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.]{style="color:green;"}
+
+- Dependent variable: number of complaints filed — quantitative, discrete
+- Independent variables:
+  - Median household income — quantitative, continuous
+  - Distance to nearest industrial facility — quantitative, continuous
+  - Type of nearest industrial facility — qualitative, nominal
+  - % residents who are renters — quantitative, continuous
+  - PM2.5 concentration — quantitative, continuous
+
+Sample size: n = 60 neighborhoods
+
+---
+
+## {#data-dsitributions-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Basic data visualizations</div>
+<div class="custom-subtitle">Visualizations</div>
+</div>
+
+<!-- ---
+
+## {#data-dist data-menu-title="Data distributions"} 
+
+[Data distributions]{.slide-title}
+
+<hr>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/party_histograms.jpeg")
+```
+
+::: {.footer}
+Art by [Allison Horst](https://allisonhorst.com/)
+:::
+
+::: {.notes}
+Data distribution: it's shape, central tendencies, it's spread; we can use graphical representations of data that was collected from a sample or population
+:::
+ -->
+
+---
+
+## {#describe-dist data-menu-title="Describe data distributions"} 
+
+[How can we describe how data are distributed?]{.slide-title}
+
+<hr>
+
+<br>
+
+[Our starting points:]{.body-text-l} 
+
+<br>
+
+::: {.body-text-m}
+- Shape / patterns / clusters (data vizualization)
+- Central tendency (mean / median)
+- Spread & uncertainty (standard deviation / standard error / confidence interval)
+:::
+
+---
+
+## {#data-viz data-menu-title="Useful viz"} 
+
+[Useful data visualizations]{.slide-title}
+
+<hr>
+
+<br>
+
+::: {.body-text-m}
+
+Basic ones:
+
+- Histograms
+- Boxplots
+- Scatterplots 
+:::
+
+---
+
+## {#histogram data-menu-title="Histogram"}
+
+[Histogram]{.slide-title}
+
+<hr>
+
+<br>
+
+[A histogram shows the **distribution** of a single numeric variable, by grouping values into bins and counting observations.]{.body-text-m}
+
+<br>
+
+::: {.body-text-m}
+**To construct one:**
+
+1. Divide the range of the data into equal-width **bins**
+2. Count how many observations fall into each bin
+3. Draw a bar over each bin, with height equal to that count
+:::
+
+---
+
+## {#histogram-example-blank data-menu-title="Histogram example"}
+
+[Histogram example]{.slide-title}
+
+<hr>
+
+[Twelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:]{.body-text-m}
+
+[8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27]{.body-text-m}
+
+✏️ 
+
+---
+
+## {#histogram-example data-menu-title="Histogram example"}
+
+[Histogram example]{.slide-title}
+
+<hr>
+
+[Twelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:]{.body-text-m}
+
+[8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27]{.body-text-m}
+
+:::: {.columns}
+::: {.column width="40%"}
+Using bins of width 5 cm:
+
+| Bin (cm) | Count |
+|:---:|:---:|
+| [5, 10)  | 2 |
+| [10, 15) | 4 |
+| [15, 20) | 4 |
+| [20, 25) | 1 |
+| [25, 30) | 1 |
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+library(tidyverse)
+dbh <- c(8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27)
+ggplot(data.frame(dbh), aes(x = dbh)) +
+  geom_histogram(breaks = seq(5, 30, by = 5), color = "white") +
+  labs(x = "DBH (cm)", y = "Count") +
+  theme(
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26)
+  )
+```
+:::
+::::
+
+---
+
+## {#histogram-exercise data-menu-title="Exercise: histogram"}
+
+[Exercise]{.slide-title}
+
+<hr>
+
+✏️ [Ten storm events produced these wave heights, in meters. Using bins of width 1 m (starting at 0), tally the counts and sketch the resulting histogram.]{style="color:green;"}
+
+<br>
+
+[0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6]{style="color:green;"}
+
+---
+
+## {#histogram-exercise-solution data-menu-title="Exercise: histogram"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+✏️ [Ten storm events produced these wave heights, in meters. Using bins of width 1 m (starting at 0), tally the counts and sketch the resulting histogram.]{style="color:green;"}
+
+<br>
+
+[0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6]{style="color:green;"}
+
+
+:::: {.columns}
+::: {.column width="40%"}
+| Bin (m) | Count |
+|:---:|:---:|
+| [0, 1) | 1 |
+| [1, 2) | 4 |
+| [2, 3) | 3 |
+| [3, 4) | 2 |
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+waves <- c(0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6)
+ggplot(data.frame(waves), aes(x = waves)) +
+  geom_histogram(breaks = seq(0, 4, by = 1), color = "white") +
+  labs(x = "Wave height (m)", y = "Count") +
+  theme(
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26)
+  )
+```
+:::
+::::
+
+---
+
+## {#quartiles data-menu-title="Quartiles"}
+
+[Quartiles]{.slide-title}
+
+<hr>
+
+**Quartiles** divide an ordered dataset into four equal parts.
+
+::: {.body-text-m}
+- $Q_1$ (1st quartile): 25% of values fall below this point
+- $Q_2$ (2nd quartile): the **median**: 50% of values fall below this point
+- $Q_3$ (3rd quartile): 75% of values fall below this point
+:::
+
+
+**One simple way to find them:**
+
+1. Order the data and find the median ($Q_2$): this splits the data into a lower half and an upper half
+2. $Q_1$ = median of the lower half
+3. $Q_3$ = median of the upper half
+
+---
+
+## {#quartiles-example-blank data-menu-title="Quartiles"}
+
+[Quartiles]{.slide-title}
+
+<hr>
+
+✏️ [Find $Q_1, Q_2,$ and $Q_3$ for the values 4, 16, 8, 40, 2, 14, 6, 10, 12]{style="color:green;"}
+
+::: {.notes}
+Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40
+Median (Q2) = 10
+Lower half: 2, 4, 6, 8 (four values) → Q1 = (4+6)/2 = 5
+Upper half: 12, 14, 16, 40 (four values) → Q3 = (14+16)/2 = 15
+:::
+
+---
+
+## {#quartiles-example data-menu-title="Quartiles"}
+
+[Quartiles: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+[Find $Q_1, Q_2,$ and $Q_3$ for the values 4, 16, 8, 40, 2, 14, 6, 10, 12]{style="color:green;"}
+
+<br>
+
+::: {.body-text-m}
+Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40
+
+- $Q_2$ (median): 10
+- Lower half: 2, 4, 6, 8 — an **even** number of values, so $Q_1$ is the average of the middle two: $Q_1 = \frac{4+6}{2} = 5$
+- Upper half: 12, 14, 16, 40 — again an even number of values: $Q_3 = \frac{14+16}{2} = 15$
+:::
+
+---
+
+## {#boxplot1 data-menu-title="Boxplot 1"}
+
+[Boxplot]{.slide-title}
+
+<hr>
+
+<br>
+
+::: {.body-text-m}
+**How it's drawn:**
+
+1. Draw a box from $Q_1$ to $Q_3$: this box spans the **interquartile range**:
+$$IQR = Q_3 - Q_1$$
+2. Draw a line inside the box at the median ($Q_2$)
+3. Draw whiskers extending to the furthest observation within $1.5 \times IQR$ of the box
+4. Plot any observation beyond the whiskers individually, as a dot (an **outlier**)
+:::
+
+---
+
+## {#boxplot2 data-menu-title="Boxplot 2"}
+
+[Boxplot]{.slide-title}
+
+<hr>
+
+```{r}
+#| echo: false
+#| eval: true
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/boxplot.png")
+```
+
+---
+
+## {#boxplot-draw-blank data-menu-title="Exercise: draw a box plot"}
+
+[Exercise: draw a box plot]{.slide-title}
+
+<hr>
+
+✏️ [Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 ($Q_1=5$, $Q_2=10$, $Q_3=15$), draw the box plot by hand.]{style="color:green;"}
+
+---
+
+## {#boxplot-draw data-menu-title="Exercise: draw a box plot"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+:::: {.columns}
+::: {.column width="40%"}
+::: {.body-text-m}
+- $Q_1$: 5
+- Median ($Q_2$): 10
+- $Q_3$: 15
+- $IQR = 15-5 = 10$
+- $Q_3 + 1.5 \times IQR = 15+15 = 30$
+- 40 is beyond that value, so it's an **outlier** — the whisker stops at 16, the last value within $1.5 \times IQR$ of the box
+:::
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+five_num <- data.frame(xmin = 2, xlower = 5, xmiddle = 10, xupper = 15, xmax = 16)
+points <- data.frame(x = c(2, 4, 6, 8, 10, 12, 14, 16, 40), y = "")
+
+ggplot(five_num, aes(y = "")) +
+  geom_boxplot(
+    aes(xmin = xmin, xlower = xlower, xmiddle = xmiddle, xupper = xupper, xmax = xmax),
+    stat = "identity", width = 0.4
+  ) +
+  geom_point(
+    data = points, aes(x = x, y = y),
+    position = position_jitter(width = 0, height = 0.15),
+    size = 3, alpha = 0.7, color = "steelblue"
+  ) +
+  labs(x = "Value", y = NULL) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26)
+  )
+```
+:::
+::::
+
+---
+
+## {#boxplot-interpret data-menu-title="Exercise: interpret boxplots"}
+
+[Exercise: interpreting boxplots]{.slide-title}
+
+<hr>
+
+✏️ [Two farms are monitored for nitrate concentration (mg/L) in their downstream runoff. Compare the two distributions below.]{style="color:green;"}
+
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "80%"
+#| fig-align: "center"
+farmA <- c(1.2, 1.5, 1.6, 1.8, 2.0, 2.1, 2.3, 2.5, 2.6, 2.8)
+farmB <- c(1.8, 2.2, 2.6, 3.0, 3.4, 3.8, 4.2, 4.6, 5.0, 9.5)
+
+nitrate <- data.frame(farm = rep(c("Farm A", "Farm B"), each = 10),
+                       nitrate_mgL = c(farmA, farmB))
+
+ggplot(nitrate, aes(x = nitrate_mgL, y = farm)) +
+  geom_boxplot() +
+  labs(x = "Nitrate concentration (mg/L)", y = NULL) +
+  theme(
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26)
+  )
+```
+
+:::{style="color:green;"}
+- Which farm's runoff has the higher median nitrate concentration?
+- Which farm's readings are more spread out?
+- Is there anything unusual in either distribution?
+:::
+
+---
+
+## {#boxplot-interpret-solution data-menu-title="Exercise: interpret boxplots"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's discuss!]{style="color:green;"}
+
+::: {.body-text-m}
+- **Median:** Farm B's median (~3.6 mg/L) is noticeably higher than Farm A's (~2.05 mg/L)
+- **Spread:** Farm B's box and whiskers cover a much wider range, so its runoff is more variable
+- **Outlier:** Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating as a possible one-time event.
+:::
+
+---
+
+## {#scatterplots data-menu-title="Scatterplots"}
+
+[Scatterplots]{.slide-title}
+
+<hr>
+
+A scatterplot shows the relationship between **two numeric variables**: each observation becomes a point, positioned using its value on the $x$-axis and its value on the $y$-axis. A third (categorical) variable can be mapped to color or shape.
+
+<br>
+
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+ggplot(data = palmerpenguins::penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species)) +
+  labs(x = "Bill depth (mm)", y = "Bill length (mm)", color = "Species") +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26),
+    legend.text = element_text(size = 20),
+    legend.title = element_text(size = 22)
+  )
+```
+
+:::{.center-text .teal-text}
+Always, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.
+:::
+---
+
+## {#break data-menu-title="5 minute break"} 
+
+[Let's take a 5 minute break]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/coffee-break.png)
+
+---
+
+## {#numerical-summaries-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Summarizing data numerically</div>
+</div>
+
+---
+
+
+## {#summarizing-numerically data-menu-title="Summarizing numberically"} 
+
+[Summarizing data numerically]{.slide-title}
+
+<hr>
+
+<br>
+
+::: {.body-text-m}
+- Central tendency
+- Variance and standard deviation
+- Standard error
+- Confidence interval
+:::
+
+---
+
+## {#median data-menu-title="Median"} 
+
+[Median]{.slide-title}
+
+<hr>
+
+[Middle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. $median\;of\;3, 7, 17 = 7$]{.body-text-m}
+
+<br>
+
+[**Pros:**]{.body-text-l}
+
+::: {.body-text-m}
+- Less susceptible to skew and outliers
+- Better as sample size increases
+:::
+
+<br>
+
+[**Cons:**]{.body-text-l}
+
+::: {.body-text-m}
+- Doesn't take into account the magnitude of all values
+:::
+
+---
+
+## {#mean data-menu-title="Mean"} 
+
+[Mean]{.slide-title}
+
+<hr>
+
+[Average value of sample observations, calculated by summing all observation values and dividing by the number of observations. E.g. $mean\;of\;3, 7, 17 = \frac{3+7+17}{3} = 9$]{.body-text-m}
+
+<br>
+
+[**Pros:**]{.body-text-l}
+
+::: {.body-text-m}
+  - Average value is often useful metric
+  - Commonly reported
+:::
+
+[**Cons:**]{.body-text-l}
+
+::: {.body-text-m}
+- Susceptible to outliers and skew 
+- Subject to misinterpretation as "most likely value"
+:::
+ 
+::: {.notes}
+SB housing market typically reports median cost rather than mean cost? Why do you think that is?
+:::
+
+---
+
+## {#central-tendency data-menu-title="Central tendency"}
+
+<br>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/central_tendency.jpg")
+```
+
+<br>
+
+::: {.footer}
+Image: Sirkin, R. M. (2006). Measuring central tendency. In Statistics for the social sciences (pp. 83-126). SAGE Publications, Inc., <https://www.doi.org/10.4135/9781412985987>
+:::
+
+---
+
+## {#var-stdev data-menu-title="Variance & standard dev"} 
+
+[Variance and standard deviation]{.slide-title}
+
+<hr>
+
+<br>
+
+[Both are measures of **data spread**.]{.body-text-l}
+
+<br>
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.center-text}
+**Variance**
+
+Reported in units of measurement squared
+:::
+
+$$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}$$
+
+:::
+
+::: {.column width="50%"}
+::: {.center-text}
+**Standard deviation**
+
+Reported in units of measurement
+:::
+
+$$ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}$$
+
+:::
+::::
+
+::: {.notes}
+Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret -- for example it's more intuitive to report that a group of people's heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches. 
+
+Variances add (standard deviation doesn't). For example, if we say that sex explains four square inches of variance, you know that 5 square inches are due to other factors.
+
+See [this discussion](https://stats.stackexchange.com/questions/35123/whats-the-difference-between-variance-and-standard-deviation) and [this discussion](https://www.quora.com/When-should-one-use-variance-instead-of-standard-deviation-given-that-both-numbers-measure-the-same-thing)
+
+The variance measures the mathematical dispersion of data relative to the mean, and while theoretically correct, can be difficult to interpret in a real-world sense. Standard deviation is expressed in the same unit of measurement as the data (e.g. inches, rather than square inches), and therefore can be a more intuitive value to report.
+:::
+
+---
+
+## {#variance-blank data-menu-title="Variance"} 
+
+[Variance]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
+## {#variance data-menu-title="Variance"} 
+
+[Variance]{.slide-title}
+
+<hr>
+
+[**Variance:** Mean squared distance of observations from the mean]{.body-text-m}
+
+<br>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "60%"
+#| fig-align: "center"
+knitr::include_graphics("images/variance_equation.png")
+```
+
+<br>
+
+[Where $S^2$ is the sample variance, $x_i$ is a sample observation value, $\bar x$ is the sample mean, and $n$ is the number of observations.]{.body-text-m} 
+
+---
+
+## {#calc-variance-blank data-menu-title="Calculate variance 1"} 
+
+[Exercise]{.slide-title}
+
+<hr>
+
+:::{style="color:green;" .body-text-m}
+Given these data: $2, 4, 4, 6, 9$, calculate their variance. Remember:
+
+$$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}$$
+:::
+
+
+---
+
+## {#calc-variance1 data-menu-title="Calculate variance 1"} 
+
+[Calculate variance by hand (1/2)]{.slide-title}
+
+<hr>
+
+[Given these data: $2, 4, 4, 6, 9$]{.body-text-m}
+
+1. Calculate the mean:
+
+$$ mean = \frac{2+4+4+6+9}{5}=\frac{25}{5}=5$$
+2. Subtract the mean from each data point and square the result:
+
+$$(2-5)^2 = (-3)^2 = 9$$
+$$(4-5)^2 = (-1)^2 = 1$$
+$$(4-5)^2 = (-1)^2 = 1$$
+
+$$(6-5)^2 = (1)^2 = 1$$
+$$(9-5)^2 = (4)^2 = 16$$
+
+---
+
+## {#calc-variance2 data-menu-title="Calculate variance 2"} 
+
+[Calculate variance by hand (2/2)]{.slide-title}
+
+<hr>
+
+[Given these data: $2, 4, 4, 6, 9$]{.body-text-m}
+
+3. Sum the squared differences:
+
+$$9+1+1+1+16 = 28$$
+
+4. Divide by the number of data points minus 1 ($n$ - 1)
+
+$$Variance = \frac{28}{5-1} = 7$$
+
+---
+
+## {#stdev data-menu-title="Standard deviation"} 
+
+[Standard deviation]{.slide-title}
+
+<hr>
+
+[Also a measure of data spread, calculated by taking the square root of the variance.]{.body-text-m}
+
+:::{.body-text-m}
+$$ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}$$
+:::
+
+---
+
+## {#best-way data-menu-title="Best way"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.center-text .body-text-xl .teal-text}
+**The best way to describe the distribution of the data is to present the data itself.**
+:::
+
+
+---
+
+## {#datasaurus-dozen1 data-menu-title="Datasaurus Dozen 1"} 
+
+[Beware summary statistics alone . . .]{.slide-title}
+
+<hr>
+
+[Meet the Datasaurus Dozen]{.body-text-l}
+
+<br>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/dino_dozen.png")
+```
+
+---
+
+## {#datasaurus-dozen2 data-menu-title="Datasaurus Dozen 2"} 
+
+[Same summary statistics, different distributions]{.slide-title}
+
+<hr>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/Datasaurus-Dozen.gif")
+```
+
+::: {.footer}
+Source: [Autodesk](https://www.research.autodesk.com/publications/same-stats-different-graphs/)
+:::
+
+---
+
+{{< video https://www.youtube.com/watch?v=vJG698U2Mvo width="100%" height="100%" >}}
+
+---
+
+## {#gorilla data-menu-title="Gorilla"} 
+
+<br>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/gorilla.png")
+```
+
+<br>
+
+::: {.footer}
+From: Yanai, I., Lercher, M. A hypothesis is a liability. Genome Biol 21, 231 (2020). <https://doi.org/10.1186/s13059-020-02133-w>
+:::
+
+::: {.notes}
+Gave students a made-up dataset containing the BMI of 1786 people and the number of steps each took on a particular day. 
+
+Students in Group 1 were asked to consider three specific hypotheses + also if there was anything else they could conclude from the dataset. 
+
+Group 2 was simply asked, "What do you conclude from the dataset?"
+
+If you plotted the number of steps vs. BMI, you'd find the gorilla. Students driven by hypotheses skipped this step more often than those that were not hypothesis-driven.
+:::
+
+---
+
+## {#confidence-intervals-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Confidence intervals</div>
+</div>
+
+
+---
+
+## {#conf-int-1 data-menu-title="Confidence interval"} 
+
+[Confidence interval]{.slide-title}
+
+<hr>
+
+<br>
+
+[**Confidence interval:** a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.]{.body-text-m} 
+
+<br>
+
+---
+
+## {#conf-int-2 data-menu-title="Confidence interval"} 
+
+[Confidence interval]{.slide-title}
+
+<hr>
+
+<br>
+
+[**Confidence interval:** a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.]{.body-text-m} 
+
+<br>
+
+
+::: {.body-text-m}
+**What it's NOT:** 
+
+"There is a 95% chance that the true population parameter is between values X and Y." 
+:::
+
+---
+
+## {#conf-int-ex-1 data-menu-title="Confidence interval example"} 
+
+[Confidence interval example]{.slide-title}
+
+<hr>
+
+::: {.center-text}
+*Mean shark length is 8.42 $\pm$ 3.55 ft (mean $\pm$ standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).* 
+:::
+
+<br>
+
+::: {.body-text-m}
+What this **DOES NOT** mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet. 
+:::
+
+The true population mean is a *fixed value* and does not change -- the CI either contains this true mean or it does not. There is no probability involved.
+
+---
+
+## {#conf-int-ex-2 data-menu-title="Confidence interval example"} 
+
+[Confidence interval example]{.slide-title}
+
+<hr>
+
+::: {.center-text}
+*Mean shark length is 8.42 $\pm$ 3.55 ft (mean $\pm$ standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).* 
+:::
+
+<br>
+
+::: {.body-text-m}
+What this **DOES NOT** mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet. 
+:::
+
+The true population mean is a *fixed value* and does not change -- the CI either contains this true mean or it does not. There is no probability involved.
+
+<br>
+
+::: {.body-text-m}
+What this **DOES** mean: If we took a bunch of sets of samples from the population (all n = 15), then 95% of the time, the calculated mean would fall within this range.
+<!-- What this **DOES** mean: 95% of calculated confidence intervals for samples drawn from this population will contain the true population parameter. This CI could be one of the 95%. It could also be one of the 5% that does *not* contain the true population parameter! -->
+:::
+
+This statement correctly describes the frequency with which we would expect CIs to capture the mean over many samples.
+
+---
+
+## {#comm data-menu-title="Communicating data summaries"} 
+
+[Communicating data summaries]{.slide-title}
+
+<hr>
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%" .body-text-m}
+- The "Bar plots" philosophy: show as much as you can for the audience you're presenting to
+- Summary statistics are often useful, but are a small part of the whole data story
+- Uncertainty is important! How can we responsibly communicate it?
+- All summaries are strongest when accompanied by additional data communication
+:::
+::: {.column width="50%"}
+<br>
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+#| fig-alt: "Main text: 'Are your summary statistics hiding something?' On the left is a opaque gray bar plot with an error bar, looking mischievous while hiding individual data points in a net behind it. On the right is a transparent bar plot with an error bar, looking exposed, with individual data points exposed and dancing. The bottom four data points have arms that spell 'YMCA' as if dancing to the Village People."
+knitr::include_graphics("images/horst-bar-plot.png")
+```
+::: {.center-text .gray-text}
+Artwork by [Allison Horst](https://allisonhorst.com/)
+:::
+:::
+::::
+
+---
+
+## {#lunch-break data-menu-title="Lunch break"} 
+
+[Lunch break!]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/lunch-time.png)

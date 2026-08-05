@@ -1,5 +1,5 @@
 ---
-title: "Differential equations, intro to linear algebra"
+title: "Integrals, differential equations, intro to linear algebra"
 subtitle: "Day 3"
 description: "Wednesday August 5^th^, 2025"
 ---
@@ -25,13 +25,6 @@ knitr::include_graphics("images/whale-shark.png")
 | day 3 / afternoon | [Vectors and matrices](slides/day3.2-slides.qmd){target="_blank"} | 
 : {.hover .bordered tbl-colwidths="[20,40,40]"} 
 
-
-<!-- ## End-of-day practice
-
-Complete the following tasks / activities before heading home for the day!
-
-- [{{< fa pencil title="A pencil" >}} **Day 3 Practice:** Vectors by hand and in R, git practice](eod-practice/eod-day3.qmd) 
--->
 
 ## Additional Resources
 

@@ -219,21 +219,21 @@
   {
     "objectID": "course-materials/day4.html#class-materials",
     "href": "course-materials/day4.html#class-materials",
-    "title": "Linear algebra and summary statistics",
+    "title": "Distributions and summary statistics",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Interactive session\n\n\n\n\nday 4 / morning\nLinear algebra continued\nLinear algebra continued - vectors, matrices, a Leslie matrix example\n\n\nday 4 / afternoon\nEssential summary statistics and describing data\nData exploration and summary statistics - getting started"
+    "text": "Class materials\n\n\n\n Session\n Lecture slides\n\n\n\n\nday 4 / morning\nEssential summary statistics and describing data\n\n\nday 4 / afternoon"
   },
   {
     "objectID": "course-materials/day4.html#end-of-day-practice",
     "href": "course-materials/day4.html#end-of-day-practice",
-    "title": "Linear algebra and summary statistics",
+    "title": "Distributions and summary statistics",
     "section": "End-of-day practice",
     "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 4 Practice: Matrices and matrix algebra, exploring and summarizing data"
   },
   {
     "objectID": "course-materials/day4.html#additional-resources",
     "href": "course-materials/day4.html#additional-resources",
-    "title": "Linear algebra and summary statistics",
+    "title": "Distributions and summary statistics",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nIntro to matrix multiplication, by Khan Academy – a video on what it means to multiply two matrices, and an example\nLeslie Matrix Models – more examples; in particular, check out the American Bison Model section"
   },
@@ -1358,335 +1358,6 @@
     "text": "Another we’ll see often: %in%\n\n\n\n%in%: check for matching elements (not in order)*\n\nExample: We have two vectors of student names, and we want to know if any students (values) in eds212 are also in eds223: \n\n\n\neds212 &lt;- c(\"John\", \"Cara\", \"Will\", \"Zoe\")\neds223 &lt;- c(\"John\", \"Melissa\", \"Cara\", \"Joe\", \"Zoe\")\n\neds212 %in% eds223\n\n[1]  TRUE  TRUE FALSE  TRUE\n\n\n\n*Keep this in mind - the distinction between %in% and == is major and important."
   },
   {
-    "objectID": "course-materials/slides/day4.2-slides.html#title-slide",
-    "href": "course-materials/slides/day4.2-slides.html#title-slide",
-    "title": "",
-    "section": "",
-    "text": "EDS 212: Day 4, Lecture 2\nEssential summary statistics and exploration\n\nAugust 7th, 2025"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#data-types",
-    "href": "course-materials/slides/day4.2-slides.html#data-types",
-    "title": "",
-    "section": "",
-    "text": "Data types\n\n\n\n\nQuantitative: numeric information\nQualitative: descriptions (usually words)\n\n\n\nA bit deeper:\n\n\nContinuous: measured values, can take an infinite possible values for a variable\nDiscrete: can only have certain values (e.g. counts)\nOrdinal: order matters, but the difference between values isn’t known or equal (e.g. Likert Scale)\nBinary: only two possible outcomes (yes/no, true/false, 1/0)"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#quantitative",
-    "href": "course-materials/slides/day4.2-slides.html#quantitative",
-    "title": "",
-    "section": "",
-    "text": "Quantitative data: continuous & discrete\n\n\n\nArt by Allison Horst"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#nom-ord-bin",
-    "href": "course-materials/slides/day4.2-slides.html#nom-ord-bin",
-    "title": "",
-    "section": "",
-    "text": "Nominal, ordinal, binary data:\n\n\n\nArt by Allison Horst"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#data-dist",
-    "href": "course-materials/slides/day4.2-slides.html#data-dist",
-    "title": "",
-    "section": "",
-    "text": "Data distributions\n\n\n\nArt by Allison Horst\n\n\nData distribution: it’s shape, central tendencies, it’s spread; we can use graphical representations of data that was collected from a sample or population"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#describe-dist",
-    "href": "course-materials/slides/day4.2-slides.html#describe-dist",
-    "title": "",
-    "section": "",
-    "text": "How can we describe how data are distributed?\n\n\nOur starting points:\n\n\n\nShape / patterns / clusters (data vizualization)\nCentral tendency (mean / median)\nSpread & uncertainty (standard deviation / standard error / confidence interval)"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#data-viz",
-    "href": "course-materials/slides/day4.2-slides.html#data-viz",
-    "title": "",
-    "section": "",
-    "text": "Useful data visualizations\n\n\n\n\nHistograms\nBoxplots\nScatterplots\n\n\n\n\n…then get even more involved:\n\nBeeswarm\nMarginal plots\nRaincloud plots\nPairs plots"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#histogram",
-    "href": "course-materials/slides/day4.2-slides.html#histogram",
-    "title": "",
-    "section": "",
-    "text": "Histogram\n\n\n\nA histogram is a graph of the frequency of observations within a series of bins (usually of equal size) for a variable.\n\nExample: distribution of penguin flipper lengths for chinstrap penguins"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#boxplot1",
-    "href": "course-materials/slides/day4.2-slides.html#boxplot1",
-    "title": "",
-    "section": "",
-    "text": "Boxplot\n\n\nMost often:\n\n\n\nBox extends to 1st and 3rd quartile observation values\nLine at the median value\nWhiskers extend to last observation within 1 step (1 step = 1.5*interquartile range)\nAnything beyond whiskers indicated with a dot at the observation value"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#boxplot2",
-    "href": "course-materials/slides/day4.2-slides.html#boxplot2",
-    "title": "",
-    "section": "",
-    "text": "Boxplot"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#boxplot-ex",
-    "href": "course-materials/slides/day4.2-slides.html#boxplot-ex",
-    "title": "",
-    "section": "",
-    "text": "Boxplot example:\n\n\n\n# create vectors of Tallie & Molly miles logged ----\ntallie &lt;- c(1.0, 1.2, 1.8, 2.1, 2.4, 2.9, 3.4, 4.7, 5.1, 5.6, 7.8, 10.4, 15.4)\nmolly &lt;- c(0.5, 0.4, 1.1, 1.2, 3.2, 2.1, 3.3, 2.3, 0.7, 0.9, 1.9, 3.5, 1.9)\n\n# turn vectors into a data frame that can be plotted ----\ndog_miles &lt;- data.frame(tallie, molly) |&gt; \n  pivot_longer(cols = c(tallie, molly), names_to = \"name\", values_to = \"miles\")\n\n# make boxplot of Tallie vs. Molly miles ----\nggplot(data = dog_miles, aes(x = miles, y = name)) +\n  geom_boxplot()"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#scatterplots",
-    "href": "course-materials/slides/day4.2-slides.html#scatterplots",
-    "title": "",
-    "section": "",
-    "text": "Scatterplots\n\nAlways, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.\n\n\nggplot(data = palmerpenguins::penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species))"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#summarizing-numerically",
-    "href": "course-materials/slides/day4.2-slides.html#summarizing-numerically",
-    "title": "",
-    "section": "",
-    "text": "Summarizing data numerically\n\n\n\n\nCentral tendency\nVariance and standard deviation\nStandard error\nConfidence interval"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#mean",
-    "href": "course-materials/slides/day4.2-slides.html#mean",
-    "title": "",
-    "section": "",
-    "text": "Mean\n\nAverage value of sample observations, calculated by summing all observation values and dividing by the number of observations. E.g. \\(mean\\;of\\;3, 7, 17 = \\frac{3+7+17}{3} = 9\\)\n\nPros:\n\n\nAverage value is often useful metric\nCommonly reported\n\n\nCons:\n\n\nSusceptible to outliers and skew\nSubject to misinterpretation as “most likely value”\n\n\n\nSB housing market typically reports median cost rather than mean cost? Why do you think that is?"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#median",
-    "href": "course-materials/slides/day4.2-slides.html#median",
-    "title": "",
-    "section": "",
-    "text": "Median\n\nMiddle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. \\(median\\;of\\;3, 7, 17 = 7\\)\n\nPros:\n\n\nLess susceptible to skew and outliers\nBetter as sample size increases\n\n\n\nCons:\n\n\nDoesn’t take into account the magnitude of all values"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#central-tendency",
-    "href": "course-materials/slides/day4.2-slides.html#central-tendency",
-    "title": "",
-    "section": "",
-    "text": "Image: Sirkin, R. M. (2006). Measuring central tendency. In Statistics for the social sciences (pp. 83-126). SAGE Publications, Inc., https://www.doi.org/10.4135/9781412985987"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#best-way",
-    "href": "course-materials/slides/day4.2-slides.html#best-way",
-    "title": "",
-    "section": "",
-    "text": "The best way to describe the distribution of the data is to present the data itself."
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#var-stdev",
-    "href": "course-materials/slides/day4.2-slides.html#var-stdev",
-    "title": "",
-    "section": "",
-    "text": "Variance and standard deviation\n\n\nBoth are measures of data spread.\n\n\n\n\nVariance\nReported in units of measurement squared\n\n\n\n\n\n\n\n\n\n\n\n\nStandard deviation\nReported in units of measurement\n\n\n\n\n\n\n\n\n\n\n\n\nStandard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches.\nVariances add (standard deviation doesn’t). For example, if we say that sex explains four square inches of variance, you know that 5 square inches are due to other factors.\nSee this discussion and this discussion\nThe variance measures the mathematical dispersion of data relative to the mean, and while theoretically correct, can be difficult to interpret in a real-world sense. Standard deviation is expressed in the same unit of measurement as the data (e.g. inches, rather than square inches), and therefore can be a more intuitive value to report."
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#variance",
-    "href": "course-materials/slides/day4.2-slides.html#variance",
-    "title": "",
-    "section": "",
-    "text": "Variance\n\nVariance: Mean squared distance of observations from the mean\n\n\n\nWhere \\(s^2\\) is the sample variance, \\(x_i\\) is a sample observation value, \\(\\bar x\\) is the sample mean, and \\(n\\) is the number of observations."
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#calc-variance1",
-    "href": "course-materials/slides/day4.2-slides.html#calc-variance1",
-    "title": "",
-    "section": "",
-    "text": "Calculate variance by hand (1/2)\n\nGiven these data: \\(2, 4, 4, 6, 9\\)\n\nCalculate the mean:\n\n\\[ mean = \\frac{2+4+4+6+9}{5}=\\frac{25}{5}=5\\] 2. Subtract the mean from each data point and square the result:\n\\[(2-5)^2 = (-3)^2 = 9\\] \\[(4-5)^2 = (-1)^2 = 1\\] \\[(4-5)^2 = (-1)^2 = 1\\]\n\\[(6-5)^2 = (1)^2 = 1\\] \\[(9-5)^2 = (4)^2 = 16\\] —"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#calc-variance2",
-    "href": "course-materials/slides/day4.2-slides.html#calc-variance2",
-    "title": "",
-    "section": "",
-    "text": "Calculate variance by hand (2/2)\n\nGiven these data: \\(2, 4, 4, 6, 9\\)\n\nSum the squared differences:\n\n\\[9+1+1+1+16 = 28\\]\n\nDivide by the number of data points minus 1 (\\(n\\) - 1)\n\n\\[Variance = \\frac{28}{5-1} = 7\\]\n\nAlternatively, in R:\n\nvar(c(2, 4, 4, 6, 9))\n\n[1] 7"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#stdev",
-    "href": "course-materials/slides/day4.2-slides.html#stdev",
-    "title": "",
-    "section": "",
-    "text": "Standard deviation\n\nAlso a measure of data spread, calculated by taking the square root of the variance.\n\n\nIn R:\n\nsqrt(var(c(2, 4, 4, 6, 9)))\n\n[1] 2.645751\n\n# or alternatively, just use sd()\nsd(c(2, 4, 4, 6, 9))\n\n[1] 2.645751"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#datasaurus-dozen1",
-    "href": "course-materials/slides/day4.2-slides.html#datasaurus-dozen1",
-    "title": "",
-    "section": "",
-    "text": "Beware summary statistics alone . . .\n\nMeet the Datasaurus Dozen"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#datasaurus-dozen2",
-    "href": "course-materials/slides/day4.2-slides.html#datasaurus-dozen2",
-    "title": "",
-    "section": "",
-    "text": "Same summary statistics, different distributions\n\n\n\nSource: Autodesk"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#gorilla",
-    "href": "course-materials/slides/day4.2-slides.html#gorilla",
-    "title": "",
-    "section": "",
-    "text": "From: Yanai, I., Lercher, M. A hypothesis is a liability. Genome Biol 21, 231 (2020). https://doi.org/10.1186/s13059-020-02133-w\n\n\nGave students a made-up dataset containing the BMI of 1786 people and the number of steps each took on a particular day.\nStudents in Group 1 were asked to consider three specific hypotheses + also if there was anything else they could conclude from the dataset.\nGroup 2 was simply asked, “What do you conclude from the dataset?”\nIf you plotted the number of steps vs. BMI, you’d find the gorilla. Students driven by hypotheses skipped this step more often than those that were not hypothesis-driven."
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#conf-int",
-    "href": "course-materials/slides/day4.2-slides.html#conf-int",
-    "title": "",
-    "section": "",
-    "text": "Confidence interval\n\n\nConfidence interval: a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.\n\n\n\nWhat it’s NOT:\n“There is a 95% chance that the true population parameter is between values X and Y.”"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#conf-int-ex",
-    "href": "course-materials/slides/day4.2-slides.html#conf-int-ex",
-    "title": "",
-    "section": "",
-    "text": "Confidence interval example\n\n\nMean shark length is 8.42 \\(\\pm\\) 3.55 ft (mean \\(\\pm\\) standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).\n\n\n\n\nWhat this DOES NOT mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet.\n\nThe true population mean is a fixed value and does not change – the CI either contains this true mean or it does not. There is no probability involved.\n\n\n\n\nWhat this DOES mean: If we took a bunch of sets of samples from the population (all n = 15), then 95% of the time, the calculated mean would fall within this range. \n\nThis statement correctly describes the frequency with which we would expect CIs to capture the mean over many samples."
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#comm",
-    "href": "course-materials/slides/day4.2-slides.html#comm",
-    "title": "",
-    "section": "",
-    "text": "Communicating data summaries\n\n\n\n\n\nThe “Bar plots” philosophy: show as much as you can for the audience you’re presenting to\nSummary statistics are often useful, but are a small part of the whole data story\nUncertainty is important! How can we responsibly communicate it?\nAll summaries are strongest when accompanied by additional data communication\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtwork by Allison Horst"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day1-key.html",
-    "href": "course-materials/eod-keys/eod-day1-key.html",
-    "title": "Day 1: Tasks & activities - KEY",
-    "section": "",
-    "text": "By hand: Evaluate \\(f(x,y)=x^2-1+3xy\\) at \\(x=1\\) and \\(y = 0\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(f(1,0)=1^2-1+(3)(1)(0) = 1 - 1 + 0 = 0\\)\n\n\n\nIn the R Console: given \\(G(t,z)=3.1(t-4.2)^2 + 0.06z\\), find the value of \\(G(1, 2.5)\\) (you do NOT need to write a function - just do the calculation in R using R as a calculator)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n3.1 * (1 - 4.2)^2 + (0.06 * 2.5)\n\n[1] 31.894\n\n\n\n\n\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\n\n\nImportantSolution\n\n\n\nAccording to Wikipedia, one barrel of oil is equal to 42 gallons and ~159 liters.\n\nCompany A: \\(14.6\\; barrels\\; spilled - 9.3\\; barrels\\; recovered = 5.3\\; barrels\\; unrecovered\\)\nCompany B: \\(692\\; liters \\times \\frac{1\\; barrel}{159\\; liters} = 4.352201\\; barrels\\;spilled\\; \\times 0.06 = 0.2611321\\;barrels\\;unrecovered\\)\nCompnay C: \\(18.1\\;gallons\\; \\times \\frac{1\\;barrel}{42\\;gallons} = 0.4309524\\;barrels\\;spilled\\; \\times 1 = 0.4309524\\;barrels\\;unrecovered\\)\n\nTotal unrecovered barrels = 5.3 + 0.2611321 + 0.4309524 = 5.992084 ~ 6 barrels\n\n\n\n\n\n\nBy hand: If an urchin population in a study plot in 1990 is 432, and in 2004 is 801, what is the average rate of population increase? Find the slope, then write a statement about the average increase (including units).\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[slope\\; (m) = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2-y_1}{x_2-x_1} = \\frac{801-432}{2004-1990} = 26.43\\] Between 1990 and 2004, urchin populations increased by an average of 26.43 urchins per year."
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day1-key.html#section-1.-practice-problems",
-    "href": "course-materials/eod-keys/eod-day1-key.html#section-1.-practice-problems",
-    "title": "Day 1: Tasks & activities - KEY",
-    "section": "",
-    "text": "By hand: Evaluate \\(f(x,y)=x^2-1+3xy\\) at \\(x=1\\) and \\(y = 0\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(f(1,0)=1^2-1+(3)(1)(0) = 1 - 1 + 0 = 0\\)\n\n\n\nIn the R Console: given \\(G(t,z)=3.1(t-4.2)^2 + 0.06z\\), find the value of \\(G(1, 2.5)\\) (you do NOT need to write a function - just do the calculation in R using R as a calculator)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n3.1 * (1 - 4.2)^2 + (0.06 * 2.5)\n\n[1] 31.894\n\n\n\n\n\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\n\n\nImportantSolution\n\n\n\nAccording to Wikipedia, one barrel of oil is equal to 42 gallons and ~159 liters.\n\nCompany A: \\(14.6\\; barrels\\; spilled - 9.3\\; barrels\\; recovered = 5.3\\; barrels\\; unrecovered\\)\nCompany B: \\(692\\; liters \\times \\frac{1\\; barrel}{159\\; liters} = 4.352201\\; barrels\\;spilled\\; \\times 0.06 = 0.2611321\\;barrels\\;unrecovered\\)\nCompnay C: \\(18.1\\;gallons\\; \\times \\frac{1\\;barrel}{42\\;gallons} = 0.4309524\\;barrels\\;spilled\\; \\times 1 = 0.4309524\\;barrels\\;unrecovered\\)\n\nTotal unrecovered barrels = 5.3 + 0.2611321 + 0.4309524 = 5.992084 ~ 6 barrels\n\n\n\n\n\n\nBy hand: If an urchin population in a study plot in 1990 is 432, and in 2004 is 801, what is the average rate of population increase? Find the slope, then write a statement about the average increase (including units).\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[slope\\; (m) = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2-y_1}{x_2-x_1} = \\frac{801-432}{2004-1990} = 26.43\\] Between 1990 and 2004, urchin populations increased by an average of 26.43 urchins per year."
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day1-key.html#section-2-projects-and-functions",
-    "href": "course-materials/eod-keys/eod-day1-key.html#section-2-projects-and-functions",
-    "title": "Day 1: Tasks & activities - KEY",
-    "section": "Section 2: Projects and functions",
-    "text": "Section 2: Projects and functions\n\nCreate a new R project (named eds212-day1-tasks)\nAdd a new Quarto document to the project\nPress Render (save this in your project as fish-length-weight.qmd)\nDelete everything below the first code chunk\nAttach the tidyverse package\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nlibrary(tidyverse)\n\n\n\n\nPlay around with markdown in the Quarto doc. Try adding text with at least the following:\n\n\nHeaders of varying size\nItalics\nBold\nSuperscripts / subscripts\nBulletpoints\nAn image (google how!)\n\n\nAdd a new code chunk\nWithin the R code chunk, write a function to estimate fish standard weight, given parameters \\(a\\), \\(b\\), and fish length \\(L\\) as inputs. “Standard weight” is how much we expect a fish to weigh, give the species and fish length, and the nonlinear relationship is given by:\n\n\\[W=aL^b\\]\nwhere L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values.\n\nTest out your function to find the mass (g) for a 60 cm fish of the following species (parameter estimates from Peyton et al. (2016)):\n\n\nMilkfish: a = 0.0905, b = 2.52\nGiant trevally: a = 0.0353, b = 3.05\nGreat barracuda: a = 0.0181, b = 3.27\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# write function ----\nfish_weight_g &lt;- function(length_cm, a, b){\n  weight_g = a * length_cm^b\n}\n\n# test function ----\nmilkfish_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0905, b = 2.52)\nmilkfish_weight\n\n[1] 2738.985\n\ntrevally_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0353, b = 3.05)\ntrevally_weight\n\n[1] 9356.987\n\nbarracuda_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0181, b = 3.27)\nbarracuda_weight\n\n[1] 11809.54\n\n\n\n\n\n\n\n\n\n\nNoteCitation\n\n\n\nPeyton, K. A., T. S. Sakihara, L. K. Nishiura, T. T. Shindo, T. E. Shimoda, S. Hau, A. Akiona, and K. Lorance. 2016. “Length–Weight Relationships for Common Juvenile Fishes and Prey Species in Hawaiian Estuaries.” Journal of Applied Ichthyology 32 (3): 499–502. https://doi.org/10.1111/jai.12957.\n\n\n\nMake and store (as fish_length) a sequence of size ranges from 0 to 200 cm, by increments of 1 cm\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nfish_length &lt;- seq(from = 0, to = 200, by = 1)\n\n\n\n\nEstimate the weight for giant barracudas along that entire range (given the parameters above). Store the output as barracuda_weight.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nbarracuda_weight &lt;- fish_weight_g(length_cm = fish_length, a = 0.0181, b = 3.27)\n\n\n\n\nBind the lengths and estimated barracuda weights into a single data frame using data.frame()\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nbarracuda_df &lt;- data.frame(fish_length, barracuda_weight)\n# View(barracuda_df)\n\n\n\n\nCreate a ggplot graph of predicted length versus weight for giant barracuda\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nggplot(data = barracuda_df, aes(x = fish_length, y = barracuda_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\nUpdate the graph axis labels and title\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nggplot(data = barracuda_df, aes(x = fish_length, y = barracuda_weight)) +\n  geom_point() +\n  labs(title = \"Predicted barracuda weights, estimated from fish lengths\",\n       x = \"Length (cm)\",\n       y = \"Standard weight (g)\")\n\n\n\n\n\n\n\n\n\n\n\nRender the .qmd. Make sure everything is saved.\nClose your project. Reopen the project, and ensure that you can re-run the entire Quarto document (reproducibility check).\n\n\n\nEnd Activity Session (Day 1)"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day2-key.html",
-    "href": "course-materials/eod-keys/eod-day2-key.html",
-    "title": "Day 2: Tasks & activities - KEY",
-    "section": "",
-    "text": "Put all notes away\nWith a partner, based on what you’ve learned, derive the definition of the derivative from scratch\nAt every step, describe what you are doing\nOnce you have the definition of the derivative, say out loud (each person) what we’re doing mathematically every time we find the derivative\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nWe know how to calculate the slope of a line, using the formula, \\(slope = \\frac{y_2-y_1}{x_2-x_1}\\) (change in rise over run). If we have a non-linear function, however, the slope is changing at each point along that function.\nIf we have a point on a curve, \\((x, f(x))\\) and a second point on that same function, some horizontal distance (\\(h\\)) away, \\((x+h, f(x+h))\\), we can estimate the average slope between those two points using the same slope formula, \\(average\\; slope = \\frac{f(x+h) - f(x)}{x+h-x} = \\frac{f(x+h) - f(x)}{h}\\)\nHowever, we don’t want the average slope, we want the exact slope. We can calculate this by moving our second point along the function, closer and closer to our first point, until the distance between them (\\(h\\)) gets finitely small (\\(h \\rightarrow 0\\)). By doing so, the average slope becomes the instantaneous slope at a single point (essentially finding the slope at the line tangent to our point).\nThe expression for the instantaneous slope at any point on a function is called the derivative:\n\n\\[\\frac{df}{dx} = \\lim_{h\\to 0}\\frac{f(x+h)-f(x)}{h}\\]"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day2-key.html#section-1-small-groups-derive-the-definition-of-the-derivative",
-    "href": "course-materials/eod-keys/eod-day2-key.html#section-1-small-groups-derive-the-definition-of-the-derivative",
-    "title": "Day 2: Tasks & activities - KEY",
-    "section": "",
-    "text": "Put all notes away\nWith a partner, based on what you’ve learned, derive the definition of the derivative from scratch\nAt every step, describe what you are doing\nOnce you have the definition of the derivative, say out loud (each person) what we’re doing mathematically every time we find the derivative\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nWe know how to calculate the slope of a line, using the formula, \\(slope = \\frac{y_2-y_1}{x_2-x_1}\\) (change in rise over run). If we have a non-linear function, however, the slope is changing at each point along that function.\nIf we have a point on a curve, \\((x, f(x))\\) and a second point on that same function, some horizontal distance (\\(h\\)) away, \\((x+h, f(x+h))\\), we can estimate the average slope between those two points using the same slope formula, \\(average\\; slope = \\frac{f(x+h) - f(x)}{x+h-x} = \\frac{f(x+h) - f(x)}{h}\\)\nHowever, we don’t want the average slope, we want the exact slope. We can calculate this by moving our second point along the function, closer and closer to our first point, until the distance between them (\\(h\\)) gets finitely small (\\(h \\rightarrow 0\\)). By doing so, the average slope becomes the instantaneous slope at a single point (essentially finding the slope at the line tangent to our point).\nThe expression for the instantaneous slope at any point on a function is called the derivative:\n\n\\[\\frac{df}{dx} = \\lim_{h\\to 0}\\frac{f(x+h)-f(x)}{h}\\]"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day2-key.html#section-2-derivatives-by-hand",
-    "href": "course-materials/eod-keys/eod-day2-key.html#section-2-derivatives-by-hand",
-    "title": "Day 2: Tasks & activities - KEY",
-    "section": "Section 2: Derivatives by hand",
-    "text": "Section 2: Derivatives by hand\n\nBy hand and using derivative rules, find the third derivative of \\[G(t)=2.2 + 3.1t-5.6t^4 + \\frac{4.3}{t^3}\\] \n\n\n\n\n\n\n\nImportantSolution\n\n\n\nFirst derivative: \\[G'(t) = 3.1 -(4)(5.6)t^3 +(-3)(4.3)t^{-4}\\] \\[G'(t) = 3.1 -22.4t^3 -12.9t^{-4}\\]\nSecond derivative: \\[G''(t) = 3.1. - (22.4)(3)t^2 -(12.9)(-4)t^{-5}\\] \\[G''(t) = 3.1. - 67.2t^2 -(12.9)(-4)t^{-5}\\] \\[G''(t) = -67.2t^2 + 51.6t^{-5}\\]\nThird derivative: \\[G'''(t) = -(67.2)(2)t + (51.6)(-5)t^{-6}\\] \\[G'''(t) = -134.4t - 258t^{-6}\\]"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day2-key.html#section-3-derivatives-in-r",
-    "href": "course-materials/eod-keys/eod-day2-key.html#section-3-derivatives-in-r",
-    "title": "Day 2: Tasks & activities - KEY",
-    "section": "Section 3: Derivatives in R",
-    "text": "Section 3: Derivatives in R\n\nCreate a new version-controlled R Project\n\nCreate a new R Project (named eds212-day2-tasks) (or using a naming convention you choose for all EDS 212 projects)\nCreate a new Quarto document in the project\nAttach the {tidyverse} and {palmerpenguins} packages with library(package_name) (note: you may need to install {palmerpenguins} - remember install.packages(\"packagename\"))\nRender (save your .qmd as eds212_day2_activities.qmd, or follow a naming convention you’ve decided on)\nUse usethis::use_git() and usethis::use_github() to make your project a version-controlled repo, with an upstream GitHub repo\n\n\n\nFind derivatives using R\n\nIn your Quarto document, find the derivative expression and slope at the indicated value for each the following functions in R (each in a separate code chunk):\n\nFind the slope of \\(f(x)=x^2\\) at \\(x = 3\\)\n\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# create an expression ----\nexpression1 &lt;- expression(x^2)\n\n# find derivative with respect to x using `D()` ----\nderiv1 &lt;- D(expression1, \"x\")\n\n# check it out ----\nderiv1\n\n2 * x\n\n# evaluate it at x = 3 ----\nx &lt;- 3\n\neval(deriv1)\n\n[1] 6\n\n\n\n\n\nFind the slope of \\(P(a)=2(3a+2)^4-5\\) at \\(a = 1.2\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# create an expression ----\nexpression2 &lt;- expression(2 * (3 * a + 2)^4 - 5)\n\n# find derivative with respect to x using `D()` ----\nderiv2 &lt;- D(expression2, \"a\")\n\n# check it out ----\nderiv2\n\n2 * (4 * (3 * (3 * a + 2)^3))\n\n# evaluate it at x = 3 ----\na &lt;- 1.2\n\neval(deriv2)\n\n[1] 4214.784\n\n\n\n\n\nRender, then stage, commit, pull, then push your changes to your repo on GitHub. Check your repo (refresh) to make sure the changes show up there."
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day2-key.html#section-4-make-another-penguin-plot",
-    "href": "course-materials/eod-keys/eod-day2-key.html#section-4-make-another-penguin-plot",
-    "title": "Day 2: Tasks & activities - KEY",
-    "section": "Section 4: Make another penguin plot",
-    "text": "Section 4: Make another penguin plot\n\nIn a new code chunk, create a ggplot graph of penguin bill length versus bill depth (using the penguins dataset in the {palmerpenguins} package), with point color dependent on species. You should attach the {tidyverse} and {palmerpenguins} package in your .qmd setup chunk if you haven’t already. Update labels and add a title.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# install packages ----\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\n# create ggplot ----\nggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +\n  geom_point() +\n  labs(title = \"Penguin bill sizes by species\", \n       x = \"Bill Length (mm)\",\n       y = \"Bill Depth (mm)\")\n\n\n\n\n\n\n\n\n\n\n\nIn a new code chunk, make a jitter plot of flipper length by species (species on the x-axis, flipper length on the y-axis). Update axis labels and add a title. See ?geom_jitter.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# create ggplot ----\nggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +\n  geom_jitter() +\n  labs(title = \"Penguin flipper lengths by species\",\n       x = \"Species\",\n       y = \"Flipper Lengths (mm)\")\n\n\n\n\n\n\n\n\n\n\n\nRender your .qmd to check for reproducibility\nStage, commit, and push changes to the remote repo. Once you do, go to GitHub and check to see the changes are safely stored & tracked.\nGo back to your Quarto document in RStudio. Pull to make sure you have the same versions as in the remote repo. Make a change (anything you want - maybe change your graph colors, sizes, etc.), then stage, commit, & push changes to the remote repo to reinforce the steps. Check that changes are stored on GitHub.\nRepeat one more time - make a change to your plot, render, stage, commit & push. Check that your changes appear on GitHub.\n\n\nEnd Activity Session (Day 2)"
-  },
-  {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Essential Math in Environmental Data Science",
-    "section": "Course Description",
-    "text": "Course Description\nQuantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in basic math (algebra, uni- and multivariate functions, units and unit conversions), differential and integral calculus, differential equations, linear algebra, statistics and probability, and reading, writing and evaluating logical operations.\nThe goal of EDS 212 (Essential Math in Environmental Data Science) is to prepare incoming MEDS students with quantitative methods, skills, notation and language commonly used in environmental data science and required for their data science courses and projects in the program. By the end of the course, students should be able to:\n\nPerform the following by hand: convert units, basic algebra and working with logs and exponentials; write, interpret and evaluate univariate and multivariate functions; basic derivatives and integrals with univariate and multivariate functions; solve simple differential equations; basic operations with scalars, vectors and matrices; writing and evaluating logicals\nExplain and share examples for how all topics in EDS 212 are useful and used in applied environmental data science\nInterpret examples of applied math & models from environmental science case studies\nWork with peers to solve group tasks, then communicate the process of problem solving to the rest of the class"
-  },
-  {
-    "objectID": "index.html#teaching-team",
-    "href": "index.html#teaching-team",
-    "title": "Essential Math in Environmental Data Science",
-    "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nCarmen Galaz García\nEmail: c_galazgarcia@ucsb.edu\nLearn more: Bren profile\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nCella Schnabel\nEmail: cellaschnabel@bren.ucsb.edu\nLearn more: Bren profile"
-  },
-  {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "Essential Math in Environmental Data Science",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nEDS 212 was originally developed and taught by Allison Horst and then adapted by Ruth Oliver. This new website houses materials which are heavily reused, adapted and expanded from, and inspired by Ruth and Allison’s work."
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day4-key.html",
-    "href": "course-materials/eod-keys/eod-day4-key.html",
-    "title": "Day 4: Tasks & activities",
-    "section": "",
-    "text": "A population of fish we’re interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are given the following:\n\nEach breeding adult will produce, on average, 600 eggs\n25% of eggs will survive to become fry\n10% of fry will survive to become juveniles\n40% of juveniles will survive to become adults\nAdult survival rate year to year is 80%\n\n\nWith your group, draw the Leslie matrix model for this population structure.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\begin{bmatrix}\nE_{t+1} \\\\\nF_{t+1} \\\\\nJ_{t+1} \\\\\nA_{t+1}\n\\end{bmatrix} = \\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\nE_t\\\\\nF_t \\\\\nJ_t \\\\\nA_t\n\\end{bmatrix}\\]\n\n\n\nWith your group, given an initial population (Year 0) that has 0 eggs, 40,000 fry, 600 juveniles, and 450 adults, by hand project the population structure (i.e. the count in each life stage) in Year 1.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\n0\\\\\n40,000 \\\\\n600 \\\\\n450\n\\end{bmatrix} = \\begin{bmatrix}\n(0)(0) + (0)(40,000) + (0)(600) + (600)(450)\\\\\n(0.25)(0) + (0)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0.10)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0)(40,000) + (0.40)(600) + (0.80)(450)\n\\end{bmatrix} = \\begin{bmatrix}\n270,000\\\\\n0 \\\\\n4,000 \\\\\n600\n\\end{bmatrix}\\]"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day4-key.html#a-leslie-matrix-example-small-groups",
-    "href": "course-materials/eod-keys/eod-day4-key.html#a-leslie-matrix-example-small-groups",
-    "title": "Day 4: Tasks & activities",
-    "section": "",
-    "text": "A population of fish we’re interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are given the following:\n\nEach breeding adult will produce, on average, 600 eggs\n25% of eggs will survive to become fry\n10% of fry will survive to become juveniles\n40% of juveniles will survive to become adults\nAdult survival rate year to year is 80%\n\n\nWith your group, draw the Leslie matrix model for this population structure.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\begin{bmatrix}\nE_{t+1} \\\\\nF_{t+1} \\\\\nJ_{t+1} \\\\\nA_{t+1}\n\\end{bmatrix} = \\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\nE_t\\\\\nF_t \\\\\nJ_t \\\\\nA_t\n\\end{bmatrix}\\]\n\n\n\nWith your group, given an initial population (Year 0) that has 0 eggs, 40,000 fry, 600 juveniles, and 450 adults, by hand project the population structure (i.e. the count in each life stage) in Year 1.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\n0\\\\\n40,000 \\\\\n600 \\\\\n450\n\\end{bmatrix} = \\begin{bmatrix}\n(0)(0) + (0)(40,000) + (0)(600) + (600)(450)\\\\\n(0.25)(0) + (0)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0.10)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0)(40,000) + (0.40)(600) + (0.80)(450)\n\\end{bmatrix} = \\begin{bmatrix}\n270,000\\\\\n0 \\\\\n4,000 \\\\\n600\n\\end{bmatrix}\\]"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day4-key.html#fork-clone-a-repo-to-check-your-leslie-matrix-and-make-projections",
-    "href": "course-materials/eod-keys/eod-day4-key.html#fork-clone-a-repo-to-check-your-leslie-matrix-and-make-projections",
-    "title": "Day 4: Tasks & activities",
-    "section": "2. Fork & clone a repo to check your Leslie matrix, and make projections",
-    "text": "2. Fork & clone a repo to check your Leslie matrix, and make projections\n\nFork and clone this repo, which contains the Leslie matrix for the example above.\n\n\nGo to the link above. Press Fork in upper right, then Create Fork.\nOnce in your fork, press the green ‘Code’ button\nCopy the URL to your clipboard\nBack in RStudio, create a new project (with version control)\nWhere prompted, paste the URL & choose where you’ll save your directory\nCreate project\nOpen the .qmd to explore & run Leslie Matrix code\n\n\nExplore the code and outputs. Does the Year 1 population projection align with what you calculated?\nAdd code to the .qmd to expand the projections to years 4, 5, and 6 (it current projects through year 3)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n## ADD YOUR CODE TO PROJECT FOR YEARS 4, 5 & 6 HERE ----\n# Population structure in year 4 ----\nfish_year4 &lt;- fish_leslie %*% fish_year3\nfish_year4\n\n# Population structure in year 4 ----\nfish_year5 &lt;- fish_leslie %*% fish_year4\nfish_year5\n\n# Population structure in year 4 ----\nfish_year6 &lt;- fish_leslie %*% fish_year5\nfish_year6\n\n\n\n\nUsing the command line: Save, stage, commit, then push your changes."
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day4-key.html#data-exploration-summarizing-in-r",
-    "href": "course-materials/eod-keys/eod-day4-key.html#data-exploration-summarizing-in-r",
-    "title": "Day 4: Tasks & activities",
-    "section": "3. Data exploration & summarizing in R",
-    "text": "3. Data exploration & summarizing in R\n\nCreate a new Project\nAdd a new Quarto document in your project, save as r-data-exploration.qmd\nSet up your local and remote git repo by running usethis::use_git() and then usethis::use_github()\nAttach the {tidyverse}, {skimr}, and {GGally} packages in the setup code chunk\nRun View(diamonds) in the Console to look at the built-in diamonds data set in R\nExplore the data set using the functions names(), dim(), summary(), head(), tail(), and skimr::skim()\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# load libraries ----\nlibrary(tidyverse)\nlibrary(skimr)\nlibrary(GGally)\n\n# explore data ----\nView(diamonds)\nnames(diamonds)\ndim(diamonds)\nsummary(diamonds)\nhead(diamonds)\ntail(diamonds)\nskim(diamonds)\n\n\n\n\nCreate a pairs plot using ggpairs()\n\n\n\n\n\n\n\nImportantSolution\n\n\n\nNote: only code presented here because this plot takes a little while to render.\n\nGGally::ggpairs(diamonds)\n\n\n\n\nCreate a basic ggplot scatterplot of diamond price (price) as a function of size (carat)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreate a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSave, stage, commit, pull, then push your changes back to your repo in RStudio using the GUI interface (buttons)\nCreate a boxplot (see: geom_boxplot) of diamond clarity (on the x-axis) and price (y-axis).\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the command line, stage, commit, & push changes\n\n\n\nEnd Activity Session (Day 4)"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day3-key.html",
-    "href": "course-materials/eod-keys/eod-day3-key.html",
-    "title": "Day 3: Tasks & activities - KEY",
-    "section": "",
-    "text": "Biomass (grams) in a reactor over time (hours) is described by:\n\n\\[B(t) = 0.4t^2 + 3.6\\]\n\n\nWhat is the biomass in the reactor after 4 hours?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[B(4) = 0.4(4)^2+3.6 = 106\\;grams\\]\n\n\n\nWhat is the rate at which biomass is changing in the reactor at t = 3.2 hours?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\frac{dB}{dt} = (2)(0.4)t\\] \\[\\frac{dB}{dt} = (2)(0.4)(3.2)\\]\n\\[\\frac{dB}{dt} = 2.56 \\frac{grams}{hour}\\]\n\n\n\n\n\nFor the vectors \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\nFind and sketch \\(\\vec a + \\vec b\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec a + \\vec b = (1+2, 6+4) = (3,10)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(\\vec b - \\vec a\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec b - \\vec a = (2-1, 4-6) = (-1, -2)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(2 \\vec a\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(2 \\vec a = 2 * (1,6) = (2, 12)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind \\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec a \\cdot \\vec b = (1)(2) + (6)(4) = 26\\)"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-1-by-hand-problems",
-    "href": "course-materials/eod-keys/eod-day3-key.html#part-1-by-hand-problems",
-    "title": "Day 3: Tasks & activities - KEY",
-    "section": "",
-    "text": "Biomass (grams) in a reactor over time (hours) is described by:\n\n\\[B(t) = 0.4t^2 + 3.6\\]\n\n\nWhat is the biomass in the reactor after 4 hours?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[B(4) = 0.4(4)^2+3.6 = 106\\;grams\\]\n\n\n\nWhat is the rate at which biomass is changing in the reactor at t = 3.2 hours?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\frac{dB}{dt} = (2)(0.4)t\\] \\[\\frac{dB}{dt} = (2)(0.4)(3.2)\\]\n\\[\\frac{dB}{dt} = 2.56 \\frac{grams}{hour}\\]\n\n\n\n\n\nFor the vectors \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\nFind and sketch \\(\\vec a + \\vec b\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec a + \\vec b = (1+2, 6+4) = (3,10)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(\\vec b - \\vec a\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec b - \\vec a = (2-1, 4-6) = (-1, -2)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(2 \\vec a\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(2 \\vec a = 2 * (1,6) = (2, 12)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind \\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec a \\cdot \\vec b = (1)(2) + (6)(4) = 26\\)"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-2-coding-practice",
-    "href": "course-materials/eod-keys/eod-day3-key.html#part-2-coding-practice",
-    "title": "Day 3: Tasks & activities - KEY",
-    "section": "Part 2: Coding practice",
-    "text": "Part 2: Coding practice\n\nCreate a new project (you may want to name it eds212-day3-tasks or something similar)\nSetup your local and remote repo using usethis::use_git() and usethis::use_github()\nIn a Quarto doc in your project:\n\n\nUsing the c() function, create and store two new vectors, called vec_a and vec_b, where \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nvec_a &lt;- c(1, 6)\nvec_b &lt;- c(2, 4)\n\n\n\n\nCheck your by-hand solutions from Part 1 by finding the following in R:\n\n\\(\\vec a + \\vec b\\)\n\\(\\vec b - \\vec a\\)\n\\(2 \\vec a\\)\n\\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nvec_a + vec_b\n\n[1]  3 10\n\nvec_b - vec_a\n\n[1]  1 -2\n\n2 * vec_a\n\n[1]  2 12\n\nvec_a %*% vec_b\n\n     [,1]\n[1,]   26\n\n\n\n\n\nSave your quarto doc and Render\nOpen the Terminal outside of RStudio\nNavigate to your project directory using cd\nUse git status to check the status\nUse git add . to stage all changes\nUse git commit -m \"your commit message here\" to commit to your local repo\nUse git pull to check for remote changes\nUse git push to push changes to your remote repo\nGo to your remote repo for the project and check to see that the new updates are stored"
-  },
-  {
-    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-3-fork-clone-a-repo-use-the-code",
-    "href": "course-materials/eod-keys/eod-day3-key.html#part-3-fork-clone-a-repo-use-the-code",
-    "title": "Day 3: Tasks & activities - KEY",
-    "section": "Part 3: Fork & clone a repo, use the code",
-    "text": "Part 3: Fork & clone a repo, use the code\n\nFork and clone this repo (which contains a Quarto document with code to numerically solve the SIR equations) to create a version-controlled project\nOnce you’ve created your project, open the sir.qmd file.\nRun all code in the .qmd (Cmd/Ctrl + Option + R, or go up to the run button and choose the last option “Run All”)\nExplore the code and output graph. What is the code doing? What is the graph telling us?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\nThe code:\n\nUsing the expression for slope (here, sir()) along with an initial condition (values for S, I, R) and parameter estimates (beta = infection parameter, and gamma = recovery parameter), the deSolve::ode() function calculates values of the solution across equal intervals of time (times).\n\nThe graph:\n\nThe number of susceptible individuals (blue) starts at 100% of the population, then decreases as individuals become affected\nThe number of infected individuals (red) initially increases as individuals become infected. This curve peaks when infection rate is the highest, then decreases as infected individuals recover\nThe number of recovered individuals (green) starts at 0 then increases over time as infected individuals recover from the disease\n\n\n\n\nMake small changes to the parameter values to see how the SIR models change. Are the changes expected?\nAfter trying out a few changes, save and knit your new output graph.\nStage, commit, pull, then push to your repo in the command line.\nCheck for your changes on GitHub. Are they there? Cool, done with Part 3.\n\n\n\nEnd Activity Session (Day 3)"
-  },
-  {
     "objectID": "course-materials/slides/day3.2-slides.html#title-slide",
     "href": "course-materials/slides/day3.2-slides.html#title-slide",
     "title": "",
@@ -1986,6 +1657,139 @@
     "title": "",
     "section": "",
     "text": "Where do matrices come up in EDS?\n\n\n\nRasters (matrix like)\n\n\n\nSource: Neon\n\n\n\nMachine learning (EDS 232)\n\n\n\nAdapted from What is the Convolutional Neural Network Architecture?"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day3-key.html",
+    "href": "course-materials/eod-keys/eod-day3-key.html",
+    "title": "Day 3: Tasks & activities - KEY",
+    "section": "",
+    "text": "Biomass (grams) in a reactor over time (hours) is described by:\n\n\\[B(t) = 0.4t^2 + 3.6\\]\n\n\nWhat is the biomass in the reactor after 4 hours?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[B(4) = 0.4(4)^2+3.6 = 106\\;grams\\]\n\n\n\nWhat is the rate at which biomass is changing in the reactor at t = 3.2 hours?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\frac{dB}{dt} = (2)(0.4)t\\] \\[\\frac{dB}{dt} = (2)(0.4)(3.2)\\]\n\\[\\frac{dB}{dt} = 2.56 \\frac{grams}{hour}\\]\n\n\n\n\n\nFor the vectors \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\nFind and sketch \\(\\vec a + \\vec b\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec a + \\vec b = (1+2, 6+4) = (3,10)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(\\vec b - \\vec a\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec b - \\vec a = (2-1, 4-6) = (-1, -2)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(2 \\vec a\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(2 \\vec a = 2 * (1,6) = (2, 12)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind \\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec a \\cdot \\vec b = (1)(2) + (6)(4) = 26\\)"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-1-by-hand-problems",
+    "href": "course-materials/eod-keys/eod-day3-key.html#part-1-by-hand-problems",
+    "title": "Day 3: Tasks & activities - KEY",
+    "section": "",
+    "text": "Biomass (grams) in a reactor over time (hours) is described by:\n\n\\[B(t) = 0.4t^2 + 3.6\\]\n\n\nWhat is the biomass in the reactor after 4 hours?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[B(4) = 0.4(4)^2+3.6 = 106\\;grams\\]\n\n\n\nWhat is the rate at which biomass is changing in the reactor at t = 3.2 hours?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\frac{dB}{dt} = (2)(0.4)t\\] \\[\\frac{dB}{dt} = (2)(0.4)(3.2)\\]\n\\[\\frac{dB}{dt} = 2.56 \\frac{grams}{hour}\\]\n\n\n\n\n\nFor the vectors \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\nFind and sketch \\(\\vec a + \\vec b\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec a + \\vec b = (1+2, 6+4) = (3,10)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(\\vec b - \\vec a\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec b - \\vec a = (2-1, 4-6) = (-1, -2)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind and sketch \\(2 \\vec a\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(2 \\vec a = 2 * (1,6) = (2, 12)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nFind \\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(\\vec a \\cdot \\vec b = (1)(2) + (6)(4) = 26\\)"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-2-coding-practice",
+    "href": "course-materials/eod-keys/eod-day3-key.html#part-2-coding-practice",
+    "title": "Day 3: Tasks & activities - KEY",
+    "section": "Part 2: Coding practice",
+    "text": "Part 2: Coding practice\n\nCreate a new project (you may want to name it eds212-day3-tasks or something similar)\nSetup your local and remote repo using usethis::use_git() and usethis::use_github()\nIn a Quarto doc in your project:\n\n\nUsing the c() function, create and store two new vectors, called vec_a and vec_b, where \\(\\vec a = (1,6)\\) and \\(\\vec b = (2, 4)\\):\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nvec_a &lt;- c(1, 6)\nvec_b &lt;- c(2, 4)\n\n\n\n\nCheck your by-hand solutions from Part 1 by finding the following in R:\n\n\\(\\vec a + \\vec b\\)\n\\(\\vec b - \\vec a\\)\n\\(2 \\vec a\\)\n\\(\\vec a \\cdot \\vec b\\)\n\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nvec_a + vec_b\n\n[1]  3 10\n\nvec_b - vec_a\n\n[1]  1 -2\n\n2 * vec_a\n\n[1]  2 12\n\nvec_a %*% vec_b\n\n     [,1]\n[1,]   26\n\n\n\n\n\nSave your quarto doc and Render\nOpen the Terminal outside of RStudio\nNavigate to your project directory using cd\nUse git status to check the status\nUse git add . to stage all changes\nUse git commit -m \"your commit message here\" to commit to your local repo\nUse git pull to check for remote changes\nUse git push to push changes to your remote repo\nGo to your remote repo for the project and check to see that the new updates are stored"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day3-key.html#part-3-fork-clone-a-repo-use-the-code",
+    "href": "course-materials/eod-keys/eod-day3-key.html#part-3-fork-clone-a-repo-use-the-code",
+    "title": "Day 3: Tasks & activities - KEY",
+    "section": "Part 3: Fork & clone a repo, use the code",
+    "text": "Part 3: Fork & clone a repo, use the code\n\nFork and clone this repo (which contains a Quarto document with code to numerically solve the SIR equations) to create a version-controlled project\nOnce you’ve created your project, open the sir.qmd file.\nRun all code in the .qmd (Cmd/Ctrl + Option + R, or go up to the run button and choose the last option “Run All”)\nExplore the code and output graph. What is the code doing? What is the graph telling us?\n\n\n\n\n\n\n\nImportantSolution\n\n\n\nThe code:\n\nUsing the expression for slope (here, sir()) along with an initial condition (values for S, I, R) and parameter estimates (beta = infection parameter, and gamma = recovery parameter), the deSolve::ode() function calculates values of the solution across equal intervals of time (times).\n\nThe graph:\n\nThe number of susceptible individuals (blue) starts at 100% of the population, then decreases as individuals become affected\nThe number of infected individuals (red) initially increases as individuals become infected. This curve peaks when infection rate is the highest, then decreases as infected individuals recover\nThe number of recovered individuals (green) starts at 0 then increases over time as infected individuals recover from the disease\n\n\n\n\nMake small changes to the parameter values to see how the SIR models change. Are the changes expected?\nAfter trying out a few changes, save and knit your new output graph.\nStage, commit, pull, then push to your repo in the command line.\nCheck for your changes on GitHub. Are they there? Cool, done with Part 3.\n\n\n\nEnd Activity Session (Day 3)"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day4-key.html",
+    "href": "course-materials/eod-keys/eod-day4-key.html",
+    "title": "Day 4: Tasks & activities",
+    "section": "",
+    "text": "A population of fish we’re interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are given the following:\n\nEach breeding adult will produce, on average, 600 eggs\n25% of eggs will survive to become fry\n10% of fry will survive to become juveniles\n40% of juveniles will survive to become adults\nAdult survival rate year to year is 80%\n\n\nWith your group, draw the Leslie matrix model for this population structure.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\begin{bmatrix}\nE_{t+1} \\\\\nF_{t+1} \\\\\nJ_{t+1} \\\\\nA_{t+1}\n\\end{bmatrix} = \\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\nE_t\\\\\nF_t \\\\\nJ_t \\\\\nA_t\n\\end{bmatrix}\\]\n\n\n\nWith your group, given an initial population (Year 0) that has 0 eggs, 40,000 fry, 600 juveniles, and 450 adults, by hand project the population structure (i.e. the count in each life stage) in Year 1.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\n0\\\\\n40,000 \\\\\n600 \\\\\n450\n\\end{bmatrix} = \\begin{bmatrix}\n(0)(0) + (0)(40,000) + (0)(600) + (600)(450)\\\\\n(0.25)(0) + (0)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0.10)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0)(40,000) + (0.40)(600) + (0.80)(450)\n\\end{bmatrix} = \\begin{bmatrix}\n270,000\\\\\n0 \\\\\n4,000 \\\\\n600\n\\end{bmatrix}\\]"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day4-key.html#a-leslie-matrix-example-small-groups",
+    "href": "course-materials/eod-keys/eod-day4-key.html#a-leslie-matrix-example-small-groups",
+    "title": "Day 4: Tasks & activities",
+    "section": "",
+    "text": "A population of fish we’re interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are given the following:\n\nEach breeding adult will produce, on average, 600 eggs\n25% of eggs will survive to become fry\n10% of fry will survive to become juveniles\n40% of juveniles will survive to become adults\nAdult survival rate year to year is 80%\n\n\nWith your group, draw the Leslie matrix model for this population structure.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\begin{bmatrix}\nE_{t+1} \\\\\nF_{t+1} \\\\\nJ_{t+1} \\\\\nA_{t+1}\n\\end{bmatrix} = \\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\nE_t\\\\\nF_t \\\\\nJ_t \\\\\nA_t\n\\end{bmatrix}\\]\n\n\n\nWith your group, given an initial population (Year 0) that has 0 eggs, 40,000 fry, 600 juveniles, and 450 adults, by hand project the population structure (i.e. the count in each life stage) in Year 1.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[\\begin{bmatrix}\n0&0&0&600 \\\\\n0.25&0&0&0 \\\\\n0&0.10&0&0 \\\\\n0&0&0.4&0.80\n\\end{bmatrix} \\times \\begin{bmatrix}\n0\\\\\n40,000 \\\\\n600 \\\\\n450\n\\end{bmatrix} = \\begin{bmatrix}\n(0)(0) + (0)(40,000) + (0)(600) + (600)(450)\\\\\n(0.25)(0) + (0)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0.10)(40,000) + (0)(600) + (0)(450) \\\\\n(0)(0) + (0)(40,000) + (0.40)(600) + (0.80)(450)\n\\end{bmatrix} = \\begin{bmatrix}\n270,000\\\\\n0 \\\\\n4,000 \\\\\n600\n\\end{bmatrix}\\]"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day4-key.html#fork-clone-a-repo-to-check-your-leslie-matrix-and-make-projections",
+    "href": "course-materials/eod-keys/eod-day4-key.html#fork-clone-a-repo-to-check-your-leslie-matrix-and-make-projections",
+    "title": "Day 4: Tasks & activities",
+    "section": "2. Fork & clone a repo to check your Leslie matrix, and make projections",
+    "text": "2. Fork & clone a repo to check your Leslie matrix, and make projections\n\nFork and clone this repo, which contains the Leslie matrix for the example above.\n\n\nGo to the link above. Press Fork in upper right, then Create Fork.\nOnce in your fork, press the green ‘Code’ button\nCopy the URL to your clipboard\nBack in RStudio, create a new project (with version control)\nWhere prompted, paste the URL & choose where you’ll save your directory\nCreate project\nOpen the .qmd to explore & run Leslie Matrix code\n\n\nExplore the code and outputs. Does the Year 1 population projection align with what you calculated?\nAdd code to the .qmd to expand the projections to years 4, 5, and 6 (it current projects through year 3)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n## ADD YOUR CODE TO PROJECT FOR YEARS 4, 5 & 6 HERE ----\n# Population structure in year 4 ----\nfish_year4 &lt;- fish_leslie %*% fish_year3\nfish_year4\n\n# Population structure in year 4 ----\nfish_year5 &lt;- fish_leslie %*% fish_year4\nfish_year5\n\n# Population structure in year 4 ----\nfish_year6 &lt;- fish_leslie %*% fish_year5\nfish_year6\n\n\n\n\nUsing the command line: Save, stage, commit, then push your changes."
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day4-key.html#data-exploration-summarizing-in-r",
+    "href": "course-materials/eod-keys/eod-day4-key.html#data-exploration-summarizing-in-r",
+    "title": "Day 4: Tasks & activities",
+    "section": "3. Data exploration & summarizing in R",
+    "text": "3. Data exploration & summarizing in R\n\nCreate a new Project\nAdd a new Quarto document in your project, save as r-data-exploration.qmd\nSet up your local and remote git repo by running usethis::use_git() and then usethis::use_github()\nAttach the {tidyverse}, {skimr}, and {GGally} packages in the setup code chunk\nRun View(diamonds) in the Console to look at the built-in diamonds data set in R\nExplore the data set using the functions names(), dim(), summary(), head(), tail(), and skimr::skim()\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# load libraries ----\nlibrary(tidyverse)\nlibrary(skimr)\nlibrary(GGally)\n\n# explore data ----\nView(diamonds)\nnames(diamonds)\ndim(diamonds)\nsummary(diamonds)\nhead(diamonds)\ntail(diamonds)\nskim(diamonds)\n\n\n\n\nCreate a pairs plot using ggpairs()\n\n\n\n\n\n\n\nImportantSolution\n\n\n\nNote: only code presented here because this plot takes a little while to render.\n\nGGally::ggpairs(diamonds)\n\n\n\n\nCreate a basic ggplot scatterplot of diamond price (price) as a function of size (carat)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreate a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSave, stage, commit, pull, then push your changes back to your repo in RStudio using the GUI interface (buttons)\nCreate a boxplot (see: geom_boxplot) of diamond clarity (on the x-axis) and price (y-axis).\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the command line, stage, commit, & push changes\n\n\n\nEnd Activity Session (Day 4)"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Essential Math in Environmental Data Science",
+    "section": "Course Description",
+    "text": "Course Description\nQuantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in basic math (algebra, uni- and multivariate functions, units and unit conversions), differential and integral calculus, differential equations, linear algebra, statistics and probability, and reading, writing and evaluating logical operations.\nThe goal of EDS 212 (Essential Math in Environmental Data Science) is to prepare incoming MEDS students with quantitative methods, skills, notation and language commonly used in environmental data science and required for their data science courses and projects in the program. By the end of the course, students should be able to:\n\nPerform the following by hand: convert units, basic algebra and working with logs and exponentials; write, interpret and evaluate univariate and multivariate functions; basic derivatives and integrals with univariate and multivariate functions; solve simple differential equations; basic operations with scalars, vectors and matrices; writing and evaluating logicals\nExplain and share examples for how all topics in EDS 212 are useful and used in applied environmental data science\nInterpret examples of applied math & models from environmental science case studies\nWork with peers to solve group tasks, then communicate the process of problem solving to the rest of the class"
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "Essential Math in Environmental Data Science",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nCarmen Galaz García\nEmail: c_galazgarcia@ucsb.edu\nLearn more: Bren profile\n\n\n\n\nTA\n\n\n\n\n\n\n\n\n\n\n\nCella Schnabel\nEmail: cellaschnabel@bren.ucsb.edu\nLearn more: Bren profile"
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Essential Math in Environmental Data Science",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nEDS 212 was originally developed and taught by Allison Horst and then adapted by Ruth Oliver. This new website houses materials which are heavily reused, adapted and expanded from, and inspired by Ruth and Allison’s work."
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day2-key.html",
+    "href": "course-materials/eod-keys/eod-day2-key.html",
+    "title": "Day 2: Tasks & activities - KEY",
+    "section": "",
+    "text": "Put all notes away\nWith a partner, based on what you’ve learned, derive the definition of the derivative from scratch\nAt every step, describe what you are doing\nOnce you have the definition of the derivative, say out loud (each person) what we’re doing mathematically every time we find the derivative\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nWe know how to calculate the slope of a line, using the formula, \\(slope = \\frac{y_2-y_1}{x_2-x_1}\\) (change in rise over run). If we have a non-linear function, however, the slope is changing at each point along that function.\nIf we have a point on a curve, \\((x, f(x))\\) and a second point on that same function, some horizontal distance (\\(h\\)) away, \\((x+h, f(x+h))\\), we can estimate the average slope between those two points using the same slope formula, \\(average\\; slope = \\frac{f(x+h) - f(x)}{x+h-x} = \\frac{f(x+h) - f(x)}{h}\\)\nHowever, we don’t want the average slope, we want the exact slope. We can calculate this by moving our second point along the function, closer and closer to our first point, until the distance between them (\\(h\\)) gets finitely small (\\(h \\rightarrow 0\\)). By doing so, the average slope becomes the instantaneous slope at a single point (essentially finding the slope at the line tangent to our point).\nThe expression for the instantaneous slope at any point on a function is called the derivative:\n\n\\[\\frac{df}{dx} = \\lim_{h\\to 0}\\frac{f(x+h)-f(x)}{h}\\]"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day2-key.html#section-1-small-groups-derive-the-definition-of-the-derivative",
+    "href": "course-materials/eod-keys/eod-day2-key.html#section-1-small-groups-derive-the-definition-of-the-derivative",
+    "title": "Day 2: Tasks & activities - KEY",
+    "section": "",
+    "text": "Put all notes away\nWith a partner, based on what you’ve learned, derive the definition of the derivative from scratch\nAt every step, describe what you are doing\nOnce you have the definition of the derivative, say out loud (each person) what we’re doing mathematically every time we find the derivative\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nWe know how to calculate the slope of a line, using the formula, \\(slope = \\frac{y_2-y_1}{x_2-x_1}\\) (change in rise over run). If we have a non-linear function, however, the slope is changing at each point along that function.\nIf we have a point on a curve, \\((x, f(x))\\) and a second point on that same function, some horizontal distance (\\(h\\)) away, \\((x+h, f(x+h))\\), we can estimate the average slope between those two points using the same slope formula, \\(average\\; slope = \\frac{f(x+h) - f(x)}{x+h-x} = \\frac{f(x+h) - f(x)}{h}\\)\nHowever, we don’t want the average slope, we want the exact slope. We can calculate this by moving our second point along the function, closer and closer to our first point, until the distance between them (\\(h\\)) gets finitely small (\\(h \\rightarrow 0\\)). By doing so, the average slope becomes the instantaneous slope at a single point (essentially finding the slope at the line tangent to our point).\nThe expression for the instantaneous slope at any point on a function is called the derivative:\n\n\\[\\frac{df}{dx} = \\lim_{h\\to 0}\\frac{f(x+h)-f(x)}{h}\\]"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day2-key.html#section-2-derivatives-by-hand",
+    "href": "course-materials/eod-keys/eod-day2-key.html#section-2-derivatives-by-hand",
+    "title": "Day 2: Tasks & activities - KEY",
+    "section": "Section 2: Derivatives by hand",
+    "text": "Section 2: Derivatives by hand\n\nBy hand and using derivative rules, find the third derivative of \\[G(t)=2.2 + 3.1t-5.6t^4 + \\frac{4.3}{t^3}\\] \n\n\n\n\n\n\n\nImportantSolution\n\n\n\nFirst derivative: \\[G'(t) = 3.1 -(4)(5.6)t^3 +(-3)(4.3)t^{-4}\\] \\[G'(t) = 3.1 -22.4t^3 -12.9t^{-4}\\]\nSecond derivative: \\[G''(t) = 3.1. - (22.4)(3)t^2 -(12.9)(-4)t^{-5}\\] \\[G''(t) = 3.1. - 67.2t^2 -(12.9)(-4)t^{-5}\\] \\[G''(t) = -67.2t^2 + 51.6t^{-5}\\]\nThird derivative: \\[G'''(t) = -(67.2)(2)t + (51.6)(-5)t^{-6}\\] \\[G'''(t) = -134.4t - 258t^{-6}\\]"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day2-key.html#section-3-derivatives-in-r",
+    "href": "course-materials/eod-keys/eod-day2-key.html#section-3-derivatives-in-r",
+    "title": "Day 2: Tasks & activities - KEY",
+    "section": "Section 3: Derivatives in R",
+    "text": "Section 3: Derivatives in R\n\nCreate a new version-controlled R Project\n\nCreate a new R Project (named eds212-day2-tasks) (or using a naming convention you choose for all EDS 212 projects)\nCreate a new Quarto document in the project\nAttach the {tidyverse} and {palmerpenguins} packages with library(package_name) (note: you may need to install {palmerpenguins} - remember install.packages(\"packagename\"))\nRender (save your .qmd as eds212_day2_activities.qmd, or follow a naming convention you’ve decided on)\nUse usethis::use_git() and usethis::use_github() to make your project a version-controlled repo, with an upstream GitHub repo\n\n\n\nFind derivatives using R\n\nIn your Quarto document, find the derivative expression and slope at the indicated value for each the following functions in R (each in a separate code chunk):\n\nFind the slope of \\(f(x)=x^2\\) at \\(x = 3\\)\n\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# create an expression ----\nexpression1 &lt;- expression(x^2)\n\n# find derivative with respect to x using `D()` ----\nderiv1 &lt;- D(expression1, \"x\")\n\n# check it out ----\nderiv1\n\n2 * x\n\n# evaluate it at x = 3 ----\nx &lt;- 3\n\neval(deriv1)\n\n[1] 6\n\n\n\n\n\nFind the slope of \\(P(a)=2(3a+2)^4-5\\) at \\(a = 1.2\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# create an expression ----\nexpression2 &lt;- expression(2 * (3 * a + 2)^4 - 5)\n\n# find derivative with respect to x using `D()` ----\nderiv2 &lt;- D(expression2, \"a\")\n\n# check it out ----\nderiv2\n\n2 * (4 * (3 * (3 * a + 2)^3))\n\n# evaluate it at x = 3 ----\na &lt;- 1.2\n\neval(deriv2)\n\n[1] 4214.784\n\n\n\n\n\nRender, then stage, commit, pull, then push your changes to your repo on GitHub. Check your repo (refresh) to make sure the changes show up there."
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day2-key.html#section-4-make-another-penguin-plot",
+    "href": "course-materials/eod-keys/eod-day2-key.html#section-4-make-another-penguin-plot",
+    "title": "Day 2: Tasks & activities - KEY",
+    "section": "Section 4: Make another penguin plot",
+    "text": "Section 4: Make another penguin plot\n\nIn a new code chunk, create a ggplot graph of penguin bill length versus bill depth (using the penguins dataset in the {palmerpenguins} package), with point color dependent on species. You should attach the {tidyverse} and {palmerpenguins} package in your .qmd setup chunk if you haven’t already. Update labels and add a title.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# install packages ----\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\n# create ggplot ----\nggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +\n  geom_point() +\n  labs(title = \"Penguin bill sizes by species\", \n       x = \"Bill Length (mm)\",\n       y = \"Bill Depth (mm)\")\n\n\n\n\n\n\n\n\n\n\n\nIn a new code chunk, make a jitter plot of flipper length by species (species on the x-axis, flipper length on the y-axis). Update axis labels and add a title. See ?geom_jitter.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# create ggplot ----\nggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +\n  geom_jitter() +\n  labs(title = \"Penguin flipper lengths by species\",\n       x = \"Species\",\n       y = \"Flipper Lengths (mm)\")\n\n\n\n\n\n\n\n\n\n\n\nRender your .qmd to check for reproducibility\nStage, commit, and push changes to the remote repo. Once you do, go to GitHub and check to see the changes are safely stored & tracked.\nGo back to your Quarto document in RStudio. Pull to make sure you have the same versions as in the remote repo. Make a change (anything you want - maybe change your graph colors, sizes, etc.), then stage, commit, & push changes to the remote repo to reinforce the steps. Check that changes are stored on GitHub.\nRepeat one more time - make a change to your plot, render, stage, commit & push. Check that your changes appear on GitHub.\n\n\nEnd Activity Session (Day 2)"
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day1-key.html",
+    "href": "course-materials/eod-keys/eod-day1-key.html",
+    "title": "Day 1: Tasks & activities - KEY",
+    "section": "",
+    "text": "By hand: Evaluate \\(f(x,y)=x^2-1+3xy\\) at \\(x=1\\) and \\(y = 0\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(f(1,0)=1^2-1+(3)(1)(0) = 1 - 1 + 0 = 0\\)\n\n\n\nIn the R Console: given \\(G(t,z)=3.1(t-4.2)^2 + 0.06z\\), find the value of \\(G(1, 2.5)\\) (you do NOT need to write a function - just do the calculation in R using R as a calculator)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n3.1 * (1 - 4.2)^2 + (0.06 * 2.5)\n\n[1] 31.894\n\n\n\n\n\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\n\n\nImportantSolution\n\n\n\nAccording to Wikipedia, one barrel of oil is equal to 42 gallons and ~159 liters.\n\nCompany A: \\(14.6\\; barrels\\; spilled - 9.3\\; barrels\\; recovered = 5.3\\; barrels\\; unrecovered\\)\nCompany B: \\(692\\; liters \\times \\frac{1\\; barrel}{159\\; liters} = 4.352201\\; barrels\\;spilled\\; \\times 0.06 = 0.2611321\\;barrels\\;unrecovered\\)\nCompnay C: \\(18.1\\;gallons\\; \\times \\frac{1\\;barrel}{42\\;gallons} = 0.4309524\\;barrels\\;spilled\\; \\times 1 = 0.4309524\\;barrels\\;unrecovered\\)\n\nTotal unrecovered barrels = 5.3 + 0.2611321 + 0.4309524 = 5.992084 ~ 6 barrels\n\n\n\n\n\n\nBy hand: If an urchin population in a study plot in 1990 is 432, and in 2004 is 801, what is the average rate of population increase? Find the slope, then write a statement about the average increase (including units).\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[slope\\; (m) = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2-y_1}{x_2-x_1} = \\frac{801-432}{2004-1990} = 26.43\\] Between 1990 and 2004, urchin populations increased by an average of 26.43 urchins per year."
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day1-key.html#section-1.-practice-problems",
+    "href": "course-materials/eod-keys/eod-day1-key.html#section-1.-practice-problems",
+    "title": "Day 1: Tasks & activities - KEY",
+    "section": "",
+    "text": "By hand: Evaluate \\(f(x,y)=x^2-1+3xy\\) at \\(x=1\\) and \\(y = 0\\)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\(f(1,0)=1^2-1+(3)(1)(0) = 1 - 1 + 0 = 0\\)\n\n\n\nIn the R Console: given \\(G(t,z)=3.1(t-4.2)^2 + 0.06z\\), find the value of \\(G(1, 2.5)\\) (you do NOT need to write a function - just do the calculation in R using R as a calculator)\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n3.1 * (1 - 4.2)^2 + (0.06 * 2.5)\n\n[1] 31.894\n\n\n\n\n\n\n\n\nYou are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:\n\n\nCompany A: 14.6 barrels spilled (with 9.3 barrels recovered)\nCompany B: 692 liters spilled (94% recovered)\nCompany C: 18.1 gallons spilled (0% recovered)\n\nWhat is the total unrecovered amount of oil spilled into the watershed that year, in barrels. Use R & Google here for calculations.\n\n\n\n\n\n\nImportantSolution\n\n\n\nAccording to Wikipedia, one barrel of oil is equal to 42 gallons and ~159 liters.\n\nCompany A: \\(14.6\\; barrels\\; spilled - 9.3\\; barrels\\; recovered = 5.3\\; barrels\\; unrecovered\\)\nCompany B: \\(692\\; liters \\times \\frac{1\\; barrel}{159\\; liters} = 4.352201\\; barrels\\;spilled\\; \\times 0.06 = 0.2611321\\;barrels\\;unrecovered\\)\nCompnay C: \\(18.1\\;gallons\\; \\times \\frac{1\\;barrel}{42\\;gallons} = 0.4309524\\;barrels\\;spilled\\; \\times 1 = 0.4309524\\;barrels\\;unrecovered\\)\n\nTotal unrecovered barrels = 5.3 + 0.2611321 + 0.4309524 = 5.992084 ~ 6 barrels\n\n\n\n\n\n\nBy hand: If an urchin population in a study plot in 1990 is 432, and in 2004 is 801, what is the average rate of population increase? Find the slope, then write a statement about the average increase (including units).\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\\[slope\\; (m) = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2-y_1}{x_2-x_1} = \\frac{801-432}{2004-1990} = 26.43\\] Between 1990 and 2004, urchin populations increased by an average of 26.43 urchins per year."
+  },
+  {
+    "objectID": "course-materials/eod-keys/eod-day1-key.html#section-2-projects-and-functions",
+    "href": "course-materials/eod-keys/eod-day1-key.html#section-2-projects-and-functions",
+    "title": "Day 1: Tasks & activities - KEY",
+    "section": "Section 2: Projects and functions",
+    "text": "Section 2: Projects and functions\n\nCreate a new R project (named eds212-day1-tasks)\nAdd a new Quarto document to the project\nPress Render (save this in your project as fish-length-weight.qmd)\nDelete everything below the first code chunk\nAttach the tidyverse package\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nlibrary(tidyverse)\n\n\n\n\nPlay around with markdown in the Quarto doc. Try adding text with at least the following:\n\n\nHeaders of varying size\nItalics\nBold\nSuperscripts / subscripts\nBulletpoints\nAn image (google how!)\n\n\nAdd a new code chunk\nWithin the R code chunk, write a function to estimate fish standard weight, given parameters \\(a\\), \\(b\\), and fish length \\(L\\) as inputs. “Standard weight” is how much we expect a fish to weigh, give the species and fish length, and the nonlinear relationship is given by:\n\n\\[W=aL^b\\]\nwhere L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values.\n\nTest out your function to find the mass (g) for a 60 cm fish of the following species (parameter estimates from Peyton et al. (2016)):\n\n\nMilkfish: a = 0.0905, b = 2.52\nGiant trevally: a = 0.0353, b = 3.05\nGreat barracuda: a = 0.0181, b = 3.27\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\n# write function ----\nfish_weight_g &lt;- function(length_cm, a, b){\n  weight_g = a * length_cm^b\n}\n\n# test function ----\nmilkfish_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0905, b = 2.52)\nmilkfish_weight\n\n[1] 2738.985\n\ntrevally_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0353, b = 3.05)\ntrevally_weight\n\n[1] 9356.987\n\nbarracuda_weight &lt;- fish_weight_g(length_cm = 60, a = 0.0181, b = 3.27)\nbarracuda_weight\n\n[1] 11809.54\n\n\n\n\n\n\n\n\n\n\nNoteCitation\n\n\n\nPeyton, K. A., T. S. Sakihara, L. K. Nishiura, T. T. Shindo, T. E. Shimoda, S. Hau, A. Akiona, and K. Lorance. 2016. “Length–Weight Relationships for Common Juvenile Fishes and Prey Species in Hawaiian Estuaries.” Journal of Applied Ichthyology 32 (3): 499–502. https://doi.org/10.1111/jai.12957.\n\n\n\nMake and store (as fish_length) a sequence of size ranges from 0 to 200 cm, by increments of 1 cm\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nfish_length &lt;- seq(from = 0, to = 200, by = 1)\n\n\n\n\nEstimate the weight for giant barracudas along that entire range (given the parameters above). Store the output as barracuda_weight.\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nbarracuda_weight &lt;- fish_weight_g(length_cm = fish_length, a = 0.0181, b = 3.27)\n\n\n\n\nBind the lengths and estimated barracuda weights into a single data frame using data.frame()\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nbarracuda_df &lt;- data.frame(fish_length, barracuda_weight)\n# View(barracuda_df)\n\n\n\n\nCreate a ggplot graph of predicted length versus weight for giant barracuda\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nggplot(data = barracuda_df, aes(x = fish_length, y = barracuda_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\nUpdate the graph axis labels and title\n\n\n\n\n\n\n\nImportantSolution\n\n\n\n\nggplot(data = barracuda_df, aes(x = fish_length, y = barracuda_weight)) +\n  geom_point() +\n  labs(title = \"Predicted barracuda weights, estimated from fish lengths\",\n       x = \"Length (cm)\",\n       y = \"Standard weight (g)\")\n\n\n\n\n\n\n\n\n\n\n\nRender the .qmd. Make sure everything is saved.\nClose your project. Reopen the project, and ensure that you can re-run the entire Quarto document (reproducibility check).\n\n\n\nEnd Activity Session (Day 1)"
   },
   {
     "objectID": "course-materials/slides/day1.1-slides.html#title-slide",
@@ -2902,28 +2706,21 @@
     "href": "course-materials/slides/day5.1-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 212: Day 5, Lecture 1\nBasic probability theory\n\nAugust 8th, 2025"
-  },
-  {
-    "objectID": "course-materials/slides/day5.1-slides.html#monty-hall",
-    "href": "course-materials/slides/day5.1-slides.html#monty-hall",
-    "title": "",
-    "section": "",
-    "text": "The Monty Hall problem\n\n\n\n\nMonty Hall Problem, by Numberphile\n\n\nhttps://brilliant.org/wiki/monty-hall-problem/#:~:text=In%20two%20out%20of%20three,has%20a%20goat%20behind%20it."
+    "text": "EDS 212: Day 4, Lecture 2\nBasic probability theory\n\nAugust 6th, 2025"
   },
   {
     "objectID": "course-materials/slides/day5.1-slides.html#refresh-prob",
     "href": "course-materials/slides/day5.1-slides.html#refresh-prob",
     "title": "",
     "section": "",
-    "text": "Why refresh probability?\n\n\n\nHypothesis testing\nBayesian statistics\nDecision making\nDangers"
+    "text": "Why refresh probability?\n\n\n\nHypothesis testing\nBayesian statistics\nDecision making\nBeing cautious"
   },
   {
     "objectID": "course-materials/slides/day5.1-slides.html#probability",
     "href": "course-materials/slides/day5.1-slides.html#probability",
     "title": "",
     "section": "",
-    "text": "Probability\n\n   \n\nDefinition: the likelihood that an event or outcome occurs. Typically, \\(P = 0\\) indicates no chance of an event or outcome happening, \\(P=1\\) indicates it happens with certainty."
+    "text": "Probability\n\n   \n\nDefinition: the likelihood that an event or outcome occurs.\n\n\\(P = 0\\) indicates no chance of an event or outcome\n\\(P=1\\) indicates it is a certainty it will happen"
   },
   {
     "objectID": "course-materials/slides/day5.1-slides.html#terminology",
@@ -3462,161 +3259,371 @@
     "href": "course-materials/slides/day4.1-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 212: Day 4, Lecture 1\nLinear algebra continued\n\nAugust 7th, 2025"
+    "text": "EDS 212: Day 4, Lecture 1\nEssential summary statistics and exploration\n\nAugust 6th, 2025"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#part1",
-    "href": "course-materials/slides/day4.1-slides.html#part1",
+    "objectID": "course-materials/slides/day4.1-slides.html#data-types-title",
+    "href": "course-materials/slides/day4.1-slides.html#data-types-title",
     "title": "",
     "section": "",
-    "text": "Part 1: Linear algebra continued\n\n\n\n\nRefresher: vectors and working with them\nMatrices: notation, language, basic algebra\nRepresenting systems of equations with matrices\nLinear algebra in environmental science"
+    "text": "Data types"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#matrices",
-    "href": "course-materials/slides/day4.1-slides.html#matrices",
+    "objectID": "course-materials/slides/day4.1-slides.html#data-types-1",
+    "href": "course-materials/slides/day4.1-slides.html#data-types-1",
     "title": "",
     "section": "",
-    "text": "Matrices\n\n\n\nA matrix is a table of values (multiple vectors in combination). A vector, therefore, can be thought of as a matrix with a single column.\n\n\nDimensions: the size of the matrix, in rows x columns (m x n)\nElements: values in a matrix, often denoted symbolically with a subscript where the first number is the row and the second number is the column (e.g. \\(a_{34}\\) indicates the element in row 3, column 4)"
+    "text": "Data types\n\n\n\n\nQuantitative\nNumeric information\n\n\n\nQualitative\nDescriptions (usually words)"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#matrix-algebra",
-    "href": "course-materials/slides/day4.1-slides.html#matrix-algebra",
+    "objectID": "course-materials/slides/day4.1-slides.html#data-types-2",
+    "href": "course-materials/slides/day4.1-slides.html#data-types-2",
     "title": "",
     "section": "",
-    "text": "Matrix algebra (add / subtract)\n\n\n\nAdd or subtract the corresponding elements (by matrix position) to create a new matrix of the same dimensions."
+    "text": "Data types\n\n\n\n\nQuantitative\nNumeric information\n\n\n\nContinuous: measured values, variable can take any value within a range\nDiscrete: variable only takes limted values (e.g. counts)\n\n\n\nQualitative\nDescriptions (usually words)\n\n\n\nNominal: order does not matter (classes or categories)\nOrdinal: order matters, but the difference between values isn’t known or equal (e.g. Likert Scale)\n\n\n\n\n\nBinary: only two possible outcomes (yes/no, true/false, 1/0)"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#scalar-mult",
-    "href": "course-materials/slides/day4.1-slides.html#scalar-mult",
+    "objectID": "course-materials/slides/day4.1-slides.html#quantitative",
+    "href": "course-materials/slides/day4.1-slides.html#quantitative",
     "title": "",
     "section": "",
-    "text": "Scalar multiplication\n\n\n\nTo multiply a matrix by a scalar, multiply each element in the matrix by the scalar to get a scaled matrix of the same dimensions.\n\nFor example:"
+    "text": "Quantitative data: continuous & discrete\n\n\n\nArt by Allison Horst"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#dot-product",
-    "href": "course-materials/slides/day4.1-slides.html#dot-product",
+    "objectID": "course-materials/slides/day4.1-slides.html#nom-ord-bin",
+    "href": "course-materials/slides/day4.1-slides.html#nom-ord-bin",
     "title": "",
     "section": "",
-    "text": "Recall: dot product\n\n\n\nThe dot product of two vectors is the sum of their elements multiplied:\n\nFor \\(\\vec a =[1,5]\\) and \\(\\vec b = [2,-3]\\):\n\n\\[\\vec a \\cdot \\vec b=(1)(2)+(5)(-3)=-13\\]"
+    "text": "Nominal, ordinal, binary data:\n\n\n\nArt by Allison Horst"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#matrix-mult",
-    "href": "course-materials/slides/day4.1-slides.html#matrix-mult",
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data",
     "title": "",
     "section": "",
-    "text": "Matrix multiplication\n\n\nWe find the dot product of row \\(\\cdot\\) column vectors:"
+    "text": "Exercise\n\n✏️ For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous), and identify the size of the observed dataset.\n\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration."
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#practice",
-    "href": "course-materials/slides/day4.1-slides.html#practice",
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A-blank",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A-blank",
     "title": "",
     "section": "",
-    "text": "Practice problems\n\n\n\n\n(2)(1)+(-1)(6)…(2)(5)+(-1)(-3)\n(0)(1)+(4)(6)…(0)(5)+(4)(-3)\n\\(solution = \\begin{bmatrix}\n  -4 & 13 \\\\\n  24 & -12\n\\end{bmatrix}\\)"
+    "text": "Exercise A: Solution\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\n✏️"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#crit-thinking",
-    "href": "course-materials/slides/day4.1-slides.html#crit-thinking",
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A",
     "title": "",
     "section": "",
-    "text": "Critical thinking: Matrices with unequal dimensions\n\n\nWhat do you think the output matrix would contain if you were multiplying the following?\n\n\n\nThe resulting matrix has dimensions which are equal to the number of the rows of the first matrix and the number of columns of the second matrix.\nAG+BI+CK…AH+BJ+CL\nDG+EI+FK…DH+EJ+FL"
+    "text": "Exercise A: Solution\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\n\nDependent variable: nitrogen threshold exceeded — qualitative, binary\nIndependent variables:\n\nFertilizer application rate — quantitative, continuous\n% agricultural land cover — quantitative, continuous\nMonthly rainfall — quantitative, continuous\n\n\nSample size: n = 45 watersheds"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#try-one",
-    "href": "course-materials/slides/day4.1-slides.html#try-one",
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B-blank",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B-blank",
     "title": "",
     "section": "",
-    "text": "Let’s try one!\n\n\n\n\n(0)(-1)+(2)(5)+(-1)(-3)…(0)(0)+(2)(1)+(-1)(6)\n(3)(-1)+(4)(5)+(-2)(-3)…(3)(0)+(4)(1)+(-2)(6)\n\\(solution = \\begin{bmatrix}\n  13 & -4 \\\\\n  23 & -8\n\\end{bmatrix}\\)"
+    "text": "Exercise B: Solution\n\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.\n✏️"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#diagonal-matrix",
-    "href": "course-materials/slides/day4.1-slides.html#diagonal-matrix",
+    "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B",
+    "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B",
     "title": "",
     "section": "",
-    "text": "Diagonal matrix\n\n\nA diagonal matrix is (almost always) a square matrix (\\(m\\) = \\(n\\)) where only elements on the diagonal are non-zero values."
+    "text": "Exercise B: Solution\n\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.\n\nDependent variable: number of complaints filed — quantitative, discrete\nIndependent variables:\n\nMedian household income — quantitative, continuous\nDistance to nearest industrial facility — quantitative, continuous\nType of nearest industrial facility — qualitative, nominal\n% residents who are renters — quantitative, continuous\nPM2.5 concentration — quantitative, continuous\n\n\nSample size: n = 60 neighborhoods"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#mult-diag-matrix",
-    "href": "course-materials/slides/day4.1-slides.html#mult-diag-matrix",
+    "objectID": "course-materials/slides/day4.1-slides.html#data-dsitributions-title",
+    "href": "course-materials/slides/day4.1-slides.html#data-dsitributions-title",
     "title": "",
     "section": "",
-    "text": "What happens when we multiply a matrix by a diagonal matrix?\n\n\nA diagonal matrix is also called a scaling matrix because it scales rows proportionally, but not by the same value:"
+    "text": "Basic data visualizations\n\n\nVisualizations"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#sys-eq",
-    "href": "course-materials/slides/day4.1-slides.html#sys-eq",
+    "objectID": "course-materials/slides/day4.1-slides.html#describe-dist",
+    "href": "course-materials/slides/day4.1-slides.html#describe-dist",
     "title": "",
     "section": "",
-    "text": "Matrices as systems of equations\n\nOften in environmental data science, we have multiple equations representing processes. Matrices give us a way to express these systems of equations in data structures that are easy to store and work with in data science. For example, let’s say we have a system:\n\n\n\\[3x-8y=5\\]\n\\[x + 2y = 10\\]\n\n\n\nHow can we write this using matrices?"
+    "text": "How can we describe how data are distributed?\n\n\nOur starting points:\n\n\n\nShape / patterns / clusters (data vizualization)\nCentral tendency (mean / median)\nSpread & uncertainty (standard deviation / standard error / confidence interval)"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#rewrite",
-    "href": "course-materials/slides/day4.1-slides.html#rewrite",
+    "objectID": "course-materials/slides/day4.1-slides.html#data-viz",
+    "href": "course-materials/slides/day4.1-slides.html#data-viz",
     "title": "",
     "section": "",
-    "text": "Rewriting in matrix form:\n\n\n\n\\[3x-8y=5\\]\n\\[x + 2y = 10\\]\n\n\nThe matrix form of this system of equations looks as follows:\n\n\nWe can write systems of equations in matrix form as \\(Ax=b\\), where:\n\n\\(A\\) is the coefficient matrix\n\\(x\\) is the vector of variables\n\\(b\\) is the constant vector\n\n\nIdentify coefficients to form matrix \\(A\\), where each row corresponds to the coefficients of one equation:\n\n\\[A = \\begin{bmatrix}\n  3 & -8 \\\\\n  1 & 2\n\\end{bmatrix}\\]\n\nForm the variable vector \\(x\\) which contains the variables of the system:\n\n\\[x = \\begin{bmatrix}\nx \\\\\n  y\n\\end{bmatrix}\\]\n\nForm the constant vector \\(b\\) \\[b = \\begin{bmatrix}\n5 \\\\\n10\n\\end{bmatrix}\\]"
+    "text": "Useful data visualizations\n\n\n\nBasic ones:\n\nHistograms\nBoxplots\nScatterplots"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#env-sci-examples",
-    "href": "course-materials/slides/day4.1-slides.html#env-sci-examples",
+    "objectID": "course-materials/slides/day4.1-slides.html#histogram",
+    "href": "course-materials/slides/day4.1-slides.html#histogram",
     "title": "",
     "section": "",
-    "text": "Example: matrices and linear algebra in environmental science\n\n \nLeslie Matrix: Population ecology\n\nA matrix model that accounts for survival / fecundity rates at different life stages for a species.\n\nThe Leslie matrix is one of the most well-known ways to describe the growth of populations (and their projected age distribution), in which a population is:\n\nclosed to migration,\ngrowing in an unlimited environment,\nand where only one sex, usually the female, is considered."
+    "text": "Histogram\n\n\nA histogram shows the distribution of a single numeric variable, by grouping values into bins and counting observations.\n\n\nTo construct one:\n\nDivide the range of the data into equal-width bins\nCount how many observations fall into each bin\nDraw a bar over each bin, with height equal to that count"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#overview",
-    "href": "course-materials/slides/day4.1-slides.html#overview",
+    "objectID": "course-materials/slides/day4.1-slides.html#histogram-example-blank",
+    "href": "course-materials/slides/day4.1-slides.html#histogram-example-blank",
     "title": "",
     "section": "",
-    "text": "Overview:\n\n\n\nDefine life stages\nEstimate probability of survival / reproduction at different life stages to create a matrix over time\nCombine into a matrix that allows calculation at the next time step"
+    "text": "Histogram example\n\nTwelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:\n8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27\n✏️"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#est-as-eq1",
-    "href": "course-materials/slides/day4.1-slides.html#est-as-eq1",
+    "objectID": "course-materials/slides/day4.1-slides.html#histogram-example",
+    "href": "course-materials/slides/day4.1-slides.html#histogram-example",
     "title": "",
     "section": "",
-    "text": "Writing estimates as equations:\n\n\nFor our species, each adult female will lay ~600 eggs during each cycle (let’s say that’s a year). Which means that the eggs at time \\(t+1\\) can be estimated by the number of adult females * 600:\n\n\\[E_{t+1}=600 * F_t\\]"
+    "text": "Histogram example\n\nTwelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:\n8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27\n\n\nUsing bins of width 5 cm:\n\n\n\nBin (cm)\nCount\n\n\n\n\n[5, 10)\n2\n\n\n[10, 15)\n4\n\n\n[15, 20)\n4\n\n\n[20, 25)\n1\n\n\n[25, 30)\n1"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#est-as-eq2",
-    "href": "course-materials/slides/day4.1-slides.html#est-as-eq2",
+    "objectID": "course-materials/slides/day4.1-slides.html#histogram-exercise",
+    "href": "course-materials/slides/day4.1-slides.html#histogram-exercise",
     "title": "",
     "section": "",
-    "text": "Writing estimates as equations:\n\n\n\n\\[E_{t+1}=600 * F_t\\]\n\nWe also estimate that 20% of eggs survive to reach larval stage:\n\n\\[L_{t+1} = 0.2*E_t\\]"
+    "text": "Exercise\n\n✏️ Ten storm events produced these wave heights, in meters. Using bins of width 1 m (starting at 0), tally the counts and sketch the resulting histogram.\n\n0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#est-as-eq3",
-    "href": "course-materials/slides/day4.1-slides.html#est-as-eq3",
+    "objectID": "course-materials/slides/day4.1-slides.html#histogram-exercise-solution",
+    "href": "course-materials/slides/day4.1-slides.html#histogram-exercise-solution",
     "title": "",
     "section": "",
-    "text": "Writing estimates as equations:\n\n\n\n\\[E_{t+1}=600 * F_t\\] \\[L_{t+1} = 0.2*E_t\\]\n\nWe also estimate that 8% of those that reach larval stage will survive to become reproducing female adults:\n\n\\[F_{t+1}=0.08*L_t\\]"
+    "text": "Exercise: solution\n\n✏️ Ten storm events produced these wave heights, in meters. Using bins of width 1 m (starting at 0), tally the counts and sketch the resulting histogram.\n\n0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6\n\n\n\n\n\nBin (m)\nCount\n\n\n\n\n[0, 1)\n1\n\n\n[1, 2)\n4\n\n\n[2, 3)\n3\n\n\n[3, 4)\n2"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#in-matrix-form1",
-    "href": "course-materials/slides/day4.1-slides.html#in-matrix-form1",
+    "objectID": "course-materials/slides/day4.1-slides.html#quartiles",
+    "href": "course-materials/slides/day4.1-slides.html#quartiles",
     "title": "",
     "section": "",
-    "text": "How can we write this in matrix form?\n\n\n\\[E_{t+1}=600 * F_t\\]\n\\[L_{t+1} = 0.2*E_t\\]\n\\[F_{t+1}=0.08*L_t\\]\n\n\nThe Leslie matrix (L) will be a 3x3 matrix since we have three stages (Eggs, Larvae, Adults).\nEach column represents an age class at time \\(t\\)\n\nFecundity (Top Row): The third element of the top row is 600 because adult females contribute to the number of eggs in the next generation.\nSurvival Rates (Sub-diagonal):\n\n\nThe first element in the second row (0.2) represents the probability of an egg surviving to become a larva.\nThe second element in the third row (0.08) represents the probability of a larva surviving to become an adult female."
+    "text": "Quartiles\n\nQuartiles divide an ordered dataset into four equal parts.\n\n\n\\(Q_1\\) (1st quartile): 25% of values fall below this point\n\\(Q_2\\) (2nd quartile): the median: 50% of values fall below this point\n\\(Q_3\\) (3rd quartile): 75% of values fall below this point\n\n\nOne simple way to find them:\n\nOrder the data and find the median (\\(Q_2\\)): this splits the data into a lower half and an upper half\n\\(Q_1\\) = median of the lower half\n\\(Q_3\\) = median of the upper half"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#in-matrix-form2",
-    "href": "course-materials/slides/day4.1-slides.html#in-matrix-form2",
+    "objectID": "course-materials/slides/day4.1-slides.html#quartiles-example-blank",
+    "href": "course-materials/slides/day4.1-slides.html#quartiles-example-blank",
     "title": "",
     "section": "",
-    "text": "How can we write this in matrix form?\n\n\n\\[E_{t+1}=600 * F_t\\]\n\\[L_{t+1} = 0.2*E_t\\]\n\\[F_{t+1}=0.08*L_t\\]"
+    "text": "Quartiles\n\n✏️ Find \\(Q_1, Q_2,\\) and \\(Q_3\\) for the values 4, 16, 8, 40, 2, 14, 6, 10, 12\n\nOrdered: 2, 4, 6, 8, 10, 12, 14, 16, 40 Median (Q2) = 10 Lower half: 2, 4, 6, 8 (four values) → Q1 = (4+6)/2 = 5 Upper half: 12, 14, 16, 40 (four values) → Q3 = (14+16)/2 = 15"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#leslie-matrix",
-    "href": "course-materials/slides/day4.1-slides.html#leslie-matrix",
+    "objectID": "course-materials/slides/day4.1-slides.html#quartiles-example",
+    "href": "course-materials/slides/day4.1-slides.html#quartiles-example",
     "title": "",
     "section": "",
-    "text": "Leslie matrix"
+    "text": "Quartiles: solution\n\n💡 Let’s see a solution!\nFind \\(Q_1, Q_2,\\) and \\(Q_3\\) for the values 4, 16, 8, 40, 2, 14, 6, 10, 12\n\n\nOrdered: 2, 4, 6, 8, 10, 12, 14, 16, 40\n\n\\(Q_2\\) (median): 10\nLower half: 2, 4, 6, 8 — an even number of values, so \\(Q_1\\) is the average of the middle two: \\(Q_1 = \\frac{4+6}{2} = 5\\)\nUpper half: 12, 14, 16, 40 — again an even number of values: \\(Q_3 = \\frac{14+16}{2} = 15\\)"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#leslie-matrix-notes",
-    "href": "course-materials/slides/day4.1-slides.html#leslie-matrix-notes",
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot1",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot1",
     "title": "",
     "section": "",
-    "text": "Leslie matrix\n\n\n\nEach column is the age class at time \\(t\\) and each row is the age class at time \\(t+1\\)\nEach entry represents a transition, or change in the # of individuals, from one age class to the next\nFertilities are always in the first row, and represent the contributions to newborns from reproduction\nSurvival probabilities are always in the subdiagonal and represent transitions from one age class to the next\nAll other entries are 0 because no other transitions are possible – individuals cannot remain in the same age class from one year to the next, nor can they skip or repeat age classes\n\n\nSee A Primer of Ecology, by Nicholas J. Gotelli"
+    "text": "Boxplot\n\n\n\nHow it’s drawn:\n\nDraw a box from \\(Q_1\\) to \\(Q_3\\): this box spans the interquartile range: \\[IQR = Q_3 - Q_1\\]\nDraw a line inside the box at the median (\\(Q_2\\))\nDraw whiskers extending to the furthest observation within \\(1.5 \\times IQR\\) of the box\nPlot any observation beyond the whiskers individually, as a dot (an outlier)"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot2",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot2",
+    "title": "",
+    "section": "",
+    "text": "Boxplot"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot-draw-blank",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot-draw-blank",
+    "title": "",
+    "section": "",
+    "text": "Exercise: draw a box plot\n\n✏️ Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 (\\(Q_1=5\\), \\(Q_2=10\\), \\(Q_3=15\\)), draw the box plot by hand."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot-draw",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot-draw",
+    "title": "",
+    "section": "",
+    "text": "Exercise: solution\n\n💡 Let’s see a solution!\n\n\n\n\n\\(Q_1\\): 5\nMedian (\\(Q_2\\)): 10\n\\(Q_3\\): 15\n\\(IQR = 15-5 = 10\\)\n\\(Q_3 + 1.5 \\times IQR = 15+15 = 30\\)\n40 is beyond that value, so it’s an outlier — the whisker stops at 16, the last value within \\(1.5 \\times IQR\\) of the box"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot-interpret",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot-interpret",
+    "title": "",
+    "section": "",
+    "text": "Exercise: interpreting boxplots\n\n✏️ Two farms are monitored for nitrate concentration (mg/L) in their downstream runoff. Compare the two distributions below.\n\n\n\nWhich farm’s runoff has the higher median nitrate concentration?\nWhich farm’s readings are more spread out?\nIs there anything unusual in either distribution?"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot-interpret-solution",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot-interpret-solution",
+    "title": "",
+    "section": "",
+    "text": "Exercise: solution\n\n💡 Let’s discuss!\n\n\nMedian: Farm B’s median (~3.6 mg/L) is noticeably higher than Farm A’s (~2.05 mg/L)\nSpread: Farm B’s box and whiskers cover a much wider range, so its runoff is more variable\nOutlier: Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating as a possible one-time event."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#scatterplots",
+    "href": "course-materials/slides/day4.1-slides.html#scatterplots",
+    "title": "",
+    "section": "",
+    "text": "Scatterplots\n\nA scatterplot shows the relationship between two numeric variables: each observation becomes a point, positioned using its value on the \\(x\\)-axis and its value on the \\(y\\)-axis. A third (categorical) variable can be mapped to color or shape.\n\n\n\nAlways, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#break",
+    "href": "course-materials/slides/day4.1-slides.html#break",
+    "title": "",
+    "section": "",
+    "text": "Let’s take a 5 minute break\n\n\nimage: Flaticon.com"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#numerical-summaries-title",
+    "href": "course-materials/slides/day4.1-slides.html#numerical-summaries-title",
+    "title": "",
+    "section": "",
+    "text": "Summarizing data numerically"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#summarizing-numerically",
+    "href": "course-materials/slides/day4.1-slides.html#summarizing-numerically",
+    "title": "",
+    "section": "",
+    "text": "Summarizing data numerically\n\n\n\n\nCentral tendency\nVariance and standard deviation\nStandard error\nConfidence interval"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#median",
+    "href": "course-materials/slides/day4.1-slides.html#median",
+    "title": "",
+    "section": "",
+    "text": "Median\n\nMiddle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. \\(median\\;of\\;3, 7, 17 = 7\\)\n\nPros:\n\n\nLess susceptible to skew and outliers\nBetter as sample size increases\n\n\n\nCons:\n\n\nDoesn’t take into account the magnitude of all values"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#mean",
+    "href": "course-materials/slides/day4.1-slides.html#mean",
+    "title": "",
+    "section": "",
+    "text": "Mean\n\nAverage value of sample observations, calculated by summing all observation values and dividing by the number of observations. E.g. \\(mean\\;of\\;3, 7, 17 = \\frac{3+7+17}{3} = 9\\)\n\nPros:\n\n\nAverage value is often useful metric\nCommonly reported\n\n\nCons:\n\n\nSusceptible to outliers and skew\nSubject to misinterpretation as “most likely value”\n\n\n\nSB housing market typically reports median cost rather than mean cost? Why do you think that is?"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#central-tendency",
+    "href": "course-materials/slides/day4.1-slides.html#central-tendency",
+    "title": "",
+    "section": "",
+    "text": "Image: Sirkin, R. M. (2006). Measuring central tendency. In Statistics for the social sciences (pp. 83-126). SAGE Publications, Inc., https://www.doi.org/10.4135/9781412985987"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#var-stdev",
+    "href": "course-materials/slides/day4.1-slides.html#var-stdev",
+    "title": "",
+    "section": "",
+    "text": "Variance and standard deviation\n\n\nBoth are measures of data spread.\n\n\n\n\nVariance\nReported in units of measurement squared\n\n\\[ S^2 = \\frac{\\sum_{i=1}^n(x_i - \\bar{x})^2}{n-1}\\]\n\n\nStandard deviation\nReported in units of measurement\n\n\\[ s = \\sqrt{\\frac{\\sum_{i=1}^n(x_i - \\bar{x})^2}{n-1}}\\]\n\n\nStandard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches.\nVariances add (standard deviation doesn’t). For example, if we say that sex explains four square inches of variance, you know that 5 square inches are due to other factors.\nSee this discussion and this discussion\nThe variance measures the mathematical dispersion of data relative to the mean, and while theoretically correct, can be difficult to interpret in a real-world sense. Standard deviation is expressed in the same unit of measurement as the data (e.g. inches, rather than square inches), and therefore can be a more intuitive value to report."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#variance-blank",
+    "href": "course-materials/slides/day4.1-slides.html#variance-blank",
+    "title": "",
+    "section": "",
+    "text": "Variance\n\n✏️"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#variance",
+    "href": "course-materials/slides/day4.1-slides.html#variance",
+    "title": "",
+    "section": "",
+    "text": "Variance\n\nVariance: Mean squared distance of observations from the mean\n\n\n\nWhere \\(S^2\\) is the sample variance, \\(x_i\\) is a sample observation value, \\(\\bar x\\) is the sample mean, and \\(n\\) is the number of observations."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#calc-variance-blank",
+    "href": "course-materials/slides/day4.1-slides.html#calc-variance-blank",
+    "title": "",
+    "section": "",
+    "text": "Exercise\n\n\nGiven these data: \\(2, 4, 4, 6, 9\\), calculate their variance. Remember:\n\\[ S^2 = \\frac{\\sum_{i=1}^n(x_i - \\bar{x})^2}{n-1}\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#calc-variance1",
+    "href": "course-materials/slides/day4.1-slides.html#calc-variance1",
+    "title": "",
+    "section": "",
+    "text": "Calculate variance by hand (1/2)\n\nGiven these data: \\(2, 4, 4, 6, 9\\)\n\nCalculate the mean:\n\n\\[ mean = \\frac{2+4+4+6+9}{5}=\\frac{25}{5}=5\\] 2. Subtract the mean from each data point and square the result:\n\\[(2-5)^2 = (-3)^2 = 9\\] \\[(4-5)^2 = (-1)^2 = 1\\] \\[(4-5)^2 = (-1)^2 = 1\\]\n\\[(6-5)^2 = (1)^2 = 1\\] \\[(9-5)^2 = (4)^2 = 16\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#calc-variance2",
+    "href": "course-materials/slides/day4.1-slides.html#calc-variance2",
+    "title": "",
+    "section": "",
+    "text": "Calculate variance by hand (2/2)\n\nGiven these data: \\(2, 4, 4, 6, 9\\)\n\nSum the squared differences:\n\n\\[9+1+1+1+16 = 28\\]\n\nDivide by the number of data points minus 1 (\\(n\\) - 1)\n\n\\[Variance = \\frac{28}{5-1} = 7\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#stdev",
+    "href": "course-materials/slides/day4.1-slides.html#stdev",
+    "title": "",
+    "section": "",
+    "text": "Standard deviation\n\nAlso a measure of data spread, calculated by taking the square root of the variance.\n\n\\[ s = \\sqrt{\\frac{\\sum_{i=1}^n(x_i - \\bar{x})^2}{n-1}}\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#best-way",
+    "href": "course-materials/slides/day4.1-slides.html#best-way",
+    "title": "",
+    "section": "",
+    "text": "The best way to describe the distribution of the data is to present the data itself."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#datasaurus-dozen1",
+    "href": "course-materials/slides/day4.1-slides.html#datasaurus-dozen1",
+    "title": "",
+    "section": "",
+    "text": "Beware summary statistics alone . . .\n\nMeet the Datasaurus Dozen"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#datasaurus-dozen2",
+    "href": "course-materials/slides/day4.1-slides.html#datasaurus-dozen2",
+    "title": "",
+    "section": "",
+    "text": "Same summary statistics, different distributions\n\n\n\nSource: Autodesk"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#gorilla",
+    "href": "course-materials/slides/day4.1-slides.html#gorilla",
+    "title": "",
+    "section": "",
+    "text": "From: Yanai, I., Lercher, M. A hypothesis is a liability. Genome Biol 21, 231 (2020). https://doi.org/10.1186/s13059-020-02133-w\n\n\nGave students a made-up dataset containing the BMI of 1786 people and the number of steps each took on a particular day.\nStudents in Group 1 were asked to consider three specific hypotheses + also if there was anything else they could conclude from the dataset.\nGroup 2 was simply asked, “What do you conclude from the dataset?”\nIf you plotted the number of steps vs. BMI, you’d find the gorilla. Students driven by hypotheses skipped this step more often than those that were not hypothesis-driven."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#confidence-intervals-title",
+    "href": "course-materials/slides/day4.1-slides.html#confidence-intervals-title",
+    "title": "",
+    "section": "",
+    "text": "Confidence intervals"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#conf-int-1",
+    "href": "course-materials/slides/day4.1-slides.html#conf-int-1",
+    "title": "",
+    "section": "",
+    "text": "Confidence interval\n\n\nConfidence interval: a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#conf-int-2",
+    "href": "course-materials/slides/day4.1-slides.html#conf-int-2",
+    "title": "",
+    "section": "",
+    "text": "Confidence interval\n\n\nConfidence interval: a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.\n\n\nWhat it’s NOT:\n“There is a 95% chance that the true population parameter is between values X and Y.”"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#conf-int-ex-1",
+    "href": "course-materials/slides/day4.1-slides.html#conf-int-ex-1",
+    "title": "",
+    "section": "",
+    "text": "Confidence interval example\n\n\nMean shark length is 8.42 \\(\\pm\\) 3.55 ft (mean \\(\\pm\\) standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).\n\n\n\nWhat this DOES NOT mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet.\n\nThe true population mean is a fixed value and does not change – the CI either contains this true mean or it does not. There is no probability involved."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#conf-int-ex-2",
+    "href": "course-materials/slides/day4.1-slides.html#conf-int-ex-2",
+    "title": "",
+    "section": "",
+    "text": "Confidence interval example\n\n\nMean shark length is 8.42 \\(\\pm\\) 3.55 ft (mean \\(\\pm\\) standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).\n\n\n\nWhat this DOES NOT mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet.\n\nThe true population mean is a fixed value and does not change – the CI either contains this true mean or it does not. There is no probability involved.\n\n\nWhat this DOES mean: If we took a bunch of sets of samples from the population (all n = 15), then 95% of the time, the calculated mean would fall within this range. \n\nThis statement correctly describes the frequency with which we would expect CIs to capture the mean over many samples."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#comm",
+    "href": "course-materials/slides/day4.1-slides.html#comm",
+    "title": "",
+    "section": "",
+    "text": "Communicating data summaries\n\n\n\n\n\nThe “Bar plots” philosophy: show as much as you can for the audience you’re presenting to\nSummary statistics are often useful, but are a small part of the whole data story\nUncertainty is important! How can we responsibly communicate it?\nAll summaries are strongest when accompanied by additional data communication\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtwork by Allison Horst"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#lunch-break",
+    "href": "course-materials/slides/day4.1-slides.html#lunch-break",
+    "title": "",
+    "section": "",
+    "text": "Lunch break!\n\n\n\n\nimage: Flaticon.com"
   },
   {
     "objectID": "course-materials/eod-practice/eod-day3.html",
@@ -4020,14 +4027,14 @@
   {
     "objectID": "course-materials/day3.html#class-materials",
     "href": "course-materials/day3.html#class-materials",
-    "title": "Differential equations, intro to linear algebra",
+    "title": "Integrals, differential equations, intro to linear algebra",
     "section": "Class materials",
     "text": "Class materials\n\n\n\n\n\n\n\n Session\n Lecture slides\n\n\n\n\nday 3 / morning\nPractice session\n\n\nday 3 / afternoon\nVectors and matrices"
   },
   {
     "objectID": "course-materials/day3.html#additional-resources",
     "href": "course-materials/day3.html#additional-resources",
-    "title": "Differential equations, intro to linear algebra",
+    "title": "Integrals, differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
   }
