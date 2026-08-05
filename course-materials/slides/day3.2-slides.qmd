@@ -265,6 +265,16 @@ It is a fundamental part of data science (and how computers understand & process
 
 ---
 
+## {#building-blocks-blank data-menu-title="Building blocks"} 
+
+[The building blocks of linear algebra]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
 ## {#building-blocks data-menu-title="Building blocks"} 
 
 [The building blocks of linear algebra]{.slide-title}
@@ -275,13 +285,11 @@ It is a fundamental part of data science (and how computers understand & process
 
 $$8 \text{ or } \lambda.$$
 
-. . .
 
 - **vector:** an ordered list of values, representing magnitude *and* direction (physics) or values for an observation or variable (data science). For example,
 
 $$(1,3,5) \text{ or } (x_1, x_2, x_3).$$
 
-. . .
 
 - **matrix:** am array of values made up rows and columns. For example, 
 
@@ -310,11 +318,6 @@ a_{21} & a_{22} & a_{23}
 - Dimensional reduction
 - Population matrix models
 - Optimization
-
-<br>
-
-**Applications of linear algebra in data science:**
-
 - Array programming / vectorized code
 - Machine learning
 :::
@@ -325,7 +328,7 @@ We can use linear algebra to help us solve system of equations
 
 ---
 
-## {#vectors data-menu-title="Vectors"} 
+## {#vectors-1 data-menu-title="Vectors"} 
 
 [Let's start with vectors]{.slide-title}
 
@@ -333,11 +336,17 @@ We can use linear algebra to help us solve system of equations
 
 [**Where are vectors in EDS?**]{.body-text-m}
 
-. . . 
+---
+
+## {#vectors-2 data-menu-title="Vectors"} 
+
+[Let's start with vectors]{.slide-title}
+
+<hr>
+
+[**Where are vectors in EDS?**]{.body-text-m}
 
 [***Everywhere.*** ]{.body-text-m}
-
-. . .
 
 Vectors are lists of values used to describe different features or variables of interest. For example, if you are trying to model *fish size* based on length (cm) and mass (g), then for a fish with length 32 cm weighing 281 g, you might describe that by: 
 
@@ -347,7 +356,27 @@ Sometimes vectors are represented with an arrow over the vector name:
 
 $$ \vec{x} = (32, 281)$$
 
-. . .
+✏️
+
+---
+
+## {#vectors-3 data-menu-title="Vectors"} 
+
+[Let's start with vectors]{.slide-title}
+
+<hr>
+
+[**Where are vectors in EDS?**]{.body-text-m}
+
+[***Everywhere.*** ]{.body-text-m}
+
+Vectors are lists of values used to describe different features or variables of interest. For example, if you are trying to model *fish size* based on length (cm) and mass (g), then for a fish with length 32 cm weighing 281 g, you might describe that by: 
+
+$$(32, 281)$$
+
+Sometimes vectors are represented with an arrow over the vector name:
+
+$$ \vec{x} = (32, 281)$$
 
 Often, we will think of an "abstract vector" $x$ with $n$ **coordinates**:
 
@@ -437,17 +466,6 @@ What does this look like graphically? **Let's draw it!**
 What about a vector with more than two coordinates? More than three?
 :::
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-. . .
-
 ::: {.body-text-m}
 Is as valid as describing a "point" in multivariate space as a vector with two "coordinates" -- it's just difficult for us to visualize and conceptualize since our brain only happily deals with 3 dimensions. 
 :::
@@ -481,19 +499,25 @@ $$x \cdot y = \sum_{i=1}^n x_i y_i$$
 :::
 
 
-[[**In words:**]{.body-text-m} The dot product is the sum of coordinates of each vector multiplied together. It is a measure of how close the vectors "point" in the same direction]{.body-text}
+[[**In words:**]{.body-text-m} The [dot product](https://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/) is the sum of coordinates of each vector multiplied together. It is a measure of how close the vectors "point" in the same direction]{.body-text}
+
 
 ---
 
 ## {#dot-product-example-blank data-menu-title="Dot product example"} 
 
-[Dot product example]{.slide-title}
+[Exercise]{.slide-title}
 
 <hr>
 
-::: {.body-text-m}
-For $a=(2,-1,0)$ and $b= (9,3,-4)$:
+For vectors $x = (x_1, \ldots, x_n)$ $y = (y_1, \ldots, y_n)$ their **dot product** is:
+
+$$x \cdot y = \sum_{i=1}^n x_i y_i$$
+
+::: {.body-text-m style="color:green;"}
+Find the dot product of $a=(2,-1,0)$ and $b= (9,3,-4)$:
 :::
+
 
 ✏️
 
@@ -501,7 +525,7 @@ For $a=(2,-1,0)$ and $b= (9,3,-4)$:
 
 ## {#dot-product-example data-menu-title="Dot product example"} 
 
-[Dot product example]{.slide-title}
+[Exercise]{.slide-title}
 
 <hr>
 
@@ -913,6 +937,30 @@ knitr::include_graphics("images/diagonal_matrix_scaling.png")
 
 :::
 
+---
+
+## {#wrapping-up data-menu-title="Integration" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Wrapping up...</div>
+</div>
+
+---
+
+## {#what-we-covered data-menu-title="What we covered today" }
+
+
+[What we covered today]{.slide-title}
+
+<hr> 
+
+- <span style="color:#333300"><b>📝 Practice all day 1 and 2 topics</b></span>  
+- <span style="color:#330033"><b>🌊 A bit of ODEs</b></span>
+- <span style="color:#003300"><b>➕ Summation notation</b></span>  
+- <span style="color:#996600"><b>🔹 Vector sum and product </b></span>  
+- <span style="color:#333300"><b>🌓 Dot product</b></span> 
+- <span style="color:#660066"><b>🧮 Matrix algebra</b></span>  
+
 
 <!-- 
 ---
@@ -1207,3 +1255,4 @@ knitr::include_graphics("images/leslie_matrix_values.png")
 ::: {.footer}
 See [A Primer of Ecology](https://global.oup.com/academic/product/a-primer-of-ecology-9780878933181?cc=ca&lang=en&), by Nicholas J. Gotelli
 ::: -->
+
