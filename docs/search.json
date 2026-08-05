@@ -1075,7 +1075,7 @@
     "href": "course-materials/slides/day2.1-slides.html#lunch-break",
     "title": "",
     "section": "",
-    "text": "Lunch break!\n\n\n\n\nimage: Flaticon.com"
+    "text": "Lunch break!\n\n\nimage: Flaticon.com"
   },
   {
     "objectID": "course-materials/slides/course-recap-slides.html#title-slide",
@@ -3932,5 +3932,12 @@
     "title": "Day 1 / Afternoon: Extra examples",
     "section": "Graphs",
     "text": "Graphs\n\nIn which quadrant of the \\(xy\\)-plane does the point \\((-3, 5)\\) lie?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(x=-3\\) is negative and \\(y=5\\) is positive, so the point lies in Quadrant II (upper left).\n\n\n\n\nWhat are the \\(x\\)-intercept and \\(y\\)-intercept of the line \\(y=4x-8\\)?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(x\\)-intercept: set \\(y=0\\): \\(0=4x-8 \\Rightarrow x=2\\), so \\((2,0)\\).\n\\(y\\)-intercept: set \\(x=0\\): \\(y=-8\\), so \\((0,-8)\\)."
+  },
+  {
+    "objectID": "course-materials/slides/day2.1-slides.html#cellas-example",
+    "href": "course-materials/slides/day2.1-slides.html#cellas-example",
+    "title": "",
+    "section": "",
+    "text": "Differences in green-up rates in NE Kenya\n\n\n\n\n\n\n\n\n\nGreenness is a proxy for rangeland health. Bute is both greener than Hadado overall, and has a more rapid and more sustained green-up. A change in rate of change of greenness was the management signal we were hoping for.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFind out more! cellaschnabel@ucsb.edu"
   }
 ]
