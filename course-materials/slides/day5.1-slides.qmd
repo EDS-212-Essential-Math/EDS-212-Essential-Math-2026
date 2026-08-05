@@ -11,39 +11,13 @@ format:
 
 ## {#title-slide data-menu-title="Title Slide" background="#053660"} 
 
-[EDS 212: Day 5, Lecture 1]{.custom-title}
+[EDS 212: Day 4, Lecture 2]{.custom-title}
 
 [*Basic probability theory*]{.custom-subtitle}
 
 <hr class="hr-teal">
 
-[August 8^th^, 2025]{.custom-subtitle3}
-
----
-
-## {#monty-hall data-menu-title="Monty Hall"} 
-
-[The Monty Hall problem]{.slide-title}
-
-<hr>
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/monty_hall.jpg")
-```
-
-::: {.footer}
-[Monty Hall Problem](https://www.youtube.com/watch?v=4Lb-6rxZxx0), by Numberphile
-:::
-
-::: {.notes}
-<https://brilliant.org/wiki/monty-hall-problem/#:~:text=In%20two%20out%20of%20three,has%20a%20goat%20behind%20it.>
-:::
+[August 6^th^, 2025]{.custom-subtitle3}
 
 ---
 
@@ -57,7 +31,7 @@ knitr::include_graphics("images/monty_hall.jpg")
 - Hypothesis testing
 - Bayesian statistics
 - Decision making
-- Dangers 
+- Being cautious 
 :::
 
 ---
@@ -74,7 +48,10 @@ knitr::include_graphics("images/monty_hall.jpg")
 <br>
 
 ::: {.center-text .body-text-l}
-**Definition:** the likelihood that an event or outcome occurs. Typically, $P = 0$ indicates no chance of an event or outcome happening, $P=1$ indicates it happens with certainty.
+**Definition:** the likelihood that an event or outcome occurs. 
+
+- $P = 0$ indicates no chance of an event or outcome 
+- $P=1$ indicates it is a certainty it will happen
 :::
 
 ---

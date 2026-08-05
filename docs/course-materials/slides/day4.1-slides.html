@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c2894b54f4b00a27b9651b11dcf5df54.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.33">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>day4.1-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -29,7 +32,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-5f271236fce0c0851d2cd6eb77f50b9b.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-677e5dedfd91753334405bac443a06b7.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -132,335 +135,365 @@
 <section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#053660">
 <h2></h2>
 <p><span class="custom-title">EDS 212: Day 4, Lecture 1</span></p>
-<p><span class="custom-subtitle"><em>Linear algebra continued</em></span></p>
+<p><span class="custom-subtitle"><em>Essential summary statistics and exploration</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 7<sup>th</sup>, 2025</span></p>
+<p><span class="custom-subtitle3">August 6<sup>th</sup>, 2025</span></p>
 </section>
-<section id="part1" class="slide level2" data-menu-title="Part 1">
+<section id="data-types-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
 <h2></h2>
-<p><span class="slide-title">Part 1: Linear algebra continued</span></p>
+<div class="page-center">
+<div class="custom-subtitle">
+Data types
+</div>
+</div>
+</section>
+<section id="data-types-1" class="slide level2" data-menu-title="Data types">
+<h2></h2>
+<p><span class="slide-title">Data types</span></p>
 <hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="center-text">
+<p><span class="body-text-l"><strong>Quantitative</strong></span></p>
+<p><span class="body-text-l">Numeric information</span></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="center-text">
+<p><span class="body-text-l"><strong>Qualitative</strong></span></p>
+<p><span class="body-text-l">Descriptions (usually words)</span></p>
+</div>
+</div></div>
+</section>
+<section id="data-types-2" class="slide level2" data-menu-title="Data types">
+<h2></h2>
+<p><span class="slide-title">Data types</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="center-text">
+<p><span class="body-text-l"><strong>Quantitative</strong></span></p>
+<p><span class="body-text-l">Numeric information</span></p>
+</div>
 <p><br></p>
-<div class="body-text-m">
 <ul>
-<li>Refresher: vectors and working with them</li>
-<li>Matrices: notation, language, basic algebra</li>
-<li>Representing systems of equations with matrices</li>
-<li>Linear algebra in environmental science</li>
+<li><strong>Continuous:</strong> measured values, variable can take <em>any value</em> within a range</li>
+<li><strong>Discrete:</strong> variable only takes <em>limted values</em> (e.g.&nbsp;counts)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="center-text">
+<p><span class="body-text-l"><strong>Qualitative</strong></span></p>
+<p><span class="body-text-l">Descriptions (usually words)</span></p>
+</div>
+<p><br></p>
+<ul>
+<li><strong>Nominal:</strong> order does not matter (classes or categories)</li>
+<li><strong>Ordinal:</strong> order matters, but the difference between values isn’t known or equal (e.g.&nbsp;<a href="https://en.wikipedia.org/wiki/likert_scale">Likert Scale</a>)</li>
+</ul>
+</div></div>
+<p><br></p>
+<div class="center-text">
+<ul>
+<li><strong>Binary:</strong> only two possible outcomes (yes/no, true/false, 1/0)</li>
 </ul>
 </div>
 </section>
-<section id="matrices" class="slide level2" data-menu-title="matrices">
+<section id="quantitative" class="slide level2" data-menu-title="Quantitative data">
 <h2></h2>
-<p><span class="slide-title">Matrices</span></p>
+<p><span class="slide-title">Quantitative data: continuous &amp; discrete</span></p>
+<hr>
+
+<img data-src="images/quantitative_data.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p>Art by <a href="https://allisonhorst.com/">Allison Horst</a></p>
+</div>
+</section>
+<section id="nom-ord-bin" class="slide level2" data-menu-title="Nominal, ordinal, binary data">
+<h2></h2>
+<p><span class="slide-title">Nominal, ordinal, binary data:</span></p>
+<hr>
+
+<img data-src="images/data_types.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p>Art by <a href="https://allisonhorst.com/">Allison Horst</a></p>
+</div>
+</section>
+<section id="exercise-describe-data" class="slide level2" data-menu-title="Exercise: describe data">
+<h2></h2>
+<p><span class="slide-title">Exercise</span></p>
+<hr>
+<p>✏️ <span style="color:green;">For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous), and identify the size of the observed dataset.</span></p>
+<p><br></p>
+<ol type="A">
+<li><p>A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.</p></li>
+<li><p>We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.</p></li>
+</ol>
+</section>
+<section id="exercise-describe-data-sol-A-blank" class="slide level2" data-menu-title="Exercise: describe data">
+<h2></h2>
+<p><span class="slide-title">Exercise A: Solution</span></p>
+<hr>
+<p><span style="color:green;">A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.</span></p>
+<p>✏️</p>
+</section>
+<section id="exercise-describe-data-sol-A" class="slide level2" data-menu-title="Exercise: describe data">
+<h2></h2>
+<p><span class="slide-title">Exercise A: Solution</span></p>
+<hr>
+<p><span style="color:green;">A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.</span></p>
+<ul>
+<li>Dependent variable: nitrogen threshold exceeded — qualitative, binary</li>
+<li>Independent variables:
+<ul>
+<li>Fertilizer application rate — quantitative, continuous</li>
+<li>% agricultural land cover — quantitative, continuous</li>
+<li>Monthly rainfall — quantitative, continuous</li>
+</ul></li>
+</ul>
+<p>Sample size: n = 45 watersheds</p>
+</section>
+<section id="exercise-describe-data-sol-B-blank" class="slide level2" data-menu-title="Exercise: describe data">
+<h2></h2>
+<p><span class="slide-title">Exercise B: Solution</span></p>
+<hr>
+<p><span style="color:green;">We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.</span></p>
+<p>✏️</p>
+</section>
+<section id="exercise-describe-data-sol-B" class="slide level2" data-menu-title="Exercise: describe data">
+<h2></h2>
+<p><span class="slide-title">Exercise B: Solution</span></p>
+<hr>
+<p><span style="color:green;">We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.</span></p>
+<ul>
+<li>Dependent variable: number of complaints filed — quantitative, discrete</li>
+<li>Independent variables:
+<ul>
+<li>Median household income — quantitative, continuous</li>
+<li>Distance to nearest industrial facility — quantitative, continuous</li>
+<li>Type of nearest industrial facility — qualitative, nominal</li>
+<li>% residents who are renters — quantitative, continuous</li>
+<li>PM2.5 concentration — quantitative, continuous</li>
+</ul></li>
+</ul>
+<p>Sample size: n = 60 neighborhoods</p>
+</section>
+<section id="data-dsitributions-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Basic data visualizations
+</div>
+<div class="custom-subtitle">
+Visualizations
+</div>
+</div>
+<!-- ---
+
+## {#data-dist data-menu-title="Data distributions"} 
+
+[Data distributions]{.slide-title}
+
+<hr>
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](images/party_histograms.jpeg){fig-align='center' width=100%}
+:::
+:::
+
+
+::: {.footer}
+Art by [Allison Horst](https://allisonhorst.com/)
+:::
+
+::: {.notes}
+Data distribution: it's shape, central tendencies, it's spread; we can use graphical representations of data that was collected from a sample or population
+:::
+ -->
+</section>
+<section id="describe-dist" class="slide level2" data-menu-title="Describe data distributions">
+<h2></h2>
+<p><span class="slide-title">How can we describe how data are distributed?</span></p>
 <hr>
 <p><br></p>
-<div class="body-text-m">
-<p>A matrix is a table of values (multiple vectors in combination). A vector, therefore, can be thought of as a matrix with a single column.</p>
+<p><span class="body-text-l">Our starting points:</span></p>
 <p><br></p>
+<div class="body-text-m">
 <ul>
-<li><strong>Dimensions:</strong> the size of the matrix, in rows x columns (<em>m</em> x <em>n</em>)</li>
-<li><strong>Elements:</strong> values in a matrix, often denoted symbolically with a subscript where the first number is the <em>row</em> and the second number is the <em>column</em> (e.g.&nbsp;<span class="math inline">\(a_{34}\)</span> indicates the element in row 3, column 4)</li>
+<li>Shape / patterns / clusters (data vizualization)</li>
+<li>Central tendency (mean / median)</li>
+<li>Spread &amp; uncertainty (standard deviation / standard error / confidence interval)</li>
 </ul>
 </div>
 </section>
-<section id="matrix-algebra" class="slide level2" data-menu-title="Matrix algebra">
+<section id="data-viz" class="slide level2" data-menu-title="Useful viz">
 <h2></h2>
-<p><span class="slide-title">Matrix algebra (add / subtract)</span></p>
-<hr>
-<p><br></p>
-<!-- [Addition & subtraction]{.body-text-l} -->
-<p><span class="body-text-l">Add or subtract the corresponding elements (by matrix position) to create a new matrix of the same dimensions.</span></p>
-<p><br></p>
-
-<img data-src="images/matrix_addition.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="scalar-mult" class="slide level2" data-menu-title="Scalar multiplication">
-<h2></h2>
-<p><span class="slide-title">Scalar multiplication</span></p>
+<p><span class="slide-title">Useful data visualizations</span></p>
 <hr>
 <p><br></p>
 <div class="body-text-m">
-<p>To multiply a matrix by a <em>scalar</em>, multiply each element in the matrix by the scalar to get a scaled matrix of the same dimensions.</p>
-<p><br></p>
-<p>For example:</p>
-</div>
-
-<img data-src="images/scalar_multiplier.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="dot-product" class="slide level2" data-menu-title="Dot product">
-<h2></h2>
-<p><span class="slide-title">Recall: dot product</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
-<p>The dot product of two vectors is the sum of their elements multiplied:</p>
-<p><br></p>
-<p>For <span class="math inline">\(\vec a =[1,5]\)</span> and <span class="math inline">\(\vec b = [2,-3]\)</span>:</p>
-<p><br></p>
-<p><span class="math display">\[\vec a \cdot \vec b=(1)(2)+(5)(-3)=-13\]</span></p>
-</div>
-</section>
-<section id="matrix-mult" class="slide level2" data-menu-title="Matrix multiplication">
-<h2></h2>
-<p><span class="slide-title">Matrix multiplication</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l">We find the <em>dot product</em> of row <span class="math inline">\(\cdot\)</span> column vectors:</span></p>
-<p><br></p>
-
-<img data-src="images/matrix_multiplication.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="practice" class="slide level2" data-menu-title="Pratice">
-<h2></h2>
-<p><span class="slide-title">Practice problems</span></p>
-<hr>
-<p><br></p>
-
-<img data-src="images/matrix_multiplication_problem_1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
-<p>(2)(1)+(-1)(6)…(2)(5)+(-1)(-3)</p>
-<p>(0)(1)+(4)(6)…(0)(5)+(4)(-3)</p>
-<p><span class="math inline">\(solution = \begin{bmatrix}
-  -4 &amp; 13 \\
-  24 &amp; -12
-\end{bmatrix}\)</span></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="crit-thinking" class="slide level2" data-menu-title="Critical thinking">
-<h2></h2>
-<p><span class="slide-title">Critical thinking: Matrices with unequal dimensions</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">What do you think the output matrix would contain if you were multiplying the following?</span></p>
-<p><br></p>
-
-<img data-src="images/matrix_multiplication_unequal.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
-<p>The resulting matrix has dimensions which are equal to the number of the rows of the first matrix and the number of columns of the second matrix.</p>
-<p>AG+BI+CK…AH+BJ+CL</p>
-<p>DG+EI+FK…DH+EJ+FL</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="try-one" class="slide level2" data-menu-title="Try one">
-<h2></h2>
-<p><span class="slide-title">Let’s try one!</span></p>
-<hr>
-<p><br></p>
-
-<img data-src="images/matrix_multiplication_practice_2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
-<p>(0)(-1)+(2)(5)+(-1)(-3)…(0)(0)+(2)(1)+(-1)(6)</p>
-<p>(3)(-1)+(4)(5)+(-2)(-3)…(3)(0)+(4)(1)+(-2)(6)</p>
-<p><span class="math inline">\(solution = \begin{bmatrix}
-  13 &amp; -4 \\
-  23 &amp; -8
-\end{bmatrix}\)</span></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="diagonal-matrix" class="slide level2" data-menu-title="Diagonal matrix">
-<h2></h2>
-<p><span class="slide-title">Diagonal matrix</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">A <strong>diagonal matrix</strong> is (almost always) a square matrix (<span class="math inline">\(m\)</span> = <span class="math inline">\(n\)</span>) where only elements on the diagonal are non-zero values.</span></p>
-<p><br></p>
-
-<img data-src="images/diagonal_matrix.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="mult-diag-matrix" class="slide level2" data-menu-title="Multiply by diagonal matrix">
-<h2></h2>
-<p><span class="slide-title">What happens when we multiply a matrix by a diagonal matrix?</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">A diagonal matrix is also called a <em>scaling matrix</em> because it scales rows proportionally, but not by the same value:</span></p>
-<p><br></p>
-
-<img data-src="images/diagonal_matrix_scaling.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="sys-eq" class="slide level2" data-menu-title="Systems of equations">
-<h2></h2>
-<p><span class="slide-title">Matrices as systems of equations</span></p>
-<hr>
-<p><span class="body-text-m">Often in environmental data science, we have multiple equations representing processes. Matrices give us a way to express these <em>systems of equations</em> in data structures that are easy to store and work with in data science. For example, let’s say we have a system:</span></p>
-<p><br></p>
-<div class="body-text-l">
-<p><span class="math display">\[3x-8y=5\]</span></p>
-<p><span class="math display">\[x + 2y = 10\]</span></p>
-</div>
-<p><br></p>
-<div class="center-text body-text-m">
-<p>How can we write this using matrices?</p>
-</div>
-</section>
-<section id="rewrite" class="slide level2" data-menu-title="Rewrite">
-<h2></h2>
-<p><span class="slide-title">Rewriting in matrix form:</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
-<p><span class="math display">\[3x-8y=5\]</span></p>
-<p><span class="math display">\[x + 2y = 10\]</span></p>
-</div>
-<p><br></p>
-<p><span class="body-text-m">The matrix form of this system of equations looks as follows:</span></p>
-
-<img data-src="images/system_equations.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
-<p>We can write systems of equations in matrix form as <span class="math inline">\(Ax=b\)</span>, where:</p>
+<p>Basic ones:</p>
 <ul>
-<li><span class="math inline">\(A\)</span> is the coefficient matrix</li>
-<li><span class="math inline">\(x\)</span> is the vector of variables</li>
-<li><span class="math inline">\(b\)</span> is the constant vector</li>
+<li>Histograms</li>
+<li>Boxplots</li>
+<li>Scatterplots</li>
 </ul>
+</div>
+</section>
+<section id="histogram" class="slide level2" data-menu-title="Histogram">
+<h2></h2>
+<p><span class="slide-title">Histogram</span></p>
+<hr>
+<p><br></p>
+<p><span class="body-text-m">A histogram shows the <strong>distribution</strong> of a single numeric variable, by grouping values into bins and counting observations.</span></p>
+<p><br></p>
+<div class="body-text-m">
+<p><strong>To construct one:</strong></p>
 <ol type="1">
-<li>Identify coefficients to form matrix <span class="math inline">\(A\)</span>, where each row corresponds to the coefficients of one equation:</li>
+<li>Divide the range of the data into equal-width <strong>bins</strong></li>
+<li>Count how many observations fall into each bin</li>
+<li>Draw a bar over each bin, with height equal to that count</li>
 </ol>
-<p><span class="math display">\[A = \begin{bmatrix}
-  3 &amp; -8 \\
-  1 &amp; 2
-\end{bmatrix}\]</span></p>
-<ol start="2" type="1">
-<li>Form the variable vector <span class="math inline">\(x\)</span> which contains the variables of the system:</li>
-</ol>
-<p><span class="math display">\[x = \begin{bmatrix}
-x \\
-  y
-\end{bmatrix}\]</span></p>
-<ol start="3" type="1">
-<li>Form the constant vector <span class="math inline">\(b\)</span> <span class="math display">\[b = \begin{bmatrix}
-5 \\
-10
-\end{bmatrix}\]</span></li>
-</ol>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="env-sci-examples" class="slide level2" data-menu-title="Environmental science examples">
+<section id="histogram-example-blank" class="slide level2" data-menu-title="Histogram example">
 <h2></h2>
-<p><span class="slide-title">Example: matrices and linear algebra in environmental science</span></p>
+<p><span class="slide-title">Histogram example</span></p>
 <hr>
-<p><br> <br></p>
-<p><span class="body-text-xl">Leslie Matrix: Population ecology</span></p>
+<p><span class="body-text-m">Twelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:</span></p>
+<p><span class="body-text-m">8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27</span></p>
+<p>✏️</p>
+</section>
+<section id="histogram-example" class="slide level2" data-menu-title="Histogram example">
+<h2></h2>
+<p><span class="slide-title">Histogram example</span></p>
+<hr>
+<p><span class="body-text-m">Twelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:</span></p>
+<p><span class="body-text-m">8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27</span></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Using bins of width 5 cm:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Bin (cm)</th>
+<th style="text-align: center;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">[5, 10)</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">[10, 15)</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">[15, 20)</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">[20, 25)</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">[25, 30)</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="histogram-exercise" class="slide level2" data-menu-title="Exercise: histogram">
+<h2></h2>
+<p><span class="slide-title">Exercise</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Ten storm events produced these wave heights, in meters. Using bins of width 1 m (starting at 0), tally the counts and sketch the resulting histogram.</span></p>
 <p><br></p>
-<p><span class="body-text-l">A matrix model that accounts for survival / fecundity rates at different life stages for a species.</span></p>
-<aside class="notes">
-<p>The Leslie matrix is one of the most well-known ways to describe the growth of populations (and their projected age distribution), in which a population is:</p>
-<ul>
-<li>closed to migration,</li>
-<li>growing in an unlimited environment,</li>
-<li>and where only one sex, usually the female, is considered.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><span style="color:green;">0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6</span></p>
 </section>
-<section id="overview" class="slide level2" data-menu-title="overview">
+<section id="histogram-exercise-solution" class="slide level2" data-menu-title="Exercise: histogram">
 <h2></h2>
-<p><span class="slide-title">Overview:</span></p>
+<p><span class="slide-title">Exercise: solution</span></p>
 <hr>
+<p>✏️ <span style="color:green;">Ten storm events produced these wave heights, in meters. Using bins of width 1 m (starting at 0), tally the counts and sketch the resulting histogram.</span></p>
+<p><br></p>
+<p><span style="color:green;">0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6</span></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Bin (m)</th>
+<th style="text-align: center;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">[0, 1)</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">[1, 2)</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">[2, 3)</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">[3, 4)</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="quartiles" class="slide level2" data-menu-title="Quartiles">
+<h2></h2>
+<p><span class="slide-title">Quartiles</span></p>
+<hr>
+<p><strong>Quartiles</strong> divide an ordered dataset into four equal parts.</p>
 <div class="body-text-m">
 <ul>
-<li><p>Define life stages</p></li>
-<li><p>Estimate probability of survival / reproduction at different life stages to create a matrix over time</p></li>
-<li><p>Combine into a matrix that allows calculation at the next time step</p></li>
+<li><span class="math inline">\(Q_1\)</span> (1st quartile): 25% of values fall below this point</li>
+<li><span class="math inline">\(Q_2\)</span> (2nd quartile): the <strong>median</strong>: 50% of values fall below this point</li>
+<li><span class="math inline">\(Q_3\)</span> (3rd quartile): 75% of values fall below this point</li>
 </ul>
 </div>
-
-<img data-src="images/leslie_matrix.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="est-as-eq1" class="slide level2" data-menu-title="Estimates as equations 1">
-<h2></h2>
-<p><span class="slide-title">Writing estimates as equations:</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">For our species, each adult female will lay ~600 eggs during each cycle (let’s say that’s a year). Which means that the eggs at time <span class="math inline">\(t+1\)</span> can be estimated by the number of adult females * 600:</span></p>
-<p><br></p>
-<p><span class="body-text-l"><span class="math display">\[E_{t+1}=600 * F_t\]</span></span></p>
-</section>
-<section id="est-as-eq2" class="slide level2" data-menu-title="Estimates as equations 2">
-<h2></h2>
-<p><span class="slide-title">Writing estimates as equations:</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
-<p><span class="math display">\[E_{t+1}=600 * F_t\]</span></p>
-<p><br></p>
-<p>We also estimate that 20% of eggs survive to reach larval stage:</p>
-<p><br></p>
-<p><span class="math display">\[L_{t+1} = 0.2*E_t\]</span></p>
-</div>
-</section>
-<section id="est-as-eq3" class="slide level2" data-menu-title="Estimates as equations 3">
-<h2></h2>
-<p><span class="slide-title">Writing estimates as equations:</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
-<p><span class="math display">\[E_{t+1}=600 * F_t\]</span> <span class="math display">\[L_{t+1} = 0.2*E_t\]</span></p>
-<p><br></p>
-<p>We also estimate that 8% of those that reach larval stage will survive to become reproducing female adults:</p>
-<p><br></p>
-<p><span class="math display">\[F_{t+1}=0.08*L_t\]</span></p>
-</div>
-</section>
-<section id="in-matrix-form1" class="slide level2" data-menu-title="Write in matrix form 1">
-<h2></h2>
-<p><span class="slide-title">How can we write this in matrix form?</span></p>
-<hr>
-<div class="body-text-l">
-<p><span class="math display">\[E_{t+1}=600 * F_t\]</span></p>
-<p><span class="math display">\[L_{t+1} = 0.2*E_t\]</span></p>
-<p><span class="math display">\[F_{t+1}=0.08*L_t\]</span></p>
-</div>
-<aside class="notes">
-<p>The Leslie matrix (L) will be a 3x3 matrix since we have three stages (Eggs, Larvae, Adults).</p>
-<p>Each column represents an age class at time <span class="math inline">\(t\)</span></p>
+<p><strong>One simple way to find them:</strong></p>
 <ol type="1">
-<li><p><strong>Fecundity (Top Row):</strong> The third element of the top row is 600 because adult females contribute to the number of eggs in the next generation.</p></li>
-<li><p><strong>Survival Rates (Sub-diagonal):</strong></p></li>
+<li>Order the data and find the median (<span class="math inline">\(Q_2\)</span>): this splits the data into a lower half and an upper half</li>
+<li><span class="math inline">\(Q_1\)</span> = median of the lower half</li>
+<li><span class="math inline">\(Q_3\)</span> = median of the upper half</li>
 </ol>
-<ul>
-<li>The first element in the second row (0.2) represents the probability of an egg surviving to become a larva.</li>
-<li>The second element in the third row (0.08) represents the probability of a larva surviving to become an adult female.</li>
-</ul>
+</section>
+<section id="quartiles-example-blank" class="slide level2" data-menu-title="Quartiles">
+<h2></h2>
+<p><span class="slide-title">Quartiles</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Find <span class="math inline">\(Q_1, Q_2,\)</span> and <span class="math inline">\(Q_3\)</span> for the values 4, 16, 8, 40, 2, 14, 6, 10, 12</span></p>
+<aside class="notes">
+<p>Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40 Median (Q2) = 10 Lower half: 2, 4, 6, 8 (four values) → Q1 = (4+6)/2 = 5 Upper half: 12, 14, 16, 40 (four values) → Q3 = (14+16)/2 = 15</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -473,42 +506,455 @@ x \\
           display:block!important;
       }</style></aside>
 </section>
-<section id="in-matrix-form2" class="slide level2" data-menu-title="Write in matrix form 2">
+<section id="quartiles-example" class="slide level2" data-menu-title="Quartiles">
 <h2></h2>
-<p><span class="slide-title">How can we write this in matrix form?</span></p>
+<p><span class="slide-title">Quartiles: solution</span></p>
 <hr>
-<div class="body-text-l">
-<p><span class="math display">\[E_{t+1}=600 * F_t\]</span></p>
-<p><span class="math display">\[L_{t+1} = 0.2*E_t\]</span></p>
-<p><span class="math display">\[F_{t+1}=0.08*L_t\]</span></p>
+<p>💡 <span style="color:green;">Let’s see a solution!</span></p>
+<p><span style="color:green;">Find <span class="math inline">\(Q_1, Q_2,\)</span> and <span class="math inline">\(Q_3\)</span> for the values 4, 16, 8, 40, 2, 14, 6, 10, 12</span></p>
+<p><br></p>
+<div class="body-text-m">
+<p>Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40</p>
+<ul>
+<li><span class="math inline">\(Q_2\)</span> (median): 10</li>
+<li>Lower half: 2, 4, 6, 8 — an <strong>even</strong> number of values, so <span class="math inline">\(Q_1\)</span> is the average of the middle two: <span class="math inline">\(Q_1 = \frac{4+6}{2} = 5\)</span></li>
+<li>Upper half: 12, 14, 16, 40 — again an even number of values: <span class="math inline">\(Q_3 = \frac{14+16}{2} = 15\)</span></li>
+</ul>
 </div>
+</section>
+<section id="boxplot1" class="slide level2" data-menu-title="Boxplot 1">
+<h2></h2>
+<p><span class="slide-title">Boxplot</span></p>
+<hr>
+<p><br></p>
+<div class="body-text-m">
+<p><strong>How it’s drawn:</strong></p>
+<ol type="1">
+<li>Draw a box from <span class="math inline">\(Q_1\)</span> to <span class="math inline">\(Q_3\)</span>: this box spans the <strong>interquartile range</strong>: <span class="math display">\[IQR = Q_3 - Q_1\]</span></li>
+<li>Draw a line inside the box at the median (<span class="math inline">\(Q_2\)</span>)</li>
+<li>Draw whiskers extending to the furthest observation within <span class="math inline">\(1.5 \times IQR\)</span> of the box</li>
+<li>Plot any observation beyond the whiskers individually, as a dot (an <strong>outlier</strong>)</li>
+</ol>
+</div>
+</section>
+<section id="boxplot2" class="slide level2" data-menu-title="Boxplot 2">
+<h2></h2>
+<p><span class="slide-title">Boxplot</span></p>
+<hr>
+
+<img data-src="images/boxplot.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="boxplot-draw-blank" class="slide level2" data-menu-title="Exercise: draw a box plot">
+<h2></h2>
+<p><span class="slide-title">Exercise: draw a box plot</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 (<span class="math inline">\(Q_1=5\)</span>, <span class="math inline">\(Q_2=10\)</span>, <span class="math inline">\(Q_3=15\)</span>), draw the box plot by hand.</span></p>
+</section>
+<section id="boxplot-draw" class="slide level2" data-menu-title="Exercise: draw a box plot">
+<h2></h2>
+<p><span class="slide-title">Exercise: solution</span></p>
+<hr>
+<p>💡 <span style="color:green;">Let’s see a solution!</span></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="body-text-m">
+<ul>
+<li><span class="math inline">\(Q_1\)</span>: 5</li>
+<li>Median (<span class="math inline">\(Q_2\)</span>): 10</li>
+<li><span class="math inline">\(Q_3\)</span>: 15</li>
+<li><span class="math inline">\(IQR = 15-5 = 10\)</span></li>
+<li><span class="math inline">\(Q_3 + 1.5 \times IQR = 15+15 = 30\)</span></li>
+<li>40 is beyond that value, so it’s an <strong>outlier</strong> — the whisker stops at 16, the last value within <span class="math inline">\(1.5 \times IQR\)</span> of the box</li>
+</ul>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="boxplot-interpret" class="slide level2" data-menu-title="Exercise: interpret boxplots">
+<h2></h2>
+<p><span class="slide-title">Exercise: interpreting boxplots</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Two farms are monitored for nitrate concentration (mg/L) in their downstream runoff. Compare the two distributions below.</span></p>
+
+<img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div style="color:green;">
+<ul>
+<li>Which farm’s runoff has the higher median nitrate concentration?</li>
+<li>Which farm’s readings are more spread out?</li>
+<li>Is there anything unusual in either distribution?</li>
+</ul>
+</div>
+</section>
+<section id="boxplot-interpret-solution" class="slide level2" data-menu-title="Exercise: interpret boxplots">
+<h2></h2>
+<p><span class="slide-title">Exercise: solution</span></p>
+<hr>
+<p>💡 <span style="color:green;">Let’s discuss!</span></p>
+<div class="body-text-m">
+<ul>
+<li><strong>Median:</strong> Farm B’s median (~3.6 mg/L) is noticeably higher than Farm A’s (~2.05 mg/L)</li>
+<li><strong>Spread:</strong> Farm B’s box and whiskers cover a much wider range, so its runoff is more variable</li>
+<li><strong>Outlier:</strong> Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating as a possible one-time event.</li>
+</ul>
+</div>
+</section>
+<section id="scatterplots" class="slide level2" data-menu-title="Scatterplots">
+<h2></h2>
+<p><span class="slide-title">Scatterplots</span></p>
+<hr>
+<p>A scatterplot shows the relationship between <strong>two numeric variables</strong>: each observation becomes a point, positioned using its value on the <span class="math inline">\(x\)</span>-axis and its value on the <span class="math inline">\(y\)</span>-axis. A third (categorical) variable can be mapped to color or shape.</p>
 <p><br></p>
 
-<img data-src="images/leslie_matrix_blank.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="leslie-matrix" class="slide level2" data-menu-title="Leslie matrix">
+<img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="center-text teal-text">
+<p>Always, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.</p>
+</div>
+</section>
+<section id="break" class="slide level2" data-menu-title="5 minute break">
 <h2></h2>
-<p><span class="slide-title">Leslie matrix</span></p>
+<p><span class="slide-title">Let’s take a 5 minute break</span></p>
 <hr>
 
-<img data-src="images/leslie_matrix_values.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="leslie-matrix-notes" class="slide level2" data-menu-title="Leslie matrix (notes)">
+<img data-src="images/coffee-break.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
+<section id="numerical-summaries-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
 <h2></h2>
-<p><span class="slide-title">Leslie matrix</span></p>
+<div class="page-center">
+<div class="custom-subtitle">
+Summarizing data numerically
+</div>
+</div>
+</section>
+<section id="summarizing-numerically" class="slide level2" data-menu-title="Summarizing numberically">
+<h2></h2>
+<p><span class="slide-title">Summarizing data numerically</span></p>
 <hr>
-
-<img data-src="images/leslie_matrix_values.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><ul>
-<li>Each column is the age class at time <span class="math inline">\(t\)</span> and each row is the age class at time <span class="math inline">\(t+1\)</span></li>
-<li>Each entry represents a transition, or change in the # of individuals, from one age class to the next</li>
-<li>Fertilities are always in the first row, and represent the contributions to newborns from reproduction</li>
-<li>Survival probabilities are always in the subdiagonal and represent transitions from one age class to the next</li>
-<li>All other entries are 0 because no other transitions are possible – individuals cannot remain in the same age class from one year to the next, nor can they skip or repeat age classes</li>
+<p><br></p>
+<div class="body-text-m">
+<ul>
+<li>Central tendency</li>
+<li>Variance and standard deviation</li>
+<li>Standard error</li>
+<li>Confidence interval</li>
 </ul>
+</div>
+</section>
+<section id="median" class="slide level2" data-menu-title="Median">
+<h2></h2>
+<p><span class="slide-title">Median</span></p>
+<hr>
+<p><span class="body-text-m">Middle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. <span class="math inline">\(median\;of\;3, 7, 17 = 7\)</span></span></p>
+<p><br></p>
+<p><span class="body-text-l"><strong>Pros:</strong></span></p>
+<div class="body-text-m">
+<ul>
+<li>Less susceptible to skew and outliers</li>
+<li>Better as sample size increases</li>
+</ul>
+</div>
+<p><br></p>
+<p><span class="body-text-l"><strong>Cons:</strong></span></p>
+<div class="body-text-m">
+<ul>
+<li>Doesn’t take into account the magnitude of all values</li>
+</ul>
+</div>
+</section>
+<section id="mean" class="slide level2" data-menu-title="Mean">
+<h2></h2>
+<p><span class="slide-title">Mean</span></p>
+<hr>
+<p><span class="body-text-m">Average value of sample observations, calculated by summing all observation values and dividing by the number of observations. E.g. <span class="math inline">\(mean\;of\;3, 7, 17 = \frac{3+7+17}{3} = 9\)</span></span></p>
+<p><br></p>
+<p><span class="body-text-l"><strong>Pros:</strong></span></p>
+<div class="body-text-m">
+<ul>
+<li>Average value is often useful metric</li>
+<li>Commonly reported</li>
+</ul>
+</div>
+<p><span class="body-text-l"><strong>Cons:</strong></span></p>
+<div class="body-text-m">
+<ul>
+<li>Susceptible to outliers and skew</li>
+<li>Subject to misinterpretation as “most likely value”</li>
+</ul>
+</div>
+<aside class="notes">
+<p>SB housing market typically reports median cost rather than mean cost? Why do you think that is?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="central-tendency" class="slide level2" data-menu-title="Central tendency">
+<h2></h2>
+<p><br></p>
+
+<img data-src="images/central_tendency.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p><br></p>
 <div class="footer">
-<p>See <a href="https://global.oup.com/academic/product/a-primer-of-ecology-9780878933181?cc=ca&amp;lang=en&amp;">A Primer of Ecology</a>, by Nicholas J. Gotelli</p>
+<p>Image: Sirkin, R. M. (2006). Measuring central tendency. In Statistics for the social sciences (pp.&nbsp;83-126). SAGE Publications, Inc., <a href="https://www.doi.org/10.4135/9781412985987" class="uri">https://www.doi.org/10.4135/9781412985987</a></p>
 </div>
-
-
 </section>
+<section id="var-stdev" class="slide level2" data-menu-title="Variance &amp; standard dev">
+<h2></h2>
+<p><span class="slide-title">Variance and standard deviation</span></p>
+<hr>
+<p><br></p>
+<p><span class="body-text-l">Both are measures of <strong>data spread</strong>.</span></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="center-text">
+<p><strong>Variance</strong></p>
+<p>Reported in units of measurement squared</p>
+</div>
+<p><span class="math display">\[ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}\]</span></p>
+</div><div class="column" style="width:50%;">
+<div class="center-text">
+<p><strong>Standard deviation</strong></p>
+<p>Reported in units of measurement</p>
+</div>
+<p><span class="math display">\[ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}\]</span></p>
+</div></div>
+<aside class="notes">
+<p>Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches.</p>
+<p>Variances add (standard deviation doesn’t). For example, if we say that sex explains four square inches of variance, you know that 5 square inches are due to other factors.</p>
+<p>See <a href="https://stats.stackexchange.com/questions/35123/whats-the-difference-between-variance-and-standard-deviation">this discussion</a> and <a href="https://www.quora.com/When-should-one-use-variance-instead-of-standard-deviation-given-that-both-numbers-measure-the-same-thing">this discussion</a></p>
+<p>The variance measures the mathematical dispersion of data relative to the mean, and while theoretically correct, can be difficult to interpret in a real-world sense. Standard deviation is expressed in the same unit of measurement as the data (e.g.&nbsp;inches, rather than square inches), and therefore can be a more intuitive value to report.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="variance-blank" class="slide level2" data-menu-title="Variance">
+<h2></h2>
+<p><span class="slide-title">Variance</span></p>
+<hr>
+<p>✏️</p>
+</section>
+<section id="variance" class="slide level2" data-menu-title="Variance">
+<h2></h2>
+<p><span class="slide-title">Variance</span></p>
+<hr>
+<p><span class="body-text-m"><strong>Variance:</strong> Mean squared distance of observations from the mean</span></p>
+<p><br></p>
+
+<img data-src="images/variance_equation.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p><br></p>
+<p><span class="body-text-m">Where <span class="math inline">\(S^2\)</span> is the sample variance, <span class="math inline">\(x_i\)</span> is a sample observation value, <span class="math inline">\(\bar x\)</span> is the sample mean, and <span class="math inline">\(n\)</span> is the number of observations.</span></p>
+</section>
+<section id="calc-variance-blank" class="slide level2" data-menu-title="Calculate variance 1">
+<h2></h2>
+<p><span class="slide-title">Exercise</span></p>
+<hr>
+<div class="body-text-m" style="color:green;">
+<p>Given these data: <span class="math inline">\(2, 4, 4, 6, 9\)</span>, calculate their variance. Remember:</p>
+<p><span class="math display">\[ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}\]</span></p>
+</div>
+</section>
+<section id="calc-variance1" class="slide level2" data-menu-title="Calculate variance 1">
+<h2></h2>
+<p><span class="slide-title">Calculate variance by hand (1/2)</span></p>
+<hr>
+<p><span class="body-text-m">Given these data: <span class="math inline">\(2, 4, 4, 6, 9\)</span></span></p>
+<ol type="1">
+<li>Calculate the mean:</li>
+</ol>
+<p><span class="math display">\[ mean = \frac{2+4+4+6+9}{5}=\frac{25}{5}=5\]</span> 2. Subtract the mean from each data point and square the result:</p>
+<p><span class="math display">\[(2-5)^2 = (-3)^2 = 9\]</span> <span class="math display">\[(4-5)^2 = (-1)^2 = 1\]</span> <span class="math display">\[(4-5)^2 = (-1)^2 = 1\]</span></p>
+<p><span class="math display">\[(6-5)^2 = (1)^2 = 1\]</span> <span class="math display">\[(9-5)^2 = (4)^2 = 16\]</span></p>
+</section>
+<section id="calc-variance2" class="slide level2" data-menu-title="Calculate variance 2">
+<h2></h2>
+<p><span class="slide-title">Calculate variance by hand (2/2)</span></p>
+<hr>
+<p><span class="body-text-m">Given these data: <span class="math inline">\(2, 4, 4, 6, 9\)</span></span></p>
+<ol start="3" type="1">
+<li>Sum the squared differences:</li>
+</ol>
+<p><span class="math display">\[9+1+1+1+16 = 28\]</span></p>
+<ol start="4" type="1">
+<li>Divide by the number of data points minus 1 (<span class="math inline">\(n\)</span> - 1)</li>
+</ol>
+<p><span class="math display">\[Variance = \frac{28}{5-1} = 7\]</span></p>
+</section>
+<section id="stdev" class="slide level2" data-menu-title="Standard deviation">
+<h2></h2>
+<p><span class="slide-title">Standard deviation</span></p>
+<hr>
+<p><span class="body-text-m">Also a measure of data spread, calculated by taking the square root of the variance.</span></p>
+<div class="body-text-m">
+<p><span class="math display">\[ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}\]</span></p>
+</div>
+</section>
+<section id="best-way" class="slide level2" data-menu-title="Best way">
+<h2></h2>
+<p><br> <br> <br> <br> <br> <br> <br> <br></p>
+<div class="center-text body-text-xl teal-text">
+<p><strong>The best way to describe the distribution of the data is to present the data itself.</strong></p>
+</div>
+</section>
+<section id="datasaurus-dozen1" class="slide level2" data-menu-title="Datasaurus Dozen 1">
+<h2></h2>
+<p><span class="slide-title">Beware summary statistics alone . . .</span></p>
+<hr>
+<p><span class="body-text-l">Meet the Datasaurus Dozen</span></p>
+<p><br></p>
+
+<img data-src="images/dino_dozen.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="datasaurus-dozen2" class="slide level2" data-menu-title="Datasaurus Dozen 2">
+<h2></h2>
+<p><span class="slide-title">Same summary statistics, different distributions</span></p>
+<hr>
+
+<img data-src="images/Datasaurus-Dozen.gif" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p>Source: <a href="https://www.research.autodesk.com/publications/same-stats-different-graphs/">Autodesk</a></p>
+</div>
+</section>
+<section class="slide level2">
+
+<iframe data-external="1" src="https://www.youtube.com/embed/vJG698U2Mvo" width="100%" height="100%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</section>
+<section id="gorilla" class="slide level2" data-menu-title="Gorilla">
+<h2></h2>
+<p><br></p>
+
+<img data-src="images/gorilla.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p><br></p>
+<div class="footer">
+<p>From: Yanai, I., Lercher, M. A hypothesis is a liability. Genome Biol 21, 231 (2020). <a href="https://doi.org/10.1186/s13059-020-02133-w" class="uri">https://doi.org/10.1186/s13059-020-02133-w</a></p>
+</div>
+<aside class="notes">
+<p>Gave students a made-up dataset containing the BMI of 1786 people and the number of steps each took on a particular day.</p>
+<p>Students in Group 1 were asked to consider three specific hypotheses + also if there was anything else they could conclude from the dataset.</p>
+<p>Group 2 was simply asked, “What do you conclude from the dataset?”</p>
+<p>If you plotted the number of steps vs.&nbsp;BMI, you’d find the gorilla. Students driven by hypotheses skipped this step more often than those that were not hypothesis-driven.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="confidence-intervals-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Confidence intervals
+</div>
+</div>
+</section>
+<section id="conf-int-1" class="slide level2" data-menu-title="Confidence interval">
+<h2></h2>
+<p><span class="slide-title">Confidence interval</span></p>
+<hr>
+<p><br></p>
+<p><span class="body-text-m"><strong>Confidence interval:</strong> a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.</span></p>
+<p><br></p>
+</section>
+<section id="conf-int-2" class="slide level2" data-menu-title="Confidence interval">
+<h2></h2>
+<p><span class="slide-title">Confidence interval</span></p>
+<hr>
+<p><br></p>
+<p><span class="body-text-m"><strong>Confidence interval:</strong> a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.</span></p>
+<p><br></p>
+<div class="body-text-m">
+<p><strong>What it’s NOT:</strong></p>
+<p>“There is a 95% chance that the true population parameter is between values X and Y.”</p>
+</div>
+</section>
+<section id="conf-int-ex-1" class="slide level2" data-menu-title="Confidence interval example">
+<h2></h2>
+<p><span class="slide-title">Confidence interval example</span></p>
+<hr>
+<div class="center-text">
+<p><em>Mean shark length is 8.42 <span class="math inline">\(\pm\)</span> 3.55 ft (mean <span class="math inline">\(\pm\)</span> standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).</em></p>
+</div>
+<p><br></p>
+<div class="body-text-m">
+<p>What this <strong>DOES NOT</strong> mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet.</p>
+</div>
+<p>The true population mean is a <em>fixed value</em> and does not change – the CI either contains this true mean or it does not. There is no probability involved.</p>
+</section>
+<section id="conf-int-ex-2" class="slide level2" data-menu-title="Confidence interval example">
+<h2></h2>
+<p><span class="slide-title">Confidence interval example</span></p>
+<hr>
+<div class="center-text">
+<p><em>Mean shark length is 8.42 <span class="math inline">\(\pm\)</span> 3.55 ft (mean <span class="math inline">\(\pm\)</span> standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).</em></p>
+</div>
+<p><br></p>
+<div class="body-text-m">
+<p>What this <strong>DOES NOT</strong> mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet.</p>
+</div>
+<p>The true population mean is a <em>fixed value</em> and does not change – the CI either contains this true mean or it does not. There is no probability involved.</p>
+<p><br></p>
+<div class="body-text-m">
+<p>What this <strong>DOES</strong> mean: If we took a bunch of sets of samples from the population (all n = 15), then 95% of the time, the calculated mean would fall within this range. <!-- What this **DOES** mean: 95% of calculated confidence intervals for samples drawn from this population will contain the true population parameter. This CI could be one of the 95%. It could also be one of the 5% that does *not* contain the true population parameter! --></p>
+</div>
+<p>This statement correctly describes the frequency with which we would expect CIs to capture the mean over many samples.</p>
+</section>
+<section id="comm" class="slide level2" data-menu-title="Communicating data summaries">
+<h2></h2>
+<p><span class="slide-title">Communicating data summaries</span></p>
+<hr>
+<p><br></p>
+<div class="columns">
+<div class="column body-text-m" style="width:50%;">
+<ul>
+<li>The “Bar plots” philosophy: show as much as you can for the audience you’re presenting to</li>
+<li>Summary statistics are often useful, but are a small part of the whole data story</li>
+<li>Uncertainty is important! How can we responsibly communicate it?</li>
+<li>All summaries are strongest when accompanied by additional data communication</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/horst-bar-plot.png" class="quarto-figure quarto-figure-center" style="width:100.0%" alt="Main text: 'Are your summary statistics hiding something?' On the left is a opaque gray bar plot with an error bar, looking mischievous while hiding individual data points in a net behind it. On the right is a transparent bar plot with an error bar, looking exposed, with individual data points exposed and dancing. The bottom four data points have arms that spell 'YMCA' as if dancing to the Village People."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="center-text gray-text">
+<p>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></p>
+</div>
+</div></div>
+</section>
+<section id="lunch-break" class="slide level2" data-menu-title="Lunch break">
+<h2></h2>
+<p><span class="slide-title">Lunch break!</span></p>
+<hr>
+
+
+
+<img data-src="images/lunch-time.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -700,7 +1146,7 @@ x \\
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -812,13 +1258,14 @@ x \\
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
