@@ -17,29 +17,14 @@ knitr::include_graphics("images/derivative_9.jpg")
 *Artwork by [Allison Horst](https://allisonhorst.com/)*
 :::
 
-<!-- ## Pre-class prep -->
-
-<!-- Install the following packages by running the following in your RStudio *Console*: -->
-
-<!-- ```{r} -->
-<!-- #| eval: false -->
-<!-- #| echo: true -->
-<!-- install.packages("ARTofR") # optional, but an awesome package for creating R script section headers -->
-<!-- ``` -->
-
 ## Class materials
 
-| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  |  
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------| 
-| day 2 / morning   | [Limits and derivatives](slides/day2.1-slides.qmd){target="_blank"} | 
-| day 2 / afternoon | [Integrals](slides/day2.2-slides.qmd){target="_blank"} | 
+| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides (blank) | {{< fa pen-to-square title="A pencil over a blank piece of paper" >}}  After class slides| 
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----|
+| day 2 / morning   | [Limits and derivatives](slides/day2.1-slides.qmd){target="_blank"} |  [Slides](slides/after-class-slides/day2.1-slides-class-2026.pdf){target="_blank"} |
+| day 2 / afternoon | [Integrals](slides/day2.2-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day2.2-slides-class-2026.pdf){target="_blank"} |
 : {.hover .bordered tbl-colwidths="[20,40,40]"} 
 
-<!-- ## End-of-day practice
-
-Complete the following tasks / activities before heading home for the day!
-
-- [{{< fa pencil title="A pencil" >}} **Day 2 Practice:** Derivatives, plots, git](eod-practice/eod-day2.qmd) -->
 
 ## Additional Resources
 - **[Derivatives... What?](https://www.youtube.com/watch?v=-ktrtzYVk_I), by [NancyPi](https://www.youtube.com/@NancyPi):** YouTube video on the definition of the derivative
