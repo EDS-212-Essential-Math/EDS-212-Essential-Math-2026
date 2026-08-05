@@ -373,8 +373,8 @@ ggplot(data.frame(dbh), aes(x = dbh)) +
   geom_histogram(breaks = seq(5, 30, by = 5), color = "white") +
   labs(x = "DBH (cm)", y = "Count") +
   theme(
-    axis.text = element_text(size = 18),
-    axis.title = element_text(size = 20)
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26)
   )
 ```
 :::
@@ -429,8 +429,8 @@ ggplot(data.frame(waves), aes(x = waves)) +
   geom_histogram(breaks = seq(0, 4, by = 1), color = "white") +
   labs(x = "Wave height (m)", y = "Count") +
   theme(
-    axis.text = element_text(size = 18),
-    axis.title = element_text(size = 20)
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26)
   )
 ```
 :::
@@ -467,17 +467,40 @@ ggplot(data.frame(waves), aes(x = waves)) +
 
 <hr>
 
-✏️ [Find $Q_1, Q_2,$ and $Q_3$ for the values 6, 2, 12, 8, 14, 10, 16]{style="color:green;"}
+✏️ [Find $Q_1, Q_2,$ and $Q_3$ for the values 4, 16, 8, 40, 2, 14, 6, 10, 12]{style="color:green;"}
 
 ::: {.notes}
-Lower half: 2, 4, 6, 8 → Q1 = 5
-Upper half: 10, 12, 14, 16 → Q3 = 13
-Median (Q2) = (8+10)/2 = 9
+Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40
+Median (Q2) = 10
+Lower half: 2, 4, 6, 8 (four values) → Q1 = (4+6)/2 = 5
+Upper half: 12, 14, 16, 40 (four values) → Q3 = (14+16)/2 = 15
 :::
 
 ---
 
-## {#boxplot1 data-menu-title="Boxplot 1"} 
+## {#quartiles-example data-menu-title="Quartiles"}
+
+[Quartiles: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+[Find $Q_1, Q_2,$ and $Q_3$ for the values 4, 16, 8, 40, 2, 14, 6, 10, 12]{style="color:green;"}
+
+<br>
+
+::: {.body-text-m}
+Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40
+
+- $Q_2$ (median): 10
+- Lower half: 2, 4, 6, 8 — an **even** number of values, so $Q_1$ is the average of the middle two: $Q_1 = \frac{4+6}{2} = 5$
+- Upper half: 12, 14, 16, 40 — again an even number of values: $Q_3 = \frac{14+16}{2} = 15$
+:::
+
+---
+
+## {#boxplot1 data-menu-title="Boxplot 1"}
 
 [Boxplot]{.slide-title}
 
@@ -485,20 +508,19 @@ Median (Q2) = (8+10)/2 = 9
 
 <br>
 
-[Most often:]{.body-text-l} 
-
-<br>
-
 ::: {.body-text-m}
-- Box extends to 1st and 3rd quartile observation values
-- Line at the median value
-- Whiskers extend to last observation within 1 step (1 step = 1.5*interquartile range)
-- Anything beyond whiskers indicated with a dot at the observation value
+**How it's drawn:**
+
+1. Draw a box from $Q_1$ to $Q_3$: this box spans the **interquartile range**:
+$$IQR = Q_3 - Q_1$$
+2. Draw a line inside the box at the median ($Q_2$)
+3. Draw whiskers extending to the furthest observation within $1.5 \times IQR$ of the box
+4. Plot any observation beyond the whiskers individually, as a dot (an **outlier**)
 :::
 
 ---
 
-## {#boxplot2 data-menu-title="Boxplot 2"} 
+## {#boxplot2 data-menu-title="Boxplot 2"}
 
 [Boxplot]{.slide-title}
 
@@ -511,6 +533,66 @@ Median (Q2) = (8+10)/2 = 9
 #| fig-align: "center"
 knitr::include_graphics("images/boxplot.png")
 ```
+
+---
+
+## {#boxplot-draw-blank data-menu-title="Exercise: draw a box plot"}
+
+[Exercise: draw a box plot]{.slide-title}
+
+<hr>
+
+✏️ [Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 ($Q_1=5$, $Q_2=10$, $Q_3=15$), draw the box plot by hand.]{style="color:green;"}
+
+---
+
+## {#boxplot-draw data-menu-title="Exercise: draw a box plot"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+:::: {.columns}
+::: {.column width="40%"}
+::: {.body-text-m}
+- $Q_1$: 5
+- Median ($Q_2$): 10
+- $Q_3$: 15
+- $IQR = 15-5 = 10$
+- $Q_3 + 1.5 \times IQR = 15+15 = 30$
+- 40 is beyond that value, so it's an **outlier** — the whisker stops at 16, the last value within $1.5 \times IQR$ of the box
+:::
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+five_num <- data.frame(xmin = 2, xlower = 5, xmiddle = 10, xupper = 15, xmax = 16)
+points <- data.frame(x = c(2, 4, 6, 8, 10, 12, 14, 16, 40), y = "")
+
+ggplot(five_num, aes(y = "")) +
+  geom_boxplot(
+    aes(xmin = xmin, xlower = xlower, xmiddle = xmiddle, xupper = xupper, xmax = xmax),
+    stat = "identity", width = 0.4
+  ) +
+  geom_point(
+    data = points, aes(x = x, y = y),
+    position = position_jitter(width = 0, height = 0.15),
+    size = 3, alpha = 0.7, color = "steelblue"
+  ) +
+  labs(x = "Value", y = NULL) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26)
+  )
+```
+:::
+::::
 
 ---
 
@@ -537,8 +619,8 @@ ggplot(nitrate, aes(x = nitrate_mgL, y = farm)) +
   geom_boxplot() +
   labs(x = "Nitrate concentration (mg/L)", y = NULL) +
   theme(
-    axis.text = element_text(size = 18),
-    axis.title = element_text(size = 20)
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26)
   )
 ```
 
@@ -584,7 +666,15 @@ A scatterplot shows the relationship between **two numeric variables**: each obs
 #| fig-align: "center"
 
 ggplot(data = palmerpenguins::penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
-  geom_point(aes(color = species))
+  geom_point(aes(color = species)) +
+  labs(x = "Bill depth (mm)", y = "Bill length (mm)", color = "Species") +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26),
+    legend.text = element_text(size = 20),
+    legend.title = element_text(size = 22)
+  )
 ```
 
 :::{.center-text .teal-text}
