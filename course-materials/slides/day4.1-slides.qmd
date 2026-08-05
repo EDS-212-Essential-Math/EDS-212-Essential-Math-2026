@@ -233,7 +233,7 @@ Sample size: n = 60 neighborhoods
 ## {#data-dsitributions-title data-menu-title="Summation Notation" background-color="#003660"}
 
 <div class="page-center">
-<div class="custom-subtitle">Describing data distributions</div>
+<div class="custom-subtitle">Basic data visualizations</div>
 <div class="custom-subtitle">Visualizations</div>
 </div>
 
@@ -682,6 +682,25 @@ Always, always, always look at your data. It is the only way to make a responsib
 :::
 ---
 
+## {#break data-menu-title="5 minute break"} 
+
+[Let's take a 5 minute break]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/coffee-break.png)
+
+---
+
+## {#numerical-summaries-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Summarizing data numerically</div>
+</div>
+
+---
+
+
 ## {#summarizing-numerically data-menu-title="Summarizing numberically"} 
 
 [Summarizing data numerically]{.slide-title}
@@ -695,6 +714,33 @@ Always, always, always look at your data. It is the only way to make a responsib
 - Variance and standard deviation
 - Standard error
 - Confidence interval
+:::
+
+---
+
+## {#median data-menu-title="Median"} 
+
+[Median]{.slide-title}
+
+<hr>
+
+[Middle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. $median\;of\;3, 7, 17 = 7$]{.body-text-m}
+
+<br>
+
+[**Pros:**]{.body-text-l}
+
+::: {.body-text-m}
+- Less susceptible to skew and outliers
+- Better as sample size increases
+:::
+
+<br>
+
+[**Cons:**]{.body-text-l}
+
+::: {.body-text-m}
+- Doesn't take into account the magnitude of all values
 :::
 
 ---
@@ -729,33 +775,6 @@ SB housing market typically reports median cost rather than mean cost? Why do yo
 
 ---
 
-## {#median data-menu-title="Median"} 
-
-[Median]{.slide-title}
-
-<hr>
-
-[Middle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. $median\;of\;3, 7, 17 = 7$]{.body-text-m}
-
-<br>
-
-[**Pros:**]{.body-text-l}
-
-::: {.body-text-m}
-- Less susceptible to skew and outliers
-- Better as sample size increases
-:::
-
-<br>
-
-[**Cons:**]{.body-text-l}
-
-::: {.body-text-m}
-- Doesn't take into account the magnitude of all values
-:::
-
----
-
 ## {#central-tendency data-menu-title="Central tendency"}
 
 <br>
@@ -772,23 +791,6 @@ knitr::include_graphics("images/central_tendency.jpg")
 
 ::: {.footer}
 Image: Sirkin, R. M. (2006). Measuring central tendency. In Statistics for the social sciences (pp. 83-126). SAGE Publications, Inc., <https://www.doi.org/10.4135/9781412985987>
-:::
-
----
-
-## {#best-way data-menu-title="Best way"}
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-::: {.center-text .body-text-xl .teal-text}
-**The best way to describe the distribution of the data is to present the data itself.**
 :::
 
 ---
@@ -812,13 +814,9 @@ Image: Sirkin, R. M. (2006). Measuring central tendency. In Statistics for the s
 
 Reported in units of measurement squared
 :::
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/variance_equation.png")
-```
+
+$$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}$$
+
 :::
 
 ::: {.column width="50%"}
@@ -827,13 +825,9 @@ knitr::include_graphics("images/variance_equation.png")
 
 Reported in units of measurement
 :::
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/standard_deviation.png")
-```
+
+$$ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}$$
+
 :::
 ::::
 
@@ -846,6 +840,16 @@ See [this discussion](https://stats.stackexchange.com/questions/35123/whats-the-
 
 The variance measures the mathematical dispersion of data relative to the mean, and while theoretically correct, can be difficult to interpret in a real-world sense. Standard deviation is expressed in the same unit of measurement as the data (e.g. inches, rather than square inches), and therefore can be a more intuitive value to report.
 :::
+
+---
+
+## {#variance-blank data-menu-title="Variance"} 
+
+[Variance]{.slide-title}
+
+<hr>
+
+✏️
 
 ---
 
@@ -869,7 +873,22 @@ knitr::include_graphics("images/variance_equation.png")
 
 <br>
 
-[Where $s^2$ is the sample variance, $x_i$ is a sample observation value, $\bar x$ is the sample mean, and $n$ is the number of observations.]{.body-text-m} 
+[Where $S^2$ is the sample variance, $x_i$ is a sample observation value, $\bar x$ is the sample mean, and $n$ is the number of observations.]{.body-text-m} 
+
+---
+
+## {#calc-variance-blank data-menu-title="Calculate variance 1"} 
+
+[Exercise]{.slide-title}
+
+<hr>
+
+:::{style="color:green;" .body-text-m}
+Given these data: $2, 4, 4, 6, 9$, calculate their variance. Remember:
+
+$$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}$$
+:::
+
 
 ---
 
@@ -892,6 +911,7 @@ $$(4-5)^2 = (-1)^2 = 1$$
 
 $$(6-5)^2 = (1)^2 = 1$$
 $$(9-5)^2 = (4)^2 = 16$$
+
 ---
 
 ## {#calc-variance2 data-menu-title="Calculate variance 2"} 
@@ -910,17 +930,6 @@ $$9+1+1+1+16 = 28$$
 
 $$Variance = \frac{28}{5-1} = 7$$
 
-. . . 
-
-Alternatively, in R: 
-
-```{r}
-#| eval: true
-#| echo: true
-
-var(c(2, 4, 4, 6, 9))
-```
-
 ---
 
 ## {#stdev data-menu-title="Standard deviation"} 
@@ -931,24 +940,27 @@ var(c(2, 4, 4, 6, 9))
 
 [Also a measure of data spread, calculated by taking the square root of the variance.]{.body-text-m}
 
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "60%"
-#| fig-align: "center"
-knitr::include_graphics("images/standard_deviation.png")
-```
+:::{.body-text-m}
+$$ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}$$
+:::
+
+---
+
+## {#best-way data-menu-title="Best way"}
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-In R:
-```{r}
-#| eval: true
-#| echo: true
-sqrt(var(c(2, 4, 4, 6, 9)))
-# or alternatively, just use sd()
-sd(c(2, 4, 4, 6, 9))
-```
+::: {.center-text .body-text-xl .teal-text}
+**The best way to describe the distribution of the data is to present the data itself.**
+:::
+
 
 ---
 
@@ -1026,7 +1038,16 @@ If you plotted the number of steps vs. BMI, you'd find the gorilla. Students dri
 
 ---
 
-## {#conf-int data-menu-title="Confidence interval"} 
+## {#confidence-intervals-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Confidence intervals</div>
+</div>
+
+
+---
+
+## {#conf-int-1 data-menu-title="Confidence interval"} 
 
 [Confidence interval]{.slide-title}
 
@@ -1038,7 +1059,20 @@ If you plotted the number of steps vs. BMI, you'd find the gorilla. Students dri
 
 <br>
 
-. . . 
+---
+
+## {#conf-int-2 data-menu-title="Confidence interval"} 
+
+[Confidence interval]{.slide-title}
+
+<hr>
+
+<br>
+
+[**Confidence interval:** a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.]{.body-text-m} 
+
+<br>
+
 
 ::: {.body-text-m}
 **What it's NOT:** 
@@ -1048,7 +1082,7 @@ If you plotted the number of steps vs. BMI, you'd find the gorilla. Students dri
 
 ---
 
-## {#conf-int-ex data-menu-title="Confidence interval example"} 
+## {#conf-int-ex-1 data-menu-title="Confidence interval example"} 
 
 [Confidence interval example]{.slide-title}
 
@@ -1058,8 +1092,6 @@ If you plotted the number of steps vs. BMI, you'd find the gorilla. Students dri
 *Mean shark length is 8.42 $\pm$ 3.55 ft (mean $\pm$ standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).* 
 :::
 
-. . .
-
 <br>
 
 ::: {.body-text-m}
@@ -1068,7 +1100,25 @@ What this **DOES NOT** mean: There is a 95% chance that the true population mean
 
 The true population mean is a *fixed value* and does not change -- the CI either contains this true mean or it does not. There is no probability involved.
 
-. . .
+---
+
+## {#conf-int-ex-2 data-menu-title="Confidence interval example"} 
+
+[Confidence interval example]{.slide-title}
+
+<hr>
+
+::: {.center-text}
+*Mean shark length is 8.42 $\pm$ 3.55 ft (mean $\pm$ standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).* 
+:::
+
+<br>
+
+::: {.body-text-m}
+What this **DOES NOT** mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet. 
+:::
+
+The true population mean is a *fixed value* and does not change -- the CI either contains this true mean or it does not. There is no probability involved.
 
 <br>
 
@@ -1112,3 +1162,13 @@ Artwork by [Allison Horst](https://allisonhorst.com/)
 :::
 :::
 ::::
+
+---
+
+## {#lunch-break data-menu-title="Lunch break"} 
+
+[Lunch break!]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/lunch-time.png)
