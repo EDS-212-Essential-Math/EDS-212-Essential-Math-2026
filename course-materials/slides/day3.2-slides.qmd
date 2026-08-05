@@ -939,6 +939,99 @@ knitr::include_graphics("images/diagonal_matrix_scaling.png")
 
 ---
 
+## {#raster-index-blank data-menu-title="Exercise: raster math"}
+
+[Exercise: combining rasters]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+A raster is just a matrix where each cell holds a value for a location on a grid. Land managers often combine several raster layers into a single index by **scaling** each layer (multiplying by a weight) and **summing** the results.
+:::
+
+✏️ [Calculate the fire risk index for each cell:]{style="color:green;"}
+
+[$$\text{Fire risk} = 0.6 \times \text{Temperature stress} + 0.4 \times \text{Fuel dryness}$$]{style="color:green;"}
+
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "90%"
+#| fig-align: "center"
+library(tidyverse)
+
+make_raster_df <- function(m, label) {
+  expand.grid(col = 1:ncol(m), row = 1:nrow(m)) |>
+    mutate(value = as.vector(t(m)), layer = label)
+}
+
+T_mat <- matrix(c(10, 20, 15, 25), nrow = 2, byrow = TRUE)
+D_mat <- matrix(c(20, 10, 25, 15), nrow = 2, byrow = TRUE)
+
+df <- bind_rows(
+  make_raster_df(T_mat, "Temperature stress"),
+  make_raster_df(D_mat, "Fuel dryness")
+) |> mutate(layer = factor(layer, levels = c("Temperature stress", "Fuel dryness")))
+
+ggplot(df, aes(x = col, y = -row, fill = value)) +
+  geom_tile(color = "white", linewidth = 2) +
+  geom_text(aes(label = value), size = 10) +
+  scale_fill_gradient(low = "white", high = "firebrick", guide = "none") +
+  facet_wrap(~layer) +
+  coord_fixed() +
+  theme_void() +
+  theme(strip.text = element_text(size = 20))
+```
+
+---
+
+## {#raster-index data-menu-title="Exercise: raster math"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+[$$\text{Fire risk} = 0.6 \times \text{Temperature stress} + 0.4 \times \text{Fuel dryness}$$]{style="color:green;"}
+
+:::: {.columns}
+::: {.column width="45%"}
+::: {.body-text-m}
+- Top-left: $0.6(10)+0.4(20) = 6+8 = 14$
+- Top-right: $0.6(20)+0.4(10) = 12+4 = 16$
+- Bottom-left: $0.6(15)+0.4(25) = 9+10 = 19$
+- Bottom-right: $0.6(25)+0.4(15) = 15+6 = 21$
+:::
+:::
+
+::: {.column width="55%"}
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "80%"
+#| fig-align: "center"
+T_mat <- matrix(c(10, 20, 15, 25), nrow = 2, byrow = TRUE)
+D_mat <- matrix(c(20, 10, 25, 15), nrow = 2, byrow = TRUE)
+R_mat <- 0.6*T_mat + 0.4*D_mat
+
+Rdf <- expand.grid(col = 1:2, row = 1:2) |>
+  mutate(value = as.vector(t(R_mat)))
+
+ggplot(Rdf, aes(x = col, y = -row, fill = value)) +
+  geom_tile(color = "white", linewidth = 2) +
+  geom_text(aes(label = value), size = 10) +
+  scale_fill_gradient(low = "white", high = "firebrick", guide = "none") +
+  coord_fixed() +
+  theme_void() +
+  labs(title = "Fire risk index") +
+  theme(plot.title = element_text(hjust = 0.5, size = 20))
+```
+:::
+::::
+
+---
+
 ## {#wrapping-up data-menu-title="Integration" background-color="#003660"}
 
 <div class="page-center">
