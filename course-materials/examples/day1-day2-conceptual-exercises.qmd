@@ -6,7 +6,7 @@ editor_options:
 ---
 
 ::: {.callout-note}
-For every exercise below, write your final answer as a **complete sentence**, including units, as if you were explaining it to someone unfamiliar with the data. Where relevant, avoid overstating certainty (e.g. prefer "increased by an average of..." over "increased by...").
+For every exercise below, write your final answer as a **complete sentence**, including units, as if you were explaining it to someone unfamiliar with the data. 
 :::
 
 ## Exercise 1
@@ -296,3 +296,6 @@ $$
 
 If the current growth trend continues, the insect population is expected to reach the quarantine threshold of 5,000 egg masses per hectare about 14.3 years after it was first detected.
 :::
+
+
+*All the functions and example data are synthetic and were generated with the aid of Claude Code for the purpose of this session.*
