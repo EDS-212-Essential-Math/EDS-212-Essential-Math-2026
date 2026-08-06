@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Tuesday August 4th, 2026">
 
-<title>Derivatives</title>
+<title>Day 2 / Morning: Extra examples</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -30,26 +29,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17e5a23d094ee4d3ea1f9bf67e0e3d54.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5cef1391e92990c1d02e0f0e735fafd2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-17e5a23d094ee4d3ea1f9bf67e0e3d54.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5cef1391e92990c1d02e0f0e735fafd2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -88,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EDS 212</span>
     </a>
   </div>
@@ -99,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
@@ -112,19 +140,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
         <li>
-    <a class="dropdown-item" href="../course-materials/day1.html">
+    <a class="dropdown-item" href="../../course-materials/day1.html">
  <span class="dropdown-text">day 1 (8/3)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day2.html">
+    <a class="dropdown-item" href="../../course-materials/day2.html">
  <span class="dropdown-text">day 2 (8/4)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day3.html">
+    <a class="dropdown-item" href="../../course-materials/day3.html">
  <span class="dropdown-text">day 3 (8/5)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../course-materials/day4.html">
+    <a class="dropdown-item" href="../../course-materials/day4.html">
  <span class="dropdown-text">day 4 (8/6)</span></a>
   </li>  
     </ul>
@@ -145,14 +173,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Derivatives</h1>
-            <p class="subtitle lead">Day 2</p>
-                  <div>
-        <div class="description">
-          Tuesday August 4<sup>th</sup>, 2026
-        </div>
-      </div>
-                </div>
+      <h1 class="title">Day 2 / Morning: Extra examples</h1>
+                      </div>
   </div>
     
   
@@ -172,8 +194,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#class-materials" id="toc-class-materials" class="nav-link active" data-scroll-target="#class-materials">Class materials</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
+  <li><a href="#limits" id="toc-limits" class="nav-link active" data-scroll-target="#limits">Limits</a></li>
+  <li><a href="#rules-for-differentiation" id="toc-rules-for-differentiation" class="nav-link" data-scroll-target="#rules-for-differentiation">Rules for differentiation</a></li>
+  <li><a href="#higher-order-derivatives" id="toc-higher-order-derivatives" class="nav-link" data-scroll-target="#higher-order-derivatives">Higher-order derivatives</a></li>
+  <li><a href="#partial-derivatives" id="toc-partial-derivatives" class="nav-link" data-scroll-target="#partial-derivatives">Partial derivatives</a></li>
   </ul>
 </nav>
     </div>
@@ -184,57 +208,306 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/derivative_9.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="A single green point, looking victorious with arms raised, which is now representing the yellow and blue points have converged (delta x is infinitely small). Text reads 'The expression for the instantaneous slope at any point on a function, aka the derivative, is found by (1) Finding an expression for the slope between two points on the function separated by delta x, and (2) evaluating that slope as the points get infinitely close together.'"></p>
-</figure>
+<section id="limits" class="level2">
+<h2 class="anchored" data-anchor-id="limits">Limits</h2>
+<ol type="1">
+<li>Evaluate: <span class="math display">\[
+\lim_{x\to 3}(2x^2-5x+1)
+\]</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\lim_{x\to 3}(2x^2-5x+1) = 2(3)^2-5(3)+1 = 18-15+1 = 4
+\]</span></p>
 </div>
 </div>
 </div>
-<div class="gray-text center-text">
-<p><em>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></em></p>
+<ol start="2" type="1">
+<li>Does the following limit exist? <span class="math display">\[
+\lim_{x\to 1}\frac{|x-1|}{x-1}
+\]</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<section id="class-materials" class="level2">
-<h2 class="anchored" data-anchor-id="class-materials">Class materials</h2>
-<table class="table-hover table-bordered caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 35%">
-<col style="width: 30%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><i class="fa-solid fa-calendar-day" title="A calendar with one day highlighted" aria-label="calendar-day"></i> Session</th>
-<th><i class="fa-solid fa-person-chalkboard" title="A person motioning at a chalkboard" aria-label="person-chalkboard"></i> Lecture slides (blank)</th>
-<th><i class="fa-solid fa-pen-to-square" title="A pencil over a blank piece of paper" aria-label="pen-to-square"></i> After class slides</th>
-<th><i class="fa-solid fa-pencil" title="A pencil" aria-label="pencil"></i> Extra Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>day 2 / morning</td>
-<td><a href="../course-materials/slides/day2.1-slides.html" target="_blank">Limits and derivatives</a></td>
-<td><a href="slides/after-class-slides/day2.1-slides-class-2026.pdf" target="_blank">Slides</a></td>
-<td><a href="../course-materials/examples/day2-morning-extra-examples.html" target="_blank">Examples</a></td>
-</tr>
-<tr class="even">
-<td>day 2 / afternoon</td>
-<td><a href="../course-materials/slides/day2.2-slides.html" target="_blank">Integrals</a></td>
-<td><a href="slides/after-class-slides/day2.2-slides-class-2026.pdf" target="_blank">Slides</a></td>
-<td><a href="../course-materials/examples/day2-afternoon-extra-examples.html" target="_blank">Examples</a></td>
-</tr>
-</tbody>
-</table>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Approaching from the right (<span class="math inline">\(x&gt;1\)</span>): <span class="math inline">\(\frac{x-1}{x-1}=1\)</span>.</p>
+<p>Approaching from the left (<span class="math inline">\(x&lt;1\)</span>): <span class="math inline">\(\frac{-(x-1)}{x-1}=-1\)</span>.</p>
+<p>Since the function approaches different values from the left and right, the limit <strong>does not exist</strong>.</p>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Evaluate: <span class="math display">\[
+\lim_{x\to -2}(x^3+4x-1)
+\]</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\lim_{x\to -2}(x^3+4x-1) = (-2)^3+4(-2)-1 = -8-8-1 = -17
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Let <span class="math display">\[
+f(x)=\begin{cases}x+1, &amp; x\geq 0\\-x+1, &amp; x&lt;0\end{cases}
+\]</span> Does the following limit exist? <span class="math display">\[
+\lim_{x\to 0}f(x)
+\]</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Approaching from the right (<span class="math inline">\(x\geq 0\)</span>): <span class="math inline">\(f(x)=x+1 \to 1\)</span>.</p>
+<p>Approaching from the left (<span class="math inline">\(x&lt;0\)</span>): <span class="math inline">\(f(x)=-x+1 \to 1\)</span>.</p>
+<p>Since the function approaches the same value from both sides, the limit <strong>exists</strong> and equals <span class="math inline">\(1\)</span>.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
-<ul>
-<li><strong><a href="https://www.youtube.com/watch?v=-ktrtzYVk_I">Derivatives… What?</a>, by <a href="https://www.youtube.com/@NancyPi">NancyPi</a>:</strong> YouTube video on the definition of the derivative</li>
-<li><strong><a href="https://www.youtube.com/watch?v=QqF3i1pnyzU&amp;t=0s">Derivatives… How?</a>, by <a href="https://www.youtube.com/@NancyPi">NancyPi</a>:</strong> YouTube video showing how to find derivatives using rules</li>
-</ul>
+<section id="rules-for-differentiation" class="level2">
+<h2 class="anchored" data-anchor-id="rules-for-differentiation">Rules for differentiation</h2>
+<ol start="5" type="1">
+<li>Find <span class="math inline">\(f'(x)\)</span> for <span class="math inline">\(f(x)=x^5\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+f'(x)=5x^4
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="6" type="1">
+<li>Find <span class="math inline">\(f'(x)\)</span> for <span class="math inline">\(f(x)=\frac{1}{x^2}\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+f(x)=x^{-2} \Rightarrow f'(x)=-2x^{-3}=-\frac{2}{x^3}
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="7" type="1">
+<li>Find <span class="math inline">\(y'\)</span> for <span class="math inline">\(y=x^3-x^2-15\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+y'=3x^2-2x
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="8" type="1">
+<li>Find <span class="math inline">\(\frac{dy}{dx}\)</span> for <span class="math inline">\(y=x^2+\sqrt{2}x-\frac{8}{x}+4\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{dy}{dx}=2x+\sqrt{2}+\frac{8}{x^2}
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="9" type="1">
+<li>Find <span class="math inline">\(g'(y)\)</span> for <span class="math inline">\(g(y)=2\sqrt{y}-e^y+20\ln(y)\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+g'(y)=\frac{1}{\sqrt{y}}-e^y+\frac{20}{y}
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="higher-order-derivatives" class="level2">
+<h2 class="anchored" data-anchor-id="higher-order-derivatives">Higher-order derivatives</h2>
+<ol start="10" type="1">
+<li>Find the third derivative of <span class="math inline">\(H(z)=2z^5-4z^3+6z-7\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+H'(z)=10z^4-12z^2+6
+\]</span> <span class="math display">\[
+H''(z)=40z^3-24z
+\]</span> <span class="math display">\[
+H'''(z)=120z^2-24
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="11" type="1">
+<li>Position is given by <span class="math inline">\(s(t)=t^3-6t^2+9t\)</span>. Find the velocity function <span class="math inline">\(s'(t)\)</span> and the acceleration function <span class="math inline">\(s''(t)\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+v(t)=s'(t)=3t^2-12t+9
+\]</span> <span class="math display">\[
+a(t)=s''(t)=6t-12
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="partial-derivatives" class="level2">
+<h2 class="anchored" data-anchor-id="partial-derivatives">Partial derivatives</h2>
+<ol start="12" type="1">
+<li>Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for <span class="math inline">\(f(x,y)=x^2y-2x+y-1\)</span>, then evaluate both at <span class="math inline">\((1,3)\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{\partial f}{\partial x}=2xy-2, \qquad \frac{\partial f}{\partial y}=x^2+1
+\]</span> At <span class="math inline">\((1,3)\)</span>: <span class="math inline">\(\left.\frac{\partial f}{\partial x}\right|_{(1,3)}=2(1)(3)-2=4\)</span>, and <span class="math inline">\(\left.\frac{\partial f}{\partial y}\right|_{(1,3)}=1^2+1=2\)</span></p>
+</div>
+</div>
+</div>
+<ol start="13" type="1">
+<li>Find <span class="math inline">\(\frac{\partial B}{\partial x}\)</span>, <span class="math inline">\(\frac{\partial B}{\partial y}\)</span>, and <span class="math inline">\(\frac{\partial B}{\partial z}\)</span> for <span class="math inline">\(B(x,y,z)=0.4x^3y-3.6y^2+4zx+8\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{\partial B}{\partial x}=1.2x^2y+4z, \qquad \frac{\partial B}{\partial y}=0.4x^3-7.2y, \qquad \frac{\partial B}{\partial z}=4x
+\]</span></p>
+</div>
+</div>
+</div>
 
 
 </section>

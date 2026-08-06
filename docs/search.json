@@ -207,7 +207,7 @@
     "href": "course-materials/day2.html#class-materials",
     "title": "Derivatives",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides (blank)\n After class slides\n\n\n\n\nday 2 / morning\nLimits and derivatives\nSlides\n\n\nday 2 / afternoon\nIntegrals\nSlides"
+    "text": "Class materials\n\n\n\n\n\n\n\n\n\n Session\n Lecture slides (blank)\n After class slides\n Extra Examples\n\n\n\n\nday 2 / morning\nLimits and derivatives\nSlides\nExamples\n\n\nday 2 / afternoon\nIntegrals\nSlides\nExamples"
   },
   {
     "objectID": "course-materials/day2.html#additional-resources",
@@ -4085,7 +4085,7 @@
     "href": "course-materials/day3.html#class-materials",
     "title": "Integrals, differential equations, intro to linear algebra",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n\n\n\n\n Session\n Lecture slides\n\n\n\n\nday 3 / morning\nPractice session\n\n\nday 3 / afternoon\nVectors and matrices"
+    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Extra Examples\n\n\n\n\nday 3 / morning\nPractice session\n\n\n\nday 3 / afternoon\nVectors and matrices\nExamples"
   },
   {
     "objectID": "course-materials/day3.html#additional-resources",
@@ -4093,5 +4093,124 @@
     "title": "Integrals, differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
+  },
+  {
+    "objectID": "course-materials/examples/day3-afternoon-extra-examples.html",
+    "href": "course-materials/examples/day3-afternoon-extra-examples.html",
+    "title": "Day 3 / Afternoon: Extra examples",
+    "section": "",
+    "text": "Expand and evaluate: \\[\n\\sum_{i=1}^{4}i^2\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\sum_{i=1}^{4}i^2 = 1^2+2^2+3^2+4^2 = 1+4+9+16 = 30\n\\]\n\n\n\n\nEvaluate: \\[\n\\sum_{i=2}^{5}3i\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\sum_{i=2}^{5}3i = 3(2)+3(3)+3(4)+3(5) = 6+9+12+15 = 42\n\\]\n\n\n\n\nA researcher records daily rainfall (in mm) over 5 days: \\(x=(2,0,5,3,4)\\). Find the sample mean, given by \\[\n\\bar{x}=\\frac{1}{n}\\sum_{i=1}^{n}x_i.\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\bar{x}=\\frac{1}{5}(2+0+5+3+4) = \\frac{14}{5} = 2.8\\text{ mm}\n\\]\n\n\n\n\nA set of tree heights (in m) is \\(x=(2,4,6,8)\\), with sample mean \\(\\bar{x}=5\\). Find the sample variance, given by \\[\ns^2=\\frac{1}{n-1}\\sum_{i=1}^{n}(x_i-\\bar{x})^2.\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ns^2=\\frac{1}{4-1}\\left[(2-5)^2+(4-5)^2+(6-5)^2+(8-5)^2\\right] = \\frac{1}{3}(9+1+1+9) = \\frac{20}{3} \\approx 6.67\\text{ m}^2\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day3-afternoon-extra-examples.html#summation-notation",
+    "href": "course-materials/examples/day3-afternoon-extra-examples.html#summation-notation",
+    "title": "Day 3 / Afternoon: Extra examples",
+    "section": "",
+    "text": "Expand and evaluate: \\[\n\\sum_{i=1}^{4}i^2\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\sum_{i=1}^{4}i^2 = 1^2+2^2+3^2+4^2 = 1+4+9+16 = 30\n\\]\n\n\n\n\nEvaluate: \\[\n\\sum_{i=2}^{5}3i\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\sum_{i=2}^{5}3i = 3(2)+3(3)+3(4)+3(5) = 6+9+12+15 = 42\n\\]\n\n\n\n\nA researcher records daily rainfall (in mm) over 5 days: \\(x=(2,0,5,3,4)\\). Find the sample mean, given by \\[\n\\bar{x}=\\frac{1}{n}\\sum_{i=1}^{n}x_i.\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\bar{x}=\\frac{1}{5}(2+0+5+3+4) = \\frac{14}{5} = 2.8\\text{ mm}\n\\]\n\n\n\n\nA set of tree heights (in m) is \\(x=(2,4,6,8)\\), with sample mean \\(\\bar{x}=5\\). Find the sample variance, given by \\[\ns^2=\\frac{1}{n-1}\\sum_{i=1}^{n}(x_i-\\bar{x})^2.\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ns^2=\\frac{1}{4-1}\\left[(2-5)^2+(4-5)^2+(6-5)^2+(8-5)^2\\right] = \\frac{1}{3}(9+1+1+9) = \\frac{20}{3} \\approx 6.67\\text{ m}^2\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day3-afternoon-extra-examples.html#vectors",
+    "href": "course-materials/examples/day3-afternoon-extra-examples.html#vectors",
+    "title": "Day 3 / Afternoon: Extra examples",
+    "section": "Vectors",
+    "text": "Vectors\n\nGiven \\(u=(2,5)\\) and \\(v=(4,-1)\\), find \\(u+v\\) and \\(u-v\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nu+v=(2+4,\\ 5-1)=(6,4)\n\\] \\[\nu-v=(2-4,\\ 5+1)=(-2,6)\n\\]\n\n\n\n\nGiven \\(u=(1,4)\\), find \\(w=3u\\). What effect does scalar multiplication have on a vector?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nw=3u=(3,12)\n\\] Scalar multiplication changes the vector’s magnitude (length) but not its direction — unless the scalar is negative, in which case the direction reverses.\n\n\n\n\nFind the dot product of \\(a=(3,-2,5)\\) and \\(b=(1,4,-2)\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\na\\cdot b = (3)(1)+(-2)(4)+(5)(-2) = 3-8-10 = -15\n\\]\n\n\n\n\nAre the vectors \\(x=(4,6)\\) and \\(d=(-3,2)\\) orthogonal?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nx\\cdot d = (4)(-3)+(6)(2) = -12+12 = 0\n\\] Since the dot product is 0, \\(x\\) and \\(d\\) are orthogonal."
+  },
+  {
+    "objectID": "course-materials/examples/day3-afternoon-extra-examples.html#matrices",
+    "href": "course-materials/examples/day3-afternoon-extra-examples.html#matrices",
+    "title": "Day 3 / Afternoon: Extra examples",
+    "section": "Matrices",
+    "text": "Matrices\n\nA matrix \\(A\\) has dimensions \\(3\\times 4\\). How many rows and columns does it have, and what does \\(a_{23}\\) refer to?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\(A\\) has 3 rows and 4 columns. \\(a_{23}\\) refers to the element in row 2, column 3.\n\n\n\n\nGiven \\(A=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}\\) and \\(B=\\begin{bmatrix}5&-1\\\\0&2\\end{bmatrix}\\), find \\(A+B\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nA+B=\\begin{bmatrix}1+5&2-1\\\\3+0&4+2\\end{bmatrix}=\\begin{bmatrix}6&1\\\\3&6\\end{bmatrix}\n\\]\n\n\n\n\nGiven \\(A=\\begin{bmatrix}2&0\\\\1&3\\end{bmatrix}\\), find \\(4A\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n4A=\\begin{bmatrix}8&0\\\\4&12\\end{bmatrix}\n\\]\n\n\n\n\nMultiply the matrices: \\(\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}\\begin{bmatrix}5&6\\\\7&8\\end{bmatrix}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nEach entry is the dot product of a row of the first matrix and a column of the second: \\[\n\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}\\begin{bmatrix}5&6\\\\7&8\\end{bmatrix}=\\begin{bmatrix}(1)(5)+(2)(7)&(1)(6)+(2)(8)\\\\(3)(5)+(4)(7)&(3)(6)+(4)(8)\\end{bmatrix}=\\begin{bmatrix}19&22\\\\43&50\\end{bmatrix}\n\\]\n\n\n\n\nIf you multiply a \\(2\\times 7\\) matrix by a \\(7\\times 4\\) matrix, what are the dimensions of the resulting matrix?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe result is a \\(2\\times 4\\) matrix — the number of rows of the first matrix by the number of columns of the second.\n\n\n\n\nTwo \\(2\\times 2\\) rasters represent temperature risk \\(T\\) and drought risk \\(D\\) across four grid cells. Fire risk is computed as \\(\\text{Fire}=0.6T+0.4D\\). Given \\[\nT=\\begin{bmatrix}80&90\\\\70&85\\end{bmatrix}, \\qquad D=\\begin{bmatrix}40&60\\\\30&50\\end{bmatrix}\n\\] find the Fire risk matrix.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n0.6T=\\begin{bmatrix}48&54\\\\42&51\\end{bmatrix}, \\qquad 0.4D=\\begin{bmatrix}16&24\\\\12&20\\end{bmatrix}\n\\] \\[\n\\text{Fire}=0.6T+0.4D=\\begin{bmatrix}64&78\\\\54&71\\end{bmatrix}\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-morning-extra-examples.html",
+    "href": "course-materials/examples/day2-morning-extra-examples.html",
+    "title": "Day 2 / Morning: Extra examples",
+    "section": "",
+    "text": "Evaluate: \\[\n\\lim_{x\\to 3}(2x^2-5x+1)\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\lim_{x\\to 3}(2x^2-5x+1) = 2(3)^2-5(3)+1 = 18-15+1 = 4\n\\]\n\n\n\n\nDoes the following limit exist? \\[\n\\lim_{x\\to 1}\\frac{|x-1|}{x-1}\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nApproaching from the right (\\(x&gt;1\\)): \\(\\frac{x-1}{x-1}=1\\).\nApproaching from the left (\\(x&lt;1\\)): \\(\\frac{-(x-1)}{x-1}=-1\\).\nSince the function approaches different values from the left and right, the limit does not exist.\n\n\n\n\nEvaluate: \\[\n\\lim_{x\\to -2}(x^3+4x-1)\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\lim_{x\\to -2}(x^3+4x-1) = (-2)^3+4(-2)-1 = -8-8-1 = -17\n\\]\n\n\n\n\nLet \\[\nf(x)=\\begin{cases}x+1, & x\\geq 0\\\\-x+1, & x&lt;0\\end{cases}\n\\] Does the following limit exist? \\[\n\\lim_{x\\to 0}f(x)\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nApproaching from the right (\\(x\\geq 0\\)): \\(f(x)=x+1 \\to 1\\).\nApproaching from the left (\\(x&lt;0\\)): \\(f(x)=-x+1 \\to 1\\).\nSince the function approaches the same value from both sides, the limit exists and equals \\(1\\)."
+  },
+  {
+    "objectID": "course-materials/examples/day2-morning-extra-examples.html#limits",
+    "href": "course-materials/examples/day2-morning-extra-examples.html#limits",
+    "title": "Day 2 / Morning: Extra examples",
+    "section": "",
+    "text": "Evaluate: \\[\n\\lim_{x\\to 3}(2x^2-5x+1)\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\lim_{x\\to 3}(2x^2-5x+1) = 2(3)^2-5(3)+1 = 18-15+1 = 4\n\\]\n\n\n\n\nDoes the following limit exist? \\[\n\\lim_{x\\to 1}\\frac{|x-1|}{x-1}\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nApproaching from the right (\\(x&gt;1\\)): \\(\\frac{x-1}{x-1}=1\\).\nApproaching from the left (\\(x&lt;1\\)): \\(\\frac{-(x-1)}{x-1}=-1\\).\nSince the function approaches different values from the left and right, the limit does not exist.\n\n\n\n\nEvaluate: \\[\n\\lim_{x\\to -2}(x^3+4x-1)\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\lim_{x\\to -2}(x^3+4x-1) = (-2)^3+4(-2)-1 = -8-8-1 = -17\n\\]\n\n\n\n\nLet \\[\nf(x)=\\begin{cases}x+1, & x\\geq 0\\\\-x+1, & x&lt;0\\end{cases}\n\\] Does the following limit exist? \\[\n\\lim_{x\\to 0}f(x)\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nApproaching from the right (\\(x\\geq 0\\)): \\(f(x)=x+1 \\to 1\\).\nApproaching from the left (\\(x&lt;0\\)): \\(f(x)=-x+1 \\to 1\\).\nSince the function approaches the same value from both sides, the limit exists and equals \\(1\\)."
+  },
+  {
+    "objectID": "course-materials/examples/day2-morning-extra-examples.html#the-derivative",
+    "href": "course-materials/examples/day2-morning-extra-examples.html#the-derivative",
+    "title": "Day 2 / Morning: Extra examples",
+    "section": "The derivative",
+    "text": "The derivative\n\nUse the limit definition of the derivative, \\(f'(x)=\\lim_{\\Delta x \\to 0}\\frac{f(x+\\Delta x)-f(x)}{\\Delta x}\\), to find \\(f'(x)\\) for \\(f(x)=x^2\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf'(x)=\\lim_{\\Delta x \\to 0}\\frac{(x+\\Delta x)^2-x^2}{\\Delta x} = \\lim_{\\Delta x \\to 0}\\frac{2x\\Delta x+\\Delta x^2}{\\Delta x} = \\lim_{\\Delta x \\to 0}(2x+\\Delta x) = 2x\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-morning-extra-examples.html#rules-for-differentiation",
+    "href": "course-materials/examples/day2-morning-extra-examples.html#rules-for-differentiation",
+    "title": "Day 2 / Morning: Extra examples",
+    "section": "Rules for differentiation",
+    "text": "Rules for differentiation\n\nFind \\(f'(x)\\) for \\(f(x)=x^5\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf'(x)=5x^4\n\\]\n\n\n\n\nFind \\(f'(x)\\) for \\(f(x)=\\frac{1}{x^2}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf(x)=x^{-2} \\Rightarrow f'(x)=-2x^{-3}=-\\frac{2}{x^3}\n\\]\n\n\n\n\nFind \\(y'\\) for \\(y=x^3-x^2-15\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ny'=3x^2-2x\n\\]\n\n\n\n\nFind \\(\\frac{dy}{dx}\\) for \\(y=x^2+\\sqrt{2}x-\\frac{8}{x}+4\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{dy}{dx}=2x+\\sqrt{2}+\\frac{8}{x^2}\n\\]\n\n\n\n\nFind \\(g'(y)\\) for \\(g(y)=2\\sqrt{y}-e^y+20\\ln(y)\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ng'(y)=\\frac{1}{\\sqrt{y}}-e^y+\\frac{20}{y}\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-morning-extra-examples.html#higher-order-derivatives",
+    "href": "course-materials/examples/day2-morning-extra-examples.html#higher-order-derivatives",
+    "title": "Day 2 / Morning: Extra examples",
+    "section": "Higher-order derivatives",
+    "text": "Higher-order derivatives\n\nFind the third derivative of \\(H(z)=2z^5-4z^3+6z-7\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nH'(z)=10z^4-12z^2+6\n\\] \\[\nH''(z)=40z^3-24z\n\\] \\[\nH'''(z)=120z^2-24\n\\]\n\n\n\n\nPosition is given by \\(s(t)=t^3-6t^2+9t\\). Find the velocity function \\(s'(t)\\) and the acceleration function \\(s''(t)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nv(t)=s'(t)=3t^2-12t+9\n\\] \\[\na(t)=s''(t)=6t-12\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-morning-extra-examples.html#partial-derivatives",
+    "href": "course-materials/examples/day2-morning-extra-examples.html#partial-derivatives",
+    "title": "Day 2 / Morning: Extra examples",
+    "section": "Partial derivatives",
+    "text": "Partial derivatives\n\nFind \\(\\frac{\\partial f}{\\partial x}\\) and \\(\\frac{\\partial f}{\\partial y}\\) for \\(f(x,y)=x^2y-2x+y-1\\), then evaluate both at \\((1,3)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{\\partial f}{\\partial x}=2xy-2, \\qquad \\frac{\\partial f}{\\partial y}=x^2+1\n\\] At \\((1,3)\\): \\(\\left.\\frac{\\partial f}{\\partial x}\\right|_{(1,3)}=2(1)(3)-2=4\\), and \\(\\left.\\frac{\\partial f}{\\partial y}\\right|_{(1,3)}=1^2+1=2\\)\n\n\n\n\nFind \\(\\frac{\\partial B}{\\partial x}\\), \\(\\frac{\\partial B}{\\partial y}\\), and \\(\\frac{\\partial B}{\\partial z}\\) for \\(B(x,y,z)=0.4x^3y-3.6y^2+4zx+8\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{\\partial B}{\\partial x}=1.2x^2y+4z, \\qquad \\frac{\\partial B}{\\partial y}=0.4x^3-7.2y, \\qquad \\frac{\\partial B}{\\partial z}=4x\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-afternoon-extra-examples.html",
+    "href": "course-materials/examples/day2-afternoon-extra-examples.html",
+    "title": "Day 2 / Afternoon: Extra examples",
+    "section": "",
+    "text": "Find the indefinite integral: \\(\\int 4\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int 4\\,dx = 4x+C\n\\]\n\n\n\n\nFind the indefinite integral: \\(\\int 2x^2\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int 2x^2\\,dx = \\frac{2}{3}x^3+C\n\\]\n\n\n\n\nFind the indefinite integral: \\(\\int(x^3-4x)\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int(x^3-4x)\\,dx = \\frac{x^4}{4}-2x^2+C\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-afternoon-extra-examples.html#antiderivatives-the-power-rule",
+    "href": "course-materials/examples/day2-afternoon-extra-examples.html#antiderivatives-the-power-rule",
+    "title": "Day 2 / Afternoon: Extra examples",
+    "section": "",
+    "text": "Find the indefinite integral: \\(\\int 4\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int 4\\,dx = 4x+C\n\\]\n\n\n\n\nFind the indefinite integral: \\(\\int 2x^2\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int 2x^2\\,dx = \\frac{2}{3}x^3+C\n\\]\n\n\n\n\nFind the indefinite integral: \\(\\int(x^3-4x)\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int(x^3-4x)\\,dx = \\frac{x^4}{4}-2x^2+C\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-afternoon-extra-examples.html#initial-value-problems",
+    "href": "course-materials/examples/day2-afternoon-extra-examples.html#initial-value-problems",
+    "title": "Day 2 / Afternoon: Extra examples",
+    "section": "Initial value problems",
+    "text": "Initial value problems\n\nGiven \\(\\frac{dy}{dx}=6x-1\\), find \\(y(x)\\) if \\(y(2)=5\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ny=3x^2-x+C\n\\] \\[\ny(2)=3(2)^2-2+C=10+C=5 \\Rightarrow C=-5\n\\] \\[\ny=3x^2-x-5\n\\]\n\n\n\n\nGiven \\(\\frac{dy}{dx}=\\frac{6}{x^3}\\), find \\(y(x)\\) if \\(y(1)=2\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nRewrite \\(\\frac{6}{x^3}=6x^{-3}\\): \\[\ny=\\frac{6x^{-2}}{-2}+C=-3x^{-2}+C=-\\frac{3}{x^2}+C\n\\] \\[\ny(1)=-3+C=2 \\Rightarrow C=5\n\\] \\[\ny=-\\frac{3}{x^2}+5\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-afternoon-extra-examples.html#definite-integrals",
+    "href": "course-materials/examples/day2-afternoon-extra-examples.html#definite-integrals",
+    "title": "Day 2 / Afternoon: Extra examples",
+    "section": "Definite integrals",
+    "text": "Definite integrals\n\nEvaluate: \\(\\int_0^3 2x\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int_0^3 2x\\,dx = x^2\\Big|_0^3 = 9-0 = 9\n\\]\n\n\n\n\nEvaluate: \\(\\int_2^4 \\frac{1}{2}x\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int_2^4 \\frac{1}{2}x\\,dx = \\frac{1}{4}x^2\\Big|_2^4 = 4-1 = 3\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-afternoon-extra-examples.html#area-between-curves",
+    "href": "course-materials/examples/day2-afternoon-extra-examples.html#area-between-curves",
+    "title": "Day 2 / Afternoon: Extra examples",
+    "section": "Area between curves",
+    "text": "Area between curves\n\nThe area between \\(y=\\sqrt{x}\\) and \\(y=x^3\\) on \\([0,1]\\) is given by \\(\\int_0^1(\\sqrt{x}-x^3)\\,dx\\). Evaluate this integral.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int_0^1(\\sqrt{x}-x^3)\\,dx = \\left[\\frac{2}{3}x^{3/2}-\\frac{1}{4}x^4\\right]_0^1 = \\frac{2}{3}-\\frac{1}{4} = \\frac{5}{12}\n\\]\n\n\n\n\nA wetland gains carbon at a rate \\(G(t)=10t-t^2\\) kg/day and loses carbon at a rate \\(L(t)=3t\\) kg/day, for \\(0\\leq t\\leq 6\\). Find the total net carbon gained over this period, \\(\\int_0^6[G(t)-L(t)]\\,dt\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int_0^6(10t-t^2-3t)\\,dt = \\int_0^6(7t-t^2)\\,dt = \\left[3.5t^2-\\frac{t^3}{3}\\right]_0^6 = 126-72 = 54\\text{ kg}\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-afternoon-extra-examples.html#differential-equations",
+    "href": "course-materials/examples/day2-afternoon-extra-examples.html#differential-equations",
+    "title": "Day 2 / Afternoon: Extra examples",
+    "section": "Differential equations",
+    "text": "Differential equations\n\nClassify the following differential equation by order and state whether it is an ODE or PDE: \\(\\frac{dy}{dx}+3y=x^2\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis is a first-order ODE — it contains only an ordinary derivative, and the highest derivative present is first order.\n\n\n\n\nClassify: \\(\\frac{\\partial^2 u}{\\partial x^2}+\\frac{\\partial^2 u}{\\partial y^2}=0\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis is a second-order PDE — it contains partial derivatives, and the highest derivative present is second order.\n\n\n\n\nClassify: \\[\n\\frac{\\partial^2 u}{\\partial x^2}+\\frac{\\partial^3 u}{\\partial y^3}=x\n\\]\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThis is a third-order PDE — it contains partial derivatives, and even though a second-order term is also present, the order of the equation is determined by the highest derivative present, which is third order.\n\n\n\n\nVerify that \\(y=e^{2x}\\) is a solution to the differential equation \\(y'=2y\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ny'=2e^{2x}=2y\n\\] So \\(y=e^{2x}\\) is a solution.\n\n\n\n\nSolve the differential equation \\(\\frac{dy}{dx}=3y\\) using separation of variables.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int\\frac{1}{y}\\,dy=\\int 3\\,dx \\Rightarrow \\ln|y|=3x+C \\Rightarrow y=Ae^{3x}\n\\]"
+  },
+  {
+    "objectID": "course-materials/examples/day2-afternoon-extra-examples.html#integrals-the-power-rule",
+    "href": "course-materials/examples/day2-afternoon-extra-examples.html#integrals-the-power-rule",
+    "title": "Day 2 / Afternoon: Extra examples",
+    "section": "",
+    "text": "Find the indefinite integral: \\(\\int 4\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int 4\\,dx = 4x+C\n\\]\n\n\n\n\nFind the indefinite integral: \\(\\int 2x^2\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int 2x^2\\,dx = \\frac{2}{3}x^3+C\n\\]\n\n\n\n\nFind the indefinite integral: \\(\\int(x^3-4x)\\,dx\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\int(x^3-4x)\\,dx = \\frac{x^4}{4}-2x^2+C\n\\]"
   }
 ]

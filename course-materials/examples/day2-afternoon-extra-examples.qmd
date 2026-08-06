@@ -1,0 +1,150 @@
+---
+title: "Day 2 / Afternoon: Extra examples"
+---
+
+## Integrals & the power rule
+
+1. Find the indefinite integral: $\int 4\,dx$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\int 4\,dx = 4x+C
+$$
+:::
+
+2. Find the indefinite integral: $\int 2x^2\,dx$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\int 2x^2\,dx = \frac{2}{3}x^3+C
+$$
+:::
+
+3. Find the indefinite integral: $\int(x^3-4x)\,dx$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\int(x^3-4x)\,dx = \frac{x^4}{4}-2x^2+C
+$$
+:::
+
+## Initial value problems
+
+4. Given $\frac{dy}{dx}=6x-1$, find $y(x)$ if $y(2)=5$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+y=3x^2-x+C
+$$
+$$
+y(2)=3(2)^2-2+C=10+C=5 \Rightarrow C=-5
+$$
+$$
+y=3x^2-x-5
+$$
+:::
+
+5. Given $\frac{dy}{dx}=\frac{6}{x^3}$, find $y(x)$ if $y(1)=2$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+Rewrite $\frac{6}{x^3}=6x^{-3}$:
+$$
+y=\frac{6x^{-2}}{-2}+C=-3x^{-2}+C=-\frac{3}{x^2}+C
+$$
+$$
+y(1)=-3+C=2 \Rightarrow C=5
+$$
+$$
+y=-\frac{3}{x^2}+5
+$$
+:::
+
+## Definite integrals
+
+6. Evaluate: $\int_0^3 2x\,dx$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\int_0^3 2x\,dx = x^2\Big|_0^3 = 9-0 = 9
+$$
+:::
+
+7. Evaluate: $\int_2^4 \frac{1}{2}x\,dx$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\int_2^4 \frac{1}{2}x\,dx = \frac{1}{4}x^2\Big|_2^4 = 4-1 = 3
+$$
+:::
+
+## Area between curves
+
+8. The area between $y=\sqrt{x}$ and $y=x^3$ on $[0,1]$ is given by $\int_0^1(\sqrt{x}-x^3)\,dx$. Evaluate this integral.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\int_0^1(\sqrt{x}-x^3)\,dx = \left[\frac{2}{3}x^{3/2}-\frac{1}{4}x^4\right]_0^1 = \frac{2}{3}-\frac{1}{4} = \frac{5}{12}
+$$
+:::
+
+9. A wetland gains carbon at a rate $G(t)=10t-t^2$ kg/day and loses carbon at a rate $L(t)=3t$ kg/day, for $0\leq t\leq 6$. Find the total net carbon gained over this period, $\int_0^6[G(t)-L(t)]\,dt$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\int_0^6(10t-t^2-3t)\,dt = \int_0^6(7t-t^2)\,dt = \left[3.5t^2-\frac{t^3}{3}\right]_0^6 = 126-72 = 54\text{ kg}
+$$
+:::
+
+## Differential equations
+
+10. Classify the following differential equation by order and state whether it is an ODE or PDE: $\frac{dy}{dx}+3y=x^2$
+
+::: {.callout-tip collapse="true"}
+## Solution
+This is a **first-order ODE** — it contains only an ordinary derivative, and the highest derivative present is first order.
+:::
+
+11. Classify: $\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}=0$
+
+::: {.callout-tip collapse="true"}
+## Solution
+This is a **second-order PDE** — it contains partial derivatives, and the highest derivative present is second order.
+:::
+
+12. Classify:
+$$
+\frac{\partial^2 u}{\partial x^2}+\frac{\partial^3 u}{\partial y^3}=x
+$$
+
+::: {.callout-tip collapse="true"}
+## Solution
+This is a **third-order PDE** — it contains partial derivatives, and even though a second-order term is also present, the order of the equation is determined by the *highest* derivative present, which is third order.
+:::
+
+13. Verify that $y=e^{2x}$ is a solution to the differential equation $y'=2y$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+y'=2e^{2x}=2y
+$$
+So $y=e^{2x}$ is a solution.
+:::
+
+14. Solve the differential equation $\frac{dy}{dx}=3y$ using separation of variables.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\int\frac{1}{y}\,dy=\int 3\,dx \Rightarrow \ln|y|=3x+C \Rightarrow y=Ae^{3x}
+$$
+:::

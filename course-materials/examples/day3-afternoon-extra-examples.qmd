@@ -1,0 +1,156 @@
+---
+title: "Day 3 / Afternoon: Extra examples"
+---
+
+## Summation notation
+
+1. Expand and evaluate:
+$$
+\sum_{i=1}^{4}i^2
+$$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\sum_{i=1}^{4}i^2 = 1^2+2^2+3^2+4^2 = 1+4+9+16 = 30
+$$
+:::
+
+2. Evaluate:
+$$
+\sum_{i=2}^{5}3i
+$$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\sum_{i=2}^{5}3i = 3(2)+3(3)+3(4)+3(5) = 6+9+12+15 = 42
+$$
+:::
+
+3. A researcher records daily rainfall (in mm) over 5 days: $x=(2,0,5,3,4)$. Find the sample mean, given by
+$$
+\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i.
+$$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\bar{x}=\frac{1}{5}(2+0+5+3+4) = \frac{14}{5} = 2.8\text{ mm}
+$$
+:::
+
+4. A set of tree heights (in m) is $x=(2,4,6,8)$, with sample mean $\bar{x}=5$. Find the sample variance, given by
+$$
+s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2.
+$$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+s^2=\frac{1}{4-1}\left[(2-5)^2+(4-5)^2+(6-5)^2+(8-5)^2\right] = \frac{1}{3}(9+1+1+9) = \frac{20}{3} \approx 6.67\text{ m}^2
+$$
+:::
+
+## Vectors
+
+5. Given $u=(2,5)$ and $v=(4,-1)$, find $u+v$ and $u-v$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+u+v=(2+4,\ 5-1)=(6,4)
+$$
+$$
+u-v=(2-4,\ 5+1)=(-2,6)
+$$
+:::
+
+6. Given $u=(1,4)$, find $w=3u$. What effect does scalar multiplication have on a vector?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+w=3u=(3,12)
+$$
+Scalar multiplication changes the vector's magnitude (length) but not its direction — unless the scalar is negative, in which case the direction reverses.
+:::
+
+7. Find the dot product of $a=(3,-2,5)$ and $b=(1,4,-2)$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+a\cdot b = (3)(1)+(-2)(4)+(5)(-2) = 3-8-10 = -15
+$$
+:::
+
+8. Are the vectors $x=(4,6)$ and $d=(-3,2)$ orthogonal?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+x\cdot d = (4)(-3)+(6)(2) = -12+12 = 0
+$$
+Since the dot product is 0, $x$ and $d$ **are orthogonal**.
+:::
+
+## Matrices
+
+9. A matrix $A$ has dimensions $3\times 4$. How many rows and columns does it have, and what does $a_{23}$ refer to?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$A$ has **3 rows** and **4 columns**. $a_{23}$ refers to the element in **row 2, column 3**.
+:::
+
+10. Given $A=\begin{bmatrix}1&2\\3&4\end{bmatrix}$ and $B=\begin{bmatrix}5&-1\\0&2\end{bmatrix}$, find $A+B$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+A+B=\begin{bmatrix}1+5&2-1\\3+0&4+2\end{bmatrix}=\begin{bmatrix}6&1\\3&6\end{bmatrix}
+$$
+:::
+
+11. Given $A=\begin{bmatrix}2&0\\1&3\end{bmatrix}$, find $4A$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+4A=\begin{bmatrix}8&0\\4&12\end{bmatrix}
+$$
+:::
+
+12. Multiply the matrices: $\begin{bmatrix}1&2\\3&4\end{bmatrix}\begin{bmatrix}5&6\\7&8\end{bmatrix}$
+
+::: {.callout-tip collapse="true"}
+## Solution
+Each entry is the dot product of a row of the first matrix and a column of the second:
+$$
+\begin{bmatrix}1&2\\3&4\end{bmatrix}\begin{bmatrix}5&6\\7&8\end{bmatrix}=\begin{bmatrix}(1)(5)+(2)(7)&(1)(6)+(2)(8)\\(3)(5)+(4)(7)&(3)(6)+(4)(8)\end{bmatrix}=\begin{bmatrix}19&22\\43&50\end{bmatrix}
+$$
+:::
+
+13. If you multiply a $2\times 7$ matrix by a $7\times 4$ matrix, what are the dimensions of the resulting matrix?
+
+::: {.callout-tip collapse="true"}
+## Solution
+The result is a $2\times 4$ matrix — the number of rows of the first matrix by the number of columns of the second.
+:::
+
+14. Two $2\times 2$ rasters represent temperature risk $T$ and drought risk $D$ across four grid cells. Fire risk is computed as $\text{Fire}=0.6T+0.4D$. Given
+$$
+T=\begin{bmatrix}80&90\\70&85\end{bmatrix}, \qquad D=\begin{bmatrix}40&60\\30&50\end{bmatrix}
+$$
+find the Fire risk matrix.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+0.6T=\begin{bmatrix}48&54\\42&51\end{bmatrix}, \qquad 0.4D=\begin{bmatrix}16&24\\12&20\end{bmatrix}
+$$
+$$
+\text{Fire}=0.6T+0.4D=\begin{bmatrix}64&78\\54&71\end{bmatrix}
+$$
+:::

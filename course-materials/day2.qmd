@@ -19,11 +19,11 @@ knitr::include_graphics("images/derivative_9.jpg")
 
 ## Class materials
 
-| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides (blank) | {{< fa pen-to-square title="A pencil over a blank piece of paper" >}}  After class slides| 
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----|
-| day 2 / morning   | [Limits and derivatives](slides/day2.1-slides.qmd){target="_blank"} |  [Slides](slides/after-class-slides/day2.1-slides-class-2026.pdf){target="_blank"} |
-| day 2 / afternoon | [Integrals](slides/day2.2-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day2.2-slides-class-2026.pdf){target="_blank"} |
-: {.hover .bordered tbl-colwidths="[20,40,40]"} 
+| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides (blank) | {{< fa pen-to-square title="A pencil over a blank piece of paper" >}}  After class slides| {{< fa pencil title="A pencil" >}} Extra Examples|
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----|-----|
+| day 2 / morning   | [Limits and derivatives](slides/day2.1-slides.qmd){target="_blank"} |  [Slides](slides/after-class-slides/day2.1-slides-class-2026.pdf){target="_blank"} | [Examples](examples/day2-morning-extra-examples.qmd){target="_blank"} |
+| day 2 / afternoon | [Integrals](slides/day2.2-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day2.2-slides-class-2026.pdf){target="_blank"} | [Examples](examples/day2-afternoon-extra-examples.qmd){target="_blank"} |
+: {.hover .bordered tbl-colwidths="[15,35,30,20]"}
 
 
 ## Additional Resources
