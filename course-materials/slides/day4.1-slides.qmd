@@ -230,7 +230,6 @@ Art by [Allison Horst](https://allisonhorst.com/)
 
 <div class="page-center">
 <div class="custom-subtitle">Basic data visualizations</div>
-<div class="custom-subtitle">Visualizations</div>
 </div>
 
 <!-- ---
@@ -710,7 +709,7 @@ ggplot(nitrate, aes(x = nitrate_mgL, y = farm)) +
 ::: {.body-text-m}
 - **Median:** Farm B's median (~3.6 mg/L) is noticeably higher than Farm A's (~2.05 mg/L)
 - **Spread:** Farm B's box and whiskers cover a much wider range, so its runoff is more variable
-- **Outlier:** Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating as a possible one-time event.
+- **Outlier:** Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating.
 :::
 
 ---
@@ -861,7 +860,6 @@ $$ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}$$
 ::::
 
 ::: {.notes}
-Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret -- for example it's more intuitive to report that a group of people's heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches. 
 
 Variances add (standard deviation doesn't). For example, if we say that sex explains four square inches of variance, you know that 5 square inches are due to other factors.
 
@@ -888,17 +886,13 @@ The variance measures the mathematical dispersion of data relative to the mean, 
 
 <hr>
 
-[**Variance:** Mean squared distance of observations from the mean]{.body-text-m}
+[**Variance:** measures the mathematical dispersion of data relative to the mean]{.body-text-m}
 
 <br>
 
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "60%"
-#| fig-align: "center"
-knitr::include_graphics("images/variance_equation.png")
-```
+:::{.body-text-m}
+$$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}$$
+:::
 
 <br>
 
@@ -967,11 +961,17 @@ $$Variance = \frac{28}{5-1} = 7$$
 
 <hr>
 
+<br>
+
 [Also a measure of data spread, calculated by taking the square root of the variance.]{.body-text-m}
 
 :::{.body-text-m}
 $$ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}$$
 :::
+
+<br>
+
+Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret -- for example it's more intuitive to report that a group of people's heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches. 
 
 ---
 
@@ -1073,7 +1073,7 @@ If you plotted the number of steps vs. BMI, you'd find the gorilla. Students dri
 <div class="custom-subtitle">Confidence intervals</div>
 </div>
 
-
+<!-- TODO: population, sample, statistic, all that needs to be included before talking about confidence interval -->
 ---
 
 ## {#conf-int-1 data-menu-title="Confidence interval"} 

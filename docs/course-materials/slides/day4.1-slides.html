@@ -278,9 +278,6 @@ Data types
 <div class="custom-subtitle">
 Basic data visualizations
 </div>
-<div class="custom-subtitle">
-Visualizations
-</div>
 </div>
 <!-- ---
 
@@ -641,7 +638,7 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <ul>
 <li><strong>Median:</strong> Farm B’s median (~3.6 mg/L) is noticeably higher than Farm A’s (~2.05 mg/L)</li>
 <li><strong>Spread:</strong> Farm B’s box and whiskers cover a much wider range, so its runoff is more variable</li>
-<li><strong>Outlier:</strong> Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating as a possible one-time event.</li>
+<li><strong>Outlier:</strong> Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating.</li>
 </ul>
 </div>
 </section>
@@ -756,7 +753,6 @@ Summarizing data numerically
 <p><span class="math display">\[ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}\]</span></p>
 </div></div>
 <aside class="notes">
-<p>Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches.</p>
 <p>Variances add (standard deviation doesn’t). For example, if we say that sex explains four square inches of variance, you know that 5 square inches are due to other factors.</p>
 <p>See <a href="https://stats.stackexchange.com/questions/35123/whats-the-difference-between-variance-and-standard-deviation">this discussion</a> and <a href="https://www.quora.com/When-should-one-use-variance-instead-of-standard-deviation-given-that-both-numbers-measure-the-same-thing">this discussion</a></p>
 <p>The variance measures the mathematical dispersion of data relative to the mean, and while theoretically correct, can be difficult to interpret in a real-world sense. Standard deviation is expressed in the same unit of measurement as the data (e.g.&nbsp;inches, rather than square inches), and therefore can be a more intuitive value to report.</p>
@@ -782,10 +778,12 @@ Summarizing data numerically
 <h2></h2>
 <p><span class="slide-title">Variance</span></p>
 <hr>
-<p><span class="body-text-m"><strong>Variance:</strong> Mean squared distance of observations from the mean</span></p>
+<p><span class="body-text-m"><strong>Variance:</strong> measures the mathematical dispersion of data relative to the mean</span></p>
 <p><br></p>
-
-<img data-src="images/variance_equation.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p><br></p>
+<div class="body-text-m">
+<p><span class="math display">\[ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}\]</span></p>
+</div>
+<p><br></p>
 <p><span class="body-text-m">Where <span class="math inline">\(S^2\)</span> is the sample variance, <span class="math inline">\(x_i\)</span> is a sample observation value, <span class="math inline">\(\bar x\)</span> is the sample mean, and <span class="math inline">\(n\)</span> is the number of observations.</span></p>
 </section>
 <section id="calc-variance-blank" class="slide level2" data-menu-title="Calculate variance 1">
@@ -827,10 +825,13 @@ Summarizing data numerically
 <h2></h2>
 <p><span class="slide-title">Standard deviation</span></p>
 <hr>
+<p><br></p>
 <p><span class="body-text-m">Also a measure of data spread, calculated by taking the square root of the variance.</span></p>
 <div class="body-text-m">
 <p><span class="math display">\[ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}\]</span></p>
 </div>
+<p><br></p>
+<p>Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches.</p>
 </section>
 <section id="best-way" class="slide level2" data-menu-title="Best way">
 <h2></h2>
@@ -892,6 +893,9 @@ Summarizing data numerically
 Confidence intervals
 </div>
 </div>
+</section>
+<section id="section" class="slide level2">
+<h2><!-- TODO: population, sample, statistic, all that needs to be included before talking about confidence interval --></h2>
 </section>
 <section id="conf-int-1" class="slide level2" data-menu-title="Confidence interval">
 <h2></h2>
