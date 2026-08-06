@@ -221,7 +221,7 @@
     "href": "course-materials/day4.html#class-materials",
     "title": "Distributions and summary statistics",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n Session\n Lecture slides\n\n\n\n\nday 4 / morning\nEssential summary statistics and describing data\n\n\nday 4 / afternoon"
+    "text": "Class materials\n\n\n\n Session\n Lecture slides\n\n\n\n\nday 4 / morning\nEssential summary statistics and describing data\n\n\nday 4 / afternoon\nProbability"
   },
   {
     "objectID": "course-materials/day4.html#end-of-day-practice",
@@ -3840,7 +3840,7 @@
     "href": "course-materials/day5.html#class-materials",
     "title": "Basic probability theory and Boolean algebra",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Interactive session\n\n\n\n\nday 5 / morning\nBasic probability theory\nMore Quarto customization, summary statistics continued, in-line reporting, collaboration\n\n\nday 5 / afternoon\nProbability continued, intuition for hypothesis tests, and Boolean algebra\nLogical and comparison operators in R\n\n\nday 5 / end-of-day\ncourse recap\nNA"
+    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Lecture slides\n\n\n\n\nday 5 / morning\nBasic probability theory\nMore Quarto customization, summary statistics continued, in-line reporting, collaboration\n\n\nday 5 / afternoon\nProbability continued, intuition for hypothesis tests, and Boolean algebra\nLogical and comparison operators in R\n\n\nday 5 / end-of-day\ncourse recap\nNA"
   },
   {
     "objectID": "course-materials/day5.html#end-of-day-practice",
@@ -3854,7 +3854,7 @@
     "href": "course-materials/day5.html#additional-resources",
     "title": "Basic probability theory and Boolean algebra",
     "section": "Additional Resources",
-    "text": "Additional Resources\n\n“At least one” probability with coin flipping, by Khan Academy – a video explanation of the probability of getting at least one heads in multiple flips of a fair coin \nProbability Density Functions, by Khan Academy – a video explanation using a rainfall amount example"
+    "text": "Additional Resources"
   },
   {
     "objectID": "course-materials/interactive-sessions/interactive-session-4a.html",
@@ -4093,5 +4093,250 @@
     "title": "Integrals, differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#title-slide",
+    "href": "course-materials/slides/day4.2-slides.html#title-slide",
+    "title": "",
+    "section": "",
+    "text": "EDS 212: Day 4, Lecture 2\nBasic probability theory, hypothesis testing intuition, and Boolean algebra\n\nAugust 6th, 2025"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#refresh-prob",
+    "href": "course-materials/slides/day4.2-slides.html#refresh-prob",
+    "title": "",
+    "section": "",
+    "text": "Why refresh probability?\n\n\n\nHypothesis testing\nBayesian statistics\nDecision making\nBeing cautious"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#probability",
+    "href": "course-materials/slides/day4.2-slides.html#probability",
+    "title": "",
+    "section": "",
+    "text": "Probability\n\n   \n\nDefinition: the likelihood that an event or outcome occurs.\n\n\\(P = 0\\) indicates no chance of an event or outcome\n\\(P=1\\) indicates it is a certainty it will happen"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#terminology",
+    "href": "course-materials/slides/day4.2-slides.html#terminology",
+    "title": "",
+    "section": "",
+    "text": "Terminology\n\n\nEvent space: The collection of all possible unique outcomes of an experiment or scenario. Also called the sample space.\n\nEvent: A possible outcome (or combination of outcomes). The probability of event \\(A\\) occurring is written as \\(P(A)\\).\n\nThe probability is the long term relative frequency of an event occurring, given all outcomes of the event space.\n\nProbability: the likelihood that an event or outcome occurs.\n\n\\(P = 0\\) indicates no chance of an event or outcome\n\\(P=1\\) indicates it is a certainty it will happen"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#law-large-nums",
+    "href": "course-materials/slides/day4.2-slides.html#law-large-nums",
+    "title": "",
+    "section": "",
+    "text": "Law of large numbers\n\n\n\nIf you repeat an experiment independently a large number of times, the calculated statistic (e.g. mean, proportion ‘true’, etc.) will be close to the true (expected) parameter.\n\nExample: Proportion “heads” over a long run of coin flips, with a fair coin.\n\nLet’s sketch what it might look like…"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#prob-theory",
+    "href": "course-materials/slides/day4.2-slides.html#prob-theory",
+    "title": "",
+    "section": "",
+    "text": "Basic probability theory, notation, and diagrams\n\n\n\n\nIntersection: Probability that outcomes co-occur. In other words, these are AND probability statements.\n\n\n\nUnion: Probability that at least one outcome in the event space happens (could be just one, or all). In other words, these are OR probability statements.\n\n\n\nComplement: Probability that an outcome or set of outcomes does not occur"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#intersection",
+    "href": "course-materials/slides/day4.2-slides.html#intersection",
+    "title": "",
+    "section": "",
+    "text": "Intersection\n\n\n\nNotation: \\(P(A\\cap B)\\)\n\nIn words: The probability of A and B happening (where A and B are independent events)\n\nCalculation: \\(P(A\\cap B) = P(A)*P(B)\\)\n\nExample: \\(A \\cap B\\) = the water sample exceeds both the nitrate limit and the E. coli limit"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#union",
+    "href": "course-materials/slides/day4.2-slides.html#union",
+    "title": "",
+    "section": "",
+    "text": "Union\n\n\n\nNotation: \\(P(A\\cup B)\\)\n\nIn words: The probability of A or B happening (i.e., at least A or B happens, or both).\n\nCalculation: \\(P(A\\cup B)=P(A)+P(B)-P(A\\cap B)\\)\n\nExample: \\(A \\cup B\\) = the water sample exceeds the nitrate limit, the E. coli limit, or both"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#complement",
+    "href": "course-materials/slides/day4.2-slides.html#complement",
+    "title": "",
+    "section": "",
+    "text": "Complement\n\n\n\nNotation: \\(P(A')\\)\n\nIn words: The probability of \\(A\\) NOT happening\n\nCalculation: \\(P(A')=1-P(A)\\)\n\nExample: \\(A'\\) = the water sample does not exceed the nitrate limit"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#cond-prob",
+    "href": "course-materials/slides/day4.2-slides.html#cond-prob",
+    "title": "",
+    "section": "",
+    "text": "Conditional probability\n\n\n\nIf events are not independent, one event having occurred can change the probability of another event occurring. For events \\(A\\) and \\(B\\), the probability of \\(B\\) given that \\(A\\) is know to occur is:\n\n\\(P(B|A)=\\frac{P(A \\cap\\ B)}{P(A)}\\)\n\nA common question: Why doesn’t this just simplify to \\(P(B)\\) if the intersection is \\(P(A)*P(B)\\)?"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#intuition-check",
+    "href": "course-materials/slides/day4.2-slides.html#intuition-check",
+    "title": "",
+    "section": "",
+    "text": "Intuition check\n\n \n\nThe following are jitterplots (overlaying violin plots) of flipper length for Adélie, Chinstrap and Gentoo penguins recorded by Dr. Kristen Gorman at islands in Palmer Archipelago, Antarctica.\n\nWe’ll consider: given some mystery penguins with different flipper lengths, how might the length inform which species we think it is?"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#terms",
+    "href": "course-materials/slides/day4.2-slides.html#terms",
+    "title": "",
+    "section": "",
+    "text": "Terms\n\n\n\n\nPopulation: The entire collection of things in a category you are trying to understand. You define the population. For example: Santa Barbara registered voters, Ponderosa pines in Inyo National Forest, purple urchins in Channel Islands Marine Sanctuary.\nSample: A subset of the population, goal is to be representative of the population\nParameter: A characteristic of the population\nStatistic: A characteristic of the sample"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#inference",
+    "href": "course-materials/slides/day4.2-slides.html#inference",
+    "title": "",
+    "section": "",
+    "text": "Inference\n\n  \n\nUsually, we don’t have the resources (time, money, human power, etc.) to collect observations for an entire population. As a proxy, we try to collect a representative sample.\n\nThen, we attempt to draw conclusions about the populations from which our samples were collected."
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#prob-density-fxn",
+    "href": "course-materials/slides/day4.2-slides.html#prob-density-fxn",
+    "title": "",
+    "section": "",
+    "text": "Probability density function\n\n\n\nOn Day 4, we visualized data distributions from histograms. If we use histograms to estimate continuous functions that describe all possible outcomes, we have created a probability density function.\n\nThe area under any probability density function = 1, indicating that 100% of all possible outcomes are represented by the function.\n\nDrawing fun!"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#hypothesis-testing",
+    "href": "course-materials/slides/day4.2-slides.html#hypothesis-testing",
+    "title": "",
+    "section": "",
+    "text": "This gives us a basis for hypothesis testing (EDS 222)\n\n\n\nIf a null hypothesis is true, what is the probability that your data outcome (e.g. mean, value, etc.) or something more extreme would have occurred by random chance?\n\nIs that so unlikely (is the probability low enough), that you think you have sufficient evidence to reject the null hypothesis? Or not?\n\nLet’s brainstorm some examples (and to be continued…)"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#event-space-examples",
+    "href": "course-materials/slides/day4.2-slides.html#event-space-examples",
+    "title": "",
+    "section": "",
+    "text": "Two examples\n\n\n1. Daily rain gauge reading\n\nEvent space: {rain, no rain}\nEvent: it rains today\n\n\n2. Water sample contaminant test\n\nEvent space: measurements for nitrate and measurements for E. coli\nEvent (\\(A\\)): the sample exceeds a certain nitrate limit"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#independence",
+    "href": "course-materials/slides/day4.2-slides.html#independence",
+    "title": "",
+    "section": "",
+    "text": "Independent vs. non-independent events\n\n\nTwo events are independent if one occurring doesn’t change the probability of the other:\n\\[P(B|A) = P(B), \\quad \\text{equivalently} \\quad P(A \\cap B) = P(A) \\times P(B)\\]\nIf knowing \\(A\\) occurred does change the probability of \\(B\\), the events are non-independent.\n\nIndependent example: a coin flip and whether it rains today — one has no bearing on the other.\nNon-independent example: in our water sample, exceeding the nitrate limit and exceeding the E. coli limit — both are often driven by the same upstream agricultural runoff, so if \\(A\\) occurs, \\(B\\) becomes more likely too."
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#pdf-explained",
+    "href": "course-materials/slides/day4.2-slides.html#pdf-explained",
+    "title": "",
+    "section": "",
+    "text": "What is a probability density function?\n\n\n\nDescribes the relative likelihood of a continuous variable taking on different values\nThe height of the curve is not a probability\nThe area under the curve between two values is a probability\nThe total area under the entire curve = 1"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#pdf-example-1",
+    "href": "course-materials/slides/day4.2-slides.html#pdf-example-1",
+    "title": "",
+    "section": "",
+    "text": "Example: a normal distribution\n\n\nAnnual rainfall (mm) in a watershed, modeled as a continuous variable:\n\n\n\nThis bell-shaped curve is called a normal distribution — one of the most common shapes for environmental data."
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#pdf-example-2",
+    "href": "course-materials/slides/day4.2-slides.html#pdf-example-2",
+    "title": "",
+    "section": "",
+    "text": "Example: area = probability\n\n\nWhat’s the probability that a randomly chosen year has rainfall between 700 and 900 mm?\n\n\n\nThe shaded area is the answer: about a 50% chance."
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#abraham-wald",
+    "href": "course-materials/slides/day4.2-slides.html#abraham-wald",
+    "title": "",
+    "section": "",
+    "text": "Abraham Wald and survivorship bias\n\n\n\nImage source: Wikipedia\n\n\n\nThe bullet holes in the returning aircraft represented areas where a bomber could take damage and still fly well enough to return safely to base (demonstrates survivorship bias).\nWald proposed that the Navy reinforce areas where the returning aircraft were unscathed, inferring that planes hit in those areas were the ones most likely to be lost."
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#hyp-testing",
+    "href": "course-materials/slides/day4.2-slides.html#hyp-testing",
+    "title": "",
+    "section": "",
+    "text": "Hypothesis testing: building intuition, continued\n\n\n\nYou’ll learn about hypothesis testing in EDS 222. Let’s just build a bit more intuition here.\n\nA common question: are means from two samples so different (considering data spread and sample size) that we think we have enough evidence to reject a null hypothesis that they were drawn from populations with the same mean?\n\nCaveat, assumptions, caveat (EDS 222)…"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#null-hyp",
+    "href": "course-materials/slides/day4.2-slides.html#null-hyp",
+    "title": "",
+    "section": "",
+    "text": "What is a null hypothesis?\n\n\nA null hypothesis (\\(H_0\\)) is the claim that the effect being studied does not exist. It is a hypothesis that proposes that there is no statistically significant difference between the data or variables being studied.\n\nIf the null hypothesis is true, any observed difference is due to chance alone."
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#type1",
+    "href": "course-materials/slides/day4.2-slides.html#type1",
+    "title": "",
+    "section": "",
+    "text": "Artwork by Allison Horst\n\n\nFalse positive (reject a true null hypothesis and conclude that the samples came from different populations when they actually did not); more serious"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#type2",
+    "href": "course-materials/slides/day4.2-slides.html#type2",
+    "title": "",
+    "section": "",
+    "text": "Artwork by Allison Horst\n\n\nFalse negative (accept a false null hypothesis)"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#boolean-logic",
+    "href": "course-materials/slides/day4.2-slides.html#boolean-logic",
+    "title": "",
+    "section": "",
+    "text": "Boolean logic\n\n   \n\n\n“In mathematics and mathematical logic, Boolean algebra is the branch of algebra in which the values of the variables are the truth values true and false, usually denoted 1 and 0, respectively” (Wikipedia)"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#comp-think",
+    "href": "course-materials/slides/day4.2-slides.html#comp-think",
+    "title": "",
+    "section": "",
+    "text": "Computer think\n\n \n\nHow would a computer order the objects in the following statements?\n\n\nNothing is better than a burrito\nA loaf of bread is better than nothing"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#mathematically",
+    "href": "course-materials/slides/day4.2-slides.html#mathematically",
+    "title": "",
+    "section": "",
+    "text": "Mathematically…\n\n\n\n\nNothing &gt; burrito: TRUE\n\n\n\nLoaf of bread &gt; nothing: TRUE\n\n\nTo a computer: Loaf of bread &gt; nothing &gt; burrito."
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#EDS",
+    "href": "course-materials/slides/day4.2-slides.html#EDS",
+    "title": "",
+    "section": "",
+    "text": "In environmental data science\n\n\n\n\nConditional statements\nFiltering, subsetting, searching\nChecking classes and verification\nTesting"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#logical-operators",
+    "href": "course-materials/slides/day4.2-slides.html#logical-operators",
+    "title": "",
+    "section": "",
+    "text": "Logical operators\n\n\n\n\nLogical “and”: &\nLogical “or”: |\nLogical “negate”: !"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#comp-operators",
+    "href": "course-materials/slides/day4.2-slides.html#comp-operators",
+    "title": "",
+    "section": "",
+    "text": "Comparison operators\n\n\n\nIs equal to? ==\nIs less than? &lt;\nIs less than or equal to? &lt;=\nIs greater than? &gt;\nIs greater than or equal to? &gt;=\nIs not equal to? !=\n\nA computer evaluates these and the outcome is either TRUE or FALSE, and proceeds accordingly."
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#impt-distinction",
+    "href": "course-materials/slides/day4.2-slides.html#impt-distinction",
+    "title": "",
+    "section": "",
+    "text": "An important distinction:\n\n\n\n==: This is…equal to?\n\n=: This IS equal to.\n\n\n5 == 4\n\n&gt; FALSE"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#examples",
+    "href": "course-materials/slides/day4.2-slides.html#examples",
+    "title": "",
+    "section": "",
+    "text": "Examples:\n\n\nElements of a vector are tested separately, and the outcome is returned in a vector:\n\nmarmot &lt;- c(1,2,3)\nmarmot == 2\n\n[1] FALSE  TRUE FALSE\n\n\n\n\npika &lt;- c(1,2,5,9,10,15)\npika == 1 | pika &gt;= 9\n\n[1]  TRUE FALSE FALSE  TRUE  TRUE  TRUE"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#check-data-classes",
+    "href": "course-materials/slides/day4.2-slides.html#check-data-classes",
+    "title": "",
+    "section": "",
+    "text": "Checking data classes works similarly:\n\n\nMore on data types & structures in EDS 221!\n\n\nbear &lt;- c(1,4,3, NA, 6) # Create a vector\nis.na(bear) # Check element by element for == NA?\n\n[1] FALSE FALSE FALSE  TRUE FALSE\n\nis.numeric(bear) # Checks entire *class* of vector\n\n[1] TRUE"
+  },
+  {
+    "objectID": "course-materials/slides/day4.2-slides.html#in-operator",
+    "href": "course-materials/slides/day4.2-slides.html#in-operator",
+    "title": "",
+    "section": "",
+    "text": "Another we’ll see often: %in%\n\n\n\n%in%: check for matching elements (not in order)*\n\nExample: We have two vectors of student names, and we want to know if any students (values) in eds212 are also in eds223:\n\n\n\neds212 &lt;- c(\"John\", \"Cara\", \"Will\", \"Zoe\")\neds223 &lt;- c(\"John\", \"Melissa\", \"Cara\", \"Joe\", \"Zoe\")\n\neds212 %in% eds223\n\n[1]  TRUE  TRUE FALSE  TRUE\n\n\n\n*Keep this in mind - the distinction between %in% and == is major and important."
   }
 ]

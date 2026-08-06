@@ -36,26 +36,6 @@ format:
 
 ---
 
-## {#probability data-menu-title="Probability"} 
-
-[Probability]{.slide-title}
-
-<hr>
-
-<br>
-<br>
-<br>
-<br>
-
-::: {.center-text .body-text-l}
-**Definition:** the likelihood that an event or outcome occurs. 
-
-- $P = 0$ indicates no chance of an event or outcome 
-- $P=1$ indicates it is a certainty it will happen
-:::
-
----
-
 ## {#terminology data-menu-title="Terminology"} 
 
 [Terminology]{.slide-title}
@@ -64,7 +44,6 @@ format:
 
 <br>
 
-::: {.body-text-m}
 **Event space:** The collection of all possible unique outcomes of an experiment or scenario. Also called the *sample space.*
 
 <br>
@@ -74,7 +53,13 @@ format:
 <br>
 
 The probability is the **long term** relative frequency of an event occurring, given all outcomes of the event space.
-:::
+
+<br>
+
+**Probability:** the likelihood that an event or outcome occurs. 
+
+- $P = 0$ indicates no chance of an event or outcome 
+- $P=1$ indicates it is a certainty it will happen
 
 ---
 
@@ -88,18 +73,20 @@ The probability is the **long term** relative frequency of an event occurring, g
 **1. Daily rain gauge reading**
 
 - Event space: {rain, no rain}
-- Event: it rains today
+- Event: $A = $ it rains today
+- $P(A)=$ What is the probability that it rains today?
 
 <br>
 
 **2. Water sample contaminant test**
 
-- Event space: {exceeds nitrate limit, does not} × {exceeds E. coli limit, does not}
-- Event ($A$): the sample exceeds the nitrate limit
+- Event space: measurements for nitrate and measurements for E. coli
+- Event : $A= $ the sample exceeds a certain nitrate limit
+- $P(A) = $ What is the probability that a sample exceeds the nitrate limit?
 :::
 
 ---
-
+1
 ## {#law-large-nums data-menu-title="Law of large numbers"}
 
 [Law of large numbers]{.slide-title}
@@ -124,18 +111,18 @@ Let's [sketch what it might look like](https://www.probabilisticworld.com/law-la
 
 ## {#prob-theory data-menu-title="Probability Theory"} 
 
-[Basic probability theory, notation, and diagrams]{.slide-title2}
+[Basic probability theory]{.slide-title2}
 
 <hr>
 
 <br>
 
 ::: {.body-text-m}
-- **Intersection:** Probability that outcomes co-occur. In other words, these are **AND** probability statements.
+- **Intersection:** Probability that events co-occur. In other words, these are **AND** probability statements.
 
 <br>
 
-- **Union:** Probability that *at least one* outcome in the event space happens (could be just one, or all). In other words, these are **OR** probability statements. 
+- **Union:** Probability that *at least one* of the events happens (could be just one, or all). In other words, these are **OR** probability statements. 
 
 <br>
 
