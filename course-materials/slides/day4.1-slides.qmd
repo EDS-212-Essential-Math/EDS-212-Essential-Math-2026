@@ -423,7 +423,7 @@ Using bins of width 5 cm:
 
 dbh <- c(8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27)
 ggplot(data.frame(dbh), aes(x = dbh)) +
-  geom_histogram(breaks = seq(5, 30, by = 5), color = "white") +
+  geom_histogram(breaks = seq(5, 30, by = 5), closed = "left", color = "white") +
   labs(x = "DBH (cm)", y = "Count") +
   theme(
     axis.text = element_text(size = 22),
@@ -479,7 +479,7 @@ ggplot(data.frame(dbh), aes(x = dbh)) +
 #| fig-align: "center"
 waves <- c(0.8, 1.1, 1.2, 1.5, 1.9, 2.0, 2.4, 2.6, 3.1, 3.6)
 ggplot(data.frame(waves), aes(x = waves)) +
-  geom_histogram(breaks = seq(0, 4, by = 1), color = "white") +
+  geom_histogram(breaks = seq(0, 4, by = 1), closed = "left", color = "white") +
   labs(x = "Wave height (m)", y = "Count") +
   theme(
     axis.text = element_text(size = 22),
@@ -759,16 +759,12 @@ ggplot(nitrate, aes(x = nitrate_mgL, y = farm)) +
 
 [Middle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. $median\;of\;3, 7, 17 = 7$]{.body-text-m}
 
-<br>
-
 [**Pros:**]{.body-text-l}
 
 ::: {.body-text-m}
 - Less susceptible to skew and outliers
-- Better as sample size increases
+<!-- - Better as sample size increases -->
 :::
-
-<br>
 
 [**Cons:**]{.body-text-l}
 
@@ -1110,7 +1106,7 @@ If you plotted the number of steps vs. BMI, you'd find the gorilla. Students dri
 ::: {.body-text-m}
 **What it's NOT:** 
 
-"There is a 95% chance that the true population parameter is between values X and Y." 
+"There is a 95% chance that the true population parameter is inside the confidence interval." 
 :::
 
 ---
@@ -1175,7 +1171,7 @@ This statement correctly describes the frequency with which we would expect CIs 
 :::: {.columns}
 
 ::: {.column width="50%" .body-text-m}
-- The "Bar plots" philosophy: show as much as you can for the audience you're presenting to
+- Show as much as you can for the audience you're presenting to
 - Summary statistics are often useful, but are a small part of the whole data story
 - Uncertainty is important! How can we responsibly communicate it?
 - All summaries are strongest when accompanied by additional data communication
@@ -1198,10 +1194,35 @@ Artwork by [Allison Horst](https://allisonhorst.com/)
 
 ---
 
-## {#lunch-break data-menu-title="Lunch break"} 
+## {#wrapping-up data-menu-title="Integration" background-color="#003660"}
 
-[Lunch break!]{.slide-title}
+<div class="page-center">
+<div class="custom-subtitle">Wrapping up...</div>
+</div>
+
+---
+
+## {#what-we-covered data-menu-title="What we covered today"}
+
+[What we covered today]{.slide-title}
 
 <hr>
 
-![image: Flaticon.com](images/lunch-time.png)
+:::: {.columns}
+
+::: {.column width="50%"}
+- <span style="color:#CC3366"><b>🧩 Data types</b></span>
+- <span style="color:#006699"><b>📊 Data visualization (histograms, box plots, scatterplots)</b></span>
+- <span style="color:#D6001C"><b>📐 Quartiles & the interquartile range</b></span>
+- <span style="color:#003366"><b>📈 Central tendency (mean & median)</b></span>
+:::
+
+::: {.column width="50%"}
+- <span style="color:#FF6600"><b>📏 Variance & standard deviation</b></span>
+- <span style="color:#336666"><b>🦖 Why visualizing data matters</b></span>
+- <span style="color:#003399"><b>🎯 Confidence intervals</b></span>
+- <span style="color:#660099"><b>💬 Communicating data summaries responsibly</b></span>
+:::
+
+::::
+

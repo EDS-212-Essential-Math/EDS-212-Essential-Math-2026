@@ -22,15 +22,5 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 | {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | 
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | day 4 / morning   | [Essential summary statistics and describing data](slides/day4.1-slides.qmd){target="_blank"} | 
-| day 4 / afternoon |  | 
+| day 4 / afternoon | *No afternoon session* | 
 
-## End-of-day practice
-
-Complete the following tasks / activities before heading home for the day!
-
-- [{{< fa pencil title="A pencil" >}} **Day 4 Practice:** Matrices and matrix algebra, exploring and summarizing data](eod-practice/eod-day4.qmd)
-
-## Additional Resources
-
-- **[Intro to matrix multiplication](https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:matrices/x9e81a4f98389efdf:multiplying-matrices-by-matrices/v/matrix-multiplication-intro), by Khan Academy** -- a video on what it means to multiply two matrices, and an example
-- **[Leslie Matrix Models](https://web.math.utk.edu/~heather/lecture17.pdf)** -- more examples; in particular, check out the American Bison Model section

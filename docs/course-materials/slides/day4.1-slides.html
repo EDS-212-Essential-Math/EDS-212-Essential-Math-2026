@@ -219,7 +219,7 @@ Data types
 <h2></h2>
 <p><span class="slide-title">Exercise</span></p>
 <hr>
-<p>✏️ <span style="color:green;">For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous), and identify the size of the observed dataset.</span></p>
+<p>✏️ <span style="color:green;">For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous).</span></p>
 <p><br></p>
 <ol type="A">
 <li><p>A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.</p></li>
@@ -239,15 +239,14 @@ Data types
 <hr>
 <p><span style="color:green;">A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.</span></p>
 <ul>
-<li>Dependent variable: nitrogen threshold exceeded — qualitative, binary</li>
+<li>Dependent variable: nitrogen threshold exceeded: qualitative, binary</li>
 <li>Independent variables:
 <ul>
-<li>Fertilizer application rate — quantitative, continuous</li>
-<li>% agricultural land cover — quantitative, continuous</li>
-<li>Monthly rainfall — quantitative, continuous</li>
+<li>Fertilizer application rate: quantitative, continuous</li>
+<li>% agricultural land cover: quantitative, continuous</li>
+<li>Monthly rainfall: quantitative, continuous</li>
 </ul></li>
 </ul>
-<p>Sample size: n = 45 watersheds</p>
 </section>
 <section id="exercise-describe-data-sol-B-blank" class="slide level2" data-menu-title="Exercise: describe data">
 <h2></h2>
@@ -262,17 +261,16 @@ Data types
 <hr>
 <p><span style="color:green;">We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.</span></p>
 <ul>
-<li>Dependent variable: number of complaints filed — quantitative, discrete</li>
+<li>Dependent variable: number of complaints filed: quantitative, discrete</li>
 <li>Independent variables:
 <ul>
-<li>Median household income — quantitative, continuous</li>
-<li>Distance to nearest industrial facility — quantitative, continuous</li>
-<li>Type of nearest industrial facility — qualitative, nominal</li>
-<li>% residents who are renters — quantitative, continuous</li>
-<li>PM2.5 concentration — quantitative, continuous</li>
+<li>Median household income: quantitative, continuous</li>
+<li>Distance to nearest industrial facility: quantitative, continuous</li>
+<li>Type of nearest industrial facility: qualitative, nominal</li>
+<li>% residents who are renters: quantitative, continuous</li>
+<li>PM2.5 concentration: quantitative, continuous</li>
 </ul></li>
 </ul>
-<p>Sample size: n = 60 neighborhoods</p>
 </section>
 <section id="data-dsitributions-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
 <h2></h2>
@@ -332,11 +330,34 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <div class="body-text-m">
 <p>Basic ones:</p>
 <ul>
+<li>Scatterplots</li>
 <li>Histograms</li>
 <li>Boxplots</li>
-<li>Scatterplots</li>
 </ul>
 </div>
+</section>
+<section id="scatterplots-blank" class="slide level2" data-menu-title="Scatterplots">
+<h2></h2>
+<p><span class="slide-title">Scatterplots</span></p>
+<hr>
+<p>✏️</p>
+</section>
+<section id="scatterplots" class="slide level2" data-menu-title="Scatterplots">
+<h2></h2>
+<p><span class="slide-title">Scatterplots</span></p>
+<hr>
+<p>A scatterplot shows the relationship between <strong>two numeric variables</strong>: each observation becomes a point, positioned using its value on the <span class="math inline">\(x\)</span>-axis and its value on the <span class="math inline">\(y\)</span>-axis. A third (categorical) variable can be mapped to color or shape.</p>
+<p><br></p>
+
+<img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="center-text teal-text">
+<p>Always, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.</p>
+</div>
+</section>
+<section id="histogram-blank" class="slide level2" data-menu-title="Histogram">
+<h2></h2>
+<p><span class="slide-title">Histogram</span></p>
+<hr>
+<p>✏️</p>
 </section>
 <section id="histogram" class="slide level2" data-menu-title="Histogram">
 <h2></h2>
@@ -348,7 +369,7 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <div class="body-text-m">
 <p><strong>To construct one:</strong></p>
 <ol type="1">
-<li>Divide the range of the data into equal-width <strong>bins</strong></li>
+<li>Divide the range of the data into equal-width bins</li>
 <li>Count how many observations fall into each bin</li>
 <li>Draw a bar over each bin, with height equal to that count</li>
 </ol>
@@ -380,22 +401,26 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: center;">[0, 5)</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
 <td style="text-align: center;">[5, 10)</td>
 <td style="text-align: center;">2</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;">[10, 15)</td>
 <td style="text-align: center;">4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;">[15, 20)</td>
 <td style="text-align: center;">4</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;">[20, 25)</td>
 <td style="text-align: center;">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;">[25, 30)</td>
 <td style="text-align: center;">1</td>
 </tr>
@@ -406,7 +431,7 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<p><img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -461,7 +486,7 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<p><img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -482,7 +507,7 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 </div>
 <p><strong>One simple way to find them:</strong></p>
 <ol type="1">
-<li>Order the data and find the median (<span class="math inline">\(Q_2\)</span>): this splits the data into a lower half and an upper half</li>
+<li>Order the data and find the median (<span class="math inline">\(Q_2\)</span>): this splits the data into a lower half and an upper half. If there’s an even number of elements, take the average between the two “middle ones”.</li>
 <li><span class="math inline">\(Q_1\)</span> = median of the lower half</li>
 <li><span class="math inline">\(Q_3\)</span> = median of the upper half</li>
 </ol>
@@ -491,6 +516,11 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <h2></h2>
 <p><span class="slide-title">Quartiles</span></p>
 <hr>
+<ul>
+<li><span class="math inline">\(Q_1\)</span> (1st quartile): 25% of values fall below this point</li>
+<li><span class="math inline">\(Q_2\)</span> (2nd quartile): the <strong>median</strong>: 50% of values fall below this point</li>
+<li><span class="math inline">\(Q_3\)</span> (3rd quartile): 75% of values fall below this point</li>
+</ul>
 <p>✏️ <span style="color:green;">Find <span class="math inline">\(Q_1, Q_2,\)</span> and <span class="math inline">\(Q_3\)</span> for the values 4, 16, 8, 40, 2, 14, 6, 10, 12</span></p>
 <aside class="notes">
 <p>Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40 Median (Q2) = 10 Lower half: 2, 4, 6, 8 (four values) → Q1 = (4+6)/2 = 5 Upper half: 12, 14, 16, 40 (four values) → Q3 = (14+16)/2 = 15</p>
@@ -510,17 +540,20 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <h2></h2>
 <p><span class="slide-title">Quartiles: solution</span></p>
 <hr>
+<ul>
+<li><span class="math inline">\(Q_1\)</span> (1st quartile): 25% of values fall below this point</li>
+<li><span class="math inline">\(Q_2\)</span> (2nd quartile): the <strong>median</strong>: 50% of values fall below this point</li>
+<li><span class="math inline">\(Q_3\)</span> (3rd quartile): 75% of values fall below this point</li>
+</ul>
 <p>💡 <span style="color:green;">Let’s see a solution!</span></p>
 <p><span style="color:green;">Find <span class="math inline">\(Q_1, Q_2,\)</span> and <span class="math inline">\(Q_3\)</span> for the values 4, 16, 8, 40, 2, 14, 6, 10, 12</span></p>
 <p><br></p>
-<div class="body-text-m">
 <p>Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40</p>
 <ul>
 <li><span class="math inline">\(Q_2\)</span> (median): 10</li>
-<li>Lower half: 2, 4, 6, 8 — an <strong>even</strong> number of values, so <span class="math inline">\(Q_1\)</span> is the average of the middle two: <span class="math inline">\(Q_1 = \frac{4+6}{2} = 5\)</span></li>
-<li>Upper half: 12, 14, 16, 40 — again an even number of values: <span class="math inline">\(Q_3 = \frac{14+16}{2} = 15\)</span></li>
+<li>Lower half: 2, 4, 6, 8: an <strong>even</strong> number of values, so <span class="math inline">\(Q_1\)</span> is the average of the middle two: <span class="math inline">\(Q_1 = \frac{4+6}{2} = 5\)</span></li>
+<li>Upper half: 12, 14, 16, 40: again an even number of values: <span class="math inline">\(Q_3 = \frac{14+16}{2} = 15\)</span></li>
 </ul>
-</div>
 </section>
 <section id="boxplot1" class="slide level2" data-menu-title="Boxplot 1">
 <h2></h2>
@@ -547,6 +580,13 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <h2></h2>
 <p><span class="slide-title">Exercise: draw a box plot</span></p>
 <hr>
+<p><strong>How it’s drawn:</strong></p>
+<ol type="1">
+<li>Draw a box from <span class="math inline">\(Q_1\)</span> to <span class="math inline">\(Q_3\)</span>: this box spans the <strong>interquartile range</strong>: <span class="math display">\[IQR = Q_3 - Q_1\]</span></li>
+<li>Draw a line inside the box at the median (<span class="math inline">\(Q_2\)</span>)</li>
+<li>Draw whiskers extending to the furthest observation within <span class="math inline">\(1.5 \times IQR\)</span> of the box</li>
+<li>Plot any observation beyond the whiskers individually, as a dot (an <strong>outlier</strong>)</li>
+</ol>
 <p>✏️ <span style="color:green;">Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 (<span class="math inline">\(Q_1=5\)</span>, <span class="math inline">\(Q_2=10\)</span>, <span class="math inline">\(Q_3=15\)</span>), draw the box plot by hand.</span></p>
 </section>
 <section id="boxplot-draw" class="slide level2" data-menu-title="Exercise: draw a box plot">
@@ -563,7 +603,7 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <li><span class="math inline">\(Q_3\)</span>: 15</li>
 <li><span class="math inline">\(IQR = 15-5 = 10\)</span></li>
 <li><span class="math inline">\(Q_3 + 1.5 \times IQR = 15+15 = 30\)</span></li>
-<li>40 is beyond that value, so it’s an <strong>outlier</strong> — the whisker stops at 16, the last value within <span class="math inline">\(1.5 \times IQR\)</span> of the box</li>
+<li>40 is beyond that value, so it’s an <strong>outlier</strong>: the whisker stops at 16, the last value within <span class="math inline">\(1.5 \times IQR\)</span> of the box</li>
 </ul>
 </div>
 </div><div class="column" style="width:60%;">
@@ -571,7 +611,7 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<p><img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -584,7 +624,7 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <hr>
 <p>✏️ <span style="color:green;">Two farms are monitored for nitrate concentration (mg/L) in their downstream runoff. Compare the two distributions below.</span></p>
 
-<img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div style="color:green;">
+<img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div style="color:green;">
 <ul>
 <li>Which farm’s runoff has the higher median nitrate concentration?</li>
 <li>Which farm’s readings are more spread out?</li>
@@ -603,17 +643,6 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <li><strong>Spread:</strong> Farm B’s box and whiskers cover a much wider range, so its runoff is more variable</li>
 <li><strong>Outlier:</strong> Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating as a possible one-time event.</li>
 </ul>
-</div>
-</section>
-<section id="scatterplots" class="slide level2" data-menu-title="Scatterplots">
-<h2></h2>
-<p><span class="slide-title">Scatterplots</span></p>
-<hr>
-<p>A scatterplot shows the relationship between <strong>two numeric variables</strong>: each observation becomes a point, positioned using its value on the <span class="math inline">\(x\)</span>-axis and its value on the <span class="math inline">\(y\)</span>-axis. A third (categorical) variable can be mapped to color or shape.</p>
-<p><br></p>
-
-<img data-src="day4.1-slides_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="center-text teal-text">
-<p>Always, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.</p>
 </div>
 </section>
 <section id="break" class="slide level2" data-menu-title="5 minute break">
@@ -649,15 +678,12 @@ Summarizing data numerically
 <p><span class="slide-title">Median</span></p>
 <hr>
 <p><span class="body-text-m">Middle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. <span class="math inline">\(median\;of\;3, 7, 17 = 7\)</span></span></p>
-<p><br></p>
 <p><span class="body-text-l"><strong>Pros:</strong></span></p>
 <div class="body-text-m">
 <ul>
-<li>Less susceptible to skew and outliers</li>
-<li>Better as sample size increases</li>
+<li>Less susceptible to skew and outliers <!-- - Better as sample size increases --></li>
 </ul>
 </div>
-<p><br></p>
 <p><span class="body-text-l"><strong>Cons:</strong></span></p>
 <div class="body-text-m">
 <ul>
@@ -884,7 +910,7 @@ Confidence intervals
 <p><br></p>
 <div class="body-text-m">
 <p><strong>What it’s NOT:</strong></p>
-<p>“There is a 95% chance that the true population parameter is between values X and Y.”</p>
+<p>“There is a 95% chance that the true population parameter is inside the confidence interval.”</p>
 </div>
 </section>
 <section id="conf-int-ex-1" class="slide level2" data-menu-title="Confidence interval example">
@@ -926,7 +952,7 @@ Confidence intervals
 <div class="columns">
 <div class="column body-text-m" style="width:50%;">
 <ul>
-<li>The “Bar plots” philosophy: show as much as you can for the audience you’re presenting to</li>
+<li>Show as much as you can for the audience you’re presenting to</li>
 <li>Summary statistics are often useful, but are a small part of the whole data story</li>
 <li>Uncertainty is important! How can we responsibly communicate it?</li>
 <li>All summaries are strongest when accompanied by additional data communication</li>
@@ -947,14 +973,37 @@ Confidence intervals
 </div>
 </div></div>
 </section>
-<section id="lunch-break" class="slide level2" data-menu-title="Lunch break">
+<section id="wrapping-up" class="slide level2" data-menu-title="Integration" data-background-color="#003660">
 <h2></h2>
-<p><span class="slide-title">Lunch break!</span></p>
+<div class="page-center">
+<div class="custom-subtitle">
+Wrapping up…
+</div>
+</div>
+</section>
+<section id="what-we-covered" class="slide level2" data-menu-title="What we covered today">
+<h2></h2>
+<p><span class="slide-title">What we covered today</span></p>
 <hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span style="color:#CC3366"><b>🧩 Data types</b></span></li>
+<li><span style="color:#006699"><b>📊 Data visualization (histograms, box plots, scatterplots)</b></span></li>
+<li><span style="color:#D6001C"><b>📐 Quartiles &amp; the interquartile range</b></span></li>
+<li><span style="color:#003366"><b>📈 Central tendency (mean &amp; median)</b></span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span style="color:#FF6600"><b>📏 Variance &amp; standard deviation</b></span></li>
+<li><span style="color:#336666"><b>🦖 Why visualizing data matters</b></span></li>
+<li><span style="color:#003399"><b>🎯 Confidence intervals</b></span></li>
+<li><span style="color:#660099"><b>💬 Communicating data summaries responsibly</b></span></li>
+</ul>
+</div></div>
 
 
-
-<img data-src="images/lunch-time.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

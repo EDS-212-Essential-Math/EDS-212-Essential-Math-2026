@@ -221,21 +221,7 @@
     "href": "course-materials/day4.html#class-materials",
     "title": "Distributions and summary statistics",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n Session\n Lecture slides\n\n\n\n\nday 4 / morning\nEssential summary statistics and describing data\n\n\nday 4 / afternoon"
-  },
-  {
-    "objectID": "course-materials/day4.html#end-of-day-practice",
-    "href": "course-materials/day4.html#end-of-day-practice",
-    "title": "Distributions and summary statistics",
-    "section": "End-of-day practice",
-    "text": "End-of-day practice\nComplete the following tasks / activities before heading home for the day!\n\n Day 4 Practice: Matrices and matrix algebra, exploring and summarizing data"
-  },
-  {
-    "objectID": "course-materials/day4.html#additional-resources",
-    "href": "course-materials/day4.html#additional-resources",
-    "title": "Distributions and summary statistics",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nIntro to matrix multiplication, by Khan Academy – a video on what it means to multiply two matrices, and an example\nLeslie Matrix Models – more examples; in particular, check out the American Bison Model section"
+    "text": "Class materials\n\n\n\n Session\n Lecture slides\n\n\n\n\nday 4 / morning\nEssential summary statistics and describing data\n\n\nday 4 / afternoon\nNo afternoon session"
   },
   {
     "objectID": "course-materials/examples/day1-day2-conceptual-exercises-key.html",
@@ -3357,7 +3343,7 @@
     "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data",
     "title": "",
     "section": "",
-    "text": "Exercise\n\n✏️ For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous), and identify the size of the observed dataset.\n\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration."
+    "text": "Exercise\n\n✏️ For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous).\n\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration."
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A-blank",
@@ -3371,7 +3357,7 @@
     "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-A",
     "title": "",
     "section": "",
-    "text": "Exercise A: Solution\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\n\nDependent variable: nitrogen threshold exceeded — qualitative, binary\nIndependent variables:\n\nFertilizer application rate — quantitative, continuous\n% agricultural land cover — quantitative, continuous\nMonthly rainfall — quantitative, continuous\n\n\nSample size: n = 45 watersheds"
+    "text": "Exercise A: Solution\n\nA team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.\n\nDependent variable: nitrogen threshold exceeded: qualitative, binary\nIndependent variables:\n\nFertilizer application rate: quantitative, continuous\n% agricultural land cover: quantitative, continuous\nMonthly rainfall: quantitative, continuous"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B-blank",
@@ -3385,7 +3371,7 @@
     "href": "course-materials/slides/day4.1-slides.html#exercise-describe-data-sol-B",
     "title": "",
     "section": "",
-    "text": "Exercise B: Solution\n\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.\n\nDependent variable: number of complaints filed — quantitative, discrete\nIndependent variables:\n\nMedian household income — quantitative, continuous\nDistance to nearest industrial facility — quantitative, continuous\nType of nearest industrial facility — qualitative, nominal\n% residents who are renters — quantitative, continuous\nPM2.5 concentration — quantitative, continuous\n\n\nSample size: n = 60 neighborhoods"
+    "text": "Exercise B: Solution\n\nWe are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.\n\nDependent variable: number of complaints filed: quantitative, discrete\nIndependent variables:\n\nMedian household income: quantitative, continuous\nDistance to nearest industrial facility: quantitative, continuous\nType of nearest industrial facility: qualitative, nominal\n% residents who are renters: quantitative, continuous\nPM2.5 concentration: quantitative, continuous"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#data-dsitributions-title",
@@ -3406,7 +3392,28 @@
     "href": "course-materials/slides/day4.1-slides.html#data-viz",
     "title": "",
     "section": "",
-    "text": "Useful data visualizations\n\n\n\nBasic ones:\n\nHistograms\nBoxplots\nScatterplots"
+    "text": "Useful data visualizations\n\n\n\nBasic ones:\n\nScatterplots\nHistograms\nBoxplots"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#scatterplots-blank",
+    "href": "course-materials/slides/day4.1-slides.html#scatterplots-blank",
+    "title": "",
+    "section": "",
+    "text": "Scatterplots\n\n✏️"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#scatterplots",
+    "href": "course-materials/slides/day4.1-slides.html#scatterplots",
+    "title": "",
+    "section": "",
+    "text": "Scatterplots\n\nA scatterplot shows the relationship between two numeric variables: each observation becomes a point, positioned using its value on the \\(x\\)-axis and its value on the \\(y\\)-axis. A third (categorical) variable can be mapped to color or shape.\n\n\n\nAlways, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis."
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#histogram-blank",
+    "href": "course-materials/slides/day4.1-slides.html#histogram-blank",
+    "title": "",
+    "section": "",
+    "text": "Histogram\n\n✏️"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#histogram",
@@ -3427,7 +3434,7 @@
     "href": "course-materials/slides/day4.1-slides.html#histogram-example",
     "title": "",
     "section": "",
-    "text": "Histogram example\n\nTwelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:\n8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27\n\n\nUsing bins of width 5 cm:\n\n\n\nBin (cm)\nCount\n\n\n\n\n[5, 10)\n2\n\n\n[10, 15)\n4\n\n\n[15, 20)\n4\n\n\n[20, 25)\n1\n\n\n[25, 30)\n1"
+    "text": "Histogram example\n\nTwelve trees are measured in a forest plot, giving these diameter at breast height (DBH) values, in cm:\n8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27\n\n\nUsing bins of width 5 cm:\n\n\n\nBin (cm)\nCount\n\n\n\n\n[0, 5)\n0\n\n\n[5, 10)\n2\n\n\n[10, 15)\n4\n\n\n[15, 20)\n4\n\n\n[20, 25)\n1\n\n\n[25, 30)\n1"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#histogram-exercise",
@@ -3448,21 +3455,21 @@
     "href": "course-materials/slides/day4.1-slides.html#quartiles",
     "title": "",
     "section": "",
-    "text": "Quartiles\n\nQuartiles divide an ordered dataset into four equal parts.\n\n\n\\(Q_1\\) (1st quartile): 25% of values fall below this point\n\\(Q_2\\) (2nd quartile): the median: 50% of values fall below this point\n\\(Q_3\\) (3rd quartile): 75% of values fall below this point\n\n\nOne simple way to find them:\n\nOrder the data and find the median (\\(Q_2\\)): this splits the data into a lower half and an upper half\n\\(Q_1\\) = median of the lower half\n\\(Q_3\\) = median of the upper half"
+    "text": "Quartiles\n\nQuartiles divide an ordered dataset into four equal parts.\n\n\n\\(Q_1\\) (1st quartile): 25% of values fall below this point\n\\(Q_2\\) (2nd quartile): the median: 50% of values fall below this point\n\\(Q_3\\) (3rd quartile): 75% of values fall below this point\n\n\nOne simple way to find them:\n\nOrder the data and find the median (\\(Q_2\\)): this splits the data into a lower half and an upper half. If there’s an even number of elements, take the average between the two “middle ones”.\n\\(Q_1\\) = median of the lower half\n\\(Q_3\\) = median of the upper half"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#quartiles-example-blank",
     "href": "course-materials/slides/day4.1-slides.html#quartiles-example-blank",
     "title": "",
     "section": "",
-    "text": "Quartiles\n\n✏️ Find \\(Q_1, Q_2,\\) and \\(Q_3\\) for the values 4, 16, 8, 40, 2, 14, 6, 10, 12\n\nOrdered: 2, 4, 6, 8, 10, 12, 14, 16, 40 Median (Q2) = 10 Lower half: 2, 4, 6, 8 (four values) → Q1 = (4+6)/2 = 5 Upper half: 12, 14, 16, 40 (four values) → Q3 = (14+16)/2 = 15"
+    "text": "Quartiles\n\n\n\\(Q_1\\) (1st quartile): 25% of values fall below this point\n\\(Q_2\\) (2nd quartile): the median: 50% of values fall below this point\n\\(Q_3\\) (3rd quartile): 75% of values fall below this point\n\n✏️ Find \\(Q_1, Q_2,\\) and \\(Q_3\\) for the values 4, 16, 8, 40, 2, 14, 6, 10, 12\n\nOrdered: 2, 4, 6, 8, 10, 12, 14, 16, 40 Median (Q2) = 10 Lower half: 2, 4, 6, 8 (four values) → Q1 = (4+6)/2 = 5 Upper half: 12, 14, 16, 40 (four values) → Q3 = (14+16)/2 = 15"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#quartiles-example",
     "href": "course-materials/slides/day4.1-slides.html#quartiles-example",
     "title": "",
     "section": "",
-    "text": "Quartiles: solution\n\n💡 Let’s see a solution!\nFind \\(Q_1, Q_2,\\) and \\(Q_3\\) for the values 4, 16, 8, 40, 2, 14, 6, 10, 12\n\n\nOrdered: 2, 4, 6, 8, 10, 12, 14, 16, 40\n\n\\(Q_2\\) (median): 10\nLower half: 2, 4, 6, 8 — an even number of values, so \\(Q_1\\) is the average of the middle two: \\(Q_1 = \\frac{4+6}{2} = 5\\)\nUpper half: 12, 14, 16, 40 — again an even number of values: \\(Q_3 = \\frac{14+16}{2} = 15\\)"
+    "text": "Quartiles: solution\n\n\n\\(Q_1\\) (1st quartile): 25% of values fall below this point\n\\(Q_2\\) (2nd quartile): the median: 50% of values fall below this point\n\\(Q_3\\) (3rd quartile): 75% of values fall below this point\n\n💡 Let’s see a solution!\nFind \\(Q_1, Q_2,\\) and \\(Q_3\\) for the values 4, 16, 8, 40, 2, 14, 6, 10, 12\n\nOrdered: 2, 4, 6, 8, 10, 12, 14, 16, 40\n\n\\(Q_2\\) (median): 10\nLower half: 2, 4, 6, 8: an even number of values, so \\(Q_1\\) is the average of the middle two: \\(Q_1 = \\frac{4+6}{2} = 5\\)\nUpper half: 12, 14, 16, 40: again an even number of values: \\(Q_3 = \\frac{14+16}{2} = 15\\)"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#boxplot1",
@@ -3483,14 +3490,14 @@
     "href": "course-materials/slides/day4.1-slides.html#boxplot-draw-blank",
     "title": "",
     "section": "",
-    "text": "Exercise: draw a box plot\n\n✏️ Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 (\\(Q_1=5\\), \\(Q_2=10\\), \\(Q_3=15\\)), draw the box plot by hand."
+    "text": "Exercise: draw a box plot\n\nHow it’s drawn:\n\nDraw a box from \\(Q_1\\) to \\(Q_3\\): this box spans the interquartile range: \\[IQR = Q_3 - Q_1\\]\nDraw a line inside the box at the median (\\(Q_2\\))\nDraw whiskers extending to the furthest observation within \\(1.5 \\times IQR\\) of the box\nPlot any observation beyond the whiskers individually, as a dot (an outlier)\n\n✏️ Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 (\\(Q_1=5\\), \\(Q_2=10\\), \\(Q_3=15\\)), draw the box plot by hand."
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#boxplot-draw",
     "href": "course-materials/slides/day4.1-slides.html#boxplot-draw",
     "title": "",
     "section": "",
-    "text": "Exercise: solution\n\n💡 Let’s see a solution!\n\n\n\n\n\\(Q_1\\): 5\nMedian (\\(Q_2\\)): 10\n\\(Q_3\\): 15\n\\(IQR = 15-5 = 10\\)\n\\(Q_3 + 1.5 \\times IQR = 15+15 = 30\\)\n40 is beyond that value, so it’s an outlier — the whisker stops at 16, the last value within \\(1.5 \\times IQR\\) of the box"
+    "text": "Exercise: solution\n\n💡 Let’s see a solution!\n\n\n\n\n\\(Q_1\\): 5\nMedian (\\(Q_2\\)): 10\n\\(Q_3\\): 15\n\\(IQR = 15-5 = 10\\)\n\\(Q_3 + 1.5 \\times IQR = 15+15 = 30\\)\n40 is beyond that value, so it’s an outlier: the whisker stops at 16, the last value within \\(1.5 \\times IQR\\) of the box"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#boxplot-interpret",
@@ -3505,13 +3512,6 @@
     "title": "",
     "section": "",
     "text": "Exercise: solution\n\n💡 Let’s discuss!\n\n\nMedian: Farm B’s median (~3.6 mg/L) is noticeably higher than Farm A’s (~2.05 mg/L)\nSpread: Farm B’s box and whiskers cover a much wider range, so its runoff is more variable\nOutlier: Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating as a possible one-time event."
-  },
-  {
-    "objectID": "course-materials/slides/day4.1-slides.html#scatterplots",
-    "href": "course-materials/slides/day4.1-slides.html#scatterplots",
-    "title": "",
-    "section": "",
-    "text": "Scatterplots\n\nA scatterplot shows the relationship between two numeric variables: each observation becomes a point, positioned using its value on the \\(x\\)-axis and its value on the \\(y\\)-axis. A third (categorical) variable can be mapped to color or shape.\n\n\n\nAlways, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis."
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#break",
@@ -3539,7 +3539,7 @@
     "href": "course-materials/slides/day4.1-slides.html#median",
     "title": "",
     "section": "",
-    "text": "Median\n\nMiddle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. \\(median\\;of\\;3, 7, 17 = 7\\)\n\nPros:\n\n\nLess susceptible to skew and outliers\nBetter as sample size increases\n\n\n\nCons:\n\n\nDoesn’t take into account the magnitude of all values"
+    "text": "Median\n\nMiddle value when all observations are arranged in order. If you have an even number of values, the median is calculated as the average of the middle two values. E.g. \\(median\\;of\\;3, 7, 17 = 7\\)\nPros:\n\n\nLess susceptible to skew and outliers \n\n\nCons:\n\n\nDoesn’t take into account the magnitude of all values"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#mean",
@@ -3651,7 +3651,7 @@
     "href": "course-materials/slides/day4.1-slides.html#conf-int-2",
     "title": "",
     "section": "",
-    "text": "Confidence interval\n\n\nConfidence interval: a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.\n\n\nWhat it’s NOT:\n“There is a 95% chance that the true population parameter is between values X and Y.”"
+    "text": "Confidence interval\n\n\nConfidence interval: a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.\n\n\nWhat it’s NOT:\n“There is a 95% chance that the true population parameter is inside the confidence interval.”"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#conf-int-ex-1",
@@ -3672,14 +3672,21 @@
     "href": "course-materials/slides/day4.1-slides.html#comm",
     "title": "",
     "section": "",
-    "text": "Communicating data summaries\n\n\n\n\n\nThe “Bar plots” philosophy: show as much as you can for the audience you’re presenting to\nSummary statistics are often useful, but are a small part of the whole data story\nUncertainty is important! How can we responsibly communicate it?\nAll summaries are strongest when accompanied by additional data communication\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtwork by Allison Horst"
+    "text": "Communicating data summaries\n\n\n\n\n\nShow as much as you can for the audience you’re presenting to\nSummary statistics are often useful, but are a small part of the whole data story\nUncertainty is important! How can we responsibly communicate it?\nAll summaries are strongest when accompanied by additional data communication\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtwork by Allison Horst"
   },
   {
-    "objectID": "course-materials/slides/day4.1-slides.html#lunch-break",
-    "href": "course-materials/slides/day4.1-slides.html#lunch-break",
+    "objectID": "course-materials/slides/day4.1-slides.html#wrapping-up",
+    "href": "course-materials/slides/day4.1-slides.html#wrapping-up",
     "title": "",
     "section": "",
-    "text": "Lunch break!\n\n\n\n\nimage: Flaticon.com"
+    "text": "Wrapping up…"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#what-we-covered",
+    "href": "course-materials/slides/day4.1-slides.html#what-we-covered",
+    "title": "",
+    "section": "",
+    "text": "What we covered today\n\n\n\n\n🧩 Data types\n📊 Data visualization (histograms, box plots, scatterplots)\n📐 Quartiles & the interquartile range\n📈 Central tendency (mean & median)\n\n\n\n📏 Variance & standard deviation\n🦖 Why visualizing data matters\n🎯 Confidence intervals\n💬 Communicating data summaries responsibly"
   },
   {
     "objectID": "course-materials/eod-practice/eod-day3.html",
@@ -3840,21 +3847,14 @@
     "href": "course-materials/day5.html#class-materials",
     "title": "Basic probability theory and Boolean algebra",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Interactive session\n\n\n\n\nday 5 / morning\nBasic probability theory\nMore Quarto customization, summary statistics continued, in-line reporting, collaboration\n\n\nday 5 / afternoon\nProbability continued, intuition for hypothesis tests, and Boolean algebra\nLogical and comparison operators in R\n\n\nday 5 / end-of-day\ncourse recap\nNA"
-  },
-  {
-    "objectID": "course-materials/day5.html#end-of-day-practice",
-    "href": "course-materials/day5.html#end-of-day-practice",
-    "title": "Basic probability theory and Boolean algebra",
-    "section": "End-of-day practice",
-    "text": "End-of-day practice\nThere are no end-of-day tasks / activities today!"
+    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Lecture slides\n\n\n\n\nday 5 / morning\nBasic probability theory\nMore Quarto customization, summary statistics continued, in-line reporting, collaboration\n\n\nday 5 / afternoon\nProbability continued, intuition for hypothesis tests, and Boolean algebra\nLogical and comparison operators in R\n\n\nday 5 / end-of-day\ncourse recap\nNA"
   },
   {
     "objectID": "course-materials/day5.html#additional-resources",
     "href": "course-materials/day5.html#additional-resources",
     "title": "Basic probability theory and Boolean algebra",
     "section": "Additional Resources",
-    "text": "Additional Resources\n\n“At least one” probability with coin flipping, by Khan Academy – a video explanation of the probability of getting at least one heads in multiple flips of a fair coin \nProbability Density Functions, by Khan Academy – a video explanation using a rainfall amount example"
+    "text": "Additional Resources"
   },
   {
     "objectID": "course-materials/interactive-sessions/interactive-session-4a.html",
