@@ -21,6 +21,14 @@ format:
 
 ---
 
+## {#probability-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Basic probability concepts</div>
+</div>
+
+---
+
 ## {#refresh-prob data-menu-title="Refesh"} 
 
 [Why refresh probability?]{.slide-title}
@@ -28,10 +36,10 @@ format:
 <hr>
 
 ::: {.body-text-l}
+- Being familiar with the terms
 - Hypothesis testing
 - Bayesian statistics
 - Decision making
-- Being cautious 
 :::
 
 ---
@@ -48,17 +56,13 @@ format:
 
 <br>
 
-**Event:** A possible outcome (or combination of outcomes). The probability of event $A$ occurring is written as $P(A)$.
+**Event:** A possible outcome. The probability of event $A$ occurring is written as $P(A)$.
 
 <br>
 
-The probability is the **long term** relative frequency of an event occurring, given all outcomes of the event space.
+**Probability:** the likelihood that an event occurs. 
 
-<br>
-
-**Probability:** the likelihood that an event or outcome occurs. 
-
-- $P = 0$ indicates no chance of an event or outcome 
+- $P = 0$ indicates no chance of an event happening 
 - $P=1$ indicates it is a certainty it will happen
 
 ---
@@ -70,42 +74,60 @@ The probability is the **long term** relative frequency of an event occurring, g
 <hr>
 
 ::: {.body-text-m}
-**1. Daily rain gauge reading**
+**1. Daily rain check**
 
+- Experiment: Checking whether it rained on a given day
 - Event space: {rain, no rain}
-- Event: $A = $ it rains today
+- Event: $A =$ it rains today
 - $P(A)=$ What is the probability that it rains today?
 
 <br>
 
 **2. Water sample contaminant test**
 
+- Experiment: testing water samples
 - Event space: measurements for nitrate and measurements for E. coli
-- Event : $A= $ the sample exceeds a certain nitrate limit
-- $P(A) = $ What is the probability that a sample exceeds the nitrate limit?
+- Event : $A=$ the sample exceeds a certain nitrate limit
+- $P(A) =$ What is the probability that a sample exceeds the nitrate limit?
 :::
 
 ---
-1
-## {#law-large-nums data-menu-title="Law of large numbers"}
 
-[Law of large numbers]{.slide-title}
+## {#independence data-menu-title="Independent events"}
+
+[Independent vs. non-independent events]{.slide-title}
+
+<hr>
+Two events are **independent** if one occurring doesn't change the probability of the other:
+
+<!-- $$P(B|A) = P(B), \quad \text{equivalently} \quad P(A \cap B) = P(A) \times P(B)$$ -->
+
+If knowing $A$ occurred *does* change the probability of $B$, the events are **non-independent**.
+
+<br>
+
+**Example**
+
+**Independent events:** two consecutive coin flips: one has no bearing on the other.
+
+**Non-independent events:** in our water sample, exceeding the nitrate limit and exceeding the E. coli limit could be non-independent. Perhaps both are often driven by the same upstream agricultural runoff, so if $A$ occurs, $B$ becomes more likely too.
+
+---
+
+## {#cond-prob data-menu-title="Conditional probability"}
+
+[Conditional probability]{.slide-title}
 
 <hr>
 
 <br>
 
-::: {.body-text-l}
-If you repeat an experiment independently a large number of times, the calculated statistic (e.g. mean, proportion 'true', etc.) will be close to the true (expected) parameter. 
+::: {.body-text-m}
+If events are not independent, one event having occurred can *change* the probability of another event occurring. For events $A$ and $B$, the probability of $B$ given that $A$ is know to occur is:
 
 <br>
 
-**Example:** Proportion "heads" over a long run of coin flips, with a fair coin. 
-
-<br>
-
-Let's [sketch what it might look like](https://www.probabilisticworld.com/law-large-numbers/)...
-:::
+$P(B|A)=\frac{P(A \cap\ B)}{P(A)}$
 
 ---
 
@@ -209,47 +231,11 @@ Let's [sketch what it might look like](https://www.probabilisticworld.com/law-la
 
 ---
 
-## {#cond-prob data-menu-title="Conditional probability"}
+## {#inference-title data-menu-title="Summation Notation" background-color="#003660"}
 
-[Conditional probability]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-m}
-If events are not independent, one event having occurred can *change* the probability of another event occurring. For events $A$ and $B$, the probability of $B$ given that $A$ is know to occur is:
-
-<br>
-
-$P(B|A)=\frac{P(A \cap\ B)}{P(A)}$
-
-<br>
-
-**A common question:** Why doesn't this just simplify to $P(B)$ if the intersection is $P(A)*P(B)$?
-:::
-
----
-
-## {#independence data-menu-title="Independent events"}
-
-[Independent vs. non-independent events]{.slide-title}
-
-<hr>
-
-::: {.body-text-m}
-Two events are **independent** if one occurring doesn't change the probability of the other:
-
-$$P(B|A) = P(B), \quad \text{equivalently} \quad P(A \cap B) = P(A) \times P(B)$$
-
-If knowing $A$ occurred *does* change the probability of $B$, the events are **non-independent**.
-
-<br>
-
-**Independent example:** a coin flip and whether it rains today — one has no bearing on the other.
-
-**Non-independent example:** in our water sample, exceeding the nitrate limit and exceeding the E. coli limit — both are often driven by the same upstream agricultural runoff, so if $A$ occurs, $B$ becomes more likely too.
-:::
+<div class="page-center">
+<div class="custom-subtitle">Inference</div>
+</div>
 
 ---
 
@@ -290,6 +276,38 @@ Usually, we don't have the resources (time, money, human power, etc.) to collect
 
 Then, we attempt to draw conclusions about the **populations** from which our samples were collected.
 :::
+
+TO DO: add diagram about how this works
+
+---
+
+## {#law-large-nums data-menu-title="Law of large numbers"}
+
+[Law of large numbers]{.slide-title}
+
+<hr>
+
+<br>
+
+::: {.body-text-l}
+If you repeat an experiment independently a large number of times, the calculated statistic (e.g. mean, proportion 'true', etc.) will be close to the true (expected) parameter. 
+
+<br>
+
+**Example:** Proportion "heads" over a long run of coin flips, with a fair coin. 
+
+<br>
+
+Let's [sketch what it might look like](https://www.probabilisticworld.com/law-large-numbers/)...
+:::
+
+---
+
+## {#probability-density-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Probability density functions</div>
+</div>
 
 ---
 
@@ -403,6 +421,14 @@ ggplot(df, aes(x = x, y = y)) +
 ::: {.body-text-m}
 The **shaded area** is the answer: about a 50% chance.
 :::
+
+---
+
+## {#hypothesis-testing-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Hypothesis testing</div>
+</div>
 
 ---
 
@@ -629,6 +655,14 @@ False negative (accept a false null hypothesis)
 
 ---
 
+## {#boolean-logic-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+<div class="custom-subtitle">Boolean logic</div>
+</div>
+
+---
+
 ## {#boolean-logic data-menu-title="Boolean logic"}
 
 [Boolean logic]{.slide-title}
@@ -852,3 +886,15 @@ vole %in% mouse
 <br>
 
 *Keep this in mind - the distinction between `%in%` and `==` is major and important.
+
+---
+
+Whole course recap slide
+
+---
+
+Course evals slide
+
+--- 
+
+Acknowledgement slide
