@@ -21,7 +21,7 @@ format:
 
 ---
 
-## {#probability-title data-menu-title="Summation Notation" background-color="#003660"}
+## {#probability-title data-menu-title="Basic Probability" background-color="#003660"}
 
 <div class="page-center">
 <div class="custom-subtitle">Basic probability concepts</div>
@@ -44,14 +44,25 @@ format:
 
 ---
 
+## {#terminology-blank data-menu-title="Terminology"} 
+
+[Event space, event, and probability]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
 ## {#terminology data-menu-title="Terminology"} 
 
-[Terminology]{.slide-title}
+[Event space, event, and probability]{.slide-title}
 
 <hr>
 
 <br>
 
+::: {.body-text-m}
 **Event space:** The collection of all possible unique outcomes of an experiment or scenario. Also called the *sample space.*
 
 <br>
@@ -64,6 +75,7 @@ format:
 
 - $P = 0$ indicates no chance of an event happening 
 - $P=1$ indicates it is a certainty it will happen
+:::
 
 ---
 
@@ -74,12 +86,12 @@ format:
 <hr>
 
 ::: {.body-text-m}
-**1. Daily rain check**
+**1. Deck of cards**
 
-- Experiment: Checking whether it rained on a given day
-- Event space: {rain, no rain}
-- Event: $A =$ it rains today
-- $P(A)=$ What is the probability that it rains today?
+- Experiment: Drawing a single card from a deck of cards
+- Event space: any one of the 52 cards in the deck
+- Event: $A =$ we draw an ace
+- $P(A)=$ What is the probability of drawing an ace from the deck?
 
 <br>
 
@@ -93,141 +105,221 @@ format:
 
 ---
 
-## {#independence data-menu-title="Independent events"}
+## {#independence-blank data-menu-title="Independent events"}
 
 [Independent vs. non-independent events]{.slide-title}
 
 <hr>
-Two events are **independent** if one occurring doesn't change the probability of the other:
 
-<!-- $$P(B|A) = P(B), \quad \text{equivalently} \quad P(A \cap B) = P(A) \times P(B)$$ -->
+✏️    
+
+---
+
+## {#independence-check-in data-menu-title="Independent events"}
+
+[Independent vs. non-independent events]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+Two events are **independent** if one occurring doesn't change the probability of the other:
 
 If knowing $A$ occurred *does* change the probability of $B$, the events are **non-independent**.
 
 <br>
 
-**Example**
+**Conditional probability:** For events $A$ and $B$, the probability of event $B$ happening given that $A$ is know to occur is denoted as $P(B|A)$.
 
-**Independent events:** two consecutive coin flips: one has no bearing on the other.
+<br>
 
-**Non-independent events:** in our water sample, exceeding the nitrate limit and exceeding the E. coli limit could be non-independent. Perhaps both are often driven by the same upstream agricultural runoff, so if $A$ occurs, $B$ becomes more likely too.
+:::
+
+:::{style="color:green;"}
+✏️ Are the following events independent or non independent?
+:::
+
+- Two consecutive coin flips: 
+
+- In two water samples, exceeding the nitrate limit in one (one event) and exceeding the E. coli limit in another (second event)
 
 ---
 
-## {#cond-prob data-menu-title="Conditional probability"}
+## {#independence data-menu-title="Independent events"}
 
-[Conditional probability]{.slide-title}
+[Independent vs. non-independent events]{.slide-title}
 
 <hr>
 
+::: {.body-text-m}
+Two events are **independent** if one occurring doesn't change the probability of the other:
+
+If knowing $A$ occurred *does* change the probability of $B$, the events are **non-independent**.
+
 <br>
+
+**Conditional probability:** For events $A$ and $B$, the probability of event $B$ happening given that $A$ is know to occur is denoted as $P(B|A)$.
+
+<br>
+
+:::
+
+:::{style="color:green;"}
+✏️ Are the following events independent or non independent?
+:::
+
+Two consecutive coin flips are independent events. One has no bearing on the other.
+
+In two water samples, exceeding the nitrate limit in one (one event) and exceeding the E. coli limit in another (second event) could be non-independent. Perhaps both samples are affected by the same upstream agricultural runoff, so if $A$ occurs, $B$ becomes more likely too.
+
+<!-- $$P(B|A)=\frac{P(A \cap\ B)}{P(A)}$$ -->
+
+---
+
+## {#prob-theory-1 data-menu-title="Probability Theory"} 
+
+[Intersection, union, and compliment]{.slide-title2}
+
+<hr>
 
 ::: {.body-text-m}
-If events are not independent, one event having occurred can *change* the probability of another event occurring. For events $A$ and $B$, the probability of $B$ given that $A$ is know to occur is:
 
-<br>
+Given two events $A$ and $B$:
 
-$P(B|A)=\frac{P(A \cap\ B)}{P(A)}$
+- **Intersection:** $A\cap B=$ denotes the events $A$ and $B$ co-occurring. In other words, these are **AND** probability statements.
+
+
+- **Union:** $A\cup B=$ denotes *at least one* of the events happens (could be just one, or both). In other words, these are **OR** probability statements. 
+
+- **Complement:**  $A'=$ denotes the event $A$ *does not* occurring.
+
+:::
+
+:::{style="color:green;"}
+✏️ Given the events $A$ and $B$, write in words what each of the following mean:
+:::
+
+$A=$ water sample exceeds nitrate limit, $B=$ water sample exceeds E. coli limit
+
+- $A \cap B$ =
+
+- $A \cup B$ =
+
+- $A'$ =
 
 ---
 
 ## {#prob-theory data-menu-title="Probability Theory"} 
 
-[Basic probability theory]{.slide-title2}
+[Intersection, union, and compliment]{.slide-title2}
 
 <hr>
 
-<br>
-
 ::: {.body-text-m}
-- **Intersection:** Probability that events co-occur. In other words, these are **AND** probability statements.
 
-<br>
+Given two events $A$ and $B$:
 
-- **Union:** Probability that *at least one* of the events happens (could be just one, or all). In other words, these are **OR** probability statements. 
+- **Intersection:** $A\cap B=$ denotes the events $A$ and $B$ co-occurring. In other words, these are **AND** probability statements.
 
-<br>
 
-- **Complement:**  Probability that an outcome or set of outcomes *does not* occur
+- **Union:** $A\cup B=$ denotes *at least one* of the events happens (could be just one, or both). In other words, these are **OR** probability statements. 
+
+- **Complement:**  $A'=$ denotes the event $A$ *does not* occurring.
+
 :::
+
+:::{style="color:green;"}
+✏️ Given the events $A$ and $B$, write in words what each of the following mean:
+:::
+
+$A=$ water sample exceeds nitrate limit, $B=$ water sample exceeds E. coli limit
+
+- $A \cap B$ = the water sample exceeds both the nitrate limit *and* the E. coli limit
+
+- $A \cup B$ = the water sample exceeds the nitrate limit, the E. coli limit, or both.
+
+- $A'$ = the water sample does *not* exceed the nitrate limit
 
 ---
 
-## {#intersection data-menu-title="Intersection"}
+## {#basic-proability-1 data-menu-title="Basic"}
 
-[Intersection]{.slide-title}
+[Basic probability]{.slide-title}
 
 <hr>
 
-<br>
+**Probability of the intersection**
 
-::: {.body-text-m}
-**Notation:** $P(A\cap B)$
+$P(A\cap B)=$ the probability of events A *and* B happening.
 
-<br>
 
-**In words:** The probability of A *and* B happening (where A and B are independent events)
+**Calculation:** 
 
-<br>
+  - If $A$ and $B$ are independent: $P(A\cap B) = P(A)\times P(B)$
 
-**Calculation:** $P(A\cap B) = P(A)*P(B)$
-
-<br>
-
-**Example:** $A \cap B$ = the water sample exceeds both the nitrate limit *and* the E. coli limit
-:::
+  - If $A$ and $B$ are not independent: $P(A\cap B) = P(A)P(A|B)$
 
 ---
 
-## {#union data-menu-title="Union"}
+## {#basic-proability-2 data-menu-title="Basic"}
 
-[Union]{.slide-title}
+[Basic probability]{.slide-title}
 
 <hr>
 
+**Probability of the intersection**
+
+$P(A\cap B)=$ the probability of events A *and* B happening.
+
+
+**Calculation:** 
+
+  - If $A$ and $B$ are independent: $P(A\cap B) = P(A)\times P(B)$
+
+  - If $A$ and $B$ are not independent: $P(A\cap B) = P(A)P(A|B)$
+
 <br>
 
-::: {.body-text-m}
-**Notation:** $P(A\cup B)$
+**Probability of the union**
+
+**Notation:** $P(A\cup B)=$ rhe probability of A *or* B happening.
+
+**Calculation:** $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+
+---
+
+## {#basic-proability-3 data-menu-title="Basic"}
+
+[Basic probability]{.slide-title}
+
+<hr>
+
+**Probability of the intersection**
+
+$P(A\cap B)=$ the probability of events A *and* B happening.
+
+
+**Calculation:** 
+
+  - If $A$ and $B$ are independent: $P(A\cap B) = P(A)\times P(B)$
+
+  - If $A$ and $B$ are not independent: $P(A\cap B) = P(A)P(A|B)$
 
 <br>
 
-**In words:** The probability of A *or* B happening (i.e., at least A or B happens, or both).
+**Probability of the union**
 
-<br>
+**Notation:** $P(A\cup B)=$ rhe probability of A *or* B happening.
 
 **Calculation:** $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
 
 <br>
 
-**Example:** $A \cup B$ = the water sample exceeds the nitrate limit, the E. coli limit, or both
-:::
+**Probability of the complement**
 
----
+**Notation:** $P(A')=$ the probability of $A$ *not* happening
 
-## {#complement data-menu-title="Complement"}
-
-[Complement]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-m}
-**Notation:** $P(A')$
-
-<br>
-
-**In words:** The probability of $A$ **NOT** happening
-
-<br>
 
 **Calculation:** $P(A')=1-P(A)$
-
-<br>
-
-**Example:** $A'$ = the water sample does *not* exceed the nitrate limit
-:::
 
 ---
 
