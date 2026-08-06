@@ -6,121 +6,125 @@ title: "Day 2 / Morning: Extra examples"
 
 1. Evaluate:
 $$
-\lim_{x\to 3}(2x^2-5x+1)
+\lim_{x\to -3}(x^2+4x-5)
 $$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
-\lim_{x\to 3}(2x^2-5x+1) = 2(3)^2-5(3)+1 = 18-15+1 = 4
+\lim_{x\to -3}(x^2+4x-5) = (-3)^2+4(-3)-5 = 9-12-5 = -8
 $$
 :::
 
-2. Does the following limit exist?
+2. Does the following limit exist? (Hint: Expand first)
 $$
-\lim_{x\to 1}\frac{|x-1|}{x-1}
+\lim_{x\to 4}\frac{(x-1)^2}{(x-1)}
 $$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
-Approaching from the right ($x>1$): $\frac{x-1}{x-1}=1$.
+Simplify first: $\frac{(x-1)^2}{(x-1)}=\frac{(x-1)(x-1)}{(x-1)}=x-1$ for $x\neq 1$.
 
-Approaching from the left ($x<1$): $\frac{-(x-1)}{x-1}=-1$.
+$$
+\lim_{x\to 4}(x-1) = 3
+$$
 
-Since the function approaches different values from the left and right, the limit **does not exist**.
+The limit **exists** and equals $3$.
 :::
 
-3. Evaluate:
+3. Does the following limit exist?
 $$
-\lim_{x\to -2}(x^3+4x-1)
+\lim_{x\to 5}\frac{2}{x-5}
 $$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
-$$
-\lim_{x\to -2}(x^3+4x-1) = (-2)^3+4(-2)-1 = -8-8-1 = -17
-$$
+Approaching from the right ($x>5$): $x-5\to 0^+$, so $\frac{2}{x-5}\to +\infty$.
+
+Approaching from the left ($x<5$): $x-5\to 0^-$, so $\frac{2}{x-5}\to -\infty$.
+
+Since the function approaches different (infinite) behavior from the left and right, the limit **does not exist**.
 :::
 
 4. Let
 $$
-f(x)=\begin{cases}x+1, & x\geq 0\\-x+1, & x<0\end{cases}
+g(x)=\begin{cases}2x-3, & x\geq 1\\x-2, & x<1\end{cases}
 $$
 Does the following limit exist?
 $$
-\lim_{x\to 0}f(x)
+\lim_{x\to 1}g(x)
 $$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
-Approaching from the right ($x\geq 0$): $f(x)=x+1 \to 1$.
+Approaching from the right ($x\geq 1$): $g(x)=2x-3 \to 2(1)-3=-1$.
 
-Approaching from the left ($x<0$): $f(x)=-x+1 \to 1$.
+Approaching from the left ($x<1$): $g(x)=x-2 \to 1-2=-1$.
 
-Since the function approaches the same value from both sides, the limit **exists** and equals $1$.
+Since the function approaches the same value from both sides, the limit **exists** and equals $-1$.
 :::
 
 ## Rules for differentiation
 
-5. Find $f'(x)$ for $f(x)=x^5$
+5. Find $f'(x)$ for $f(x)=x^7$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
-f'(x)=5x^4
+f'(x)=7x^6
 $$
 :::
 
-6. Find $f'(x)$ for $f(x)=\frac{1}{x^2}$
+6. Find $f'(x)$ for $f(x)=\sqrt[4]{x}$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
-f(x)=x^{-2} \Rightarrow f'(x)=-2x^{-3}=-\frac{2}{x^3}
+f(x)=x^{1/4} \Rightarrow f'(x)=\frac{1}{4}x^{-3/4}
 $$
 :::
 
-7. Find $y'$ for $y=x^3-x^2-15$
+7. Find $y'$ for $y=x^4+3x^2-20$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
-y'=3x^2-2x
+y'=4x^3+6x
 $$
 :::
 
-8. Find $\frac{dy}{dx}$ for $y=x^2+\sqrt{2}x-\frac{8}{x}+4$
+8. Find $\frac{dy}{dx}$ for $y=4x^4-\frac{7}{x^3}+9$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
-\frac{dy}{dx}=2x+\sqrt{2}+\frac{8}{x^2}
+\frac{dy}{dx}=16x^3+\frac{21}{x^4}
 $$
 :::
 
-9. Find $g'(y)$ for $g(y)=2\sqrt{y}-e^y+20\ln(y)$
+9. Find $k'(t)$ for $k(t)=4t^{2/3}-5\ln(t)$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
-g'(y)=\frac{1}{\sqrt{y}}-e^y+\frac{20}{y}
+k'(t)=\frac{8}{3}t^{-1/3}-\frac{5}{t}
 $$
 :::
 
-## Higher-order derivatives
+## Higher-order and Partial Derivatives
 
-10. Find the third derivative of $H(z)=2z^5-4z^3+6z-7$
+10. Find the third derivative of $K(w)=w^6+5w^4-3w^2+w$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
-H'(z)=10z^4-12z^2+6
+K'(w)=6w^5+20w^3-6w+1
 $$
 $$
-H''(z)=40z^3-24z
+K''(w)=30w^4+60w^2-6
 $$
 $$
-H'''(z)=120z^2-24
+K'''(w)=120w^3+120w
 $$
 :::
 
@@ -136,23 +140,21 @@ a(t)=s''(t)=6t-12
 $$
 :::
 
-## Partial derivatives
-
-12. Find $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ for $f(x,y)=x^2y-2x+y-1$, then evaluate both at $(1,3)$.
+12. Find $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ for $f(x,y)=3xy^2-x^2+5y-2$, then evaluate both at $(2,1)$.
 
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
-\frac{\partial f}{\partial x}=2xy-2, \qquad \frac{\partial f}{\partial y}=x^2+1
+\frac{\partial f}{\partial x}=3y^2-2x, \qquad \frac{\partial f}{\partial y}=6xy+5
 $$
-At $(1,3)$: $\left.\frac{\partial f}{\partial x}\right|_{(1,3)}=2(1)(3)-2=4$, and $\left.\frac{\partial f}{\partial y}\right|_{(1,3)}=1^2+1=2$
+At $(2,1)$: $\left.\frac{\partial f}{\partial x}\right|_{(2,1)}=3(1)^2-2(2)=-1$, and $\left.\frac{\partial f}{\partial y}\right|_{(2,1)}=6(2)(1)+5=17$
 :::
 
-13. Find $\frac{\partial B}{\partial x}$, $\frac{\partial B}{\partial y}$, and $\frac{\partial B}{\partial z}$ for $B(x,y,z)=0.4x^3y-3.6y^2+4zx+8$
+13. Find $\frac{\partial C}{\partial x}$, $\frac{\partial C}{\partial y}$, and $\frac{\partial C}{\partial z}$ for $C(x,y,z)=2x^2z-5y^3+3xy-z^2+10$
 
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
-\frac{\partial B}{\partial x}=1.2x^2y+4z, \qquad \frac{\partial B}{\partial y}=0.4x^3-7.2y, \qquad \frac{\partial B}{\partial z}=4x
+\frac{\partial C}{\partial x}=4xz+3y, \qquad \frac{\partial C}{\partial y}=-15y^2+3x, \qquad \frac{\partial C}{\partial z}=2x^2-2z
 $$
 :::

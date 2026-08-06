@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -40,10 +43,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ee4c798a696f410de894479ed283eeec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-17e5a23d094ee4d3ea1f9bf67e0e3d54.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d5893f183f957c0767c819e1659172ce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-5cef1391e92990c1d02e0f0e735fafd2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -75,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -193,8 +196,7 @@ window.Quarto = {
   <ul>
   <li><a href="#limits" id="toc-limits" class="nav-link active" data-scroll-target="#limits">Limits</a></li>
   <li><a href="#rules-for-differentiation" id="toc-rules-for-differentiation" class="nav-link" data-scroll-target="#rules-for-differentiation">Rules for differentiation</a></li>
-  <li><a href="#higher-order-derivatives" id="toc-higher-order-derivatives" class="nav-link" data-scroll-target="#higher-order-derivatives">Higher-order derivatives</a></li>
-  <li><a href="#partial-derivatives" id="toc-partial-derivatives" class="nav-link" data-scroll-target="#partial-derivatives">Partial derivatives</a></li>
+  <li><a href="#higher-order-and-partial-derivatives" id="toc-higher-order-and-partial-derivatives" class="nav-link" data-scroll-target="#higher-order-and-partial-derivatives">Higher-order and Partial Derivatives</a></li>
   </ul>
 </nav>
     </div>
@@ -209,7 +211,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="limits">Limits</h2>
 <ol type="1">
 <li>Evaluate: <span class="math display">\[
-\lim_{x\to 3}(2x^2-5x+1)
+\lim_{x\to -3}(x^2+4x-5)
 \]</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -225,14 +227,14 @@ window.Quarto = {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\lim_{x\to 3}(2x^2-5x+1) = 2(3)^2-5(3)+1 = 18-15+1 = 4
+\lim_{x\to -3}(x^2+4x-5) = (-3)^2+4(-3)-5 = 9-12-5 = -8
 \]</span></p>
 </div>
 </div>
 </div>
 <ol start="2" type="1">
-<li>Does the following limit exist? <span class="math display">\[
-\lim_{x\to 1}\frac{|x-1|}{x-1}
+<li>Does the following limit exist? (Hint: Expand first) <span class="math display">\[
+\lim_{x\to 4}\frac{(x-1)^2}{(x-1)}
 \]</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -247,15 +249,17 @@ window.Quarto = {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Approaching from the right (<span class="math inline">\(x&gt;1\)</span>): <span class="math inline">\(\frac{x-1}{x-1}=1\)</span>.</p>
-<p>Approaching from the left (<span class="math inline">\(x&lt;1\)</span>): <span class="math inline">\(\frac{-(x-1)}{x-1}=-1\)</span>.</p>
-<p>Since the function approaches different values from the left and right, the limit <strong>does not exist</strong>.</p>
+<p>Simplify first: <span class="math inline">\(\frac{(x-1)^2}{(x-1)}=\frac{(x-1)(x-1)}{(x-1)}=x-1\)</span> for <span class="math inline">\(x\neq 1\)</span>.</p>
+<p><span class="math display">\[
+\lim_{x\to 4}(x-1) = 3
+\]</span></p>
+<p>The limit <strong>exists</strong> and equals <span class="math inline">\(3\)</span>.</p>
 </div>
 </div>
 </div>
 <ol start="3" type="1">
-<li>Evaluate: <span class="math display">\[
-\lim_{x\to -2}(x^3+4x-1)
+<li>Does the following limit exist? <span class="math display">\[
+\lim_{x\to 5}\frac{2}{x-5}
 \]</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -270,17 +274,17 @@ window.Quarto = {
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\lim_{x\to -2}(x^3+4x-1) = (-2)^3+4(-2)-1 = -8-8-1 = -17
-\]</span></p>
+<p>Approaching from the right (<span class="math inline">\(x&gt;5\)</span>): <span class="math inline">\(x-5\to 0^+\)</span>, so <span class="math inline">\(\frac{2}{x-5}\to +\infty\)</span>.</p>
+<p>Approaching from the left (<span class="math inline">\(x&lt;5\)</span>): <span class="math inline">\(x-5\to 0^-\)</span>, so <span class="math inline">\(\frac{2}{x-5}\to -\infty\)</span>.</p>
+<p>Since the function approaches different (infinite) behavior from the left and right, the limit <strong>does not exist</strong>.</p>
 </div>
 </div>
 </div>
 <ol start="4" type="1">
 <li>Let <span class="math display">\[
-f(x)=\begin{cases}x+1, &amp; x\geq 0\\-x+1, &amp; x&lt;0\end{cases}
+g(x)=\begin{cases}2x-3, &amp; x\geq 1\\x-2, &amp; x&lt;1\end{cases}
 \]</span> Does the following limit exist? <span class="math display">\[
-\lim_{x\to 0}f(x)
+\lim_{x\to 1}g(x)
 \]</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -295,9 +299,9 @@ f(x)=\begin{cases}x+1, &amp; x\geq 0\\-x+1, &amp; x&lt;0\end{cases}
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Approaching from the right (<span class="math inline">\(x\geq 0\)</span>): <span class="math inline">\(f(x)=x+1 \to 1\)</span>.</p>
-<p>Approaching from the left (<span class="math inline">\(x&lt;0\)</span>): <span class="math inline">\(f(x)=-x+1 \to 1\)</span>.</p>
-<p>Since the function approaches the same value from both sides, the limit <strong>exists</strong> and equals <span class="math inline">\(1\)</span>.</p>
+<p>Approaching from the right (<span class="math inline">\(x\geq 1\)</span>): <span class="math inline">\(g(x)=2x-3 \to 2(1)-3=-1\)</span>.</p>
+<p>Approaching from the left (<span class="math inline">\(x&lt;1\)</span>): <span class="math inline">\(g(x)=x-2 \to 1-2=-1\)</span>.</p>
+<p>Since the function approaches the same value from both sides, the limit <strong>exists</strong> and equals <span class="math inline">\(-1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -305,7 +309,7 @@ f(x)=\begin{cases}x+1, &amp; x\geq 0\\-x+1, &amp; x&lt;0\end{cases}
 <section id="rules-for-differentiation" class="level2">
 <h2 class="anchored" data-anchor-id="rules-for-differentiation">Rules for differentiation</h2>
 <ol start="5" type="1">
-<li>Find <span class="math inline">\(f'(x)\)</span> for <span class="math inline">\(f(x)=x^5\)</span></li>
+<li>Find <span class="math inline">\(f'(x)\)</span> for <span class="math inline">\(f(x)=x^7\)</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -320,13 +324,13 @@ f(x)=\begin{cases}x+1, &amp; x\geq 0\\-x+1, &amp; x&lt;0\end{cases}
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-f'(x)=5x^4
+f'(x)=7x^6
 \]</span></p>
 </div>
 </div>
 </div>
 <ol start="6" type="1">
-<li>Find <span class="math inline">\(f'(x)\)</span> for <span class="math inline">\(f(x)=\frac{1}{x^2}\)</span></li>
+<li>Find <span class="math inline">\(f'(x)\)</span> for <span class="math inline">\(f(x)=\sqrt[4]{x}\)</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -341,13 +345,13 @@ f'(x)=5x^4
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-f(x)=x^{-2} \Rightarrow f'(x)=-2x^{-3}=-\frac{2}{x^3}
+f(x)=x^{1/4} \Rightarrow f'(x)=\frac{1}{4}x^{-3/4}
 \]</span></p>
 </div>
 </div>
 </div>
 <ol start="7" type="1">
-<li>Find <span class="math inline">\(y'\)</span> for <span class="math inline">\(y=x^3-x^2-15\)</span></li>
+<li>Find <span class="math inline">\(y'\)</span> for <span class="math inline">\(y=x^4+3x^2-20\)</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -362,13 +366,13 @@ f(x)=x^{-2} \Rightarrow f'(x)=-2x^{-3}=-\frac{2}{x^3}
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-y'=3x^2-2x
+y'=4x^3+6x
 \]</span></p>
 </div>
 </div>
 </div>
 <ol start="8" type="1">
-<li>Find <span class="math inline">\(\frac{dy}{dx}\)</span> for <span class="math inline">\(y=x^2+\sqrt{2}x-\frac{8}{x}+4\)</span></li>
+<li>Find <span class="math inline">\(\frac{dy}{dx}\)</span> for <span class="math inline">\(y=4x^4-\frac{7}{x^3}+9\)</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -383,13 +387,13 @@ y'=3x^2-2x
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\frac{dy}{dx}=2x+\sqrt{2}+\frac{8}{x^2}
+\frac{dy}{dx}=16x^3+\frac{21}{x^4}
 \]</span></p>
 </div>
 </div>
 </div>
 <ol start="9" type="1">
-<li>Find <span class="math inline">\(g'(y)\)</span> for <span class="math inline">\(g(y)=2\sqrt{y}-e^y+20\ln(y)\)</span></li>
+<li>Find <span class="math inline">\(k'(t)\)</span> for <span class="math inline">\(k(t)=4t^{2/3}-5\ln(t)\)</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
@@ -404,14 +408,14 @@ y'=3x^2-2x
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-g'(y)=\frac{1}{\sqrt{y}}-e^y+\frac{20}{y}
+k'(t)=\frac{8}{3}t^{-1/3}-\frac{5}{t}
 \]</span></p>
 </div>
 </div>
 </div>
 </section>
-<section id="higher-order-derivatives" class="level2">
-<h2 class="anchored" data-anchor-id="higher-order-derivatives">Higher-order derivatives</h2>
+<section id="higher-order-and-partial-derivatives" class="level2">
+<h2 class="anchored" data-anchor-id="higher-order-and-partial-derivatives">Higher-order and Partial Derivatives</h2>
 <ol start="10" type="1">
 <li>Find the third derivative of <span class="math inline">\(H(z)=2z^5-4z^3+6z-7\)</span></li>
 </ol>
@@ -460,11 +464,8 @@ a(t)=s''(t)=6t-12
 </div>
 </div>
 </div>
-</section>
-<section id="partial-derivatives" class="level2">
-<h2 class="anchored" data-anchor-id="partial-derivatives">Partial derivatives</h2>
 <ol start="12" type="1">
-<li>Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for <span class="math inline">\(f(x,y)=x^2y-2x+y-1\)</span>, then evaluate both at <span class="math inline">\((1,3)\)</span>.</li>
+<li>Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for <span class="math inline">\(f(x,y)=3xy^2-x^2+5y-2\)</span>, then evaluate both at <span class="math inline">\((2,1)\)</span>.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
@@ -479,13 +480,13 @@ a(t)=s''(t)=6t-12
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\frac{\partial f}{\partial x}=2xy-2, \qquad \frac{\partial f}{\partial y}=x^2+1
-\]</span> At <span class="math inline">\((1,3)\)</span>: <span class="math inline">\(\left.\frac{\partial f}{\partial x}\right|_{(1,3)}=2(1)(3)-2=4\)</span>, and <span class="math inline">\(\left.\frac{\partial f}{\partial y}\right|_{(1,3)}=1^2+1=2\)</span></p>
+\frac{\partial f}{\partial x}=3y^2-2x, \qquad \frac{\partial f}{\partial y}=6xy+5
+\]</span> At <span class="math inline">\((2,1)\)</span>: <span class="math inline">\(\left.\frac{\partial f}{\partial x}\right|_{(2,1)}=3(1)^2-2(2)=-1\)</span>, and <span class="math inline">\(\left.\frac{\partial f}{\partial y}\right|_{(2,1)}=6(2)(1)+5=17\)</span></p>
 </div>
 </div>
 </div>
 <ol start="13" type="1">
-<li>Find <span class="math inline">\(\frac{\partial B}{\partial x}\)</span>, <span class="math inline">\(\frac{\partial B}{\partial y}\)</span>, and <span class="math inline">\(\frac{\partial B}{\partial z}\)</span> for <span class="math inline">\(B(x,y,z)=0.4x^3y-3.6y^2+4zx+8\)</span></li>
+<li>Find <span class="math inline">\(\frac{\partial C}{\partial x}\)</span>, <span class="math inline">\(\frac{\partial C}{\partial y}\)</span>, and <span class="math inline">\(\frac{\partial C}{\partial z}\)</span> for <span class="math inline">\(C(x,y,z)=2x^2z-5y^3+3xy-z^2+10\)</span></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
@@ -500,7 +501,7 @@ a(t)=s''(t)=6t-12
 <div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-\frac{\partial B}{\partial x}=1.2x^2y+4z, \qquad \frac{\partial B}{\partial y}=0.4x^3-7.2y, \qquad \frac{\partial B}{\partial z}=4x
+\frac{\partial C}{\partial x}=4xz+3y, \qquad \frac{\partial C}{\partial y}=-15y^2+3x, \qquad \frac{\partial C}{\partial z}=2x^2-2z
 \]</span></p>
 </div>
 </div>
