@@ -3787,18 +3787,11 @@
     "text": "Rules for differentiation\n\nFind \\(f'(x)\\) for \\(f(x)=x^7\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf'(x)=7x^6\n\\]\n\n\n\n\nFind \\(f'(x)\\) for \\(f(x)=\\sqrt[4]{x}\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nf(x)=x^{1/4} \\Rightarrow f'(x)=\\frac{1}{4}x^{-3/4}\n\\]\n\n\n\n\nFind \\(y'\\) for \\(y=x^4+3x^2-20\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\ny'=4x^3+6x\n\\]\n\n\n\n\nFind \\(\\frac{dy}{dx}\\) for \\(y=4x^4-\\frac{7}{x^3}+9\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{dy}{dx}=16x^3+\\frac{21}{x^4}\n\\]\n\n\n\n\nFind \\(k'(t)\\) for \\(k(t)=4t^{2/3}-5\\ln(t)\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nk'(t)=\\frac{8}{3}t^{-1/3}-\\frac{5}{t}\n\\]"
   },
   {
-    "objectID": "course-materials/examples/day2-morning-extra-examples.html#higher-order-derivatives",
-    "href": "course-materials/examples/day2-morning-extra-examples.html#higher-order-derivatives",
+    "objectID": "course-materials/examples/day2-morning-extra-examples.html#higher-order-and-partial-derivatives",
+    "href": "course-materials/examples/day2-morning-extra-examples.html#higher-order-and-partial-derivatives",
     "title": "Day 2 / Morning: Extra examples",
-    "section": "Higher-order derivatives",
-    "text": "Higher-order derivatives\n\nFind the third derivative of \\(H(z)=2z^5-4z^3+6z-7\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nH'(z)=10z^4-12z^2+6\n\\] \\[\nH''(z)=40z^3-24z\n\\] \\[\nH'''(z)=120z^2-24\n\\]\n\n\n\n\nPosition is given by \\(s(t)=t^3-6t^2+9t\\). Find the velocity function \\(s'(t)\\) and the acceleration function \\(s''(t)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nv(t)=s'(t)=3t^2-12t+9\n\\] \\[\na(t)=s''(t)=6t-12\n\\]"
-  },
-  {
-    "objectID": "course-materials/examples/day2-morning-extra-examples.html#partial-derivatives",
-    "href": "course-materials/examples/day2-morning-extra-examples.html#partial-derivatives",
-    "title": "Day 2 / Morning: Extra examples",
-    "section": "Partial derivatives",
-    "text": "Partial derivatives\n\nFind \\(\\frac{\\partial f}{\\partial x}\\) and \\(\\frac{\\partial f}{\\partial y}\\) for \\(f(x,y)=3xy^2-x^2+5y-2\\), then evaluate both at \\((2,1)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{\\partial f}{\\partial x}=3y^2-2x, \\qquad \\frac{\\partial f}{\\partial y}=6xy+5\n\\] At \\((2,1)\\): \\(\\left.\\frac{\\partial f}{\\partial x}\\right|_{(2,1)}=3(1)^2-2(2)=-1\\), and \\(\\left.\\frac{\\partial f}{\\partial y}\\right|_{(2,1)}=6(2)(1)+5=17\\)\n\n\n\n\nFind \\(\\frac{\\partial C}{\\partial x}\\), \\(\\frac{\\partial C}{\\partial y}\\), and \\(\\frac{\\partial C}{\\partial z}\\) for \\(C(x,y,z)=2x^2z-5y^3+3xy-z^2+10\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{\\partial C}{\\partial x}=4xz+3y, \\qquad \\frac{\\partial C}{\\partial y}=-15y^2+3x, \\qquad \\frac{\\partial C}{\\partial z}=2x^2-2z\n\\]"
+    "section": "Higher-order and Partial Derivatives",
+    "text": "Higher-order and Partial Derivatives\n\nFind the third derivative of \\(K(w)=w^6+5w^4-3w^2+w\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nK'(w)=6w^5+20w^3-6w+1\n\\] \\[\nK''(w)=30w^4+60w^2-6\n\\] \\[\nK'''(w)=120w^3+120w\n\\]\n\n\n\n\nPosition is given by \\(s(t)=t^3-6t^2+9t\\). Find the velocity function \\(s'(t)\\) and the acceleration function \\(s''(t)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nv(t)=s'(t)=3t^2-12t+9\n\\] \\[\na(t)=s''(t)=6t-12\n\\]\n\n\n\n\nFind \\(\\frac{\\partial f}{\\partial x}\\) and \\(\\frac{\\partial f}{\\partial y}\\) for \\(f(x,y)=3xy^2-x^2+5y-2\\), then evaluate both at \\((2,1)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{\\partial f}{\\partial x}=3y^2-2x, \\qquad \\frac{\\partial f}{\\partial y}=6xy+5\n\\] At \\((2,1)\\): \\(\\left.\\frac{\\partial f}{\\partial x}\\right|_{(2,1)}=3(1)^2-2(2)=-1\\), and \\(\\left.\\frac{\\partial f}{\\partial y}\\right|_{(2,1)}=6(2)(1)+5=17\\)\n\n\n\n\nFind \\(\\frac{\\partial C}{\\partial x}\\), \\(\\frac{\\partial C}{\\partial y}\\), and \\(\\frac{\\partial C}{\\partial z}\\) for \\(C(x,y,z)=2x^2z-5y^3+3xy-z^2+10\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{\\partial C}{\\partial x}=4xz+3y, \\qquad \\frac{\\partial C}{\\partial y}=-15y^2+3x, \\qquad \\frac{\\partial C}{\\partial z}=2x^2-2z\n\\]"
   },
   {
     "objectID": "course-materials/examples/day1-afternoon-extra-examples.html",
@@ -4198,12 +4191,5 @@
     "title": "Integrals, differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
-  },
-  {
-    "objectID": "course-materials/examples/day2-morning-extra-examples.html#higher-order-and-partial-derivatives",
-    "href": "course-materials/examples/day2-morning-extra-examples.html#higher-order-and-partial-derivatives",
-    "title": "Day 2 / Morning: Extra examples",
-    "section": "Higher-order and Partial Derivatives",
-    "text": "Higher-order and Partial Derivatives\n\nFind the third derivative of \\(H(z)=2z^5-4z^3+6z-7\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nH'(z)=10z^4-12z^2+6\n\\] \\[\nH''(z)=40z^3-24z\n\\] \\[\nH'''(z)=120z^2-24\n\\]\n\n\n\n\nPosition is given by \\(s(t)=t^3-6t^2+9t\\). Find the velocity function \\(s'(t)\\) and the acceleration function \\(s''(t)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nv(t)=s'(t)=3t^2-12t+9\n\\] \\[\na(t)=s''(t)=6t-12\n\\]\n\n\n\n\nFind \\(\\frac{\\partial f}{\\partial x}\\) and \\(\\frac{\\partial f}{\\partial y}\\) for \\(f(x,y)=3xy^2-x^2+5y-2\\), then evaluate both at \\((2,1)\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{\\partial f}{\\partial x}=3y^2-2x, \\qquad \\frac{\\partial f}{\\partial y}=6xy+5\n\\] At \\((2,1)\\): \\(\\left.\\frac{\\partial f}{\\partial x}\\right|_{(2,1)}=3(1)^2-2(2)=-1\\), and \\(\\left.\\frac{\\partial f}{\\partial y}\\right|_{(2,1)}=6(2)(1)+5=17\\)\n\n\n\n\nFind \\(\\frac{\\partial C}{\\partial x}\\), \\(\\frac{\\partial C}{\\partial y}\\), and \\(\\frac{\\partial C}{\\partial z}\\) for \\(C(x,y,z)=2x^2z-5y^3+3xy-z^2+10\\)\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\n\\frac{\\partial C}{\\partial x}=4xz+3y, \\qquad \\frac{\\partial C}{\\partial y}=-15y^2+3x, \\qquad \\frac{\\partial C}{\\partial z}=2x^2-2z\n\\]"
   }
 ]
