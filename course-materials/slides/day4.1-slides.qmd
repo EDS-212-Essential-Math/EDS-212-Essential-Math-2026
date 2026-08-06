@@ -894,7 +894,7 @@ The variance measures the mathematical dispersion of data relative to the mean, 
 $$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}$$
 :::
 
-<br>
+<br> 
 
 [Where $S^2$ is the sample variance, $x_i$ is a sample observation value, $\bar x$ is the sample mean, and $n$ is the number of observations.]{.body-text-m} 
 
