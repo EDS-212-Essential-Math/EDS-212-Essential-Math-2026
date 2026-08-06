@@ -158,7 +158,7 @@ Art by [Allison Horst](https://allisonhorst.com/)
 
 <hr>
 
-✏️ [For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous), and identify the size of the observed dataset.]{style="color:green;"}
+✏️ [For each of the scenarios, identify which are the dependent and independent variables, what type of variable is each one of them (quant/qual/binary/nominal/ordinal/discerete/continuous).]{style="color:green;"}
 
 <br>
 
@@ -188,13 +188,11 @@ Art by [Allison Horst](https://allisonhorst.com/)
 
 [A team studying nutrient runoff wants to know whether an agricultural watershed will exceed or stay below the regulatory nitrogen threshold in a given month. They collect data on 45 watersheds. For each watershed they have recorded whether the nitrogen threshold was exceeded or not exceeded, fertilizer application rate (kg N/ha), percent agricultural land cover, and average monthly rainfall.]{style="color:green;"}
 
-- Dependent variable: nitrogen threshold exceeded — qualitative, binary
+- Dependent variable: nitrogen threshold exceeded: qualitative, binary
 - Independent variables:
-  - Fertilizer application rate — quantitative, continuous
-  - % agricultural land cover — quantitative, continuous
-  - Monthly rainfall — quantitative, continuous
-
-Sample size: n = 45 watersheds
+  - Fertilizer application rate: quantitative, continuous
+  - % agricultural land cover: quantitative, continuous
+  - Monthly rainfall: quantitative, continuous
 
 ---
 
@@ -218,15 +216,13 @@ Sample size: n = 45 watersheds
 
 [We are interested in predicting the number of air quality complaints filed in 2025 in low-income urban neighborhoods. We collect data for 60 neighborhoods over 2025. For each neighborhood we record number of complaints filed in the year, median household income, distance to the nearest industrial facility, type of nearest industrial facility (chemical plant, manufacturing, power plant), percentage of residents who are renters, and local particulate matter (PM2.5) concentration.]{style="color:green;"}
 
-- Dependent variable: number of complaints filed — quantitative, discrete
+- Dependent variable: number of complaints filed: quantitative, discrete
 - Independent variables:
-  - Median household income — quantitative, continuous
-  - Distance to nearest industrial facility — quantitative, continuous
-  - Type of nearest industrial facility — qualitative, nominal
-  - % residents who are renters — quantitative, continuous
-  - PM2.5 concentration — quantitative, continuous
-
-Sample size: n = 60 neighborhoods
+  - Median household income: quantitative, continuous
+  - Distance to nearest industrial facility: quantitative, continuous
+  - Type of nearest industrial facility: qualitative, nominal
+  - % residents who are renters: quantitative, continuous
+  - PM2.5 concentration: quantitative, continuous
 
 ---
 
@@ -296,10 +292,66 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 
 Basic ones:
 
+- Scatterplots 
 - Histograms
 - Boxplots
-- Scatterplots 
 :::
+
+---
+
+## {#scatterplots-blank data-menu-title="Scatterplots"}
+
+[Scatterplots]{.slide-title}
+
+<hr>
+
+✏️   
+
+---
+
+## {#scatterplots data-menu-title="Scatterplots"}
+
+[Scatterplots]{.slide-title}
+
+<hr>
+
+A scatterplot shows the relationship between **two numeric variables**: each observation becomes a point, positioned using its value on the $x$-axis and its value on the $y$-axis. A third (categorical) variable can be mapped to color or shape.
+
+<br>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+library(tidyverse)
+
+ggplot(data = palmerpenguins::penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species)) +
+  labs(x = "Bill depth (mm)", y = "Bill length (mm)", color = "Species") +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 22),
+    axis.title = element_text(size = 26),
+    legend.text = element_text(size = 20),
+    legend.title = element_text(size = 22)
+  )
+```
+
+:::{.center-text .teal-text}
+Always, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.
+:::
+
+---
+
+## {#histogram-blank data-menu-title="Histogram"}
+
+[Histogram]{.slide-title}
+
+<hr>
+
+✏️ 
 
 ---
 
@@ -318,7 +370,7 @@ Basic ones:
 ::: {.body-text-m}
 **To construct one:**
 
-1. Divide the range of the data into equal-width **bins**
+1. Divide the range of the data into equal-width bins
 2. Count how many observations fall into each bin
 3. Draw a bar over each bin, with height equal to that count
 :::
@@ -355,6 +407,7 @@ Using bins of width 5 cm:
 
 | Bin (cm) | Count |
 |:---:|:---:|
+| [0, 5)   | 0 |
 | [5, 10)  | 2 |
 | [10, 15) | 4 |
 | [15, 20) | 4 |
@@ -367,7 +420,7 @@ Using bins of width 5 cm:
 #| echo: false
 #| out-width: "100%"
 #| fig-align: "center"
-library(tidyverse)
+
 dbh <- c(8, 9, 11, 12, 12, 14, 15, 15, 16, 19, 22, 27)
 ggplot(data.frame(dbh), aes(x = dbh)) +
   geom_histogram(breaks = seq(5, 30, by = 5), color = "white") +
@@ -455,7 +508,7 @@ ggplot(data.frame(waves), aes(x = waves)) +
 
 **One simple way to find them:**
 
-1. Order the data and find the median ($Q_2$): this splits the data into a lower half and an upper half
+1. Order the data and find the median ($Q_2$): this splits the data into a lower half and an upper half. If there's an even number of elements, take the average between the two "middle ones".
 2. $Q_1$ = median of the lower half
 3. $Q_3$ = median of the upper half
 
@@ -466,6 +519,10 @@ ggplot(data.frame(waves), aes(x = waves)) +
 [Quartiles]{.slide-title}
 
 <hr>
+
+- $Q_1$ (1st quartile): 25% of values fall below this point
+- $Q_2$ (2nd quartile): the **median**: 50% of values fall below this point
+- $Q_3$ (3rd quartile): 75% of values fall below this point
 
 ✏️ [Find $Q_1, Q_2,$ and $Q_3$ for the values 4, 16, 8, 40, 2, 14, 6, 10, 12]{style="color:green;"}
 
@@ -484,19 +541,21 @@ Upper half: 12, 14, 16, 40 (four values) → Q3 = (14+16)/2 = 15
 
 <hr>
 
+- $Q_1$ (1st quartile): 25% of values fall below this point
+- $Q_2$ (2nd quartile): the **median**: 50% of values fall below this point
+- $Q_3$ (3rd quartile): 75% of values fall below this point
+
 💡 [Let's see a solution!]{style="color:green;"}
 
 [Find $Q_1, Q_2,$ and $Q_3$ for the values 4, 16, 8, 40, 2, 14, 6, 10, 12]{style="color:green;"}
 
 <br>
 
-::: {.body-text-m}
 Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40
 
 - $Q_2$ (median): 10
-- Lower half: 2, 4, 6, 8 — an **even** number of values, so $Q_1$ is the average of the middle two: $Q_1 = \frac{4+6}{2} = 5$
-- Upper half: 12, 14, 16, 40 — again an even number of values: $Q_3 = \frac{14+16}{2} = 15$
-:::
+- Lower half: 2, 4, 6, 8: an **even** number of values, so $Q_1$ is the average of the middle two: $Q_1 = \frac{4+6}{2} = 5$
+- Upper half: 12, 14, 16, 40: again an even number of values: $Q_3 = \frac{14+16}{2} = 15$
 
 ---
 
@@ -542,6 +601,14 @@ knitr::include_graphics("images/boxplot.png")
 
 <hr>
 
+**How it's drawn:**
+
+1. Draw a box from $Q_1$ to $Q_3$: this box spans the **interquartile range**:
+$$IQR = Q_3 - Q_1$$
+2. Draw a line inside the box at the median ($Q_2$)
+3. Draw whiskers extending to the furthest observation within $1.5 \times IQR$ of the box
+4. Plot any observation beyond the whiskers individually, as a dot (an **outlier**)
+
 ✏️ [Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 ($Q_1=5$, $Q_2=10$, $Q_3=15$), draw the box plot by hand.]{style="color:green;"}
 
 ---
@@ -562,7 +629,7 @@ knitr::include_graphics("images/boxplot.png")
 - $Q_3$: 15
 - $IQR = 15-5 = 10$
 - $Q_3 + 1.5 \times IQR = 15+15 = 30$
-- 40 is beyond that value, so it's an **outlier** — the whisker stops at 16, the last value within $1.5 \times IQR$ of the box
+- 40 is beyond that value, so it's an **outlier**: the whisker stops at 16, the last value within $1.5 \times IQR$ of the box
 :::
 :::
 
@@ -646,40 +713,6 @@ ggplot(nitrate, aes(x = nitrate_mgL, y = farm)) +
 - **Outlier:** Farm B has a high outlier at 9.5 mg/L, flagged because it falls more than 1.5×IQR above the 3rd quartile. This might be worth investigating as a possible one-time event.
 :::
 
----
-
-## {#scatterplots data-menu-title="Scatterplots"}
-
-[Scatterplots]{.slide-title}
-
-<hr>
-
-A scatterplot shows the relationship between **two numeric variables**: each observation becomes a point, positioned using its value on the $x$-axis and its value on the $y$-axis. A third (categorical) variable can be mapped to color or shape.
-
-<br>
-
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-
-ggplot(data = palmerpenguins::penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
-  geom_point(aes(color = species)) +
-  labs(x = "Bill depth (mm)", y = "Bill length (mm)", color = "Species") +
-  theme_minimal() +
-  theme(
-    axis.text = element_text(size = 22),
-    axis.title = element_text(size = 26),
-    legend.text = element_text(size = 20),
-    legend.title = element_text(size = 22)
-  )
-```
-
-:::{.center-text .teal-text}
-Always, always, always look at your data. It is the only way to make a responsible decision about an appropriate type of analysis.
-:::
 ---
 
 ## {#break data-menu-title="5 minute break"} 
