@@ -85,21 +85,21 @@ format:
 
 <hr>
 
-**1. Deck of cards**
+**1. Coin flip**
 
-- Experiment: Drawing a single card from a deck of cards
-- Event space: any one of the 52 cards in the deck
-- Event: $A =$ we draw an ace
-- $P(A)=$ What is the probability of drawing an ace from the deck?
+- Experiment: flipping a coin
+- Event space: {heads, tails}
+- Event: $A =$ we flip the coin and get tails
+- $P(A)=$ the probability of flipping the coin and getting tails
 
 <br>
 
 **2. Water sample contaminant test**
 
 - Experiment: testing water samples
-- Event space: measurements for nitrate and measurements for E. coli
+- Event space: all possible nitrate concentration readings (mg/L)
 - Event : $A=$ the sample exceeds a certain nitrate limit
-- $P(A) =$ What is the probability that a sample exceeds the nitrate limit?
+- $P(A) =$ the probability that a sample exceeds the nitrate limit
 
 ---
 
@@ -126,7 +126,7 @@ If knowing $A$ occurred *does* change the probability of $B$, the events are **n
 
 <br>
 
-**Conditional probability:** For events $A$ and $B$, the probability of event $B$ happening given that $A$ is know to occur is denoted as $P(B|A)$.
+**Conditional probability:** For events $A$ and $B$, the probability of event $B$ happening given that $A$ is known to occur is denoted as $P(B|A)$.
 
 <br>
 
@@ -138,7 +138,7 @@ If knowing $A$ occurred *does* change the probability of $B$, the events are **n
 
 - Two consecutive coin flips: 
 
-- In two water samples, exceeding the nitrate limit in one (one event) and exceeding the E. coli limit in another (second event)
+- In two water samples, exceeding the nitrate limit in one (one event) and exceeding nitrate limit in another (second event)
 
 ---
 
@@ -155,7 +155,7 @@ If knowing $A$ occurred *does* change the probability of $B$, the events are **n
 
 <br>
 
-**Conditional probability:** For events $A$ and $B$, the probability of event $B$ happening given that $A$ is know to occur is denoted as $P(B|A)$.
+**Conditional probability:** For events $A$ and $B$, the probability of event $B$ happening given that $A$ is known to occur is denoted as $P(B|A)$.
 
 <br>
 
@@ -165,9 +165,9 @@ If knowing $A$ occurred *does* change the probability of $B$, the events are **n
 ✏️ Are the following events independent or non independent?
 :::
 
-Two consecutive coin flips are independent events. One has no bearing on the other.
+Two consecutive coin flips are independent events. One has no influence on the other.
 
-In two water samples, exceeding the nitrate limit in one (one event) and exceeding the E. coli limit in another (second event) could be non-independent. Perhaps both samples are affected by the same upstream agricultural runoff, so if $A$ occurs, $B$ becomes more likely too.
+Exceeding the nitrate limit in two separate water samples could be non-independent. Perhaps both samples are affected by the same upstream agricultural runoff, so if $A$ occurs, $B$ becomes more likely too. We need more information to assess this!
 
 <!-- $$P(B|A)=\frac{P(A \cap\ B)}{P(A)}$$ -->
 
@@ -175,7 +175,7 @@ In two water samples, exceeding the nitrate limit in one (one event) and exceedi
 
 ## {#prob-theory-1 data-menu-title="Probability Theory"} 
 
-[Intersection, union, and compliment]{.slide-title2}
+[Intersection, union, and complement]{.slide-title2}
 
 <hr>
 
@@ -188,7 +188,7 @@ Given two events $A$ and $B$:
 
 - **Union:** $A\cup B=$ denotes *at least one* of the events happens (could be just one, or both). In other words, these are **OR** probability statements. 
 
-- **Complement:**  $A'=$ denotes the event $A$ *does not* occurring.
+- **Complement:**  $A'=$ denotes the event $A$ *does not* occur.
 
 :::
 
@@ -196,7 +196,7 @@ Given two events $A$ and $B$:
 ✏️ Given the events $A$ and $B$, write in words what each of the following mean:
 :::
 
-$A=$ water sample exceeds nitrate limit, $B=$ water sample exceeds E. coli limit
+$A=$ nitrate concentration upstream of a farm exceeds the safety limit, $B=$ nitrate concentration downstream of the farm exceeds the safety limit
 
 - $A \cap B$ =
 
@@ -208,7 +208,7 @@ $A=$ water sample exceeds nitrate limit, $B=$ water sample exceeds E. coli limit
 
 ## {#prob-theory data-menu-title="Probability Theory"} 
 
-[Intersection, union, and compliment]{.slide-title2}
+[Intersection, union, and complement]{.slide-title2}
 
 <hr>
 
@@ -221,7 +221,7 @@ Given two events $A$ and $B$:
 
 - **Union:** $A\cup B=$ denotes *at least one* of the events happens (could be just one, or both). In other words, these are **OR** probability statements. 
 
-- **Complement:**  $A'=$ denotes the event $A$ *does not* occurring.
+- **Complement:**  $A'=$ denotes the event $A$ *does not* occur.
 
 :::
 
@@ -229,13 +229,13 @@ Given two events $A$ and $B$:
 ✏️ Given the events $A$ and $B$, write in words what each of the following mean:
 :::
 
-$A=$ water sample exceeds nitrate limit, $B=$ water sample exceeds E. coli limit
+$A=$ nitrate concentration upstream of a farm exceeds the safety limit, $B=$ nitrate concentration downstream of the farm exceeds the safety limit
 
-- $A \cap B$ = the water sample exceeds both the nitrate limit *and* the E. coli limit
+- $A \cap B$ = nitrate concentration exceeds the safety limit both upstream *and* downstream of the farm
 
-- $A \cup B$ = the water sample exceeds the nitrate limit, the E. coli limit, or both.
+- $A \cup B$ = nitrate concentration exceeds the safety limit upstream, downstream, or both
 
-- $A'$ = the water sample does *not* exceed the nitrate limit
+- $A'$ = nitrate concentration does *not* exceed the safety limit upstream
 
 ---
 
@@ -254,7 +254,7 @@ $P(A\cap B)=$ the probability of events A *and* B happening.
 
   - If $A$ and $B$ are independent: $P(A\cap B) = P(A)\times P(B)$
 
-  - If $A$ and $B$ are not independent: $P(A\cap B) = P(A)P(A|B)$
+  - If $A$ and $B$ are not independent: $P(A\cap B) = P(A)P(B|A)$
 
 ---
 
@@ -273,13 +273,13 @@ $P(A\cap B)=$ the probability of events A *and* B happening.
 
   - If $A$ and $B$ are independent: $P(A\cap B) = P(A)\times P(B)$
 
-  - If $A$ and $B$ are not independent: $P(A\cap B) = P(A)P(A|B)$
+  - If $A$ and $B$ are not independent: $P(A\cap B) = P(A)P(B|A)$
 
 <br>
 
 **Probability of the union**
 
-**Notation:** $P(A\cup B)=$ rhe probability of A *or* B happening.
+**Notation:** $P(A\cup B)=$ the probability of A *or* B happening.
 
 **Calculation:** $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
 
@@ -300,13 +300,13 @@ $P(A\cap B)=$ the probability of events A *and* B happening.
 
   - If $A$ and $B$ are independent: $P(A\cap B) = P(A)\times P(B)$
 
-  - If $A$ and $B$ are not independent: $P(A\cap B) = P(A)P(A|B)$
+  - If $A$ and $B$ are not independent: $P(A\cap B) = P(A)P(B|A)$
 
 <br>
 
 **Probability of the union**
 
-**Notation:** $P(A\cup B)=$ rhe probability of A *or* B happening.
+**Notation:** $P(A\cup B)=$ the probability of A *or* B happening.
 
 **Calculation:** $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
 
@@ -365,12 +365,12 @@ $P(A\cap B)=$ the probability of events A *and* B happening.
 
 <hr>
 
-| | SB registered voters | Purple urchins (Channel Islands) |  |
+| | Nitrate concentration | SB registered voters | Purple urchins (Channel Islands) |
 |---|---|---|---|
-| **Population** | All registered voters in Santa Barbara County | All purple urchins in the Channel Islands Marine Sanctuary | |
-| **Sample** | 500 voters surveyed by phone | 50 urchins counted along 10 dive transects | |
-| **Parameter** | True % of all SB voters supporting a ballot measure | True average urchin density (per m²), sanctuary-wide | |
-| **Statistic** | % of the 500 surveyed voters supporting the measure | Average urchin density (per m²) across the 10 transects | |
+| **Population** | All nitrate concentration readings in the stream over the year | All registered voters in Santa Barbara County | All purple urchins in the Channel Islands Marine Sanctuary |
+| **Sample** | Nitrate concentration from 20 water samples collected weekly | 500 voters surveyed by phone | 50 urchins counted along 10 dive transects |
+| **Parameter** | True average nitrate concentration in the stream over the year | True % of all SB voters supporting a ballot measure | True average urchin density (per m²), sanctuary-wide |
+| **Statistic** | Average nitrate concentration calculated from the 20 samples | % of the 500 surveyed voters supporting the measure | Average urchin density (per m²) across the 10 transects |
 
 ---
 
@@ -380,18 +380,18 @@ $P(A\cap B)=$ the probability of events A *and* B happening.
 
 <hr>
 
-| | SB registered voters | Purple urchins (Channel Islands) | [✏️ Your example]{style="color:green;"} |
+| | [✏️ Your example]{style="color:green;"} | SB registered voters | Purple urchins (Channel Islands) |
 |---|---|---|---|
-| **Population** | All registered voters in Santa Barbara County | All purple urchins in the Channel Islands Marine Sanctuary | |
-| **Sample** | 500 voters surveyed by phone | 50 urchins counted along 10 dive transects | |
-| **Parameter** | True % of all SB voters supporting a ballot measure | True average urchin density (per m²), sanctuary-wide | |
-| **Statistic** | % of the 500 surveyed voters supporting the measure | Average urchin density (per m²) across the 10 transects | |
+| **Population** | | All registered voters in Santa Barbara County | All purple urchins in the Channel Islands Marine Sanctuary |
+| **Sample** | | 500 voters surveyed by phone | 50 urchins counted along 10 dive transects |
+| **Parameter** | | True % of all SB voters supporting a ballot measure | True average urchin density (per m²), sanctuary-wide |
+| **Statistic** | | % of the 500 surveyed voters supporting the measure | Average urchin density (per m²) across the 10 transects |
 
 ---
 
 ## {#inference-blank data-menu-title="Inference"}
 
-[Inference]{.slide-title}
+[Why do we sample?]{.slide-title}
 
 <hr>
 
