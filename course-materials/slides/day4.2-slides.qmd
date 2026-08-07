@@ -582,14 +582,14 @@ $$\sum_x P(X=x) = 1$$
 **Example:** $X=1$ if a fair coin lands tails, $X=0$ if heads.
 
 :::: {.columns}
-::: {.column width="45%"}
+::: {.column width="35%"}
 ::: {.body-text-m}
 - $x$-axis: possible values of $X$
 - $y$-axis: $P(X=x)$
 :::
 :::
 
-::: {.column width="55%"}
+::: {.column width="65%"}
 ```{r}
 #| echo: false
 #| warning: false
@@ -600,13 +600,13 @@ coin <- data.frame(x = c(0,1), p = c(0.5,0.5))
 
 ggplot(coin, aes(x = factor(x), y = p)) +
   geom_col(width = 0.4, fill = "#003660") +
-  geom_text(aes(label = p), vjust = -0.5, size = 6) +
+  geom_text(aes(label = p), vjust = -0.5, size = 12) +
   labs(x = "X (0 = heads, 1 = tails)", y = "P(X = x)") +
   ylim(0, 0.65) +
   theme_minimal() +
   theme(
-    axis.text = element_text(size = 18),
-    axis.title = element_text(size = 20)
+    axis.text = element_text(size = 26),
+    axis.title = element_text(size = 30)
   )
 ```
 :::
@@ -632,17 +632,13 @@ ggplot(coin, aes(x = factor(x), y = p)) +
 
 💡 [Let's see a solution!]{style="color:green;"}
 
-:::: {.columns}
-::: {.column width="40%"}
 | Species | Count | $P(X=x)$ |
 |---|---|---|
 | Deer | 5 | 0.5 |
 | Raccoon | 3 | 0.3 |
 | Coyote | 1 | 0.1 |
 | Owl | 1 | 0.1 |
-:::
 
-::: {.column width="60%"}
 ```{r}
 #| echo: false
 #| warning: false
@@ -662,50 +658,35 @@ ggplot(camera, aes(x = species, y = p)) +
     axis.title = element_text(size = 20)
   )
 ```
-:::
-::::
 
 ---
 
-## {#pmf-interpret-blank data-menu-title="Exercise: interpret a PMF"}
+## {#pmf-interpret-blank data-menu-title="Exercise: your 212 survey"}
 
-[Exercise]{.slide-title}
+[Exercise: your 212 survey]{.slide-title}
 
 <hr>
 
-::: {.body-text-m}
-$X=$ number of invasive species detected in a survey plot
-:::
+On day 1, you answered: *"What best describes your relationship with math?"*
 
-```{r}
-#| echo: false
-#| warning: false
-#| out-width: "70%"
-#| fig-align: "center"
-inv <- data.frame(x = c(0,1,2,3), p = c(0.4,0.3,0.2,0.1))
-
-ggplot(inv, aes(x = factor(x), y = p)) +
-  geom_col(width = 0.4, fill = "#003660") +
-  labs(x = "Number of invasive species (X)", y = "P(X = x)") +
-  ylim(0, 0.5) +
-  theme_minimal() +
-  theme(
-    axis.text = element_text(size = 18),
-    axis.title = element_text(size = 20)
-  )
-```
+| Response | Count |
+|---|---|
+| My mortal enemy | 0 |
+| A family friend you dislike but your parents insist you invite to everything | 3 |
+| The friend of a friend whose name you can never remember | 12 |
+| Respectful co-worker you can have a drink with | 15 |
+| My best friend! | 4 |
 
 :::{style="color:green;"}
-✏️ Using the PMF above:
-
-- What is the most likely number of invasive species to be detected?
-- What is $P(X \geq 2)$?
-- What is $P(X = 0)$?
+1. What is the random variable $X$ here? Is it quantitative or qualitative? Nominal, ordinal, or binary?
+2. Using these counts as an estimate, find $P(X=x)$ for each response, and draw the PMF.
+3. What is the probability that a randomly selected student has a positive relationship with math (i.e. "respectful coworker" or more positive)?
+4. What is the probability that a randomly selected doesn't have a neutral relationship (forgettable acquaintance) with math?
 :::
 
 ---
 
-## {#pmf-interpret data-menu-title="Exercise: interpret a PMF"}
+## {#pmf-interpret data-menu-title="Exercise: your class survey"}
 
 [Exercise: solution]{.slide-title}
 
@@ -713,11 +694,50 @@ ggplot(inv, aes(x = factor(x), y = p)) +
 
 💡 [Let's see a solution!]{style="color:green;"}
 
-::: {.body-text-m}
-- Most likely value: $X=0$ (tallest bar, $P(X=0)=0.4$)
-- $P(X \geq 2) = P(X=2)+P(X=3) = 0.2+0.1=0.3$
-- $P(X=0) = 0.4$
+**1.** $X=$ the response a student gave to the survey question. It's **qualitative**, and **ordinal**. The responses have an implied order, from worst to best relationship with math (much like a Likert scale).
+
+:::: {.columns}
+::: {.column width="45%"}
+| Response | Count | $P(X=x)$ |
+|---|---|---|
+| Mortal enemy | 0 | 0/34 = 0.00 |
+| Disliked family friend | 3 | 3/34 ≈ 0.09 |
+| Forgettable acquaintance | 12 | 12/34 ≈ 0.35 |
+| Respected co-worker | 15 | 15/34 ≈ 0.44 |
+| Best friend | 4 | 4/34 ≈ 0.12 |
 :::
+
+::: {.column width="55%"}
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "100%"
+#| fig-align: "center"
+survey <- data.frame(
+  response = c("Mortal enemy","Disliked family friend","Forgettable acquaintance","Respected co-worker","Best friend"),
+  count = c(0,3,12,15,4)
+)
+survey <- survey |> mutate(p = round(count/sum(count), 2))
+survey$response <- factor(survey$response, levels = rev(survey$response))
+
+ggplot(survey, aes(x = response, y = p)) +
+  geom_col(width = 0.5, fill = "#003660") +
+  geom_text(aes(label = p), hjust = -0.3, size = 6) +
+  coord_flip() +
+  ylim(0, 0.5) +
+  labs(x = NULL, y = "P(X = x)") +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 16),
+    axis.title = element_text(size = 20)
+  )
+```
+:::
+::::
+
+**3.** $P(\text{positive}) = P(\text{respected co-worker}) + P(\text{best friend}) = \frac{15+4}{34} \approx 0.56$
+
+**4.** $P(\text{not neutral}) = 1 - P(\text{forgettable acquaintance})= 1 - \frac{12}{34} \approx 0.65$
 
 ---
 
