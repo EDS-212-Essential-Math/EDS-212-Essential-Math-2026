@@ -11,7 +11,7 @@ format:
 
 ## {#title-slide data-menu-title="Title Slide" background="#053660"} 
 
-[EDS 212: Day 4, Lecture 2]{.custom-title}
+[EDS 212: Day 5, Lecture 1]{.custom-title}
 
 [*Basic probability theory, PDFs and PMFs, hypothesis testing intuition*]{.custom-subtitle}
 
@@ -37,9 +37,10 @@ format:
 
 ::: {.body-text-l}
 - Being familiar with the terms
+- Reporting uncertainty
+- Used in statistics
 - Hypothesis testing
-- Bayesian statistics
-- Decision making
+
 :::
 
 ---
@@ -67,11 +68,13 @@ format:
 
 <br>
 
-**Event:** A possible outcome. The probability of event $A$ occurring is written as $P(A)$.
+**Event:** A possible outcome within the event space.
 
 <br>
 
 **Probability:** the likelihood that an event occurs. 
+
+The probability of event $A$ occurring is written as $P(A)$.
 
 - $P = 0$ indicates no chance of an event happening 
 - $P=1$ indicates it is a certainty it will happen
@@ -138,7 +141,7 @@ If knowing $A$ occurred *does* change the probability of $B$, the events are **n
 
 - Two consecutive coin flips.
 
-- In two water samples on consecutive days, exceeding the nitrate limit in one (one event) and exceeding nitrate limit in another (second event).
+- Exceeding the nitrate limit in one day, then exceeding nitrate limit the next day.
 
 ---
 
@@ -439,6 +442,16 @@ This process is called **statistical inference**.
 
 ---
 
+## {#bessels-correction data-menu-title="Inference"}
+
+[Bessel's correction for variance ]{.slide-title}
+
+<hr>
+
+![Screenshot from [DataMListic](https://www.youtube.com/watch?v=E3_408q1mjo) video](images/variance.png)
+
+---
+
 ## {#conf-int-1 data-menu-title="Confidence interval"} 
 
 [Quantifying uncertainty]{.slide-title}
@@ -575,20 +588,18 @@ This connects back to *events* from earlier: "the sample exceeds the nitrate lim
 
 <hr>
 
-::: {.body-text-m}
 For a **discrete** random variable $X$, the **probability mass function (PMF)** gives $P(X=x)$ for each possible value $x$.
-
+e
+The sum of all values for the PMF must be 1:
 $$\sum_x P(X=x) = 1$$
-:::
-
-**Example:** $X=1$ if a fair coin lands tails, $X=0$ if heads.
 
 :::: {.columns}
 ::: {.column width="35%"}
-::: {.body-text-m}
+
+**Example:** $X=1$ if a fair coin lands tails, $X=0$ if heads.
+
 - $x$-axis: possible values of $X$
 - $y$-axis: $P(X=x)$
-:::
 :::
 
 ::: {.column width="65%"}
@@ -934,7 +945,7 @@ This nitrate distribution is right-skewed: a few high readings pull the **mean**
 <hr>
 
 :::{.center-text}
-![](images/meds-typing-speed-2026.png)
+![](images/meds-typing-speed-2026.png){width=60%}
 :::
 
 
@@ -1027,7 +1038,6 @@ The **normal distribution** is a symmetric, bell-shaped PDF, fully described by 
 - $\mu$ (mean): center of the distribution
 - $\sigma$ (standard deviation): spread of the distribution
 
-**Notation:** $X \sim N(\mu, \sigma^2)$
 :::
 :::
 
@@ -1090,29 +1100,6 @@ ggplot(dfn, aes(x = x, y = y)) +
 <br>
 
 [If the null hypothesis is *true*, any observed difference is due to chance alone.]{.body-text-m}
-
-
----
-
-## {#nitrate-scenario data-menu-title="Scenario: nitrate upgrade"}
-
-[Scenario: did the upgrade help?]{.slide-title}
-
-<hr>
-
-::: {.body-text-m}
-A wastewater treatment plant upgrade might have reduced nitrate pollution downstream. You measure nitrate concentration (mg/L) at 15 timepoints before the upgrade and 15 after.
-
-<br>
-
-Is the average nitrate concentration after the upgrade really lower, or could this just be natural variability?
-
-<br>
-
-A **two-sample t-test** compares the two sample means (accounting for spread and sample size) to test:
-
-$$H_0: \mu_{before} = \mu_{after}$$
-:::
 
 ---
 
@@ -1266,26 +1253,6 @@ knitr::include_graphics("images/t_test_7.jpg")
 #| fig-align: "center"
 knitr::include_graphics("images/t_test_8.jpg")
 ```
-
----
-
-## {#nitrate-scenario-back data-menu-title="Back to our scenario"}
-
-[Back to our scenario]{.slide-title}
-
-<hr>
-
-::: {.body-text-m}
-Recall: did the wastewater treatment upgrade significantly reduce nitrate concentration downstream?
-
-$$H_0: \mu_{before} = \mu_{after}$$
-
-<br>
-
-Suppose the two-sample t-test gives a p-value of 0.01.
-
-Since $0.01 < 0.05$, we have enough evidence to reject $H_0$. The upgrade appears to have significantly reduced nitrate concentration downstream.
-:::
 
 ---
 
@@ -1498,4 +1465,8 @@ Cella Schnabel
 [Pleaes fill out the course evals!]{.slide-title}
 
 <hr>
+
+:::{.center-text}
+![](images/survey.png)
+:::
 

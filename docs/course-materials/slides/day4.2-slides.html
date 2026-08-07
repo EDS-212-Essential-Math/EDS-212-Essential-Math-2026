@@ -134,7 +134,7 @@
 
 <section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#053660">
 <h2></h2>
-<p><span class="custom-title">EDS 212: Day 4, Lecture 2</span></p>
+<p><span class="custom-title">EDS 212: Day 5, Lecture 1</span></p>
 <p><span class="custom-subtitle"><em>Basic probability theory, PDFs and PMFs, hypothesis testing intuition</em></span></p>
 <hr class="hr-teal">
 <p><span class="custom-subtitle3">August 6<sup>th</sup>, 2025</span></p>
@@ -154,9 +154,9 @@ Basic probability concepts
 <div class="body-text-l">
 <ul>
 <li>Being familiar with the terms</li>
+<li>Reporting uncertainty</li>
+<li>Used in statistics</li>
 <li>Hypothesis testing</li>
-<li>Bayesian statistics</li>
-<li>Decision making</li>
 </ul>
 </div>
 </section>
@@ -174,9 +174,10 @@ Basic probability concepts
 <div class="body-text-m">
 <p><strong>Event space:</strong> The collection of all possible unique outcomes of an experiment or scenario. Also called the <em>sample space.</em></p>
 <p><br></p>
-<p><strong>Event:</strong> A possible outcome. The probability of event <span class="math inline">\(A\)</span> occurring is written as <span class="math inline">\(P(A)\)</span>.</p>
+<p><strong>Event:</strong> A possible outcome within the event space.</p>
 <p><br></p>
 <p><strong>Probability:</strong> the likelihood that an event occurs.</p>
+<p>The probability of event <span class="math inline">\(A\)</span> occurring is written as <span class="math inline">\(P(A)\)</span>.</p>
 <ul>
 <li><span class="math inline">\(P = 0\)</span> indicates no chance of an event happening</li>
 <li><span class="math inline">\(P=1\)</span> indicates it is a certainty it will happen</li>
@@ -225,7 +226,7 @@ Basic probability concepts
 </div>
 <ul>
 <li><p>Two consecutive coin flips.</p></li>
-<li><p>In two water samples on consecutive days, exceeding the nitrate limit in one (one event) and exceeding nitrate limit in another (second event).</p></li>
+<li><p>Exceeding the nitrate limit in one day, then exceeding nitrate limit the next day.</p></li>
 </ul>
 </section>
 <section id="independence" class="slide level2" data-menu-title="Independent events">
@@ -490,6 +491,12 @@ Inference
 <hr>
 
 <img data-src="images/population_vs_sample.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://express.excelsior.edu/datascienceintro/chapter/chapter-10-statistical-inference-data-science/">Data Science: A First Introduction; Timbers, Campbell, Lee.</a></p></section>
+<section id="bessels-correction" class="slide level2" data-menu-title="Inference">
+<h2></h2>
+<p><span class="slide-title">Bessel’s correction for variance</span></p>
+<hr>
+
+<img data-src="images/variance.png" class="r-stretch quarto-figure-center"><p class="caption">Screenshot from <a href="https://www.youtube.com/watch?v=E3_408q1mjo">DataMListic</a> video</p></section>
 <section id="conf-int-1" class="slide level2" data-menu-title="Confidence interval">
 <h2></h2>
 <p><span class="slide-title">Quantifying uncertainty</span></p>
@@ -579,19 +586,14 @@ Probability density and mass functions
 <h2></h2>
 <p><span class="slide-title">Probability mass function (PMF)</span></p>
 <hr>
-<div class="body-text-m">
-<p>For a <strong>discrete</strong> random variable <span class="math inline">\(X\)</span>, the <strong>probability mass function (PMF)</strong> gives <span class="math inline">\(P(X=x)\)</span> for each possible value <span class="math inline">\(x\)</span>.</p>
-<p><span class="math display">\[\sum_x P(X=x) = 1\]</span></p>
-</div>
-<p><strong>Example:</strong> <span class="math inline">\(X=1\)</span> if a fair coin lands tails, <span class="math inline">\(X=0\)</span> if heads.</p>
+<p>For a <strong>discrete</strong> random variable <span class="math inline">\(X\)</span>, the <strong>probability mass function (PMF)</strong> gives <span class="math inline">\(P(X=x)\)</span> for each possible value <span class="math inline">\(x\)</span>. e The sum of all values for the PMF must be 1: <span class="math display">\[\sum_x P(X=x) = 1\]</span></p>
 <div class="columns">
 <div class="column" style="width:35%;">
-<div class="body-text-m">
+<p><strong>Example:</strong> <span class="math inline">\(X=1\)</span> if a fair coin lands tails, <span class="math inline">\(X=0\)</span> if heads.</p>
 <ul>
 <li><span class="math inline">\(x\)</span>-axis: possible values of <span class="math inline">\(X\)</span></li>
 <li><span class="math inline">\(y\)</span>-axis: <span class="math inline">\(P(X=x)\)</span></li>
 </ul>
-</div>
 </div><div class="column" style="width:65%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -842,7 +844,7 @@ This nitrate distribution is right-skewed: a few high readings pull the **mean**
 <p><span class="slide-title">Exercise: your typing speed test</span></p>
 <hr>
 <div class="center-text">
-<p><img data-src="images/meds-typing-speed-2026.png"></p>
+<p><img data-src="images/meds-typing-speed-2026.png" style="width:60.0%"></p>
 </div>
 <div style="color:green;">
 <ol type="1">
@@ -904,7 +906,6 @@ This nitrate distribution is right-skewed: a few high readings pull the **mean**
 <li><span class="math inline">\(\mu\)</span> (mean): center of the distribution</li>
 <li><span class="math inline">\(\sigma\)</span> (standard deviation): spread of the distribution</li>
 </ul>
-<p><strong>Notation:</strong> <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span></p>
 </div>
 </div><div class="column" style="width:65%;">
 <div class="cell" data-layout-align="center">
@@ -940,19 +941,6 @@ Hypothesis testing
 <p><span class="body-text-m">A null hypothesis (<span class="math inline">\(H_0\)</span>) is the claim that the effect being studied does <strong>not</strong> exist. It is a hypothesis that proposes that there is <strong>no statistically significant difference</strong> between the data or variables being studied.</span></p>
 <p><br></p>
 <p><span class="body-text-m">If the null hypothesis is <em>true</em>, any observed difference is due to chance alone.</span></p>
-</section>
-<section id="nitrate-scenario" class="slide level2" data-menu-title="Scenario: nitrate upgrade">
-<h2></h2>
-<p><span class="slide-title">Scenario: did the upgrade help?</span></p>
-<hr>
-<div class="body-text-m">
-<p>A wastewater treatment plant upgrade might have reduced nitrate pollution downstream. You measure nitrate concentration (mg/L) at 15 timepoints before the upgrade and 15 after.</p>
-<p><br></p>
-<p>Is the average nitrate concentration after the upgrade really lower, or could this just be natural variability?</p>
-<p><br></p>
-<p>A <strong>two-sample t-test</strong> compares the two sample means (accounting for spread and sample size) to test:</p>
-<p><span class="math display">\[H_0: \mu_{before} = \mu_{after}\]</span></p>
-</div>
 </section>
 <section id="hypothesis-testing" class="slide level2" data-menu-title="Hypothesis testing">
 <h2></h2>
@@ -1017,18 +1005,6 @@ Hypothesis testing
 <h2></h2>
 
 <img data-src="images/t_test_8.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
-<section id="nitrate-scenario-back" class="slide level2" data-menu-title="Back to our scenario">
-<h2></h2>
-<p><span class="slide-title">Back to our scenario</span></p>
-<hr>
-<div class="body-text-m">
-<p>Recall: did the wastewater treatment upgrade significantly reduce nitrate concentration downstream?</p>
-<p><span class="math display">\[H_0: \mu_{before} = \mu_{after}\]</span></p>
-<p><br></p>
-<p>Suppose the two-sample t-test gives a p-value of 0.01.</p>
-<p>Since <span class="math inline">\(0.01 &lt; 0.05\)</span>, we have enough evidence to reject <span class="math inline">\(H_0\)</span>. The upgrade appears to have significantly reduced nitrate concentration downstream.</p>
-</div>
-</section>
 <section id="type1" class="slide level2" data-menu-title="Type 1 errors">
 <h2></h2>
 
@@ -1229,6 +1205,9 @@ Wrapping up…
 <h2></h2>
 <p><span class="slide-title">Pleaes fill out the course evals!</span></p>
 <hr>
+<div class="center-text">
+<p><img data-src="images/survey.png"></p>
+</div>
 
 
 </section>

@@ -2566,7 +2566,7 @@
     "href": "course-materials/slides/day4.2-slides.html#title-slide",
     "title": "",
     "section": "",
-    "text": "EDS 212: Day 4, Lecture 2\nBasic probability theory, PDFs and PMFs, hypothesis testing intuition\n\nAugust 6th, 2025"
+    "text": "EDS 212: Day 5, Lecture 1\nBasic probability theory, PDFs and PMFs, hypothesis testing intuition\n\nAugust 6th, 2025"
   },
   {
     "objectID": "course-materials/slides/day4.2-slides.html#probability-title",
@@ -2580,7 +2580,7 @@
     "href": "course-materials/slides/day4.2-slides.html#refresh-prob",
     "title": "",
     "section": "",
-    "text": "Why refresh probability?\n\n\n\nBeing familiar with the terms\nHypothesis testing\nBayesian statistics\nDecision making"
+    "text": "Why refresh probability?\n\n\n\nBeing familiar with the terms\nReporting uncertainty\nUsed in statistics\nHypothesis testing"
   },
   {
     "objectID": "course-materials/slides/day4.2-slides.html#terminology-blank",
@@ -2594,7 +2594,7 @@
     "href": "course-materials/slides/day4.2-slides.html#terminology",
     "title": "",
     "section": "",
-    "text": "Event space, event, and probability\n\n\n\nEvent space: The collection of all possible unique outcomes of an experiment or scenario. Also called the sample space.\n\nEvent: A possible outcome. The probability of event \\(A\\) occurring is written as \\(P(A)\\).\n\nProbability: the likelihood that an event occurs.\n\n\\(P = 0\\) indicates no chance of an event happening\n\\(P=1\\) indicates it is a certainty it will happen"
+    "text": "Event space, event, and probability\n\n\n\nEvent space: The collection of all possible unique outcomes of an experiment or scenario. Also called the sample space.\n\nEvent: A possible outcome within the event space.\n\nProbability: the likelihood that an event occurs.\nThe probability of event \\(A\\) occurring is written as \\(P(A)\\).\n\n\\(P = 0\\) indicates no chance of an event happening\n\\(P=1\\) indicates it is a certainty it will happen"
   },
   {
     "objectID": "course-materials/slides/day4.2-slides.html#event-space-examples",
@@ -2615,7 +2615,7 @@
     "href": "course-materials/slides/day4.2-slides.html#independence-check-in",
     "title": "",
     "section": "",
-    "text": "Independent vs. non-independent events\n\n\nTwo events are independent if one occurring doesn’t change the probability of the other:\nIf knowing \\(A\\) occurred does change the probability of \\(B\\), the events are non-independent.\n\nConditional probability: For events \\(A\\) and \\(B\\), the probability of event \\(B\\) happening given that \\(A\\) is known to occur is denoted as \\(P(B|A)\\).\n\n\n\n✏️ Are the following events independent or non independent?\n\n\nTwo consecutive coin flips.\nIn two water samples on consecutive days, exceeding the nitrate limit in one (one event) and exceeding nitrate limit in another (second event)."
+    "text": "Independent vs. non-independent events\n\n\nTwo events are independent if one occurring doesn’t change the probability of the other:\nIf knowing \\(A\\) occurred does change the probability of \\(B\\), the events are non-independent.\n\nConditional probability: For events \\(A\\) and \\(B\\), the probability of event \\(B\\) happening given that \\(A\\) is known to occur is denoted as \\(P(B|A)\\).\n\n\n\n✏️ Are the following events independent or non independent?\n\n\nTwo consecutive coin flips.\nExceeding the nitrate limit in one day, then exceeding nitrate limit the next day."
   },
   {
     "objectID": "course-materials/slides/day4.2-slides.html#independence",
@@ -2716,6 +2716,13 @@
     "text": "Population vs. sample\n\n\nData Science: A First Introduction; Timbers, Campbell, Lee."
   },
   {
+    "objectID": "course-materials/slides/day4.2-slides.html#bessels-correction",
+    "href": "course-materials/slides/day4.2-slides.html#bessels-correction",
+    "title": "",
+    "section": "",
+    "text": "Bessel’s correction for variance\n\n\nScreenshot from DataMListic video"
+  },
+  {
     "objectID": "course-materials/slides/day4.2-slides.html#conf-int-1",
     "href": "course-materials/slides/day4.2-slides.html#conf-int-1",
     "title": "",
@@ -2776,7 +2783,7 @@
     "href": "course-materials/slides/day4.2-slides.html#pmf",
     "title": "",
     "section": "",
-    "text": "Probability mass function (PMF)\n\n\nFor a discrete random variable \\(X\\), the probability mass function (PMF) gives \\(P(X=x)\\) for each possible value \\(x\\).\n\\[\\sum_x P(X=x) = 1\\]\n\nExample: \\(X=1\\) if a fair coin lands tails, \\(X=0\\) if heads.\n\n\n\n\n\\(x\\)-axis: possible values of \\(X\\)\n\\(y\\)-axis: \\(P(X=x)\\)"
+    "text": "Probability mass function (PMF)\n\nFor a discrete random variable \\(X\\), the probability mass function (PMF) gives \\(P(X=x)\\) for each possible value \\(x\\). e The sum of all values for the PMF must be 1: \\[\\sum_x P(X=x) = 1\\]\n\n\nExample: \\(X=1\\) if a fair coin lands tails, \\(X=0\\) if heads.\n\n\\(x\\)-axis: possible values of \\(X\\)\n\\(y\\)-axis: \\(P(X=x)\\)"
   },
   {
     "objectID": "course-materials/slides/day4.2-slides.html#pmf-draw-blank",
@@ -2874,7 +2881,7 @@
     "href": "course-materials/slides/day4.2-slides.html#normal-dist",
     "title": "",
     "section": "",
-    "text": "The normal distribution\n\n\n\n\nThe normal distribution is a symmetric, bell-shaped PDF, fully described by two parameters:\n\n\\(\\mu\\) (mean): center of the distribution\n\\(\\sigma\\) (standard deviation): spread of the distribution\n\nNotation: \\(X \\sim N(\\mu, \\sigma^2)\\)"
+    "text": "The normal distribution\n\n\n\n\nThe normal distribution is a symmetric, bell-shaped PDF, fully described by two parameters:\n\n\\(\\mu\\) (mean): center of the distribution\n\\(\\sigma\\) (standard deviation): spread of the distribution"
   },
   {
     "objectID": "course-materials/slides/day4.2-slides.html#hypothesis-testing-title",
@@ -2898,13 +2905,6 @@
     "text": "What is a null hypothesis?\n\n\nA null hypothesis (\\(H_0\\)) is the claim that the effect being studied does not exist. It is a hypothesis that proposes that there is no statistically significant difference between the data or variables being studied.\n\nIf the null hypothesis is true, any observed difference is due to chance alone."
   },
   {
-    "objectID": "course-materials/slides/day4.2-slides.html#nitrate-scenario",
-    "href": "course-materials/slides/day4.2-slides.html#nitrate-scenario",
-    "title": "",
-    "section": "",
-    "text": "Scenario: did the upgrade help?\n\n\nA wastewater treatment plant upgrade might have reduced nitrate pollution downstream. You measure nitrate concentration (mg/L) at 15 timepoints before the upgrade and 15 after.\n\nIs the average nitrate concentration after the upgrade really lower, or could this just be natural variability?\n\nA two-sample t-test compares the two sample means (accounting for spread and sample size) to test:\n\\[H_0: \\mu_{before} = \\mu_{after}\\]"
-  },
-  {
     "objectID": "course-materials/slides/day4.2-slides.html#hypothesis-testing",
     "href": "course-materials/slides/day4.2-slides.html#hypothesis-testing",
     "title": "",
@@ -2917,13 +2917,6 @@
     "title": "",
     "section": "",
     "text": "Hypothesis testing: building intuition, continued\n\n\n\nYou’ll learn about hypothesis testing in EDS 222. Let’s just build a bit more intuition here.\n\nA common question: are means from two samples so different (considering data spread and sample size) that we think we have enough evidence to reject a null hypothesis that they were drawn from populations with the same mean?\n\nCaveat, assumptions, caveat (EDS 222)…"
-  },
-  {
-    "objectID": "course-materials/slides/day4.2-slides.html#nitrate-scenario-back",
-    "href": "course-materials/slides/day4.2-slides.html#nitrate-scenario-back",
-    "title": "",
-    "section": "",
-    "text": "Back to our scenario\n\n\nRecall: did the wastewater treatment upgrade significantly reduce nitrate concentration downstream?\n\\[H_0: \\mu_{before} = \\mu_{after}\\]\n\nSuppose the two-sample t-test gives a p-value of 0.01.\nSince \\(0.01 &lt; 0.05\\), we have enough evidence to reject \\(H_0\\). The upgrade appears to have significantly reduced nitrate concentration downstream."
   },
   {
     "objectID": "course-materials/slides/day4.2-slides.html#type1",
@@ -4134,7 +4127,7 @@
     "href": "course-materials/day5.html#class-materials",
     "title": "Basic probability theory and Boolean algebra",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n After class slides\n\n\n\n\nday 5 / morning\nProbability and stats review\n\n\n\nday 5 / afternoon"
+    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n After class slides\n\n\n\n\nday 5 / morning\nProbability and stats review\n\n\n\nday 5 / afternoon\nNo session."
   },
   {
     "objectID": "course-materials/day5.html#additional-resources",
