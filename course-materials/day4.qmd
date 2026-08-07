@@ -25,3 +25,4 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 | day 4 / afternoon | *No afternoon session* | |
 : {.hover .bordered tbl-colwidths="[20,50,30]"}
 
+
