@@ -24,3 +24,4 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 | day 4 / morning   | [Essential summary statistics and describing data](slides/day4.1-slides.qmd){target="_blank"} | 
 | day 4 / afternoon | *No afternoon session* | 
 
+

@@ -81,4 +81,4 @@ knitr::include_graphics("images/cella.png")
 
 ## Acknowledgements
 
-EDS 212 was originally developed and taught by [Allison Horst](https://allisonhorst.github.io/){target="_blank"} and then adapted by [Ruth Oliver](https://www.oliverlab.org){target="_blank"}. This new website houses materials which are *heavily* reused, adapted and expanded from, and inspired by Ruth and Allison's work. 
+EDS 212 was originally developed and taught by [Allison Horst](https://allisonhorst.github.io/){target="_blank"} and then adapted by [Ruth Oliver](https://www.oliverlab.org){target="_blank"}. This new website houses materials which are reused, adapted and expanded from, and inspired by Allison's and Ruth's work.
