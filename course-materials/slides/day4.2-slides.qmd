@@ -741,6 +741,16 @@ ggplot(survey, aes(x = response, y = p)) +
 
 ---
 
+## {#pdf-explained-blank data-menu-title="What is a PDF?"}
+
+[Probability density function]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
 ## {#pdf-explained data-menu-title="What is a PDF?"}
 
 [Probability density function]{.slide-title}
@@ -754,15 +764,15 @@ Describes the relative likelihood of a **continuous** random variable taking on 
 :::
 
 :::: {.columns}
-::: {.column width="45%"}
-::: {.body-text-m}
+::: {.column width="35%"}
+- $x$-axis: possible values of the random variable
+- $y$-axis: $f(x)$, the density (**not** a probability)
 - The **height** of the curve is *not* a probability
 - The **area under the curve** between two values *is* a probability
 - The total area under the entire curve = 1
 :::
-:::
 
-::: {.column width="55%"}
+::: {.column width="65%"}
 ```{r}
 #| echo: false
 #| warning: false
@@ -778,13 +788,13 @@ ggplot(df, aes(x = x, y = y)) +
   geom_line(linewidth = 1.2, color = "#003660") +
   geom_ribbon(data = shade, aes(x = x, ymin = 0, ymax = y), fill = "#FEBC11", alpha = 0.7) +
   annotate("segment", x = peak_x, xend = peak_x, y = 0, yend = peak_y, linetype = "dashed", color = "gray30") +
-  annotate("text", x = peak_x, y = peak_y + 0.025, label = "height ≠ probability", size = 5) +
-  annotate("text", x = 4.5, y = 0.05, label = "area = P(3<X<6)", size = 5, color = "#7a5b00") +
+  annotate("text", x = peak_x, y = peak_y + 0.035, label = "height ≠ probability", size = 8) +
+  annotate("text", x = 4.5, y = 0.05, label = "area = P(3<X<6)", size = 8, color = "#7a5b00") +
   labs(x = "x", y = "f(x)  (density)") +
   theme_minimal() +
   theme(
-    axis.text = element_text(size = 18),
-    axis.title = element_text(size = 20)
+    axis.text = element_text(size = 26),
+    axis.title = element_text(size = 30)
   )
 ```
 :::
@@ -860,15 +870,134 @@ ggplot(df, aes(x = y, y = d)) +
 
 The **shaded area** is the answer: there is about a 27% chance a sample exceeds the safety limit.
 
+<!-- 
+
 ---
 
-## {#typing-speed-placeholder data-menu-title="Exercise: typing speed"}
+## {#pdf-mean-median data-menu-title="Mean vs. median of a PDF"}
 
-[Exercise: typing speed]{.slide-title}
+[Mean vs. median of a PDF]{.slide-title}
 
 <hr>
 
-*(placeholder — insert typing speed test density function exercise here)*
+::: {.body-text-m}
+- The **median** splits the area under the curve in half: 50% of the probability is below it, 50% above
+- The **mean** is the "balance point" of the distribution
+- For a **symmetric** distribution, mean = median
+- For a **skewed** distribution, they differ — the mean is pulled toward the longer tail
+:::
+
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "70%"
+#| fig-align: "center"
+y <- seq(0, 25, length.out = 400)
+df <- data.frame(y = y, d = dgamma(y, shape = 4, rate = 0.5))
+med <- qgamma(0.5, shape = 4, rate = 0.5)
+mn <- 8
+
+lines_df <- data.frame(
+  x = c(med, mn),
+  label = factor(c(paste0("Median ≈ ", round(med,1)), paste0("Mean = ", mn)),
+                 levels = c(paste0("Median ≈ ", round(med,1)), paste0("Mean = ", mn)))
+)
+
+ggplot(df, aes(x = y, y = d)) +
+  geom_line(linewidth = 1.2, color = "#003660") +
+  geom_vline(data = lines_df, aes(xintercept = x, color = label), linetype = "dashed", linewidth = 1) +
+  scale_color_manual(values = c("#7a5b00", "#D6001C"), name = NULL) +
+  labs(x = "Nitrate concentration (mg/L)", y = "Density") +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 20),
+    axis.title = element_text(size = 24),
+    legend.text = element_text(size = 18),
+    legend.position = "top"
+  )
+```
+
+::: {.body-text-m}
+This nitrate distribution is right-skewed: a few high readings pull the **mean** (8 mg/L) a bit above the **median** (≈7.3 mg/L).
+::: 
+
+-->
+
+---
+
+## {#typing-speed-1-blank data-menu-title="Exercise: typing speed"}
+
+[Exercise: your typing speed test]{.slide-title}
+
+<hr>
+
+:::{.center-text}
+![](images/meds-typing-speed-2026.png)
+:::
+
+
+:::{style="color:green;"}
+
+1. Is this distribution symmetric or skewed? How can you tell from the shape of the curve?
+2. The curve's height at 60 WPM is about 0.019. Does that mean the probability a student types at *exactly* 60 WPM is 0.019? Why or why not?
+3. The dashed line marks the median at 62 WPM. What does that tell you about the area under the curve to the left of 62, compared to the right?
+:::
+
+---
+
+## {#typing-speed-1 data-menu-title="Exercise: typing speed"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+::: {.body-text-m}
+**1.** Right-skewed: the peak sits to the left of center, and the curve has a longer, thinner tail stretching toward higher WPM values (up to ~120) than toward lower ones.
+
+**2.** No. For a continuous random variable, the probability of any *exact* single value is 0. The height of the curve is the **density**, not a probability. Only the **area** under the curve over a range represents a probability.
+
+**3.** The median splits the total area (=1) into two equal halves: 50% of the area lies to the left of 62 WPM, and 50% lies to the right.
+:::
+
+---
+
+## {#typing-speed-2-blank data-menu-title="Exercise: typing speed"}
+
+[Exercise: comparing speeds]{.slide-title}
+
+<hr>
+
+```{r}
+#| echo: false
+#| out-width: "75%"
+#| fig-align: "center"
+knitr::include_graphics("images/meds-typing-speed-2026.png")
+```
+
+:::{style="color:green;"}
+✏️ The instructor's own speed on this test was 71 WPM. Speeds of 80 WPM or higher are generally considered "fast."
+
+1. Is it more likely than not that the instructor types faster than a randomly selected student from the class? 
+2. Would "fast" typists (80+ WPM) make up a small minority, about half, or a majority of the class? Justify your answer using the shape of the curve.
+:::
+
+---
+
+## {#typing-speed-2 data-menu-title="Exercise: typing speed"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+::: {.body-text-m}
+**1.** Yes. Since 71 WPM is *greater* than the median (62 WPM), more than half the area under the curve lies to the left of 71. Meaning more than half the class types slower than 71 WPM. So it's more likely than not that the instructor is faster than a randomly chosen student. Notice we can say this with confidence using *only* the median, without needing to estimate any area by eye.
+
+**2.** A minority. Both the median (62) and the peak of the curve sit well below 80, so the region to the right of 80 covers noticeably less than half the total area. 
+:::
 
 ---
 
@@ -889,7 +1018,7 @@ The **shaded area** is the answer: there is about a 27% chance a sample exceeds 
 <hr>
 
 :::: {.columns}
-::: {.column width="45%"}
+::: {.column width="35%"}
 ::: {.body-text-m}
 The **normal distribution** is a symmetric, bell-shaped PDF, fully described by two parameters:
 
@@ -900,7 +1029,7 @@ The **normal distribution** is a symmetric, bell-shaped PDF, fully described by 
 :::
 :::
 
-::: {.column width="55%"}
+::: {.column width="65%"}
 ```{r}
 #| echo: false
 #| warning: false
@@ -912,15 +1041,15 @@ dfn <- data.frame(x = xn, y = dnorm(xn))
 ggplot(dfn, aes(x = x, y = y)) +
   geom_line(linewidth = 1.2, color = "#003660") +
   geom_vline(xintercept = 0, linetype = "dashed", color = "gray30") +
-  annotate("text", x = 0, y = 0.43, label = "μ", size = 8, color = "gray20") +
-  annotate("segment", x = 0, xend = 1, y = 0.25, yend = 0.25, arrow = arrow(ends = "both", length = unit(0.2,"cm")), color = "#D6001C") +
-  annotate("text", x = 0.5, y = 0.27, label = "σ", size = 7, color = "#D6001C") +
+  annotate("text", x = 0, y = 0.43, label = "μ", size = 12, color = "gray20") +
+  annotate("segment", x = 0, xend = 1, y = 0.25, yend = 0.25, arrow = arrow(ends = "both", length = unit(0.25,"cm")), linewidth = 1, color = "#D6001C") +
+  annotate("text", x = 0.5, y = 0.28, label = "σ", size = 11, color = "#D6001C") +
   scale_x_continuous(breaks = NULL) +
   labs(x = "x", y = "f(x)  (density)") +
   theme_minimal() +
   theme(
-    axis.text = element_text(size = 18),
-    axis.title = element_text(size = 20)
+    axis.text = element_text(size = 26),
+    axis.title = element_text(size = 30)
   )
 ```
 :::
