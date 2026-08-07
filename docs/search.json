@@ -480,7 +480,7 @@
     "href": "course-materials/slides/day4.1-slides.html#describe-dist",
     "title": "",
     "section": "",
-    "text": "How can we describe how data are distributed?\n\n\nOur starting points:\n\n\n\nShape / patterns / clusters (data vizualization)\nCentral tendency (mean / median)\nSpread & uncertainty (standard deviation / standard error / confidence interval)"
+    "text": "How can we describe how data are distributed?\n\n\nOur starting points:\n\n\n\nShape / patterns / clusters (data vizualization)\nCentral tendency (mean / median)\nSpread (standard deviation)\nUncertainty (SO IMPORTANT, but later)"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#data-viz",
@@ -683,7 +683,7 @@
     "href": "course-materials/slides/day4.1-slides.html#calc-variance1",
     "title": "",
     "section": "",
-    "text": "Calculate variance by hand (1/2)\n\nGiven these data: \\(2, 4, 4, 6, 9\\)\n\nCalculate the mean:\n\n\\[ mean = \\frac{2+4+4+6+9}{5}=\\frac{25}{5}=5\\] 2. Subtract the mean from each data point and square the result:\n\\[(2-5)^2 = (-3)^2 = 9\\] \\[(4-5)^2 = (-1)^2 = 1\\] \\[(4-5)^2 = (-1)^2 = 1\\]\n\\[(6-5)^2 = (1)^2 = 1\\] \\[(9-5)^2 = (4)^2 = 16\\]"
+    "text": "Calculate variance by hand\n\n\nGiven these data: \\(2, 4, 4, 6, 9\\)\n\nCalculate the mean:\n\n\\[ mean = \\frac{2+4+4+6+9}{5}=\\frac{25}{5}=5\\] 2. Subtract the mean from each data point and square the result:\n\\[(2-5)^2 = 9, \\quad (4-5)^2 = 1, \\quad (4-5)^2 = 1, \\quad (6-5)^2 = 1, \\quad (9-5)^2 = 16\\]\n\nSum the squared differences:\n\n\\[9+1+1+1+16 = 28\\]\n\nDivide by the number of data points minus 1 (\\(n\\) - 1)\n\n\\[Variance = \\frac{28}{5-1} = 7\\]"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#calc-variance2",
@@ -697,7 +697,7 @@
     "href": "course-materials/slides/day4.1-slides.html#stdev",
     "title": "",
     "section": "",
-    "text": "Standard deviation\n\n\nAlso a measure of data spread, calculated by taking the square root of the variance.\n\n\\[ s = \\sqrt{\\frac{\\sum_{i=1}^n(x_i - \\bar{x})^2}{n-1}}\\]\n\n\nStandard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches."
+    "text": "Standard deviation\n\n\nAlso a measure of data spread, calculated by taking the square root of the variance.\n\n\\[ s = \\sqrt{\\frac{\\sum_{i=1}^n(x_i - \\bar{x})^2}{n-1}}\\]"
   },
   {
     "objectID": "course-materials/slides/day4.1-slides.html#best-way",
@@ -4233,5 +4233,33 @@
     "title": "",
     "section": "",
     "text": "Solution (3)\n\n✏️"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#quartiles-blank",
+    "href": "course-materials/slides/day4.1-slides.html#quartiles-blank",
+    "title": "",
+    "section": "",
+    "text": "Quartiles\n\n✏️"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#boxplot-draw-work",
+    "href": "course-materials/slides/day4.1-slides.html#boxplot-draw-work",
+    "title": "",
+    "section": "",
+    "text": "Exercise: draw a box plot\n\n✏️"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#mode",
+    "href": "course-materials/slides/day4.1-slides.html#mode",
+    "title": "",
+    "section": "",
+    "text": "Mode\n\nThe most frequently occurring value(s) in a dataset. E.g. \\(mode\\;of\\;3, 7, 7, 17 = 7\\)\n\nPros:\n\n\nWorks for categorical (non-numeric) data\nNot affected by outliers\n\n\nCons:\n\n\nMay not be unique, or may not exist at all\nNot based on all the values\nNot capable of further mathematical treatment"
+  },
+  {
+    "objectID": "course-materials/slides/day4.1-slides.html#stdev-interpret",
+    "href": "course-materials/slides/day4.1-slides.html#stdev-interpret",
+    "title": "",
+    "section": "",
+    "text": "Standard Deviation\n\nStandard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches."
   }
 ]

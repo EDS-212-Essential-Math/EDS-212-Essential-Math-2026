@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>day4.1-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -315,7 +318,8 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <ul>
 <li>Shape / patterns / clusters (data vizualization)</li>
 <li>Central tendency (mean / median)</li>
-<li>Spread &amp; uncertainty (standard deviation / standard error / confidence interval)</li>
+<li>Spread (standard deviation)</li>
+<li>Uncertainty (SO IMPORTANT, but later)</li>
 </ul>
 </div>
 </section>
@@ -509,6 +513,12 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <li><span class="math inline">\(Q_3\)</span> = median of the upper half</li>
 </ol>
 </section>
+<section id="quartiles-blank" class="slide level2" data-menu-title="Quartiles">
+<h2></h2>
+<p><span class="slide-title">Quartiles</span></p>
+<hr>
+<p>✏️</p>
+</section>
 <section id="quartiles-example-blank" class="slide level2" data-menu-title="Quartiles">
 <h2></h2>
 <p><span class="slide-title">Quartiles</span></p>
@@ -552,7 +562,7 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <li>Upper half: 12, 14, 16, 40: again an even number of values: <span class="math inline">\(Q_3 = \frac{14+16}{2} = 15\)</span></li>
 </ul>
 </section>
-<section id="boxplot1" class="slide level2" data-menu-title="Boxplot 1">
+<section id="boxplot1" class="slide level2 smaller" data-menu-title="Boxplot 1">
 <h2></h2>
 <p><span class="slide-title">Boxplot</span></p>
 <hr>
@@ -585,6 +595,12 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <li>Plot any observation beyond the whiskers individually, as a dot (an <strong>outlier</strong>)</li>
 </ol>
 <p>✏️ <span style="color:green;">Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 (<span class="math inline">\(Q_1=5\)</span>, <span class="math inline">\(Q_2=10\)</span>, <span class="math inline">\(Q_3=15\)</span>), draw the box plot by hand.</span></p>
+</section>
+<section id="boxplot-draw-work" class="slide level2" data-menu-title="Exercise: draw a box plot">
+<h2></h2>
+<p><span class="slide-title">Exercise: draw a box plot</span></p>
+<hr>
+<p>✏️</p>
 </section>
 <section id="boxplot-draw" class="slide level2" data-menu-title="Exercise: draw a box plot">
 <h2></h2>
@@ -722,6 +738,28 @@ Summarizing data numerically
           display:block!important;
       }</style></aside>
 </section>
+<section id="mode" class="slide level2" data-menu-title="Mode">
+<h2></h2>
+<p><span class="slide-title">Mode</span></p>
+<hr>
+<p><span class="body-text-m">The most frequently occurring value(s) in a dataset. E.g. <span class="math inline">\(mode\;of\;3, 7, 7, 17 = 7\)</span></span></p>
+<p><br></p>
+<p><span class="body-text-l"><strong>Pros:</strong></span></p>
+<div class="body-text-m">
+<ul>
+<li>Works for categorical (non-numeric) data</li>
+<li>Not affected by outliers</li>
+</ul>
+</div>
+<p><span class="body-text-l"><strong>Cons:</strong></span></p>
+<div class="body-text-m">
+<ul>
+<li>May not be unique, or may not exist at all</li>
+<li>Not based on all the values</li>
+<li>Not capable of further mathematical treatment</li>
+</ul>
+</div>
+</section>
 <section id="central-tendency" class="slide level2" data-menu-title="Central tendency">
 <h2></h2>
 <p><br></p>
@@ -797,21 +835,15 @@ Summarizing data numerically
 </section>
 <section id="calc-variance1" class="slide level2" data-menu-title="Calculate variance 1">
 <h2></h2>
-<p><span class="slide-title">Calculate variance by hand (1/2)</span></p>
+<p><span class="slide-title">Calculate variance by hand</span></p>
 <hr>
+<div style="font-size: 0.85em;">
 <p><span class="body-text-m">Given these data: <span class="math inline">\(2, 4, 4, 6, 9\)</span></span></p>
 <ol type="1">
 <li>Calculate the mean:</li>
 </ol>
 <p><span class="math display">\[ mean = \frac{2+4+4+6+9}{5}=\frac{25}{5}=5\]</span> 2. Subtract the mean from each data point and square the result:</p>
-<p><span class="math display">\[(2-5)^2 = (-3)^2 = 9\]</span> <span class="math display">\[(4-5)^2 = (-1)^2 = 1\]</span> <span class="math display">\[(4-5)^2 = (-1)^2 = 1\]</span></p>
-<p><span class="math display">\[(6-5)^2 = (1)^2 = 1\]</span> <span class="math display">\[(9-5)^2 = (4)^2 = 16\]</span></p>
-</section>
-<section id="calc-variance2" class="slide level2" data-menu-title="Calculate variance 2">
-<h2></h2>
-<p><span class="slide-title">Calculate variance by hand (2/2)</span></p>
-<hr>
-<p><span class="body-text-m">Given these data: <span class="math inline">\(2, 4, 4, 6, 9\)</span></span></p>
+<p><span class="math display">\[(2-5)^2 = 9, \quad (4-5)^2 = 1, \quad (4-5)^2 = 1, \quad (6-5)^2 = 1, \quad (9-5)^2 = 16\]</span></p>
 <ol start="3" type="1">
 <li>Sum the squared differences:</li>
 </ol>
@@ -820,6 +852,7 @@ Summarizing data numerically
 <li>Divide by the number of data points minus 1 (<span class="math inline">\(n\)</span> - 1)</li>
 </ol>
 <p><span class="math display">\[Variance = \frac{28}{5-1} = 7\]</span></p>
+</div>
 </section>
 <section id="stdev" class="slide level2" data-menu-title="Standard deviation">
 <h2></h2>
@@ -830,7 +863,11 @@ Summarizing data numerically
 <div class="body-text-m">
 <p><span class="math display">\[ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}\]</span></p>
 </div>
-<p><br></p>
+</section>
+<section id="stdev-interpret" class="slide level2" data-menu-title="Standard deviation">
+<h2></h2>
+<p><span class="slide-title">Standard Deviation</span></p>
+<hr>
 <p>Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches.</p>
 </section>
 <section id="best-way" class="slide level2" data-menu-title="Best way">
