@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Day 3 / Afternoon: Extra examples</title>
+<title>Day 4 / Morning: Extra examples</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -173,7 +173,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Day 3 / Afternoon: Extra examples</h1>
+      <h1 class="title">Day 4 / Morning: Extra examples</h1>
                       </div>
   </div>
     
@@ -194,9 +194,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summation-notation" id="toc-summation-notation" class="nav-link active" data-scroll-target="#summation-notation">Summation notation</a></li>
-  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors">Vectors</a></li>
-  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices">Matrices</a></li>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link active" data-scroll-target="#data-types">Data types</a></li>
+  <li><a href="#histogram-and-quartiles" id="toc-histogram-and-quartiles" class="nav-link" data-scroll-target="#histogram-and-quartiles">Histogram and Quartiles</a></li>
+  <li><a href="#mean-median-mode" id="toc-mean-median-mode" class="nav-link" data-scroll-target="#mean-median-mode">Mean, Median, Mode</a></li>
+  <li><a href="#variance-and-standard-deviation" id="toc-variance-and-standard-deviation" class="nav-link" data-scroll-target="#variance-and-standard-deviation">Variance and standard deviation</a></li>
+  <li><a href="#confidence-intervals" id="toc-confidence-intervals" class="nav-link" data-scroll-target="#confidence-intervals">Confidence intervals</a></li>
   </ul>
 </nav>
     </div>
@@ -207,12 +209,10 @@ window.Quarto = {
 
 
 
-<section id="summation-notation" class="level2">
-<h2 class="anchored" data-anchor-id="summation-notation">Summation notation</h2>
+<section id="data-types" class="level2">
+<h2 class="anchored" data-anchor-id="data-types">Data types</h2>
 <ol type="1">
-<li>Expand and evaluate: <span class="math display">\[
-\sum_{i=1}^{4}(2i+1)
-\]</span></li>
+<li>A team monitoring stream health at 40 sites records: dissolved oxygen (mg/L), substrate type (sand, gravel, cobble, or bedrock), overall water quality rating (poor/fair/good/excellent), whether each site is impaired or not impaired, and stream flow rate (m³/s). Identify the type of each variable.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -226,16 +226,18 @@ window.Quarto = {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\sum_{i=1}^{4}(2i+1) = 3+5+7+9 = 24
-\]</span></p>
+<ul>
+<li>Dissolved oxygen: quantitative, continuous</li>
+<li>Substrate type: qualitative, nominal</li>
+<li>Water quality rating: qualitative, ordinal</li>
+<li>Impaired / not impaired: qualitative, binary</li>
+<li>Flow rate: quantitative, continuous</li>
+</ul>
 </div>
 </div>
 </div>
 <ol start="2" type="1">
-<li>Evaluate: <span class="math display">\[
-\sum_{i=1}^{6}i^3
-\]</span></li>
+<li>A camera-trap survey records, for each detection event: species observed (deer, coyote, bobcat, …), body weight (kg), sex (male/female), and number of individuals in the detection. Identify the type of each variable.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -249,16 +251,20 @@ window.Quarto = {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\sum_{i=1}^{6}i^3 = 1^3+2^3+3^3+4^3+5^3+6^3 = 1+8+27+64+125+216 = 441
-\]</span></p>
+<ul>
+<li>Species observed: qualitative, nominal</li>
+<li>Body weight: quantitative, continuous</li>
+<li>Sex: qualitative, binary</li>
+<li>Number of individuals: quantitative, discrete</li>
+</ul>
 </div>
 </div>
 </div>
+</section>
+<section id="histogram-and-quartiles" class="level2">
+<h2 class="anchored" data-anchor-id="histogram-and-quartiles">Histogram and Quartiles</h2>
 <ol start="3" type="1">
-<li>A researcher records daily rainfall (in mm) over 5 days: <span class="math inline">\(x=(2,0,5,3,4)\)</span>. Find the sample mean, given by <span class="math display">\[
-\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i.
-\]</span></li>
+<li>Twelve months had these total rainfall amounts, in mm: 5, 12, 18, 22, 25, 30, 35, 38, 42, 55, 60, 68. Using bins of width 20 mm (starting at 0), tally the counts for a histogram.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -272,16 +278,37 @@ window.Quarto = {
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\bar{x}=\frac{1}{5}(2+0+5+3+4) = \frac{14}{5} = 2.8\text{ mm}
-\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Bin (mm)</th>
+<th style="text-align: center;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">[0, 20)</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">[20, 40)</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">[40, 60)</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">[60, 80)</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <ol start="4" type="1">
-<li>A set of tree heights (in m) is <span class="math inline">\(x=(2,4,6,8)\)</span>, with sample mean <span class="math inline">\(\bar{x}=5\)</span>. Find the sample variance, given by <span class="math display">\[
-s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2.
-\]</span></li>
+<li>A boxplot of fish length (cm) for a sample of trout shows: whiskers spanning 22 to 52, a box from <span class="math inline">\(Q_1=28\)</span> to <span class="math inline">\(Q_3=41\)</span>, and one point plotted individually at 65. Find the <span class="math inline">\(IQR\)</span>, and confirm using the <span class="math inline">\(1.5\times IQR\)</span> rule whether the point at 65 should be plotted as an outlier.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -295,17 +322,12 @@ s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2.
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-s^2=\frac{1}{4-1}\left[(2-5)^2+(4-5)^2+(6-5)^2+(8-5)^2\right] = \frac{1}{3}(9+1+1+9) = \frac{20}{3} \approx 6.67\text{ m}^2
-\]</span></p>
+<p><span class="math display">\[IQR = Q_3-Q_1 = 41-28 = 13\]</span> <span class="math display">\[Q_3+1.5\times IQR = 41+19.5 = 60.5\]</span> Since <span class="math inline">\(65 &gt; 60.5\)</span>, the point is correctly plotted as an <strong>outlier</strong> — that’s also why the upper whisker stops at 52 (the largest observation still within <span class="math inline">\(1.5\times IQR\)</span> of the box).</p>
 </div>
 </div>
 </div>
-</section>
-<section id="vectors" class="level2">
-<h2 class="anchored" data-anchor-id="vectors">Vectors</h2>
 <ol start="5" type="1">
-<li>Given <span class="math inline">\(r=(-3,6)\)</span> and <span class="math inline">\(s=(5,2)\)</span>, find <span class="math inline">\(r+s\)</span> and <span class="math inline">\(r-s\)</span>.</li>
+<li>Soil nitrate readings (mg/kg) at 7 plots: 3, 7, 8, 12, 15, 20, 24. Find <span class="math inline">\(Q_1\)</span>, <span class="math inline">\(Q_2\)</span>, and <span class="math inline">\(Q_3\)</span>.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -319,16 +341,14 @@ s^2=\frac{1}{4-1}\left[(2-5)^2+(4-5)^2+(6-5)^2+(8-5)^2\right] = \frac{1}{3}(9+1+
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-r+s=(-3+5,\ 6+2)=(2,8)
-\]</span> <span class="math display">\[
-r-s=(-3-5,\ 6-2)=(-8,4)
-\]</span></p>
+<p>Median (<span class="math inline">\(Q_2\)</span>) = 12 (the 4th of 7 ordered values).</p>
+<p>Lower half: 3, 7, 8 <span class="math inline">\(\rightarrow Q_1 = 7\)</span></p>
+<p>Upper half: 15, 20, 24 <span class="math inline">\(\rightarrow Q_3 = 20\)</span></p>
 </div>
 </div>
 </div>
 <ol start="6" type="1">
-<li>Given <span class="math inline">\(u=(2,-3)\)</span>, find <span class="math inline">\(w=-2u\)</span>. What effect does scalar multiplication have on a vector?</li>
+<li>Using the soil nitrate quartiles above (<span class="math inline">\(Q_1=7\)</span>, <span class="math inline">\(Q_3=20\)</span>), is a new reading of 42 mg/kg an outlier?</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -342,14 +362,15 @@ r-s=(-3-5,\ 6-2)=(-8,4)
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-w=-2u=(-4,6)
-\]</span> Scalar multiplication changes the vector’s magnitude (length) but not its direction — unless the scalar is negative, in which case the direction reverses (as it does here).</p>
+<p><span class="math display">\[IQR = Q_3-Q_1 = 20-7 = 13\]</span> <span class="math display">\[Q_3+1.5\times IQR = 20+19.5 = 39.5\]</span> Since <span class="math inline">\(42 &gt; 39.5\)</span>, yes — a reading of 42 mg/kg would be flagged as an <strong>outlier</strong>.</p>
 </div>
 </div>
 </div>
+</section>
+<section id="mean-median-mode" class="level2">
+<h2 class="anchored" data-anchor-id="mean-median-mode">Mean, Median, Mode</h2>
 <ol start="7" type="1">
-<li>Find the dot product of <span class="math inline">\(p=(4,0,-3)\)</span> and <span class="math inline">\(q=(-2,5,1)\)</span></li>
+<li>A rural county has these home sale prices, in $1,000s: 170, 180, 195, 205, 210, 220, 230, 850. Find the median sale price.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -363,14 +384,14 @@ w=-2u=(-4,6)
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-p\cdot q = (4)(-2)+(0)(5)+(-3)(1) = -8+0-3 = -11
-\]</span></p>
+<p>The data are already ordered (8 values), so with an even number of data points the median is the average of the 4th and 5th values: <span class="math display">\[
+median = \frac{205+210}{2} = 207.5
+\]</span> <strong>$207,500</strong>.</p>
 </div>
 </div>
 </div>
 <ol start="8" type="1">
-<li>Are the vectors <span class="math inline">\(m=(5,-2)\)</span> and <span class="math inline">\(n=(4,10)\)</span> orthogonal?</li>
+<li>Find the mean sale price for the same data.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -385,16 +406,13 @@ p\cdot q = (4)(-2)+(0)(5)+(-3)(1) = -8+0-3 = -11
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-m\cdot n = (5)(4)+(-2)(10) = 20-20 = 0
-\]</span> Since the dot product is 0, <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> <strong>are orthogonal</strong>.</p>
+mean = \frac{170+180+195+205+210+220+230+850}{8} = \frac{2260}{8} = 282.5
+\]</span> <strong>$282,500</strong>.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="matrices" class="level2">
-<h2 class="anchored" data-anchor-id="matrices">Matrices</h2>
 <ol start="9" type="1">
-<li>A matrix <span class="math inline">\(B\)</span> has dimensions <span class="math inline">\(5\times 2\)</span>. How many rows and columns does it have, and what does <span class="math inline">\(b_{41}\)</span> refer to?</li>
+<li>Which measure — the mean or the median — better represents a “typical” home price in this county, and why?</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
@@ -408,12 +426,12 @@ m\cdot n = (5)(4)+(-2)(10) = 20-20 = 0
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(B\)</span> has <strong>5 rows</strong> and <strong>2 columns</strong>. <span class="math inline">\(b_{41}\)</span> refers to the element in <strong>row 4, column 1</strong>.</p>
+<p>The <strong>median</strong> ($207,500) is more representative. The single $850,000 sale is an outlier that pulls the mean up to $282,500, well above where most of the prices actually fall. Because the median is based on rank rather than magnitude, it isn’t distorted by that outlier.</p>
 </div>
 </div>
 </div>
 <ol start="10" type="1">
-<li>Given <span class="math inline">\(A=\begin{bmatrix}1&amp;2\\3&amp;4\end{bmatrix}\)</span> and <span class="math inline">\(B=\begin{bmatrix}5&amp;-1\\0&amp;2\end{bmatrix}\)</span>, find <span class="math inline">\(A+B\)</span>.</li>
+<li>A camera-trap survey records the habitat type at 15 detection points: forest, forest, grassland, wetland, forest, shrubland, grassland, forest, wetland, forest, grassland, shrubland, forest, wetland, forest. What is the mode?</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
@@ -427,15 +445,21 @@ m\cdot n = (5)(4)+(-2)(10) = 20-20 = 0
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-A+B=\begin{bmatrix}1+5&amp;2-1\\3+0&amp;4+2\end{bmatrix}=\begin{bmatrix}6&amp;1\\3&amp;6\end{bmatrix}
-\]</span></p>
+<p>Counting occurrences: forest = 7, grassland = 3, wetland = 3, shrubland = 2. The mode is <strong>forest</strong> (7 of 15 detections).</p>
 </div>
 </div>
 </div>
+</section>
+<section id="variance-and-standard-deviation" class="level2">
+<h2 class="anchored" data-anchor-id="variance-and-standard-deviation">Variance and standard deviation</h2>
 <ol start="11" type="1">
-<li>Can you add matrices of different sizes?</li>
+<li>Weekly flow rate (m³/s) was recorded at two stream gauges over 5 weeks:</li>
 </ol>
+<ul>
+<li>Gauge A: 10, 10, 11, 9, 10</li>
+<li>Gauge B: 4, 10, 18, 6, 12</li>
+</ul>
+<p>Both have the same mean. Find the variance of each, and explain what that tells you about the two gauges.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -448,12 +472,15 @@ A+B=\begin{bmatrix}1+5&amp;2-1\\3+0&amp;4+2\end{bmatrix}=\begin{bmatrix}6&amp;1\
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>No.&nbsp;Matrix addition is defined element-by-element, so the two matrices must have the same dimensions.</p>
+<p>Both datasets have mean <span class="math inline">\(= 10\)</span>.</p>
+<p>Gauge A: deviations <span class="math inline">\(0, 0, 1, -1, 0\)</span>; squared <span class="math inline">\(0, 0, 1, 1, 0\)</span>; sum <span class="math inline">\(=2\)</span> <span class="math display">\[S^2_A = \frac{2}{5-1} = 0.5\]</span></p>
+<p>Gauge B: deviations <span class="math inline">\(-6, 0, 8, -4, 2\)</span>; squared <span class="math inline">\(36, 0, 64, 16, 4\)</span>; sum <span class="math inline">\(=120\)</span> <span class="math display">\[S^2_B = \frac{120}{5-1} = 30\]</span></p>
+<p>Despite having identical means, Gauge B’s flow is far more variable (variance 30 vs.&nbsp;0.5) — Gauge A is comparatively stable week to week, while Gauge B fluctuates a lot.</p>
 </div>
 </div>
 </div>
 <ol start="12" type="1">
-<li>Given <span class="math inline">\(A=\begin{bmatrix}2&amp;0\\1&amp;3\end{bmatrix}\)</span>, find <span class="math inline">\(4A\)</span>.</li>
+<li>Mean summer stream temperature at a site was reported as <span class="math inline">\(18.2\pm1.4\,°C\)</span> (mean <span class="math inline">\(\pm\)</span> standard deviation, <span class="math inline">\(n=30\)</span>). Using the standard deviation, what range of temperatures would you expect most observations to fall within?</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
@@ -467,14 +494,19 @@ A+B=\begin{bmatrix}1+5&amp;2-1\\3+0&amp;4+2\end{bmatrix}=\begin{bmatrix}6&amp;1\
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-4A=\begin{bmatrix}8&amp;0\\4&amp;12\end{bmatrix}
-\]</span></p>
+<p><span class="math display">\[mean \pm 1\ SD = 18.2 \pm 1.4 = [16.8, 19.6]\,°C\]</span> Because the standard deviation is expressed in the same units as the data (°C), most of the 30 observed temperatures fall roughly within <strong>16.8–19.6°C</strong> of the mean.</p>
 </div>
 </div>
 </div>
+</section>
+<section id="confidence-intervals" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-intervals">Confidence intervals</h2>
 <ol start="13" type="1">
-<li>Multiply the matrices: <span class="math inline">\(\begin{bmatrix}1&amp;2\\3&amp;4\end{bmatrix}\begin{bmatrix}5&amp;6\\7&amp;8\end{bmatrix}\)</span></li>
+<li>Mean mercury concentration in lake trout is reported as <span class="math inline">\(0.38\pm0.05\)</span> ppm, with a 95% confidence interval of <span class="math inline">\([0.34, 0.42]\)</span> ppm (<span class="math inline">\(n=22\)</span>). Which of these statements is the correct interpretation?</li>
+</ol>
+<ol type="a">
+<li><p>There is a 95% chance the true mean mercury concentration is between 0.34 and 0.42 ppm.</p></li>
+<li><p>If we repeatedly sampled 22 trout and calculated a CI each time, about 95% of those intervals would contain the true mean mercury concentration.</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
@@ -488,14 +520,12 @@ A+B=\begin{bmatrix}1+5&amp;2-1\\3+0&amp;4+2\end{bmatrix}=\begin{bmatrix}6&amp;1\
 </div>
 <div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Each entry is the dot product of a row of the first matrix and a column of the second: <span class="math display">\[
-\begin{bmatrix}1&amp;2\\3&amp;4\end{bmatrix}\begin{bmatrix}5&amp;6\\7&amp;8\end{bmatrix}=\begin{bmatrix}(1)(5)+(2)(7)&amp;(1)(6)+(2)(8)\\(3)(5)+(4)(7)&amp;(3)(6)+(4)(8)\end{bmatrix}=\begin{bmatrix}19&amp;22\\43&amp;50\end{bmatrix}
-\]</span></p>
+<p>Statement <strong>(b)</strong> is correct. The true mean mercury concentration is a fixed value — it either falls inside this particular interval or it doesn’t, so there’s no probability attached to this one interval. The 95% describes how often the <em>procedure</em> would capture the true mean over many repeated samples.</p>
 </div>
 </div>
 </div>
 <ol start="14" type="1">
-<li>If you multiply a <span class="math inline">\(2\times 7\)</span> matrix by a <span class="math inline">\(7\times 4\)</span> matrix, what are the dimensions of the resulting matrix?</li>
+<li>Based on the trout example above, if 100 independent samples of 22 trout were each used to calculate a 95% confidence interval, about how many of those 100 intervals would you expect to contain the true population mean mercury concentration?</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
@@ -509,30 +539,7 @@ A+B=\begin{bmatrix}1+5&amp;2-1\\3+0&amp;4+2\end{bmatrix}=\begin{bmatrix}6&amp;1\
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The result is a <span class="math inline">\(2\times 4\)</span> matrix — the number of rows of the first matrix by the number of columns of the second.</p>
-</div>
-</div>
-</div>
-<ol start="15" type="1">
-<li>Two <span class="math inline">\(2\times 2\)</span> rasters represent land surface temperature (°C) in 2010 (<span class="math inline">\(T_{2010}\)</span>) and 2020 (<span class="math inline">\(T_{2020}\)</span>) across four grid cells. Find the raster of temperature change, <span class="math inline">\(\Delta T = T_{2020}-T_{2010}\)</span>. Given <span class="math display">\[
-T_{2010}=\begin{bmatrix}22&amp;24\\19&amp;21\end{bmatrix}, \qquad T_{2020}=\begin{bmatrix}25&amp;28\\20&amp;23\end{bmatrix}
-\]</span> find <span class="math inline">\(\Delta T\)</span>.</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\Delta T = T_{2020}-T_{2010} = \begin{bmatrix}25-22&amp;28-24\\20-19&amp;23-21\end{bmatrix} = \begin{bmatrix}3&amp;4\\1&amp;2\end{bmatrix}
-\]</span></p>
+<p>About <strong>95 of the 100</strong> intervals — that’s what “95% confidence” means: over many repeated samples, roughly 95% of the calculated intervals will contain the true population parameter.</p>
 </div>
 </div>
 </div>

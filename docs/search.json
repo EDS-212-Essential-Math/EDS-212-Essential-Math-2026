@@ -221,7 +221,7 @@
     "href": "course-materials/day4.html#class-materials",
     "title": "Distributions and summary statistics",
     "section": "Class materials",
-    "text": "Class materials\n\n\n\n Session\n Lecture slides\n\n\n\n\nday 4 / morning\nEssential summary statistics and describing data\n\n\nday 4 / afternoon\nNo afternoon session"
+    "text": "Class materials\n\n\n\n\n\n\n\n\n Session\n Lecture slides\n Extra Examples\n\n\n\n\nday 4 / morning\nEssential summary statistics and describing data\nExamples\n\n\nday 4 / afternoon\nNo afternoon session"
   },
   {
     "objectID": "course-materials/examples/day3-afternoon-extra-examples.html",
@@ -4261,5 +4261,68 @@
     "title": "",
     "section": "",
     "text": "Standard Deviation\n\nStandard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches."
+  },
+  {
+    "objectID": "course-materials/examples/day4-morning-extra-examples.html",
+    "href": "course-materials/examples/day4-morning-extra-examples.html",
+    "title": "Day 4 / Morning: Extra examples",
+    "section": "",
+    "text": "A team monitoring stream health at 40 sites records: dissolved oxygen (mg/L), substrate type (sand, gravel, cobble, or bedrock), overall water quality rating (poor/fair/good/excellent), whether each site is impaired or not impaired, and stream flow rate (m³/s). Identify the type of each variable.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nDissolved oxygen: quantitative, continuous\nSubstrate type: qualitative, nominal\nWater quality rating: qualitative, ordinal\nImpaired / not impaired: qualitative, binary\nFlow rate: quantitative, continuous\n\n\n\n\n\nA camera-trap survey records, for each detection event: species observed (deer, coyote, bobcat, …), body weight (kg), sex (male/female), and number of individuals in the detection. Identify the type of each variable.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nSpecies observed: qualitative, nominal\nBody weight: quantitative, continuous\nSex: qualitative, binary\nNumber of individuals: quantitative, discrete"
+  },
+  {
+    "objectID": "course-materials/examples/day4-morning-extra-examples.html#data-types",
+    "href": "course-materials/examples/day4-morning-extra-examples.html#data-types",
+    "title": "Day 4 / Morning: Extra examples",
+    "section": "",
+    "text": "A team monitoring stream health at 40 sites records: dissolved oxygen (mg/L), substrate type (sand, gravel, cobble, or bedrock), overall water quality rating (poor/fair/good/excellent), whether each site is impaired or not impaired, and stream flow rate (m³/s). Identify the type of each variable.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nDissolved oxygen: quantitative, continuous\nSubstrate type: qualitative, nominal\nWater quality rating: qualitative, ordinal\nImpaired / not impaired: qualitative, binary\nFlow rate: quantitative, continuous\n\n\n\n\n\nA camera-trap survey records, for each detection event: species observed (deer, coyote, bobcat, …), body weight (kg), sex (male/female), and number of individuals in the detection. Identify the type of each variable.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nSpecies observed: qualitative, nominal\nBody weight: quantitative, continuous\nSex: qualitative, binary\nNumber of individuals: quantitative, discrete"
+  },
+  {
+    "objectID": "course-materials/examples/day4-morning-extra-examples.html#data-visualizations",
+    "href": "course-materials/examples/day4-morning-extra-examples.html#data-visualizations",
+    "title": "Day 4 / Morning: Extra examples",
+    "section": "Data visualizations",
+    "text": "Data visualizations\n\nTwelve months had these total rainfall amounts, in mm: 5, 12, 18, 22, 25, 30, 35, 38, 42, 55, 60, 68. Using bins of width 20 mm (starting at 0), tally the counts for a histogram.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\nBin (mm)\nCount\n\n\n\n\n[0, 20)\n3\n\n\n[20, 40)\n5\n\n\n[40, 60)\n2\n\n\n[60, 80)\n2\n\n\n\n\n\n\n\nA boxplot of fish length (cm) for a sample of trout shows: whiskers spanning 22 to 52, a box from \\(Q_1=28\\) to \\(Q_3=41\\), and one point plotted individually at 65. Find the \\(IQR\\), and confirm using the \\(1.5\\times IQR\\) rule whether the point at 65 should be plotted as an outlier.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[IQR = Q_3-Q_1 = 41-28 = 13\\] \\[Q_3+1.5\\times IQR = 41+19.5 = 60.5\\] Since \\(65 &gt; 60.5\\), the point is correctly plotted as an outlier — that’s also why the upper whisker stops at 52 (the largest observation still within \\(1.5\\times IQR\\) of the box) rather than extending to 65."
+  },
+  {
+    "objectID": "course-materials/examples/day4-morning-extra-examples.html#quartiles-and-the-interquartile-range",
+    "href": "course-materials/examples/day4-morning-extra-examples.html#quartiles-and-the-interquartile-range",
+    "title": "Day 4 / Morning: Extra examples",
+    "section": "Quartiles and the interquartile range",
+    "text": "Quartiles and the interquartile range\n\nSoil nitrate readings (mg/kg) at 7 plots: 3, 7, 8, 12, 15, 20, 24. Find \\(Q_1\\), \\(Q_2\\), and \\(Q_3\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nMedian (\\(Q_2\\)) = 12 (the 4th of 7 ordered values).\nLower half: 3, 7, 8 \\(\\rightarrow Q_1 = 7\\)\nUpper half: 15, 20, 24 \\(\\rightarrow Q_3 = 20\\)\n\n\n\n\nUsing the soil nitrate quartiles above (\\(Q_1=7\\), \\(Q_3=20\\)), is a new reading of 42 mg/kg an outlier?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[IQR = Q_3-Q_1 = 20-7 = 13\\] \\[Q_3+1.5\\times IQR = 20+19.5 = 39.5\\] Since \\(42 &gt; 39.5\\), yes — a reading of 42 mg/kg would be flagged as an outlier."
+  },
+  {
+    "objectID": "course-materials/examples/day4-morning-extra-examples.html#central-tendency",
+    "href": "course-materials/examples/day4-morning-extra-examples.html#central-tendency",
+    "title": "Day 4 / Morning: Extra examples",
+    "section": "Central tendency",
+    "text": "Central tendency\n\nA rural county has these home sale prices, in $1,000s: 180, 195, 205, 210, 220, 230, 850. Find the median sale price.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe data are already ordered (7 values), so the median is the 4th value: $210,000.\n\n\n\n\nFind the mean sale price for the same data.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nmean = \\frac{180+195+205+210+220+230+850}{7} = \\frac{2090}{7} \\approx 298.57\n\\] About $298,570.\n\n\n\n\nWhich measure — the mean or the median — better represents a “typical” home price in this county, and why?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe median ($210,000) is more representative. The single $850,000 sale is an outlier that pulls the mean up to about $298,570, well above where most of the prices actually fall. Because the median is based on rank rather than magnitude, it isn’t distorted by that outlier.\n\n\n\n\nA camera-trap survey records the habitat type at 15 detection points: forest, forest, grassland, wetland, forest, shrubland, grassland, forest, wetland, forest, grassland, shrubland, forest, wetland, forest. What is the mode?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nCounting occurrences: forest = 7, grassland = 3, wetland = 3, shrubland = 2. The mode is forest (7 of 15 detections)."
+  },
+  {
+    "objectID": "course-materials/examples/day4-morning-extra-examples.html#variance-and-standard-deviation",
+    "href": "course-materials/examples/day4-morning-extra-examples.html#variance-and-standard-deviation",
+    "title": "Day 4 / Morning: Extra examples",
+    "section": "Variance and standard deviation",
+    "text": "Variance and standard deviation\n\nWeekly flow rate (m³/s) was recorded at two stream gauges over 5 weeks:\n\n\nGauge A: 10, 10, 11, 9, 10\nGauge B: 4, 10, 18, 6, 12\n\nBoth have the same mean. Find the variance of each, and explain what that tells you about the two gauges.\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nBoth datasets have mean \\(= 10\\).\nGauge A: deviations \\(0, 0, 1, -1, 0\\); squared \\(0, 0, 1, 1, 0\\); sum \\(=2\\) \\[S^2_A = \\frac{2}{5-1} = 0.5\\]\nGauge B: deviations \\(-6, 0, 8, -4, 2\\); squared \\(36, 0, 64, 16, 4\\); sum \\(=120\\) \\[S^2_B = \\frac{120}{5-1} = 30\\]\nDespite having identical means, Gauge B’s flow is far more variable (variance 30 vs. 0.5) — Gauge A is comparatively stable week to week, while Gauge B fluctuates a lot.\n\n\n\n\nMean summer stream temperature at a site was reported as \\(18.2\\pm1.4\\,°C\\) (mean \\(\\pm\\) standard deviation, \\(n=30\\)). Using the standard deviation, what range of temperatures would you expect most observations to fall within?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[mean \\pm 1\\ SD = 18.2 \\pm 1.4 = [16.8, 19.6]\\,°C\\] Because the standard deviation is expressed in the same units as the data (°C), most of the 30 observed temperatures fall roughly within 16.8–19.6°C of the mean."
+  },
+  {
+    "objectID": "course-materials/examples/day4-morning-extra-examples.html#confidence-intervals",
+    "href": "course-materials/examples/day4-morning-extra-examples.html#confidence-intervals",
+    "title": "Day 4 / Morning: Extra examples",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\nMean mercury concentration in lake trout is reported as \\(0.38\\pm0.05\\) ppm, with a 95% confidence interval of \\([0.34, 0.42]\\) ppm (\\(n=22\\)). Which of these statements is the correct interpretation?\n\n\nThere is a 95% chance the true mean mercury concentration is between 0.34 and 0.42 ppm.\nIf we repeatedly sampled 22 trout and calculated a CI each time, about 95% of those intervals would contain the true mean mercury concentration.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nStatement (b) is correct. The true mean mercury concentration is a fixed value — it either falls inside this particular interval or it doesn’t, so there’s no probability attached to this one interval. The 95% describes how often the procedure would capture the true mean over many repeated samples.\n\n\n\n\nBased on the trout example above, if 100 independent samples of 22 trout were each used to calculate a 95% confidence interval, about how many of those 100 intervals would you expect to contain the true population mean mercury concentration?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nAbout 95 of the 100 intervals — that’s what “95% confidence” means: over many repeated samples, roughly 95% of the calculated intervals will contain the true population parameter."
+  },
+  {
+    "objectID": "course-materials/examples/day4-morning-extra-examples.html#mean-median-mode",
+    "href": "course-materials/examples/day4-morning-extra-examples.html#mean-median-mode",
+    "title": "Day 4 / Morning: Extra examples",
+    "section": "Mean, Median, Mode",
+    "text": "Mean, Median, Mode\n\nA rural county has these home sale prices, in $1,000s: 170, 180, 195, 205, 210, 220, 230, 850. Find the median sale price.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe data are already ordered (8 values), so with an even number of data points the median is the average of the 4th and 5th values: \\[\nmedian = \\frac{205+210}{2} = 207.5\n\\] $207,500.\n\n\n\n\nFind the mean sale price for the same data.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[\nmean = \\frac{170+180+195+205+210+220+230+850}{8} = \\frac{2260}{8} = 282.5\n\\] $282,500.\n\n\n\n\nWhich measure — the mean or the median — better represents a “typical” home price in this county, and why?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nThe median ($207,500) is more representative. The single $850,000 sale is an outlier that pulls the mean up to $282,500, well above where most of the prices actually fall. Because the median is based on rank rather than magnitude, it isn’t distorted by that outlier.\n\n\n\n\nA camera-trap survey records the habitat type at 15 detection points: forest, forest, grassland, wetland, forest, shrubland, grassland, forest, wetland, forest, grassland, shrubland, forest, wetland, forest. What is the mode?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nCounting occurrences: forest = 7, grassland = 3, wetland = 3, shrubland = 2. The mode is forest (7 of 15 detections)."
+  },
+  {
+    "objectID": "course-materials/examples/day4-morning-extra-examples.html#histogram-and-quartiles",
+    "href": "course-materials/examples/day4-morning-extra-examples.html#histogram-and-quartiles",
+    "title": "Day 4 / Morning: Extra examples",
+    "section": "Histogram and Quartiles",
+    "text": "Histogram and Quartiles\n\nTwelve months had these total rainfall amounts, in mm: 5, 12, 18, 22, 25, 30, 35, 38, 42, 55, 60, 68. Using bins of width 20 mm (starting at 0), tally the counts for a histogram.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n\n\nBin (mm)\nCount\n\n\n\n\n[0, 20)\n3\n\n\n[20, 40)\n5\n\n\n[40, 60)\n2\n\n\n[60, 80)\n2\n\n\n\n\n\n\n\nA boxplot of fish length (cm) for a sample of trout shows: whiskers spanning 22 to 52, a box from \\(Q_1=28\\) to \\(Q_3=41\\), and one point plotted individually at 65. Find the \\(IQR\\), and confirm using the \\(1.5\\times IQR\\) rule whether the point at 65 should be plotted as an outlier.\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[IQR = Q_3-Q_1 = 41-28 = 13\\] \\[Q_3+1.5\\times IQR = 41+19.5 = 60.5\\] Since \\(65 &gt; 60.5\\), the point is correctly plotted as an outlier — that’s also why the upper whisker stops at 52 (the largest observation still within \\(1.5\\times IQR\\) of the box).\n\n\n\n\nSoil nitrate readings (mg/kg) at 7 plots: 3, 7, 8, 12, 15, 20, 24. Find \\(Q_1\\), \\(Q_2\\), and \\(Q_3\\).\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\nMedian (\\(Q_2\\)) = 12 (the 4th of 7 ordered values).\nLower half: 3, 7, 8 \\(\\rightarrow Q_1 = 7\\)\nUpper half: 15, 20, 24 \\(\\rightarrow Q_3 = 20\\)\n\n\n\n\nUsing the soil nitrate quartiles above (\\(Q_1=7\\), \\(Q_3=20\\)), is a new reading of 42 mg/kg an outlier?\n\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\\[IQR = Q_3-Q_1 = 20-7 = 13\\] \\[Q_3+1.5\\times IQR = 20+19.5 = 39.5\\] Since \\(42 &gt; 39.5\\), yes — a reading of 42 mg/kg would be flagged as an outlier."
   }
 ]
