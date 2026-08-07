@@ -741,38 +741,21 @@ ggplot(survey, aes(x = response, y = p)) +
 
 ---
 
-## {#prob-density-fxn data-menu-title="Probability density function"}
+## {#pdf-explained data-menu-title="What is a PDF?"}
 
 [Probability density function]{.slide-title}
 
 <hr>
 
-<br>
+<!-- On Day 4, we visualized data distributions from histograms. If we use histograms to estimate continuous functions that describe all possible outcomes, we have created a probability density function. -->
 
 ::: {.body-text-m}
-On Day 4, we visualized data distributions from histograms. If we use histograms to estimate continuous functions that describe all possible outcomes, we have created a probability density function.
-
-<br>
-
-The area under any probability density function = 1, indicating that 100% of all possible outcomes are represented by the function.
-
-<br>
-
-Drawing fun!
+Describes the relative likelihood of a **continuous** random variable taking on different values.
 :::
-
----
-
-## {#pdf-explained data-menu-title="What is a PDF?"}
-
-[What is a probability density function?]{.slide-title}
-
-<hr>
 
 :::: {.columns}
 ::: {.column width="45%"}
 ::: {.body-text-m}
-- Describes the relative likelihood of a **continuous** variable taking on different values
 - The **height** of the curve is *not* a probability
 - The **area under the curve** between two values *is* a probability
 - The total area under the entire curve = 1
@@ -811,13 +794,11 @@ ggplot(df, aes(x = x, y = y)) +
 
 ## {#pdf-example-1 data-menu-title="PDF example"}
 
-[Example: nitrate concentration]{.slide-title}
+[Check-in: nitrate concentration]{.slide-title}
 
 <hr>
 
-::: {.body-text-m}
 Nitrate concentration (mg/L) in stream water samples, modeled as a continuous random variable $Y$:
-:::
 
 ```{r}
 #| eval: true
@@ -838,17 +819,19 @@ ggplot(df, aes(x = y, y = d)) +
   )
 ```
 
+<br>
+
+[✏️ Suppose the safety limit is 10 mg/L. How would you find $P(Y > 10)$?]{style="color:green;"}
+
 ---
 
 ## {#pdf-example-2 data-menu-title="PDF example"}
 
-[Example: area = probability]{.slide-title}
+[Check-in: nitrate concentration]{.slide-title}
 
 <hr>
 
-::: {.body-text-m}
-Recall the event from earlier: *the sample exceeds the nitrate limit*. Suppose the safety limit is 10 mg/L — what's $P(Y > 10)$?
-:::
+Nitrate concentration (mg/L) in stream water samples, modeled as a continuous random variable $Y$:
 
 ```{r}
 #| eval: true
@@ -873,9 +856,9 @@ ggplot(df, aes(x = y, y = d)) +
   )
 ```
 
-::: {.body-text-m}
-The **shaded area** is the answer: about a 27% chance a sample exceeds the safety limit.
-:::
+[✏️ Suppose the safety limit is 10 mg/L. How would you find $P(Y > 10)$?]{style="color:green;"}
+
+The **shaded area** is the answer: there is about a 27% chance a sample exceeds the safety limit.
 
 ---
 
@@ -942,77 +925,6 @@ ggplot(dfn, aes(x = x, y = y)) +
 ```
 :::
 ::::
-
----
-
-## {#empirical-rule-blank data-menu-title="The empirical rule"}
-
-[The empirical rule]{.slide-title}
-
-<hr>
-
-✏️
-
----
-
-## {#empirical-rule data-menu-title="The empirical rule"}
-
-[The empirical rule]{.slide-title}
-
-<hr>
-
-::: {.body-text-m}
-For a normal distribution, the probability of falling within a given number of standard deviations of the mean is always about the same:
-
-- ~68% of values fall within 1 standard deviation of $\mu$
-- ~95% of values fall within 2 standard deviations of $\mu$
-- ~99.7% of values fall within 3 standard deviations of $\mu$
-:::
-
-```{r}
-#| echo: false
-#| warning: false
-#| out-width: "75%"
-#| fig-align: "center"
-xn <- seq(-4, 4, length.out = 400)
-dfn <- data.frame(x = xn, y = dnorm(xn))
-
-ggplot(dfn, aes(x = x, y = y)) +
-  geom_ribbon(data = dfn |> filter(x >= -1, x <= 1), aes(ymin = 0, ymax = y), fill = "#FEBC11", alpha = 0.85) +
-  geom_ribbon(data = dfn |> filter(x >= -2, x <= -1), aes(ymin = 0, ymax = y), fill = "#f5d99b") +
-  geom_ribbon(data = dfn |> filter(x >= 1, x <= 2), aes(ymin = 0, ymax = y), fill = "#f5d99b") +
-  geom_ribbon(data = dfn |> filter(x >= -3, x <= -2), aes(ymin = 0, ymax = y), fill = "#fbeecb") +
-  geom_ribbon(data = dfn |> filter(x >= 2, x <= 3), aes(ymin = 0, ymax = y), fill = "#fbeecb") +
-  geom_line(linewidth = 1.2, color = "#003660") +
-  annotate("text", x = 0, y = 0.18, label = "68%", size = 6) +
-  annotate("text", x = 1.5, y = 0.03, label = "95%", size = 5, vjust = -2.7) +
-  annotate("text", x = 2.5, y = 0.01, label = "99.7%", size = 4.2, vjust = -3.8) +
-  scale_x_continuous(breaks = -3:3, labels = c("μ-3σ","μ-2σ","μ-σ","μ","μ+σ","μ+2σ","μ+3σ")) +
-  labs(x = NULL, y = "f(x)  (density)") +
-  theme_minimal() +
-  theme(
-    axis.text.x = element_text(size = 13),
-    axis.text.y = element_text(size = 18),
-    axis.title = element_text(size = 20)
-  )
-```
-
----
-
-## {#normal-example data-menu-title="Empirical rule example"}
-
-[Example]{.slide-title}
-
-<hr>
-
-::: {.body-text-m}
-Suppose adult female sea otter mass is approximately normal, with $\mu=25$ kg and $\sigma=3$ kg.
-
-<br>
-
-- About 68% of otters weigh between 22 and 28 kg ($\mu \pm 1\sigma$)
-- About 95% weigh between 19 and 31 kg ($\mu \pm 2\sigma$)
-:::
 
 ---
 
