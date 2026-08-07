@@ -13,7 +13,7 @@ format:
 
 [EDS 212: Day 4, Lecture 2]{.custom-title}
 
-[*Basic probability theory, hypothesis testing intuition, and Boolean algebra*]{.custom-subtitle}
+[*Basic probability theory, PDFs and PMFs, hypothesis testing intuition]{.custom-subtitle}
 
 <hr class="hr-teal">
 
@@ -96,7 +96,7 @@ format:
 
 **2. Water sample contaminant test**
 
-- Experiment: testing water samples
+- Experiment: testing water samples at the same location
 - Event space: all possible nitrate concentration readings (mg/L)
 - Event : $A=$ the sample exceeds a certain nitrate limit
 - $P(A) =$ the probability that a sample exceeds the nitrate limit
@@ -136,9 +136,9 @@ If knowing $A$ occurred *does* change the probability of $B$, the events are **n
 ✏️ Are the following events independent or non independent?
 :::
 
-- Two consecutive coin flips: 
+- Two consecutive coin flips.
 
-- In two water samples, exceeding the nitrate limit in one (one event) and exceeding nitrate limit in another (second event)
+- In two water samples on consecutive days, exceeding the nitrate limit in one (one event) and exceeding nitrate limit in another (second event).
 
 ---
 
@@ -167,9 +167,7 @@ If knowing $A$ occurred *does* change the probability of $B$, the events are **n
 
 Two consecutive coin flips are independent events. One has no influence on the other.
 
-Exceeding the nitrate limit in two separate water samples could be non-independent. Perhaps both samples are affected by the same upstream agricultural runoff, so if $A$ occurs, $B$ becomes more likely too. We need more information to assess this!
-
-<!-- $$P(B|A)=\frac{P(A \cap\ B)}{P(A)}$$ -->
+Exceeding the nitrate limit in two consecutive days at the same location  would likely be non-independent. 
 
 ---
 
@@ -196,7 +194,9 @@ Given two events $A$ and $B$:
 ✏️ Given the events $A$ and $B$, write in words what each of the following mean:
 :::
 
-$A=$ nitrate concentration upstream of a farm exceeds the safety limit, $B=$ nitrate concentration downstream of the farm exceeds the safety limit
+$A=$ nitrate concentration in January 1st exceeds the safety limit
+
+$B=$ nitrate concentration in August 1st exceeds the safety limit
 
 - $A \cap B$ =
 
@@ -231,11 +231,11 @@ Given two events $A$ and $B$:
 
 $A=$ nitrate concentration upstream of a farm exceeds the safety limit, $B=$ nitrate concentration downstream of the farm exceeds the safety limit
 
-- $A \cap B$ = nitrate concentration exceeds the safety limit both upstream *and* downstream of the farm
+- $A \cap B$ = nitrate concentration exceeds the safety limit on Jaunary 1st *and* August 1st
 
-- $A \cup B$ = nitrate concentration exceeds the safety limit upstream, downstream, or both
+- $A \cup B$ = nitrate concentration exceeds the safety limit on January 1st, August 1st, or both
 
-- $A'$ = nitrate concentration does *not* exceed the safety limit upstream
+- $A'$ = nitrate concentration does *not* exceed the safety limit on January 1st
 
 ---
 
@@ -367,7 +367,7 @@ $P(A\cap B)=$ the probability of events A *and* B happening.
 
 | | Nitrate concentration | SB registered voters | Purple urchins (Channel Islands) |
 |---|---|---|---|
-| **Population** | All nitrate concentration readings in the stream over the year | All registered voters in Santa Barbara County | All purple urchins in the Channel Islands Marine Sanctuary |
+| **Population** | All nitrate concentration readings over the year | All registered voters in Santa Barbara County | All purple urchins in the Channel Islands Marine Sanctuary |
 | **Sample** | Nitrate concentration from 20 water samples collected weekly | 500 voters surveyed by phone | 50 urchins counted along 10 dive transects |
 | **Parameter** | True average nitrate concentration in the stream over the year | True % of all SB voters supporting a ballot measure | True average urchin density (per m²), sanctuary-wide |
 | **Statistic** | Average nitrate concentration calculated from the 20 samples | % of the 500 surveyed voters supporting the measure | Average urchin density (per m²) across the 10 transects |
@@ -652,30 +652,6 @@ Is that *so* unlikely (is the probability low enough), that you think you have s
 Let's brainstorm some examples (and to be continued...)
 :::
 
----
-
-## {#abraham-wald data-menu-title="Abraham Wald"}
-
-[Abraham Wald and survivorship bias]{.slide-title}
-
-<hr>
-
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/abraham_wald.png")
-```
-
-::: {.footer}
-Image source: [Wikipedia](https://en.wikipedia.org/wiki/Survivorship_bias)
-:::
-
-::: {.notes}
-- The bullet holes in the returning aircraft represented areas where a bomber could take damage and still fly well enough to return safely to base (demonstrates survivorship bias).
-- Wald proposed that the Navy reinforce areas where the returning aircraft were unscathed, inferring that planes hit in those areas were the ones most likely to be lost.
-:::
 
 ---
 
@@ -855,237 +831,15 @@ False negative (accept a false null hypothesis)
 
 ---
 
-## {#boolean-logic-title data-menu-title="Summation Notation" background-color="#003660"}
+## {#wrapping-up data-menu-title="Integration" background-color="#003660"}
 
 <div class="page-center">
-<div class="custom-subtitle">Boolean logic</div>
+<div class="custom-subtitle">Wrapping up...</div>
 </div>
 
----
+--- 
 
-## {#boolean-logic data-menu-title="Boolean logic"}
-
-[Boolean logic]{.slide-title}
-
-<hr>
-
-<br>
-<br>
-<br>
-<br>
-
-::: {.center-text .body-text-l}
-> "In mathematics and mathematical logic, Boolean algebra is the branch of algebra in which the values of the variables are the truth values true and false, usually denoted 1 and 0, respectively" (Wikipedia)
-:::
-
----
-
-## {#comp-think data-menu-title="Computer think"}
-
-[Computer think]{.slide-title}
-
-<hr>
-
-<br>
-<br>
-
-::: {.body-text-l}
-How would a computer order the objects in the following statements?
-
-<br>
-
-- **Nothing** is better than a **burrito**
-- A **loaf of bread** is better than **nothing**
-:::
-
----
-
-## {#mathematically data-menu-title="Mathematically"}
-
-[Mathematically...]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-- Nothing > burrito: TRUE
-
-<br>
-
-- Loaf of bread > nothing: TRUE
-
-<br>
-
-To a computer: Loaf of bread > nothing > burrito.
-:::
-
----
-
-## {#EDS data-menu-title="In EDS"}
-
-[In environmental data science]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-- Conditional statements
-- Filtering, subsetting, searching
-- Checking classes and verification
-- Testing
-:::
-
----
-
-## {#logical-operators data-menu-title="Logical operators"}
-
-[Logical operators]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-- Logical "and": `&`
-- Logical "or": `|`
-- Logical "negate": `!`
-:::
-
----
-
-## {#comp-operators data-menu-title="Comparison operators"}
-
-[Comparison operators]{.slide-title}
-
-<hr>
-
-::: {.body-text-l}
-- Is equal to? `==`
-- Is less than? `<`
-- Is less than or equal to? `<=`
-- Is greater than? `>`
-- Is greater than or equal to? `>=`
-- Is not equal to? `!=`
-
-A computer evaluates these and the outcome is either `TRUE` or `FALSE`, and proceeds accordingly.
-:::
-
----
-
-## {#impt-distinction data-menu-title="Important distinction"}
-
-[An important distinction:]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-`==`: This is...equal to?
-
-<br>
-
-`=`: This IS equal to.
-
-<br>
-
-> 5 == 4
-
-    > FALSE
-:::
-
----
-
-## {#examples data-menu-title="Examples:"}
-
-[Examples:]{.slide-title}
-
-<hr>
-
-<br>
-
-[Elements of a vector are tested separately, and the outcome is returned in a vector:]{.body-text-m}
-
-```{r}
-#| eval: true
-#| echo: true
-marmot <- c(1,2,3)
-marmot == 2
-```
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: true
-pika <- c(1,2,5,9,10,15)
-pika == 1 | pika >= 9
-```
-
----
-
-## {#check-data-classes data-menu-title="Check data classes"}
-
-[Checking data classes works similarly:]{.slide-title}
-
-<hr>
-
-<br>
-
-[More on data types & structures in EDS 221!]{.body-text-l}
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: true
-bear <- c(1,4,3, NA, 6) # Create a vector
-is.na(bear) # Check element by element for == NA?
-is.numeric(bear) # Checks entire *class* of vector
-```
-
----
-
-## {#in-operator data-menu-title="%in%"}
-
-[Another we'll see often: `%in%`]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-m}
-`%in%`: check for matching elements (not in order)*
-
-<br>
-
-**Example:** We have two vectors of student names, and we want to know if any students (values) in `eds212` are also in `eds223`:
-:::
-
-<br>
-
-```{r}
-#| eval: true
-#| echo: true
-eds212 <- c("John", "Cara", "Will", "Zoe")
-eds223 <- c("John", "Melissa", "Cara", "Joe", "Zoe")
-
-eds212 %in% eds223
-```
-
-```{r}
-#| include: false
-vole <- c(1,3,4,7,10,15)
-mouse <- c(0,2,4,0,0,NA,11,15,20)
-
-vole %in% mouse
-```
-
-<br>
-
-*Keep this in mind - the distinction between `%in%` and `==` is major and important.
+Acknowledgement slide
 
 ---
 
@@ -1093,8 +847,5 @@ Whole course recap slide
 
 ---
 
-Course evals slide
+Course evals & exit survey slide
 
---- 
-
-Acknowledgement slide
