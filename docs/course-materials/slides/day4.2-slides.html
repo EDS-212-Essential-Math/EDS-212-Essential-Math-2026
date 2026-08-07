@@ -31,72 +31,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #767676;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
-    div.sourceCode
-      { color: #545454; background-color: #fefefe; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #545454; } /* Normal */
-    code span.al { color: #7928a1; } /* Alert */
-    code span.an { color: #696969; } /* Annotation */
-    code span.at { color: #a55a00; } /* Attribute */
-    code span.bn { color: #7928a1; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #d91e18; } /* ControlFlow */
-    code span.ch { color: #008000; } /* Char */
-    code span.cn { color: #d91e18; } /* Constant */
-    code span.co { color: #696969; } /* Comment */
-    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
-    code span.do { color: #696969; font-style: italic; } /* Documentation */
-    code span.dt { color: #7928a1; } /* DataType */
-    code span.dv { color: #7928a1; } /* DecVal */
-    code span.er { color: #7928a1; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #a55a00; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #696969; } /* Information */
-    code span.kw { color: #d91e18; } /* Keyword */
-    code span.op { color: #00769e; } /* Operator */
-    code span.ot { color: #d91e18; } /* Other */
-    code span.pp { color: #7928a1; } /* Preprocessor */
-    code span.sc { color: #00769e; } /* SpecialChar */
-    code span.ss { color: #008000; } /* SpecialString */
-    code span.st { color: #008000; } /* String */
-    code span.va { color: #a55a00; } /* Variable */
-    code span.vs { color: #008000; } /* VerbatimString */
-    code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-677e5dedfd91753334405bac443a06b7.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -201,9 +135,17 @@
 <section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#053660">
 <h2></h2>
 <p><span class="custom-title">EDS 212: Day 4, Lecture 2</span></p>
-<p><span class="custom-subtitle"><em>Basic probability theory, hypothesis testing intuition, and Boolean algebra</em></span></p>
+<p><span class="custom-subtitle"><em>Basic probability theory, PDFs and PMFs, hypothesis testing intuition</em></span></p>
 <hr class="hr-teal">
 <p><span class="custom-subtitle3">August 6<sup>th</sup>, 2025</span></p>
+</section>
+<section id="probability-title" class="slide level2" data-menu-title="Basic Probability" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Basic probability concepts
+</div>
+</div>
 </section>
 <section id="refresh-prob" class="slide level2" data-menu-title="Refesh">
 <h2></h2>
@@ -211,137 +153,80 @@
 <hr>
 <div class="body-text-l">
 <ul>
+<li>Being familiar with the terms</li>
 <li>Hypothesis testing</li>
 <li>Bayesian statistics</li>
 <li>Decision making</li>
-<li>Being cautious</li>
 </ul>
 </div>
 </section>
+<section id="terminology-blank" class="slide level2" data-menu-title="Terminology">
+<h2></h2>
+<p><span class="slide-title">Event space, event, and probability</span></p>
+<hr>
+<p>✏️</p>
+</section>
 <section id="terminology" class="slide level2" data-menu-title="Terminology">
 <h2></h2>
-<p><span class="slide-title">Terminology</span></p>
+<p><span class="slide-title">Event space, event, and probability</span></p>
 <hr>
 <p><br></p>
+<div class="body-text-m">
 <p><strong>Event space:</strong> The collection of all possible unique outcomes of an experiment or scenario. Also called the <em>sample space.</em></p>
 <p><br></p>
-<p><strong>Event:</strong> A possible outcome (or combination of outcomes). The probability of event <span class="math inline">\(A\)</span> occurring is written as <span class="math inline">\(P(A)\)</span>.</p>
+<p><strong>Event:</strong> A possible outcome. The probability of event <span class="math inline">\(A\)</span> occurring is written as <span class="math inline">\(P(A)\)</span>.</p>
 <p><br></p>
-<p>The probability is the <strong>long term</strong> relative frequency of an event occurring, given all outcomes of the event space.</p>
-<p><br></p>
-<p><strong>Probability:</strong> the likelihood that an event or outcome occurs.</p>
+<p><strong>Probability:</strong> the likelihood that an event occurs.</p>
 <ul>
-<li><span class="math inline">\(P = 0\)</span> indicates no chance of an event or outcome</li>
+<li><span class="math inline">\(P = 0\)</span> indicates no chance of an event happening</li>
 <li><span class="math inline">\(P=1\)</span> indicates it is a certainty it will happen</li>
 </ul>
+</div>
 </section>
 <section id="event-space-examples" class="slide level2" data-menu-title="Event space examples">
 <h2></h2>
 <p><span class="slide-title">Two examples</span></p>
 <hr>
-<div class="body-text-m">
-<p><strong>1. Daily rain gauge reading</strong></p>
+<p><strong>1. Coin flip</strong></p>
 <ul>
-<li>Event space: {rain, no rain}</li>
-<li>Event: it rains today</li>
+<li>Experiment: flipping a coin</li>
+<li>Event space: {heads, tails}</li>
+<li>Event: <span class="math inline">\(A =\)</span> we flip the coin and get tails</li>
+<li><span class="math inline">\(P(A)=\)</span> the probability of flipping the coin and getting tails</li>
 </ul>
 <p><br></p>
 <p><strong>2. Water sample contaminant test</strong></p>
 <ul>
-<li>Event space: measurements for nitrate and measurements for E. coli</li>
-<li>Event (<span class="math inline">\(A\)</span>): the sample exceeds a certain nitrate limit</li>
+<li>Experiment: testing water samples at the same location</li>
+<li>Event space: all possible nitrate concentration readings (mg/L)</li>
+<li>Event : <span class="math inline">\(A=\)</span> the sample exceeds a certain nitrate limit</li>
+<li><span class="math inline">\(P(A) =\)</span> the probability that a sample exceeds the nitrate limit</li>
 </ul>
-</div>
 </section>
-<section id="law-large-nums" class="slide level2" data-menu-title="Law of large numbers">
+<section id="independence-blank" class="slide level2" data-menu-title="Independent events">
 <h2></h2>
-<p><span class="slide-title">Law of large numbers</span></p>
+<p><span class="slide-title">Independent vs.&nbsp;non-independent events</span></p>
 <hr>
-<p><br></p>
-<div class="body-text-l">
-<p>If you repeat an experiment independently a large number of times, the calculated statistic (e.g.&nbsp;mean, proportion ‘true’, etc.) will be close to the true (expected) parameter.</p>
-<p><br></p>
-<p><strong>Example:</strong> Proportion “heads” over a long run of coin flips, with a fair coin.</p>
-<p><br></p>
-<p>Let’s <a href="https://www.probabilisticworld.com/law-large-numbers/">sketch what it might look like</a>…</p>
-</div>
+<p>✏️</p>
 </section>
-<section id="prob-theory" class="slide level2" data-menu-title="Probability Theory">
+<section id="independence-check-in" class="slide level2" data-menu-title="Independent events">
 <h2></h2>
-<p><span class="slide-title2">Basic probability theory, notation, and diagrams</span></p>
+<p><span class="slide-title">Independent vs.&nbsp;non-independent events</span></p>
 <hr>
-<p><br></p>
 <div class="body-text-m">
+<p>Two events are <strong>independent</strong> if one occurring doesn’t change the probability of the other:</p>
+<p>If knowing <span class="math inline">\(A\)</span> occurred <em>does</em> change the probability of <span class="math inline">\(B\)</span>, the events are <strong>non-independent</strong>.</p>
+<p><br></p>
+<p><strong>Conditional probability:</strong> For events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the probability of event <span class="math inline">\(B\)</span> happening given that <span class="math inline">\(A\)</span> is known to occur is denoted as <span class="math inline">\(P(B|A)\)</span>.</p>
+<p><br></p>
+</div>
+<div style="color:green;">
+<p>✏️ Are the following events independent or non independent?</p>
+</div>
 <ul>
-<li><strong>Intersection:</strong> Probability that outcomes co-occur. In other words, these are <strong>AND</strong> probability statements.</li>
+<li><p>Two consecutive coin flips.</p></li>
+<li><p>In two water samples on consecutive days, exceeding the nitrate limit in one (one event) and exceeding nitrate limit in another (second event).</p></li>
 </ul>
-<p><br></p>
-<ul>
-<li><strong>Union:</strong> Probability that <em>at least one</em> outcome in the event space happens (could be just one, or all). In other words, these are <strong>OR</strong> probability statements.</li>
-</ul>
-<p><br></p>
-<ul>
-<li><strong>Complement:</strong> Probability that an outcome or set of outcomes <em>does not</em> occur</li>
-</ul>
-</div>
-</section>
-<section id="intersection" class="slide level2" data-menu-title="Intersection">
-<h2></h2>
-<p><span class="slide-title">Intersection</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<p><strong>Notation:</strong> <span class="math inline">\(P(A\cap B)\)</span></p>
-<p><br></p>
-<p><strong>In words:</strong> The probability of A <em>and</em> B happening (where A and B are independent events)</p>
-<p><br></p>
-<p><strong>Calculation:</strong> <span class="math inline">\(P(A\cap B) = P(A)*P(B)\)</span></p>
-<p><br></p>
-<p><strong>Example:</strong> <span class="math inline">\(A \cap B\)</span> = the water sample exceeds both the nitrate limit <em>and</em> the E. coli limit</p>
-</div>
-</section>
-<section id="union" class="slide level2" data-menu-title="Union">
-<h2></h2>
-<p><span class="slide-title">Union</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<p><strong>Notation:</strong> <span class="math inline">\(P(A\cup B)\)</span></p>
-<p><br></p>
-<p><strong>In words:</strong> The probability of A <em>or</em> B happening (i.e., at least A or B happens, or both).</p>
-<p><br></p>
-<p><strong>Calculation:</strong> <span class="math inline">\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)</span></p>
-<p><br></p>
-<p><strong>Example:</strong> <span class="math inline">\(A \cup B\)</span> = the water sample exceeds the nitrate limit, the E. coli limit, or both</p>
-</div>
-</section>
-<section id="complement" class="slide level2" data-menu-title="Complement">
-<h2></h2>
-<p><span class="slide-title">Complement</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<p><strong>Notation:</strong> <span class="math inline">\(P(A')\)</span></p>
-<p><br></p>
-<p><strong>In words:</strong> The probability of <span class="math inline">\(A\)</span> <strong>NOT</strong> happening</p>
-<p><br></p>
-<p><strong>Calculation:</strong> <span class="math inline">\(P(A')=1-P(A)\)</span></p>
-<p><br></p>
-<p><strong>Example:</strong> <span class="math inline">\(A'\)</span> = the water sample does <em>not</em> exceed the nitrate limit</p>
-</div>
-</section>
-<section id="cond-prob" class="slide level2" data-menu-title="Conditional probability">
-<h2></h2>
-<p><span class="slide-title">Conditional probability</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<p>If events are not independent, one event having occurred can <em>change</em> the probability of another event occurring. For events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the probability of <span class="math inline">\(B\)</span> given that <span class="math inline">\(A\)</span> is know to occur is:</p>
-<p><br></p>
-<p><span class="math inline">\(P(B|A)=\frac{P(A \cap\ B)}{P(A)}\)</span></p>
-<p><br></p>
-<p><strong>A common question:</strong> Why doesn’t this just simplify to <span class="math inline">\(P(B)\)</span> if the intersection is <span class="math inline">\(P(A)*P(B)\)</span>?</p>
-</div>
 </section>
 <section id="independence" class="slide level2" data-menu-title="Independent events">
 <h2></h2>
@@ -349,125 +234,739 @@
 <hr>
 <div class="body-text-m">
 <p>Two events are <strong>independent</strong> if one occurring doesn’t change the probability of the other:</p>
-<p><span class="math display">\[P(B|A) = P(B), \quad \text{equivalently} \quad P(A \cap B) = P(A) \times P(B)\]</span></p>
 <p>If knowing <span class="math inline">\(A\)</span> occurred <em>does</em> change the probability of <span class="math inline">\(B\)</span>, the events are <strong>non-independent</strong>.</p>
 <p><br></p>
-<p><strong>Independent example:</strong> a coin flip and whether it rains today — one has no bearing on the other.</p>
-<p><strong>Non-independent example:</strong> in our water sample, exceeding the nitrate limit and exceeding the E. coli limit — both are often driven by the same upstream agricultural runoff, so if <span class="math inline">\(A\)</span> occurs, <span class="math inline">\(B\)</span> becomes more likely too.</p>
+<p><strong>Conditional probability:</strong> For events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the probability of event <span class="math inline">\(B\)</span> happening given that <span class="math inline">\(A\)</span> is known to occur is denoted as <span class="math inline">\(P(B|A)\)</span>.</p>
+<p><br></p>
 </div>
+<div style="color:green;">
+<p>✏️ Are the following events independent or non independent?</p>
+</div>
+<p>Two consecutive coin flips are independent events. One has no influence on the other.</p>
+<p>Exceeding the nitrate limit in two consecutive days at the same location would likely be non-independent.</p>
+</section>
+<section id="prob-theory-1" class="slide level2" data-menu-title="Probability Theory">
+<h2></h2>
+<p><span class="slide-title2">Intersection, union, and complement</span></p>
+<hr>
+<div class="body-text-m">
+<p>Given two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>:</p>
+<ul>
+<li><p><strong>Intersection:</strong> <span class="math inline">\(A\cap B=\)</span> denotes the events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> co-occurring. In other words, these are <strong>AND</strong> probability statements.</p></li>
+<li><p><strong>Union:</strong> <span class="math inline">\(A\cup B=\)</span> denotes <em>at least one</em> of the events happens (could be just one, or both). In other words, these are <strong>OR</strong> probability statements.</p></li>
+<li><p><strong>Complement:</strong> <span class="math inline">\(A'=\)</span> denotes the event <span class="math inline">\(A\)</span> <em>does not</em> occur.</p></li>
+</ul>
+</div>
+<div style="color:green;">
+<p>✏️ Given the events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, write in words what each of the following mean:</p>
+</div>
+<p><span class="math inline">\(A=\)</span> nitrate concentration in January 1st exceeds the safety limit</p>
+<p><span class="math inline">\(B=\)</span> nitrate concentration in August 1st exceeds the safety limit</p>
+<ul>
+<li><p><span class="math inline">\(A \cap B\)</span> =</p></li>
+<li><p><span class="math inline">\(A \cup B\)</span> =</p></li>
+<li><p><span class="math inline">\(A'\)</span> =</p></li>
+</ul>
+</section>
+<section id="prob-theory" class="slide level2" data-menu-title="Probability Theory">
+<h2></h2>
+<p><span class="slide-title2">Intersection, union, and complement</span></p>
+<hr>
+<div class="body-text-m">
+<p>Given two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>:</p>
+<ul>
+<li><p><strong>Intersection:</strong> <span class="math inline">\(A\cap B=\)</span> denotes the events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> co-occurring. In other words, these are <strong>AND</strong> probability statements.</p></li>
+<li><p><strong>Union:</strong> <span class="math inline">\(A\cup B=\)</span> denotes <em>at least one</em> of the events happens (could be just one, or both). In other words, these are <strong>OR</strong> probability statements.</p></li>
+<li><p><strong>Complement:</strong> <span class="math inline">\(A'=\)</span> denotes the event <span class="math inline">\(A\)</span> <em>does not</em> occur.</p></li>
+</ul>
+</div>
+<div style="color:green;">
+<p>✏️ Given the events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, write in words what each of the following mean:</p>
+</div>
+<p><span class="math inline">\(A=\)</span> nitrate concentration in January 1st exceeds the safety limit</p>
+<p><span class="math inline">\(B=\)</span> nitrate concentration in August 1st exceeds the safety limit</p>
+<ul>
+<li><p><span class="math inline">\(A \cap B\)</span> = nitrate concentration exceeds the safety limit on Jaunary 1st <em>and</em> August 1st</p></li>
+<li><p><span class="math inline">\(A \cup B\)</span> = nitrate concentration exceeds the safety limit on January 1st, August 1st, or both</p></li>
+<li><p><span class="math inline">\(A'\)</span> = nitrate concentration does <em>not</em> exceed the safety limit on January 1st</p></li>
+</ul>
+</section>
+<section id="basic-proability-1" class="slide level2" data-menu-title="Basic">
+<h2></h2>
+<p><span class="slide-title">Basic probability</span></p>
+<hr>
+<p><strong>Probability of the intersection</strong></p>
+<p><span class="math inline">\(P(A\cap B)=\)</span> the probability of events A <em>and</em> B happening.</p>
+<p><strong>Calculation:</strong></p>
+<ul>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent: <span class="math inline">\(P(A\cap B) = P(A)\times P(B)\)</span></p></li>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are not independent: <span class="math inline">\(P(A\cap B) = P(A)P(B|A)\)</span></p></li>
+</ul>
+</section>
+<section id="basic-proability-2" class="slide level2" data-menu-title="Basic">
+<h2></h2>
+<p><span class="slide-title">Basic probability</span></p>
+<hr>
+<p><strong>Probability of the intersection</strong></p>
+<p><span class="math inline">\(P(A\cap B)=\)</span> the probability of events A <em>and</em> B happening.</p>
+<p><strong>Calculation:</strong></p>
+<ul>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent: <span class="math inline">\(P(A\cap B) = P(A)\times P(B)\)</span></p></li>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are not independent: <span class="math inline">\(P(A\cap B) = P(A)P(B|A)\)</span></p></li>
+</ul>
+<p><br></p>
+<p><strong>Probability of the union</strong></p>
+<p><strong>Notation:</strong> <span class="math inline">\(P(A\cup B)=\)</span> the probability of A <em>or</em> B happening.</p>
+<p><strong>Calculation:</strong> <span class="math inline">\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)</span></p>
+</section>
+<section id="basic-proability-3" class="slide level2" data-menu-title="Basic">
+<h2></h2>
+<p><span class="slide-title">Basic probability</span></p>
+<hr>
+<p><strong>Probability of the intersection</strong></p>
+<p><span class="math inline">\(P(A\cap B)=\)</span> the probability of events A <em>and</em> B happening.</p>
+<p><strong>Calculation:</strong></p>
+<ul>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent: <span class="math inline">\(P(A\cap B) = P(A)\times P(B)\)</span></p></li>
+<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are not independent: <span class="math inline">\(P(A\cap B) = P(A)P(B|A)\)</span></p></li>
+</ul>
+<p><br></p>
+<p><strong>Probability of the union</strong></p>
+<p><strong>Notation:</strong> <span class="math inline">\(P(A\cup B)=\)</span> the probability of A <em>or</em> B happening.</p>
+<p><strong>Calculation:</strong> <span class="math inline">\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)</span></p>
+<p><br></p>
+<p><strong>Probability of the complement</strong></p>
+<p><strong>Notation:</strong> <span class="math inline">\(P(A')=\)</span> the probability of <span class="math inline">\(A\)</span> <em>not</em> happening</p>
+<p><strong>Calculation:</strong> <span class="math inline">\(P(A')=1-P(A)\)</span></p>
+</section>
+<section id="inference-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Inference
+</div>
+</div>
+</section>
+<section id="terms-blank" class="slide level2" data-menu-title="Terms">
+<h2></h2>
+<p><span class="slide-title">Population/sample, parameter/statistic</span></p>
+<hr>
+<p>✏️</p>
 </section>
 <section id="terms" class="slide level2" data-menu-title="Terms">
 <h2></h2>
-<p><span class="slide-title">Terms</span></p>
+<p><span class="slide-title">Population/sample, parameter/statistic</span></p>
 <hr>
 <p><br></p>
 <div class="body-text-m">
 <ul>
-<li><p><strong>Population:</strong> The entire collection of things in a category you are trying to understand. <strong>You define the population.</strong> For example: Santa Barbara registered voters, Ponderosa pines in Inyo National Forest, purple urchins in Channel Islands Marine Sanctuary.</p></li>
+<li><p><strong>Population:</strong> The entire collection of things in a category you are trying to understand. <em>You define the population.</em></p></li>
 <li><p><strong>Sample:</strong> A subset of the population, goal is to be <em>representative</em> of the population</p></li>
 <li><p><strong>Parameter:</strong> A characteristic of the population</p></li>
 <li><p><strong>Statistic:</strong> A characteristic of the sample</p></li>
 </ul>
 </div>
 </section>
+<section id="terms-examples" class="slide level2" data-menu-title="Population/sample examples">
+<h2></h2>
+<p><span class="slide-title">Examples</span></p>
+<hr>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Nitrate concentration</th>
+<th>SB registered voters</th>
+<th>Purple urchins (Channel Islands)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Population</strong></td>
+<td>All nitrate concentration readings over the year</td>
+<td>All registered voters in Santa Barbara County</td>
+<td>All purple urchins in the Channel Islands Marine Sanctuary</td>
+</tr>
+<tr class="even">
+<td><strong>Sample</strong></td>
+<td>Nitrate concentration from 20 water samples collected weekly</td>
+<td>500 voters surveyed by phone</td>
+<td>50 urchins counted along 10 dive transects</td>
+</tr>
+<tr class="odd">
+<td><strong>Parameter</strong></td>
+<td>True average nitrate concentration in the stream over the year</td>
+<td>True % of all SB voters supporting a ballot measure</td>
+<td>True average urchin density (per m²), sanctuary-wide</td>
+</tr>
+<tr class="even">
+<td><strong>Statistic</strong></td>
+<td>Average nitrate concentration calculated from the 20 samples</td>
+<td>% of the 500 surveyed voters supporting the measure</td>
+<td>Average urchin density (per m²) across the 10 transects</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="terms-examples-exercise" class="slide level2" data-menu-title="Population/sample examples">
+<h2></h2>
+<p><span class="slide-title">Examples</span></p>
+<hr>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span style="color:green;">✏️ Your example</span></th>
+<th>SB registered voters</th>
+<th>Purple urchins (Channel Islands)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Population</strong></td>
+<td></td>
+<td>All registered voters in Santa Barbara County</td>
+<td>All purple urchins in the Channel Islands Marine Sanctuary</td>
+</tr>
+<tr class="even">
+<td><strong>Sample</strong></td>
+<td></td>
+<td>500 voters surveyed by phone</td>
+<td>50 urchins counted along 10 dive transects</td>
+</tr>
+<tr class="odd">
+<td><strong>Parameter</strong></td>
+<td></td>
+<td>True % of all SB voters supporting a ballot measure</td>
+<td>True average urchin density (per m²), sanctuary-wide</td>
+</tr>
+<tr class="even">
+<td><strong>Statistic</strong></td>
+<td></td>
+<td>% of the 500 surveyed voters supporting the measure</td>
+<td>Average urchin density (per m²) across the 10 transects</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="inference-blank" class="slide level2" data-menu-title="Inference">
+<h2></h2>
+<p><span class="slide-title">Why do we sample?</span></p>
+<hr>
+<div class="body-text-m">
+<p>Usually, we don’t have the resources (time, money, human power, etc.) to collect observations for an entire population.</p>
+</div>
+<p>✏️</p>
+</section>
 <section id="inference" class="slide level2" data-menu-title="Inference">
 <h2></h2>
-<p><span class="slide-title">Inference</span></p>
+<p><span class="slide-title">Why do we sample?</span></p>
 <hr>
-<p><br> <br> <br></p>
-<div class="body-text-l">
-<p>Usually, we don’t have the resources (time, money, human power, etc.) to collect observations for an entire population. As a proxy, we try to collect a representative sample.</p>
+<div class="body-text-m">
+<p>Usually, we don’t have the resources (time, money, human power, etc.) to collect observations for an entire population. As a proxy, we try to <strong>collect a representative sample</strong>.</p>
 <p><br></p>
-<p>Then, we attempt to draw conclusions about the <strong>populations</strong> from which our samples were collected.</p>
+<p>Then, we attempt <strong>to draw conclusions about the populations</strong> from which our samples were collected.</p>
+<p><br></p>
+<p>The statistic of the sample becomes an <strong>estimate</strong> for the true parameter in the population.</p>
+<p><br></p>
+<p>This process is called <strong>statistical inference</strong>.</p>
 </div>
 </section>
-<section id="prob-density-fxn" class="slide level2" data-menu-title="Probability density function">
+<section id="inference-diagram" class="slide level2" data-menu-title="Inference">
+<h2></h2>
+<p><span class="slide-title">Population vs.&nbsp;sample</span></p>
+<hr>
+
+<img data-src="images/population_vs_sample.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://express.excelsior.edu/datascienceintro/chapter/chapter-10-statistical-inference-data-science/">Data Science: A First Introduction; Timbers, Campbell, Lee.</a></p></section>
+<section id="conf-int-1" class="slide level2" data-menu-title="Confidence interval">
+<h2></h2>
+<p><span class="slide-title">Quantifying uncertainty</span></p>
+<hr>
+<div class="body-text-m">
+<p>Once we use the sample to compute an estimate of the population’s true parameter: how can communicate how certain we are about that estimate?</p>
+<p><br></p>
+<p>One way of quantifying uncertainty around our statistics is using a…</p>
+<p><br></p>
+<p><strong>Confidence interval:</strong> an interval based on a sample that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.</p>
+</div>
+<p><br></p>
+</section>
+<section id="conf-int-ex-1" class="slide level2" data-menu-title="Confidence interval example">
+<h2></h2>
+<p><span class="slide-title">Confidence interval example</span></p>
+<hr>
+<div class="center-text">
+<p><em>Mean shark length is 8.42 <span class="math inline">\(\pm\)</span> 3.55 ft (mean <span class="math inline">\(\pm\)</span> standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).</em></p>
+</div>
+<p><br></p>
+</section>
+<section id="conf-int-ex-2" class="slide level2" data-menu-title="Confidence interval example">
+<h2></h2>
+<p><span class="slide-title">Confidence interval example</span></p>
+<hr>
+<div class="center-text">
+<p><em>Mean shark length is 8.42 <span class="math inline">\(\pm\)</span> 3.55 ft (mean <span class="math inline">\(\pm\)</span> standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).</em></p>
+</div>
+<p><br></p>
+<div class="body-text-m">
+<p>What this <strong>DOES NOT</strong> mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet.</p>
+</div>
+<!-- The true population mean is a *fixed value* and does not change -- the CI either contains this true mean or it does not. There is no probability involved. -->
+<p><br></p>
+<div class="body-text-m">
+<p>What this <strong>DOES</strong> mean: If we took a bunch of sets of samples from the population (all n = 15), then 95% of the time, the calculated mean would fall within this range. <!-- What this **DOES** mean: 95% of calculated confidence intervals for samples drawn from this population will contain the true population parameter. This CI could be one of the 95%. It could also be one of the 5% that does *not* contain the true population parameter! --></p>
+</div>
+<p>This statement correctly describes the frequency with which we would expect CIs to capture the mean over many samples.</p>
+</section>
+<section id="break" class="slide level2" data-menu-title="5 minute break">
+<h2></h2>
+<p><span class="slide-title">Let’s take a 5 minute break</span></p>
+<hr>
+
+<img data-src="images/coffee-break.png" class="r-stretch quarto-figure-center"><p class="caption">image: Flaticon.com</p></section>
+<section id="probability-density-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Probability density and mass functions
+</div>
+</div>
+</section>
+<section id="random-variable-blank" class="slide level2" data-menu-title="Random variables">
+<h2></h2>
+<p><span class="slide-title">Random variables</span></p>
+<hr>
+<p>✏️</p>
+</section>
+<section id="random-variable" class="slide level2" data-menu-title="Random variables">
+<h2></h2>
+<p><span class="slide-title">Random variables</span></p>
+<hr>
+<div class="body-text-m">
+<p>A <strong>random variable</strong> is a variable whose value is a numerical outcome of a random process. Usually denoted with a capital letter (<span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>), with specific values denoted lowercase (<span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>).</p>
+<p><br></p>
+<ul>
+<li><strong>Discrete random variable:</strong> takes on a countable set of values.</li>
+</ul>
+<p>E.g. <span class="math inline">\(X=1\)</span> if a coin flip lands tails, <span class="math inline">\(X=0\)</span> if it lands heads.</p>
+<ul>
+<li><strong>Continuous random variable:</strong> can take any value in an interval.</li>
+</ul>
+<p>E.g. <span class="math inline">\(Y=\)</span> the nitrate concentration (mg/L) in a water sample.</p>
+<p><br></p>
+<p>This connects back to <em>events</em> from earlier: “the sample exceeds the nitrate limit” is really just the event <span class="math inline">\(Y &gt; L\)</span>, where <span class="math inline">\(L\)</span> is the limit.</p>
+</div>
+</section>
+<section id="pmf-blank" class="slide level2" data-menu-title="Probability mass function">
+<h2></h2>
+<p><span class="slide-title">Probability mass function (PMF)</span></p>
+<hr>
+<p>✏️</p>
+</section>
+<section id="pmf" class="slide level2" data-menu-title="Probability mass function">
+<h2></h2>
+<p><span class="slide-title">Probability mass function (PMF)</span></p>
+<hr>
+<div class="body-text-m">
+<p>For a <strong>discrete</strong> random variable <span class="math inline">\(X\)</span>, the <strong>probability mass function (PMF)</strong> gives <span class="math inline">\(P(X=x)\)</span> for each possible value <span class="math inline">\(x\)</span>.</p>
+<p><span class="math display">\[\sum_x P(X=x) = 1\]</span></p>
+</div>
+<p><strong>Example:</strong> <span class="math inline">\(X=1\)</span> if a fair coin lands tails, <span class="math inline">\(X=0\)</span> if heads.</p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="body-text-m">
+<ul>
+<li><span class="math inline">\(x\)</span>-axis: possible values of <span class="math inline">\(X\)</span></li>
+<li><span class="math inline">\(y\)</span>-axis: <span class="math inline">\(P(X=x)\)</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day4.2-slides_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="pmf-draw-blank" class="slide level2" data-menu-title="Exercise: draw a PMF">
+<h2></h2>
+<p><span class="slide-title">Example</span></p>
+<hr>
+<p>✏️ <span style="color:green;">A wildlife camera trap records 10 animal sightings in one week: 5 deer, 3 raccoons, 1 coyote, 1 owl. Let <span class="math inline">\(X\)</span> = the species captured in a randomly selected photo. Find <span class="math inline">\(P(X=x)\)</span> for each species and draw the PMF.</span></p>
+</section>
+<section id="pmf-draw" class="slide level2" data-menu-title="Exercise: draw a PMF">
+<h2></h2>
+<p><span class="slide-title">Solution</span></p>
+<hr>
+<p>💡 <span style="color:green;">Let’s see a solution!</span></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Species</th>
+<th>Count</th>
+<th><span class="math inline">\(P(X=x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deer</td>
+<td>5</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>Raccoon</td>
+<td>3</td>
+<td>0.3</td>
+</tr>
+<tr class="odd">
+<td>Coyote</td>
+<td>1</td>
+<td>0.1</td>
+</tr>
+<tr class="even">
+<td>Owl</td>
+<td>1</td>
+<td>0.1</td>
+</tr>
+</tbody>
+</table>
+
+<img data-src="day4.2-slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="pmf-interpret-blank" class="slide level2" data-menu-title="Exercise: your 212 survey">
+<h2></h2>
+<p><span class="slide-title">Exercise: your 212 survey</span></p>
+<hr>
+<p>On day 1, you answered: <em>“What best describes your relationship with math?”</em></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Response</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>My mortal enemy</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>A family friend you dislike but your parents insist you invite to everything</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>The friend of a friend whose name you can never remember</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Respectful co-worker you can have a drink with</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>My best friend!</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<div style="color:green;">
+<ol type="1">
+<li>What is the random variable <span class="math inline">\(X\)</span> here? Is it quantitative or qualitative? Nominal, ordinal, or binary?</li>
+<li>Using these counts as an estimate, find <span class="math inline">\(P(X=x)\)</span> for each response, and draw the PMF.</li>
+<li>What is the probability that a randomly selected student has a positive relationship with math (i.e.&nbsp;“respectful coworker” or more positive)?</li>
+<li>What is the probability that a randomly selected doesn’t have a neutral relationship (forgettable acquaintance) with math?</li>
+</ol>
+</div>
+</section>
+<section id="pmf-interpret" class="slide level2" data-menu-title="Exercise: your class survey">
+<h2></h2>
+<p><span class="slide-title">Exercise: solution</span></p>
+<hr>
+<p>💡 <span style="color:green;">Let’s see a solution!</span></p>
+<p><strong>1.</strong> <span class="math inline">\(X=\)</span> the response a student gave to the survey question. It’s <strong>qualitative</strong>, and <strong>ordinal</strong>. The responses have an implied order, from worst to best relationship with math (much like a Likert scale).</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Response</th>
+<th>Count</th>
+<th><span class="math inline">\(P(X=x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mortal enemy</td>
+<td>0</td>
+<td>0/34 = 0.00</td>
+</tr>
+<tr class="even">
+<td>Disliked family friend</td>
+<td>3</td>
+<td>3/34 ≈ 0.09</td>
+</tr>
+<tr class="odd">
+<td>Forgettable acquaintance</td>
+<td>12</td>
+<td>12/34 ≈ 0.35</td>
+</tr>
+<tr class="even">
+<td>Respected co-worker</td>
+<td>15</td>
+<td>15/34 ≈ 0.44</td>
+</tr>
+<tr class="odd">
+<td>Best friend</td>
+<td>4</td>
+<td>4/34 ≈ 0.12</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:55%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day4.2-slides_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<p><strong>3.</strong> <span class="math inline">\(P(\text{positive}) = P(\text{respected co-worker}) + P(\text{best friend}) = \frac{15+4}{34} \approx 0.56\)</span></p>
+<p><strong>4.</strong> <span class="math inline">\(P(\text{not neutral}) = 1 - P(\text{forgettable acquaintance})= 1 - \frac{12}{34} \approx 0.65\)</span></p>
+</section>
+<section id="pdf-explained-blank" class="slide level2" data-menu-title="What is a PDF?">
 <h2></h2>
 <p><span class="slide-title">Probability density function</span></p>
 <hr>
-<p><br></p>
-<div class="body-text-m">
-<p>On Day 4, we visualized data distributions from histograms. If we use histograms to estimate continuous functions that describe all possible outcomes, we have created a probability density function.</p>
-<p><br></p>
-<p>The area under any probability density function = 1, indicating that 100% of all possible outcomes are represented by the function.</p>
-<p><br></p>
-<p>Drawing fun!</p>
-</div>
+<p>✏️</p>
 </section>
 <section id="pdf-explained" class="slide level2" data-menu-title="What is a PDF?">
 <h2></h2>
-<p><span class="slide-title">What is a probability density function?</span></p>
+<p><span class="slide-title">Probability density function</span></p>
 <hr>
+<!-- On Day 4, we visualized data distributions from histograms. If we use histograms to estimate continuous functions that describe all possible outcomes, we have created a probability density function. -->
 <div class="body-text-m">
+<p>Describes the relative likelihood of a <strong>continuous</strong> random variable taking on different values.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:35%;">
 <ul>
-<li>Describes the relative likelihood of a <strong>continuous</strong> variable taking on different values</li>
+<li><span class="math inline">\(x\)</span>-axis: possible values of the random variable</li>
+<li><span class="math inline">\(y\)</span>-axis: <span class="math inline">\(f(x)\)</span>, the density (<strong>not</strong> a probability)</li>
 <li>The <strong>height</strong> of the curve is <em>not</em> a probability</li>
 <li>The <strong>area under the curve</strong> between two values <em>is</em> a probability</li>
 <li>The total area under the entire curve = 1</li>
 </ul>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day4.2-slides_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
 </div>
+</div>
+</div>
+</div></div>
 </section>
 <section id="pdf-example-1" class="slide level2" data-menu-title="PDF example">
 <h2></h2>
-<p><span class="slide-title">Example: a normal distribution</span></p>
+<p><span class="slide-title">Check-in: nitrate concentration</span></p>
 <hr>
-<div class="body-text-m">
-<p>Annual rainfall (mm) in a watershed, modeled as a continuous variable:</p>
-</div>
+<p>Nitrate concentration (mg/L) in stream water samples, modeled as a continuous random variable <span class="math inline">\(Y\)</span>:</p>
 
-<img data-src="day4.2-slides_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="body-text-m">
-<p>This bell-shaped curve is called a <strong>normal distribution</strong> — one of the most common shapes for environmental data.</p>
-</div>
+<img data-src="day4.2-slides_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p><br></p>
+<p><span style="color:green;">✏️ Suppose the safety limit is 10 mg/L. How would you find <span class="math inline">\(P(Y &gt; 10)\)</span>?</span></p>
 </section>
 <section id="pdf-example-2" class="slide level2" data-menu-title="PDF example">
 <h2></h2>
-<p><span class="slide-title">Example: area = probability</span></p>
+<p><span class="slide-title">Check-in: nitrate concentration</span></p>
+<hr>
+<p>Nitrate concentration (mg/L) in stream water samples, modeled as a continuous random variable <span class="math inline">\(Y\)</span>:</p>
+
+<img data-src="day4.2-slides_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p><span style="color:green;">✏️ Suppose the safety limit is 10 mg/L. How would you find <span class="math inline">\(P(Y &gt; 10)\)</span>?</span></p>
+<p>The <strong>shaded area</strong> is the answer: there is about a 27% chance a sample exceeds the safety limit.</p>
+<!-- 
+
+---
+
+## {#pdf-mean-median data-menu-title="Mean vs. median of a PDF"}
+
+[Mean vs. median of a PDF]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+- The **median** splits the area under the curve in half: 50% of the probability is below it, 50% above
+- The **mean** is the "balance point" of the distribution
+- For a **symmetric** distribution, mean = median
+- For a **skewed** distribution, they differ — the mean is pulled toward the longer tail
+:::
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](day4.2-slides_files/figure-revealjs/unnamed-chunk-7-1.png){fig-align='center' width=70%}
+:::
+:::
+
+
+::: {.body-text-m}
+This nitrate distribution is right-skewed: a few high readings pull the **mean** (8 mg/L) a bit above the **median** (≈7.3 mg/L).
+::: 
+
+-->
+</section>
+<section id="typing-speed-1-blank" class="slide level2" data-menu-title="Exercise: typing speed">
+<h2></h2>
+<p><span class="slide-title">Exercise: your typing speed test</span></p>
+<hr>
+<div class="center-text">
+<p><img data-src="images/meds-typing-speed-2026.png"></p>
+</div>
+<div style="color:green;">
+<ol type="1">
+<li>Is this distribution symmetric or skewed? How can you tell from the shape of the curve?</li>
+<li>The curve’s height at 60 WPM is about 0.019. Does that mean the probability a student types at <em>exactly</em> 60 WPM is 0.019? Why or why not?</li>
+<li>The dashed line marks the median at 62 WPM. What does that tell you about the area under the curve to the left of 62, compared to the right?</li>
+</ol>
+</div>
+</section>
+<section id="typing-speed-1" class="slide level2" data-menu-title="Exercise: typing speed">
+<h2></h2>
+<p><span class="slide-title">Exercise: solution</span></p>
+<hr>
+<p>💡 <span style="color:green;">Let’s see a solution!</span></p>
+<div class="body-text-m">
+<p><strong>1.</strong> Right-skewed: the peak sits to the left of center, and the curve has a longer, thinner tail stretching toward higher WPM values (up to ~120) than toward lower ones.</p>
+<p><strong>2.</strong> No.&nbsp;For a continuous random variable, the probability of any <em>exact</em> single value is 0. The height of the curve is the <strong>density</strong>, not a probability. Only the <strong>area</strong> under the curve over a range represents a probability.</p>
+<p><strong>3.</strong> The median splits the total area (=1) into two equal halves: 50% of the area lies to the left of 62 WPM, and 50% lies to the right.</p>
+</div>
+</section>
+<section id="typing-speed-2-blank" class="slide level2" data-menu-title="Exercise: typing speed">
+<h2></h2>
+<p><span class="slide-title">Exercise: comparing speeds</span></p>
+<hr>
+
+<img data-src="images/meds-typing-speed-2026.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"><div style="color:green;">
+<p>✏️ The instructor’s own speed on this test was 71 WPM. Speeds of 80 WPM or higher are generally considered “fast.”</p>
+<ol type="1">
+<li>Is it more likely than not that the instructor types faster than a randomly selected student from the class?</li>
+<li>Would “fast” typists (80+ WPM) make up a small minority, about half, or a majority of the class? Justify your answer using the shape of the curve.</li>
+</ol>
+</div>
+</section>
+<section id="typing-speed-2" class="slide level2" data-menu-title="Exercise: typing speed">
+<h2></h2>
+<p><span class="slide-title">Exercise: solution</span></p>
+<hr>
+<p>💡 <span style="color:green;">Let’s see a solution!</span></p>
+<div class="body-text-m">
+<p><strong>1.</strong> Yes. Since 71 WPM is <em>greater</em> than the median (62 WPM), more than half the area under the curve lies to the left of 71. Meaning more than half the class types slower than 71 WPM. So it’s more likely than not that the instructor is faster than a randomly chosen student. Notice we can say this with confidence using <em>only</em> the median, without needing to estimate any area by eye.</p>
+<p><strong>2.</strong> A minority. Both the median (62) and the peak of the curve sit well below 80, so the region to the right of 80 covers noticeably less than half the total area.</p>
+</div>
+</section>
+<section id="normal-dist-blank" class="slide level2" data-menu-title="The normal distribution">
+<h2></h2>
+<p><span class="slide-title">The normal distribution</span></p>
+<hr>
+<p>✏️</p>
+</section>
+<section id="normal-dist" class="slide level2" data-menu-title="The normal distribution">
+<h2></h2>
+<p><span class="slide-title">The normal distribution</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="body-text-m">
+<p>The <strong>normal distribution</strong> is a symmetric, bell-shaped PDF, fully described by two parameters:</p>
+<ul>
+<li><span class="math inline">\(\mu\)</span> (mean): center of the distribution</li>
+<li><span class="math inline">\(\sigma\)</span> (standard deviation): spread of the distribution</li>
+</ul>
+<p><strong>Notation:</strong> <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span></p>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day4.2-slides_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="hypothesis-testing-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Hypothesis testing
+</div>
+</div>
+</section>
+<section id="null-hyp-blank" class="slide level2" data-menu-title="Null hypothesis">
+<h2></h2>
+<p><span class="slide-title">What is a null hypothesis?</span></p>
+<hr>
+<p>✏️</p>
+</section>
+<section id="null-hyp" class="slide level2" data-menu-title="Null hypothesis">
+<h2></h2>
+<p><span class="slide-title">What is a null hypothesis?</span></p>
+<hr>
+<p><br></p>
+<p><span class="body-text-m">A null hypothesis (<span class="math inline">\(H_0\)</span>) is the claim that the effect being studied does <strong>not</strong> exist. It is a hypothesis that proposes that there is <strong>no statistically significant difference</strong> between the data or variables being studied.</span></p>
+<p><br></p>
+<p><span class="body-text-m">If the null hypothesis is <em>true</em>, any observed difference is due to chance alone.</span></p>
+</section>
+<section id="nitrate-scenario" class="slide level2" data-menu-title="Scenario: nitrate upgrade">
+<h2></h2>
+<p><span class="slide-title">Scenario: did the upgrade help?</span></p>
 <hr>
 <div class="body-text-m">
-<p>What’s the probability that a randomly chosen year has rainfall between 700 and 900 mm?</p>
-</div>
-
-<img data-src="day4.2-slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="body-text-m">
-<p>The <strong>shaded area</strong> is the answer: about a 50% chance.</p>
+<p>A wastewater treatment plant upgrade might have reduced nitrate pollution downstream. You measure nitrate concentration (mg/L) at 15 timepoints before the upgrade and 15 after.</p>
+<p><br></p>
+<p>Is the average nitrate concentration after the upgrade really lower, or could this just be natural variability?</p>
+<p><br></p>
+<p>A <strong>two-sample t-test</strong> compares the two sample means (accounting for spread and sample size) to test:</p>
+<p><span class="math display">\[H_0: \mu_{before} = \mu_{after}\]</span></p>
 </div>
 </section>
 <section id="hypothesis-testing" class="slide level2" data-menu-title="Hypothesis testing">
 <h2></h2>
-<p><span class="slide-title">This gives us a basis for hypothesis testing (EDS 222)</span></p>
+<p><span class="slide-title">What is a hypothesis test?</span></p>
 <hr>
 <p><br></p>
 <div class="body-text-m">
+<p>It asks the question</p>
+<blockquote>
 <p>If a null hypothesis is true, what is the probability that your data outcome (e.g.&nbsp;mean, value, etc.) or something more extreme would have occurred by random chance?</p>
+</blockquote>
 <p><br></p>
 <p>Is that <em>so</em> unlikely (is the probability low enough), that you think you have sufficient evidence to reject the null hypothesis? Or not?</p>
-<p><br></p>
-<p>Let’s brainstorm some examples (and to be continued…)</p>
 </div>
-</section>
-<section id="abraham-wald" class="slide level2" data-menu-title="Abraham Wald">
-<h2></h2>
-<p><span class="slide-title">Abraham Wald and survivorship bias</span></p>
-<hr>
-
-<img data-src="images/abraham_wald.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p>Image source: <a href="https://en.wikipedia.org/wiki/Survivorship_bias">Wikipedia</a></p>
-</div>
-<aside class="notes">
-<ul>
-<li>The bullet holes in the returning aircraft represented areas where a bomber could take damage and still fly well enough to return safely to base (demonstrates survivorship bias).</li>
-<li>Wald proposed that the Navy reinforce areas where the returning aircraft were unscathed, inferring that planes hit in those areas were the ones most likely to be lost.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="hyp-testing" class="slide level2" data-menu-title="Hypotheis testing">
 <h2></h2>
@@ -482,19 +981,14 @@
 <p><em>Caveat, assumptions, caveat (EDS 222)…</em></p>
 </div>
 </section>
-<section id="null-hyp" class="slide level2" data-menu-title="Null hypothesis">
-<h2></h2>
-<p><span class="slide-title">What is a null hypothesis?</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">A null hypothesis (<span class="math inline">\(H_0\)</span>) is the claim that the effect being studied does <strong>not</strong> exist. It is a hypothesis that proposes that there is <strong>no statistically significant difference</strong> between the data or variables being studied.</span></p>
-<p><br></p>
-<p><span class="body-text-m">If the null hypothesis is <em>true</em>, any observed difference is due to chance alone.</span></p>
-</section>
 <section id="ttest1" class="slide level2" data-menu-title="T-Test 1">
 <h2></h2>
 
 <img data-src="images/t_test_1.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="ttest2-blank" class="slide level2" data-menu-title="T-Test 2">
+<h2></h2>
+
+<img data-src="images/t_test_2_blank.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
 <section id="ttest2" class="slide level2" data-menu-title="T-Test 2">
 <h2></h2>
 
@@ -523,6 +1017,18 @@
 <h2></h2>
 
 <img data-src="images/t_test_8.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="nitrate-scenario-back" class="slide level2" data-menu-title="Back to our scenario">
+<h2></h2>
+<p><span class="slide-title">Back to our scenario</span></p>
+<hr>
+<div class="body-text-m">
+<p>Recall: did the wastewater treatment upgrade significantly reduce nitrate concentration downstream?</p>
+<p><span class="math display">\[H_0: \mu_{before} = \mu_{after}\]</span></p>
+<p><br></p>
+<p>Suppose the two-sample t-test gives a p-value of 0.01.</p>
+<p>Since <span class="math inline">\(0.01 &lt; 0.05\)</span>, we have enough evidence to reject <span class="math inline">\(H_0\)</span>. The upgrade appears to have significantly reduced nitrate concentration downstream.</p>
+</div>
+</section>
 <section id="type1" class="slide level2" data-menu-title="Type 1 errors">
 <h2></h2>
 
@@ -564,170 +1070,165 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="boolean-logic" class="slide level2" data-menu-title="Boolean logic">
+<section id="wrapping-up" class="slide level2" data-menu-title="Integration" data-background-color="#003660">
 <h2></h2>
-<p><span class="slide-title">Boolean logic</span></p>
-<hr>
-<p><br> <br> <br> <br></p>
-<div class="center-text body-text-l">
-<blockquote>
-<p>“In mathematics and mathematical logic, Boolean algebra is the branch of algebra in which the values of the variables are the truth values true and false, usually denoted 1 and 0, respectively” (Wikipedia)</p>
-</blockquote>
+<div class="page-center">
+<div class="custom-subtitle">
+Wrapping up…
+</div>
 </div>
 </section>
-<section id="comp-think" class="slide level2" data-menu-title="Computer think">
+<section id="acknowledgements" class="slide level2" data-menu-title="Null hypothesis">
 <h2></h2>
-<p><span class="slide-title">Computer think</span></p>
+<p><span class="slide-title">This course is an iterative effort</span></p>
 <hr>
-<p><br> <br></p>
-<div class="body-text-l">
-<p>How would a computer order the objects in the following statements?</p>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/allison_horst.png" class="quarto-figure quarto-figure-center" height="150"></p>
+</figure>
+</div>
+<div class="center-text">
+<p>Allison Horst</p>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ruth.png" class="quarto-figure quarto-figure-center" height="150"></p>
+</figure>
+</div>
+<div class="center-text">
+<p>Ruth Oliver</p>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/nathan_grimes.png" class="quarto-figure quarto-figure-center" height="150"></p>
+</figure>
+</div>
+<div class="center-text">
+<p>Nathan Grimes</p>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../images/carmen.png" class="quarto-figure quarto-figure-center" height="150"></p>
+</figure>
+</div>
+<div class="center-text">
+<p>Carmen Galaz García</p>
+</div>
+</div></div>
 <p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/sam.png" class="quarto-figure quarto-figure-center" height="150"></p>
+</figure>
+</div>
+<div class="center-text">
+<p>Sam Shanny-Csik</p>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/alessandra.png" class="quarto-figure quarto-figure-center" height="150"></p>
+</figure>
+</div>
+<div class="center-text">
+<p>Alessandra Vidal Meza</p>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../images/cella.png" class="quarto-figure quarto-figure-center" height="150"></p>
+</figure>
+</div>
+<div class="center-text">
+<p>Cella Schnabel</p>
+</div>
+</div></div>
+</section>
+<section id="everything-we-covered" class="slide level2" data-menu-title="Null hypothesis">
+<h2></h2>
+<p><span class="slide-title">We covered a lot!</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:25%; font-size:0.55em;">
 <ul>
-<li><strong>Nothing</strong> is better than a <strong>burrito</strong></li>
-<li>A <strong>loaf of bread</strong> is better than <strong>nothing</strong></li>
+<li><span style="color:#D6001C"><b>🔢 Algebra review</b></span></li>
+<li><span style="color:#003366"><b>🗺️ Solving equations</b></span></li>
+<li><span style="color:#FF6600"><b>✖️ Exponents</b></span></li>
+<li><span style="color:#CC9900"><b>📐 Polynomials</b></span></li>
+<li><span style="color:#006699"><b>🌡 Units</b></span></li>
+<li><span style="color:#CC3366"><b>🧩 Definition of functions</b></span></li>
+<li><span style="color:#006699"><b>📊 Graphing</b></span></li>
+<li><span style="color:#006633"><b>💬 Reading graphs</b></span></li>
+<li><span style="color:#336666"><b>🌱 The number e and exp()</b></span></li>
+<li><span style="color:#003399"><b>🐰 Logistic growth</b></span></li>
+<li><span style="color:#990099"><b>🪵 Natural logarithms</b></span></li>
+<li><span style="color:#003366"><b>📈 Linear functions</b></span></li>
+<li><span style="color:#660099"><b>↗️ Slope as a rate of change</b></span></li>
 </ul>
-</div>
-</section>
-<section id="mathematically" class="slide level2" data-menu-title="Mathematically">
-<h2></h2>
-<p><span class="slide-title">Mathematically…</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
+</div><div class="column" style="width:25%; font-size:0.55em;">
 <ul>
-<li>Nothing &gt; burrito: TRUE</li>
+<li><span style="color:#660033"><b>🔎 Limits</b></span></li>
+<li><span style="color:#993300"><b>🖊️ Derivatives and rate of change</b></span></li>
+<li><span style="color:#330000"><b>🛤️ Tangent lines</b></span></li>
+<li><span style="color:#333300"><b>📝 Rules for differentiation</b></span></li>
+<li><span style="color:#996600"><b>🔹 Constant rule</b></span></li>
+<li><span style="color:#660000"><b>💪 Power rule</b></span></li>
+<li><span style="color:#003300"><b>➕ Sum and difference rule</b></span></li>
+<li><span style="color:#003399"><b>📈 Higher order derivatives</b></span></li>
+<li><span style="color:#333300"><b>🌓 Partial derivatives</b></span></li>
+<li><span style="color:#993366"><b>∫ Integrals</b></span></li>
+<li><span style="color:#660066"><b>🧮 Riemann sums</b></span></li>
+<li><span style="color:#003366"><b>📐 Rules of integration</b></span></li>
+<li><span style="color:#660000"><b>✏️ Initial value problems</b></span></li>
+<li><span style="color:#333300"><b>🧾 Definite and indefinite integrals</b></span></li>
+<li><span style="color:#996600"><b>📏 Area between two curves</b></span></li>
+<li><span style="color:#330033"><b>🌊 A bit of ODEs</b></span></li>
 </ul>
-<p><br></p>
+</div><div class="column" style="width:25%; font-size:0.55em;">
 <ul>
-<li>Loaf of bread &gt; nothing: TRUE</li>
+<li><span style="color:#333300"><b>📝 Practice all day 1 and 2 topics</b></span></li>
+<li><span style="color:#330033"><b>🌊 A bit of ODEs</b></span></li>
+<li><span style="color:#003300"><b>➕ Summation notation</b></span></li>
+<li><span style="color:#996600"><b>🔹 Vector sum and product</b></span></li>
+<li><span style="color:#333300"><b>🌓 Dot product</b></span></li>
+<li><span style="color:#660066"><b>🧮 Matrix algebra</b></span></li>
 </ul>
-<p><br></p>
-<p>To a computer: Loaf of bread &gt; nothing &gt; burrito.</p>
-</div>
-</section>
-<section id="EDS" class="slide level2" data-menu-title="In EDS">
-<h2></h2>
-<p><span class="slide-title">In environmental data science</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
+</div><div class="column" style="width:25%; font-size:0.55em;">
 <ul>
-<li>Conditional statements</li>
-<li>Filtering, subsetting, searching</li>
-<li>Checking classes and verification</li>
-<li>Testing</li>
+<li><span style="color:#CC3366"><b>🧩 Data types</b></span></li>
+<li><span style="color:#006699"><b>📊 Data visualization</b></span></li>
+<li><span style="color:#D6001C"><b>📐 Quartiles &amp; IQR</b></span></li>
+<li><span style="color:#003366"><b>📈 Central tendency</b></span></li>
+<li><span style="color:#FF6600"><b>📏 Variance &amp; standard deviation</b></span></li>
+<li><span style="color:#336666"><b>🦖 Why visualizing data matters</b></span></li>
+<li><span style="color:#003399"><b>🎯 Confidence intervals</b></span></li>
+<li><span style="color:#660099"><b>💬 Communicating data summaries</b></span></li>
+<li><span style="color:#993366"><b>🎲 Basic probability</b></span></li>
+<li><span style="color:#660066"><b>🔢 Random variables</b></span></li>
+<li><span style="color:#003366"><b>📊 Probability mass functions</b></span></li>
+<li><span style="color:#996600"><b>📈 Probability density functions</b></span></li>
+<li><span style="color:#330000"><b>🔔 The normal distribution</b></span></li>
+<li><span style="color:#333300"><b>🧪 Hypothesis testing intuition</b></span></li>
+<li><span style="color:#660000"><b>📉 Two-sample t-tests</b></span></li>
+<li><span style="color:#003300"><b>⚠️ Type 1 &amp; Type 2 errors</b></span></li>
 </ul>
-</div>
+</div></div>
 </section>
-<section id="logical-operators" class="slide level2" data-menu-title="Logical operators">
+<section class="slide level2">
+
+
+<img data-src="images/you_know_stuff.png" class="r-stretch"></section>
+<section id="course-evals" class="slide level2" data-menu-title="Null hypothesis">
 <h2></h2>
-<p><span class="slide-title">Logical operators</span></p>
+<p><span class="slide-title">Pleaes fill out the course evals!</span></p>
 <hr>
-<p><br></p>
-<div class="body-text-l">
-<ul>
-<li>Logical “and”: <code>&amp;</code></li>
-<li>Logical “or”: <code>|</code></li>
-<li>Logical “negate”: <code>!</code></li>
-</ul>
-</div>
-</section>
-<section id="comp-operators" class="slide level2" data-menu-title="Comparison operators">
-<h2></h2>
-<p><span class="slide-title">Comparison operators</span></p>
-<hr>
-<div class="body-text-l">
-<ul>
-<li>Is equal to? <code>==</code></li>
-<li>Is less than? <code>&lt;</code></li>
-<li>Is less than or equal to? <code>&lt;=</code></li>
-<li>Is greater than? <code>&gt;</code></li>
-<li>Is greater than or equal to? <code>&gt;=</code></li>
-<li>Is not equal to? <code>!=</code></li>
-</ul>
-<p>A computer evaluates these and the outcome is either <code>TRUE</code> or <code>FALSE</code>, and proceeds accordingly.</p>
-</div>
-</section>
-<section id="impt-distinction" class="slide level2" data-menu-title="Important distinction">
-<h2></h2>
-<p><span class="slide-title">An important distinction:</span></p>
-<hr>
-<p><br></p>
-<div class="body-text-l">
-<p><code>==</code>: This is…equal to?</p>
-<p><br></p>
-<p><code>=</code>: This IS equal to.</p>
-<p><br></p>
-<blockquote>
-<p>5 == 4</p>
-</blockquote>
-<pre><code>&gt; FALSE</code></pre>
-</div>
-</section>
-<section id="examples" class="slide level2" data-menu-title="Examples:">
-<h2></h2>
-<p><span class="slide-title">Examples:</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m">Elements of a vector are tested separately, and the outcome is returned in a vector:</span></p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>marmot <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span>
-<span id="cb2-2"><a></a>marmot <span class="sc">==</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE  TRUE FALSE</code></pre>
-</div>
-</div>
-<p><br></p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>pika <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">15</span>)</span>
-<span id="cb4-2"><a></a>pika <span class="sc">==</span> <span class="dv">1</span> <span class="sc">|</span> pika <span class="sc">&gt;=</span> <span class="dv">9</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  TRUE FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
-</div>
-</div>
-</section>
-<section id="check-data-classes" class="slide level2" data-menu-title="Check data classes">
-<h2></h2>
-<p><span class="slide-title">Checking data classes works similarly:</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-l">More on data types &amp; structures in EDS 221!</span></p>
-<p><br></p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>bear <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">3</span>, <span class="cn">NA</span>, <span class="dv">6</span>) <span class="co"># Create a vector</span></span>
-<span id="cb6-2"><a></a><span class="fu">is.na</span>(bear) <span class="co"># Check element by element for == NA?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE FALSE FALSE  TRUE FALSE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">is.numeric</span>(bear) <span class="co"># Checks entire *class* of vector</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-</section>
-<section id="in-operator" class="slide level2" data-menu-title="%in%">
-<h2></h2>
-<p><span class="slide-title">Another we’ll see often: <code>%in%</code></span></p>
-<hr>
-<p><br></p>
-<div class="body-text-m">
-<p><code>%in%</code>: check for matching elements (not in order)*</p>
-<p><br></p>
-<p><strong>Example:</strong> We have two vectors of student names, and we want to know if any students (values) in <code>eds212</code> are also in <code>eds223</code>:</p>
-</div>
-<p><br></p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>eds212 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"John"</span>, <span class="st">"Cara"</span>, <span class="st">"Will"</span>, <span class="st">"Zoe"</span>)</span>
-<span id="cb10-2"><a></a>eds223 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"John"</span>, <span class="st">"Melissa"</span>, <span class="st">"Cara"</span>, <span class="st">"Joe"</span>, <span class="st">"Zoe"</span>)</span>
-<span id="cb10-3"><a></a></span>
-<span id="cb10-4"><a></a>eds212 <span class="sc">%in%</span> eds223</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  TRUE  TRUE FALSE  TRUE</code></pre>
-</div>
-</div>
-<p><br></p>
-<p>*Keep this in mind - the distinction between <code>%in%</code> and <code>==</code> is major and important.</p>
 
 
 </section>

@@ -1346,74 +1346,64 @@ False negative (accept a false null hypothesis)
 <hr>
 
 :::: {.columns}
-::: {.column width="33%"}
-![](images/sam.png){width="80%" fig-align="center"}
-
-::: {.center-text}
-Sam
-:::
-:::
-
-::: {.column width="33%"}
-![](images/alessandra.png){width="80%" fig-align="center"}
-
-::: {.center-text}
-Alessandra
-:::
-:::
-
-::: {.column width="33%"}
-![](images/nathan_grimes.png){width="80%" fig-align="center"}
-
-::: {.center-text}
-Nathan Grimes
-:::
-:::
-::::
-
-<br>
-
-:::: {.columns}
-::: {.column width="33%"}
-![](images/ruth.png){width="80%" fig-align="center"}
-
-::: {.center-text}
-Ruth
-:::
-:::
-
-::: {.column width="33%"}
-![](/images/cella.png){width="80%" fig-align="center"}
-
-::: {.center-text}
-Cella
-:::
-:::
-
-::: {.column width="33%"}
-![](/images/carmen.png){width="80%" fig-align="center"}
-
-::: {.center-text}
-Carmen
-:::
-:::
-::::
-
-<br>
-
-:::: {.columns}
-::: {.column width="33%"}
-:::
-
-::: {.column width="33%"}
-![](images/allison_horst.png){width="80%" fig-align="center"}
+::: {.column width="25%"}
+![](images/allison_horst.png){height="150px" fig-align="center"}
 
 ::: {.center-text}
 Allison Horst
 :::
 :::
 
+::: {.column width="25%"}
+![](images/ruth.png){height="150px" fig-align="center"}
+
+::: {.center-text}
+Ruth Oliver
+:::
+:::
+
+::: {.column width="25%"}
+![](images/nathan_grimes.png){height="150px" fig-align="center"}
+
+::: {.center-text}
+Nathan Grimes
+:::
+:::
+
+::: {.column width="25%"}
+![](/images/carmen.png){height="150px" fig-align="center"}
+
+::: {.center-text}
+Carmen Galaz García
+:::
+:::
+::::
+
+<br>
+
+:::: {.columns}
 ::: {.column width="33%"}
+![](images/sam.png){height="150px" fig-align="center"}
+
+::: {.center-text}
+Sam Shanny-Csik
+:::
+:::
+
+::: {.column width="33%"}
+![](images/alessandra.png){height="150px" fig-align="center"}
+
+::: {.center-text}
+Alessandra Vidal Meza
+:::
+:::
+
+::: {.column width="33%"}
+![](/images/cella.png){height="150px" fig-align="center"}
+
+::: {.center-text}
+Cella Schnabel
+:::
 :::
 ::::
 
