@@ -2972,14 +2972,14 @@
     "href": "course-materials/slides/day2.1-slides.html#lim-discon",
     "title": "",
     "section": "",
-    "text": "Do limits always exist?\n\nThe function \\(|x|\\) is the absolute value function. It is such that\n\\[\n|x| =\n\\begin{cases}\nx, & \\text{ if } x\\geq 0 \\\\\n-x, & \\text{ if } x &lt;0\n\\end{cases}\n.\n\\]\n\n\n✏️ What happens to \\(f(x)\\) at \\(x=2\\)?\n✏️ Try calculating: \\[\n\\lim_{x\\to 2}\\frac{|x-2|}{x-2}.\n\\]\n\nHint: Try to do numerical approximations or draw the graph of this function."
+    "text": "Do limits always exist?\n\nThe function \\(|x|\\) is the absolute value function. It is such that\n\\[\n|x| =\n\\begin{cases}\nx, & \\text{ if } x\\geq 0 \\\\\n-x, & \\text{ if } x &lt;0\n\\end{cases}\n.\n\\]\n\n\n✏️ \\(f(x) = \\frac{|x-2|}{x-2}\\). What happens to \\(f(x)\\) at \\(x=2\\)?\n✏️ Try calculating: \\[\n\\lim_{x\\to 2}\\frac{|x-2|}{x-2}.\n\\]\n\nHint: Try to do numerical approximations or draw the graph of this function."
   },
   {
     "objectID": "course-materials/slides/day2.1-slides.html#mean-girls",
     "href": "course-materials/slides/day2.1-slides.html#mean-girls",
     "title": "",
     "section": "",
-    "text": "Do limits always exist?\n\n✏️ What happens to \\(f(x)\\) at \\(x=2\\)?\nThis function is not defined at \\(x=2\\) since it would require us to divide by zero, which is undefined.\n\n\nTry calculating \\(\\lim_{x\\to 2}\\frac{|x-2|}{x-2}\\).\nLet’s investigate:"
+    "text": "Do limits always exist?\n\n✏️ \\(f(x) = \\frac{|x-2|}{x-2}\\). What happens to \\(f(x)\\) at \\(x=2\\)?\nThis function is not defined at \\(x=2\\) since it would require us to divide by zero, which is undefined.\n\n\nTry calculating \\(\\lim_{x\\to 2}\\frac{|x-2|}{x-2}\\).\nLet’s investigate:"
   },
   {
     "objectID": "course-materials/slides/day2.1-slides.html#graph",
@@ -3140,7 +3140,7 @@
     "href": "course-materials/slides/day2.1-slides.html#diff-rules-2",
     "title": "",
     "section": "",
-    "text": "Rules for differentiation (2)\n\nSum and Difference Rules\nLet \\(f(x)\\) and \\(g(x)\\) be differentiable functions. Then \\[\n\\begin{align}\n\\frac{d}{dx}[f(x)+g(x)]=\\frac{d}{dx}f(x)+\\frac{d}{dx}g(x) \\\\\n\\frac{d}{dx}[f(x)-g(x)]=\\frac{d}{dx}f(x)-\\frac{d}{dx}g(x)\n\\end{align}\n\\]\n😵All this says is: if the function has pieces that are added or subtracted you can take the derivative of each individual piece and add those derivatives.\n\nExample ✏️\n\\[\nf(x)=x^3-x^2-15\n\\]"
+    "text": "Rules for differentiation (2)\n\nSum and Difference Rules\nLet \\(f(x)\\) and \\(g(x)\\) be differentiable functions. Then \\[\n\\begin{align}\n[f(x)+g(x)]'=f'(x)+g'(x) \\\\\n[f(x)-g(x)]'=f'(x)-g'(x)\n\\end{align}\n\\]\n😵All this says is: if the function has pieces that are added or subtracted you can take the derivative of each individual piece and add those derivatives.\n\nExample ✏️\n\\[\nf(x)=x^3-x^2-15\n\\]"
   },
   {
     "objectID": "course-materials/slides/day2.1-slides.html#diff-rules-3-blank",
@@ -3245,14 +3245,14 @@
     "href": "course-materials/slides/day2.1-slides.html#partial-derivatives-meaning",
     "title": "",
     "section": "",
-    "text": "OK, but what do partials actually mean?\n\nThe slope with respect to one variable if other variables are held constant.\n\n\n\nmoving up and down\nmoving acorss a plane\ntwisting / sprialing\n\nconsider the above when calcualting speed in each / any direction"
+    "text": "OK, but what do partials actually mean?\n\nThe slope with respect to one variable if other variables are held constant.\n\\(\\frac{\\partial f}{\\partial x}\\) evaluated at \\((x_0,y_0)\\) can be written as \\(\\left.\\frac{\\partial f}{\\partial x}\\right|_{x_0,y_0}\\) and tells us the slope of \\(f\\) in the \\(x\\)-direction, while \\(y\\) is held fixed at \\(y_0\\).\n\n\n\nmoving up and down\nmoving acorss a plane\ntwisting / sprialing\n\nconsider the above when calcualting speed in each / any direction"
   },
   {
     "objectID": "course-materials/slides/day2.1-slides.html#partial-derivatives-practice",
     "href": "course-materials/slides/day2.1-slides.html#partial-derivatives-practice",
     "title": "",
     "section": "",
-    "text": "Partial derivatives practice\n\n\nThe temperature (in Celsius) across a surface (where \\(x\\) and \\(y\\) are in meters) is described by:\n\n\\[T(x,y)=x^2y-2x+y-1\\]\nAt what “rate” is temperature changing (with respect to distance):\n\nIn the \\(x\\) direction, at the point (1,3) on the surface?\nIn the \\(y\\) direction, at the point (0,2) on the surface?\n\n\nA dragon’s breath temperature (\\(T\\), in degrees Celsius) is modeled as a function of its wingspan (\\(W\\), in meters) and length (\\(L\\), also in meters):\n\n\n\\[T(W,L)=0.41WL+2.6W^2\\]\n\nAt what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?\nAt what rate is breath temperature changing with respect to wingspan, for the same dragon?"
+    "text": "Partial derivatives practice\n\n\nThe temperature (in Celsius) across a surface (where \\(x\\) and \\(y\\) are in meters) is described by:\n\n\\[T(x,y)=x^2y-2x+y-1\\]\nAt what “rate” is temperature changing (with respect to distance):\n\nIn the \\(x\\) direction, at the point (1,3) on the surface?\nIn the \\(y\\) direction, at the point (0,2) on the surface?\nWrite your answer as a complete sentence involving rate of change."
   },
   {
     "objectID": "course-materials/slides/day2.1-slides.html#partial-derivatives-solution-1-blank",
@@ -4191,5 +4191,33 @@
     "title": "Integrals, differential equations, intro to linear algebra",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nEuler’s method, by Khan Academy – a video example of numerical approximation of a differential equation solution using Euler’s method\nEuler’s Method Differential Equations, Examples, Numerical Methods, Calculus, by The Organic Chemistry Tutor – a YouTube video on using Euler’s Method to find the solution to a differential equation\nVectors | Chapter 1, Essence of linear algebra, by 3Blue1Brown – a YouTube video covering vector fundamentals"
+  },
+  {
+    "objectID": "course-materials/slides/day2.1-slides.html#derivatives-solution",
+    "href": "course-materials/slides/day2.1-slides.html#derivatives-solution",
+    "title": "",
+    "section": "",
+    "text": "Derivatives solution\n\n\nWhich rules should you use to take these derivatives?\n\n\\[\n\\begin{align}\n\\text{A)  }& f(x)=3x^4 &\\text{B) }  y=4x^2+3x-16\n\\end{align}\n\\]\n\nPower Rule (with the Constant Multiplier Rule)\nSum/Difference Rule, Power Rule, Constant Multiplier Rule, and Constant Rule (for \\(-16\\))\n\n\n\n\nFind the derivatives of these functions\n\n\\[\n\\begin{align}\n&\\text{A) } y=3x^2 & &\\text{B) }h(x)=2x(x^2 + 3x)\n\\end{align}\n\\]\n\n\\(y' = 3\\cdot 2x^{(2-1)} = 6x\\)\nFirst expand: \\(h(x) = 2x\\cdot x^2 + 2x \\cdot 3x = 2x^3+6x^2\\)\n\nThen differentiate term by term: \\(h'(x) = 2\\cdot 3x^{(3-1)} + 6\\cdot 2x^{(2-1)} = 6x^2+12x\\)"
+  },
+  {
+    "objectID": "course-materials/slides/day2.1-slides.html#derivatives-solution-2",
+    "href": "course-materials/slides/day2.1-slides.html#derivatives-solution-2",
+    "title": "",
+    "section": "",
+    "text": "Derivatives solution\n\n\nFind the derivative of this function\n\n\\[\ng(y)=2\\sqrt{y} - e^y + 20\\ln(y)\n\\]\nRewrite \\(\\sqrt{y}\\) as \\(y^{1/2}\\):\n\\[\n\\begin{align}\ng(y) &= 2y^{1/2}-e^y+20\\ln(y)\\\\\ng'(y) &= 2\\cdot\\frac{1}{2}y^{(1/2-1)} - e^y + 20\\cdot\\frac{1}{y}\\\\\n&= \\frac{1}{\\sqrt{y}} - e^y + \\frac{20}{y}\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day2.1-slides.html#derivatives-solution-3",
+    "href": "course-materials/slides/day2.1-slides.html#derivatives-solution-3",
+    "title": "",
+    "section": "",
+    "text": "Derivatives solution\n\n\nFind the 3rd derivative of:\n\n\\[G(z)=3z^4-8z^3+2z-19\\]\n\\[\n\\begin{align}\nG'(z) &= 3\\cdot 4z^{(4-1)} - 8\\cdot 3z^{(3-1)} + 2\\cdot 1z^{(1-1)} - 0 = 12z^3-24z^2+2\\\\\nG''(z) &= 12\\cdot 3z^{(3-1)} - 24\\cdot 2z^{(2-1)} + 0 = 36z^2-48z\\\\\nG'''(z) &= 36\\cdot 2z^{(2-1)} - 48\\cdot 1z^{(1-1)} = 72z-48\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "course-materials/slides/day2.1-slides.html#partial-derivatives-practice-2",
+    "href": "course-materials/slides/day2.1-slides.html#partial-derivatives-practice-2",
+    "title": "",
+    "section": "",
+    "text": "Partial derivatives practice\n\n\nA dragon’s breath temperature (\\(T\\), in degrees Celsius) is modeled as a function of its wingspan (\\(W\\), in meters) and length (\\(L\\), also in meters):\n\n\n\\[T(W,L)=0.41WL+2.6W^2\\]\n\nAt what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?\nAt what rate is breath temperature changing with respect to wingspan, for the same dragon?\nWrite your answer as a complete sentence involving rate of change."
   }
 ]
