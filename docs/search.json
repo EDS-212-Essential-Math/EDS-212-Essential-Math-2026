@@ -1572,7 +1572,7 @@
     "href": "course-materials/slides/day2.2-slides.html#definte-1",
     "title": "",
     "section": "",
-    "text": "Indefinite vs. dfinite integrals\n\n\nWe have been working with indefinite integrals.\n\n\\[\n\\int f(x)dx\n\\]\nThis means there are no integration bounds and we need initial values to find integration constants.\n\nDefinite integrals have start and end values \\(a\\) and \\(b\\):\n\n\\[\\int_a^b f(x) dx.\\]\n\nTo find the area under the curve along an interval \\([a,b]\\), evaluate the antiderivative at the endpoints and subtract them.\n✏️ Example\n\\[\n\\begin{align}\n\\int^b_axdx &= \\frac{1}{2}x^2\\Big|^b_a\\\\\n            &= \\frac{1}{2}(b)^2-\\frac{1}{2}(a)^2\n\\end{align}\n\\]"
+    "text": "Indefinite vs. definite integrals\n\n\nWe have been working with indefinite integrals.\n\n\\[\n\\int f(x)dx\n\\]\nThis means there are no integration bounds and we need initial values to find integration constants.\n\nDefinite integrals have start and end values \\(a\\) and \\(b\\):\n\n\\[\\int_a^b f(x) dx.\\]\n\nTo find the area under the curve along an interval \\([a,b]\\), evaluate the antiderivative at the endpoints and subtract them.\n✏️ Example\n\\[\n\\begin{align}\n\\int^b_axdx &= \\frac{1}{2}x^2\\Big|^b_a\\\\\n            &= \\frac{1}{2}(b)^2-\\frac{1}{2}(a)^2\n\\end{align}\n\\]"
   },
   {
     "objectID": "course-materials/slides/day2.2-slides.html#def-solve-blank",
@@ -1621,7 +1621,7 @@
     "href": "course-materials/slides/day2.2-slides.html#exercises",
     "title": "",
     "section": "",
-    "text": "Exercises 1\n\n\nFind the integrals of \\(y\\) and \\(g\\) and solve the integral in C.\n\n\\[\n\\begin{align}\n\\text{A) }y=\\frac{3}{x^2}, y(3)=2&  &\\text{B)  }g(t)=3t^5-2t^3+16t-7  &  &\\text{C) } \\int^4_2\\frac{1}{2}x\n\\end{align}\n\\]"
+    "text": "Exercises 1\n\n\nFind the integrals of \\(y\\) and \\(g\\) and solve the integral in C.\n\n\\[\n\\begin{align}\n\\text{A) }y'=\\frac{3}{x^2}, y(3)=2&  &\\text{B)  }g(t)=3t^5-2t^3+16t-7  &  &\\text{C) } \\int^4_2\\frac{1}{2}x\n\\end{align}\n\\]"
   },
   {
     "objectID": "course-materials/slides/day2.2-slides.html#ta2-A-solution",
@@ -4219,5 +4219,19 @@
     "title": "",
     "section": "",
     "text": "Partial derivatives practice\n\n\nA dragon’s breath temperature (\\(T\\), in degrees Celsius) is modeled as a function of its wingspan (\\(W\\), in meters) and length (\\(L\\), also in meters):\n\n\n\\[T(W,L)=0.41WL+2.6W^2\\]\n\nAt what rate is breath temperature changing with respect to length for a dragon that is 4.1m long, with a wingspan of 4.5m?\nAt what rate is breath temperature changing with respect to wingspan, for the same dragon?\nWrite your answer as a complete sentence involving rate of change."
+  },
+  {
+    "objectID": "course-materials/slides/day2.2-slides.html#example-solutions",
+    "href": "course-materials/slides/day2.2-slides.html#example-solutions",
+    "title": "",
+    "section": "",
+    "text": "Example solutions\n\n\n\n\n\\(\\int 4 dx = 4x+C\\)\n\n\n\n\\(\\int 2x^2 dx = \\frac{2}{3}x^3+C\\)\n\n\n\n\\(\\int x^3-4x dx = \\frac{x^4}{4}-2x^2+C\\)"
+  },
+  {
+    "objectID": "course-materials/slides/day2.2-slides.html#exercises-solution-3-work",
+    "href": "course-materials/slides/day2.2-slides.html#exercises-solution-3-work",
+    "title": "",
+    "section": "",
+    "text": "Solution (3)\n\n✏️"
   }
 ]
