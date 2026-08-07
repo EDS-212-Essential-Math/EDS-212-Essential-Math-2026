@@ -229,7 +229,9 @@ Given two events $A$ and $B$:
 ✏️ Given the events $A$ and $B$, write in words what each of the following mean:
 :::
 
-$A=$ nitrate concentration upstream of a farm exceeds the safety limit, $B=$ nitrate concentration downstream of the farm exceeds the safety limit
+$A=$ nitrate concentration in January 1st exceeds the safety limit
+
+$B=$ nitrate concentration in August 1st exceeds the safety limit
 
 - $A \cap B$ = nitrate concentration exceeds the safety limit on Jaunary 1st *and* August 1st
 
@@ -1065,24 +1067,72 @@ ggplot(dfn, aes(x = x, y = y)) +
 
 ---
 
-## {#hypothesis-testing data-menu-title="Hypothesis testing"} 
+## {#null-hyp-blank data-menu-title="Null hypothesis"}
 
-[This gives us a basis for hypothesis testing (EDS 222)]{.slide-title}
+[What is a null hypothesis?]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
+## {#null-hyp data-menu-title="Null hypothesis"}
+
+[What is a null hypothesis?]{.slide-title}
+
+<hr>
+
+<br>
+
+[A null hypothesis ($H_0$) is the claim that the effect being studied does **not** exist. It is a hypothesis that proposes that there is **no statistically significant difference** between the data or variables being studied.]{.body-text-m}
+
+<br>
+
+[If the null hypothesis is *true*, any observed difference is due to chance alone.]{.body-text-m}
+
+
+---
+
+## {#nitrate-scenario data-menu-title="Scenario: nitrate upgrade"}
+
+[Scenario: did the upgrade help?]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+A wastewater treatment plant upgrade might have reduced nitrate pollution downstream. You measure nitrate concentration (mg/L) at 15 timepoints before the upgrade and 15 after.
+
+<br>
+
+Is the average nitrate concentration after the upgrade really lower, or could this just be natural variability?
+
+<br>
+
+A **two-sample t-test** compares the two sample means (accounting for spread and sample size) to test:
+
+$$H_0: \mu_{before} = \mu_{after}$$
+:::
+
+---
+
+## {#hypothesis-testing data-menu-title="Hypothesis testing"}
+
+[What is a hypothesis test?]{.slide-title}
 
 <hr>
 
 <br>
 
 ::: {.body-text-m}
-If a null hypothesis is true, what is the probability that your data outcome (e.g. mean, value, etc.) or something more extreme would have occurred by random chance? 
+It asks the question
+
+> If a null hypothesis is true, what is the probability that your data outcome (e.g. mean, value, etc.) or something more extreme would have occurred by random chance? 
 
 <br>
 
 Is that *so* unlikely (is the probability low enough), that you think you have sufficient evidence to reject the null hypothesis? Or not?
 
-<br>
-
-Let's brainstorm some examples (and to be continued...)
 :::
 
 
@@ -1108,21 +1158,6 @@ You'll learn about hypothesis testing in EDS 222. Let's just build a bit more in
 *Caveat, assumptions, caveat (EDS 222)...*
 :::
 
----
-
-## {#null-hyp data-menu-title="Null hypothesis"}
-
-[What is a null hypothesis?]{.slide-title}
-
-<hr>
-
-<br>
-
-[A null hypothesis ($H_0$) is the claim that the effect being studied does **not** exist. It is a hypothesis that proposes that there is **no statistically significant difference** between the data or variables being studied.]{.body-text-m}
-
-<br>
-
-[If the null hypothesis is *true*, any observed difference is due to chance alone.]{.body-text-m}
 
 ---
 
@@ -1134,6 +1169,18 @@ You'll learn about hypothesis testing in EDS 222. Let's just build a bit more in
 #| out-width: "100%"
 #| fig-align: "center"
 knitr::include_graphics("images/t_test_1.jpg")
+```
+
+---
+
+## {#ttest2-blank data-menu-title="T-Test 2"}
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/t_test_2_blank.jpg")
 ```
 
 ---
@@ -1222,6 +1269,26 @@ knitr::include_graphics("images/t_test_8.jpg")
 
 ---
 
+## {#nitrate-scenario-back data-menu-title="Back to our scenario"}
+
+[Back to our scenario]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+Recall: did the wastewater treatment upgrade significantly reduce nitrate concentration downstream?
+
+$$H_0: \mu_{before} = \mu_{after}$$
+
+<br>
+
+Suppose the two-sample t-test gives a p-value of 0.01.
+
+Since $0.01 < 0.05$, we have enough evidence to reject $H_0$. The upgrade appears to have significantly reduced nitrate concentration downstream.
+:::
+
+---
+
 ## {#type1 data-menu-title="Type 1 errors"}
 
 ```{r}
@@ -1270,15 +1337,175 @@ False negative (accept a false null hypothesis)
 <div class="custom-subtitle">Wrapping up...</div>
 </div>
 
---- 
+---
 
-Acknowledgement slide
+## {#acknowledgements data-menu-title="Null hypothesis"}
+
+[This course is an iterative effort]{.slide-title}
+
+<hr>
+
+:::: {.columns}
+::: {.column width="33%"}
+![](images/sam.png){width="80%" fig-align="center"}
+
+::: {.center-text}
+Sam
+:::
+:::
+
+::: {.column width="33%"}
+![](images/alessandra.png){width="80%" fig-align="center"}
+
+::: {.center-text}
+Alessandra
+:::
+:::
+
+::: {.column width="33%"}
+![](images/nathan_grimes.png){width="80%" fig-align="center"}
+
+::: {.center-text}
+Nathan Grimes
+:::
+:::
+::::
+
+<br>
+
+:::: {.columns}
+::: {.column width="33%"}
+![](images/ruth.png){width="80%" fig-align="center"}
+
+::: {.center-text}
+Ruth
+:::
+:::
+
+::: {.column width="33%"}
+![](/images/cella.png){width="80%" fig-align="center"}
+
+::: {.center-text}
+Cella
+:::
+:::
+
+::: {.column width="33%"}
+![](/images/carmen.png){width="80%" fig-align="center"}
+
+::: {.center-text}
+Carmen
+:::
+:::
+::::
+
+<br>
+
+:::: {.columns}
+::: {.column width="33%"}
+:::
+
+::: {.column width="33%"}
+![](images/allison_horst.png){width="80%" fig-align="center"}
+
+::: {.center-text}
+Allison Horst
+:::
+:::
+
+::: {.column width="33%"}
+:::
+::::
 
 ---
 
-Whole course recap slide
+## {#everything-we-covered data-menu-title="Null hypothesis"}
+
+[We covered a lot!]{.slide-title}
+
+<hr>
+
+:::: {.columns}
+
+::: {.column style="width:25%; font-size:0.55em;"}
+
+- <span style="color:#D6001C"><b>🔢 Algebra review</b></span>
+- <span style="color:#003366"><b>🗺️ Solving equations</b></span>
+- <span style="color:#FF6600"><b>✖️ Exponents</b></span>
+- <span style="color:#CC9900"><b>📐 Polynomials</b></span>
+- <span style="color:#006699"><b>🌡 Units</b></span>
+- <span style="color:#CC3366"><b>🧩 Definition of functions</b></span>
+- <span style="color:#006699"><b>📊 Graphing</b></span>
+- <span style="color:#006633"><b>💬 Reading graphs</b></span>
+- <span style="color:#336666"><b>🌱 The number e and exp()</b></span>
+- <span style="color:#003399"><b>🐰 Logistic growth</b></span>
+- <span style="color:#990099"><b>🪵 Natural logarithms</b></span>
+- <span style="color:#003366"><b>📈 Linear functions</b></span>
+- <span style="color:#660099"><b>↗️ Slope as a rate of change</b></span>
+:::
+
+::: {.column style="width:25%; font-size:0.55em;"}
+
+- <span style="color:#660033"><b>🔎 Limits</b></span>
+- <span style="color:#993300"><b>🖊️ Derivatives and rate of change</b></span>
+- <span style="color:#330000"><b>🛤️ Tangent lines</b></span>
+- <span style="color:#333300"><b>📝 Rules for differentiation</b></span>
+- <span style="color:#996600"><b>🔹 Constant rule</b></span>
+- <span style="color:#660000"><b>💪 Power rule</b></span>
+- <span style="color:#003300"><b>➕ Sum and difference rule</b></span>
+- <span style="color:#003399"><b>📈 Higher order derivatives</b></span>
+- <span style="color:#333300"><b>🌓 Partial derivatives</b></span>
+- <span style="color:#993366"><b>∫ Integrals</b></span>
+- <span style="color:#660066"><b>🧮 Riemann sums</b></span>
+- <span style="color:#003366"><b>📐 Rules of integration</b></span>
+- <span style="color:#660000"><b>✏️ Initial value problems</b></span>
+- <span style="color:#333300"><b>🧾 Definite and indefinite integrals</b></span>
+- <span style="color:#996600"><b>📏 Area between two curves</b></span>
+- <span style="color:#330033"><b>🌊 A bit of ODEs</b></span>
+:::
+
+::: {.column style="width:25%; font-size:0.55em;"}
+
+- <span style="color:#333300"><b>📝 Practice all day 1 and 2 topics</b></span>
+- <span style="color:#330033"><b>🌊 A bit of ODEs</b></span>
+- <span style="color:#003300"><b>➕ Summation notation</b></span>
+- <span style="color:#996600"><b>🔹 Vector sum and product</b></span>
+- <span style="color:#333300"><b>🌓 Dot product</b></span>
+- <span style="color:#660066"><b>🧮 Matrix algebra</b></span>
+:::
+
+::: {.column style="width:25%; font-size:0.55em;"}
+
+- <span style="color:#CC3366"><b>🧩 Data types</b></span>
+- <span style="color:#006699"><b>📊 Data visualization</b></span>
+- <span style="color:#D6001C"><b>📐 Quartiles & IQR</b></span>
+- <span style="color:#003366"><b>📈 Central tendency</b></span>
+- <span style="color:#FF6600"><b>📏 Variance & standard deviation</b></span>
+- <span style="color:#336666"><b>🦖 Why visualizing data matters</b></span>
+- <span style="color:#003399"><b>🎯 Confidence intervals</b></span>
+- <span style="color:#660099"><b>💬 Communicating data summaries</b></span>
+- <span style="color:#993366"><b>🎲 Basic probability</b></span>
+- <span style="color:#660066"><b>🔢 Random variables</b></span>
+- <span style="color:#003366"><b>📊 Probability mass functions</b></span>
+- <span style="color:#996600"><b>📈 Probability density functions</b></span>
+- <span style="color:#330000"><b>🔔 The normal distribution</b></span>
+- <span style="color:#333300"><b>🧪 Hypothesis testing intuition</b></span>
+- <span style="color:#660000"><b>📉 Two-sample t-tests</b></span>
+- <span style="color:#003300"><b>⚠️ Type 1 & Type 2 errors</b></span>
+:::
+
+::::
 
 ---
 
-Course evals & exit survey slide
+![](images/you_know_stuff.png)
+
+---
+
+
+## {#course-evals data-menu-title="Null hypothesis"}
+
+[Pleaes fill out the course evals!]{.slide-title}
+
+<hr>
 
