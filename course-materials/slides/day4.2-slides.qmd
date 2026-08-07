@@ -13,7 +13,7 @@ format:
 
 [EDS 212: Day 4, Lecture 2]{.custom-title}
 
-[*Basic probability theory, PDFs and PMFs, hypothesis testing intuition]{.custom-subtitle}
+[*Basic probability theory, PDFs and PMFs, hypothesis testing intuition*]{.custom-subtitle}
 
 <hr class="hr-teal">
 
@@ -503,15 +503,225 @@ This statement correctly describes the frequency with which we would expect CIs 
 
 ---
 
+## {#break data-menu-title="5 minute break"} 
+
+[Let's take a 5 minute break]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/coffee-break.png)
+
+---
+
 ## {#probability-density-title data-menu-title="Summation Notation" background-color="#003660"}
 
 <div class="page-center">
-<div class="custom-subtitle">Probability density functions</div>
+<div class="custom-subtitle">Probability density and mass functions</div>
 </div>
 
 ---
 
-## {#prob-density-fxn data-menu-title="Probability density function"} 
+## {#random-variable-blank data-menu-title="Random variables"}
+
+[Random variables]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
+## {#random-variable data-menu-title="Random variables"}
+
+[Random variables]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+A **random variable** is a variable whose value is a numerical outcome of a random process. Usually denoted with a capital letter ($X$, $Y$), with specific values denoted lowercase ($x$, $y$).
+
+<br>
+
+- **Discrete random variable:** takes on a countable set of values. 
+
+E.g. $X=1$ if a coin flip lands tails, $X=0$ if it lands heads.
+
+- **Continuous random variable:** can take any value in an interval. 
+
+E.g. $Y=$ the nitrate concentration (mg/L) in a water sample.
+
+<br>
+
+This connects back to *events* from earlier: "the sample exceeds the nitrate limit" is really just the event $Y > L$, where $L$ is the limit.
+:::
+
+---
+
+## {#pmf-blank data-menu-title="Probability mass function"}
+
+[Probability mass function (PMF)]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
+## {#pmf data-menu-title="Probability mass function"}
+
+[Probability mass function (PMF)]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+For a **discrete** random variable $X$, the **probability mass function (PMF)** gives $P(X=x)$ for each possible value $x$.
+
+$$\sum_x P(X=x) = 1$$
+:::
+
+**Example:** $X=1$ if a fair coin lands tails, $X=0$ if heads.
+
+:::: {.columns}
+::: {.column width="45%"}
+::: {.body-text-m}
+- $x$-axis: possible values of $X$
+- $y$-axis: $P(X=x)$
+:::
+:::
+
+::: {.column width="55%"}
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "100%"
+#| fig-align: "center"
+library(tidyverse)
+coin <- data.frame(x = c(0,1), p = c(0.5,0.5))
+
+ggplot(coin, aes(x = factor(x), y = p)) +
+  geom_col(width = 0.4, fill = "#003660") +
+  geom_text(aes(label = p), vjust = -0.5, size = 6) +
+  labs(x = "X (0 = heads, 1 = tails)", y = "P(X = x)") +
+  ylim(0, 0.65) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 18),
+    axis.title = element_text(size = 20)
+  )
+```
+:::
+::::
+
+---
+
+## {#pmf-draw-blank data-menu-title="Exercise: draw a PMF"}
+
+[Example]{.slide-title}
+
+<hr>
+
+✏️ [A wildlife camera trap records 10 animal sightings in one week: 5 deer, 3 raccoons, 1 coyote, 1 owl. Let $X$ = the species captured in a randomly selected photo. Find $P(X=x)$ for each species and draw the PMF.]{style="color:green;"}
+
+---
+
+## {#pmf-draw data-menu-title="Exercise: draw a PMF"}
+
+[Solution]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+:::: {.columns}
+::: {.column width="40%"}
+| Species | Count | $P(X=x)$ |
+|---|---|---|
+| Deer | 5 | 0.5 |
+| Raccoon | 3 | 0.3 |
+| Coyote | 1 | 0.1 |
+| Owl | 1 | 0.1 |
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "100%"
+#| fig-align: "center"
+camera <- data.frame(species = c("Deer","Raccoon","Coyote","Owl"), p = c(0.5,0.3,0.1,0.1))
+camera$species <- factor(camera$species, levels = camera$species)
+
+ggplot(camera, aes(x = species, y = p)) +
+  geom_col(width = 0.4, fill = "#003660") +
+  geom_text(aes(label = p), vjust = -0.5, size = 6) +
+  labs(x = "Species (X)", y = "P(X = x)") +
+  ylim(0, 0.65) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 18),
+    axis.title = element_text(size = 20)
+  )
+```
+:::
+::::
+
+---
+
+## {#pmf-interpret-blank data-menu-title="Exercise: interpret a PMF"}
+
+[Exercise]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+$X=$ number of invasive species detected in a survey plot
+:::
+
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "70%"
+#| fig-align: "center"
+inv <- data.frame(x = c(0,1,2,3), p = c(0.4,0.3,0.2,0.1))
+
+ggplot(inv, aes(x = factor(x), y = p)) +
+  geom_col(width = 0.4, fill = "#003660") +
+  labs(x = "Number of invasive species (X)", y = "P(X = x)") +
+  ylim(0, 0.5) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 18),
+    axis.title = element_text(size = 20)
+  )
+```
+
+:::{style="color:green;"}
+✏️ Using the PMF above:
+
+- What is the most likely number of invasive species to be detected?
+- What is $P(X \geq 2)$?
+- What is $P(X = 0)$?
+:::
+
+---
+
+## {#pmf-interpret data-menu-title="Exercise: interpret a PMF"}
+
+[Exercise: solution]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;"}
+
+::: {.body-text-m}
+- Most likely value: $X=0$ (tallest bar, $P(X=0)=0.4$)
+- $P(X \geq 2) = P(X=2)+P(X=3) = 0.2+0.1=0.3$
+- $P(X=0) = 0.4$
+:::
+
+---
+
+## {#prob-density-fxn data-menu-title="Probability density function"}
 
 [Probability density function]{.slide-title}
 
@@ -539,23 +749,54 @@ Drawing fun!
 
 <hr>
 
+:::: {.columns}
+::: {.column width="45%"}
 ::: {.body-text-m}
 - Describes the relative likelihood of a **continuous** variable taking on different values
 - The **height** of the curve is *not* a probability
 - The **area under the curve** between two values *is* a probability
 - The total area under the entire curve = 1
 :::
+:::
+
+::: {.column width="55%"}
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "100%"
+#| fig-align: "center"
+x <- seq(0, 10, length.out = 400)
+df <- data.frame(x = x, y = dgamma(x, shape = 3, rate = 0.7))
+shade <- df |> filter(x >= 3, x <= 6)
+peak_x <- 4
+peak_y <- dgamma(peak_x, shape = 3, rate = 0.7)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_line(linewidth = 1.2, color = "#003660") +
+  geom_ribbon(data = shade, aes(x = x, ymin = 0, ymax = y), fill = "#FEBC11", alpha = 0.7) +
+  annotate("segment", x = peak_x, xend = peak_x, y = 0, yend = peak_y, linetype = "dashed", color = "gray30") +
+  annotate("text", x = peak_x, y = peak_y + 0.025, label = "height ≠ probability", size = 5) +
+  annotate("text", x = 4.5, y = 0.05, label = "area = P(3<X<6)", size = 5, color = "#7a5b00") +
+  labs(x = "x", y = "f(x)  (density)") +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 18),
+    axis.title = element_text(size = 20)
+  )
+```
+:::
+::::
 
 ---
 
 ## {#pdf-example-1 data-menu-title="PDF example"}
 
-[Example: a normal distribution]{.slide-title}
+[Example: nitrate concentration]{.slide-title}
 
 <hr>
 
 ::: {.body-text-m}
-Annual rainfall (mm) in a watershed, modeled as a continuous variable:
+Nitrate concentration (mg/L) in stream water samples, modeled as a continuous random variable $Y$:
 :::
 
 ```{r}
@@ -564,25 +805,18 @@ Annual rainfall (mm) in a watershed, modeled as a continuous variable:
 #| warning: false
 #| out-width: "80%"
 #| fig-align: "center"
-library(tidyverse)
+y <- seq(0, 25, length.out = 400)
+df <- data.frame(y = y, d = dgamma(y, shape = 4, rate = 0.5))
 
-x <- seq(350, 1250, length.out = 400)
-df <- data.frame(x = x, y = dnorm(x, mean = 800, sd = 150))
-
-ggplot(df, aes(x = x, y = y)) +
+ggplot(df, aes(x = y, y = d)) +
   geom_line(linewidth = 1.2, color = "#003660") +
-  labs(x = "Annual rainfall (mm)", y = "Density", title = "A normal distribution") +
+  labs(x = "Nitrate concentration (mg/L)", y = "Density") +
   theme_minimal() +
   theme(
     axis.text = element_text(size = 20),
-    axis.title = element_text(size = 24),
-    plot.title = element_text(size = 24, hjust = 0.5)
+    axis.title = element_text(size = 24)
   )
 ```
-
-::: {.body-text-m}
-This bell-shaped curve is called a **normal distribution** — one of the most common shapes for environmental data.
-:::
 
 ---
 
@@ -593,7 +827,7 @@ This bell-shaped curve is called a **normal distribution** — one of the most c
 <hr>
 
 ::: {.body-text-m}
-What's the probability that a randomly chosen year has rainfall between 700 and 900 mm?
+Recall the event from earlier: *the sample exceeds the nitrate limit*. Suppose the safety limit is 10 mg/L — what's $P(Y > 10)$?
 :::
 
 ```{r}
@@ -602,14 +836,15 @@ What's the probability that a randomly chosen year has rainfall between 700 and 
 #| warning: false
 #| out-width: "80%"
 #| fig-align: "center"
-x <- seq(350, 1250, length.out = 400)
-df <- data.frame(x = x, y = dnorm(x, mean = 800, sd = 150))
-shade <- df |> filter(x >= 700, x <= 900)
+y <- seq(0, 25, length.out = 400)
+df <- data.frame(y = y, d = dgamma(y, shape = 4, rate = 0.5))
+shade <- df |> filter(y >= 10)
 
-ggplot(df, aes(x = x, y = y)) +
+ggplot(df, aes(x = y, y = d)) +
   geom_line(linewidth = 1.2, color = "#003660") +
-  geom_ribbon(data = shade, aes(x = x, ymin = 0, ymax = y), fill = "#FEBC11", alpha = 0.7) +
-  labs(x = "Annual rainfall (mm)", y = "Density", title = "P(700 < rainfall < 900) ≈ 0.50") +
+  geom_ribbon(data = shade, aes(x = y, ymin = 0, ymax = d), fill = "#FEBC11", alpha = 0.7) +
+  geom_vline(xintercept = 10, linetype = "dashed", color = "gray30") +
+  labs(x = "Nitrate concentration (mg/L)", y = "Density", title = "P(Y > 10) ≈ 0.27") +
   theme_minimal() +
   theme(
     axis.text = element_text(size = 20),
@@ -619,7 +854,144 @@ ggplot(df, aes(x = x, y = y)) +
 ```
 
 ::: {.body-text-m}
-The **shaded area** is the answer: about a 50% chance.
+The **shaded area** is the answer: about a 27% chance a sample exceeds the safety limit.
+:::
+
+---
+
+## {#typing-speed-placeholder data-menu-title="Exercise: typing speed"}
+
+[Exercise: typing speed]{.slide-title}
+
+<hr>
+
+*(placeholder — insert typing speed test density function exercise here)*
+
+---
+
+## {#normal-dist-blank data-menu-title="The normal distribution"}
+
+[The normal distribution]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
+## {#normal-dist data-menu-title="The normal distribution"}
+
+[The normal distribution]{.slide-title}
+
+<hr>
+
+:::: {.columns}
+::: {.column width="45%"}
+::: {.body-text-m}
+The **normal distribution** is a symmetric, bell-shaped PDF, fully described by two parameters:
+
+- $\mu$ (mean): center of the distribution
+- $\sigma$ (standard deviation): spread of the distribution
+
+**Notation:** $X \sim N(\mu, \sigma^2)$
+:::
+:::
+
+::: {.column width="55%"}
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "100%"
+#| fig-align: "center"
+xn <- seq(-4, 4, length.out = 400)
+dfn <- data.frame(x = xn, y = dnorm(xn))
+
+ggplot(dfn, aes(x = x, y = y)) +
+  geom_line(linewidth = 1.2, color = "#003660") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray30") +
+  annotate("text", x = 0, y = 0.43, label = "μ", size = 8, color = "gray20") +
+  annotate("segment", x = 0, xend = 1, y = 0.25, yend = 0.25, arrow = arrow(ends = "both", length = unit(0.2,"cm")), color = "#D6001C") +
+  annotate("text", x = 0.5, y = 0.27, label = "σ", size = 7, color = "#D6001C") +
+  scale_x_continuous(breaks = NULL) +
+  labs(x = "x", y = "f(x)  (density)") +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 18),
+    axis.title = element_text(size = 20)
+  )
+```
+:::
+::::
+
+---
+
+## {#empirical-rule-blank data-menu-title="The empirical rule"}
+
+[The empirical rule]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
+## {#empirical-rule data-menu-title="The empirical rule"}
+
+[The empirical rule]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+For a normal distribution, the probability of falling within a given number of standard deviations of the mean is always about the same:
+
+- ~68% of values fall within 1 standard deviation of $\mu$
+- ~95% of values fall within 2 standard deviations of $\mu$
+- ~99.7% of values fall within 3 standard deviations of $\mu$
+:::
+
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "75%"
+#| fig-align: "center"
+xn <- seq(-4, 4, length.out = 400)
+dfn <- data.frame(x = xn, y = dnorm(xn))
+
+ggplot(dfn, aes(x = x, y = y)) +
+  geom_ribbon(data = dfn |> filter(x >= -1, x <= 1), aes(ymin = 0, ymax = y), fill = "#FEBC11", alpha = 0.85) +
+  geom_ribbon(data = dfn |> filter(x >= -2, x <= -1), aes(ymin = 0, ymax = y), fill = "#f5d99b") +
+  geom_ribbon(data = dfn |> filter(x >= 1, x <= 2), aes(ymin = 0, ymax = y), fill = "#f5d99b") +
+  geom_ribbon(data = dfn |> filter(x >= -3, x <= -2), aes(ymin = 0, ymax = y), fill = "#fbeecb") +
+  geom_ribbon(data = dfn |> filter(x >= 2, x <= 3), aes(ymin = 0, ymax = y), fill = "#fbeecb") +
+  geom_line(linewidth = 1.2, color = "#003660") +
+  annotate("text", x = 0, y = 0.18, label = "68%", size = 6) +
+  annotate("text", x = 1.5, y = 0.03, label = "95%", size = 5, vjust = -2.7) +
+  annotate("text", x = 2.5, y = 0.01, label = "99.7%", size = 4.2, vjust = -3.8) +
+  scale_x_continuous(breaks = -3:3, labels = c("μ-3σ","μ-2σ","μ-σ","μ","μ+σ","μ+2σ","μ+3σ")) +
+  labs(x = NULL, y = "f(x)  (density)") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(size = 13),
+    axis.text.y = element_text(size = 18),
+    axis.title = element_text(size = 20)
+  )
+```
+
+---
+
+## {#normal-example data-menu-title="Empirical rule example"}
+
+[Example]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+Suppose adult female sea otter mass is approximately normal, with $\mu=25$ kg and $\sigma=3$ kg.
+
+<br>
+
+- About 68% of otters weigh between 22 and 28 kg ($\mu \pm 1\sigma$)
+- About 95% weigh between 19 and 31 kg ($\mu \pm 2\sigma$)
 :::
 
 ---
