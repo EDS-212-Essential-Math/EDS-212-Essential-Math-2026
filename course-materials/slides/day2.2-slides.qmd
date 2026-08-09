@@ -205,37 +205,6 @@ We formally call this <span style="color:red">**the integral of $f(x)$ from $a$ 
 
 ---
 
-## {#integral-calc-2 data-menu-title="Integrals"}
-
-[How do we calculate integrals?]{.slide-title}
-
-<hr>
-
-- Taking infinite sums is impossible by hand
-
-- Luckily, integrals and derivatives are related in a very useful way:
-
-<br>
-
-If we integrate a derivative, we should get the same function back as the original vice-versa:
-
-$$
-\begin{align}
-\frac{d}{dx}\left[\int f(x)dx\right]&=f(x) &\text{Differentiation is the inverse of integration}
-\end{align}
-$$
-
-$$
-\begin{align}
-\int f'(x)&=f(x)+C &\text{Integration is the inverse of differentiation}
-\end{align}
-$$
-
-
-<br>
-
----
-
 ## {#integral-calc-3 data-menu-title="Integrals"}
 
 [How do we calculate integrals?]{.slide-title}
@@ -527,13 +496,27 @@ C) $\int x^3-4x dx$
 
 ---
 
-## {#break data-menu-title="5 minute break"} 
+## {#example-solutions data-menu-title="Example solutions"}
 
-[Let's take a 5 minute break]{.slide-title}
+[Example solutions]{.slide-title}
 
 <hr>
 
-![image: Flaticon.com](images/coffee-break.png)
+:::: {.columns}
+
+::: {.column width="33%"}
+A) $\int 4 dx = 4x+C$
+:::
+
+::: {.column width="33%"}
+B) $\int 2x^2 dx = \frac{2}{3}x^3+C$
+:::
+
+::: {.column width="33%"}
+C) $\int x^3-4x dx = \frac{x^4}{4}-2x^2+C$
+:::
+
+::::
 
 ---
 
@@ -624,6 +607,16 @@ $$
 
 ---
 
+## {#break data-menu-title="5 minute break"}
+
+[Let's take a 5 minute break]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/coffee-break.png)
+
+---
+
 ## {#definite-integrals data-menu-title="Definite integrals" background-color="#003660"}
 
 <div class="page-center">
@@ -642,55 +635,9 @@ $$
 
 ---
 
-## {#definite-1 data-menu-title="Definite vs Indefinite"}
-
-[Indefinite vs. definite integrals]{.slide-title}
-
-<hr>
-
-- We have been working with **indefinite integrals** of the form
-
-$$
-\int f(x)dx
-$$
-
-This means there are no integration bounds and we need initial values to find integration constants.
-
----
-
-## {#definite-2 data-menu-title="Definite vs Indefinite"}
-
-[Indefinite vs. definite integrals]{.slide-title}
-
-<hr>
-- We have been working with **indefinite integrals** of the form
-
-$$
-\int f(x)dx
-$$
-
-This means there are no integration bounds and we need initial values to find integration constants.
-
-
-- **Definite integrals** have start and end values $a$ and $b$:
-
-$$\int_a^b f(x) dx.$$
-
-<!-- - If $F(x) = \int f(x)dx$ then 
-
-$$\int_a^b f(x) dx = F(b) - F(a).$$ -->
-
-To find the area under the curve along an interval $[a,b]$, evaluate the antiderivative at the endpoints and subtract them.
-
-✏️ [**Example**]{style="color:green;"}
-
-
-
-<!----------------------------------------------------->
-
 ## {#definte-1 data-menu-title="Definite vs Indefinite" .smaller}
 
-[Indefinite vs. dfinite integrals]{.slide-title}
+[Indefinite vs. definite integrals]{.slide-title}
 
 <hr>
 - We have been working with **indefinite integrals**. 
@@ -861,7 +808,7 @@ $$
 
 $$
 \begin{align}
-\text{A) }y=\frac{3}{x^2}, y(3)=2&  &\text{B)  }g(t)=3t^5-2t^3+16t-7  &  &\text{C) } \int^4_2\frac{1}{2}x
+\text{A) }y'=\frac{3}{x^2}, y(3)=2&  &\text{B)  }g(t)=3t^5-2t^3+16t-7  &  &\text{C) } \int^4_2\frac{1}{2}x
 \end{align}
 $$
 
@@ -1108,6 +1055,16 @@ What is the **total additional carbon sequestered** by the restored wetland over
 
 
 ✏️ 
+
+----
+
+## {#exercises-solution-3-work data-menu-title="Exercise 2 solution"}
+
+[Solution (3)]{.slide-title}
+
+<hr>
+
+✏️
 
 ----
 
