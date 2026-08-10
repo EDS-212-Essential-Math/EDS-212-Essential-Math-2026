@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.18">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c2894b54f4b00a27b9651b11dcf5df54.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.33">
 
   <title>day2.1-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,16 +17,10 @@
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -35,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-677e5dedfd91753334405bac443a06b7.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-5f271236fce0c0851d2cd6eb77f50b9b.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -162,6 +156,12 @@ Limits
 </div>
 </div>
 </section>
+<section id="limits-blank" class="slide level2" data-menu-title="Limits">
+<h2></h2>
+<p><span class="slide-title">Limits</span></p>
+<hr>
+<p>✏️</p>
+</section>
 <section id="limits" class="slide level2" data-menu-title="Limits">
 <h2></h2>
 <p><span class="slide-title">Limits</span></p>
@@ -177,30 +177,36 @@ Limits
 <p><br></p>
 <p>We read this as: <span class="teal-text">“The limit of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>.”</span></p>
 </section>
-<section id="lim-ex" class="slide level2" data-menu-title="Limit Example">
+<section id="lim-ex-1" class="slide level2" data-menu-title="Limit Example">
+<h2></h2>
+<p><span class="slide-title">Limits example: numerical</span></p>
+<hr>
+<p>What is the limit of <span class="math inline">\(f(x)=2x^2-4\)</span> as <span class="math inline">\(x\)</span> approaches 2?</p>
+<p>We need to examine the values of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> gets closer to 2 from both sides.</p>
+</section>
+<section id="lim-ex-2" class="slide level2" data-menu-title="Limit Example">
 <h2></h2>
 <p><span class="slide-title">Limits example: numerical</span></p>
 <hr>
 <p>What is the limit of <span class="math inline">\(f(x)=2x^2-4\)</span> as <span class="math inline">\(x\)</span> approaches 2?</p>
 <p>We need to examine the values of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> gets closer to 2 from both sides.</p>
 <p><br></p>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/lim4.PNG" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
-</figure>
-</div>
-<!-- ```{r fig.align='center',out.width="90%"}
-knitr::include_graphics("images/lim4.PNG")
-``` -->
-</div>
-<div class="fragment">
-<p>From both directions it looks like <span class="math inline">\(f(x)\)</span> converges to 4.</p>
+
+<img data-src="images/lim4.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p>✏️</p>
+</section>
+<section id="lim-ex-3" class="slide level2" data-menu-title="Limit Example">
+<h2></h2>
+<p><span class="slide-title">Limits example: numerical</span></p>
+<hr>
+<p>What is the limit of <span class="math inline">\(f(x)=2x^2-4\)</span> as <span class="math inline">\(x\)</span> approaches 2?</p>
+<p>We need to examine the values of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> gets closer to 2 from both sides.</p>
+<p><br></p>
+
+<img data-src="images/lim4.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><p>From both directions it looks like <span class="math inline">\(f(x)\)</span> converges to 4.</p>
 <p>So, we say that <span class="teal-text">“The limit of <span class="math inline">\(2x^2-4\)</span> as <span class="math inline">\(x\)</span> approaches 2 is 4”</span>. We can write it like this:</p>
 <p><span class="math display">\[
 \lim_{x\to 2}(2x^2-4)=4
 \]</span></p>
-</div>
 </section>
 <section id="limit-graph-sol" class="slide level2" data-menu-title="Graphical Solution">
 <h2></h2>
@@ -211,7 +217,13 @@ knitr::include_graphics("images/lim4.PNG")
 <img data-src="images/lim_graph_1.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:200.0%"><p>From both directions it looks like <span class="math inline">\(f(x)\)</span> converges to 4.</p>
 <p>So, <span class="math inline">\(\lim_{x\to 2}(2x^2-4)=4\)</span>.</p>
 </section>
-<section id="lim-discon" class="slide level2" data-menu-title="What happens with discontinuous functions">
+<section id="lim-discon-1" class="slide level2" data-menu-title="What happens with discontinuous functions">
+<h2></h2>
+<p><span class="slide-title">Do limits always exist?</span></p>
+<hr>
+<p>✏️</p>
+</section>
+<section id="lim-discon-2" class="slide level2" data-menu-title="What happens with discontinuous functions">
 <h2></h2>
 <p><span class="slide-title">Do limits always exist?</span></p>
 <hr>
@@ -224,37 +236,42 @@ x, &amp; \text{ if } x\geq 0 \\
 \end{cases}
 .
 \]</span></p>
-<div class="fragment">
 <p><br></p>
-<p>✏️ <span style="color:green;"><span class="math inline">\(f(x) = \frac{|x-2|}{x-2}\)</span>. What happens to <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=2\)</span>?</span></p>
-<p>✏️ <span style="color:green;">Try calculating:</span> <span style="color:green;"><span class="math display">\[
+<div style="color:green;">
+<p>✏️ <strong>Exercise</strong></p>
+<ol type="1">
+<li><p>Let <span class="math inline">\(f(x) = \frac{|x-2|}{x-2}\)</span>. What happens to <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=2\)</span>?</p></li>
+<li><p>Try calculating:</p></li>
+</ol>
+<p><span class="math display">\[
 \lim_{x\to 2}\frac{|x-2|}{x-2}.
-\]</span></span></p>
-<p><br></p>
-<p>Hint: Try to do numerical approximations or draw the graph of this function.</p>
+\]</span></p>
+<p>Hint: Try to do numerical approximations or draw the graph of <span class="math inline">\(f(x)\)</span>.</p>
 </div>
 </section>
-<section id="mean-girls" class="slide level2" data-menu-title="Mean girls">
+<section id="limits-solution-1" class="slide level2 smaller" data-menu-title="Mean girls">
+<h2></h2>
+<p><span class="slide-title">Do limits always exist?</span></p>
+<hr>
+<div style="color:green;">
+<p>✏️ <strong>Let’s see a solution</strong></p>
+<ol type="1">
+<li><p>Let <span class="math inline">\(f(x) = \frac{|x-2|}{x-2}\)</span>. What happens to <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=2\)</span>?</p></li>
+<li><p>Try calculating: <span class="math inline">\(\lim_{x\to 2}\frac{|x-2|}{x-2}\)</span>.</p></li>
+</ol>
+</div>
+</section>
+<section id="limits-solution-2" class="slide level2" data-menu-title="Mean girls">
 <h2></h2>
 <p><span class="slide-title">Do limits always exist?</span></p>
 <hr>
 <p>✏️ <span style="color:green;"><span class="math inline">\(f(x) = \frac{|x-2|}{x-2}\)</span>. What happens to <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=2\)</span>?</span></p>
 <p>This function is not defined at <span class="math inline">\(x=2\)</span> since it would require us to divide by zero, which is undefined.</p>
-<div class="fragment">
 <p><br></p>
 <p><span style="color:green;">Try calculating <span class="math inline">\(\lim_{x\to 2}\frac{|x-2|}{x-2}\)</span>.</span></p>
 <p>Let’s investigate:</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/limx2.PNG" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
+
+<img data-src="images/limx2.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"></section>
 <section id="graph" class="slide level2" data-menu-title="Clearer on the graph">
 <h2></h2>
 <p><span class="slide-title">Do limits always exist?</span></p>
@@ -263,7 +280,7 @@ x, &amp; \text{ if } x\geq 0 \\
 <div style="display:flex; justify-content:center;">
 <p><img src="images/lim_graph_2.PNG" style="width:80%;"></p>
 </div>
-<p>Therefore… <span class="teal-text">the limit does not exist!</span></p>
+<p>Therefore… <a href="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnU1OXJmc3JpMjRvMmF1M3Y0OHRnMzlocWJ2aW04bWNnenFnc3FocCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nEltRxukhldok/giphy.gif">the limit does not exist!</a></p>
 </section>
 <section id="intro-derv" class="slide level2" data-menu-title="Introduction to Derivates" data-background-color="#003660">
 <h2></h2>
@@ -340,7 +357,7 @@ Introduction to Derivatives
 
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![](images/tangent_line.png){fig-align='center'}
+![](images/tangent_line.png){fig-align='center' width=206}
 :::
 :::
 
@@ -402,10 +419,6 @@ $$
 <p><span class="slide-title">Not all functions are differentiable</span></p>
 <hr>
 <ul>
-<li>All differentiable functions are continuous, but not all continuous functions are differentiable.</li>
-</ul>
-<div class="fragment">
-<ul>
 <li>The absolute value function <span class="math inline">\(|x|\)</span> is one example, this is defined by <span class="math display">\[|x| =
 \begin{cases}
 x  &amp;, x \geq 0\\
@@ -413,17 +426,8 @@ x  &amp;, x \geq 0\\
 \end{cases}.\]</span></li>
 </ul>
 <p>It’s graph is:</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="day2.1-slides_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
+
+<img data-src="day2.1-slides_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"></section>
 <section id="applications" class="slide level2" data-menu-title="Applications">
 <h2></h2>
 <p><span class="slide-title">Why derivatives in an EDS program?</span></p>
@@ -485,14 +489,12 @@ x  &amp;, x \geq 0\\
 \frac{d}{dx}[x^n]
 =nx^{n-1}.
 \]</span></p>
-<div class="fragment">
 <p><strong>Examples</strong> ✏️</p>
 <p><span class="math display">\[
 \begin{align}
 &amp;y=100 &amp; &amp;f(x)=x^5 &amp; &amp;f(x)=\frac{1}{x^2}
 \end{align}
 \]</span></p>
-</div>
 </section>
 <section id="diff-rules-2-blank" class="slide level2" data-menu-title="Rules for Differentiation (2)">
 <h2></h2>
@@ -501,24 +503,30 @@ x  &amp;, x \geq 0\\
 <p><strong>Sum and Difference Rules</strong></p>
 <p>✏️</p>
 </section>
-<section id="diff-rules-2" class="slide level2" data-menu-title="Rules for Differentiation (2)">
+<section id="diff-rules-2" class="slide level2 smaller" data-menu-title="Rules for Differentiation (2)">
 <h2></h2>
 <p><span class="slide-title">Rules for differentiation (2)</span></p>
 <hr>
 <p><strong>Sum and Difference Rules</strong></p>
-<p>Let <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> be differentiable functions. Then <span class="math display">\[
+<p>Let <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> be differentiable functions. Then</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{d}{dx}[f(x)+g(x)]=\frac{d}{dx}f(x)+\frac{d}{dx}g(x) \\
+\frac{d}{dx}[f(x)-g(x)]=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)
+\end{align}
+\]</span></p>
+<p>😵<em>All this says is: if the function has pieces that are added or subtracted you can take the derivative of each individual piece and add those derivatives.</em></p>
+<p>The <span class="math inline">\(\frac{d}{dx}\)</span> notation can be a lot here, the prime notation is a bit better:</p>
+<p><span class="math display">\[
 \begin{align}
 [f(x)+g(x)]'=f'(x)+g'(x) \\
 [f(x)-g(x)]'=f'(x)-g'(x)
 \end{align}
 \]</span></p>
-<p>😵<em>All this says is: if the function has pieces that are added or subtracted you can take the derivative of each individual piece and add those derivatives.</em></p>
-<div class="fragment">
-<p><strong>Example</strong> ✏️</p>
+<p>✏️ <strong>Example</strong></p>
 <p><span class="math display">\[
 f(x)=x^3-x^2-15
 \]</span></p>
-</div>
 </section>
 <section id="diff-rules-3-blank" class="slide level2" data-menu-title="Rules for Differentiation (3)">
 <h2></h2>
@@ -527,6 +535,15 @@ f(x)=x^3-x^2-15
 <p><strong>Constant Multiplier Rule</strong></p>
 <p>✏️</p>
 </section>
+<section id="diff-rules-3-example" class="slide level2 smaller" data-menu-title="Rules for Differentiation (3)">
+<h2></h2>
+<p><span class="slide-title">Rules for differentiation (3)</span></p>
+<hr>
+<p><strong>Constant Multiplier Rule</strong></p>
+<p>The derivative of a constant <span class="math inline">\(c\)</span> multiplied by a function <span class="math inline">\(f(x)\)</span> is the same as the constant multiplied by the derivative:</p>
+<p><span class="math display">\[\frac{d}{dx}[kf(x)] = k\frac{d}{dx}f(x)\]</span></p>
+<p>✏️ <strong>Example</strong></p>
+</section>
 <section id="diff-rules-3" class="slide level2" data-menu-title="Rules for Differentiation (3)">
 <h2></h2>
 <p><span class="slide-title">Rules for differentiation (3)</span></p>
@@ -534,12 +551,10 @@ f(x)=x^3-x^2-15
 <p><strong>Constant Multiplier Rule</strong></p>
 <p>The derivative of a constant <span class="math inline">\(c\)</span> multiplied by a function <span class="math inline">\(f(x)\)</span> is the same as the constant multiplied by the derivative:</p>
 <p><span class="math display">\[\frac{d}{dx}[kf(x)] = k\frac{d}{dx}f(x)\]</span></p>
-<div class="fragment">
-<p><strong>Example</strong> ✏️</p>
+<p>✏️ <strong>Example</strong></p>
 <p><span class="math display">\[
 y=x^2+\sqrt{2}x-\frac{8}{x}+4
 \]</span></p>
-</div>
 </section>
 <section id="logs-exp" class="slide level2" data-menu-title="Derivative of logs &amp; exp">
 <h2></h2>
@@ -695,7 +710,6 @@ y=x^2+\sqrt{2}x-\frac{8}{x}+4
 <li><p>Power Rule (with the Constant Multiplier Rule)</p></li>
 <li><p>Sum/Difference Rule, Power Rule, Constant Multiplier Rule, and Constant Rule (for <span class="math inline">\(-16\)</span>)</p></li>
 </ol>
-<div class="fragment">
 <p><br></p>
 <ol start="2" type="1">
 <li>Find the derivatives of these functions</li>
@@ -710,7 +724,6 @@ y=x^2+\sqrt{2}x-\frac{8}{x}+4
 <li><p>First expand: <span class="math inline">\(h(x) = 2x\cdot x^2 + 2x \cdot 3x = 2x^3+6x^2\)</span></p></li>
 </ol>
 <p>Then differentiate term by term: <span class="math inline">\(h'(x) = 2\cdot 3x^{(3-1)} + 6\cdot 2x^{(2-1)} = 6x^2+12x\)</span></p>
-</div>
 </section>
 <section id="derivatives-solution-2" class="slide level2" data-menu-title="Derivatives solution">
 <h2></h2>
@@ -767,51 +780,44 @@ Partial derivatives
 <p><br></p>
 <p><span class="body-text-m"><strong>How to take partial derivatives?</strong> Find the derivative with respect to a single variable, <em>treating all others as constants.</em></span></p>
 </section>
-<section id="partial-derivatives-example-2" class="slide level2" data-menu-title="Partial derivatives Ex">
+<section id="partial-derivatives-meaning" class="slide level2" data-menu-title="Partial derivatives meaning">
+<h2></h2>
+<p><span class="slide-title">OK, but what do partials actually mean?</span></p>
+<hr>
+<p>The slope with respect to one variable if other variables are held constant.</p>
+<p><span class="math inline">\(\frac{\partial f}{\partial x}\)</span> evaluated at <span class="math inline">\((x_0,y_0)\)</span> can be written as <span class="math inline">\(\left.\frac{\partial f}{\partial x}\right|_{(x_0,y_0)}\)</span> and tells us the slope of <span class="math inline">\(f\)</span> in the <span class="math inline">\(x\)</span>-direction, while <span class="math inline">\(y\)</span> is held fixed at <span class="math inline">\(y_0\)</span>.</p>
+
+<img data-src="images/partial-derivatives.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="partial-derivatives-example-blank" class="slide level2" data-menu-title="Partial derivatives Ex">
 <h2></h2>
 <p><span class="slide-title">Partial derivatives example</span></p>
 <hr>
 <p><span class="body-text-l">Find all partial derivatives of</span></p>
-<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial x}=1.2x^2y+4z\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial y}=0.4x^3-7.2y\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial z}=4x\]</span></span></p>
+<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span></p>
+<p>✏️</p>
 </section>
 <section id="partial-derivatives-example-3" class="slide level2" data-menu-title="Partial derivatives Ex">
 <h2></h2>
 <p><span class="slide-title">Partial derivatives example</span></p>
 <hr>
 <p><span class="body-text-l">Find all partial derivatives of</span></p>
-<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial x}=1.2x^2y+4z\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial y}=0.4x^3-7.2y\]</span></span> <span class="body-text-m"><span class="math display">\[\frac{\partial B}{\partial z}=4x\]</span></span></p>
+<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span> <span class="math display">\[\frac{\partial B}{\partial x}=1.2x^2y+4z\]</span> <span class="math display">\[\frac{\partial B}{\partial y}=0.4x^3-7.2y\]</span> <span class="math display">\[\frac{\partial B}{\partial z}=4x\]</span></p>
 <p>✏️<span style="color:green;">What is the value of the partial derivative of <span class="math inline">\(B\)</span> with respect to <span class="math inline">\(z\)</span> at the point <span class="math inline">\((1,2,3)\)</span>?</span></p>
 </section>
-<section id="partial-derivatives-meaning" class="slide level2" data-menu-title="Partial derivatives meaning">
+<section id="partial-derivatives-solution" class="slide level2" data-menu-title="Partial derivatives Ex">
 <h2></h2>
-<p><span class="slide-title">OK, but what do partials actually mean?</span></p>
+<p><span class="slide-title">Solution</span></p>
 <hr>
-<p><span class="body-text-m">The slope with respect to one variable if other variables are held constant.</span></p>
-<p><span class="body-text-m"><span class="math inline">\(\frac{\partial f}{\partial x}\)</span> evaluated at <span class="math inline">\((x_0,y_0)\)</span> can be written as <span class="math inline">\(\left.\frac{\partial f}{\partial x}\right|_{x_0,y_0}\)</span> and tells us the slope of <span class="math inline">\(f\)</span> in the <span class="math inline">\(x\)</span>-direction, while <span class="math inline">\(y\)</span> is held fixed at <span class="math inline">\(y_0\)</span>.</span></p>
-
-<img data-src="images/partial-derivatives.jpg" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
-<ul>
-<li>moving up and down</li>
-<li>moving acorss a plane</li>
-<li>twisting / sprialing</li>
-</ul>
-<p>consider the above when calcualting speed in each / any direction</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><span class="body-text-l">Find all partial derivatives of</span></p>
+<p><span class="body-text-m"><span class="math display">\[B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8\]</span></span> <span class="math display">\[\frac{\partial B}{\partial x}=1.2x^2y+4z\]</span> <span class="math display">\[\frac{\partial B}{\partial y}=0.4x^3-7.2y\]</span> <span class="math display">\[\frac{\partial B}{\partial z}=4x\]</span></p>
+<p>✏️<span style="color:green;">What is the value of the partial derivative of <span class="math inline">\(B\)</span> with respect to <span class="math inline">\(z\)</span> at the point <span class="math inline">\((1,2,3)\)</span>?</span></p>
+<p><span class="math display">\[\frac{\partial B}{\partial z}\Bigr\rvert_{(1,2,3)} = \frac{\partial B}{\partial z}\Bigr\rvert_{(1,2,3)}4x = 4*1 = 4. \]</span></p>
 </section>
-<section id="partial-derivatives-practice" class="slide level2" data-menu-title="Try one">
+<section id="partial-derivatives-practice" class="slide level2 smaller" data-menu-title="Try one">
 <h2></h2>
 <p><span class="slide-title">Partial derivatives practice</span></p>
 <hr>
+<div style="color:green;">
 <ol type="A">
 <li>The temperature (in Celsius) across a surface (where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are in meters) is described by:</li>
 </ol>
@@ -822,11 +828,6 @@ Partial derivatives
 <li>In the <span class="math inline">\(y\)</span> direction, at the point (0,2) on the surface?</li>
 <li>Write your answer as a complete sentence involving rate of change.</li>
 </ul>
-</section>
-<section id="partial-derivatives-practice-2" class="slide level2" data-menu-title="Try one">
-<h2></h2>
-<p><span class="slide-title">Partial derivatives practice</span></p>
-<hr>
 <ol start="2" type="A">
 <li>A dragon’s breath temperature (<span class="math inline">\(T\)</span>, in degrees Celsius) is modeled as a function of its wingspan (<span class="math inline">\(W\)</span>, in meters) and length (<span class="math inline">\(L\)</span>, also in meters):</li>
 </ol>
@@ -837,6 +838,7 @@ Partial derivatives
 <li><p>At what rate is breath temperature changing with respect to wingspan, for the same dragon?</p></li>
 <li><p>Write your answer as a complete sentence involving rate of change.</p></li>
 </ul>
+</div>
 </section>
 <section id="partial-derivatives-solution-1-blank" class="slide level2" data-menu-title="Try one">
 <h2></h2>
@@ -1159,7 +1161,7 @@ Partial derivatives
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1271,14 +1273,13 @@ Partial derivatives
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

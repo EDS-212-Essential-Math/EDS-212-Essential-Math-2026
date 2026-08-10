@@ -45,6 +45,18 @@ format:
 
 ---
 
+## {#limits-blank data-menu-title="Limits"}
+
+[Limits]{.slide-title}
+
+<hr>
+
+✏️
+
+
+
+---
+
 ## {#limits data-menu-title="Limits"}
 
 [Limits]{.slide-title}
@@ -70,7 +82,19 @@ We read this as: ["The limit of $f(x)$ as $x$ approaches $c$ is $L$."]{.teal-tex
 
 ---
 
-## {#lim-ex data-menu-title="Limit Example"}
+## {#lim-ex-1 data-menu-title="Limit Example"}
+
+[Limits example: numerical]{.slide-title}
+
+<hr>
+
+What is the limit of $f(x)=2x^2-4$ as $x$ approaches 2?
+
+We need to examine the values of $f(x)$ as $x$ gets closer to 2 from both sides.
+
+---
+
+## {#lim-ex-2 data-menu-title="Limit Example"}
 
 [Limits example: numerical]{.slide-title}
 
@@ -82,15 +106,27 @@ We need to examine the values of $f(x)$ as $x$ gets closer to 2 from both sides.
 
 <br>
 
-. . . 
+
+![](images/lim4.PNG){fig-align="center" width="60%"}
+
+✏️
+
+---
+
+## {#lim-ex-3 data-menu-title="Limit Example"}
+
+[Limits example: numerical]{.slide-title}
+
+<hr>
+
+What is the limit of $f(x)=2x^2-4$ as $x$ approaches 2?
+
+We need to examine the values of $f(x)$ as $x$ gets closer to 2 from both sides.
+
+<br>
 
 ![](images/lim4.PNG){fig-align="center" width="70%"}
 
-<!-- ```{r fig.align='center',out.width="90%"}
-knitr::include_graphics("images/lim4.PNG")
-``` -->
-
-. . .
 
 From both directions it looks like $f(x)$ converges to 4.
 
@@ -99,7 +135,6 @@ So, we say that ["The limit of $2x^2-4$ as $x$ approaches 2 is 4"]{.teal-text}. 
 $$
 \lim_{x\to 2}(2x^2-4)=4
 $$
-
 
 ---
 
@@ -121,7 +156,18 @@ So, $\lim_{x\to 2}(2x^2-4)=4$.
 
 ---
 
-## {#lim-discon data-menu-title="What happens with discontinuous functions"}
+## {#lim-discon-1 data-menu-title="What happens with discontinuous functions"}
+
+[Do limits always exist?]{.slide-title}
+
+<hr>
+
+✏️ 
+
+
+---
+
+## {#lim-discon-2 data-menu-title="What happens with discontinuous functions"}
 
 [Do limits always exist?]{.slide-title}
 
@@ -138,27 +184,44 @@ x, & \text{ if } x\geq 0 \\
 .
 $$
 
-. . .
-
 <br>
 
-✏️ [$f(x) = \frac{|x-2|}{x-2}$. What happens to $f(x)$ at $x=2$?]{style="color:green;"}
+:::{style="color:green;"}
 
+✏️ **Exercise** 
 
-✏️ [Try calculating:]{style="color:green;"}
-[
+1. Let $f(x) = \frac{|x-2|}{x-2}$. What happens to $f(x)$ at $x=2$?
+
+2. Try calculating:
+
 $$
 \lim_{x\to 2}\frac{|x-2|}{x-2}.
 $$
-]{style="color:green;"}
 
-<br>
-
-Hint: Try to do numerical approximations or draw the graph of this function. 
+Hint: Try to do numerical approximations or draw the graph of $f(x)$. 
+:::
 
 ---
 
-## {#mean-girls data-menu-title="Mean girls"}
+## {#limits-solution-1 data-menu-title="Mean girls" .smaller}
+
+[Do limits always exist?]{.slide-title}
+
+<hr>
+
+
+:::{style="color:green;"}
+
+✏️ **Let's see a solution** 
+
+1. Let  $f(x) = \frac{|x-2|}{x-2}$. What happens to $f(x)$ at $x=2$?
+
+2. Try calculating: $\lim_{x\to 2}\frac{|x-2|}{x-2}$.
+:::
+
+---
+
+## {#limits-solution-2 data-menu-title="Mean girls"}
 
 [Do limits always exist?]{.slide-title}
 
@@ -167,8 +230,6 @@ Hint: Try to do numerical approximations or draw the graph of this function.
 ✏️ [$f(x) = \frac{|x-2|}{x-2}$. What happens to $f(x)$ at $x=2$?]{style="color:green;"}
 
 This function is not defined at $x=2$ since it would require us to divide by zero, which is undefined.
-
-. . . 
 
 <br>
 
@@ -194,7 +255,7 @@ The function $\frac{|x-2|}{x-2}$ approaches different values from either side at
   <img src="images/lim_graph_2.PNG" style="width:80%;">
 </div>
 
-Therefore... [the limit does not exist!]{.teal-text}
+Therefore... [the limit does not exist!](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnU1OXJmc3JpMjRvMmF1M3Y0OHRnMzlocWJ2aW04bWNnenFnc3FocCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nEltRxukhldok/giphy.gif)
 
 ---
 
@@ -554,10 +615,6 @@ knitr::include_graphics("images/derivative_9.jpg")
 
 <hr>
 
-- All differentiable functions are continuous, but not all continuous functions are differentiable.
-
-. . .
-
 - The absolute value function $|x|$ is one example, this is defined by 
 $$|x| = 
 \begin{cases}
@@ -712,8 +769,6 @@ $$
 =nx^{n-1}.
 $$
 
-. . .
-
 **Examples**   ✏️
 
 $$
@@ -736,7 +791,7 @@ $$
 
 ---
 
-## {#diff-rules-2 data-menu-title="Rules for Differentiation (2)"}
+## {#diff-rules-2 data-menu-title="Rules for Differentiation (2)" .smaller}
 
 [Rules for differentiation (2)]{.slide-title}
 
@@ -745,6 +800,19 @@ $$
 **Sum and Difference Rules**
 
 Let $f(x)$ and $g(x)$ be differentiable functions. Then 
+
+$$
+\begin{align}
+\frac{d}{dx}[f(x)+g(x)]=\frac{d}{dx}f(x)+\frac{d}{dx}g(x) \\
+\frac{d}{dx}[f(x)-g(x)]=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)
+\end{align}
+$$
+
+
+😵*All this says is: if the function has pieces that are added or subtracted you can take the derivative of each individual piece and add those derivatives.*
+
+The $\frac{d}{dx}$ notation can be a lot here, the prime notation is a bit better:
+
 $$
 \begin{align}
 [f(x)+g(x)]'=f'(x)+g'(x) \\
@@ -752,11 +820,8 @@ $$
 \end{align}
 $$
 
-😵*All this says is: if the function has pieces that are added or subtracted you can take the derivative of each individual piece and add those derivatives.*
 
-. . . 
-
-**Example** ✏️
+✏️ **Example** 
 
 $$
 f(x)=x^3-x^2-15
@@ -776,6 +841,23 @@ $$
 
 ---
 
+## {#diff-rules-3-example data-menu-title="Rules for Differentiation (3)".smaller}
+
+[Rules for differentiation (3)]{.slide-title}
+
+<hr>
+
+**Constant Multiplier Rule**
+
+The derivative of a constant $c$ multiplied by a function $f(x)$ is the same as the constant multiplied by the derivative:
+
+$$\frac{d}{dx}[kf(x)] = k\frac{d}{dx}f(x)$$
+
+✏️ **Example** 
+
+
+---
+
 ## {#diff-rules-3 data-menu-title="Rules for Differentiation (3)"}
 
 [Rules for differentiation (3)]{.slide-title}
@@ -788,9 +870,7 @@ The derivative of a constant $c$ multiplied by a function $f(x)$ is the same as 
 
 $$\frac{d}{dx}[kf(x)] = k\frac{d}{dx}f(x)$$
 
-. . . 
-
-**Example** ✏️
+ ✏️ **Example**
 
 $$
 y=x^2+\sqrt{2}x-\frac{8}{x}+4
@@ -953,8 +1033,6 @@ A) Power Rule (with the Constant Multiplier Rule)
 
 B) Sum/Difference Rule, Power Rule, Constant Multiplier Rule, and Constant Rule (for $-16$)
 
-. . .
-
 <br>
 
 2) Find the derivatives of these functions
@@ -1047,7 +1125,21 @@ We read $\frac{\partial f}{\partial x}$ as "the partial derivative of $f$ with r
 
 ---
 
-## {#partial-derivatives-example-2 data-menu-title="Partial derivatives Ex"}
+## {#partial-derivatives-meaning data-menu-title="Partial derivatives meaning"} 
+
+[OK, but what do partials actually mean?]{.slide-title}
+
+<hr>
+
+The slope with respect to one variable if other variables are held constant.
+
+$\frac{\partial f}{\partial x}$ evaluated at $(x_0,y_0)$ can be written as $\left.\frac{\partial f}{\partial x}\right|_{(x_0,y_0)}$ and tells us the slope of $f$ in the $x$-direction, while $y$ is held fixed at $y_0$.
+
+![](images/partial-derivatives.png){fig-align="center"}
+
+---
+
+## {#partial-derivatives-example-blank data-menu-title="Partial derivatives Ex"}
 
 [Partial derivatives example]{.slide-title}
 
@@ -1056,9 +1148,8 @@ We read $\frac{\partial f}{\partial x}$ as "the partial derivative of $f$ with r
 [Find all partial derivatives of]{.body-text-l}
 
 [$$B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8$$]{.body-text-m}
-[$$\frac{\partial B}{\partial x}=1.2x^2y+4z$$]{.body-text-m}
-[$$\frac{\partial B}{\partial y}=0.4x^3-7.2y$$]{.body-text-m}
-[$$\frac{\partial B}{\partial z}=4x$$]{.body-text-m}
+
+✏️
 
 ---
 
@@ -1071,43 +1162,42 @@ We read $\frac{\partial f}{\partial x}$ as "the partial derivative of $f$ with r
 [Find all partial derivatives of]{.body-text-l}
 
 [$$B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8$$]{.body-text-m}
-[$$\frac{\partial B}{\partial x}=1.2x^2y+4z$$]{.body-text-m}
-[$$\frac{\partial B}{\partial y}=0.4x^3-7.2y$$]{.body-text-m}
-[$$\frac{\partial B}{\partial z}=4x$$]{.body-text-m}
+$$\frac{\partial B}{\partial x}=1.2x^2y+4z$$
+$$\frac{\partial B}{\partial y}=0.4x^3-7.2y$$
+$$\frac{\partial B}{\partial z}=4x$$
 
 
 ✏️[ What is the value of the partial derivative of $B$ with respect to $z$ at the point $(1,2,3)$?]{style="color:green;"}
 
 ---
 
-## {#partial-derivatives-meaning data-menu-title="Partial derivatives meaning"} 
+## {#partial-derivatives-solution data-menu-title="Partial derivatives Ex"} 
 
-[OK, but what do partials actually mean?]{.slide-title}
+[Solution]{.slide-title}
 
 <hr>
 
-[The slope with respect to one variable if other variables are held constant.]{.body-text-m}
+[Find all partial derivatives of]{.body-text-l}
 
-[$\frac{\partial f}{\partial x}$ evaluated at $(x_0,y_0)$ can be written as $\left.\frac{\partial f}{\partial x}\right|_{x_0,y_0}$ and tells us the slope of $f$ in the $x$-direction, while $y$ is held fixed at $y_0$.]{.body-text-m}
+[$$B(x,y, z)=0.4x^3y-3.6y^2+4zx + 8$$]{.body-text-m}
+$$\frac{\partial B}{\partial x}=1.2x^2y+4z$$
+$$\frac{\partial B}{\partial y}=0.4x^3-7.2y$$
+$$\frac{\partial B}{\partial z}=4x$$
 
-![](images/partial-derivatives.jpg){fig-align="center"}
 
-::: {.notes}
-- moving up and down
-- moving acorss a plane
-- twisting / sprialing
+✏️[ What is the value of the partial derivative of $B$ with respect to $z$ at the point $(1,2,3)$?]{style="color:green;"}
 
-consider the above when calcualting speed in each / any direction
-:::
+$$\frac{\partial B}{\partial z}\Bigr\rvert_{(1,2,3)} = \frac{\partial B}{\partial z}\Bigr\rvert_{(1,2,3)}4x = 4*1 = 4. $$
 
 ---
 
-## {#partial-derivatives-practice data-menu-title="Try one"} 
+## {#partial-derivatives-practice data-menu-title="Try one" .smaller} 
 
 [Partial derivatives practice]{.slide-title}
 
 <hr>
 
+:::{style="color:green;"}
 (A) The temperature (in Celsius) across a surface (where $x$ and $y$ are in meters) is described by:
 
 $$T(x,y)=x^2y-2x+y-1$$
@@ -1118,14 +1208,6 @@ At what "rate" is temperature changing (with respect to distance):
 - In the $x$ direction, at the point (1,3) on the surface?
 - In the $y$ direction, at the point (0,2) on the surface?
 - Write your answer as a complete sentence involving rate of change.
-
----
-
-## {#partial-derivatives-practice-2 data-menu-title="Try one"}
-
-[Partial derivatives practice]{.slide-title}
-
-<hr>
 
 (B) A dragon's breath temperature ($T$, in degrees Celsius) is modeled as a function of its wingspan ($W$, in meters) and length ($L$, also in meters):
 
@@ -1138,6 +1220,7 @@ $$T(W,L)=0.41WL+2.6W^2$$
 - At what rate is breath temperature changing with respect to wingspan, for the same dragon?
 
 - Write your answer as a complete sentence involving rate of change.
+:::
 
 ---
 

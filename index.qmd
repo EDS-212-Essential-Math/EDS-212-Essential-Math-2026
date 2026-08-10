@@ -81,4 +81,4 @@ knitr::include_graphics("images/cella.png")
 
 ## Acknowledgements
 
-EDS 212 was originally developed and taught by [Allison Horst](https://allisonhorst.github.io/){target="_blank"} and then adapted by [Ruth Oliver](https://www.oliverlab.org){target="_blank"}. This new website houses materials which are reused, adapted and expanded from, and inspired by Allison's and Ruth's work.
+EDS 212 was originally developed and taught by [Allison Horst](https://allisonhorst.github.io/){target="_blank"}. It has since been taught and adapted by [Ruth Oliver](https://www.oliverlab.org){target="_blank"}, [Sam Shanny-Csik](https://samanthacsik.github.io){target="_blank"} and, most recently, myself, [Carmen Galaz García](https://bren.ucsb.edu/people/carmen-galaz-garcia){target="_blank"}, with contributions from [Alessandra Vidal Meza](https://bren.ucsb.edu/people/alessandra-vidal-meza-0), [Cella Schnabel](https://bren.ucsb.edu/people/cella-schnabel){target="_blank"}, and [Nathan Grimes](https://bren.ucsb.edu/people/nathan-grimes){target="_blank"}. This new website houses materials which are reused, adapted, and expanded from, and inspired by the previous instructors' work.
