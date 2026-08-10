@@ -19,10 +19,10 @@ knitr::include_graphics("images/horst-data-types.jpeg")
 
 ## Class materials
 
-| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | {{< fa pencil title="A pencil" >}} Extra Examples|
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----|
-| day 4 / morning   | [Essential summary statistics and describing data](slides/day4.1-slides.qmd){target="_blank"} | [Examples](examples/day4-morning-extra-examples.qmd){target="_blank"} |
-| day 4 / afternoon | *No afternoon session* | |
+| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | {{< fa pen-to-square title="A pencil over a blank piece of paper" >}}  After class slides | {{< fa pencil title="A pencil" >}} Extra Examples| 
+|-------------------| -----------------------------------------------------------------------------------------------------------------------------------------------------|-----|-----|
+| day 4 / morning   | [Essential summary statistics and describing data](slides/day4.1-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day4.1-slides-class-2026.pdf){target="_blank"} |  [Examples](examples/day4-morning-extra-examples.qmd){target="_blank"}  |
+| day 4 / afternoon | *No session.* |  |
 : {.hover .bordered tbl-colwidths="[20,50,30]"}
 
 
