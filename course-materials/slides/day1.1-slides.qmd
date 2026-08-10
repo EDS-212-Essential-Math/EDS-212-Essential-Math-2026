@@ -44,8 +44,6 @@ format:
 - **Course hours:** 10am - 3:30pm PST
 - **Location:** NCEAS 1st Floor Classroom
 - **Website:** [https://eds-212-essential-math.github.io/EDS-212-Essential-Math-2026/](https://eds-212-essential-math.github.io/EDS-212-Essential-Math-2026/)
-    - Find the slides: top right under daily materials
-    - Find the syllabus: top right under syllabus
 
 ---
 
@@ -142,15 +140,11 @@ Before:
 
 <hr>
 
+::: {.center-text .body-text-m}
 - **Units:** 2
 - **Grading:** Satisfactory/Unsatisfactory
-- **Description:** Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.
-
-
-
 - This is an **"offline course"**, your only one in MEDS. What it means is we'll be focusing on conceptual understanding and some pen-and-paper practice, instead of coding. Why? We want to make sure you *understand* some fundamental topics before jumping into *implementing*. 
-
-
+:::
 
 ::: {.center-text .body-text-l}
 Let's take a look at the [course syllabus](https://docs.google.com/document/d/1yGzd_H954F_gPufJNAYPIIjEw3vDS4P0E20CRrpSrfs/edit?tab=t.0) together. 
@@ -164,12 +158,12 @@ Let's take a look at the [course syllabus](https://docs.google.com/document/d/1y
 
 <hr>
 
-::: {.body-text-m}
+::: {.body-text-l}
 - **Day 1:** Course introduction & math basics refresher
-- **Day 2:** Exponential functions; Limits & derivatives
-- **Day 3:** Integration & ODEs; Vectors and matrices
-- **Day 4:** Distributions & summary statistics; Basic probability theory,
-- **Day 5:** Basic stats; Boolean algebra
+- **Day 2:**  Limits & derivatives; Integration & ODEs
+- **Day 3:**  Calculus practice session; Vectors and matrices
+- **Day 4:** Summary statistics; Basic probability theory
+- **Day 5:** Basic stats
 :::
 
 ---
@@ -180,6 +174,7 @@ Let's take a look at the [course syllabus](https://docs.google.com/document/d/1y
 
 <hr>
 
+::: {.body-text-l}
 1.  Shake off the math dust
 
 2.  Exercise core math skills needed to succeed in your Bren courses
@@ -187,6 +182,7 @@ Let's take a look at the [course syllabus](https://docs.google.com/document/d/1y
 3.  Explore how valuable math is to environmental data science
 
 4.  Build a collaborative environment and get to know your cohort
+:::
 
 ---
 
@@ -196,6 +192,7 @@ Let's take a look at the [course syllabus](https://docs.google.com/document/d/1y
 
 <hr>
 
+::: {.body-text-m}
 We expect all students will:
 
 - Support and encourage all classmates
@@ -207,6 +204,7 @@ We expect all students will:
 - See opportunities to share kownledge as a chance to deepen understanding
 
 - Complete all in-class exercises
+:::
 
 
 ---
@@ -217,6 +215,7 @@ We expect all students will:
 
 <hr>
 
+::: {.body-text-m}
 We expect all students will:
 
 - Support and encourage all classmates
@@ -229,12 +228,12 @@ We expect all students will:
 
 - Complete all in-class exercises
 
-. . .
-
 **Logistics**
 
 - You are required to attend all sessions, unless there's a significant reason not to. Always communicate with your instructors.
 - If you are feeling sick: stay home and take care of yourself! Please mask up if you are not feeling 100%.
+
+:::
 
 ---
 
@@ -439,7 +438,7 @@ Always add/substract/multiply/divide by the same number on both sides. More gene
 
 ## {#PEMDAS data-menu-title="PEMDAS"} 
 
-[1. Order of operations (P-E-DM-AS)]{.slide-title}
+[Order of operations (P-E-DM-AS)]{.slide-title}
 
 <hr>
 
@@ -463,7 +462,7 @@ Always add/substract/multiply/divide by the same number on both sides. More gene
 
 ## {#PEMDAS-practice data-menu-title="PEMDAS practice"} 
 
-[1. Order of operations practice problems]{.slide-title}
+[Order of operations practice problems]{.slide-title}
 
 <hr>
 
@@ -484,34 +483,11 @@ $$
 z = 4*(y-4)+(x+1)^2
 $$
 
-
-
-
-::: {.notes}
-1. $(12 - 2)/5 + 5(3+2)/6$
-- $(10/5) + 5 \times 5 / 6$
-- **ANSWER: $2 + 25/6$**
-
-2. $\frac{(4-6)}{(2)}(3+1)-\frac{(1+2*4)}{(3)}$
-- $\frac{(-2)}{(2)}(4)-\frac{(9)}{(3)}$
-- $-1 \times 4 - 3$
-- $-4-3$
-- **ANSWER: $-7$**
-
-3. $3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}$
-- $3x+4 \times 2x - 2y + 5 + \frac{2x-6x}{2}$
-- $3x+4 \times 2x - 2y + 5 + \frac{2x}{2}-\frac{6x}{2}$
-- $3x+4 \times 2x - 2y + 5 + x - 3x$
-- $11x - 2y + 5 - 2x$
-- **ANSWER: $9x - 2y + 5$**
-
-:::
-
 ---
 
 ## {#PEMDAS-practice-solution-1 data-menu-title="PEMDAS practice: solution 1"} 
 
-[1. Order of operations practice problems]{.slide-title}
+[Order of operations practice problems]{.slide-title}
 
 <hr>
 
@@ -533,9 +509,24 @@ $$
 
 ---
 
+## {#PEMDAS-practice-solution-2 data-menu-title="PEMDAS practice: solution 2"}
+
+[Order of operations practice problems]{.slide-title}
+
+<hr>
+
+💡 [Let's see a solution!]{style="color:green;" .body-text-m}
+
+[If we are given the values of $x=-3$ and $y=2$, what would be the value of $z$?
+$$
+z = 4*(y-4)+(x+1)^2
+$$]{.body-text-m}
+
+---
+
 ## {#PEMDAS-practice-solution-1-answer data-menu-title="Practice solutions"}
 
-[1. Practice solutions]{.slide-title}
+[Practice solutions]{.slide-title}
 
 <hr>
 
@@ -559,30 +550,6 @@ $$
 \end{aligned}
 $$
 
----
-
-## {#PEMDAS-practice-solution-2 data-menu-title="PEMDAS practice: solution 2"}
-
-[1. Order of operations practice problems]{.slide-title}
-
-<hr>
-
-💡 [Let's see a solution!]{style="color:green;" .body-text-m}
-
-[If we are given the values of $x=-3$ and $y=2$, what would be the value of $z$?
-$$
-z = 4*(y-4)+(x+1)^2
-$$]{.body-text-m}
-
-
-
----
-
-## {#PEMDAS-practice-solution-2-answer data-menu-title="Practice solutions"}
-
-[1. Practice solutions]{.slide-title}
-
-<hr>
 
 $$
 \small
@@ -598,7 +565,7 @@ $$
 
 ## {#notation-matters data-menu-title="Notation matters"}
 
-[1. Notation matters]{.slide-title}
+[Notation matters]{.slide-title}
 
 <hr>
 
@@ -630,7 +597,7 @@ A harder to misinterpret way to write this: $(6 \div 3) \times (4+2)$
 
 ## {#takeaway data-menu-title="Takeaway"} 
 
-[1. An important takeaway:]{.slide-title}
+[An important takeaway:]{.slide-title}
 
 <hr>
 
@@ -645,39 +612,11 @@ Being readable & hard to incorrectly interpret is often as important as being te
 
 [When designing things, it's important to **consider the different ways that users might misuse or misunderstand it** - then **build in safeguards** to help them use it correctly. **Clear communication** and **user-centered design** is critical in environmental data science.]{.body-text-m} 
 
-
-<!-- 
-
----
-
-## {#equations-solved data-menu-title="Equations solved"} 
-
-[2. Solving equations]{.slide-title}
-
-<hr>
-
-<br>
-
-[$$2x-5y+3.9=8x^2-100.7x$$]{.body-text-l}
-
-<br>
-
-[Provides solutions for the questions:]{.body-text-m}
-
-<br>
-
-::: {.body-text-m}
-1. "What is the value of $2x-5y+3.9$?" and 
-2. "What is the value of $8x^2-100.7x$?"
-::: 
-
--->
-
 --- 
 
 ## {#equations-solved-1 data-menu-title="Equations solved"} 
 
-[2. Solving equations]{.slide-title}
+[Solving equations]{.slide-title}
 
 <hr>
 
@@ -698,7 +637,7 @@ Always add/substract/multiply/divide by the same number on both sides. More gene
 
 ## {#equations-solved-2 data-menu-title="Equations solved"} 
 
-[2. Solving equations]{.slide-title}
+[Solving equations]{.slide-title}
 
 <hr>
 
@@ -736,7 +675,7 @@ $$
 
 ## {#solving-equations-2 data-menu-title="Solving equations"}
 
-[2. Solving equations]{.slide-title}
+[Solving equations]{.slide-title}
 
 <hr>
 
@@ -759,7 +698,7 @@ $$
 
 ## {#solving-equations-3 data-menu-title="Solving equations"}
 
-[2. Solving equations]{.slide-title}
+[Solving equations]{.slide-title}
 
 <hr>
 
@@ -1452,6 +1391,7 @@ Then we multiply by the conversion factors and simplify
 
 <hr>
 
+:::{style="color:green;"}
 1. Convert $8.1\frac{km}{s}$ to miles per hour, given that 1 km = 0.621 miles.
 
 <br>
@@ -1464,6 +1404,7 @@ Then we multiply by the conversion factors and simplify
 -   **Company C:** 18.1 gallons spilled (0% recovered)
 
 What is the total *unrecovered* amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.
+:::
 
 ---
 
@@ -1477,7 +1418,6 @@ What is the total *unrecovered* amount of oil spilled into the watershed that ye
 
 ✏️  [Let's see a solution!]{style="color:green;" .body-text-m}
 
-[$8.1\frac{km}{s} \times 60\frac{s}{min} \times 60\frac{min}{hr} \times 0.621\frac{mi}{km} = 18108.36 \frac{mi}{hr}$]{.body-text-m}
 
 ---
 
@@ -1496,6 +1436,26 @@ What is the total *unrecovered* amount of oil spilled into the watershed that ye
 What is the total *unrecovered* amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.
 
 ✏️  [Let's see a solution!]{style="color:green;" .body-text-m}
+
+---
+
+## {#unit-conv-solutions-3 data-menu-title="Unit conversions practice" .smaller} 
+
+[Unit conversion practice: solutions]{.slide-title}
+
+<hr>
+
+1. 
+
+[$8.1\frac{km}{s} \times 60\frac{s}{min} \times 60\frac{min}{hr} \times 0.621\frac{mi}{km} = 18108.36 \frac{mi}{hr}$]{.body-text-m}
+
+2. You are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:
+
+-   **Company A:** 14.6 barrels spilled (with 9.3 barrels recovered)
+-   **Company B:** 692 liters spilled (94% recovered)
+-   **Company C:** 18.1 gallons spilled (0% recovered)
+
+What is the total *unrecovered* amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.
 
 [**Company A:** $14.6\text{ barrels} - 9.3\text{ barrels} = 5.3\text{ barrels unrecovered}$]{.body-text-m}
 
