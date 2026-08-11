@@ -19,8 +19,6 @@ editor_options:
 
 <hr class="hr-teal">
 
-[August 3^rd^, 2026]{.custom-subtitle3}
-
 ---
 
 ## {#eds212-basics data-menu-title="EDS 212 basics" background-color="#003660"}

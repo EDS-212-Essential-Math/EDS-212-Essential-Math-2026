@@ -17,8 +17,6 @@ format:
 
 <hr class="hr-teal">
 
-[August 4^th^, 2026]{.custom-subtitle3}
-
 ---
 
 ## {#overview data-menu-title="Overview"} 

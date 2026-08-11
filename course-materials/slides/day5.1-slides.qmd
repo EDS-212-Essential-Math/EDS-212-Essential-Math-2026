@@ -17,8 +17,6 @@ format:
 
 <hr class="hr-teal">
 
-[August 7^th^, 2026]{.custom-subtitle3}
-
 ---
 
 ## {#probability-title data-menu-title="Basic Probability" background-color="#003660"}

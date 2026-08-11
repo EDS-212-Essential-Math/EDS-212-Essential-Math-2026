@@ -18,8 +18,6 @@ format:
 
 <hr class="hr-teal">
 
-[August 4^th^, 2026]{.custom-subtitle3}e
-
 ---
 
 ## {#integrate-concept data-menu-title="Integration" background-color="#003660"}
