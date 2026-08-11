@@ -19,6 +19,48 @@ format:
 
 ---
 
+## {#cellas-example-title data-menu-title="Summation Notation" background-color="#003660"}
+
+<div class="page-center">
+[A rates of change example]{.custom-subtitle}
+
+[*Cella Schanabel, Bren PhD Student*]{.custom-subtitle}
+</div>
+
+---
+
+## {#cellas-example data-menu-title="Cella's Example"}
+
+[Differences in green-up rates in NE Kenya]{.slide-title}
+
+<hr>
+
+:::: {.columns style="gap:0.5em"}
+
+::: {.column width="24%"}
+![](images/cows.png){fig-align="center" width="100%"}
+
+<div style="font-size:.95em; line-height:1.2">
+Greenness is a proxy for rangeland health. Bute is both greener than Hadado overall, and has a more rapid and more sustained green-up. A change in rate of change of greenness was the management signal we were hoping for.
+</div>
+:::
+
+::: {.column width="76%"}
+![](images/two-wards.png){fig-align="center" width="62%"}
+
+![](images/green-up.png){fig-align="center" width="82%" style="margin-top:-70px"}
+
+<div style="text-align:right; font-size:0.6em; margin-top:-60px; margin-right:-30px">
+[Find out more!](https://cega.berkeley.edu/collection/improving-management-of-collective-grazinglands-for-people-and-the-environment/)<br>
+cellaschnabel@ucsb.edu
+</div>
+:::
+
+::::
+
+
+---
+
 ## {#sigma-section-title data-menu-title="Summation Notation" background-color="#003660"}
 
 <div class="page-center">
