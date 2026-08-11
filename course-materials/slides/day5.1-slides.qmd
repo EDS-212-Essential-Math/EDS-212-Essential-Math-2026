@@ -17,6 +17,7 @@ format:
 
 <hr class="hr-teal">
 
+
 ---
 
 ## {#probability-title data-menu-title="Basic Probability" background-color="#003660"}
@@ -383,7 +384,7 @@ $P(A\cap B)=$ the probability of events A *and* B happening.
 
 <hr>
 
-| | [✏️ Your example]{style="color:green;"} | SB registered voters | Purple urchins (Channel Islands) |
+| | [✏️ Your example!]{style="color:green;"} | SB registered voters | Purple urchins (Channel Islands) |
 |---|---|---|---|
 | **Population** | | All registered voters in Santa Barbara County | All purple urchins in the Channel Islands Marine Sanctuary |
 | **Sample** | | 500 voters surveyed by phone | 50 urchins counted along 10 dive transects |
@@ -421,7 +422,9 @@ Then, we attempt **to draw conclusions about the populations** from which our sa
 
 <br>
 
-The statistic of the sample becomes an **estimate** for the true parameter in the population. 
+::: {.teal-text .center-text}
+**The statistic of the sample becomes an estimate for the true parameter in the population.**
+:::
 
 <br>
 
@@ -457,7 +460,31 @@ This process is called **statistical inference**.
 <hr>
 
 :::{.body-text-m} 
-Once we use the sample to compute an estimate of the population's true parameter: how can communicate how certain we are about that estimate?
+- **We want**: the population's true parameter
+- **We have**: an estimate calculated from a sample
+
+::: {.teal-text .center-text}
+How can communicate how certain we are about that estimate?
+:::
+
+:::
+
+---
+
+## {#conf-int-2 data-menu-title="Confidence interval"} 
+
+[Quantifying uncertainty]{.slide-title}
+
+<hr>
+
+:::{.body-text-m} 
+
+- **We want**: the population's true parameter
+- **We have**: an estimate calculated from a sample
+
+::: {.teal-text .center-text}
+How can communicate how certain we are about that estimate?
+:::
 
 <br>
 
@@ -467,8 +494,6 @@ One way of quantifying uncertainty around our statistics is using a...
 
 **Confidence interval:** an interval based on a sample that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.
 :::
-
-<br>
 
 ---
 
@@ -500,19 +525,20 @@ One way of quantifying uncertainty around our statistics is using a...
 <br>
 
 ::: {.body-text-m}
-What this **DOES NOT** mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet. 
-:::
-
-<!-- The true population mean is a *fixed value* and does not change -- the CI either contains this true mean or it does not. There is no probability involved. -->
-
-<br>
-
-::: {.body-text-m}
 What this **DOES** mean: If we took a bunch of sets of samples from the population (all n = 15), then 95% of the time, the calculated mean would fall within this range.
 <!-- What this **DOES** mean: 95% of calculated confidence intervals for samples drawn from this population will contain the true population parameter. This CI could be one of the 95%. It could also be one of the 5% that does *not* contain the true population parameter! -->
 :::
 
 This statement correctly describes the frequency with which we would expect CIs to capture the mean over many samples.
+
+<br>
+
+::: {.body-text-m}
+What this **DOES NOT** mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet. 
+:::
+
+<!-- The true population mean is a *fixed value* and does not change -- the CI either contains this true mean or it does not. There is no probability involved. -->
+
 
 ---
 
@@ -694,6 +720,17 @@ On day 1, you answered: *"What best describes your relationship with math?"*
 3. What is the probability that a randomly selected student has a positive relationship with math (i.e. "respectful coworker" or more positive)?
 4. What is the probability that a randomly selected doesn't have a neutral relationship (forgettable acquaintance) with math?
 :::
+
+
+---
+
+## {#pmf-interpret-solution data-menu-title="Exercise: your 212 survey"}
+
+[Exercise solution]{.slide-title}
+
+<hr>
+
+✏️
 
 ---
 
@@ -1009,16 +1046,6 @@ knitr::include_graphics("images/meds-typing-speed-2026.png")
 
 **2.** A minority. Both the median (62) and the peak of the curve sit well below 80, so the region to the right of 80 covers noticeably less than half the total area. 
 :::
-
----
-
-## {#normal-dist-blank data-menu-title="The normal distribution"}
-
-[The normal distribution]{.slide-title}
-
-<hr>
-
-✏️
 
 ---
 
@@ -1421,7 +1448,7 @@ Cella Schnabel
 
 ::: {.column style="width:25%; font-size:0.55em;"}
 
-- <span style="color:#333300"><b>📝 Practice all day 1 and 2 topics</b></span>
+- <span style="color:#333300"><b>📝 Practice all calculus topics</b></span>
 - <span style="color:#330033"><b>🌊 A bit of ODEs</b></span>
 - <span style="color:#003300"><b>➕ Summation notation</b></span>
 - <span style="color:#996600"><b>🔹 Vector sum and product</b></span>

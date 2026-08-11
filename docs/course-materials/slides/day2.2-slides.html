@@ -134,7 +134,6 @@
 <p><span class="custom-title">EDS 212: Day 2, Lecture 2</span></p>
 <p><span class="custom-subtitle"><em>Integration and differential equations</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 4<sup>th</sup>, 2025</span></p>
 </section>
 <section id="integrate-concept" class="slide level2" data-menu-title="Integration" data-background-color="#003660">
 <h2></h2>
@@ -149,14 +148,14 @@ Integration Conceputally
 <p><span class="slide-title">How do we find the area under this curve?</span></p>
 <hr>
 
-<img data-src="images/area.png" class="r-stretch"></section>
+<img data-src="images/area.png" width="298" class="r-stretch"></section>
 <section id="rect-approx" class="slide level2" data-menu-title="Area under the curve">
 <h2></h2>
 <p><span class="slide-title">How do we find the area under this curve?</span></p>
 <hr>
 <p>Areas of rectangles are easy to find (base times height!). We can approximate the area by adding the area of rectangles under the curve.</p>
 
-<img data-src="images/reimann.png" class="r-stretch"></section>
+<img data-src="images/reimann.png" width="300" class="r-stretch"></section>
 <section id="riemann-sum" class="slide level2" data-menu-title="Riemann Sum">
 <h2></h2>
 <p><span class="slide-title">Example</span></p>
@@ -278,7 +277,7 @@ R(f(x), \Delta x)= \underbrace{f(x_1)\Delta x+f(x_2)\Delta x+...f(x_k)\Delta x}_
 <li><p>Luckily, integrals and derivatives are related in a very useful way:</p></li>
 </ul>
 </section>
-<section id="integral-calc-3" class="slide level2" data-menu-title="Integrals">
+<section id="integral-calc-2" class="slide level2" data-menu-title="Integrals">
 <h2></h2>
 <p><span class="slide-title">How do we calculate integrals?</span></p>
 <hr>
@@ -408,8 +407,12 @@ Rules of Integration
 <h2></h2>
 <p><span class="slide-title">Notation</span></p>
 <hr>
+<p><br></p>
+<div class="body-text-l">
 <p>When you take an integral, the function in it can be in terms of any variable. This is just notation and it does not affect the result of the integration:</p>
+<p><br></p>
 <p><span class="math display">\[\int f(x) dx = \int f(t) dt = \int f(u) du.\]</span></p>
+</div>
 </section>
 <section id="sum-diff-blank" class="slide level2" data-menu-title="Rules of Integration">
 <h2></h2>
@@ -468,6 +471,12 @@ Rules of Integration
 <h2></h2>
 <p><span class="slide-title">Integration rules (3)</span></p>
 <hr>
+<p><br></p>
+<div class="center-text body-text-m" style="color:green;">
+<p><span class="math inline">\(\int x^n dx\)</span> is a function whose derivative is <span class="math inline">\(x^n\)</span>.</p>
+<p>What could <span class="math inline">\(\int x^n dx\)</span> be?</p>
+</div>
+<p><br></p>
 <div class="center-text body-text-l">
 <p><strong>Power Rule</strong></p>
 </div>
@@ -602,6 +611,8 @@ Definite integrals
 <h2></h2>
 <p><span class="slide-title">Indefinite vs.&nbsp;definite integrals</span></p>
 <hr>
+<div class="columns">
+<div class="column" style="width:55%;">
 <ul>
 <li>We have been working with <strong>indefinite integrals</strong>.</li>
 </ul>
@@ -613,7 +624,7 @@ Definite integrals
 <li><strong>Definite integrals</strong> have start and end values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</li>
 </ul>
 <p><span class="math display">\[\int_a^b f(x) dx.\]</span></p>
-<!-- - If $F(x) = \int f(x)dx$ then 
+<!-- - If $F(x) = \int f(x)dx$ then
 
 $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
 <p>To find the area under the curve along an interval <span class="math inline">\([a,b]\)</span>, evaluate the antiderivative at the endpoints and subtract them.</p>
@@ -624,6 +635,17 @@ $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
             &amp;= \frac{1}{2}(b)^2-\frac{1}{2}(a)^2
 \end{align}
 \]</span></p>
+</div><div class="column" style="width:45%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
 <!----------------------------------------------------->
 </section>
 <section id="def-solve-blank" class="slide level2" data-menu-title="Definite Integral">
@@ -722,14 +744,22 @@ Exercises
 <h2></h2>
 <p><span class="slide-title">Exercises 1</span></p>
 <hr>
-<ol type="1">
-<li>Find the integrals of <span class="math inline">\(y\)</span> and <span class="math inline">\(g\)</span> and solve the integral in C.</li>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ol type="A">
+<li>Find <span class="math inline">\(y\)</span> given that:</li>
 </ol>
-<p><span class="math display">\[
-\begin{align}
-\text{A) }y'=\frac{3}{x^2}, y(3)=2&amp;  &amp;\text{B)  }g(t)=3t^5-2t^3+16t-7  &amp;  &amp;\text{C) } \int^4_2\frac{1}{2}x
-\end{align}
-\]</span></p>
+<p><span class="math display">\[y'=\frac{3}{x^2}, y(3)=2\]</span></p>
+</div><div class="column" style="width:40%;">
+<ol start="2" type="A">
+<li>Find the integral of <span class="math inline">\(g\)</span>, where</li>
+</ol>
+<p><span class="math display">\[g(t)=3t^5-2t^3+16t-7\]</span></p>
+</div><div class="column" style="width:30%;">
+<ol start="3" type="A">
+<li>Integrate <span class="math display">\[\int^4_2\frac{1}{2}x\]</span></li>
+</ol>
+</div></div>
 </section>
 <section id="ta2-A-solution" class="slide level2 smaller" data-menu-title="Team Assessment 2 Questions">
 <h2></h2>
@@ -802,7 +832,7 @@ Exercises
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -860,7 +890,7 @@ Exercises
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+<p><img data-src="day2.2-slides_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
 </figure>
 </div>
 </div>
