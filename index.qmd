@@ -19,6 +19,10 @@ knitr::include_graphics("images/horst-brainstorm-montage.png")
 *Artwork by [Allison Horst](https://allisonhorst.com/){target="_blank"}*
 :::
 
+## About
+
+Welcome to the course materials for EDS 212 - Essential Math in Environmental Data Science! In this repository you will find all the materials for the Summer 2026 term. This course is part of the UCSB [Masters in Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds-program) at the [Bren School of Environmental Science and Management](https://bren.ucsb.edu).
+
 ## Course Description
 
 Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in basic math (algebra, uni- and multivariate functions, units and unit conversions), differential and integral calculus, differential equations, linear algebra, statistics and probability, and reading, writing and evaluating logical operations.
@@ -81,4 +85,4 @@ knitr::include_graphics("images/cella.png")
 
 ## Acknowledgements
 
-EDS 212 was originally developed and taught by [Allison Horst](https://allisonhorst.github.io/){target="_blank"}. It has since been taught and adapted by [Ruth Oliver](https://www.oliverlab.org){target="_blank"}, [Sam Shanny-Csik](https://samanthacsik.github.io){target="_blank"} and, most recently, myself, [Carmen Galaz García](https://bren.ucsb.edu/people/carmen-galaz-garcia){target="_blank"}, with contributions from [Alessandra Vidal Meza](https://bren.ucsb.edu/people/alessandra-vidal-meza-0), [Cella Schnabel](https://bren.ucsb.edu/people/cella-schnabel){target="_blank"}, and [Nathan Grimes](https://bren.ucsb.edu/people/nathan-grimes){target="_blank"}. This new website houses materials which are reused, adapted, and expanded from, and inspired by the previous instructors' work.
+EDS 212 was originally developed and taught by [Allison Horst](https://allisonhorst.github.io/){target="_blank"}. It has since been taught and adapted by [Ruth Oliver](https://www.oliverlab.org){target="_blank"}, [Sam Shanny-Csik](https://samanthacsik.github.io){target="_blank"} and, most recently, myself, [Carmen Galaz García](https://bren.ucsb.edu/people/carmen-galaz-garcia){target="_blank"}, with contributions from [Alessandra Vidal Meza](https://bren.ucsb.edu/people/alessandra-vidal-meza-0){target="_blank"}, [Cella Schnabel](https://bren.ucsb.edu/people/cella-schnabel){target="_blank"}, and [Nathan Grimes](https://bren.ucsb.edu/people/nathan-grimes){target="_blank"}. This new website houses materials which are reused, adapted, and expanded from, and inspired by the previous instructors' work.
