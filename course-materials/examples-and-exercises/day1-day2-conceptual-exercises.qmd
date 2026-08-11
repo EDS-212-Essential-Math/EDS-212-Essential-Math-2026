@@ -15,8 +15,7 @@ Environmental scientists model evapotranspiration (the combined loss of water fr
 
 (a) In this scenario, which variable is the output (dependent variable), and which are the inputs (independent variables)?
 (b) Write a sentence of the form "[output] is a function of [input(s)]" using the variable names.
-(c) Choose short notation (a letter or symbol) and units for each variable. Using your notation, write the function notation set-up for this relationship (you do not need an explicit formula).
-(d) Suppose a simplified model turns out to be:
+(c) Suppose a simplified model turns out to be:
 $$
 ET(R,T,W) = 0.02R + 0.15T - 0.05W
 $$
