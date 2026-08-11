@@ -29,3 +29,5 @@ knitr::include_graphics("images/derivative_9.jpg")
 ## Additional Resources
 - **[Derivatives... What?](https://www.youtube.com/watch?v=-ktrtzYVk_I), by [NancyPi](https://www.youtube.com/@NancyPi):** YouTube video on the definition of the derivative
 - **[Derivatives... How?](https://www.youtube.com/watch?v=QqF3i1pnyzU&t=0s), by [NancyPi](https://www.youtube.com/@NancyPi):** YouTube video showing how to find derivatives using rules
+- **[Euler's method](https://www.khanacademy.org/math/ap-calculus-bc/bc-differential-equations-new/bc-7-5/v/eulers-method), by Khan Academy** -- a video example of numerical approximation of a differential equation solution using Euler's method
+- **[Euler's Method Differential Equations, Examples, Numerical Methods, Calculus](https://www.youtube.com/watch?v=ukNbG7muKho), by The Organic Chemistry Tutor** -- a YouTube video on using Euler's Method to find the solution to a differential equation

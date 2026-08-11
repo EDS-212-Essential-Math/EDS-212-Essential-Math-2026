@@ -17,7 +17,7 @@ format:
 
 <hr class="hr-teal">
 
-[August 5^th^, 2025]{.custom-subtitle3}
+[August 5^th^, 2026]{.custom-subtitle3}
 
 ---
 
@@ -914,14 +914,16 @@ knitr::include_graphics("images/diagonal_matrix_scaling.png")
 
 ## {#where-in-EDS-1 data-menu-title="Multiply by diagonal matrix"} 
 
-[Where do matrices come up in EDS? ]{.slide-title}
+[Where does this come up in EDS? ]{.slide-title}
 
 <hr>
 
 
-[Rasters (matrix like)]{.center-text}
+[Rasters (2D arrays, addition and scalar multiplication are the same as matrices)]{.center-text}
 
 ![Source: [Neon](https://www.neonscience.org)](images/neon-raster.png)
+
+⚠️ You can multiply two rasters coordinate by coordinate, but matrices don't admit this operation! 
 
 
 ---
@@ -933,7 +935,7 @@ knitr::include_graphics("images/diagonal_matrix_scaling.png")
 <hr>
 
 ::: {.body-text-m}
-A raster is just a matrix where each cell holds a value for a location on a grid. Land managers often combine several raster layers into a single index by **scaling** each layer (multiplying by a weight) and **summing** the results.
+A raster is just a 2D array where each cell holds a value for a location on a grid. Land managers often combine several raster layers into a single index by **scaling** each layer (multiplying by a weight) and **summing** the results.
 :::
 
 ✏️ [Calculate the fire risk index for each cell:]{style="color:green;"}
@@ -969,6 +971,20 @@ ggplot(df, aes(x = col, y = -row, fill = value)) +
   theme_void() +
   theme(strip.text = element_text(size = 20))
 ```
+
+---
+
+## {#raster-index-solution-blank data-menu-title="Exercise: raster math"}
+
+[Exercise: combining rasters]{.slide-title}
+
+<hr>
+
+✏️ [Calculate the fire risk index for each cell:]{style="color:green;"}
+
+[$$\text{Fire risk} = 0.6 \times \text{Temperature stress} + 0.4 \times \text{Fuel dryness}$$]{style="color:green;"}
+
+![](images/temp-fuel-rasters.png){width=45% .nostretch}
 
 ---
 
