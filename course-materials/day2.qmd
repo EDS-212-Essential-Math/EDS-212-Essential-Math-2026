@@ -1,7 +1,6 @@
 ---
 title: "Derivatives"
 subtitle: "Day 2"
-description: "Tuesday August 4^th^, 2026"
 ---
 
 ```{r}

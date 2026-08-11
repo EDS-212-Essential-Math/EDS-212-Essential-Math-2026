@@ -1,7 +1,6 @@
 ---
 title: "Distributions and summary statistics"
 subtitle: "Day 4"
-description: "Thursday August 6^th^, 2025"
 ---
 
 ```{r}

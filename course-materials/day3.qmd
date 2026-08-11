@@ -1,7 +1,6 @@
 ---
 title: "Integrals, differential equations, intro to linear algebra"
 subtitle: "Day 3"
-description: "Wednesday August 5^th^, 2025"
 ---
 
 ```{r}
