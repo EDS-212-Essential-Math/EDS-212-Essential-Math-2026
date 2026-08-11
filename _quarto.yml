@@ -28,11 +28,11 @@ website:
           - text: day 5 (8/7)
             href: course-materials/day5.qmd
       - icon: github
-        href: https://github.com/EDS-212-Essential-Math
+        href: https://github.com/EDS-212-Essential-Math/EDS-212-Essential-Math-2026
         target: _blank
   page-footer:
     background: dark
-    right: This website is built with [{{< fa brands github title="the github octocat logo" >}}](https://github.com/samanthacsik/EDS-212-essential-math), [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html) and [Quarto](https://quarto.org/)
+    right: This website is built with [{{< fa brands github title="the github octocat logo" >}}](https://github.com/EDS-212-Essential-Math/EDS-212-Essential-Math-2026), [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html) and [Quarto](https://quarto.org/)
     left: |
       <img src="images/bren-logo.png" alt="The Bren School of Environmental Science & Management logo" width="250"/>
 

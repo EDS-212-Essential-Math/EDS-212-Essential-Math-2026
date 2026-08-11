@@ -1,7 +1,6 @@
 ---
 title: "Derivatives"
 subtitle: "Day 2"
-description: "Tuesday August 4^th^, 2026"
 ---
 
 ```{r}
@@ -21,11 +20,13 @@ knitr::include_graphics("images/derivative_9.jpg")
 
 | {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides (blank) | {{< fa pen-to-square title="A pencil over a blank piece of paper" >}}  After class slides| {{< fa pencil title="A pencil" >}} Extra Examples|
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----|-----|
-| day 2 / morning   | [Limits and derivatives](slides/day2.1-slides.qmd){target="_blank"} |  [Slides](slides/after-class-slides/day2.1-slides-class-2026.pdf){target="_blank"} | [Examples](examples/day2-morning-extra-examples.qmd){target="_blank"} |
-| day 2 / afternoon | [Integrals](slides/day2.2-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day2.2-slides-class-2026.pdf){target="_blank"} | [Examples](examples/day2-afternoon-extra-examples.qmd){target="_blank"} |
+| day 2 / morning   | [Limits and derivatives](slides/day2.1-slides.qmd){target="_blank"} |  [Slides](slides/after-class-slides/day2.1-slides-class-2026.pdf){target="_blank"} | [Examples](examples-and-exercises/day2-morning-extra-examples.qmd){target="_blank"} |
+| day 2 / afternoon | [Integrals](slides/day2.2-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day2.2-slides-class-2026.pdf){target="_blank"} | [Examples](examples-and-exercises/day2-afternoon-extra-examples.qmd){target="_blank"} |
 : {.hover .bordered tbl-colwidths="[15,35,30,20]"}
 
 
 ## Additional Resources
 - **[Derivatives... What?](https://www.youtube.com/watch?v=-ktrtzYVk_I), by [NancyPi](https://www.youtube.com/@NancyPi):** YouTube video on the definition of the derivative
 - **[Derivatives... How?](https://www.youtube.com/watch?v=QqF3i1pnyzU&t=0s), by [NancyPi](https://www.youtube.com/@NancyPi):** YouTube video showing how to find derivatives using rules
+- **[Euler's method](https://www.khanacademy.org/math/ap-calculus-bc/bc-differential-equations-new/bc-7-5/v/eulers-method), by Khan Academy** -- a video example of numerical approximation of a differential equation solution using Euler's method
+- **[Euler's Method Differential Equations, Examples, Numerical Methods, Calculus](https://www.youtube.com/watch?v=ukNbG7muKho), by The Organic Chemistry Tutor** -- a YouTube video on using Euler's Method to find the solution to a differential equation

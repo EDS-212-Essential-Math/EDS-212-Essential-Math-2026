@@ -1,7 +1,6 @@
 ---
 title: "Basic probability theory and Boolean algebra"
 subtitle: "Day 5"
-description: "Friday August 8^th^, 2025"
 ---
 
 ```{r}
@@ -21,7 +20,7 @@ knitr::include_graphics("images/horst-samples.jpg")
 
 | {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | {{< fa pen-to-square title="A pencil over a blank piece of paper" >}}  After class slides| {{< fa pencil title="A pencil" >}} Extra Examples|
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----|
-| day 5 / morning   | [Probability and stats review](slides/day4.2-slides.qmd){target="_blank"} |  | [Examples](examples/day5-morning-extra-examples.qmd){target="_blank"} |
+| day 5 / morning   | [Probability and stats review](slides/day5.1-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day5.1-slides-class-2026.pdf){target="_blank"}  | [Examples](examples-and-exercises/day5-morning-extra-examples.qmd){target="_blank"} |
 | day 5 / afternoon | *No session.* |  |  |
 : {.hover .bordered tbl-colwidths="[20,30,30,20]"}
 
@@ -30,4 +29,4 @@ knitr::include_graphics("images/horst-samples.jpg")
 
 - **["At least one" probability with coin flipping](https://www.khanacademy.org/math/ap-statistics/probability-ap/probability-multiplication-rule/v/getting-at-least-one-heads), by Khan Academy** -- a video explanation of the probability of getting at least one heads in multiple flips of a fair coin
  - **[Intro to Conditional Probability](https://www.youtube.com/watch?v=ibINrxJLvlM), by Dr. Trefor Bazett** -- a short video explanation of conditional probabilities 
-- **[Probability Density Functions](https://www.youtube.com/watch?v=Fvi9A_tEmXQ), by Khan Academy** -- a video explanation using a rainfall amount example
+- **[Probability density and mass functions](https://www.youtube.com/watch?v=hDjcxi9p0ak), by Intelligent Systems Lab** -- has great animations explaining both concepts. 

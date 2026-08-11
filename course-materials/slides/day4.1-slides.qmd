@@ -17,8 +17,6 @@ format:
 
 <hr class="hr-teal">
 
-[August 6^th^, 2025]{.custom-subtitle3}
-
 ---
 
 ## {#data-types-title data-menu-title="Summation Notation" background-color="#003660"}
@@ -274,7 +272,8 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 ::: {.body-text-m}
 - Shape / patterns / clusters (data vizualization)
 - Central tendency (mean / median)
-- Spread & uncertainty (standard deviation / standard error / confidence interval)
+- Spread (standard deviation)
+- Uncertainty (SO IMPORTANT, but later)
 :::
 
 ---
@@ -490,6 +489,16 @@ ggplot(data.frame(waves), aes(x = waves)) +
 
 ---
 
+## {#quartiles-blank data-menu-title="Quartiles"}
+
+[Quartiles]{.slide-title}
+
+<hr>
+
+✏️
+
+---
+
 ## {#quartiles data-menu-title="Quartiles"}
 
 [Quartiles]{.slide-title}
@@ -510,6 +519,7 @@ ggplot(data.frame(waves), aes(x = waves)) +
 1. Order the data and find the median ($Q_2$): this splits the data into a lower half and an upper half. If there's an even number of elements, take the average between the two "middle ones".
 2. $Q_1$ = median of the lower half
 3. $Q_3$ = median of the upper half
+
 
 ---
 
@@ -558,22 +568,20 @@ Ordered: 2, 4, 6, 8, 10, 12, 14, 16, 40
 
 ---
 
-## {#boxplot1 data-menu-title="Boxplot 1"}
+## {#boxplot1 data-menu-title="Boxplot 1" .smaller}
 
 [Boxplot]{.slide-title}
 
 <hr>
 
-<br>
-
 ::: {.body-text-m}
 **How it's drawn:**
 
 1. Draw a box from $Q_1$ to $Q_3$: this box spans the **interquartile range**:
-$$IQR = Q_3 - Q_1$$
-2. Draw a line inside the box at the median ($Q_2$)
-3. Draw whiskers extending to the furthest observation within $1.5 \times IQR$ of the box
-4. Plot any observation beyond the whiskers individually, as a dot (an **outlier**)
+$$IQR = Q_3 - Q_1.$$
+2. Draw a line inside the box at the median ($Q_2$).
+3. Draw whiskers extending to the furthest observation within $1.5 \times IQR$ of the box.
+4. Plot any observation beyond the whiskers individually, as a dot (an **outlier**).
 :::
 
 ---
@@ -607,6 +615,16 @@ $$IQR = Q_3 - Q_1$$
 2. Draw a line inside the box at the median ($Q_2$)
 3. Draw whiskers extending to the furthest observation within $1.5 \times IQR$ of the box
 4. Plot any observation beyond the whiskers individually, as a dot (an **outlier**)
+
+✏️ [Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 ($Q_1=5$, $Q_2=10$, $Q_3=15$), draw the box plot by hand.]{style="color:green;"}
+
+---
+
+## {#boxplot-draw-work data-menu-title="Exercise: draw a box plot"}
+
+[Exercise: draw a box plot]{.slide-title}
+
+<hr>
 
 ✏️ [Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 ($Q_1=5$, $Q_2=10$, $Q_3=15$), draw the box plot by hand.]{style="color:green;"}
 
@@ -745,7 +763,7 @@ ggplot(nitrate, aes(x = nitrate_mgL, y = farm)) +
 - Central tendency
 - Variance and standard deviation
 - Standard error
-- Confidence interval
+- Confidence interval (VERY IMPORTANT: tomorrow)
 :::
 
 ---
@@ -779,7 +797,11 @@ ggplot(nitrate, aes(x = nitrate_mgL, y = farm)) +
 
 <hr>
 
-[Average value of sample observations, calculated by summing all observation values and dividing by the number of observations. E.g. $mean\;of\;3, 7, 17 = \frac{3+7+17}{3} = 9$]{.body-text-m}
+::: {.body-text-m}
+Average value of sample observations, calculated by summing all observation values and dividing by the number of observations. 
+
+E.g. $mean\;of\;3, 7, 17 = \frac{3+7+17}{3} = 9.$
+:::
 
 <br>
 
@@ -799,6 +821,35 @@ ggplot(nitrate, aes(x = nitrate_mgL, y = farm)) +
  
 ::: {.notes}
 SB housing market typically reports median cost rather than mean cost? Why do you think that is?
+:::
+
+---
+
+## {#mode data-menu-title="Mode"}
+
+[Mode]{.slide-title}
+
+<hr>
+
+::: {.body-text-m}
+The most frequently occurring value(s) in a dataset. 
+
+E.g. $mode\;of\;3, 7, 7, 17 = 7.$
+:::
+
+[**Pros:**]{.body-text-l}
+
+::: {.body-text-m}
+- Works for categorical (non-numeric) data
+- Not affected by outliers
+:::
+
+[**Cons:**]{.body-text-l}
+
+::: {.body-text-m}
+- May not be unique, or may not exist at all
+- Not based on all the values
+- Not capable of further mathematical treatment
 :::
 
 ---
@@ -859,6 +910,10 @@ $$ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}$$
 :::
 ::::
 
+<br>
+
+These are the formulas for *sample* variance and standard deviation.
+
 ::: {.notes}
 
 Variances add (standard deviation doesn't). For example, if we say that sex explains four square inches of variance, you know that 5 square inches are due to other factors.
@@ -891,7 +946,7 @@ The variance measures the mathematical dispersion of data relative to the mean, 
 <br>
 
 :::{.body-text-m}
-$$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}$$
+$$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}.$$
 :::
 
 <br> 
@@ -915,11 +970,13 @@ $$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}$$
 
 ---
 
-## {#calc-variance1 data-menu-title="Calculate variance 1"} 
+## {#calc-variance1 data-menu-title="Calculate variance 1"}
 
-[Calculate variance by hand (1/2)]{.slide-title}
+[Calculate variance by hand]{.slide-title}
 
 <hr>
+
+<div style="font-size: 0.85em;">
 
 [Given these data: $2, 4, 4, 6, 9$]{.body-text-m}
 
@@ -928,22 +985,7 @@ $$ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}$$
 $$ mean = \frac{2+4+4+6+9}{5}=\frac{25}{5}=5$$
 2. Subtract the mean from each data point and square the result:
 
-$$(2-5)^2 = (-3)^2 = 9$$
-$$(4-5)^2 = (-1)^2 = 1$$
-$$(4-5)^2 = (-1)^2 = 1$$
-
-$$(6-5)^2 = (1)^2 = 1$$
-$$(9-5)^2 = (4)^2 = 16$$
-
----
-
-## {#calc-variance2 data-menu-title="Calculate variance 2"} 
-
-[Calculate variance by hand (2/2)]{.slide-title}
-
-<hr>
-
-[Given these data: $2, 4, 4, 6, 9$]{.body-text-m}
+$$(2-5)^2 = 9, \quad (4-5)^2 = 1, \quad (4-5)^2 = 1, \quad (6-5)^2 = 1, \quad (9-5)^2 = 16$$
 
 3. Sum the squared differences:
 
@@ -951,11 +993,13 @@ $$9+1+1+1+16 = 28$$
 
 4. Divide by the number of data points minus 1 ($n$ - 1)
 
-$$Variance = \frac{28}{5-1} = 7$$
+$$Variance = \frac{28}{5-1} = 7 \text{ units}^2$$
+
+</div>
 
 ---
 
-## {#stdev data-menu-title="Standard deviation"} 
+## {#stdev data-menu-title="Standard deviation"}
 
 [Standard deviation]{.slide-title}
 
@@ -971,7 +1015,10 @@ $$ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}$$
 
 <br>
 
-Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret -- for example it's more intuitive to report that a group of people's heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches. 
+<br>
+
+
+Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret -- for example it's more intuitive to report that a group of people's heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches.
 
 ---
 
@@ -1039,124 +1086,34 @@ Source: [Autodesk](https://www.research.autodesk.com/publications/same-stats-dif
 
 ## {#gorilla data-menu-title="Gorilla"} 
 
-<br>
+[Is there something hidden in your data?]{.slide-title}
 
-```{r}
-#| eval: true
-#| echo: false
-#| out-width: "100%"
-#| fig-align: "center"
-knitr::include_graphics("images/gorilla.png")
-```
+<hr>
 
-<br>
+:::: {.columns}
 
-::: {.footer}
-From: Yanai, I., Lercher, M. A hypothesis is a liability. Genome Biol 21, 231 (2020). <https://doi.org/10.1186/s13059-020-02133-w>
-:::
-
-::: {.notes}
-Gave students a made-up dataset containing the BMI of 1786 people and the number of steps each took on a particular day. 
+::: {.column width="50%"}
+Study gave students a made-up dataset containing the BMI of 1786 people and the number of steps each took on a particular day. 
 
 Students in Group 1 were asked to consider three specific hypotheses + also if there was anything else they could conclude from the dataset. 
 
 Group 2 was simply asked, "What do you conclude from the dataset?"
 
 If you plotted the number of steps vs. BMI, you'd find the gorilla. Students driven by hypotheses skipped this step more often than those that were not hypothesis-driven.
+
 :::
 
----
 
-## {#confidence-intervals-title data-menu-title="Summation Notation" background-color="#003660"}
-
-<div class="page-center">
-<div class="custom-subtitle">Confidence intervals</div>
-</div>
-
-<!-- TODO: population, sample, statistic, all that needs to be included before talking about confidence interval -->
----
-
-## {#conf-int-1 data-menu-title="Confidence interval"} 
-
-[Confidence interval]{.slide-title}
-
-<hr>
-
-<br>
-
-[**Confidence interval:** a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.]{.body-text-m} 
-
-<br>
-
----
-
-## {#conf-int-2 data-menu-title="Confidence interval"} 
-
-[Confidence interval]{.slide-title}
-
-<hr>
-
-<br>
-
-[**Confidence interval:** a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.]{.body-text-m} 
-
-<br>
-
-
-::: {.body-text-m}
-**What it's NOT:** 
-
-"There is a 95% chance that the true population parameter is inside the confidence interval." 
+::: {.column width="50%"}
+![From: [Yanai, I., Lercher, M. A hypothesis is a liability. Genome Biol 21, 231 (2020).](https://doi.org/10.1186/s13059-020-02133-w)](images/gorilla.png)
 :::
 
----
-
-## {#conf-int-ex-1 data-menu-title="Confidence interval example"} 
-
-[Confidence interval example]{.slide-title}
-
-<hr>
-
-::: {.center-text}
-*Mean shark length is 8.42 $\pm$ 3.55 ft (mean $\pm$ standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).* 
 :::
 
-<br>
 
-::: {.body-text-m}
-What this **DOES NOT** mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet. 
-:::
 
-The true population mean is a *fixed value* and does not change -- the CI either contains this true mean or it does not. There is no probability involved.
 
----
 
-## {#conf-int-ex-2 data-menu-title="Confidence interval example"} 
-
-[Confidence interval example]{.slide-title}
-
-<hr>
-
-::: {.center-text}
-*Mean shark length is 8.42 $\pm$ 3.55 ft (mean $\pm$ standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).* 
-:::
-
-<br>
-
-::: {.body-text-m}
-What this **DOES NOT** mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet. 
-:::
-
-The true population mean is a *fixed value* and does not change -- the CI either contains this true mean or it does not. There is no probability involved.
-
-<br>
-
-::: {.body-text-m}
-What this **DOES** mean: If we took a bunch of sets of samples from the population (all n = 15), then 95% of the time, the calculated mean would fall within this range.
-<!-- What this **DOES** mean: 95% of calculated confidence intervals for samples drawn from this population will contain the true population parameter. This CI could be one of the 95%. It could also be one of the 5% that does *not* contain the true population parameter! -->
-:::
-
-This statement correctly describes the frequency with which we would expect CIs to capture the mean over many samples.
 
 ---
 
@@ -1214,13 +1171,13 @@ Artwork by [Allison Horst](https://allisonhorst.com/)
 - <span style="color:#CC3366"><b>🧩 Data types</b></span>
 - <span style="color:#006699"><b>📊 Data visualization (histograms, box plots, scatterplots)</b></span>
 - <span style="color:#D6001C"><b>📐 Quartiles & the interquartile range</b></span>
-- <span style="color:#003366"><b>📈 Central tendency (mean & median)</b></span>
+- <span style="color:#003366"><b>📈 Central tendency (mean, median, mode)</b></span>
 :::
 
 ::: {.column width="50%"}
 - <span style="color:#FF6600"><b>📏 Variance & standard deviation</b></span>
-- <span style="color:#336666"><b>🦖 Why visualizing data matters</b></span>
 - <span style="color:#003399"><b>🎯 Confidence intervals</b></span>
+- <span style="color:#336666"><b>🦖 Why visualizing data matters</b></span>
 - <span style="color:#660099"><b>💬 Communicating data summaries responsibly</b></span>
 :::
 

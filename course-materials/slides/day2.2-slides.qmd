@@ -18,8 +18,6 @@ format:
 
 <hr class="hr-teal">
 
-[August 4^th^, 2025]{.custom-subtitle3}
-
 ---
 
 ## {#integrate-concept data-menu-title="Integration" background-color="#003660"}
@@ -234,37 +232,6 @@ $$
 
 <br>
 
----
-
-## {#integral-calc-3 data-menu-title="Integrals"}
-
-[How do we calculate integrals?]{.slide-title}
-
-<hr>
-
-- Taking infinite sums is impossible by hand
-
-- Luckily, integrals and derivatives are related in a very useful way:
-
-<br>
-
-If we integrate a derivative, we should get the same function back as the original vice-versa:
-
-$$
-\begin{align}
-\frac{d}{dx}\left[\int f(x)dx\right]&=f(x) &\text{Differentiation is the inverse of integration}
-\end{align}
-$$
-
-$$
-\begin{align}
-\int f'(x)&=f(x)+C &\text{Integration is the inverse of differentiation}
-\end{align}
-$$
-
-
-<br>
-
 <div class="page-center">
 <span style="color:red">
 *To find the integral of $\int f(t) dt$ we need to find a function $F(x)$ whose derivative is $f(x)$.*
@@ -395,9 +362,15 @@ knitr::include_graphics("images/c.png")
 
 <hr>
 
+<br>
+
+:::::: {.body-text-l}
 When you take an integral, the function in it can be in terms of any variable. This is just notation and it does not affect the result of the integration:
 
+<br>
+
 $$\int f(x) dx = \int f(t) dt = \int f(u) du.$$
+:::
 
 ---
 
@@ -477,6 +450,7 @@ $$
 
 :::{.center-text .body-text-l}
 **Power Rule**
+
 :::
 
 ✏️ 
@@ -488,6 +462,17 @@ $$
 [Integration rules (3)]{.slide-title}
 
 <hr>
+
+<br>
+
+:::{style="color:green;" .center-text .body-text-m}
+$\int x^n dx$ is a function whose derivative is $x^n$. 
+
+What could $\int x^n dx$ be?
+:::
+
+
+<br>
 
 :::{.center-text .body-text-l}
 **Power Rule**
@@ -527,13 +512,27 @@ C) $\int x^3-4x dx$
 
 ---
 
-## {#break data-menu-title="5 minute break"} 
+## {#example-solutions data-menu-title="Example solutions"}
 
-[Let's take a 5 minute break]{.slide-title}
+[Example solutions]{.slide-title}
 
 <hr>
 
-![image: Flaticon.com](images/coffee-break.png)
+:::: {.columns}
+
+::: {.column width="33%"}
+A) $\int 4 dx = 4x+C$
+:::
+
+::: {.column width="33%"}
+B) $\int 2x^2 dx = \frac{2}{3}x^3+C$
+:::
+
+::: {.column width="33%"}
+C) $\int x^3-4x dx = \frac{x^4}{4}-2x^2+C$
+:::
+
+::::
 
 ---
 
@@ -624,6 +623,16 @@ $$
 
 ---
 
+## {#break data-menu-title="5 minute break"}
+
+[Let's take a 5 minute break]{.slide-title}
+
+<hr>
+
+![image: Flaticon.com](images/coffee-break.png)
+
+---
+
 ## {#definite-integrals data-menu-title="Definite integrals" background-color="#003660"}
 
 <div class="page-center">
@@ -642,58 +651,16 @@ $$
 
 ---
 
-## {#definite-1 data-menu-title="Definite vs Indefinite"}
-
-[Indefinite vs. definite integrals]{.slide-title}
-
-<hr>
-
-- We have been working with **indefinite integrals** of the form
-
-$$
-\int f(x)dx
-$$
-
-This means there are no integration bounds and we need initial values to find integration constants.
-
----
-
-## {#definite-2 data-menu-title="Definite vs Indefinite"}
-
-[Indefinite vs. definite integrals]{.slide-title}
-
-<hr>
-- We have been working with **indefinite integrals** of the form
-
-$$
-\int f(x)dx
-$$
-
-This means there are no integration bounds and we need initial values to find integration constants.
-
-
-- **Definite integrals** have start and end values $a$ and $b$:
-
-$$\int_a^b f(x) dx.$$
-
-<!-- - If $F(x) = \int f(x)dx$ then 
-
-$$\int_a^b f(x) dx = F(b) - F(a).$$ -->
-
-To find the area under the curve along an interval $[a,b]$, evaluate the antiderivative at the endpoints and subtract them.
-
-✏️ [**Example**]{style="color:green;"}
-
-
-
-<!----------------------------------------------------->
-
 ## {#definte-1 data-menu-title="Definite vs Indefinite" .smaller}
 
-[Indefinite vs. dfinite integrals]{.slide-title}
+[Indefinite vs. definite integrals]{.slide-title}
 
 <hr>
-- We have been working with **indefinite integrals**. 
+
+:::: {.columns}
+
+::: {.column width="55%"}
+- We have been working with **indefinite integrals**.
 
 $$
 \int f(x)dx
@@ -705,7 +672,7 @@ This means there are no integration bounds and we need initial values to find in
 
 $$\int_a^b f(x) dx.$$
 
-<!-- - If $F(x) = \int f(x)dx$ then 
+<!-- - If $F(x) = \int f(x)dx$ then
 
 $$\int_a^b f(x) dx = F(b) - F(a).$$ -->
 
@@ -719,6 +686,42 @@ $$
             &= \frac{1}{2}(b)^2-\frac{1}{2}(a)^2
 \end{align}
 $$
+:::
+
+::: {.column width="45%"}
+```{r}
+#| echo: false
+#| warning: false
+#| out-width: "100%"
+#| fig-align: "center"
+library(tidyverse)
+a_val <- 1; b_val <- 3
+x <- seq(-1.5, 4, length.out = 400)
+df <- data.frame(x = x, y = x)
+shade <- df |> filter(x >= a_val, x <= b_val)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_ribbon(data = shade, aes(ymin = 0, ymax = y),
+              fill = "#FEBC11", alpha = 0.7) +
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.7) +
+  geom_vline(xintercept = 0, color = "black", linewidth = 0.7) +
+  geom_line(linewidth = 2.5, color = "#1a5c2e") +
+  geom_vline(xintercept = a_val, linetype = "dashed", color = "gray40") +
+  geom_vline(xintercept = b_val, linetype = "dashed", color = "gray40") +
+  annotate("text", x = a_val, y = -0.4, label = "a", size = 9, fontface = "italic") +
+  annotate("text", x = b_val, y = -0.4, label = "b", size = 9, fontface = "italic") +
+  scale_x_continuous(limits = c(-1.5, 4), breaks = NULL) +
+  scale_y_continuous(limits = c(-1.5, 4), breaks = NULL) +
+  labs(x = "x", y = "y") +
+  theme_minimal() +
+  theme(
+    axis.title = element_text(size = 22),
+    panel.grid = element_blank()
+  )
+```
+:::
+
+::::
 
 <!----------------------------------------------------->
 
@@ -857,13 +860,27 @@ $$
 
 <hr>
 
-1) Find the integrals of $y$ and $g$ and solve the integral in C. 
+:::: {.columns}
 
-$$
-\begin{align}
-\text{A) }y=\frac{3}{x^2}, y(3)=2&  &\text{B)  }g(t)=3t^5-2t^3+16t-7  &  &\text{C) } \int^4_2\frac{1}{2}x
-\end{align}
-$$
+::: {.column width="30%"}
+A) Find $y$ given that:
+
+$$y'=\frac{3}{x^2}, y(3)=2$$
+:::
+
+
+::: {.column width="40%"}
+B) Find the integral of $g$, where
+
+$$g(t)=3t^5-2t^3+16t-7$$
+:::
+
+::: {.column width="30%"}
+C) Integrate $$\int^4_2\frac{1}{2}x$$
+:::
+
+:::
+
 
 ---
 
@@ -1108,6 +1125,16 @@ What is the **total additional carbon sequestered** by the restored wetland over
 
 
 ✏️ 
+
+----
+
+## {#exercises-solution-3-work data-menu-title="Exercise 2 solution"}
+
+[Solution (3)]{.slide-title}
+
+<hr>
+
+✏️
 
 ----
 

@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>day4.1-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -137,7 +140,6 @@
 <p><span class="custom-title">EDS 212: Day 4, Lecture 1</span></p>
 <p><span class="custom-subtitle"><em>Essential summary statistics and exploration</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 6<sup>th</sup>, 2025</span></p>
 </section>
 <section id="data-types-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
 <h2></h2>
@@ -315,7 +317,8 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <ul>
 <li>Shape / patterns / clusters (data vizualization)</li>
 <li>Central tendency (mean / median)</li>
-<li>Spread &amp; uncertainty (standard deviation / standard error / confidence interval)</li>
+<li>Spread (standard deviation)</li>
+<li>Uncertainty (SO IMPORTANT, but later)</li>
 </ul>
 </div>
 </section>
@@ -490,6 +493,12 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 </div>
 </div></div>
 </section>
+<section id="quartiles-blank" class="slide level2" data-menu-title="Quartiles">
+<h2></h2>
+<p><span class="slide-title">Quartiles</span></p>
+<hr>
+<p>✏️</p>
+</section>
 <section id="quartiles" class="slide level2" data-menu-title="Quartiles">
 <h2></h2>
 <p><span class="slide-title">Quartiles</span></p>
@@ -552,18 +561,17 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <li>Upper half: 12, 14, 16, 40: again an even number of values: <span class="math inline">\(Q_3 = \frac{14+16}{2} = 15\)</span></li>
 </ul>
 </section>
-<section id="boxplot1" class="slide level2" data-menu-title="Boxplot 1">
+<section id="boxplot1" class="slide level2 smaller" data-menu-title="Boxplot 1">
 <h2></h2>
 <p><span class="slide-title">Boxplot</span></p>
 <hr>
-<p><br></p>
 <div class="body-text-m">
 <p><strong>How it’s drawn:</strong></p>
 <ol type="1">
-<li>Draw a box from <span class="math inline">\(Q_1\)</span> to <span class="math inline">\(Q_3\)</span>: this box spans the <strong>interquartile range</strong>: <span class="math display">\[IQR = Q_3 - Q_1\]</span></li>
-<li>Draw a line inside the box at the median (<span class="math inline">\(Q_2\)</span>)</li>
-<li>Draw whiskers extending to the furthest observation within <span class="math inline">\(1.5 \times IQR\)</span> of the box</li>
-<li>Plot any observation beyond the whiskers individually, as a dot (an <strong>outlier</strong>)</li>
+<li>Draw a box from <span class="math inline">\(Q_1\)</span> to <span class="math inline">\(Q_3\)</span>: this box spans the <strong>interquartile range</strong>: <span class="math display">\[IQR = Q_3 - Q_1.\]</span></li>
+<li>Draw a line inside the box at the median (<span class="math inline">\(Q_2\)</span>).</li>
+<li>Draw whiskers extending to the furthest observation within <span class="math inline">\(1.5 \times IQR\)</span> of the box.</li>
+<li>Plot any observation beyond the whiskers individually, as a dot (an <strong>outlier</strong>).</li>
 </ol>
 </div>
 </section>
@@ -584,6 +592,12 @@ Data distribution: it's shape, central tendencies, it's spread; we can use graph
 <li>Draw whiskers extending to the furthest observation within <span class="math inline">\(1.5 \times IQR\)</span> of the box</li>
 <li>Plot any observation beyond the whiskers individually, as a dot (an <strong>outlier</strong>)</li>
 </ol>
+<p>✏️ <span style="color:green;">Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 (<span class="math inline">\(Q_1=5\)</span>, <span class="math inline">\(Q_2=10\)</span>, <span class="math inline">\(Q_3=15\)</span>), draw the box plot by hand.</span></p>
+</section>
+<section id="boxplot-draw-work" class="slide level2" data-menu-title="Exercise: draw a box plot">
+<h2></h2>
+<p><span class="slide-title">Exercise: draw a box plot</span></p>
+<hr>
 <p>✏️ <span style="color:green;">Using the quartiles you just found for 2, 4, 6, 8, 10, 12, 14, 16, 40 (<span class="math inline">\(Q_1=5\)</span>, <span class="math inline">\(Q_2=10\)</span>, <span class="math inline">\(Q_3=15\)</span>), draw the box plot by hand.</span></p>
 </section>
 <section id="boxplot-draw" class="slide level2" data-menu-title="Exercise: draw a box plot">
@@ -666,7 +680,7 @@ Summarizing data numerically
 <li>Central tendency</li>
 <li>Variance and standard deviation</li>
 <li>Standard error</li>
-<li>Confidence interval</li>
+<li>Confidence interval (VERY IMPORTANT: tomorrow)</li>
 </ul>
 </div>
 </section>
@@ -692,7 +706,10 @@ Summarizing data numerically
 <h2></h2>
 <p><span class="slide-title">Mean</span></p>
 <hr>
-<p><span class="body-text-m">Average value of sample observations, calculated by summing all observation values and dividing by the number of observations. E.g. <span class="math inline">\(mean\;of\;3, 7, 17 = \frac{3+7+17}{3} = 9\)</span></span></p>
+<div class="body-text-m">
+<p>Average value of sample observations, calculated by summing all observation values and dividing by the number of observations.</p>
+<p>E.g. <span class="math inline">\(mean\;of\;3, 7, 17 = \frac{3+7+17}{3} = 9.\)</span></p>
+</div>
 <p><br></p>
 <p><span class="body-text-l"><strong>Pros:</strong></span></p>
 <div class="body-text-m">
@@ -721,6 +738,30 @@ Summarizing data numerically
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="mode" class="slide level2" data-menu-title="Mode">
+<h2></h2>
+<p><span class="slide-title">Mode</span></p>
+<hr>
+<div class="body-text-m">
+<p>The most frequently occurring value(s) in a dataset.</p>
+<p>E.g. <span class="math inline">\(mode\;of\;3, 7, 7, 17 = 7.\)</span></p>
+</div>
+<p><span class="body-text-l"><strong>Pros:</strong></span></p>
+<div class="body-text-m">
+<ul>
+<li>Works for categorical (non-numeric) data</li>
+<li>Not affected by outliers</li>
+</ul>
+</div>
+<p><span class="body-text-l"><strong>Cons:</strong></span></p>
+<div class="body-text-m">
+<ul>
+<li>May not be unique, or may not exist at all</li>
+<li>Not based on all the values</li>
+<li>Not capable of further mathematical treatment</li>
+</ul>
+</div>
 </section>
 <section id="central-tendency" class="slide level2" data-menu-title="Central tendency">
 <h2></h2>
@@ -752,6 +793,8 @@ Summarizing data numerically
 </div>
 <p><span class="math display">\[ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}\]</span></p>
 </div></div>
+<p><br></p>
+<p>These are the formulas for <em>sample</em> variance and standard deviation.</p>
 <aside class="notes">
 <p>Variances add (standard deviation doesn’t). For example, if we say that sex explains four square inches of variance, you know that 5 square inches are due to other factors.</p>
 <p>See <a href="https://stats.stackexchange.com/questions/35123/whats-the-difference-between-variance-and-standard-deviation">this discussion</a> and <a href="https://www.quora.com/When-should-one-use-variance-instead-of-standard-deviation-given-that-both-numbers-measure-the-same-thing">this discussion</a></p>
@@ -781,7 +824,7 @@ Summarizing data numerically
 <p><span class="body-text-m"><strong>Variance:</strong> measures the mathematical dispersion of data relative to the mean</span></p>
 <p><br></p>
 <div class="body-text-m">
-<p><span class="math display">\[ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}\]</span></p>
+<p><span class="math display">\[ S^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}.\]</span></p>
 </div>
 <p><br></p>
 <p><span class="body-text-m">Where <span class="math inline">\(S^2\)</span> is the sample variance, <span class="math inline">\(x_i\)</span> is a sample observation value, <span class="math inline">\(\bar x\)</span> is the sample mean, and <span class="math inline">\(n\)</span> is the number of observations.</span></p>
@@ -797,21 +840,15 @@ Summarizing data numerically
 </section>
 <section id="calc-variance1" class="slide level2" data-menu-title="Calculate variance 1">
 <h2></h2>
-<p><span class="slide-title">Calculate variance by hand (1/2)</span></p>
+<p><span class="slide-title">Calculate variance by hand</span></p>
 <hr>
+<div style="font-size: 0.85em;">
 <p><span class="body-text-m">Given these data: <span class="math inline">\(2, 4, 4, 6, 9\)</span></span></p>
 <ol type="1">
 <li>Calculate the mean:</li>
 </ol>
 <p><span class="math display">\[ mean = \frac{2+4+4+6+9}{5}=\frac{25}{5}=5\]</span> 2. Subtract the mean from each data point and square the result:</p>
-<p><span class="math display">\[(2-5)^2 = (-3)^2 = 9\]</span> <span class="math display">\[(4-5)^2 = (-1)^2 = 1\]</span> <span class="math display">\[(4-5)^2 = (-1)^2 = 1\]</span></p>
-<p><span class="math display">\[(6-5)^2 = (1)^2 = 1\]</span> <span class="math display">\[(9-5)^2 = (4)^2 = 16\]</span></p>
-</section>
-<section id="calc-variance2" class="slide level2" data-menu-title="Calculate variance 2">
-<h2></h2>
-<p><span class="slide-title">Calculate variance by hand (2/2)</span></p>
-<hr>
-<p><span class="body-text-m">Given these data: <span class="math inline">\(2, 4, 4, 6, 9\)</span></span></p>
+<p><span class="math display">\[(2-5)^2 = 9, \quad (4-5)^2 = 1, \quad (4-5)^2 = 1, \quad (6-5)^2 = 1, \quad (9-5)^2 = 16\]</span></p>
 <ol start="3" type="1">
 <li>Sum the squared differences:</li>
 </ol>
@@ -819,7 +856,8 @@ Summarizing data numerically
 <ol start="4" type="1">
 <li>Divide by the number of data points minus 1 (<span class="math inline">\(n\)</span> - 1)</li>
 </ol>
-<p><span class="math display">\[Variance = \frac{28}{5-1} = 7\]</span></p>
+<p><span class="math display">\[Variance = \frac{28}{5-1} = 7 \text{ units}^2\]</span></p>
+</div>
 </section>
 <section id="stdev" class="slide level2" data-menu-title="Standard deviation">
 <h2></h2>
@@ -830,6 +868,7 @@ Summarizing data numerically
 <div class="body-text-m">
 <p><span class="math display">\[ s = \sqrt{\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1}}\]</span></p>
 </div>
+<p><br></p>
 <p><br></p>
 <p>Standard deviation is expressed in the same unit of measurement as the data, and therefore can be easier to interpret – for example it’s more intuitive to report that a group of people’s heights has a standard deviation of 3 inches, and less intuitive to report a variance of 9 square inches.</p>
 </section>
@@ -863,90 +902,22 @@ Summarizing data numerically
 </section>
 <section id="gorilla" class="slide level2" data-menu-title="Gorilla">
 <h2></h2>
-<p><br></p>
-
-<img data-src="images/gorilla.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p><br></p>
-<div class="footer">
-<p>From: Yanai, I., Lercher, M. A hypothesis is a liability. Genome Biol 21, 231 (2020). <a href="https://doi.org/10.1186/s13059-020-02133-w" class="uri">https://doi.org/10.1186/s13059-020-02133-w</a></p>
-</div>
-<aside class="notes">
-<p>Gave students a made-up dataset containing the BMI of 1786 people and the number of steps each took on a particular day.</p>
+<p><span class="slide-title">Is there something hidden in your data?</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Study gave students a made-up dataset containing the BMI of 1786 people and the number of steps each took on a particular day.</p>
 <p>Students in Group 1 were asked to consider three specific hypotheses + also if there was anything else they could conclude from the dataset.</p>
 <p>Group 2 was simply asked, “What do you conclude from the dataset?”</p>
 <p>If you plotted the number of steps vs.&nbsp;BMI, you’d find the gorilla. Students driven by hypotheses skipped this step more often than those that were not hypothesis-driven.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="confidence-intervals-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
-<h2></h2>
-<div class="page-center">
-<div class="custom-subtitle">
-Confidence intervals
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/gorilla.png"></p>
+<figcaption>From: <a href="https://doi.org/10.1186/s13059-020-02133-w">Yanai, I., Lercher, M. A hypothesis is a liability. Genome Biol 21, 231 (2020).</a></figcaption>
+</figure>
 </div>
-</div>
-</section>
-<section id="section" class="slide level2">
-<h2><!-- TODO: population, sample, statistic, all that needs to be included before talking about confidence interval --></h2>
-</section>
-<section id="conf-int-1" class="slide level2" data-menu-title="Confidence interval">
-<h2></h2>
-<p><span class="slide-title">Confidence interval</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m"><strong>Confidence interval:</strong> a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.</span></p>
-<p><br></p>
-</section>
-<section id="conf-int-2" class="slide level2" data-menu-title="Confidence interval">
-<h2></h2>
-<p><span class="slide-title">Confidence interval</span></p>
-<hr>
-<p><br></p>
-<p><span class="body-text-m"><strong>Confidence interval:</strong> a range of values (based on a sample) that, if we were to take multiple samples from the population and calculate the confidence interval from each, would contain the true population parameter X percent of the time.</span></p>
-<p><br></p>
-<div class="body-text-m">
-<p><strong>What it’s NOT:</strong></p>
-<p>“There is a 95% chance that the true population parameter is inside the confidence interval.”</p>
-</div>
-</section>
-<section id="conf-int-ex-1" class="slide level2" data-menu-title="Confidence interval example">
-<h2></h2>
-<p><span class="slide-title">Confidence interval example</span></p>
-<hr>
-<div class="center-text">
-<p><em>Mean shark length is 8.42 <span class="math inline">\(\pm\)</span> 3.55 ft (mean <span class="math inline">\(\pm\)</span> standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).</em></p>
-</div>
-<p><br></p>
-<div class="body-text-m">
-<p>What this <strong>DOES NOT</strong> mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet.</p>
-</div>
-<p>The true population mean is a <em>fixed value</em> and does not change – the CI either contains this true mean or it does not. There is no probability involved.</p>
-</section>
-<section id="conf-int-ex-2" class="slide level2" data-menu-title="Confidence interval example">
-<h2></h2>
-<p><span class="slide-title">Confidence interval example</span></p>
-<hr>
-<div class="center-text">
-<p><em>Mean shark length is 8.42 <span class="math inline">\(\pm\)</span> 3.55 ft (mean <span class="math inline">\(\pm\)</span> standard deviation), with a 95% confidence interval of [6.45, 10.39 ft] (n = 15).</em></p>
-</div>
-<p><br></p>
-<div class="body-text-m">
-<p>What this <strong>DOES NOT</strong> mean: There is a 95% chance that the true population mean length is between 6.45 and 10.39 feet.</p>
-</div>
-<p>The true population mean is a <em>fixed value</em> and does not change – the CI either contains this true mean or it does not. There is no probability involved.</p>
-<p><br></p>
-<div class="body-text-m">
-<p>What this <strong>DOES</strong> mean: If we took a bunch of sets of samples from the population (all n = 15), then 95% of the time, the calculated mean would fall within this range. <!-- What this **DOES** mean: 95% of calculated confidence intervals for samples drawn from this population will contain the true population parameter. This CI could be one of the 95%. It could also be one of the 5% that does *not* contain the true population parameter! --></p>
-</div>
-<p>This statement correctly describes the frequency with which we would expect CIs to capture the mean over many samples.</p>
+</div></div>
 </section>
 <section id="comm" class="slide level2" data-menu-title="Communicating data summaries">
 <h2></h2>
@@ -995,13 +966,13 @@ Wrapping up…
 <li><span style="color:#CC3366"><b>🧩 Data types</b></span></li>
 <li><span style="color:#006699"><b>📊 Data visualization (histograms, box plots, scatterplots)</b></span></li>
 <li><span style="color:#D6001C"><b>📐 Quartiles &amp; the interquartile range</b></span></li>
-<li><span style="color:#003366"><b>📈 Central tendency (mean &amp; median)</b></span></li>
+<li><span style="color:#003366"><b>📈 Central tendency (mean, median, mode)</b></span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <ul>
 <li><span style="color:#FF6600"><b>📏 Variance &amp; standard deviation</b></span></li>
-<li><span style="color:#336666"><b>🦖 Why visualizing data matters</b></span></li>
 <li><span style="color:#003399"><b>🎯 Confidence intervals</b></span></li>
+<li><span style="color:#336666"><b>🦖 Why visualizing data matters</b></span></li>
 <li><span style="color:#660099"><b>💬 Communicating data summaries responsibly</b></span></li>
 </ul>
 </div></div>

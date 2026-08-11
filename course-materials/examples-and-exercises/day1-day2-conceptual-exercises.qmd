@@ -1,0 +1,154 @@
+---
+title: "Day 1 & 2: Conceptual practice exercises"
+subtitle: "Lines, rates of change, functions, exponentials & logs, and integrals"
+editor_options:
+  chunk_output_type: console
+---
+
+::: {.callout-note}
+For every exercise below, write your final answer as a **complete sentence**, including units, as if you were explaining it to someone unfamiliar with the data.
+:::
+
+## Exercise 1
+
+Environmental scientists model evapotranspiration (the combined loss of water from soil evaporation and plant transpiration) for a crop field. They believe evapotranspiration depends on: solar radiation, air temperature, and wind speed.
+
+(a) In this scenario, which variable is the output (dependent variable), and which are the inputs (independent variables)?
+(b) Write a sentence of the form "[output] is a function of [input(s)]" using the variable names.
+(c) Suppose a simplified model turns out to be:
+$$
+ET(R,T,W) = 0.02R + 0.15T - 0.05W
+$$
+where $ET$ is evapotranspiration (mm/day), $R$ is solar radiation (W/m²), $T$ is air temperature (°C), and $W$ is wind speed (km/hr). Evaluate this model when $R=500$, $T=25$, and $W=10$, and state the result as a full sentence.
+
+## Exercise 2
+
+A stream's water temperature increases as you move downstream from a shaded headwater spring. At a monitoring station 2 km downstream, the water temperature is 14°C. At a station 5 km downstream, the temperature is 20°C. Assume temperature increases linearly with distance downstream.
+
+(a) Find the equation for water temperature $T$ (°C) as a function of distance downstream $x$ (km).
+(b) Create a plot showing the line. Clearly label the axes, including units, and add a title.
+(c) What is the $y$-intercept of this line, and what does it mean in the context of the stream? Answer in a full sentence.
+
+## Exercise 3
+
+Researchers plotted [dissolved oxygen (DO)](https://www.epa.gov/system/files/documents/2021-07/parameter-factsheet_do.pdf) concentration against water depth in a lake, and found the relationship was linear over the depth range sampled.
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "70%"
+depth <- seq(0, 12, length.out = 100)
+DO <- -0.6*depth + 9
+
+plot(depth, DO, type = "l", lwd = 3, col = "green",
+     xlim = c(0, 12), ylim = c(0, 10),
+     xlab = "Depth (m)", ylab = "Dissolved oxygen (mg/L)",
+     xaxt = "n", yaxt = "n")
+abline(h = seq(0, 10, by = 1), col = "lightgray", lty = "dotted")
+abline(v = seq(0, 12, by = 1), col = "lightgray", lty = "dotted")
+axis(1, at = seq(0, 12, by = 1))
+axis(2, at = seq(0, 10, by = 1))
+lines(depth, DO, lwd = 2)
+```
+
+(a) Write the equation for dissolved oxygen, $DO$, as a function of depth.
+(b) Interpret the slope in a full sentence, including units.
+
+## Exercise 4
+
+The city has begun a 20-day, round-the-clock grading and paving phase for a highway-widening project that cuts directly through the Westside neighborhood, a community that already bears a disproportionate share of the region's industrial pollution and truck traffic. In response, a community air-quality monitoring group tracked the additional fine particulate matter concentration, $P(t)$ (µg/m³ of PM2.5 above baseline), in the neighborhood's air over the 20 days of that construction phase.
+
+:::: {.columns}
+::: {.column width="35%"}
+| $t$ (days) | $P(t)$ (µg/m³) |
+|:---:|:---:|
+| 2  | 14.4 |
+| 6  | 33.6 |
+| 10 | 40.0 |
+| 14 | 33.6 |
+| 18 | 14.4 |
+:::
+
+::: {.column width="65%"}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "95%"
+t <- seq(0, 20, length.out = 200)
+P <- 8*t - 0.4*t^2
+
+plot(t, P, type = "l", lwd = 3, col = "#003660",
+     xlim = c(0, 20), ylim = c(0, 45),
+     xlab = "Days since grading phase began", ylab = "Additional PM2.5 (µg/m³ above baseline)")
+points(c(2,6), c(8*2-0.4*2^2, 8*6-0.4*6^2), pch = 19, cex = 1.4, col = "#FEBC11")
+segments(2, 8*2-0.4*2^2, 6, 8*6-0.4*6^2, col = "#FEBC11", lwd = 2, lty = 2)
+```
+:::
+::::
+
+(a) Calculate the average rate of change in additional PM2.5 concentration between day 2 and day 6.
+(b) Write your answer as a full sentence, with units, without overstating certainty.
+
+## Exercise 5
+
+Since 2010, a mountain glacier has been losing volume at an accelerating pace as regional temperatures rise. Researchers model the cumulative ice volume lost, $V(t)$ (in km³), since monitoring began, as:
+
+$$
+V(t) = 0.5t^2 + 2t
+$$
+
+where $t$ is years since 2010.
+
+(a) Use differentiation rules to find $V'(t)$.
+(b) Evaluate $V'(5)$. What does this value mean in the context of the glacier? State it as a full sentence, with units.
+(c) Now calculate the *average* rate of ice loss between $t=4$ and $t=8$.
+(d) Are the values from (b) and (c) the same? In your own words, explain conceptually why an "average" rate of change over an interval doesn't have to match the "instantaneous" rate of change at a single point within it.
+
+## Exercise 6
+
+After restoring a section of coastal wetland, ecologists measure the rate at which the wetland absorbs stormwater runoff, $r(t)$ (in m³/hour), throughout a 24-hour storm. The graph below shows this absorption rate over time. Partway through the storm, the monitoring sensor lost power and went offline between hour 10 and hour 14 (shaded region in the graph) — but you still need to report an estimate of the total volume of stormwater absorbed over the full 24-hour storm.
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "70%"
+t <- seq(0, 24, length.out = 300)
+rate <- 200 * exp(-((t-9)^2)/40)
+
+before <- t <= 10
+after  <- t >= 14
+
+plot(NA, xlim = c(0,24), ylim = c(0,220),
+     xlab = "Hours since storm began", ylab = "Stormwater absorption rate (m³/hr)")
+abline(v = seq(0,24, by = 6), col = "lightgray", lty = "dotted")
+
+rect(10, 0, 14, 220, col = adjustcolor("gray", alpha.f = 0.25), border = NA)
+text(12, 210, "sensor\noffline", cex = 0.8, col = "gray30")
+
+lines(t[before], rate[before], lwd = 3, col = "#003660")
+lines(t[after], rate[after], lwd = 3, col = "#003660")
+points(10, rate[which.min(abs(t-10))], pch = 19, col = "#FEBC11", cex = 1.3)
+points(14, rate[which.min(abs(t-14))], pch = 19, col = "#FEBC11", cex = 1.3)
+```
+
+(a) What does the *area under this curve* represent, in words? Be sure to include units.
+(b) Looking at the shape of the graph (without calculating anything), during which 6-hour window — hours 0–6, 6–12, 12–18, or 18–24 — do you expect the *largest volume* of stormwater to have been absorbed? Explain your reasoning.
+(c) Describe how you would handle the sensor gap when estimating the total area under the curve. What assumption(s) would you have to make, and how would the location of this particular gap affect your confidence in the final estimate?
+
+## Exercise 7
+
+Forestry officials discover an invasion of an invasive insect in a county park. They estimate the insect population grows exponentially, following $N(t) = N_0 e^{rt}$, where $N_0$ is the initial number of egg masses counted per hectare, and $t$ is time in years since detection.
+
+At detection ($t=0$), officials count $N_0 = 150$ egg masses per hectare. Four years later, the count has grown to $400$ egg masses per hectare.
+
+(a) Solve for the growth rate $r$.
+(b) Forestry regulators will impose a mandatory quarantine zone if the population reaches $5{,}000$ egg masses per hectare. Using your value of $r$, solve for the time $t$ at which this threshold will be reached.
+(c) State your answer to (b) as a full sentence.
+
+---
+
+::: {.callout-tip}
+Done? [Check your answers here.](day1-day2-conceptual-exercises-key.qmd)
+:::
+
+*All the functions and example data are synthetic and were generated with the aid of Claude Code for the purpose of this session.*

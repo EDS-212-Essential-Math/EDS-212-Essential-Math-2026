@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>day3.2-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -137,7 +140,43 @@
 <p><span class="custom-title">EDS 212: Day 3, Lecture 2</span></p>
 <p><span class="custom-subtitle"><em>Vectors and matrices</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 5<sup>th</sup>, 2025</span></p>
+</section>
+<section id="cellas-example-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
+<h2></h2>
+<div class="page-center">
+<p><span class="custom-subtitle">A rates of change example</span></p>
+<p><span class="custom-subtitle"><em>Cella Schanabel, Bren PhD Student</em></span></p>
+</div>
+</section>
+<section id="cellas-example" class="slide level2" data-menu-title="Cella's Example">
+<h2></h2>
+<p><span class="slide-title">Differences in green-up rates in NE Kenya</span></p>
+<hr>
+<div class="columns" style="gap:0.5em">
+<div class="column" style="width:24%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cows.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+<div style="font-size:.95em; line-height:1.2">
+<p>Greenness is a proxy for rangeland health. Bute is both greener than Hadado overall, and has a more rapid and more sustained green-up. A change in rate of change of greenness was the management signal we were hoping for.</p>
+</div>
+</div><div class="column" style="width:76%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/two-wards.png" class="quarto-figure quarto-figure-center" style="width:62.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/green-up.png" class="quarto-figure quarto-figure-center" style="margin-top:-70px;width:82.0%"></p>
+</figure>
+</div>
+<div style="text-align:right; font-size:0.6em; margin-top:-60px; margin-right:-30px">
+<p><a href="https://cega.berkeley.edu/collection/improving-management-of-collective-grazinglands-for-people-and-the-environment/">Find out more!</a><br> cellaschnabel@ucsb.edu</p>
+</div>
+</div></div>
 </section>
 <section id="sigma-section-title" class="slide level2" data-menu-title="Summation Notation" data-background-color="#003660">
 <h2></h2>
@@ -692,22 +731,31 @@ a_{21} &amp; a_{22} &amp; a_{23}
 <img data-src="images/diagonal_matrix_scaling.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
 <section id="where-in-EDS-1" class="slide level2" data-menu-title="Multiply by diagonal matrix">
 <h2></h2>
-<p><span class="slide-title">Where do matrices come up in EDS?</span></p>
+<p><span class="slide-title">Where does this come up in EDS?</span></p>
 <hr>
-<p><span class="center-text">Rasters (matrix like)</span></p>
+<p><span class="center-text">Rasters (2D arrays, addition and scalar multiplication are the same as matrices)</span></p>
 
-<img data-src="images/neon-raster.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://www.neonscience.org">Neon</a></p></section>
+<img data-src="images/neon-raster.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://www.neonscience.org">Neon</a></p><p>⚠️ You can multiply two rasters coordinate by coordinate, but matrices don’t admit this operation!</p>
+</section>
 <section id="raster-index-blank" class="slide level2" data-menu-title="Exercise: raster math">
 <h2></h2>
 <p><span class="slide-title">Exercise: combining rasters</span></p>
 <hr>
 <div class="body-text-m">
-<p>A raster is just a matrix where each cell holds a value for a location on a grid. Land managers often combine several raster layers into a single index by <strong>scaling</strong> each layer (multiplying by a weight) and <strong>summing</strong> the results.</p>
+<p>A raster is just a 2D array where each cell holds a value for a location on a grid. Land managers often combine several raster layers into a single index by <strong>scaling</strong> each layer (multiplying by a weight) and <strong>summing</strong> the results.</p>
 </div>
 <p>✏️ <span style="color:green;">Calculate the fire risk index for each cell:</span></p>
 <p><span style="color:green;"><span class="math display">\[\text{Fire risk} = 0.6 \times \text{Temperature stress} + 0.4 \times \text{Fuel dryness}\]</span></span></p>
 
 <img data-src="day3.2-slides_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section>
+<section id="raster-index-solution-blank" class="slide level2" data-menu-title="Exercise: raster math">
+<h2></h2>
+<p><span class="slide-title">Exercise: combining rasters</span></p>
+<hr>
+<p>✏️ <span style="color:green;">Calculate the fire risk index for each cell:</span></p>
+<p><span style="color:green;"><span class="math display">\[\text{Fire risk} = 0.6 \times \text{Temperature stress} + 0.4 \times \text{Fuel dryness}\]</span></span></p>
+<p><img data-src="images/temp-fuel-rasters.png" class="" style="width:45.0%"></p>
+</section>
 <section id="raster-index" class="slide level2" data-menu-title="Exercise: raster math">
 <h2></h2>
 <p><span class="slide-title">Exercise: solution</span></p>
@@ -766,299 +814,6 @@ Wrapping up…
 <li><span style="color:#333300"><b>🌓 Dot product</b></span></li>
 <li><span style="color:#660066"><b>🧮 Matrix algebra</b></span></li>
 </ul>
-<!-- 
----
-
-## {#systems-of-equations-title data-menu-title="Systems of equations" background-color="#003660"}
-
-
----
-
-## {#sys-eq data-menu-title="Systems of equations"} 
-
-[Matrices as systems of equations]{.slide-title}
-
-<hr>
-
-[Often in environmental data science, we have multiple equations representing processes. Matrices give us a way to express these *systems of equations* in data structures that are easy to store and work with in data science. For example, let's say we have a system: 
-]{.body-text-m}
-
-<br>
-
-::: {.body-text-l}
-$$3x-8y=5$$
-
-$$x + 2y = 10$$
-:::
-
-So we want to find $x$ and $y$ that satisfy both equations simultaneously.
-
-::: {.center-text .body-text-m}
-How can we write this using matrices? 
-:::
-
----
-
-## {#rewrite data-menu-title="Rewrite"} 
-
-[Rewriting in matrix form:]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-$$3x-8y=5$$
-
-$$x + 2y = 10$$
-:::
-
-<br>
-
-[The matrix form of this system of equations looks as follows: ]{.body-text-m}
-
-
-::: {.cell layout-align="center"}
-::: {.cell-output-display}
-![](images/system_equations.png){fig-align='center' width=100%}
-:::
-:::
-
-
-::: {.notes}
-We can write systems of equations in matrix form as $Ax=b$, where:
-
-- $A$ is the coefficient matrix
-- $x$ is the vector of variables
-- $b$ is the constant vector
-
-1. Identify coefficients to form matrix $A$, where each row corresponds to the coefficients of one equation:
-
-$$A = \begin{bmatrix}
-  3 & -8 \\
-  1 & 2
-\end{bmatrix}$$
-
-2. Form the variable vector $x$ which contains the variables of the system:
-
-$$x = \begin{bmatrix}
- x \\
-  y
-\end{bmatrix}$$
-
-3. Form the constant vector $b$
-$$b = \begin{bmatrix}
- 5 \\
- 10
-\end{bmatrix}$$
-
-:::
-
----
-
-## {#env-sci-examples data-menu-title="Environmental science examples"} 
-
-[Example: matrices and linear algebra in environmental science]{.slide-title}
-
-<hr>
-
-<br>
-<br>
-
-[Leslie Matrix: Population ecology]{.body-text-xl}
-
-<br>
-
-[A matrix model that accounts for survival / fecundity rates at different life stages for a species.]{.body-text-l} 
-
-::: {.notes}
-The Leslie matrix is one of the most well-known ways to describe the growth of populations (and their projected age distribution), in which a population is:
-
-- closed to migration, 
-- growing in an unlimited environment, 
-- and where only one sex, usually the female, is considered.
-:::
-
---- 
-
-## {#overview data-menu-title="overview"} 
-
-[Overview:]{.slide-title}
-
-<hr>
-
-::: {.body-text-m}
-- Define life stages
-
-- Estimate probability of survival / reproduction at different life stages to create a matrix over time
-
-- Combine into a matrix that allows calculation at the next time step
-:::
-
-
-::: {.cell layout-align="center"}
-::: {.cell-output-display}
-![](images/leslie_matrix.jpg){fig-align='center' width=100%}
-:::
-:::
-
-
----
-
-## {#est-as-eq1 data-menu-title="Estimates as equations 1"} 
-
-[Writing estimates as equations:]{.slide-title}
-
-<hr>
-
-<br>
-
-[For our species, each adult female will lay ~600 eggs during each cycle (let's say that's a year). Which means that the eggs at time $t+1$ can be estimated by the number of adult females * 600:]{.body-text-m}
-
-<br>
-
-[$$E_{t+1}=600 * F_t$$]{.body-text-l}
-
----
-
-## {#est-as-eq2 data-menu-title="Estimates as equations 2"} 
-
-[Writing estimates as equations:]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-$$E_{t+1}=600 * F_t$$
-
-<br>
-
-We also estimate that 20% of eggs survive to reach larval stage:
-
-<br>
-
-$$L_{t+1} = 0.2*E_t$$
-:::
-
----
-
-## {#est-as-eq3 data-menu-title="Estimates as equations 3"} 
-
-[Writing estimates as equations:]{.slide-title}
-
-<hr>
-
-<br>
-
-::: {.body-text-l}
-$$E_{t+1}=600 * F_t$$
-$$L_{t+1} = 0.2*E_t$$
-
-<br>
-
-We also estimate that 8% of those that reach larval stage will survive to become reproducing female adults:
-
-<br>
-
-$$F_{t+1}=0.08*L_t$$
-:::
-
----
-
-## {#in-matrix-form1 data-menu-title="Write in matrix form 1"} 
-
-[How can we write this in matrix form?]{.slide-title}
-
-<hr>
-
-::: {.body-text-l}
-$$E_{t+1}=600 * F_t$$
-
-$$L_{t+1} = 0.2*E_t$$
-
-$$F_{t+1}=0.08*L_t$$
-:::
-
-::: {.notes}
-The Leslie matrix (L) will be a 3x3 matrix since we have three stages (Eggs, Larvae, Adults).
-
-Each column represents an age class at time $t$
-
-1. **Fecundity (Top Row):** The third element of the top row is 600 because adult females contribute to the number of eggs in the next generation.
-
-2. **Survival Rates (Sub-diagonal):**
-- The first element in the second row (0.2) represents the probability of an egg surviving to become a larva.
-- The second element in the third row (0.08) represents the probability of a larva surviving to become an adult female.
-:::
-
----
-
-## {#in-matrix-form2 data-menu-title="Write in matrix form 2"} 
-
-[How can we write this in matrix form?]{.slide-title}
-
-<hr>
-
-::: {.body-text-l}
-$$E_{t+1}=600 * F_t$$
-
-$$L_{t+1} = 0.2*E_t$$
-
-$$F_{t+1}=0.08*L_t$$
-:::
-
-<br>
-
-
-::: {.cell layout-align="center"}
-::: {.cell-output-display}
-![](images/leslie_matrix_blank.png){fig-align='center' width=100%}
-:::
-:::
-
-
----
-
-## {#leslie-matrix data-menu-title="Leslie matrix"} 
-
-[Leslie matrix]{.slide-title}
-
-<hr>
-
-
-::: {.cell layout-align="center"}
-::: {.cell-output-display}
-![](images/leslie_matrix_values.png){fig-align='center' width=100%}
-:::
-:::
-
-
----
-
-## {#leslie-matrix-notes data-menu-title="Leslie matrix (notes)"} 
-
-[Leslie matrix]{.slide-title}
-
-<hr>
-
-
-::: {.cell layout-align="center"}
-::: {.cell-output-display}
-![](images/leslie_matrix_values.png){fig-align='center' width=100%}
-:::
-:::
-
-
-- Each column is the age class at time $t$ and each row is the age class at time $t+1$
-- Each entry represents a transition, or change in the # of individuals, from one age class to the next
-- Fertilities are always in the first row, and represent the contributions to newborns from reproduction 
-- Survival probabilities are always in the subdiagonal and represent transitions from one age class to the next
-- All other entries are 0 because no other transitions are possible -- individuals cannot remain in the same age class from one year to the next, nor can they skip or repeat age classes
-
-::: {.footer}
-See [A Primer of Ecology](https://global.oup.com/academic/product/a-primer-of-ecology-9780878933181?cc=ca&lang=en&), by Nicholas J. Gotelli
-::: -->
 
 
 </section>

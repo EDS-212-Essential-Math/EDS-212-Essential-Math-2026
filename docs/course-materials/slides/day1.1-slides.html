@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>day1.1-slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -153,7 +156,6 @@
 <p><span class="custom-title">EDS 212: Day 1, Lecture 1</span></p>
 <p><span class="custom-subtitle"><em>Course intro, algebra refresher</em></span></p>
 <hr class="hr-teal">
-<p><span class="custom-subtitle3">August 3<sup>rd</sup>, 2026</span></p>
 </section>
 <section id="eds212-basics" class="slide level2" data-menu-title="EDS 212 basics" data-background-color="#003660">
 <h2></h2>
@@ -173,11 +175,7 @@ EDS 212 basics
 <li><strong>Teaching assistant:</strong> Cella Schnabel</li>
 <li><strong>Course hours:</strong> 10am - 3:30pm PST</li>
 <li><strong>Location:</strong> NCEAS 1st Floor Classroom</li>
-<li><strong>Website:</strong> <a href="https://eds-212-essential-math.github.io/EDS-212-Essential-Math-2026/">https://eds-212-essential-math.github.io/EDS-212-Essential-Math-2026/</a>
-<ul>
-<li>Find the slides: top right under daily materials</li>
-<li>Find the syllabus: top right under syllabus</li>
-</ul></li>
+<li><strong>Website:</strong> <a href="https://eds-212-essential-math.github.io/EDS-212-Essential-Math-2026/">https://eds-212-essential-math.github.io/EDS-212-Essential-Math-2026/</a></li>
 </ul>
 </section>
 <section id="about-instructor" class="slide level2" data-menu-title="About your instructor">
@@ -258,12 +256,13 @@ EDS 212 basics
 <h2></h2>
 <p><span class="slide-title">Course description</span></p>
 <hr>
+<div class="center-text body-text-m">
 <ul>
-<li><p><strong>Units:</strong> 2</p></li>
-<li><p><strong>Grading:</strong> Satisfactory/Unsatisfactory</p></li>
-<li><p><strong>Description:</strong> Quantitative skills are critical when working with, understanding, analyzing and gleaning insights from environmental data. In the intensive EDS 212 course, students will refresh fundamental skills in math (algebra, uni- and multivariate functions, units and unit conversions), summary statistics and basic probability theory, derivative and differential equations, linear algebra, and reading, writing and evaluating logical operations.</p></li>
-<li><p>This is an <strong>“offline course”</strong>, your only one in MEDS. What it means is we’ll be focusing on conceptual understanding and some pen-and-paper practice, instead of coding. Why? We want to make sure you <em>understand</em> some fundamental topics before jumping into <em>implementing</em>.</p></li>
+<li><strong>Units:</strong> 2</li>
+<li><strong>Grading:</strong> Satisfactory/Unsatisfactory</li>
+<li>This is an <strong>“offline course”</strong>, your only one in MEDS. What it means is we’ll be focusing on conceptual understanding and some pen-and-paper practice, instead of coding. Why? We want to make sure you <em>understand</em> some fundamental topics before jumping into <em>implementing</em>.</li>
 </ul>
+</div>
 <div class="center-text body-text-l">
 <p>Let’s take a look at the <a href="https://docs.google.com/document/d/1yGzd_H954F_gPufJNAYPIIjEw3vDS4P0E20CRrpSrfs/edit?tab=t.0">course syllabus</a> together.</p>
 </div>
@@ -272,13 +271,13 @@ EDS 212 basics
 <h2></h2>
 <p><span class="slide-title">Topics overview</span></p>
 <hr>
-<div class="body-text-m">
+<div class="body-text-l">
 <ul>
 <li><strong>Day 1:</strong> Course introduction &amp; math basics refresher</li>
-<li><strong>Day 2:</strong> Exponential functions; Limits &amp; derivatives</li>
-<li><strong>Day 3:</strong> Integration &amp; ODEs; Vectors and matrices</li>
-<li><strong>Day 4:</strong> Distributions &amp; summary statistics; Basic probability theory,</li>
-<li><strong>Day 5:</strong> Basic stats; Boolean algebra</li>
+<li><strong>Day 2:</strong> Limits &amp; derivatives; Integration &amp; ODEs</li>
+<li><strong>Day 3:</strong> Calculus practice session; Vectors and matrices</li>
+<li><strong>Day 4:</strong> Summary statistics; Basic probability theory</li>
+<li><strong>Day 5:</strong> Basic stats</li>
 </ul>
 </div>
 </section>
@@ -286,17 +285,20 @@ EDS 212 basics
 <h2></h2>
 <p><span class="slide-title">Objectives (in general terms)</span></p>
 <hr>
+<div class="body-text-l">
 <ol type="1">
 <li><p>Shake off the math dust</p></li>
 <li><p>Exercise core math skills needed to succeed in your Bren courses</p></li>
 <li><p>Explore how valuable math is to environmental data science</p></li>
 <li><p>Build a collaborative environment and get to know your cohort</p></li>
 </ol>
+</div>
 </section>
 <section id="exp" class="slide level2" data-menu-title="Student Expectations">
 <h2></h2>
 <p><span class="slide-title">Student expectations</span></p>
 <hr>
+<div class="body-text-m">
 <p>We expect all students will:</p>
 <ul>
 <li><p>Support and encourage all classmates</p></li>
@@ -305,11 +307,13 @@ EDS 212 basics
 <li><p>See opportunities to share kownledge as a chance to deepen understanding</p></li>
 <li><p>Complete all in-class exercises</p></li>
 </ul>
+</div>
 </section>
 <section id="exp-2" class="slide level2" data-menu-title="Student Expectations">
 <h2></h2>
 <p><span class="slide-title">Student expectations</span></p>
 <hr>
+<div class="body-text-m">
 <p>We expect all students will:</p>
 <ul>
 <li><p>Support and encourage all classmates</p></li>
@@ -318,7 +322,6 @@ EDS 212 basics
 <li><p>See opportunities to share kownledge as a chance to deepen understanding</p></li>
 <li><p>Complete all in-class exercises</p></li>
 </ul>
-<div class="fragment">
 <p><strong>Logistics</strong></p>
 <ul>
 <li>You are required to attend all sessions, unless there’s a significant reason not to. Always communicate with your instructors.</li>
@@ -464,7 +467,7 @@ Algebra review
 </section>
 <section id="PEMDAS" class="slide level2" data-menu-title="PEMDAS">
 <h2></h2>
-<p><span class="slide-title">1. Order of operations (P-E-DM-AS)</span></p>
+<p><span class="slide-title">Order of operations (P-E-DM-AS)</span></p>
 <hr>
 <p><br></p>
 <p><span class="body-text-l"><strong>P</strong> - Parentheses</span></p>
@@ -477,7 +480,7 @@ Algebra review
 </section>
 <section id="PEMDAS-practice" class="slide level2" data-menu-title="PEMDAS practice">
 <h2></h2>
-<p><span class="slide-title">1. Order of operations practice problems</span></p>
+<p><span class="slide-title">Order of operations practice problems</span></p>
 <hr>
 <p>✏️ <span class="body-text-m" style="color:green;">Take a minute to solve these individually.</span></p>
 <p><br></p>
@@ -494,48 +497,10 @@ Algebra review
 z = 4*(y-4)+(x+1)^2
 </span></li>
 </ul>
-<aside class="notes">
-<ol type="1">
-<li><span class="math inline">(12 - 2)/5 + 5(3+2)/6</span></li>
-</ol>
-<ul>
-<li><span class="math inline">(10/5) + 5 \times 5 / 6</span></li>
-<li><strong>ANSWER: <span class="math inline">2 + 25/6</span></strong></li>
-</ul>
-<ol start="2" type="1">
-<li><span class="math inline">\frac{(4-6)}{(2)}(3+1)-\frac{(1+2*4)}{(3)}</span></li>
-</ol>
-<ul>
-<li><span class="math inline">\frac{(-2)}{(2)}(4)-\frac{(9)}{(3)}</span></li>
-<li><span class="math inline">-1 \times 4 - 3</span></li>
-<li><span class="math inline">-4-3</span></li>
-<li><strong>ANSWER: <span class="math inline">-7</span></strong></li>
-</ul>
-<ol start="3" type="1">
-<li><span class="math inline">3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}</span></li>
-</ol>
-<ul>
-<li><span class="math inline">3x+4 \times 2x - 2y + 5 + \frac{2x-6x}{2}</span></li>
-<li><span class="math inline">3x+4 \times 2x - 2y + 5 + \frac{2x}{2}-\frac{6x}{2}</span></li>
-<li><span class="math inline">3x+4 \times 2x - 2y + 5 + x - 3x</span></li>
-<li><span class="math inline">11x - 2y + 5 - 2x</span></li>
-<li><strong>ANSWER: <span class="math inline">9x - 2y + 5</span></strong></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="PEMDAS-practice-solution-1" class="slide level2" data-menu-title="PEMDAS practice: solution 1">
 <h2></h2>
-<p><span class="slide-title">1. Order of operations practice problems</span></p>
+<p><span class="slide-title">Order of operations practice problems</span></p>
 <hr>
 <p>💡 <span class="body-text-m" style="color:green;">Let’s see a solution!</span></p>
 <p><br></p>
@@ -546,9 +511,18 @@ z = 4*(y-4)+(x+1)^2
 <p><span class="body-text-m"><span class="math inline">3x+4(8x-6x) -(2y-5)+\frac{2x(1-3)}{2}</span></span></p>
 </div></div>
 </section>
+<section id="PEMDAS-practice-solution-2" class="slide level2" data-menu-title="PEMDAS practice: solution 2">
+<h2></h2>
+<p><span class="slide-title">Order of operations practice problems</span></p>
+<hr>
+<p>💡 <span class="body-text-m" style="color:green;">Let’s see a solution!</span></p>
+<p><span class="body-text-m">If we are given the values of <span class="math inline">x=-3</span> and <span class="math inline">y=2</span>, what would be the value of <span class="math inline">z</span>? <span class="math display">
+z = 4*(y-4)+(x+1)^2
+</span></span></p>
+</section>
 <section id="PEMDAS-practice-solution-1-answer" class="slide level2" data-menu-title="Practice solutions">
 <h2></h2>
-<p><span class="slide-title">1. Practice solutions</span></p>
+<p><span class="slide-title">Practice solutions</span></p>
 <hr>
 <p><span class="math display">
 \small
@@ -568,20 +542,6 @@ z = 4*(y-4)+(x+1)^2
 &amp;= 9x-2y+5
 \end{aligned}
 </span></p>
-</section>
-<section id="PEMDAS-practice-solution-2" class="slide level2" data-menu-title="PEMDAS practice: solution 2">
-<h2></h2>
-<p><span class="slide-title">1. Order of operations practice problems</span></p>
-<hr>
-<p>💡 <span class="body-text-m" style="color:green;">Let’s see a solution!</span></p>
-<p><span class="body-text-m">If we are given the values of <span class="math inline">x=-3</span> and <span class="math inline">y=2</span>, what would be the value of <span class="math inline">z</span>? <span class="math display">
-z = 4*(y-4)+(x+1)^2
-</span></span></p>
-</section>
-<section id="PEMDAS-practice-solution-2-answer" class="slide level2" data-menu-title="Practice solutions">
-<h2></h2>
-<p><span class="slide-title">1. Practice solutions</span></p>
-<hr>
 <p><span class="math display">
 \small
 \begin{aligned}
@@ -594,7 +554,7 @@ z&amp;=-4
 </section>
 <section id="notation-matters" class="slide level2" data-menu-title="Notation matters">
 <h2></h2>
-<p><span class="slide-title">1. Notation matters</span></p>
+<p><span class="slide-title">Notation matters</span></p>
 <hr>
 <p><br></p>
 <div class="body-text-m">
@@ -620,7 +580,7 @@ z&amp;=-4
 </section>
 <section id="takeaway" class="slide level2" data-menu-title="Takeaway">
 <h2></h2>
-<p><span class="slide-title">1. An important takeaway:</span></p>
+<p><span class="slide-title">An important takeaway:</span></p>
 <hr>
 <p><br></p>
 <div class="center-text body-text-l">
@@ -628,36 +588,10 @@ z&amp;=-4
 </div>
 <p><br> <br></p>
 <p><span class="body-text-m">When designing things, it’s important to <strong>consider the different ways that users might misuse or misunderstand it</strong> - then <strong>build in safeguards</strong> to help them use it correctly. <strong>Clear communication</strong> and <strong>user-centered design</strong> is critical in environmental data science.</span></p>
-<!-- 
-
----
-
-## {#equations-solved data-menu-title="Equations solved"} 
-
-[2. Solving equations]{.slide-title}
-
-<hr>
-
-<br>
-
-[$$2x-5y+3.9=8x^2-100.7x$$]{.body-text-l}
-
-<br>
-
-[Provides solutions for the questions:]{.body-text-m}
-
-<br>
-
-::: {.body-text-m}
-1. "What is the value of $2x-5y+3.9$?" and 
-2. "What is the value of $8x^2-100.7x$?"
-::: 
-
--->
 </section>
 <section id="equations-solved-1" class="slide level2" data-menu-title="Equations solved">
 <h2></h2>
-<p><span class="slide-title">2. Solving equations</span></p>
+<p><span class="slide-title">Solving equations</span></p>
 <hr>
 <p>Equations help us find unknown values that satisfy certain conditions.</p>
 <p>Remember the rules:</p>
@@ -669,7 +603,7 @@ z&amp;=-4
 </section>
 <section id="equations-solved-2" class="slide level2" data-menu-title="Equations solved">
 <h2></h2>
-<p><span class="slide-title">2. Solving equations</span></p>
+<p><span class="slide-title">Solving equations</span></p>
 <hr>
 <p>Equations help us find unknown values that satisfy certain conditions.</p>
 <p>Remember the rules:</p>
@@ -692,7 +626,7 @@ Q&amp;=\frac{(400-P)}{80} &amp;\text{Isolate P in terms of Q} \\
 </section>
 <section id="solving-equations-2" class="slide level2" data-menu-title="Solving equations">
 <h2></h2>
-<p><span class="slide-title">2. Solving equations</span></p>
+<p><span class="slide-title">Solving equations</span></p>
 <hr>
 <p>💡 <span style="color:green;">Let’s see a solution!</span></p>
 <p>Prices are important in economics, but not always available for environmental goods.</p>
@@ -707,7 +641,7 @@ Q&amp;=\frac{(400-P)}{80} &amp;\text{Isolate P in terms of Q} \\
 </section>
 <section id="solving-equations-3" class="slide level2" data-menu-title="Solving equations">
 <h2></h2>
-<p><span class="slide-title">2. Solving equations</span></p>
+<p><span class="slide-title">Solving equations</span></p>
 <hr>
 <p>💡 <span style="color:green;">Let’s see a solution!</span></p>
 <p>Prices are important in economics, but not always available for environmental goods.</p>
@@ -1228,6 +1162,7 @@ Units
 <h2></h2>
 <p><span class="slide-title">Unit conversion practice</span></p>
 <hr>
+<div style="color:green;">
 <ol type="1">
 <li>Convert <span class="math inline">8.1\frac{km}{s}</span> to miles per hour, given that 1 km = 0.621 miles.</li>
 </ol>
@@ -1241,6 +1176,7 @@ Units
 <li><strong>Company C:</strong> 18.1 gallons spilled (0% recovered)</li>
 </ul>
 <p>What is the total <em>unrecovered</em> amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.</p>
+</div>
 </section>
 <section id="unit-conv-solutions-1" class="slide level2" data-menu-title="Unit conversions practice">
 <h2></h2>
@@ -1250,7 +1186,6 @@ Units
 <li>Convert <span class="math inline">8.1\frac{km}{s}</span> to miles per hour, given that 1 km = 0.621 miles.</li>
 </ol>
 <p>✏️ <span class="body-text-m" style="color:green;">Let’s see a solution!</span></p>
-<p><span class="body-text-m"><span class="math inline">8.1\frac{km}{s} \times 60\frac{s}{min} \times 60\frac{min}{hr} \times 0.621\frac{mi}{km} = 18108.36 \frac{mi}{hr}</span></span></p>
 </section>
 <section id="unit-conv-solutions-2" class="slide level2 smaller" data-menu-title="Unit conversions practice">
 <h2></h2>
@@ -1266,6 +1201,24 @@ Units
 </ul>
 <p>What is the total <em>unrecovered</em> amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.</p>
 <p>✏️ <span class="body-text-m" style="color:green;">Let’s see a solution!</span></p>
+</section>
+<section id="unit-conv-solutions-3" class="slide level2 smaller" data-menu-title="Unit conversions practice">
+<h2></h2>
+<p><span class="slide-title">Unit conversion practice: solutions</span></p>
+<hr>
+<ol type="1">
+<li></li>
+</ol>
+<p><span class="body-text-m"><span class="math inline">8.1\frac{km}{s} \times 60\frac{s}{min} \times 60\frac{min}{hr} \times 0.621\frac{mi}{km} = 18108.36 \frac{mi}{hr}</span></span></p>
+<ol start="2" type="1">
+<li>You are combining information from multiple sources to estimate the total annual oil spilled in a watershed, reported by different companies. The following are reported for the year:</li>
+</ol>
+<ul>
+<li><strong>Company A:</strong> 14.6 barrels spilled (with 9.3 barrels recovered)</li>
+<li><strong>Company B:</strong> 692 liters spilled (94% recovered)</li>
+<li><strong>Company C:</strong> 18.1 gallons spilled (0% recovered)</li>
+</ul>
+<p>What is the total <em>unrecovered</em> amount of oil spilled into the watershed that year, in barrels. Use the conversion 1 barrel = 42 gallons = 159 liters and a calculator when needed.</p>
 <p><span class="body-text-m"><strong>Company A:</strong> <span class="math inline">14.6\text{ barrels} - 9.3\text{ barrels} = 5.3\text{ barrels unrecovered}</span></span></p>
 <p><span class="body-text-m"><strong>Company B:</strong> <span class="math inline">692\text{ liters} \times (1-0.94) = 41.52\text{ liters unrecovered} \rightarrow 41.52\text{ L} \times \frac{1\text{ barrel}}{159\text{ L}} = 0.26\text{ barrels}</span></span></p>
 <p><span class="body-text-m"><strong>Company C:</strong> <span class="math inline">18.1\text{ gallons} \times \frac{1\text{ barrel}}{42\text{ gal}} = 0.43\text{ barrels unrecovered}</span></span></p>

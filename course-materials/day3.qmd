@@ -1,7 +1,6 @@
 ---
 title: "Integrals, differential equations, intro to linear algebra"
 subtitle: "Day 3"
-description: "Wednesday August 5^th^, 2025"
 ---
 
 ```{r}
@@ -19,18 +18,17 @@ knitr::include_graphics("images/whale-shark.png")
 
 ## Class materials
 
-| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | {{< fa pencil title="A pencil" >}} Extra Examples|
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----|
-| day 3 / morning   | [Practice session](examples/day1-day2-conceptual-exercises.qmd) | |
-| day 3 / afternoon | [Vectors and matrices](slides/day3.2-slides.qmd){target="_blank"} | [Examples](examples/day3-afternoon-extra-examples.qmd){target="_blank"} |
+| {{< fa calendar-day title="A calendar with one day highlighted" >}} Session  | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Lecture slides  | {{< fa pen-to-square title="A pencil over a blank piece of paper" >}}  After class slides  |  {{< fa pencil title="A pencil" >}} Extra Examples|
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----| -----|
+| day 3 / morning   | [Practice session](examples-and-exercises/day1-day2-conceptual-exercises.qmd) | |
+| day 3 / afternoon | [Vectors and matrices](slides/day3.2-slides.qmd){target="_blank"} | [Slides](slides/after-class-slides/day3.2-slides-class-2026.pdf){target="_blank"}  | [Examples](examples-and-exercises/day3-afternoon-extra-examples.qmd){target="_blank"} |
 : {.hover .bordered tbl-colwidths="[20,50,30]"}
 
 
 ## Additional Resources
 
-- **[Euler's method](https://www.khanacademy.org/math/ap-calculus-bc/bc-differential-equations-new/bc-7-5/v/eulers-method), by Khan Academy** -- a video example of numerical approximation of a differential equation solution using Euler's method
-- **[Euler's Method Differential Equations, Examples, Numerical Methods, Calculus](https://www.youtube.com/watch?v=ukNbG7muKho), by The Organic Chemistry Tutor** -- a YouTube video on using Euler's Method to find the solution to a differential equation
-- **[Vectors | Chapter 1, Essence of linear algebra](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=2), by [3Blue1Brown](https://www.youtube.com/@3blue1brown)** -- a YouTube video covering vector fundamentals
 
+- **[Vectors | Chapter 1, Essence of linear algebra](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=2), by [3Blue1Brown](https://www.youtube.com/@3blue1brown)** -- a YouTube video covering vector fundamentals
+- **[Vector Calculus: Understanding the Dot Product](https://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/)** by [Kallid Azad from Better Explained](https://betterexplained.com/about/) explains the intuition behind the dot product. There's a fun Mario Kart analogy.
 
 
