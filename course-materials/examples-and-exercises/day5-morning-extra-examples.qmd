@@ -1,0 +1,125 @@
+---
+title: "Day 5 / Morning: Extra examples"
+---
+
+## Basic probability
+
+1. A ranger records two events at a trailhead camera: $A$ = a black bear is photographed on a given day, and $B$ = a mountain lion is photographed on a given day. In words, what does $A \cap B$ mean?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$A \cap B$ means **both** a black bear and a mountain lion are photographed at the trailhead on the same day.
+:::
+
+2. Using the same events ($A$ = a black bear is photographed on a given day, $B$ = a mountain lion is photographed on a given day), what does $A \cup B$ mean, and what does $A'$ mean?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$A \cup B$ means **at least one** of the two animals (a black bear, a mountain lion, or both) is photographed that day.
+
+$A'$ means a black bear is **not** photographed that day.
+:::
+
+3. Suppose $P(A) = 0.4$ for a black bear being photographed, and $P(B) = 0.1$ for a mountain lion being photographed, and the two events are independent. Find $P(A \cap B)$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+Since $A$ and $B$ are independent:
+$$P(A \cap B) = P(A) \times P(B) = 0.4 \times 0.1 = 0.04$$
+:::
+
+4. Using $P(A) = 0.4$ and $P(B) = 0.1$ and $P(A \cap B) = 0.04$ from the previous question, find $P(A \cup B)$, the probability that at least one animal is photographed.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.4 + 0.1 - 0.04 = 0.46$$
+:::
+
+## Inference
+
+5. A marine biologist wants to know the average tail length of all sea otters in Monterey Bay. She tags and measures 25 otters captured over one week. Identify the population, sample, parameter, and statistic in this study.
+
+::: {.callout-tip collapse="true"}
+## Solution
+- **Population:** All sea otters in Monterey Bay
+- **Sample:** The 25 otters captured and measured
+- **Parameter:** The true average tail length of all otters in Monterey Bay (unknown)
+- **Statistic:** The average tail length calculated from the 25 measured otters
+:::
+
+6. A city wants to estimate the true proportion of households that compost food waste. They mail a survey to every household but only 400 out of 10,000 households respond. What is the population here, and why might the sample of respondents fail to be representative?
+
+::: {.callout-tip collapse="true"}
+## Solution
+The **population** is all 10,000 households in the city. The 400 respondents are the **sample**. The sample may not be representative as households that care about composting may be more likely to respond.
+:::
+
+7. A study of soil carbon in a restored wetland reports a mean of $4.8 \pm 0.6$ % organic carbon (mean $\pm$ standard deviation), with a 95% confidence interval of $[4.5, 5.1]$% ($n = 18$). Write a correct one-sentence interpretation of this confidence interval.
+
+::: {.callout-tip collapse="true"}
+## Solution
+If we repeatedly sampled 18 soil cores from this wetland and calculated a 95% confidence interval each time, about 95% of those intervals would contain the true mean percent organic carbon in the wetland's soil.
+:::
+
+## Probability mass and density functions
+
+8. A restoration crew counts the number of invasive species removed per plot across 20 plots: 0 plots had 0 invasives, 4 plots had 1, 10 plots had 2, 4 plots had 3, and 2 plots had 4. Let $X$ = the number of invasives removed from a randomly selected plot. Find the PMF of $X$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+| $x$ | Count | $P(X=x)$ |
+|:---:|:---:|:---:|
+| 0 | 0  | 0.00 |
+| 1 | 4  | 0.20 |
+| 2 | 10 | 0.50 |
+| 3 | 4  | 0.20 |
+| 4 | 2  | 0.10 |
+
+Check: $0.00+0.20+0.50+0.20+0.10 = 1$
+:::
+
+9. Using the PMF from the previous question, find $P(X \geq 3)$, the probability a randomly selected plot had 3 or more invasives removed.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$P(X \geq 3) = P(X=3) + P(X=4) = 0.20 + 0.10 = 0.30$$
+
+There is a **30%** chance a randomly selected plot had 3 or more invasives removed.
+:::
+
+10. Daily maximum temperature (°C) at a field site in July is modeled as a continuous random variable with a probability density function $f(x)$. A colleague says, "the density at 30°C is 0.08, so there's an 8% chance the temperature is exactly 30°C." Explain what's wrong with this statement.
+
+::: {.callout-tip collapse="true"}
+## Solution
+For a continuous random variable, the probability of any *exact* single value is always 0. The value $f(30) = 0.08$ describes the height of the curve at 30°C, not a probability. Only the area under the curve over a range of temperatures (e.g., $P(29 < X < 31)$) corresponds to an actual probability.
+:::
+
+11. The PDF of stream discharge (m³/s) at a gauge station is right-skewed, with a median of 12 m³/s. Is $P(\text{discharge} < 12)$ equal to, greater than, or less than 0.5?
+
+::: {.callout-tip collapse="true"}
+## Solution
+**Equal to 0.5.** By definition, the median splits the total area under the density curve exactly in half — 50% of the area (and therefore 50% of the probability) lies below the median.
+:::
+
+## Hypothesis testing
+
+12. A restoration team measures soil moisture (%) at the same 20 plots before and after mulch is applied. The null hypothesis in this case is that the true mean difference (the mean soil moisture before minus the mean soil moisture after) is zero. A paired t-test on the 20 before/after pairs yields $p = 0.006$. Using a significance level of $\alpha = 0.05$, what could the team conclude?
+
+::: {.callout-tip collapse="true"}
+## Solution
+Since $p = 0.006 < \alpha = 0.05$, there is sufficient evidence to reject the null hypothesis that the mean difference is zero. The data suggest mulching is associated with a real change in mean soil moisture at these plots.
+:::
+
+13. A similar paired study measures canopy cover (%) at the same 15 plots before and after a thinning treatment. The paired t-test yields $p = 0.29$. Does this prove there was no true change in mean canopy cover after thinning? Explain.
+
+::: {.callout-tip collapse="true"}
+## Solution
+No. A large p-value ($0.29 > 0.05$) means we don't have enough evidence to reject the null hypothesis. It's possible thinning really did change canopy cover, but the sample didn't provide strong enough evidence to detect it.
+:::
+
+14. A team measures stream temperature at the same 12 sites before and after a wildfire and concludes there was a significant increase in mean temperature ($p = 0.04$). It later turns out there was truly no change in mean stream temperature. What kind of error did the team make?
+
+::: {.callout-tip collapse="true"}
+## Solution
+This is a **Type I error** (rejecting a null hypothesis that was actually true). The low p-value made the before/after difference look statistically significant even though there was no true change.
+:::
